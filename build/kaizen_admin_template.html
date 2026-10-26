@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="color-scheme" content="dark">
+<title>THIRTY@RPR — Kaizen users</title>
+<meta name="theme-color" content="#0d1117">
+<meta name="robots" content="noindex">
+<style>
+/*__SUB_THEME_CSS__*/
+
+  .screen{ display:none; }
+  .screen.active{ display:block; animation:screenIn .25s ease both; }
+  @keyframes screenIn{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:none; } }
+  .gate{ max-width:440px; margin:40px auto; }
+  .google-btn{
+    display:flex; align-items:center; justify-content:center; gap:10px; width:100%;
+    background:#fff; color:#1f1f1f; border:none; border-radius:10px; padding:12px 20px; font-size:13px; font-weight:700; cursor:pointer;
+  }
+  .google-btn svg{ width:18px; height:18px; }
+  .err-text{ color:var(--rose); font-size:11.5px; margin-top:10px; min-height:1em; }
+  .me-badge{ font-size:10.5px; font-weight:700; color:var(--ok); background:color-mix(in srgb, var(--ok) 14%, transparent); border-radius:99px; padding:3px 10px; white-space:nowrap; }
+  .kz-name{ font-weight:700; background:linear-gradient(100deg, var(--gold), oklch(from var(--gold) l c calc(h + 60)) 55%, oklch(from var(--gold) l c calc(h - 60)));
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .stats{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+  .stat{ background:var(--card2); border-radius:10px; padding:10px 14px; box-shadow:0 4px 14px rgba(0,0,0,.25); }
+  .stat b{ display:block; font-size:20px; color:var(--ink); }
+  .stat span{ font-size:10.5px; color:var(--ink-faint); }
+  .tools{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:12px; }
+  .tools .input{ flex:1; min-width:180px; }
+  .tbl-wrap{ overflow-x:auto; }
+  table{ width:100%; border-collapse:collapse; font-size:12px; }
+  th{ text-align:left; font-size:10.5px; color:var(--ink-faint); font-weight:600; padding:6px 8px; cursor:pointer; white-space:nowrap; user-select:none; }
+  th.sorted{ color:var(--gold); }
+  td{ padding:8px; border-top:1px solid color-mix(in srgb, var(--ink) 7%, transparent); color:var(--ink-soft); white-space:nowrap; }
+  td.name{ color:var(--ink); }
+  tr.off td{ opacity:.5; }
+  .pill{ font-size:10px; font-weight:700; border-radius:99px; padding:2px 8px; }
+  .pill.on{ color:var(--ok); background:color-mix(in srgb, var(--ok) 14%, transparent); }
+  .pill.off{ color:var(--ink-faint); background:color-mix(in srgb, var(--ink) 8%, transparent); }
+  .pill.member{ color:var(--violet); background:var(--violet-soft); }
+  .note{ font-size:11px; color:var(--ink-faint); margin-top:12px; line-height:1.6; }
+  @media (max-width:640px){ .hide-sm{ display:none; } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="home-btn" href="/" aria-label="Back to THIRTY@RPR home">&#8592; <span>Home</span></a>
+    <div class="prompt">./thirty --kaizen <span class="ok">[ok]</span></div>
+    <div class="topbar-spacer"></div>
+    <span class="me-badge" id="meBadge" style="display:none;"></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="screen active" id="screen-signin">
+    <div class="panel gate">
+      <div class="panel-head">sign in</div>
+      <div class="panel-sub">Creator only. Use your IIT Ropar Google account.</div>
+      <button class="google-btn" id="googleBtn">
+        <svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4c-7.4 0-13.8 4.1-17.1 10.1-.2.1-.4.4-.6.6z"/><path fill="#4CAF50" d="M24 44c5.5 0 10.4-1.9 14.3-5.1l-6.6-5.6c-2 1.4-4.6 2.3-7.7 2.3-5.3 0-9.7-3.3-11.3-8l-6.6 5.1C9.9 39.9 16.4 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.3 5.7l6.6 5.6C40.7 36.8 44 30.9 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        Sign in with Google
+      </button>
+      <div class="err-text" id="signinErr"></div>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-denied">
+    <div class="panel gate">
+      <div class="panel-head">not authorized</div>
+      <div class="panel-sub">This page is only for the creator of THIRTY@RPR.</div>
+      <button class="btn" id="signOutBtn" style="width:100%;">Sign out</button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-list">
+    <div class="panel">
+      <div class="panel-head">kaizen users</div>
+      <div class="panel-sub">Live from /kaizenUsers — everyone who has linked Google and switched Kaizen on (or off again).</div>
+      <div class="stats" id="stats"></div>
+      <div class="tools">
+        <input class="input" id="q" placeholder="search name, entry, branch, division, group…">
+        <label class="muted" style="font-size:11px;"><input type="checkbox" id="showOff"> show switched-off</label>
+      </div>
+      <div class="tbl-wrap"><table>
+        <thead><tr id="head"></tr></thead>
+        <tbody id="rows"></tbody>
+      </table></div>
+      <div class="note" id="note"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Only what the table needs, from the same roster the dashboard already ships (build/thirty_data.json).
+const ROSTER = /*__KAIZEN_ROSTER__*/;
+</script>
+<script type="module">
+// /kaizen — creator-only view of who uses Kaizen. Nothing renders until the creator's @iitrpr Google account
+// is signed in; the list is the /kaizenUsers collection (live), joined with roster info by entry number.
+const CREATOR = '2026AIB1099';
+const MEMBERS = ROSTER.members || [];          // the roadmap's own students: on Kaizen without a /kaizenUsers record
+const FB_V = 'https://www.gstatic.com/firebasejs/12.19.0/';
+const [{ initializeApp }, A, F] = await Promise.all([import(FB_V + 'firebase-app.js'), import(FB_V + 'firebase-auth.js'), import(FB_V + 'firebase-firestore.js')]);
+const app = initializeApp({
+  projectId: 'thirtyatrpr', appId: '1:179913818545:web:5b9ac08846032badbafd90',
+  storageBucket: 'thirtyatrpr.firebasestorage.app', apiKey: atob('QUl6YVN5QWhCVHNmdVV6X0htc1FJMGl5blVQRVhhbGdTbEJ0c1p3'),
+  authDomain: 'thirtyatrpr.firebaseapp.com', messagingSenderId: '179913818545' });
+const auth = A.getAuth(app), db = F.getFirestore(app);
+try { const c = localStorage.getItem('thirtyatrpr_color_theme') || 'github'; if (c !== 'default') document.body.setAttribute('data-theme', c); document.body.classList.add('glass'); } catch (e) {}
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+function show(id) { document.querySelectorAll('.screen').forEach((s) => s.classList.toggle('active', s.id === id)); }
+
+$('googleBtn').onclick = () => {
+  const p = new A.GoogleAuthProvider();
+  p.setCustomParameters({ hd: 'iitrpr.ac.in', login_hint: CREATOR.toLowerCase() + '@iitrpr.ac.in', prompt: 'select_account' });
+  $('signinErr').textContent = '';
+  A.signInWithPopup(auth, p).catch((err) => { $('signinErr').textContent = /popup-closed|cancelled/.test(err.code || '') ? '' : 'Sign-in failed: ' + (err.code || err); });
+};
+$('signOutBtn').onclick = () => A.signOut(auth);
+
+const COLS = [
+  ['name', 'name'], ['entry', 'entry'], ['branch', 'branch'], ['division', 'division'], ['group', 'group'],
+  ['ismp', 'ISMP', 'hide-sm'], ['mentor', 'mentor', 'hide-sm'], ['hs', 'HS elective', 'hide-sm'], ['status', 'kaizen'], ['since', 'last change'],
+];
+let users = {}, sortKey = 'since', sortDir = -1, unsub = null;
+
+function rowsData() {
+  const out = [];
+  const entries = new Set([...Object.keys(users), ...MEMBERS]);
+  entries.forEach((e) => {
+    const r = ROSTER.students[e] || {}, u = users[e], member = MEMBERS.includes(e);
+    const on = member || !!(u && u.on);
+    out.push({ entry: e, name: r.name || '(not in roster)', branch: r.branch || '', division: r.division || '', group: r.group || '',
+      ismp: r.ismp != null ? r.ismp : '', mentor: r.mentor || '', hs: r.hs || '', on, member,
+      status: member ? 'roadmap' : on ? 'on' : 'off', since: u && u.t ? u.t.toMillis() : 0 });
+  });
+  return out;
+}
+function fmt(ms) {
+  if (!ms) return '—';
+  return new Date(ms).toLocaleString('en-IN', { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' });
+}
+function render() {
+  const all = rowsData(), q = $('q').value.trim().toLowerCase(), showOff = $('showOff').checked;
+  const onCount = all.filter((r) => r.on).length;
+  const byBranch = {};
+  all.filter((r) => r.on).forEach((r) => { byBranch[r.branch || '?'] = (byBranch[r.branch || '?'] || 0) + 1; });
+  $('stats').innerHTML = `<div class="stat"><b>${onCount}</b><span>on kaizen</span></div>` +
+    `<div class="stat"><b>${all.length - onCount}</b><span>switched off</span></div>` +
+    Object.keys(byBranch).sort().map((b) => `<div class="stat"><b>${byBranch[b]}</b><span>${esc(b)}</span></div>`).join('');
+  let list = all.filter((r) => (showOff || r.on) && (!q || [r.name, r.entry, r.branch, r.division, r.group, r.mentor, r.hs].join(' ').toLowerCase().includes(q)));
+  list.sort((a, b) => { const x = a[sortKey], y = b[sortKey]; return (x > y ? 1 : x < y ? -1 : 0) * sortDir; });
+  $('head').innerHTML = COLS.map(([k, label, cls]) => `<th data-k="${k}" class="${(cls || '') + (k === sortKey ? ' sorted' : '')}">${label}${k === sortKey ? (sortDir > 0 ? ' ↑' : ' ↓') : ''}</th>`).join('');
+  $('rows').innerHTML = list.length ? list.map((r) => `<tr class="${r.on ? '' : 'off'}">` +
+    `<td class="name">${r.on ? `<span class="kz-name">${esc(r.name)}</span>` : esc(r.name)}</td><td>${esc(r.entry)}</td><td>${esc(r.branch)}</td>` +
+    `<td>${esc(r.division)}</td><td>${esc(r.group)}</td><td class="hide-sm">${esc(r.ismp)}</td><td class="hide-sm">${esc(r.mentor)}</td><td class="hide-sm">${esc(r.hs)}</td>` +
+    `<td><span class="pill ${r.member ? 'member' : r.on ? 'on' : 'off'}">${r.status}</span></td><td>${fmt(r.since)}</td></tr>`).join('')
+    : `<tr><td colspan="${COLS.length}" class="muted" style="padding:16px 8px;">${all.length ? 'No one matches.' : 'No one has switched Kaizen on yet.'}</td></tr>`;
+  $('note').textContent = 'roadmap = on the Kaizen ML roadmap itself (no linking needed). Everyone else appears once they link their Google account from the dashboard.';
+}
+$('head').addEventListener('click', (e) => {
+  const th = e.target.closest('th'); if (!th) return;
+  const k = th.dataset.k; if (k === sortKey) sortDir = -sortDir; else { sortKey = k; sortDir = k === 'since' ? -1 : 1; }
+  render();
+});
+$('q').addEventListener('input', render);
+$('showOff').addEventListener('change', render);
+
+// Localhost-only ?preview: skip the gate to check the layout (the same as /br's preview mode).
+const PREVIEW = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && new URLSearchParams(location.search).has('preview');
+if (PREVIEW) {
+  show('screen-list'); render();
+  F.onSnapshot(F.collection(db, 'kaizenUsers'), (snap) => { users = {}; snap.forEach((d) => { users[d.id] = d.data(); }); render(); });
+} else A.onAuthStateChanged(auth, (user) => {
+  if (unsub) { unsub(); unsub = null; }
+  const who = user && user.email ? user.email.split('@')[0].toUpperCase() : '';
+  $('meBadge').style.display = user ? '' : 'none';
+  $('meBadge').textContent = who.toLowerCase();
+  if (!user) { show('screen-signin'); return; }
+  if (who !== CREATOR || !/@iitrpr\.ac\.in$/i.test(user.email)) { show('screen-denied'); return; }
+  show('screen-list');
+  render();
+  unsub = F.onSnapshot(F.collection(db, 'kaizenUsers'), (snap) => {
+    users = {};
+    snap.forEach((d) => { users[d.id] = d.data(); });
+    render();
+  }, (err) => { $('note').textContent = 'Couldn\'t load the list: ' + (err.code || err); });
+});
+</script>
+</body>
+</html>

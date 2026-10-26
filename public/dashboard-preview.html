@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>THIRTY@RPR — style prototype</title>
+<meta name="robots" content="noindex">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+  :root{
+    --bg:#0d1117; --bg2:#0a0d12; --card:#12181f; --line:#20272f;
+    --ink:#e6edf3; --ink-soft:#8b949e; --ink-faint:#5b6470;
+    --green:#34C48A; --green-soft:rgba(52,196,138,0.14);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'JetBrains Mono',ui-monospace,monospace;
+    min-height:100vh;
+    padding:32px 20px 60px;
+  }
+  .wrap{max-width:900px; margin:0 auto;}
+  .proto-note{
+    max-width:900px; margin:0 auto 22px; padding:10px 14px;
+    background:rgba(255,193,7,0.10); border:1px solid rgba(255,193,7,0.3);
+    border-radius:6px; font-size:12px; color:#ffdc7a; line-height:1.5;
+  }
+  .boot{ color:var(--ink-soft); font-size:13px; line-height:1.7; margin-bottom:22px; }
+  .boot .ok{ color:var(--green); font-weight:600; }
+  .boot .cmd{ color:var(--ink); }
+  h1{
+    font-size:15px; margin:0 0 4px; font-weight:700;
+    display:flex; align-items:center; gap:8px;
+  }
+  h1 .dot{ width:8px; height:8px; border-radius:50%; background:var(--green); display:inline-block; }
+  .sub{ color:var(--ink-soft); font-size:12.5px; margin-bottom:26px; }
+  .sub b{ color:var(--green); }
+
+  .panel{
+    background:var(--card); border:1px solid var(--line); border-radius:8px;
+    padding:20px 22px; margin-bottom:18px;
+  }
+  .panel-head{
+    font-size:12.5px; color:var(--ink-soft); margin-bottom:16px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .panel-head .prompt{ color:var(--green); }
+
+  .stat-row{ display:flex; gap:20px; flex-wrap:wrap; margin-bottom:18px; }
+  .stat{ font-size:12.5px; color:var(--ink-soft); }
+  .stat b{ color:var(--ink); font-size:14px; }
+  .stat .flame{ color:var(--green); }
+
+  .bar-wrap{ display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+  .bar-track{ flex:1; height:9px; background:var(--bg2); border:1px solid var(--line); border-radius:5px; overflow:hidden; }
+  .bar-fill{ height:100%; background:var(--green); border-radius:5px 0 0 5px; }
+  .bar-pct{ font-size:12px; color:var(--green); font-weight:700; min-width:70px; text-align:right; }
+  .bar-caption{ font-size:11px; color:var(--ink-faint); margin-bottom:18px; }
+
+  .checklist{ display:flex; flex-direction:column; gap:2px; }
+  .check-row{
+    display:flex; align-items:baseline; gap:10px; padding:7px 0;
+    border-bottom:1px dashed var(--line); font-size:12.5px;
+  }
+  .check-row:last-child{ border-bottom:none; }
+  .check-box{ color:var(--green); font-weight:700; width:28px; flex-shrink:0; }
+  .check-box.pending{ color:var(--ink-faint); }
+  .check-label{ flex:1; }
+  .check-row.done .check-label{ color:var(--ink-faint); text-decoration:line-through; }
+  .check-venue{ color:var(--ink-faint); font-size:11px; }
+  .check-time{ color:var(--ink-soft); font-size:11px; min-width:110px; text-align:right; }
+
+  .heatmap-caption{ font-size:11px; color:var(--ink-faint); margin-bottom:10px; }
+  .heat-grid{ display:flex; gap:3px; overflow-x:auto; padding-bottom:6px; }
+  .heat-col{ display:flex; flex-direction:column; gap:3px; }
+  .heat-cell{ width:11px; height:11px; border-radius:2px; background:var(--bg2); }
+  .heat-cell.h0{ background:var(--bg2); }
+  .heat-cell.h1{ background:rgba(52,196,138,0.25); }
+  .heat-cell.h2{ background:rgba(52,196,138,0.45); }
+  .heat-cell.h3{ background:rgba(52,196,138,0.7); }
+  .heat-cell.h4{ background:var(--green); }
+  .heat-cell.hh{ background:transparent; border:1px solid var(--line); }
+
+  .footline{ text-align:center; color:var(--ink-faint); font-size:11px; margin-top:26px; }
+  .footline .green{ color:var(--green); }
+</style>
+</head>
+<body>
+<div class="proto-note">⚠ Style prototype only — not wired into login, real-time state, or the checkbox/tick system yet. Data below is a real snapshot (Yatharth's own Friday-timetable schedule for 12 Sep 2026, and real per-day item counts for the whole semester) frozen into this page, not live. Built to test the visual direction before investing in the real integration.</div>
+<div class="wrap">
+  <div class="boot">
+    <span class="cmd">$ ./thirty --today</span><br>
+    <span class="ok">[ok]</span> schedule module loaded<br>
+    <span class="ok">[ok]</span> mid-sem tracker running<br>
+    <span class="ok">[ok]</span> 5 themes mounted<br>
+    <span class="ok">[ok]</span> entry: 2026AIB1099 · AIDE · D1
+  </div>
+
+  <h1><span class="dot"></span>THIRTY@RPR</h1>
+  <div class="sub">a class schedule that looks like a <b>terminal</b>. one screen, everything you need today.</div>
+
+  <div class="panel">
+    <div class="panel-head"><span class="prompt">$</span> today — saturday, 12 sep 2026</div>
+    <div class="stat-row">
+      <div class="stat"><span class="flame">◆</span> <b>6</b> days to Mid-Sem</div>
+      <div class="stat"><span class="flame">◆</span> <b>41</b> days into semester</div>
+      <div class="stat"><span class="flame">◆</span> HS elective: <b>HS111</b></div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-track"><div class="bar-fill" style="width:66%"></div></div>
+      <div class="bar-pct">2 / 3 done</div>
+    </div>
+    <div class="bar-caption">// today's schedule — items before "now" auto-marked done</div>
+    <div class="checklist">
+      <div class="check-row done">
+        <span class="check-box">[x]</span>
+        <span class="check-label">PH101 — Physics Lab</span>
+        <span class="check-venue"></span>
+        <span class="check-time">9:00 – 12:50</span>
+      </div>
+      <div class="check-row done">
+        <span class="check-box">[x]</span>
+        <span class="check-label">Life Skills / NCC / NSO / NSS</span>
+        <span class="check-venue"></span>
+        <span class="check-time">5:00 – 5:50</span>
+      </div>
+      <div class="check-row">
+        <span class="check-box pending">[ ]</span>
+        <span class="check-label">TL101 — Tinkering Lab</span>
+        <span class="check-venue">Auditorium</span>
+        <span class="check-time">6:00 – 6:50</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><span class="prompt">$</span> mid-sem exams</div>
+    <div class="checklist">
+      <div class="check-row">
+        <span class="check-box pending">[ ]</span>
+        <span class="check-label">Physics for Engineers</span>
+        <span class="check-time">19 Sep · 12:30 PM</span>
+      </div>
+      <div class="check-row">
+        <span class="check-box pending">[ ]</span>
+        <span class="check-label">English Communication and Personality Development</span>
+        <span class="check-time">20 Sep · 9:30 AM</span>
+      </div>
+      <div class="check-row">
+        <span class="check-box pending">[ ]</span>
+        <span class="check-label">Calculus</span>
+        <span class="check-time">21 Sep · 3:30 PM</span>
+      </div>
+      <div class="check-row">
+        <span class="check-box pending">[ ]</span>
+        <span class="check-label">Data Science and AI Essentials</span>
+        <span class="check-time">22 Sep · 9:30 AM</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><span class="prompt">$</span> semester at a glance</div>
+    <div class="heatmap-caption">// real per-day schedule density, 3 Aug – 13 Nov 2026 (each column = one week, Sun→Sat top-to-bottom)</div>
+    <div class="heat-grid" id="heatGrid"></div>
+  </div>
+
+  <div class="footline">Made with <span class="green">&#9829;</span> by Yatharth Shrivastava — style prototype, not deployed to the live app</div>
+</div>
+
+<script>
+var CELLS = [{"d":"2026-08-03","lvl":4},{"d":"2026-08-04","lvl":4},{"d":"2026-08-05","lvl":3},{"d":"2026-08-06","lvl":-1},{"d":"2026-08-07","lvl":3},{"d":"2026-08-08","lvl":4},{"d":"2026-08-09","lvl":0},{"d":"2026-08-10","lvl":4},{"d":"2026-08-11","lvl":4},{"d":"2026-08-12","lvl":3},{"d":"2026-08-13","lvl":2},{"d":"2026-08-14","lvl":3},{"d":"2026-08-15","lvl":-1},{"d":"2026-08-16","lvl":0},{"d":"2026-08-17","lvl":4},{"d":"2026-08-18","lvl":4},{"d":"2026-08-19","lvl":3},{"d":"2026-08-20","lvl":2},{"d":"2026-08-21","lvl":3},{"d":"2026-08-22","lvl":3},{"d":"2026-08-23","lvl":0},{"d":"2026-08-24","lvl":4},{"d":"2026-08-25","lvl":4},{"d":"2026-08-26","lvl":-1},{"d":"2026-08-27","lvl":2},{"d":"2026-08-28","lvl":3},{"d":"2026-08-29","lvl":2},{"d":"2026-08-30","lvl":0},{"d":"2026-08-31","lvl":4},{"d":"2026-09-01","lvl":4},{"d":"2026-09-02","lvl":3},{"d":"2026-09-03","lvl":2},{"d":"2026-09-04","lvl":-1},{"d":"2026-09-05","lvl":3},{"d":"2026-09-06","lvl":1},{"d":"2026-09-07","lvl":4},{"d":"2026-09-08","lvl":4},{"d":"2026-09-09","lvl":3},{"d":"2026-09-10","lvl":2},{"d":"2026-09-11","lvl":3},{"d":"2026-09-12","lvl":3},{"d":"2026-09-13","lvl":0},{"d":"2026-09-14","lvl":4},{"d":"2026-09-15","lvl":4},{"d":"2026-09-16","lvl":3},{"d":"2026-09-17","lvl":2},{"d":"2026-09-18","lvl":3},{"d":"2026-09-19","lvl":1},{"d":"2026-09-20","lvl":4},{"d":"2026-09-21","lvl":4},{"d":"2026-09-22","lvl":0},{"d":"2026-09-23","lvl":3},{"d":"2026-09-24","lvl":3},{"d":"2026-09-25","lvl":3},{"d":"2026-09-26","lvl":0},{"d":"2026-09-27","lvl":0},{"d":"2026-09-28","lvl":4},{"d":"2026-09-29","lvl":4},{"d":"2026-09-30","lvl":3},{"d":"2026-10-01","lvl":2},{"d":"2026-10-02","lvl":-1},{"d":"2026-10-03","lvl":0},{"d":"2026-10-04","lvl":0},{"d":"2026-10-05","lvl":4},{"d":"2026-10-06","lvl":4},{"d":"2026-10-07","lvl":3},{"d":"2026-10-08","lvl":2},{"d":"2026-10-09","lvl":-1},{"d":"2026-10-10","lvl":0},{"d":"2026-10-11","lvl":0},{"d":"2026-10-12","lvl":4},{"d":"2026-10-13","lvl":4},{"d":"2026-10-14","lvl":3},{"d":"2026-10-15","lvl":2},{"d":"2026-10-16","lvl":3},{"d":"2026-10-17","lvl":0},{"d":"2026-10-18","lvl":0},{"d":"2026-10-19","lvl":4},{"d":"2026-10-20","lvl":-1},{"d":"2026-10-21","lvl":3},{"d":"2026-10-22","lvl":2},{"d":"2026-10-23","lvl":3},{"d":"2026-10-24","lvl":0},{"d":"2026-10-25","lvl":0},{"d":"2026-10-26","lvl":4},{"d":"2026-10-27","lvl":4},{"d":"2026-10-28","lvl":3},{"d":"2026-10-29","lvl":2},{"d":"2026-10-30","lvl":3},{"d":"2026-10-31","lvl":0},{"d":"2026-11-01","lvl":0},{"d":"2026-11-02","lvl":4},{"d":"2026-11-03","lvl":4},{"d":"2026-11-04","lvl":3},{"d":"2026-11-05","lvl":2},{"d":"2026-11-06","lvl":3},{"d":"2026-11-07","lvl":0},{"d":"2026-11-08","lvl":-1},{"d":"2026-11-09","lvl":4},{"d":"2026-11-10","lvl":4},{"d":"2026-11-11","lvl":3},{"d":"2026-11-12","lvl":2},{"d":"2026-11-13","lvl":3}];
+(function(){
+  var grid = document.getElementById('heatGrid');
+  // bucket into weeks starting Sunday; first real day (3 Aug 2026) is a Monday, so pad one slot
+  var firstDow = new Date(CELLS[0].d+'T00:00:00').getDay(); // 0=Sun
+  var padded = [];
+  for(var i=0;i<firstDow;i++) padded.push(null);
+  CELLS.forEach(function(c){ padded.push(c); });
+  var weeks = Math.ceil(padded.length/7);
+  for(var w=0; w<weeks; w++){
+    var col = document.createElement('div');
+    col.className = 'heat-col';
+    for(var d=0; d<7; d++){
+      var cell = padded[w*7+d];
+      var div = document.createElement('div');
+      if(!cell){ div.className = 'heat-cell h0'; div.style.opacity = '0'; }
+      else if(cell.lvl === -1){ div.className = 'heat-cell hh'; div.title = cell.d+' (holiday)'; }
+      else { div.className = 'heat-cell h'+cell.lvl; div.title = cell.d; }
+      col.appendChild(div);
+    }
+    grid.appendChild(col);
+  }
+})();
+</script>
+</body>
+</html>

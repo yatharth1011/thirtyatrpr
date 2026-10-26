@@ -1,0 +1,128 @@
+{
+  "title": "TIME TABLE FOR ICDT STUDENTS",
+  "timetable": {
+    "Monday": {},
+    "Tuesday": {
+      "9:00 - 11:50": [
+        {
+          "course": "CY101 Lab",
+          "venue": null
+        }
+      ],
+      "17:00 - 18:30": [
+        {
+          "course": "NSO",
+          "venue": null
+        }
+      ]
+    },
+    "Wednesday": {
+      "14:00 - 14:50": [
+        {
+          "course": "HSS1",
+          "venue": "SRC 107"
+        }
+      ],
+      "15:00 - 15:50": [
+        {
+          "course": "MA101",
+          "venue": "SRC 107"
+        }
+      ],
+      "16:00 - 16:50": [
+        {
+          "course": "CY101",
+          "venue": "SRC 107"
+        }
+      ],
+      "17:00 - 17:50": [
+        {
+          "course": "GE103",
+          "venue": "Auditorium"
+        }
+      ],
+      "18:00 - 18:50": [
+        {
+          "course": "GE103 Tut",
+          "venue": null
+        }
+      ]
+    },
+    "Thursday": {
+      "9:00 - 11:50": [
+        {
+          "course": "GE103 Lab",
+          "venue": null
+        }
+      ],
+      "14:00 - 14:50": [
+        {
+          "course": "HSS1",
+          "venue": "SRC 107"
+        }
+      ],
+      "15:00 - 15:50": [
+        {
+          "course": "MA101",
+          "venue": "SRC 107"
+        }
+      ],
+      "16:00 - 16:50": [
+        {
+          "course": "CY101",
+          "venue": "SRC 107"
+        }
+      ],
+      "17:00 - 17:50": [
+        {
+          "course": "GE103",
+          "venue": "Auditorium"
+        }
+      ],
+      "18:00 - 18:50": [
+        {
+          "course": "CY101 Tut",
+          "venue": null
+        }
+      ]
+    },
+    "Friday": {
+      "8:00 - 8:50": [
+        {
+          "course": "MA101 Tut",
+          "venue": null
+        }
+      ],
+      "14:00 - 14:50": [
+        {
+          "course": "HSS1",
+          "venue": "SRC 107"
+        }
+      ],
+      "15:00 - 15:50": [
+        {
+          "course": "MA101",
+          "venue": "SRC 107"
+        }
+      ],
+      "16:00 - 16:50": [
+        {
+          "course": "CY101",
+          "venue": "SRC 107"
+        }
+      ],
+      "17:00 - 17:50": [
+        {
+          "course": "GE103",
+          "venue": "Auditorium"
+        }
+      ],
+      "18:00 - 19:30": [
+        {
+          "course": "Life skill classes",
+          "venue": null
+        }
+      ]
+    }
+  }
+}

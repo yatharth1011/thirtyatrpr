@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>thirtyatrpr</title>
+<meta name="description" content="thirtyatrpr — 2026-2030 batch portal: timetable, orientation schedule &amp; mess timings.">
+<meta name="theme-color" content="#1e1e1e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231e1e1e'/%3E%3Ctext x='50' y='68' font-size='58' font-family='monospace' font-weight='700' fill='%233b8eea' text-anchor='middle'%3E30%3C/text%3E%3C/svg%3E">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#1e1e1e;
+  --bg2:#181818;
+  --panel:#252526;
+  --panel2:#2d2d30;
+  --panel3:#323235;
+  --line:#3c3c3c;
+  --line-soft:#2f2f31;
+  --ink:#d4d4d4;
+  --ink-hi:#f3f3f3;
+  --ink-soft:#9d9d9d;
+  --ink-faint:#6a6a6a;
+
+  --accent:#3b8eea;
+  --accent-hi:#5aa3f0;
+  --accent-soft:rgba(59,142,234,0.14);
+  --accent-line:rgba(59,142,234,0.35);
+  --cyan:#4fc1ff;
+  --cyan-soft:rgba(79,193,255,0.13);
+  --green:#89d185;
+  --green-soft:rgba(137,209,133,0.13);
+  --amber:#d7ba7d;
+  --amber-soft:rgba(215,186,125,0.13);
+  --red:#f14c4c;
+
+  --radius:14px;
+  --radius-sm:9px;
+  --font-ui:'Inter',system-ui,-apple-system,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,'SF Mono',Consolas,monospace;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-ui);
+  min-height:100vh;
+  min-height:100dvh;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent-soft);color:var(--ink-hi);}
+button,input{font-family:inherit;}
+a{color:var(--accent-hi);}
+
+/* ---------------- Login screen ---------------- */
+#loginScreen{
+  min-height:100vh; min-height:100dvh;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:24px; text-align:center;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(59,142,234,0.10), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(79,193,255,0.08), transparent 40%),
+    var(--bg);
+}
+.login-mark{
+  font-family:var(--font-mono); font-weight:700; font-size:15px; letter-spacing:0.02em;
+  color:var(--accent-hi); background:var(--panel2); border:1px solid var(--line);
+  padding:6px 14px; border-radius:99px; margin-bottom:22px;
+}
+.login-mark b{color:var(--ink-hi); font-weight:700;}
+#loginScreen h1{
+  font-size:26px; font-weight:800; margin:0 0 8px; color:var(--ink-hi); letter-spacing:-0.01em;
+}
+#loginScreen .sub{
+  font-size:13.5px; color:var(--ink-soft); max-width:340px; line-height:1.55; margin-bottom:30px;
+}
+.login-box{
+  width:100%; max-width:340px; background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--radius); padding:20px; text-align:left;
+}
+.login-box label{
+  display:block; font-size:11px; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--ink-faint); margin-bottom:8px; font-weight:600;
+}
+#entryInput{
+  width:100%; background:var(--bg2); border:1.5px solid var(--line); color:var(--ink-hi);
+  font-family:var(--font-mono); font-size:16px; font-weight:600; letter-spacing:0.02em;
+  padding:13px 14px; border-radius:var(--radius-sm); outline:none; text-transform:uppercase;
+}
+#entryInput:focus{border-color:var(--accent);}
+#entryInput::placeholder{color:var(--ink-faint); text-transform:none; font-weight:400;}
+#loginBtn{
+  width:100%; margin-top:12px; padding:13px; border-radius:var(--radius-sm); border:none;
+  background:var(--accent); color:#0c1620; font-weight:700; font-size:14.5px; cursor:pointer;
+  transition:background .15s;
+}
+#loginBtn:hover{background:var(--accent-hi);}
+#loginBtn:active{transform:translateY(1px);}
+#loginErr{
+  color:var(--red); font-size:12.5px; margin-top:10px; min-height:16px; font-weight:500;
+}
+.login-foot{
+  margin-top:22px; font-size:11.5px; color:var(--ink-faint); max-width:320px; line-height:1.6;
+}
+
+/* ---------------- App shell ---------------- */
+#app{display:none; min-height:100vh; min-height:100dvh; flex-direction:column;}
+#app.show{display:flex;}
+
+.topbar{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; gap:12px;
+  padding:12px 16px; background:var(--panel2); border-bottom:1px solid var(--line);
+}
+.topbar .mark{
+  font-family:var(--font-mono); font-weight:700; font-size:13.5px; color:var(--accent-hi);
+  white-space:nowrap;
+}
+.topbar .mark b{color:var(--ink-hi);}
+.topbar .spacer{flex:1;}
+.topbar .who{
+  display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--ink-soft);
+  overflow:hidden;
+}
+.topbar .who .name{color:var(--ink-hi); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:150px;}
+.iconbtn{
+  width:32px; height:32px; border-radius:8px; border:1px solid var(--line); background:var(--panel);
+  color:var(--ink-soft); display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0;
+  font-size:15px;
+}
+.iconbtn:hover{color:var(--ink-hi); border-color:var(--accent-line);}
+
+/* ---------------- Profile card ---------------- */
+main{flex:1; width:100%; max-width:760px; margin:0 auto; padding:16px 16px 100px;}
+.profile-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  padding:18px 18px 16px; margin-bottom:16px;
+}
+.profile-top{display:flex; align-items:flex-start; gap:12px;}
+.avatar{
+  width:46px; height:46px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#2563a8);
+  display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:17px;
+  flex-shrink:0;
+}
+.profile-name{font-size:18px; font-weight:800; color:var(--ink-hi); line-height:1.25;}
+.profile-branch{font-size:12.5px; color:var(--ink-soft); margin-top:2px;}
+.profile-entry{
+  font-family:var(--font-mono); font-size:11px; color:var(--accent-hi); background:var(--accent-soft);
+  display:inline-block; padding:2px 8px; border-radius:99px; margin-top:6px; letter-spacing:0.02em;
+}
+.chip-row{display:flex; gap:7px; flex-wrap:wrap; margin-top:13px;}
+.chip{
+  font-size:11.5px; font-weight:600; padding:5px 10px; border-radius:8px;
+  border:1px solid var(--line); color:var(--ink-soft); background:var(--panel2);
+  display:flex; align-items:center; gap:5px;
+}
+.chip .k{color:var(--ink-faint); font-weight:500;}
+.chip.accent{border-color:var(--accent-line); color:var(--accent-hi); background:var(--accent-soft);}
+.chip.mismatch{border-color:rgba(215,186,125,0.4); color:var(--amber); background:var(--amber-soft);}
+.mentor-line{margin-top:12px; font-size:12px; color:var(--ink-faint); padding-top:12px; border-top:1px solid var(--line-soft);}
+.mentor-line b{color:var(--ink-soft); font-weight:600;}
+
+/* ---------------- Tabs ---------------- */
+.tabbar{
+  display:flex; gap:4px; background:var(--panel2); border:1px solid var(--line); border-radius:var(--radius-sm);
+  padding:4px; margin-bottom:16px;
+}
+.tabbtn{
+  flex:1; text-align:center; padding:9px 6px; border-radius:7px; border:none; background:transparent;
+  color:var(--ink-soft); font-size:12.5px; font-weight:600; cursor:pointer; display:flex; align-items:center;
+  justify-content:center; gap:6px;
+}
+.tabbtn .ic{font-size:14px;}
+.tabbtn.active{background:var(--panel); color:var(--ink-hi); box-shadow:inset 0 -2px 0 var(--accent);}
+
+.section{display:none;}
+.section.active{display:block;}
+
+/* ---------------- Mess card ---------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:16px 17px; margin-bottom:14px;}
+.card h3{margin:0 0 12px; font-size:13px; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); font-weight:700;}
+.mess-grid{display:grid; grid-template-columns:1fr 1fr; gap:9px;}
+.mess-item{
+  background:var(--panel2); border:1px solid var(--line-soft); border-radius:var(--radius-sm);
+  padding:10px 12px;
+}
+.mess-item .ml{font-size:11px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.05em; font-weight:600;}
+.mess-item .mt{font-family:var(--font-mono); font-size:13px; color:var(--ink-hi); font-weight:600; margin-top:4px;}
+.mess-item.now{border-color:var(--accent-line); background:var(--accent-soft);}
+.mess-item.now .mt{color:var(--accent-hi);}
+.mess-note{font-size:11.5px; color:var(--ink-faint); margin-top:10px; line-height:1.5;}
+
+/* ---------------- Day strip ---------------- */
+.daystrip-wrap{margin-bottom:14px;}
+.daystrip{display:flex; gap:7px; overflow-x:auto; padding-bottom:6px; scrollbar-width:thin;}
+.daystrip::-webkit-scrollbar{height:5px;}
+.daystrip::-webkit-scrollbar-thumb{background:var(--line); border-radius:99px;}
+.daychip{
+  flex:0 0 auto; width:52px; padding:8px 0 9px; border-radius:10px; text-align:center; cursor:pointer;
+  background:var(--panel); border:1px solid var(--line);
+}
+.daychip .dow{font-size:10px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); font-weight:600;}
+.daychip .dnum{font-family:var(--font-mono); font-size:16px; font-weight:700; color:var(--ink); margin-top:3px;}
+.daychip.active{background:var(--accent); border-color:var(--accent);}
+.daychip.active .dow{color:rgba(12,22,32,0.65);}
+.daychip.active .dnum{color:#0c1620;}
+.daychip.today:not(.active){border-color:var(--accent); border-width:1.5px;}
+.daychip.today:not(.active) .dnum{color:var(--accent-hi);}
+
+/* weekday pills (timetable) */
+.weekpills{display:flex; gap:7px; margin-bottom:14px; flex-wrap:wrap;}
+.weekpill{
+  padding:8px 14px; border-radius:9px; border:1px solid var(--line); background:var(--panel);
+  color:var(--ink-soft); font-size:12.5px; font-weight:600; cursor:pointer;
+}
+.weekpill.active{background:var(--accent); border-color:var(--accent); color:#0c1620;}
+.weekpill.today:not(.active){border-color:var(--accent); color:var(--accent-hi);}
+
+/* ---------------- Event list ---------------- */
+.daylabel{font-size:15px; font-weight:700; color:var(--ink-hi); margin:2px 0 12px;}
+.daylabel .sub{font-size:12px; font-weight:500; color:var(--ink-faint); margin-left:8px;}
+.ev{
+  display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--line-soft);
+}
+.ev:last-child{border-bottom:none;}
+.ev-time{
+  font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); min-width:76px; flex-shrink:0;
+  padding-top:2px; line-height:1.4;
+}
+.ev-body{flex:1; min-width:0;}
+.ev-title{font-size:14px; font-weight:600; color:var(--ink-hi); line-height:1.35;}
+.ev-meta{display:flex; gap:6px; align-items:center; margin-top:6px; flex-wrap:wrap;}
+.tag{font-size:9.5px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; padding:3px 8px; border-radius:99px;}
+.tag.mine{background:var(--accent); color:#0c1620;}
+.tag.common{background:var(--cyan-soft); color:var(--cyan); border:1px solid rgba(79,193,255,0.3);}
+.tag.sport{background:var(--green-soft); color:var(--green); border:1px solid rgba(137,209,133,0.3);}
+.tag.universal{background:var(--panel3); color:var(--ink-soft); border:1px solid var(--line);}
+.tag.venue{background:transparent; color:var(--ink-faint); border:1px solid var(--line); font-weight:600;}
+.empty-note{padding:30px 10px; text-align:center; color:var(--ink-faint); font-size:13px; line-height:1.6;}
+.empty-note .big{font-size:26px; margin-bottom:8px;}
+
+/* ---------------- Timetable slot card ---------------- */
+.slot{
+  display:flex; gap:12px; padding:13px 0; border-bottom:1px solid var(--line-soft);
+}
+.slot:last-child{border-bottom:none;}
+.slot-time{
+  font-family:var(--font-mono); font-size:11.5px; color:var(--ink-soft); min-width:88px; flex-shrink:0; padding-top:2px; line-height:1.5;
+}
+.slot-time .cat{display:block; font-size:9.5px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.05em; margin-top:2px;}
+.slot-body{flex:1; min-width:0;}
+.slot-subject{font-size:14.5px; font-weight:700; color:var(--ink-hi);}
+.slot-venue{font-family:var(--font-mono); font-size:11.5px; color:var(--accent-hi); margin-top:4px;}
+.slot-venue .vd{color:var(--ink-faint); font-family:var(--font-ui); margin-left:5px;}
+
+/* footer */
+.appfoot{max-width:760px; margin:8px auto 0; padding:14px 16px 30px; font-size:11px; color:var(--ink-faint); text-align:center; line-height:1.7;}
+
+@media (min-width:720px){
+  main{padding-top:24px;}
+  .profile-card{padding:22px 24px;}
+  .card{padding:20px 22px;}
+  .mess-grid{grid-template-columns:repeat(4,1fr);}
+  .tabbtn{font-size:13.5px; padding:10px 8px;}
+}
+@media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+</style>
+</head>
+<body>
+
+<div id="loginScreen">
+  <div class="login-mark">thirty<b>@</b>rpr</div>
+  <h1>2026&ndash;2030 Batch Portal</h1>
+  <div class="sub">Your timetable, orientation schedule &amp; mess timings — all in one place. Enter your entry number to continue.</div>
+  <div class="login-box">
+    <label for="entryInput">Entry Number</label>
+    <input id="entryInput" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" placeholder="2026AIB1001" maxlength="14">
+    <button id="loginBtn">Continue</button>
+    <div id="loginErr"></div>
+  </div>
+  <div class="login-foot">No password needed — this just looks up your name, division, group and schedule. Nothing here can be edited or submitted.</div>
+</div>
+
+<div id="app">
+  <div class="topbar">
+    <div class="mark">thirty<b>@</b>rpr</div>
+    <div class="spacer"></div>
+    <div class="who"><span class="name" id="topName"></span></div>
+    <button class="iconbtn" id="logoutBtn" title="Switch entry number">&#8646;</button>
+  </div>
+
+  <main>
+    <div class="profile-card" id="profileCard"></div>
+
+    <div class="tabbar">
+      <button class="tabbtn active" data-tab="home"><span class="ic">&#8962;</span>Today</button>
+      <button class="tabbtn" data-tab="timetable"><span class="ic">&#128197;</span>Timetable</button>
+      <button class="tabbtn" data-tab="orientation"><span class="ic">&#127895;</span>Orientation</button>
+    </div>
+
+    <section class="section active" id="sec-home"></section>
+    <section class="section" id="sec-timetable"></section>
+    <section class="section" id="sec-orientation"></section>
+  </main>
+
+  <div class="appfoot">thirty@rpr &middot; built for the 2026&ndash;2030 batch &middot; data refreshed as official sheets update</div>
+</div>
+
+<script>
+/*__THIRTY_DATA__*/
+</script>
+<script>
+/*__APP_JS__*/
+</script>
+</body>
+</html>

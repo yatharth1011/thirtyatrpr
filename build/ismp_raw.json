@@ -1,0 +1,3150 @@
+[
+ {
+  "row": 5,
+  "date": "27th July",
+  "day": "Monday",
+  "time": "9:00 AM - 5:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Registration"
+   }
+  ]
+ },
+ {
+  "row": 6,
+  "date": "27th July",
+  "day": "Monday",
+  "time": null,
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Parent's Connect"
+   }
+  ]
+ },
+ {
+  "row": 7,
+  "date": "27th July",
+  "day": "Monday",
+  "time": "6:30 PM - 8:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "1st Mentor - Mentee Meet"
+   }
+  ]
+ },
+ {
+  "row": 8,
+  "date": "28th July",
+  "day": "Tuesday",
+  "time": "7-8:30 am",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Morning Bhangra Session G1-G6"
+   }
+  ]
+ },
+ {
+  "row": 9,
+  "date": "28th July",
+  "day": "Tuesday",
+  "time": "10 - 11 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "AWC"
+   }
+  ]
+ },
+ {
+  "row": 10,
+  "date": "28th July",
+  "day": "Tuesday",
+  "time": null,
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "BOWA Counseller Talk"
+   }
+  ]
+ },
+ {
+  "row": 11,
+  "date": "28th July",
+  "day": "Tuesday",
+  "time": "11:45AM - 1:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Admin Talks"
+   }
+  ]
+ },
+ {
+  "row": 12,
+  "date": "28th July",
+  "day": "Tuesday",
+  "time": null,
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Campus Tour"
+   }
+  ]
+ },
+ {
+  "row": 13,
+  "date": "28th July",
+  "day": "Tuesday",
+  "time": "3:00 - 5:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Meet with Council & ISMP"
+   }
+  ]
+ },
+ {
+  "row": 14,
+  "date": "29th July",
+  "day": "Wednesday",
+  "time": "7-8:30 am",
+  "events": [
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Morning Bhangra Sesh G7-G12"
+   }
+  ]
+ },
+ {
+  "row": 15,
+  "date": "29th July",
+  "day": "Wednesday",
+  "time": "9:30 - 10:00 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "AWC"
+   }
+  ]
+ },
+ {
+  "row": 16,
+  "date": "29th July",
+  "day": "Wednesday",
+  "time": "10:00 - 11:00 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Mental Health Awareness"
+   }
+  ]
+ },
+ {
+  "row": 17,
+  "date": "29th July",
+  "day": "Wednesday",
+  "time": "11:00 - 12:00",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Anti ragging (POSH )"
+   }
+  ]
+ },
+ {
+  "row": 20,
+  "date": "29th July",
+  "day": "Wednesday",
+  "time": "8:00PM - 10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Club Introduction"
+   }
+  ]
+ },
+ {
+  "row": 21,
+  "date": "30th July",
+  "day": "Thursday",
+  "time": null,
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "E-CELL"
+   }
+  ]
+ },
+ {
+  "row": 22,
+  "date": "31st July",
+  "day": "Friday",
+  "time": "8:00-9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "text": "Zenith  - M5"
+   },
+   {
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "text": "Fincom - M6"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Ennarators - M4"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Debsoc - MESH"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "MUN - M3"
+   }
+  ]
+ },
+ {
+  "row": 23,
+  "date": "31st July",
+  "day": "Friday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Alpha - M4"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Filmski - MESH"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Panache - M3"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "text": "Softcom - M5"
+   },
+   {
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "text": "IOTA - M6"
+   }
+  ]
+ },
+ {
+  "row": 24,
+  "date": "1st August",
+  "day": "Saturday",
+  "time": "10:00 - 1:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "INSTITUTE ORIENTATION"
+   }
+  ]
+ },
+ {
+  "row": 25,
+  "date": "1st August",
+  "day": "Saturday",
+  "time": "4:30 - 6:30PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Selfie Sprint"
+   }
+  ]
+ },
+ {
+  "row": 26,
+  "date": "1st August",
+  "day": "Saturday",
+  "time": "8:00-9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Alankar - M3"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Undekha - MESH"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Dcypher - LHC Common Area"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Coding - M5"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "ESportz - M4"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Robotics - M6"
+   }
+  ]
+ },
+ {
+  "row": 27,
+  "date": "1st August",
+  "day": "Saturday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Ennarators - MESH"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Debsoc - M3"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "MUN - M6"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Vibgyor - M5"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Epicure - M4"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Panache - CYSH"
+   }
+  ]
+ },
+ {
+  "row": 28,
+  "date": "2nd August",
+  "day": "Sunday",
+  "time": "10:00-11:00 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "PEAK MINDS SESSIONS"
+   }
+  ]
+ },
+ {
+  "row": 30,
+  "date": "2nd August",
+  "day": "Sunday",
+  "time": "11:15 AM - 1:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Basketball"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Football"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Athletics"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Cricket"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Weighlifting"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Table Tennis"
+   }
+  ]
+ },
+ {
+  "row": 31,
+  "date": "2nd August",
+  "day": "Sunday",
+  "time": "11:15 AM - 1:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Tennis"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Badminton"
+   }
+  ]
+ },
+ {
+  "row": 32,
+  "date": "2nd August",
+  "day": "Sunday",
+  "time": "3:00 - 4:30PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Tennis"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Football"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Athletics"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Cricket"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Weighlifting"
+   }
+  ]
+ },
+ {
+  "row": 33,
+  "date": "2nd August",
+  "day": "Sunday",
+  "time": "3:00 - 4:30PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Basketball"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Table Tennis"
+   }
+  ]
+ },
+ {
+  "row": 34,
+  "date": "2nd August",
+  "day": "Sunday",
+  "time": "4:30-5:45 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Chess - MESH"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Aeromodelling - M3"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Undekha - M5"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "ESportz - M4"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Robotics - M6"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Enigma - CYSH"
+   }
+  ]
+ },
+ {
+  "row": 35,
+  "date": "2nd August",
+  "day": "Sunday",
+  "time": "8:00 - 9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Esportz - M3"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Automotive - M4"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Alankar - M5"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Dcypher - LHC Common Area"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Arturo - M6"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Alfaaz - MESH"
+   }
+  ]
+ },
+ {
+  "row": 36,
+  "date": "2nd August",
+  "day": "Sunday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Panache - M6"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "MUN  - M4"
+   },
+   {
+    "groups": [
+     3,
+     10,
+     4,
+     9
+    ],
+    "text": "Book Club - M5"
+   },
+   {
+    "groups": [
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "BOWA Sessions 1 - Audi Foyer"
+   }
+  ]
+ },
+ {
+  "row": 37,
+  "date": "3rd August",
+  "day": "Monday",
+  "time": "8:00 - 9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "text": "Fincom - M6"
+   },
+   {
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "text": "CIM - M5"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Undekha - M4"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Dcypher - LHC Common Area"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Arturo - M3"
+   }
+  ]
+ },
+ {
+  "row": 38,
+  "date": "3rd August",
+  "day": "Monday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "text": "SoftCom - M6"
+   },
+   {
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "text": "Monochrome - M5"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Epicure - M3"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Vibgyor - M4"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Ennarators - MESH"
+   }
+  ]
+ },
+ {
+  "row": 39,
+  "date": "4th August",
+  "day": "Tuesday",
+  "time": "8:00 - 9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Alfaaz - M6"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Alpha - M5"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Enigma - M3"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Alankar - M4"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Undekha - MESH"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Dcypher - LHC Common Area"
+   }
+  ]
+ },
+ {
+  "row": 40,
+  "date": "4th August",
+  "day": "Tuesday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11
+    ],
+    "text": "BOWA Session 2 - Audi Foyer"
+   },
+   {
+    "groups": [
+     3,
+     10,
+     4,
+     9
+    ],
+    "text": "Maths Club - m5"
+   },
+   {
+    "groups": [
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Book Club - M6"
+   }
+  ]
+ },
+ {
+  "row": 41,
+  "date": "5th August",
+  "day": "Wednesday",
+  "time": "8:00-9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Debsoc - M3"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Chess - M4"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Filmski - MESH"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "text": "Zenith - M5"
+   },
+   {
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "text": "Softcom - M6"
+   }
+  ]
+ },
+ {
+  "row": 42,
+  "date": "5th August",
+  "day": "Wednesday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "text": "Monochrome - M6"
+   },
+   {
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "text": "Zenith - M5"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "MUN - M3"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Alfaaz - MESH"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Coding - M4"
+   }
+  ]
+ },
+ {
+  "row": 43,
+  "date": "6th August",
+  "day": "Thursday",
+  "time": "9:00- 10:15 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Volleyball"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Cricket"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Basketball"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Weighlifting"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Badminton"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Football"
+   }
+  ]
+ },
+ {
+  "row": 44,
+  "date": "6th August",
+  "day": "Thursday",
+  "time": "9:00- 10:15 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Table tennis"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Tennis"
+   }
+  ]
+ },
+ {
+  "row": 45,
+  "date": "6th August",
+  "day": "Thursday",
+  "time": "5:00-6:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Tennis"
+   }
+  ]
+ },
+ {
+  "row": 46,
+  "date": "6th August",
+  "day": "Thursday",
+  "time": "5:00-6:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Basketball"
+   }
+  ]
+ },
+ {
+  "row": 47,
+  "date": "6th August",
+  "day": "Thursday",
+  "time": "8:00-9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Automotive - M3"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Panache - CYSH"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Robotics - M5"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Arturo - MESH"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Alankar - M6"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Vibgyor - M4"
+   }
+  ]
+ },
+ {
+  "row": 48,
+  "date": "6th August",
+  "day": "Thursday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Undekha - M6"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Coding - MESH"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Alpha - M5"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Panache - M4"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Aeromodelling - M3"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "ESportz - CYSH"
+   }
+  ]
+ },
+ {
+  "row": 49,
+  "date": "7th August",
+  "day": "Friday",
+  "time": "8:00 - 10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Film Screening"
+   }
+  ]
+ },
+ {
+  "row": 50,
+  "date": "8th August",
+  "day": "Saturday",
+  "time": "7:30 PM - 11:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "JAMMING NIGHT"
+   }
+  ]
+ },
+ {
+  "row": 51,
+  "date": "9th August",
+  "day": "Sunday",
+  "time": "9:30 - 10:50 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Cricket"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Table Tennis"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Weighlifting"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Basketball"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Volleyball"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Badminton"
+   }
+  ]
+ },
+ {
+  "row": 52,
+  "date": "9th August",
+  "day": "Sunday",
+  "time": "9:30 - 10:50 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Badminton"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Athletics"
+   }
+  ]
+ },
+ {
+  "row": 53,
+  "date": "9th August",
+  "day": "Sunday",
+  "time": "10:50 - 12:10 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Football"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Basketball"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Volleyball"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Hockey"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Tennis"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Chess- M4"
+   }
+  ]
+ },
+ {
+  "row": 54,
+  "date": "9th August",
+  "day": "Sunday",
+  "time": "10:50 - 12:10 PM",
+  "events": [
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Weightlifting"
+   }
+  ]
+ },
+ {
+  "row": 55,
+  "date": "9th August",
+  "day": "Sunday",
+  "time": "2-4 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Panache (Chic Soiree) - SAB Open Area"
+   }
+  ]
+ },
+ {
+  "row": 56,
+  "date": "9th August",
+  "day": "Sunday",
+  "time": "4-7PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Treasure Hunt"
+   }
+  ]
+ },
+ {
+  "row": 57,
+  "date": "9th August",
+  "day": "Sunday",
+  "time": "9-10:30PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Traders's Arena - AUDI"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Steelwool  Photography"
+   }
+  ]
+ },
+ {
+  "row": 58,
+  "date": "10th August",
+  "day": "Monday",
+  "time": "8:00-9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Enigma - M4"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Ennarators - MESH"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Arturo - M3"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "text": "IOTA - M6"
+   },
+   {
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "text": "Zenith - M5"
+   }
+  ]
+ },
+ {
+  "row": 59,
+  "date": "10th August",
+  "day": "Monday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Maths Club - M6"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Robotics - M4"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Epicure - M3"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Chess - MESH"
+   },
+   {
+    "groups": [
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Automotive - M5"
+   }
+  ]
+ },
+ {
+  "row": 60,
+  "date": "11th August",
+  "day": "Tuesday",
+  "time": "8:00-9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Arturo - MESH"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Alankar - M4"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Vibgyor - M3"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "text": "Fincom - M5"
+   },
+   {
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "text": "Monochrome - M6"
+   }
+  ]
+ },
+ {
+  "row": 61,
+  "date": "11th August",
+  "day": "Tuesday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "text": "IOTA - M6"
+   },
+   {
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "text": "Softcom - M5"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Aeromodelling - M3"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Filmski - MESH"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Alpha - M4"
+   }
+  ]
+ },
+ {
+  "row": 62,
+  "date": "12th August",
+  "day": "Wednesday",
+  "time": "8:00-9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "MUN - MESH"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Esportz - M3"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Ennarators - M4"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "text": "CIM - M5"
+   },
+   {
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "text": "Fincom - M6"
+   }
+  ]
+ },
+ {
+  "row": 63,
+  "date": "12th August",
+  "day": "Wednesday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Filmski - MESH"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Epicure - M4"
+   },
+   {
+    "groups": [
+     3,
+     10,
+     4,
+     9
+    ],
+    "text": "Automotive - M5"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Alpha - M6"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Debsoc - M3"
+   }
+  ]
+ },
+ {
+  "row": 64,
+  "date": "13th August",
+  "day": "Thursday",
+  "time": "8:00-9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Coding - M4"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Enigma - MESH"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "ESportz - M3"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "text": "Monochrome - M6"
+   },
+   {
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "text": "CIM - M5"
+   }
+  ]
+ },
+ {
+  "row": 65,
+  "date": "13th August",
+  "day": "Thursday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "text": "CIM - M5"
+   },
+   {
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "text": "Iota - M6"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Filmski - M3"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Enigma - MESH"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Epicure - M4"
+   }
+  ]
+ },
+ {
+  "row": 66,
+  "date": "14th August",
+  "day": "Friday",
+  "time": "8:00-9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Vibgyor - M3"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Arturo - M4"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Robotics - M5"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Coding - MESH"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Aeromodelling - M6"
+   }
+  ]
+ },
+ {
+  "row": 67,
+  "date": "14th August",
+  "day": "Friday",
+  "time": "9:15-10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11
+    ],
+    "text": "Book Club - M6"
+   },
+   {
+    "groups": [
+     3,
+     10,
+     4,
+     9
+    ],
+    "text": "BOWA Session 3 - Audi Foyer"
+   },
+   {
+    "groups": [
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Maths club - M5"
+   }
+  ]
+ },
+ {
+  "row": 68,
+  "date": "15th August",
+  "day": "Saturday",
+  "time": "5:30 PM - 6:40 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Hockey"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Tennis"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Chess -  M4"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Badminton"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Table Tennis"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Athletics"
+   }
+  ]
+ },
+ {
+  "row": 69,
+  "date": "15th August",
+  "day": "Saturday",
+  "time": "5:30 PM - 6:40 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Weighlifting"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Volleytball"
+   }
+  ]
+ },
+ {
+  "row": 70,
+  "date": "15th August",
+  "day": "Saturday",
+  "time": "3:00 -5:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "POV Rush(alpha) - LHC"
+   }
+  ]
+ },
+ {
+  "row": 71,
+  "date": "15th August",
+  "day": "Saturday",
+  "time": "8:00 - 10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Open Mic - LHC CIRCLE"
+   }
+  ]
+ },
+ {
+  "row": 72,
+  "date": "16th August",
+  "day": "Sunday",
+  "time": "9:30 - 10:40 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Athletics"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Volleyball"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Badminton"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Football"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Hockey"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Cricket"
+   }
+  ]
+ },
+ {
+  "row": 73,
+  "date": "16th August",
+  "day": "Sunday",
+  "time": "10:40 - 11:50 AM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Weighlifting"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Athletics"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Hockey"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Table Tennis"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Chess -M4"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Basketball"
+   }
+  ]
+ },
+ {
+  "row": 74,
+  "date": "16th August",
+  "day": "Sunday",
+  "time": "11:50 - 1:00 PM",
+  "events": [
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Hockey"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Tennis"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Athletics"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Volleyball"
+   }
+  ]
+ },
+ {
+  "row": 75,
+  "date": "16th August",
+  "day": "Sunday",
+  "time": "5:00 - 6:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Badminton"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Weighlifting"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Table Tennis"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Tennis"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Basketball"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Hockey"
+   }
+  ]
+ },
+ {
+  "row": 76,
+  "date": "16th August",
+  "day": "Sunday",
+  "time": "5:00 - 6:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Volleyball"
+   }
+  ]
+ },
+ {
+  "row": 77,
+  "date": "16th August",
+  "day": "Sunday",
+  "time": "6:30 - 8:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Table Tennis"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Badminton"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Cricket"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Volleyball"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Football"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Tennis"
+   }
+  ]
+ },
+ {
+  "row": 78,
+  "date": "16th August",
+  "day": "Sunday",
+  "time": "6:30 - 8:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Athletics"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Basketball"
+   }
+  ]
+ },
+ {
+  "row": 79,
+  "date": "16th August",
+  "day": "Sunday",
+  "time": "9:00 - 10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "text": "Steelwool Photography"
+   },
+   {
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Trader's Arena - AUDI"
+   }
+  ]
+ },
+ {
+  "row": 80,
+  "date": "17th August",
+  "day": "Monday",
+  "time": "8:00 - 9:15PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Robotics - M6"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Alfaaz - M3"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Aeromodelling - M5"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Debsoc - M4"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "MUN - MESH"
+   }
+  ]
+ },
+ {
+  "row": 81,
+  "date": "17th August",
+  "day": "Monday",
+  "time": "9:15 - 10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Dcypher - LHC COMMON AREA"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Vibgyor - M3"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Debsoc  - MESH"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Alfaaz - M4"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Ennarators - M5"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Undekha- M6"
+   }
+  ]
+ },
+ {
+  "row": 82,
+  "date": "18th August",
+  "day": "Tuesday",
+  "time": "8:00 - 9:15 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Aeromodelling - M3"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Dcypher - LHC Common Area"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Alfaaz - MESH"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Alpha - M5"
+   },
+   {
+    "groups": [
+     5,
+     8
+    ],
+    "text": "Panache - M4"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Filmski - M6"
+   }
+  ]
+ },
+ {
+  "row": 83,
+  "date": "18th August",
+  "day": "Tuesday",
+  "time": "9:15 - 10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12
+    ],
+    "text": "Epicure - M3"
+   },
+   {
+    "groups": [
+     2,
+     11
+    ],
+    "text": "Maths Club - M5"
+   },
+   {
+    "groups": [
+     3,
+     10
+    ],
+    "text": "Coding - CYSH"
+   },
+   {
+    "groups": [
+     4,
+     9
+    ],
+    "text": "Enigma - MESH"
+   },
+   {
+    "groups": [
+     6,
+     7
+    ],
+    "text": "Alankar - M6"
+   }
+  ]
+ },
+ {
+  "row": 84,
+  "date": "19th August",
+  "day": "Wednesday",
+  "time": "8:00 - 10:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Debsoc Finals - M5"
+   }
+  ]
+ },
+ {
+  "row": 85,
+  "date": "19th August",
+  "day": "Wednesday",
+  "time": "8:00 - 10:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "IOTA Finals - M6"
+   }
+  ]
+ },
+ {
+  "row": 86,
+  "date": "20th August",
+  "day": "Thursday",
+  "time": "8:00 - 10:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "PANACHE FASHION SHOW + ALPHA SCREENING ------------ AUDI"
+   }
+  ]
+ },
+ {
+  "row": 87,
+  "date": "21st August",
+  "day": "Friday",
+  "time": "6:00 - 7:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Basketball Finals"
+   }
+  ]
+ },
+ {
+  "row": 88,
+  "date": "21st August",
+  "day": "Friday",
+  "time": "8:00 - 10:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "ISMP PLAY UNDEKHA --- AUDI"
+   }
+  ]
+ },
+ {
+  "row": 89,
+  "date": "22nd August",
+  "day": "Saturday",
+  "time": "7:00 - 11:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "CULT NIGHT"
+   }
+  ]
+ },
+ {
+  "row": 90,
+  "date": "23rd August",
+  "day": "Sunday",
+  "time": "11:00 AM - 1:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Space Day"
+   }
+  ]
+ },
+ {
+  "row": 91,
+  "date": "23rd August",
+  "day": "Sunday",
+  "time": "10:00 AM - 4:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Fresher's MUN - M5 (tentative)"
+   }
+  ]
+ },
+ {
+  "row": 92,
+  "date": "23rd August",
+  "day": "Sunday",
+  "time": "4:00 - 7:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Ennarators Round 1 - M5"
+   }
+  ]
+ },
+ {
+  "row": 93,
+  "date": "23rd August",
+  "day": "Sunday",
+  "time": "7:00 - 11:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "CULT NIGHT BUFFER"
+   }
+  ]
+ },
+ {
+  "row": 94,
+  "date": "24th August",
+  "day": "Monday",
+  "time": "8:00 - 10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Ennarators Round 2 - M5"
+   }
+  ]
+ },
+ {
+  "row": 95,
+  "date": "25th August",
+  "day": "Tuesday",
+  "time": "8:00 - 9:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Maanjhi"
+   }
+  ]
+ },
+ {
+  "row": 96,
+  "date": "25th August",
+  "day": "Tuesday",
+  "time": "9:00 - 10:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Pehchaan Ek Safar"
+   }
+  ]
+ },
+ {
+  "row": 97,
+  "date": "26th August",
+  "day": "Wednesday",
+  "time": "7:30 -9:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Script the Comic - M5"
+   }
+  ]
+ },
+ {
+  "row": 98,
+  "date": "26th August",
+  "day": "Wednesday",
+  "time": "9:30 - 10:30 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Chess Finals- M4"
+   }
+  ]
+ },
+ {
+  "row": 99,
+  "date": "27th August",
+  "day": "Thursday",
+  "time": "8:00 - 10:00 PM",
+  "events": [
+   {
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "text": "Enigma Quiz - M5"
+   }
+  ]
+ }
+]

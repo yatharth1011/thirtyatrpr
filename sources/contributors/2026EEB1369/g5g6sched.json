@@ -1,0 +1,201 @@
+{
+  "schedule": {
+    "Monday": [
+      {
+        "time": "8:00-8:50 am",
+        "details": [
+          "PH101 TUTORIAL",
+          "G5-(CS-1)",
+          "G6-(CS-SH)"
+        ]
+      },
+      {
+        "time": "9:00-9:50 am",
+        "details": [
+          "AI101",
+          "AUDI"
+        ]
+      },
+      {
+        "time": "10:00-10:50 am",
+        "details": [
+          "MA101",
+          "SRC-107"
+        ]
+      },
+      {
+        "time": "11:00-11:50 am",
+        "details": [
+          "PH101",
+          "SRC-107"
+        ]
+      },
+      {
+        "time": "12:00-12:50 pm",
+        "details": [
+          "LUNCH"
+        ]
+      },
+      {
+        "time": "1:00-1:50 pm",
+        "details": [
+          "HS110 AUDI",
+          "HS111 SRC-005"
+        ]
+      },
+      {
+        "time": "2:00-6:50 pm",
+        "details": [
+          "PH102 Lab (G6) [2:00-6:00]",
+          "NO101 (G5) [5:00-7:00]"
+        ]
+      }
+    ],
+    "Tuesday": [
+      {
+        "time": "8:00-8:50 am",
+        "details": [
+          "MA101 TUTORIAL",
+          "G5-EE3",
+          "G6-ME1"
+        ]
+      },
+      {
+        "time": "9:00-9:50 am",
+        "details": [
+          "AI101",
+          "AUDI"
+        ]
+      },
+      {
+        "time": "10:00-10:50 am",
+        "details": [
+          "MA101",
+          "SRC-107"
+        ]
+      },
+      {
+        "time": "11:00-11:50 am",
+        "details": [
+          "PH101",
+          "SRC-107"
+        ]
+      },
+      {
+        "time": "12:00-12:50 pm",
+        "details": [
+          "LUNCH"
+        ]
+      },
+      {
+        "time": "1:00-1:50 pm",
+        "details": [
+          "HS110 AUDI",
+          "HS111 SRC-005"
+        ]
+      },
+      {
+        "time": "4:00-5:50 pm",
+        "details": [
+          "AI101 Lab ( G5 And G6 )"
+        ]
+      },
+      {
+        "time": "6:00-6:50 pm",
+        "details": [
+          "LS101 (G5+G6)"
+        ]
+      }
+    ],
+    "Wednesday": [
+      {
+        "time": "9:00-9:50 am",
+        "details": [
+          "AI101",
+          "AUDI"
+        ]
+      },
+      {
+        "time": "10:00-10:50 am",
+        "details": [
+          "MA101",
+          "SRC-107"
+        ]
+      },
+      {
+        "time": "11:00-11:50 am",
+        "details": [
+          "PH101",
+          "SRC-107"
+        ]
+      },
+      {
+        "time": "12:00-12:50 pm",
+        "details": [
+          "LUNCH"
+        ]
+      },
+      {
+        "time": "1:00-1:50 pm",
+        "details": [
+          "HS110 AUDI",
+          "HS111 SRC-004",
+          "HS112 SRC-107",
+          "HS113 SENATE HALL",
+          "IK101 EE-1"
+        ]
+      }
+    ],
+    "Thursday": [
+      {
+        "time": "9:00-11:50 am",
+        "details": [
+          "PH102 Lab (G5)"
+        ]
+      },
+      {
+        "time": "12:00-12:50 pm",
+        "details": [
+          "LUNCH"
+        ]
+      },
+      {
+        "time": "1:00-1:50 pm",
+        "details": [
+          "HS112 SRC-107",
+          "HS113 SENATE HALL",
+          "IK101 EE-1"
+        ]
+      },
+      {
+        "time": "2:00-6:50 pm",
+        "details": [
+          "WP101 Lab (G5) [2:00-6:00]",
+          "NO101 (G6) [5:00-7:00]"
+        ]
+      }
+    ],
+    "Friday": [
+      {
+        "time": "12:00-12:50 pm",
+        "details": [
+          "LUNCH"
+        ]
+      },
+      {
+        "time": "1:00-1:50 pm",
+        "details": [
+          "HS112 SRC-107",
+          "HS113 SENATE HALL",
+          "IK101 EE-1"
+        ]
+      },
+      {
+        "time": "2:00-5:50 pm",
+        "details": [
+          "WP101 Lab (G6)"
+        ]
+      }
+    ]
+  }
+}

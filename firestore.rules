@@ -1,0 +1,208 @@
+rules_version = '2';
+
+// PH102 G2 team finalisation — see public/ph102/teams/index.html for the app.
+// Data model:
+//   /proposals/{leaderEntry}                          leader-owned invite: {leader, members[]}
+//   /proposals/{leaderEntry}/approvals/{memberEntry}   member-owned response: {member, status}
+//   /activity/{autoId}                                 append-only log entries, self-attributed
+//
+// Everything not covered here (the original roll-order allotment, student names/branches,
+// the lock deadline) is static data baked into the deployed page, not stored in Firestore —
+// so there is nothing else for these rules to protect.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // The exact 60-student PH102 G2 roster (2026AIB1061-1099, 2026MCB1502-1522).
+    function g2Entries() {
+      return [
+        '2026AIB1061', '2026AIB1062', '2026AIB1063', '2026AIB1064', '2026AIB1065',
+        '2026AIB1066', '2026AIB1067', '2026AIB1068', '2026AIB1069', '2026AIB1070',
+        '2026AIB1071', '2026AIB1072', '2026AIB1073', '2026AIB1074', '2026AIB1075',
+        '2026AIB1076', '2026AIB1077', '2026AIB1078', '2026AIB1079', '2026AIB1080',
+        '2026AIB1081', '2026AIB1082', '2026AIB1083', '2026AIB1084', '2026AIB1085',
+        '2026AIB1086', '2026AIB1087', '2026AIB1088', '2026AIB1089', '2026AIB1090',
+        '2026AIB1091', '2026AIB1092', '2026AIB1093', '2026AIB1094', '2026AIB1095',
+        '2026AIB1096', '2026AIB1097', '2026AIB1098', '2026AIB1099', '2026MCB1502',
+        '2026MCB1503', '2026MCB1504', '2026MCB1505', '2026MCB1506', '2026MCB1507',
+        '2026MCB1508', '2026MCB1509', '2026MCB1510', '2026MCB1511', '2026MCB1512',
+        '2026MCB1513', '2026MCB1514', '2026MCB1515', '2026MCB1516', '2026MCB1517',
+        '2026MCB1518', '2026MCB1519', '2026MCB1520', '2026MCB1521', '2026MCB1522'
+      ];
+    }
+
+    // Entry number derived from the signed-in Google account's email local-part.
+    function myEntry() {
+      return request.auth.token.email.split('@')[0].upper();
+    }
+
+    function isIitrpr() {
+      return request.auth != null
+        && request.auth.token.email is string
+        && request.auth.token.email.lower().matches('.*@iitrpr[.]ac[.]in$');
+    }
+
+    function signedInG2() {
+      return isIitrpr() && myEntry() in g2Entries();
+    }
+
+    // 2026-09-16T18:29:59Z == 2026-09-16 23:59:59 IST (IST = UTC+5:30, no DST).
+    function beforeLock() {
+      return request.time < timestamp.date(2026, 9, 16) + duration.value(66599, 's');
+    }
+
+    match /proposals/{leaderEntry} {
+      allow read: if signedInG2();
+
+      allow create, update: if signedInG2()
+        && beforeLock()
+        && leaderEntry == myEntry()
+        && request.resource.data.leader == leaderEntry
+        && request.resource.data.members is list
+        && request.resource.data.members.size() >= 1
+        && request.resource.data.members.size() <= 5
+        && leaderEntry in request.resource.data.members
+        && request.resource.data.members.hasOnly(g2Entries());
+
+      allow delete: if signedInG2() && beforeLock() && leaderEntry == myEntry();
+
+      match /approvals/{memberEntry} {
+        allow read: if signedInG2();
+
+        allow create, update: if signedInG2()
+          && beforeLock()
+          && memberEntry == myEntry()
+          && request.resource.data.member == memberEntry
+          && request.resource.data.status in ['approved', 'declined']
+          && memberEntry in get(/databases/$(database)/documents/proposals/$(leaderEntry)).data.members;
+
+        allow delete: if signedInG2() && beforeLock() && memberEntry == myEntry();
+      }
+    }
+
+    match /activity/{entryId} {
+      allow read: if signedInG2();
+      allow create: if signedInG2()
+        && beforeLock()
+        && request.resource.data.actor == myEntry();
+      allow update, delete: if false;
+    }
+
+    // /br — Branch Rep live schedule-overlay tool, see public/br/index.html.
+    // Data model: /scheduleOverlay/{autoId} = { hide: {...}|null, show: {...}|null, note, scope,
+    // createdBy, createdByName, createdAt, updatedAt }. `scope` is one of
+    // {type:'all'} | {type:'branch', branch} | {type:'group', branch, group} |
+    // {type:'entries', entries[], label, branch|null}. group always carries `branch` explicitly
+    // (never a bare group label) to avoid the "group label collides across branches" bug class.
+    // An entries scope written by a BR must carry their own `branch` — every reader only matches a
+    // branch-bound list against students OF that branch, so the list itself can't reach outside it
+    // (rules can't loop over the list to check each entry). Only the creator writes branch:null. Read is open to any signed-in @iitrpr.ac.in account, matching the rest
+    // of the app's posture that no student data is secret from other students; write is gated to
+    // the creator (anything) or a Branch Rep (their own branch, or anything scoped 'all', since
+    // "common for all" data is collectively managed by every BR).
+    function isCreator() {
+      return isIitrpr() && myEntry() == '2026AIB1099';
+    }
+
+    // Mirrors merge.py's BATCH_REPS list — every BR entry mapped to their branch. Keep in sync by
+    // hand whenever BATCH_REPS changes (same manual-sync trade-off as g2Entries() above).
+    function brBranch() {
+      return {
+        '2026AIB1041': 'AIDE', '2026AIB1028': 'AIDE', '2026AIB1099': 'AIDE',
+        '2026CEB1162': 'CE',
+        '2026CHB1125': 'CH',
+        '2026CSB1202': 'CSE', '2026CSB1216': 'CSE', '2026CSB1257': 'CSE', '2026CSB1269': 'CSE',
+        '2026DAB1308': 'DA',
+        '2026EEB1317': 'EE', '2026EEB1330': 'EE', '2026EEB1412': 'EE', '2026EEB1417': 'EE',
+        '2026EPB1468': 'EP',
+        '2026ESB1499': 'ES',
+        '2026ICB1429': 'ICDT',
+        '2026MCB1546': 'MCB', '2026MCB1578': 'MCB', '2026MCB1514': 'MCB',
+        '2026MEB1608': 'ME', '2026MEB1623': 'ME', '2026MEB1647': 'ME',
+        '2026MMB1686': 'MME',
+      };
+    }
+
+    function isBr() {
+      return isIitrpr() && myEntry() in brBranch();
+    }
+
+    function scopeOf(data) {
+      return data.show != null ? data.show.scope : data.hide.scope;
+    }
+
+    function canWriteScope(scope) {
+      return isCreator()
+        || (isBr() && (scope.type == 'all' || (scope.branch is string && scope.branch == brBranch()[myEntry()])));
+    }
+
+    function validOverlayShape(data) {
+      return (data.hide != null || data.show != null)
+        && (data.hide == null || (data.hide.subject is string && data.hide.scope.type in ['all', 'branch', 'group', 'entries']))
+        && (data.show == null || (data.show.subject is string && data.show.scope.type in ['all', 'branch', 'group', 'entries']))
+        && data.createdBy is string
+        && data.createdBy == myEntry();
+    }
+
+    match /scheduleOverlay/{docId} {
+      // Public read, no auth required: students on the main dashboard never sign in with Google at
+      // all (only /br does) — the whole schedule dataset is already fully client-embedded with no
+      // login gate (see thirty_data.js itself), so a BR's live correction is the same category of
+      // "not actually secret" data, not a new exposure.
+      allow read: if true;
+
+      allow create: if (isCreator() || isBr())
+        && validOverlayShape(request.resource.data)
+        && canWriteScope(scopeOf(request.resource.data));
+
+      allow update: if (isCreator() || isBr())
+        && validOverlayShape(request.resource.data)
+        && canWriteScope(scopeOf(resource.data))
+        && canWriteScope(scopeOf(request.resource.data));
+
+      allow delete: if (isCreator() || isBr()) && canWriteScope(scopeOf(resource.data));
+    }
+
+    // Kaizen (the creator's self-paced ML roadmap, scheduled into the dashboard): one private doc,
+    // /kaizen/state = { ticks, dsa, dsaHash } — see build/kaizen_bridge.js. Creator only,
+    // read AND write: the DSA track is deliberately never published, so this is not public data.
+    // Kaizen users: /kaizenUsers/{entry} = { on, t }. Public read — the dashboard greets kaizen users in kaizen
+    // style and colours their names in Squads, for whoever is looking. Each student writes only their own record,
+    // signed in with the @iitrpr Google account of that entry number (turning Kaizen on requires linking it).
+    match /kaizenUsers/{entry} {
+      allow read: if true;
+      allow write: if isIitrpr() && myEntry() == entry
+        && request.resource.data.keys().hasOnly(['on', 't'])
+        && request.resource.data.on is bool;
+    }
+
+    // One Kaizen user's day, the same on every device: /kaizenPrivate/{entry} = { on, min, from, mess, extras,
+    // moves } — each a {v, t} (newest t wins, merged client-side in app3.js), moves = { 'YYYY-MM-DD': {v: JSON
+    // string of that day's missed/cancelled moves, t} }. Private: only that entry's own signed-in @iitrpr account
+    // can read or write it (unlike /kaizenUsers, which is public and carries nothing but on/off).
+    function stampedOk(d, f) {
+      return !(f in d) || (d[f] is map && d[f].keys().hasOnly(['v', 't']) && d[f].t is number);
+    }
+    function validKaizenPrivate(d) {
+      return d.keys().hasOnly(['on', 'min', 'from', 'mess', 'extras', 'moves'])
+        && stampedOk(d, 'on') && (!('on' in d) || d.on.v is bool)
+        && stampedOk(d, 'min') && (!('min' in d) || (d.min.v is number && d.min.v > 0 && d.min.v <= 1440))
+        && stampedOk(d, 'from') && (!('from' in d) || d.from.v in ['morning', 'evening'])
+        && stampedOk(d, 'mess') && (!('mess' in d) || d.mess.v in ['on', 'off'])
+        && stampedOk(d, 'extras') && (!('extras' in d) || d.extras.v in ['0', '1'])
+        && (!('moves' in d) || (d.moves is map && d.moves.size() <= 40));
+    }
+    match /kaizenPrivate/{entry} {
+      allow read, delete: if isIitrpr() && myEntry() == entry;
+      allow create, update: if isIitrpr() && myEntry() == entry && validKaizenPrivate(request.resource.data);
+    }
+
+    match /kaizen/{docId} {
+      allow read, write: if isCreator() && docId == 'state';
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

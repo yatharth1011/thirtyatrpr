@@ -1,0 +1,3422 @@
+[
+ {
+  "date": "2026-07-27",
+  "day": "Monday",
+  "items": [
+   {
+    "time": "9:00 AM - 5:00 PM",
+    "title": "Registration",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": null,
+    "title": "Parent's Connect",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "6:30 PM - 8:00 PM",
+    "title": "1st Mentor - Mentee Meet",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-07-28",
+  "day": "Tuesday",
+  "items": [
+   {
+    "time": "7-8:30 am",
+    "title": "Morning Bhangra Session G1-G6",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "10 - 11 AM",
+    "title": "AWC",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": null,
+    "title": "BOWA Counseller Talk",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "11:45AM - 1:00 PM",
+    "title": "Admin Talks",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": null,
+    "title": "Campus Tour",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "3:00 - 5:00 PM",
+    "title": "Meet with Council & ISMP",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-07-29",
+  "day": "Wednesday",
+  "items": [
+   {
+    "time": "7-8:30 am",
+    "title": "Morning Bhangra Sesh G7-G12",
+    "venue": null,
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:30 - 10:00 AM",
+    "title": "AWC",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "10:00 - 11:00 AM",
+    "title": "Mental Health Awareness",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "11:00 - 12:00",
+    "title": "Anti ragging (POSH )",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "8:00PM - 10:30 PM",
+    "title": "Club Introduction",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-07-30",
+  "day": "Thursday",
+  "items": [
+   {
+    "time": null,
+    "title": "E-CELL",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-07-31",
+  "day": "Friday",
+  "items": [
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Zenith",
+    "venue": "M5",
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Fincom",
+    "venue": "M6",
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Ennarators",
+    "venue": "M4",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Debsoc",
+    "venue": "MESH",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "MUN",
+    "venue": "M3",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Alpha",
+    "venue": "M4",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Filmski",
+    "venue": "MESH",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Panache",
+    "venue": "M3",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Softcom",
+    "venue": "M5",
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "IOTA",
+    "venue": "M6",
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-01",
+  "day": "Saturday",
+  "items": [
+   {
+    "time": "10:00 - 1:00 PM",
+    "title": "INSTITUTE ORIENTATION",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "4:30 - 6:30PM",
+    "title": "Selfie Sprint",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Alankar",
+    "venue": "M3",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Undekha",
+    "venue": "MESH",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Dcypher",
+    "venue": "LHC COMMON AREA",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Coding",
+    "venue": "M5",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "ESportz",
+    "venue": "M4",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Robotics",
+    "venue": "M6",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Ennarators",
+    "venue": "MESH",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Debsoc",
+    "venue": "M3",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "MUN",
+    "venue": "M6",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Vibgyor",
+    "venue": "M5",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Epicure",
+    "venue": "M4",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Panache",
+    "venue": "CYSH",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-02",
+  "day": "Sunday",
+  "items": [
+   {
+    "time": "10:00-11:00 AM",
+    "title": "PEAK MINDS SESSIONS",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "11:15 AM - 1:00 PM",
+    "title": "Basketball",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:15 AM - 1:00 PM",
+    "title": "Football",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:15 AM - 1:00 PM",
+    "title": "Athletics",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:15 AM - 1:00 PM",
+    "title": "Cricket",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:15 AM - 1:00 PM",
+    "title": "Weightlifting",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:15 AM - 1:00 PM",
+    "title": "Table Tennis",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:15 AM - 1:00 PM",
+    "title": "Tennis",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:15 AM - 1:00 PM",
+    "title": "Badminton",
+    "venue": null,
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "3:00 - 4:30PM",
+    "title": "Tennis",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "3:00 - 4:30PM",
+    "title": "Football",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "3:00 - 4:30PM",
+    "title": "Athletics",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "3:00 - 4:30PM",
+    "title": "Cricket",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "3:00 - 4:30PM",
+    "title": "Weightlifting",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "3:00 - 4:30PM",
+    "title": "Basketball",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "3:00 - 4:30PM",
+    "title": "Table Tennis",
+    "venue": null,
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "4:30-5:45 PM",
+    "title": "Chess",
+    "venue": "MESH",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "4:30-5:45 PM",
+    "title": "Aeromodelling",
+    "venue": "M3",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "4:30-5:45 PM",
+    "title": "Undekha",
+    "venue": "M5",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "4:30-5:45 PM",
+    "title": "ESportz",
+    "venue": "M4",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "4:30-5:45 PM",
+    "title": "Robotics",
+    "venue": "M6",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "4:30-5:45 PM",
+    "title": "Enigma",
+    "venue": "CYSH",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "ESportz",
+    "venue": "M3",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Automotive",
+    "venue": "M4",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Alankar",
+    "venue": "M5",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Dcypher",
+    "venue": "LHC COMMON AREA",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Arturo",
+    "venue": "M6",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Alfaaz",
+    "venue": "MESH",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Panache",
+    "venue": "M6",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "MUN",
+    "venue": "M4",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Book Club",
+    "venue": "M5",
+    "groups": [
+     3,
+     10,
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "BOWA Sessions 1",
+    "venue": "AUDI FOYER",
+    "groups": [
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-03",
+  "day": "Monday",
+  "items": [
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Fincom",
+    "venue": "M6",
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "CIM",
+    "venue": "M5",
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Undekha",
+    "venue": "M4",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Dcypher",
+    "venue": "LHC COMMON AREA",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Arturo",
+    "venue": "M3",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Softcom",
+    "venue": "M6",
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Monochrome",
+    "venue": "M5",
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Epicure",
+    "venue": "M3",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Vibgyor",
+    "venue": "M4",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Ennarators",
+    "venue": "MESH",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-04",
+  "day": "Tuesday",
+  "items": [
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Alfaaz",
+    "venue": "M6",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Alpha",
+    "venue": "M5",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Enigma",
+    "venue": "M3",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Alankar",
+    "venue": "M4",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Undekha",
+    "venue": "MESH",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Dcypher",
+    "venue": "LHC COMMON AREA",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "BOWA Session 2",
+    "venue": "AUDI FOYER",
+    "groups": [
+     1,
+     12,
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Maths Club",
+    "venue": "M5",
+    "groups": [
+     3,
+     10,
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Book Club",
+    "venue": "M6",
+    "groups": [
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-05",
+  "day": "Wednesday",
+  "items": [
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Debsoc",
+    "venue": "M3",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Chess",
+    "venue": "M4",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Filmski",
+    "venue": "MESH",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Zenith",
+    "venue": "M5",
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Softcom",
+    "venue": "M6",
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Monochrome",
+    "venue": "M6",
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Zenith",
+    "venue": "M5",
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "MUN",
+    "venue": "M3",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Alfaaz",
+    "venue": "MESH",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Coding",
+    "venue": "M4",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-06",
+  "day": "Thursday",
+  "items": [
+   {
+    "time": "9:00- 10:15 AM",
+    "title": "Volleyball",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:00- 10:15 AM",
+    "title": "Cricket",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:00- 10:15 AM",
+    "title": "Basketball",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:00- 10:15 AM",
+    "title": "Weightlifting",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:00- 10:15 AM",
+    "title": "Badminton",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:00- 10:15 AM",
+    "title": "Football",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:00- 10:15 AM",
+    "title": "Table Tennis",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:00- 10:15 AM",
+    "title": "Tennis",
+    "venue": null,
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:00-6:15 PM",
+    "title": "Tennis",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:00-6:15 PM",
+    "title": "Basketball",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Automotive",
+    "venue": "M3",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Panache",
+    "venue": "CYSH",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Robotics",
+    "venue": "M5",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Arturo",
+    "venue": "MESH",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Alankar",
+    "venue": "M6",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Vibgyor",
+    "venue": "M4",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Undekha",
+    "venue": "M6",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Coding",
+    "venue": "MESH",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Alpha",
+    "venue": "M5",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Panache",
+    "venue": "M4",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Aeromodelling",
+    "venue": "M3",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "ESportz",
+    "venue": "CYSH",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-07",
+  "day": "Friday",
+  "items": [
+   {
+    "time": "8:00 - 10:30 PM",
+    "title": "Film Screening",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-08",
+  "day": "Saturday",
+  "items": [
+   {
+    "time": "7:30 PM - 11:00 PM",
+    "title": "JAMMING NIGHT",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-09",
+  "day": "Sunday",
+  "items": [
+   {
+    "time": "9:30 - 10:50 AM",
+    "title": "Cricket",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:50 AM",
+    "title": "Table Tennis",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:50 AM",
+    "title": "Weightlifting",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:50 AM",
+    "title": "Basketball",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:50 AM",
+    "title": "Volleyball",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:50 AM",
+    "title": "Badminton",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:50 AM",
+    "title": "Badminton",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:50 AM",
+    "title": "Athletics",
+    "venue": null,
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:50 - 12:10 PM",
+    "title": "Football",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:50 - 12:10 PM",
+    "title": "Basketball",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:50 - 12:10 PM",
+    "title": "Volleyball",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:50 - 12:10 PM",
+    "title": "Hockey",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:50 - 12:10 PM",
+    "title": "Tennis",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:50 - 12:10 PM",
+    "title": "Chess",
+    "venue": "M4",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "10:50 - 12:10 PM",
+    "title": "Weightlifting",
+    "venue": null,
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "2-4 PM",
+    "title": "Panache (Chic Soiree)",
+    "venue": "SAB OPEN AREA",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "4-7PM",
+    "title": "Treasure Hunt",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "9-10:30PM",
+    "title": "Traders's Arena",
+    "venue": "AUDI",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9-10:30PM",
+    "title": "Steelwool Photography",
+    "venue": null,
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-10",
+  "day": "Monday",
+  "items": [
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Enigma",
+    "venue": "M4",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Ennarators",
+    "venue": "MESH",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Arturo",
+    "venue": "M3",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "IOTA",
+    "venue": "M6",
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Zenith",
+    "venue": "M5",
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Maths Club",
+    "venue": "M6",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Robotics",
+    "venue": "M4",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Epicure",
+    "venue": "M3",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Chess",
+    "venue": "MESH",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Automotive",
+    "venue": "M5",
+    "groups": [
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-11",
+  "day": "Tuesday",
+  "items": [
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Arturo",
+    "venue": "MESH",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Alankar",
+    "venue": "M4",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Vibgyor",
+    "venue": "M3",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Fincom",
+    "venue": "M5",
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Monochrome",
+    "venue": "M6",
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "IOTA",
+    "venue": "M6",
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Softcom",
+    "venue": "M5",
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Aeromodelling",
+    "venue": "M3",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Filmski",
+    "venue": "MESH",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Alpha",
+    "venue": "M4",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-12",
+  "day": "Wednesday",
+  "items": [
+   {
+    "time": "8:00-9:15 PM",
+    "title": "MUN",
+    "venue": "MESH",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "ESportz",
+    "venue": "M3",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Ennarators",
+    "venue": "M4",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "CIM",
+    "venue": "M5",
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Fincom",
+    "venue": "M6",
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Filmski",
+    "venue": "MESH",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Epicure",
+    "venue": "M4",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Automotive",
+    "venue": "M5",
+    "groups": [
+     3,
+     10,
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Alpha",
+    "venue": "M6",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Debsoc",
+    "venue": "M3",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-13",
+  "day": "Thursday",
+  "items": [
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Coding",
+    "venue": "M4",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Enigma",
+    "venue": "MESH",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "ESportz",
+    "venue": "M3",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Monochrome",
+    "venue": "M6",
+    "groups": [
+     4,
+     9,
+     5
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "CIM",
+    "venue": "M5",
+    "groups": [
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "CIM",
+    "venue": "M5",
+    "groups": [
+     1,
+     12,
+     2
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "IOTA",
+    "venue": "M6",
+    "groups": [
+     11,
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Filmski",
+    "venue": "M3",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Enigma",
+    "venue": "MESH",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Epicure",
+    "venue": "M4",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-14",
+  "day": "Friday",
+  "items": [
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Vibgyor",
+    "venue": "M3",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Arturo",
+    "venue": "M4",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Robotics",
+    "venue": "M5",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Coding",
+    "venue": "MESH",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00-9:15 PM",
+    "title": "Aeromodelling",
+    "venue": "M6",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Book Club",
+    "venue": "M6",
+    "groups": [
+     1,
+     12,
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "BOWA Session 3",
+    "venue": "AUDI FOYER",
+    "groups": [
+     3,
+     10,
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15-10:30 PM",
+    "title": "Maths Club",
+    "venue": "M5",
+    "groups": [
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-15",
+  "day": "Saturday",
+  "items": [
+   {
+    "time": "5:30 PM - 6:40 PM",
+    "title": "Hockey",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:30 PM - 6:40 PM",
+    "title": "Tennis",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:30 PM - 6:40 PM",
+    "title": "Chess",
+    "venue": "M4",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "5:30 PM - 6:40 PM",
+    "title": "Badminton",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:30 PM - 6:40 PM",
+    "title": "Table Tennis",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:30 PM - 6:40 PM",
+    "title": "Athletics",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:30 PM - 6:40 PM",
+    "title": "Weightlifting",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:30 PM - 6:40 PM",
+    "title": "Volleyball",
+    "venue": null,
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "3:00 -5:30 PM",
+    "title": "POV Rush(alpha)",
+    "venue": "LHC",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "8:00 - 10:30 PM",
+    "title": "Open Mic",
+    "venue": "LHC CIRCLE",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-16",
+  "day": "Sunday",
+  "items": [
+   {
+    "time": "9:30 - 10:40 AM",
+    "title": "Athletics",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:40 AM",
+    "title": "Volleyball",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:40 AM",
+    "title": "Badminton",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:40 AM",
+    "title": "Football",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:40 AM",
+    "title": "Hockey",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:30 - 10:40 AM",
+    "title": "Cricket",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:40 - 11:50 AM",
+    "title": "Weightlifting",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:40 - 11:50 AM",
+    "title": "Athletics",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:40 - 11:50 AM",
+    "title": "Hockey",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:40 - 11:50 AM",
+    "title": "Table Tennis",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "10:40 - 11:50 AM",
+    "title": "Chess",
+    "venue": "M4",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "10:40 - 11:50 AM",
+    "title": "Basketball",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:50 - 1:00 PM",
+    "title": "Hockey",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:50 - 1:00 PM",
+    "title": "Tennis",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:50 - 1:00 PM",
+    "title": "Athletics",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "11:50 - 1:00 PM",
+    "title": "Volleyball",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:00 - 6:30 PM",
+    "title": "Badminton",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:00 - 6:30 PM",
+    "title": "Weightlifting",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:00 - 6:30 PM",
+    "title": "Table Tennis",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:00 - 6:30 PM",
+    "title": "Tennis",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:00 - 6:30 PM",
+    "title": "Basketball",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:00 - 6:30 PM",
+    "title": "Hockey",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "5:00 - 6:30 PM",
+    "title": "Volleyball",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "6:30 - 8:00 PM",
+    "title": "Table Tennis",
+    "venue": null,
+    "groups": [
+     1,
+     12
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "6:30 - 8:00 PM",
+    "title": "Badminton",
+    "venue": null,
+    "groups": [
+     2,
+     11
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "6:30 - 8:00 PM",
+    "title": "Cricket",
+    "venue": null,
+    "groups": [
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "6:30 - 8:00 PM",
+    "title": "Volleyball",
+    "venue": null,
+    "groups": [
+     4,
+     9
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "6:30 - 8:00 PM",
+    "title": "Football",
+    "venue": null,
+    "groups": [
+     5,
+     8
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "6:30 - 8:00 PM",
+    "title": "Tennis",
+    "venue": null,
+    "groups": [
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "6:30 - 8:00 PM",
+    "title": "Athletics",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "6:30 - 8:00 PM",
+    "title": "Basketball",
+    "venue": null,
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "sport"
+   },
+   {
+    "time": "9:00 - 10:30 PM",
+    "title": "Steelwool Photography",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:00 - 10:30 PM",
+    "title": "Trader's Arena",
+    "venue": "AUDI",
+    "groups": [
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-17",
+  "day": "Monday",
+  "items": [
+   {
+    "time": "8:00 - 9:15PM",
+    "title": "Robotics",
+    "venue": "M6",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15PM",
+    "title": "Alfaaz",
+    "venue": "M3",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15PM",
+    "title": "Aeromodelling",
+    "venue": "M5",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15PM",
+    "title": "Debsoc",
+    "venue": "M4",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15PM",
+    "title": "MUN",
+    "venue": "MESH",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Dcypher",
+    "venue": "LHC COMMON AREA",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Vibgyor",
+    "venue": "M3",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Debsoc",
+    "venue": "MESH",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Alfaaz",
+    "venue": "M4",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Ennarators",
+    "venue": "M5",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Undekha",
+    "venue": "M6",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-18",
+  "day": "Tuesday",
+  "items": [
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Aeromodelling",
+    "venue": "M3",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Dcypher",
+    "venue": "LHC COMMON AREA",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Alfaaz",
+    "venue": "MESH",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Alpha",
+    "venue": "M5",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Panache",
+    "venue": "M4",
+    "groups": [
+     5,
+     8
+    ],
+    "type": "group"
+   },
+   {
+    "time": "8:00 - 9:15 PM",
+    "title": "Filmski",
+    "venue": "M6",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Epicure",
+    "venue": "M3",
+    "groups": [
+     1,
+     12
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Maths Club",
+    "venue": "M5",
+    "groups": [
+     2,
+     11
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Coding",
+    "venue": "CYSH",
+    "groups": [
+     3,
+     10
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Enigma",
+    "venue": "MESH",
+    "groups": [
+     4,
+     9
+    ],
+    "type": "group"
+   },
+   {
+    "time": "9:15 - 10:30 PM",
+    "title": "Alankar",
+    "venue": "M6",
+    "groups": [
+     6,
+     7
+    ],
+    "type": "group"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-19",
+  "day": "Wednesday",
+  "items": [
+   {
+    "time": "8:00 - 10:00 PM",
+    "title": "Debsoc Finals",
+    "venue": "M5",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "8:00 - 10:00 PM",
+    "title": "IOTA Finals",
+    "venue": "M6",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-20",
+  "day": "Thursday",
+  "items": [
+   {
+    "time": "8:00 - 10:00 PM",
+    "title": "PANACHE FASHION SHOW + ALPHA SCREENING",
+    "venue": "AUDI",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-21",
+  "day": "Friday",
+  "items": [
+   {
+    "time": "6:00 - 7:30 PM",
+    "title": "Basketball Finals",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "8:00 - 10:00 PM",
+    "title": "ISMP PLAY UNDEKHA",
+    "venue": "AUDI",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-22",
+  "day": "Saturday",
+  "items": [
+   {
+    "time": "7:00 - 11:00 PM",
+    "title": "CULT NIGHT",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-23",
+  "day": "Sunday",
+  "items": [
+   {
+    "time": "11:00 AM - 1:00 PM",
+    "title": "Space Day",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "10:00 AM - 4:00 PM",
+    "title": "Fresher's MUN - M5 (tentative)",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "4:00 - 7:00 PM",
+    "title": "Ennarators Round 1",
+    "venue": "M5",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "7:00 - 11:00 PM",
+    "title": "CULT NIGHT BUFFER",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-24",
+  "day": "Monday",
+  "items": [
+   {
+    "time": "8:00 - 10:30 PM",
+    "title": "Ennarators Round 2",
+    "venue": "M5",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-25",
+  "day": "Tuesday",
+  "items": [
+   {
+    "time": "8:00 - 9:00 PM",
+    "title": "Maanjhi",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "9:00 - 10:00 PM",
+    "title": "Pehchaan Ek Safar",
+    "venue": null,
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-26",
+  "day": "Wednesday",
+  "items": [
+   {
+    "time": "7:30 -9:30 PM",
+    "title": "Script the Comic",
+    "venue": "M5",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   },
+   {
+    "time": "9:30 - 10:30 PM",
+    "title": "Chess Finals",
+    "venue": "M4",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ },
+ {
+  "date": "2026-08-27",
+  "day": "Thursday",
+  "items": [
+   {
+    "time": "8:00 - 10:00 PM",
+    "title": "Enigma Quiz",
+    "venue": "M5",
+    "groups": [
+     1,
+     12,
+     2,
+     11,
+     3,
+     10,
+     4,
+     9,
+     5,
+     8,
+     6,
+     7
+    ],
+    "type": "common"
+   }
+  ]
+ }
+]

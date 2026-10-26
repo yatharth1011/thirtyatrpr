@@ -1,0 +1,6982 @@
+{
+ "2026AIB1001": {
+  "name": "A DAMARUK VAJRA TEJ",
+  "entry": "2026AIB1001",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Ansh Batra",
+  "mentorEntry": "2025AIB1009"
+ },
+ "2026AIB1002": {
+  "name": "ABHINAV",
+  "entry": "2026AIB1002",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Nikhil jangir",
+  "mentorEntry": "2025AIB1042"
+ },
+ "2026AIB1003": {
+  "name": "ABHISHEK YADAV",
+  "entry": "2026AIB1003",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Rishi Garg",
+  "mentorEntry": "2025AIB1054"
+ },
+ "2026AIB1004": {
+  "name": "ADARSH AAWALASIYA",
+  "entry": "2026AIB1004",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Parag Gokul Kabara",
+  "mentorEntry": "2025AIB1043"
+ },
+ "2026AIB1005": {
+  "name": "ADITYA SANTOSH MADANE",
+  "entry": "2026AIB1005",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Parag Gokul Kabara",
+  "mentorEntry": "2025AIB1043"
+ },
+ "2026AIB1006": {
+  "name": "AKSHIT JINDAL",
+  "entry": "2026AIB1006",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vaanya Gupta",
+  "mentorEntry": "2025AIB1075"
+ },
+ "2026AIB1007": {
+  "name": "AMANDEEP",
+  "entry": "2026AIB1007",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Tanishq Gupta",
+  "mentorEntry": "2025AIB1073"
+ },
+ "2026AIB1008": {
+  "name": "AMOGH CHAVAN",
+  "entry": "2026AIB1008",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Rashmi Kumari",
+  "mentorEntry": "2025AIB1051"
+ },
+ "2026AIB1009": {
+  "name": "ANADI KRISHN AGNIHOTRI",
+  "entry": "2026AIB1009",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Parv Singla",
+  "mentorEntry": "2025AIB1045"
+ },
+ "2026AIB1010": {
+  "name": "ANAMIKA PAL",
+  "entry": "2026AIB1010",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vaanya Gupta",
+  "mentorEntry": "2025AIB1075"
+ },
+ "2026AIB1011": {
+  "name": "ANANDITA CHAUDHARY",
+  "entry": "2026AIB1011",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Anshu Bhatt",
+  "mentorEntry": "2025AIB1011"
+ },
+ "2026AIB1012": {
+  "name": "ANGHAN DIVIJ KRUNAL",
+  "entry": "2026AIB1012",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Devi charan mishra",
+  "mentorEntry": "2025AIB1020"
+ },
+ "2026AIB1013": {
+  "name": "ANIKA SONI",
+  "entry": "2026AIB1013",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vaanya Gupta",
+  "mentorEntry": "2025AIB1075"
+ },
+ "2026AIB1014": {
+  "name": "ANIRUDDH ABHISHEK",
+  "entry": "2026AIB1014",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Shubham Kumar Behera",
+  "mentorEntry": "2025AIB1068"
+ },
+ "2026AIB1015": {
+  "name": "ANISH KUMAR",
+  "entry": "2026AIB1015",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Tanishq Gupta",
+  "mentorEntry": "2025AIB1073"
+ },
+ "2026AIB1016": {
+  "name": "ANISH MEENA",
+  "entry": "2026AIB1016",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Nikhil jangir",
+  "mentorEntry": "2025AIB1042"
+ },
+ "2026AIB1017": {
+  "name": "ANKUSH CHAUDHARY",
+  "entry": "2026AIB1017",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Ansh Batra",
+  "mentorEntry": "2025AIB1009"
+ },
+ "2026AIB1018": {
+  "name": "ANURAG BERI",
+  "entry": "2026AIB1018",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vaanya Gupta",
+  "mentorEntry": "2025AIB1075"
+ },
+ "2026AIB1019": {
+  "name": "ARGHYA MEHTA",
+  "entry": "2026AIB1019",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Rishi Garg",
+  "mentorEntry": "2025AIB1054"
+ },
+ "2026AIB1020": {
+  "name": "ARPIT",
+  "entry": "2026AIB1020",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Parv Singla",
+  "mentorEntry": "2025AIB1045"
+ },
+ "2026AIB1021": {
+  "name": "ARYAN YADAV",
+  "entry": "2026AIB1021",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Parv Singla",
+  "mentorEntry": "2025AIB1045"
+ },
+ "2026AIB1022": {
+  "name": "ASHOK THALOR",
+  "entry": "2026AIB1022",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Parag Gokul Kabara",
+  "mentorEntry": "2025AIB1043"
+ },
+ "2026AIB1023": {
+  "name": "ASHUTOSH KUMAR",
+  "entry": "2026AIB1023",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Ansh Batra",
+  "mentorEntry": "2025AIB1009"
+ },
+ "2026AIB1024": {
+  "name": "AVDIT BASERA",
+  "entry": "2026AIB1024",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Ghanisht Kaushal",
+  "mentorEntry": "2025AIB1025"
+ },
+ "2026AIB1025": {
+  "name": "AVINASH",
+  "entry": "2026AIB1025",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vishavpreet Singh",
+  "mentorEntry": "2025AIB1078"
+ },
+ "2026AIB1026": {
+  "name": "AYUSH YOGESH SAKURE",
+  "entry": "2026AIB1026",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Sriram Couligi Nagaraja Rao",
+  "mentorEntry": "2025AIB1069"
+ },
+ "2026AIB1027": {
+  "name": "BHAKTI",
+  "entry": "2026AIB1027",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Rashmi Kumari",
+  "mentorEntry": "2025AIB1051"
+ },
+ "2026AIB1028": {
+  "name": "BHUWAN GARG",
+  "entry": "2026AIB1028",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Tanishq Gupta",
+  "mentorEntry": "2025AIB1073"
+ },
+ "2026AIB1029": {
+  "name": "CHATARGADDA THANISH",
+  "entry": "2026AIB1029",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Shubham Kumar Behera",
+  "mentorEntry": "2025AIB1068"
+ },
+ "2026AIB1030": {
+  "name": "DHARMESH MEENA",
+  "entry": "2026AIB1030",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vishavpreet Singh",
+  "mentorEntry": "2025AIB1078"
+ },
+ "2026AIB1031": {
+  "name": "DHONNAR SATYAM RAMESH",
+  "entry": "2026AIB1031",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Sriram Couligi Nagaraja Rao",
+  "mentorEntry": "2025AIB1069"
+ },
+ "2026AIB1032": {
+  "name": "DIVYANSHI",
+  "entry": "2026AIB1032",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Shubham Kumar Behera",
+  "mentorEntry": "2025AIB1068"
+ },
+ "2026AIB1033": {
+  "name": "GAJJELA SRI CHARAN",
+  "entry": "2026AIB1033",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Prachi Aggarwal",
+  "mentorEntry": "2025AIB1048"
+ },
+ "2026AIB1034": {
+  "name": "GANDRAJUPALLI JATHIN BHARADWAJ",
+  "entry": "2026AIB1034",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Nikhil jangir",
+  "mentorEntry": "2025AIB1042"
+ },
+ "2026AIB1035": {
+  "name": "GANGISHETTY SANJAY DEEP",
+  "entry": "2026AIB1035",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vishavpreet Singh",
+  "mentorEntry": "2025AIB1078"
+ },
+ "2026AIB1036": {
+  "name": "GARIMA GAUTAM",
+  "entry": "2026AIB1036",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Devi charan mishra",
+  "mentorEntry": "2025AIB1020"
+ },
+ "2026AIB1037": {
+  "name": "GAURAV SACHIN NIKAM",
+  "entry": "2026AIB1037",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Parag Gokul Kabara",
+  "mentorEntry": "2025AIB1043"
+ },
+ "2026AIB1038": {
+  "name": "GAVINI JITESH YADAV",
+  "entry": "2026AIB1038",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Prachi Aggarwal",
+  "mentorEntry": "2025AIB1048"
+ },
+ "2026AIB1039": {
+  "name": "HARAL ANURADHA DNYANESHWAR",
+  "entry": "2026AIB1039",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Sriram Couligi Nagaraja Rao",
+  "mentorEntry": "2025AIB1069"
+ },
+ "2026AIB1040": {
+  "name": "HARDIK AGARWAL",
+  "entry": "2026AIB1040",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vaanya Gupta",
+  "mentorEntry": "2025AIB1075"
+ },
+ "2026AIB1041": {
+  "name": "HARSH RAJ",
+  "entry": "2026AIB1041",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Tanishq Gupta",
+  "mentorEntry": "2025AIB1073"
+ },
+ "2026AIB1042": {
+  "name": "HARSHIT KUMAR AGRAWAL",
+  "entry": "2026AIB1042",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Rashmi Kumari",
+  "mentorEntry": "2025AIB1051"
+ },
+ "2026AIB1043": {
+  "name": "ISHANT SHARMA",
+  "entry": "2026AIB1043",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Rashmi Kumari",
+  "mentorEntry": "2025AIB1051"
+ },
+ "2026AIB1044": {
+  "name": "JYOTI",
+  "entry": "2026AIB1044",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Rashmi Kumari",
+  "mentorEntry": "2025AIB1051"
+ },
+ "2026AIB1045": {
+  "name": "KABIR JHAMB",
+  "entry": "2026AIB1045",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Parv Singla",
+  "mentorEntry": "2025AIB1045"
+ },
+ "2026AIB1046": {
+  "name": "KALLEM SRIVARSHA",
+  "entry": "2026AIB1046",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Parv Singla",
+  "mentorEntry": "2025AIB1045"
+ },
+ "2026AIB1047": {
+  "name": "KANISHK",
+  "entry": "2026AIB1047",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Nikhil jangir",
+  "mentorEntry": "2025AIB1042"
+ },
+ "2026AIB1048": {
+  "name": "KASHISH",
+  "entry": "2026AIB1048",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Prachi Aggarwal",
+  "mentorEntry": "2025AIB1048"
+ },
+ "2026AIB1049": {
+  "name": "KAVITA MEENA",
+  "entry": "2026AIB1049",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Gayathri",
+  "mentorEntry": "2025AIB1040"
+ },
+ "2026AIB1050": {
+  "name": "KESHAV MISHRA",
+  "entry": "2026AIB1050",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Shubham Kumar Behera",
+  "mentorEntry": "2025AIB1068"
+ },
+ "2026AIB1051": {
+  "name": "KOLLATI SANDEEP KUMAR",
+  "entry": "2026AIB1051",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Rishi Garg",
+  "mentorEntry": "2025AIB1054"
+ },
+ "2026AIB1052": {
+  "name": "KUSULURU SRI CHARAN",
+  "entry": "2026AIB1052",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Rishi Garg",
+  "mentorEntry": "2025AIB1054"
+ },
+ "2026AIB1053": {
+  "name": "MADHAV SHRI KRISHAN SHARMA",
+  "entry": "2026AIB1053",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Ghanisht Kaushal",
+  "mentorEntry": "2025AIB1025"
+ },
+ "2026AIB1054": {
+  "name": "MALAVATH YASVANTH",
+  "entry": "2026AIB1054",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Anshu Bhatt",
+  "mentorEntry": "2025AIB1011"
+ },
+ "2026AIB1055": {
+  "name": "MANNAT",
+  "entry": "2026AIB1055",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Devi charan mishra",
+  "mentorEntry": "2025AIB1020"
+ },
+ "2026AIB1056": {
+  "name": "MANNAT",
+  "entry": "2026AIB1056",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Prachi Aggarwal",
+  "mentorEntry": "2025AIB1048"
+ },
+ "2026AIB1057": {
+  "name": "MANPREET KAUR",
+  "entry": "2026AIB1057",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Anshu Bhatt",
+  "mentorEntry": "2025AIB1011"
+ },
+ "2026AIB1058": {
+  "name": "MANTHAN AGGARWAL",
+  "entry": "2026AIB1058",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vishavpreet Singh",
+  "mentorEntry": "2025AIB1078"
+ },
+ "2026AIB1059": {
+  "name": "MONIKA SINGH",
+  "entry": "2026AIB1059",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Ansh Batra",
+  "mentorEntry": "2025AIB1009"
+ },
+ "2026AIB1060": {
+  "name": "NAITIK JANGID",
+  "entry": "2026AIB1060",
+  "branch": "AIDE",
+  "academicGroup": "G1",
+  "division": "D1",
+  "ismpGroup": 1,
+  "mentor": "Vishavpreet Singh",
+  "mentorEntry": "2025AIB1078"
+ },
+ "2026AIB1061": {
+  "name": "NEHA",
+  "entry": "2026AIB1061",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Ansh Batra",
+  "mentorEntry": "2025AIB1009"
+ },
+ "2026AIB1062": {
+  "name": "NEIL VIKAS PATIL",
+  "entry": "2026AIB1062",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Tanishq Gupta",
+  "mentorEntry": "2025AIB1073"
+ },
+ "2026AIB1063": {
+  "name": "NENAVATH YASHWANTH",
+  "entry": "2026AIB1063",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Ghanisht Kaushal",
+  "mentorEntry": "2025AIB1025"
+ },
+ "2026AIB1064": {
+  "name": "NIRBHAV SINGH",
+  "entry": "2026AIB1064",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Parv Singla",
+  "mentorEntry": "2025AIB1045"
+ },
+ "2026AIB1065": {
+  "name": "PATIL ADITYA ANIL",
+  "entry": "2026AIB1065",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Sriram Couligi Nagaraja Rao",
+  "mentorEntry": "2025AIB1069"
+ },
+ "2026AIB1066": {
+  "name": "PRABHNOOR KATARIA",
+  "entry": "2026AIB1066",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Devi charan mishra",
+  "mentorEntry": "2025AIB1020"
+ },
+ "2026AIB1067": {
+  "name": "PRABHNOOR SINGH",
+  "entry": "2026AIB1067",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Prachi Aggarwal",
+  "mentorEntry": "2025AIB1048"
+ },
+ "2026AIB1068": {
+  "name": "PRANJAL RAWAT",
+  "entry": "2026AIB1068",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Ghanisht Kaushal",
+  "mentorEntry": "2025AIB1025"
+ },
+ "2026AIB1069": {
+  "name": "PRATEEK",
+  "entry": "2026AIB1069",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Parag Gokul Kabara",
+  "mentorEntry": "2025AIB1043"
+ },
+ "2026AIB1070": {
+  "name": "PRIYAM VATSA",
+  "entry": "2026AIB1070",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Vishavpreet Singh",
+  "mentorEntry": "2025AIB1078"
+ },
+ "2026AIB1071": {
+  "name": "RAHUL KUMAR",
+  "entry": "2026AIB1071",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Ghanisht Kaushal",
+  "mentorEntry": "2025AIB1025"
+ },
+ "2026AIB1072": {
+  "name": "RISHABH VISHNOI",
+  "entry": "2026AIB1072",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Nikhil jangir",
+  "mentorEntry": "2025AIB1042"
+ },
+ "2026AIB1073": {
+  "name": "ROHIT RAJ",
+  "entry": "2026AIB1073",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Anshu Bhatt",
+  "mentorEntry": "2025AIB1011"
+ },
+ "2026AIB1074": {
+  "name": "SAJAL CHOUDHARY",
+  "entry": "2026AIB1074",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Shubham Kumar Behera",
+  "mentorEntry": "2025AIB1068"
+ },
+ "2026AIB1075": {
+  "name": "SARINA",
+  "entry": "2026AIB1075",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Gayathri",
+  "mentorEntry": "2025AIB1040"
+ },
+ "2026AIB1076": {
+  "name": "SARTHAK JAIN",
+  "entry": "2026AIB1076",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Vaanya Gupta",
+  "mentorEntry": "2025AIB1075"
+ },
+ "2026AIB1077": {
+  "name": "SARTHAK NITIN NAIK",
+  "entry": "2026AIB1077",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Gayathri",
+  "mentorEntry": "2025AIB1040"
+ },
+ "2026AIB1078": {
+  "name": "SATYAM RAJPUT",
+  "entry": "2026AIB1078",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Ghanisht Kaushal",
+  "mentorEntry": "2025AIB1025"
+ },
+ "2026AIB1079": {
+  "name": "SEJPAL AUM PARESHBHAI",
+  "entry": "2026AIB1079",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Anshu Bhatt",
+  "mentorEntry": "2025AIB1011"
+ },
+ "2026AIB1080": {
+  "name": "SHREYANSH",
+  "entry": "2026AIB1080",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Shubham Kumar Behera",
+  "mentorEntry": "2025AIB1068"
+ },
+ "2026AIB1081": {
+  "name": "SHUBHAM MAURYA",
+  "entry": "2026AIB1081",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Devi charan mishra",
+  "mentorEntry": "2025AIB1020"
+ },
+ "2026AIB1082": {
+  "name": "SIDDHANT MAHAJAN",
+  "entry": "2026AIB1082",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Vishavpreet Singh",
+  "mentorEntry": "2025AIB1078"
+ },
+ "2026AIB1083": {
+  "name": "SOHAM GUPTA",
+  "entry": "2026AIB1083",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Tanishq Gupta",
+  "mentorEntry": "2025AIB1073"
+ },
+ "2026AIB1084": {
+  "name": "SOUVIK DAS",
+  "entry": "2026AIB1084",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Tanishq Gupta",
+  "mentorEntry": "2025AIB1073"
+ },
+ "2026AIB1085": {
+  "name": "SWARNUM THAPPA",
+  "entry": "2026AIB1085",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Sriram Couligi Nagaraja Rao",
+  "mentorEntry": "2025AIB1069"
+ },
+ "2026AIB1086": {
+  "name": "TAPPETA SAI VARSITH REDDY",
+  "entry": "2026AIB1086",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Gayathri",
+  "mentorEntry": "2025AIB1040"
+ },
+ "2026AIB1087": {
+  "name": "TATE SHIVRAJ PRAMOD",
+  "entry": "2026AIB1087",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Anshu Bhatt",
+  "mentorEntry": "2025AIB1011"
+ },
+ "2026AIB1088": {
+  "name": "UTKARSH KUMAR GAUTAM",
+  "entry": "2026AIB1088",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Nikhil jangir",
+  "mentorEntry": "2025AIB1042"
+ },
+ "2026AIB1089": {
+  "name": "UTTARAVELLI SAI ABHIJITH",
+  "entry": "2026AIB1089",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Parag Gokul Kabara",
+  "mentorEntry": "2025AIB1043"
+ },
+ "2026AIB1090": {
+  "name": "VANTALA VENU PRATHYUSH",
+  "entry": "2026AIB1090",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Gayathri",
+  "mentorEntry": "2025AIB1040"
+ },
+ "2026AIB1091": {
+  "name": "VATSAL GUPTA",
+  "entry": "2026AIB1091",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Ansh Batra",
+  "mentorEntry": "2025AIB1009"
+ },
+ "2026AIB1092": {
+  "name": "VEDANSH SINGLA",
+  "entry": "2026AIB1092",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Rashmi Kumari",
+  "mentorEntry": "2025AIB1051"
+ },
+ "2026AIB1093": {
+  "name": "VELPULA RAVANA SIDHARTHA",
+  "entry": "2026AIB1093",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Devi charan mishra",
+  "mentorEntry": "2025AIB1020"
+ },
+ "2026AIB1094": {
+  "name": "VENKTESH SHARMA",
+  "entry": "2026AIB1094",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Rishi Garg",
+  "mentorEntry": "2025AIB1054"
+ },
+ "2026AIB1095": {
+  "name": "VENNA DIVIJA",
+  "entry": "2026AIB1095",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Gayathri",
+  "mentorEntry": "2025AIB1040"
+ },
+ "2026AIB1096": {
+  "name": "VIJVAL BHORIYA",
+  "entry": "2026AIB1096",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Prachi Aggarwal",
+  "mentorEntry": "2025AIB1048"
+ },
+ "2026AIB1097": {
+  "name": "VORA PRIT ASHWINBHAI",
+  "entry": "2026AIB1097",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Nikhil jangir",
+  "mentorEntry": "2025AIB1042"
+ },
+ "2026AIB1098": {
+  "name": "VUTUKURU VIGHNESH KOUNDINYA",
+  "entry": "2026AIB1098",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Rishi Garg",
+  "mentorEntry": "2025AIB1054"
+ },
+ "2026AIB1099": {
+  "name": "YATHARTH SHRIVASTAVA",
+  "entry": "2026AIB1099",
+  "branch": "AIDE",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Sriram Couligi Nagaraja Rao",
+  "mentorEntry": "2025AIB1069"
+ },
+ "2026MCB1502": {
+  "name": "AADITYA CHANDEL",
+  "entry": "2026MCB1502",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Samrat Sanjiva",
+  "mentorEntry": "2025MCB1515"
+ },
+ "2026MCB1503": {
+  "name": "AADRISH DEB",
+  "entry": "2026MCB1503",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Nishant",
+  "mentorEntry": "2025MCB1502"
+ },
+ "2026MCB1504": {
+  "name": "ABEER CHAWLA",
+  "entry": "2026MCB1504",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Ashamveer Singh Sallan",
+  "mentorEntry": "2025MCB1469"
+ },
+ "2026MCB1505": {
+  "name": "ADITYA SINHA",
+  "entry": "2026MCB1505",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Tanish Takkar",
+  "mentorEntry": "2025MCB1523"
+ },
+ "2026MCB1506": {
+  "name": "AGRANI SONI",
+  "entry": "2026MCB1506",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Mridul",
+  "mentorEntry": "2025MCB1497"
+ },
+ "2026MCB1507": {
+  "name": "AJMEERA SHARATH",
+  "entry": "2026MCB1507",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Arhaan",
+  "mentorEntry": "2025MCB1465"
+ },
+ "2026MCB1508": {
+  "name": "Alankrit Tripathi",
+  "entry": "2026MCB1508",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Nishant",
+  "mentorEntry": "2025MCB1502"
+ },
+ "2026MCB1509": {
+  "name": "ANANTHANENI NAGA SHISHIR",
+  "entry": "2026MCB1509",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Manish Raj",
+  "mentorEntry": "2025MCB1492"
+ },
+ "2026MCB1510": {
+  "name": "ANANYA",
+  "entry": "2026MCB1510",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Seerat Mehta",
+  "mentorEntry": "2025MCB1517"
+ },
+ "2026MCB1511": {
+  "name": "ANIKET",
+  "entry": "2026MCB1511",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Shivam garg",
+  "mentorEntry": "2025MCB1518"
+ },
+ "2026MCB1512": {
+  "name": "ANISH KUMAR RAKESH",
+  "entry": "2026MCB1512",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Ashamveer Singh Sallan",
+  "mentorEntry": "2025MCB1469"
+ },
+ "2026MCB1513": {
+  "name": "ARINJAY GARG",
+  "entry": "2026MCB1513",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Param Damani",
+  "mentorEntry": "2025MCB1505"
+ },
+ "2026MCB1514": {
+  "name": "ARUNIMA",
+  "entry": "2026MCB1514",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Kratika Verma",
+  "mentorEntry": "2025MCB1487"
+ },
+ "2026MCB1515": {
+  "name": "ARYAN",
+  "entry": "2026MCB1515",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Adamya Rajput",
+  "mentorEntry": "2025MCB1457"
+ },
+ "2026MCB1516": {
+  "name": "ARYAN HEMANT SAWANT",
+  "entry": "2026MCB1516",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "J.Nagachaitanya",
+  "mentorEntry": "2025MCB1481"
+ },
+ "2026MCB1517": {
+  "name": "ARYAN RAHUL BACHCHHAV",
+  "entry": "2026MCB1517",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Neelabh Mishra",
+  "mentorEntry": "2025MCB1500"
+ },
+ "2026MCB1518": {
+  "name": "ASHMITA GUPTA",
+  "entry": "2026MCB1518",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Arhaan",
+  "mentorEntry": "2025MCB1465"
+ },
+ "2026MCB1519": {
+  "name": "ATULYA SHARMA",
+  "entry": "2026MCB1519",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Seerat Mehta",
+  "mentorEntry": "2025MCB1517"
+ },
+ "2026MCB1520": {
+  "name": "AYATI JAIN",
+  "entry": "2026MCB1520",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Shivam garg",
+  "mentorEntry": "2025MCB1518"
+ },
+ "2026MCB1521": {
+  "name": "BHASWAT DAS",
+  "entry": "2026MCB1521",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "Param Damani",
+  "mentorEntry": "2025MCB1505"
+ },
+ "2026MCB1522": {
+  "name": "BHAVYA GUPTA",
+  "entry": "2026MCB1522",
+  "branch": "MCB",
+  "academicGroup": "G2",
+  "division": "D1",
+  "ismpGroup": 2,
+  "mentor": "J.Nagachaitanya",
+  "mentorEntry": "2025MCB1481"
+ },
+ "2026MCB1523": {
+  "name": "DADHANIYA ARYAN KETANBHAI",
+  "entry": "2026MCB1523",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Param Damani",
+  "mentorEntry": "2025MCB1505"
+ },
+ "2026MCB1524": {
+  "name": "DEEPANSHU CHAHAL",
+  "entry": "2026MCB1524",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "J.Nagachaitanya",
+  "mentorEntry": "2025MCB1481"
+ },
+ "2026MCB1525": {
+  "name": "DHIRAJ KUMAR YADAV",
+  "entry": "2026MCB1525",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Ashamveer Singh Sallan",
+  "mentorEntry": "2025MCB1469"
+ },
+ "2026MCB1526": {
+  "name": "GOKUL GARG",
+  "entry": "2026MCB1526",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Manish Raj",
+  "mentorEntry": "2025MCB1492"
+ },
+ "2026MCB1527": {
+  "name": "GUNJAN LIKHAR",
+  "entry": "2026MCB1527",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Tanish Takkar",
+  "mentorEntry": "2025MCB1523"
+ },
+ "2026MCB1528": {
+  "name": "HARSHIT VERMA",
+  "entry": "2026MCB1528",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Aryan Sahu",
+  "mentorEntry": "2025MCB1468"
+ },
+ "2026MCB1529": {
+  "name": "HIMANSHU PRAJAPATI",
+  "entry": "2026MCB1529",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Aryan Sahu",
+  "mentorEntry": "2025MCB1468"
+ },
+ "2026MCB1530": {
+  "name": "HISHAM MUHAMMAD K",
+  "entry": "2026MCB1530",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "J.Nagachaitanya",
+  "mentorEntry": "2025MCB1481"
+ },
+ "2026MCB1531": {
+  "name": "JEEVAN SINGH KHARWAR",
+  "entry": "2026MCB1531",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Adamya Rajput",
+  "mentorEntry": "2025MCB1457"
+ },
+ "2026MCB1532": {
+  "name": "JUJHAR SINGH",
+  "entry": "2026MCB1532",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Param Damani",
+  "mentorEntry": "2025MCB1505"
+ },
+ "2026MCB1533": {
+  "name": "KARAN KUMAR",
+  "entry": "2026MCB1533",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Ashamveer Singh Sallan",
+  "mentorEntry": "2025MCB1469"
+ },
+ "2026MCB1534": {
+  "name": "KARDILE PRANAV PARMESHWAR",
+  "entry": "2026MCB1534",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Manish Raj",
+  "mentorEntry": "2025MCB1492"
+ },
+ "2026MCB1535": {
+  "name": "KEDARE ASHISH RAJENDRA",
+  "entry": "2026MCB1535",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Shivam garg",
+  "mentorEntry": "2025MCB1518"
+ },
+ "2026MCB1536": {
+  "name": "KORRA AKHIL",
+  "entry": "2026MCB1536",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Manish Raj",
+  "mentorEntry": "2025MCB1492"
+ },
+ "2026MCB1537": {
+  "name": "KUKADIYA DHRUVIL RAJESHBHAI",
+  "entry": "2026MCB1537",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Arhaan",
+  "mentorEntry": "2025MCB1465"
+ },
+ "2026MCB1538": {
+  "name": "LIVTESHWAR SINGH SANDHU",
+  "entry": "2026MCB1538",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Kratika Verma",
+  "mentorEntry": "2025MCB1487"
+ },
+ "2026MCB1539": {
+  "name": "MADHAV GUPTA",
+  "entry": "2026MCB1539",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Seerat Mehta",
+  "mentorEntry": "2025MCB1517"
+ },
+ "2026MCB1540": {
+  "name": "MAHAK",
+  "entry": "2026MCB1540",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Param Damani",
+  "mentorEntry": "2025MCB1505"
+ },
+ "2026MCB1541": {
+  "name": "MALLA DHARANI CHAND",
+  "entry": "2026MCB1541",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Arhaan",
+  "mentorEntry": "2025MCB1465"
+ },
+ "2026MCB1542": {
+  "name": "MALLARAPU JESWANTH SAI",
+  "entry": "2026MCB1542",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Seerat Mehta",
+  "mentorEntry": "2025MCB1517"
+ },
+ "2026MCB1543": {
+  "name": "MANAV GARG",
+  "entry": "2026MCB1543",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Samrat Sanjiva",
+  "mentorEntry": "2025MCB1515"
+ },
+ "2026MCB1544": {
+  "name": "MANMOHAN SINGH",
+  "entry": "2026MCB1544",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "J.Nagachaitanya",
+  "mentorEntry": "2025MCB1481"
+ },
+ "2026MCB1545": {
+  "name": "MANOJ PRAJAPAT",
+  "entry": "2026MCB1545",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Neelabh Mishra",
+  "mentorEntry": "2025MCB1500"
+ },
+ "2026MCB1546": {
+  "name": "MANROJ SINGH",
+  "entry": "2026MCB1546",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Mridul",
+  "mentorEntry": "2025MCB1497"
+ },
+ "2026MCB1547": {
+  "name": "MEENAKSHI",
+  "entry": "2026MCB1547",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Arhaan",
+  "mentorEntry": "2025MCB1465"
+ },
+ "2026MCB1548": {
+  "name": "NANABOLU BHAVISHYA REDDY",
+  "entry": "2026MCB1548",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Nishant",
+  "mentorEntry": "2025MCB1502"
+ },
+ "2026MCB1549": {
+  "name": "NIKHIL MEENA",
+  "entry": "2026MCB1549",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Aryan Sahu",
+  "mentorEntry": "2025MCB1468"
+ },
+ "2026MCB1550": {
+  "name": "NIKITA CHOUDHARY",
+  "entry": "2026MCB1550",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Seerat Mehta",
+  "mentorEntry": "2025MCB1517"
+ },
+ "2026MCB1551": {
+  "name": "NIRBHAY SINGH GAUTAM",
+  "entry": "2026MCB1551",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Neelabh Mishra",
+  "mentorEntry": "2025MCB1500"
+ },
+ "2026MCB1552": {
+  "name": "PADAKANDLA ROHITH",
+  "entry": "2026MCB1552",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Manish Raj",
+  "mentorEntry": "2025MCB1492"
+ },
+ "2026MCB1553": {
+  "name": "PARAMJIT SINGH MANKO",
+  "entry": "2026MCB1553",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Adamya Rajput",
+  "mentorEntry": "2025MCB1457"
+ },
+ "2026MCB1554": {
+  "name": "POOJA",
+  "entry": "2026MCB1554",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Samrat Sanjiva",
+  "mentorEntry": "2025MCB1515"
+ },
+ "2026MCB1555": {
+  "name": "PRATHMESH JAMDADE",
+  "entry": "2026MCB1555",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Neelabh Mishra",
+  "mentorEntry": "2025MCB1500"
+ },
+ "2026MCB1556": {
+  "name": "PRATYUSH RAO ELCHURI",
+  "entry": "2026MCB1556",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Tanish Takkar",
+  "mentorEntry": "2025MCB1523"
+ },
+ "2026MCB1557": {
+  "name": "PURVI JAIN",
+  "entry": "2026MCB1557",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Shivam garg",
+  "mentorEntry": "2025MCB1518"
+ },
+ "2026MCB1558": {
+  "name": "RAJVEER DABI",
+  "entry": "2026MCB1558",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Kratika Verma",
+  "mentorEntry": "2025MCB1487"
+ },
+ "2026MCB1559": {
+  "name": "RISHU RAJ",
+  "entry": "2026MCB1559",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Tanish Takkar",
+  "mentorEntry": "2025MCB1523"
+ },
+ "2026MCB1560": {
+  "name": "SAHIB SINGH SURI",
+  "entry": "2026MCB1560",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Nishant",
+  "mentorEntry": "2025MCB1502"
+ },
+ "2026MCB1561": {
+  "name": "SAJID HASAN",
+  "entry": "2026MCB1561",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Neelabh Mishra",
+  "mentorEntry": "2025MCB1500"
+ },
+ "2026MCB1562": {
+  "name": "SAKSHAM YADAV",
+  "entry": "2026MCB1562",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Mridul",
+  "mentorEntry": "2025MCB1497"
+ },
+ "2026MCB1563": {
+  "name": "SANCHIT MALHOTRA",
+  "entry": "2026MCB1563",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Nishant",
+  "mentorEntry": "2025MCB1502"
+ },
+ "2026MCB1564": {
+  "name": "SARTH KAILASH DHULE",
+  "entry": "2026MCB1564",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Ashamveer Singh Sallan",
+  "mentorEntry": "2025MCB1469"
+ },
+ "2026MCB1565": {
+  "name": "SARTHAK SINGH",
+  "entry": "2026MCB1565",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Tanish Takkar",
+  "mentorEntry": "2025MCB1523"
+ },
+ "2026MCB1566": {
+  "name": "SAURABH DAGAR",
+  "entry": "2026MCB1566",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Mridul",
+  "mentorEntry": "2025MCB1497"
+ },
+ "2026MCB1567": {
+  "name": "SHAURYA KAMBOJ",
+  "entry": "2026MCB1567",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Adamya Rajput",
+  "mentorEntry": "2025MCB1457"
+ },
+ "2026MCB1568": {
+  "name": "SHETYE ISHAAN SANTOSH",
+  "entry": "2026MCB1568",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Aryan Sahu",
+  "mentorEntry": "2025MCB1468"
+ },
+ "2026MCB1569": {
+  "name": "SHIVANSH VAISH",
+  "entry": "2026MCB1569",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Samrat Sanjiva",
+  "mentorEntry": "2025MCB1515"
+ },
+ "2026MCB1570": {
+  "name": "SHREYA SANDIP UMAVANE",
+  "entry": "2026MCB1570",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Kratika Verma",
+  "mentorEntry": "2025MCB1487"
+ },
+ "2026MCB1571": {
+  "name": "SIDDHARTH GANGWAR",
+  "entry": "2026MCB1571",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Kratika Verma",
+  "mentorEntry": "2025MCB1487"
+ },
+ "2026MCB1572": {
+  "name": "SILVERY VERONICA",
+  "entry": "2026MCB1572",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Tanish Takkar",
+  "mentorEntry": "2025MCB1523"
+ },
+ "2026MCB1573": {
+  "name": "SUDA TANISHQ REDDY",
+  "entry": "2026MCB1573",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Aryan Sahu",
+  "mentorEntry": "2025MCB1468"
+ },
+ "2026MCB1574": {
+  "name": "SUMIT",
+  "entry": "2026MCB1574",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Arhaan",
+  "mentorEntry": "2025MCB1465"
+ },
+ "2026MCB1575": {
+  "name": "SUNNAM JAGADEESH",
+  "entry": "2026MCB1575",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Shivam garg",
+  "mentorEntry": "2025MCB1518"
+ },
+ "2026MCB1576": {
+  "name": "TANUSH METLA",
+  "entry": "2026MCB1576",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Param Damani",
+  "mentorEntry": "2025MCB1505"
+ },
+ "2026MCB1577": {
+  "name": "TASHVI GARG",
+  "entry": "2026MCB1577",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Nishant",
+  "mentorEntry": "2025MCB1502"
+ },
+ "2026MCB1578": {
+  "name": "THIRUMAREDDY ROSHINI",
+  "entry": "2026MCB1578",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Mridul",
+  "mentorEntry": "2025MCB1497"
+ },
+ "2026MCB1579": {
+  "name": "UKEY MAYUR JAYANDRA",
+  "entry": "2026MCB1579",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Seerat Mehta",
+  "mentorEntry": "2025MCB1517"
+ },
+ "2026MCB1580": {
+  "name": "VANSH",
+  "entry": "2026MCB1580",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Adamya Rajput",
+  "mentorEntry": "2025MCB1457"
+ },
+ "2026MCB1581": {
+  "name": "VUSHAKOYYALA SRIRAM",
+  "entry": "2026MCB1581",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": 3,
+  "mentor": "Kratika Verma",
+  "mentorEntry": "2025MCB1487"
+ },
+ "2026MCB1696": {
+  "name": "DIVYAANS AGARWAL",
+  "entry": "2026MCB1696",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": null,
+  "mentor": null,
+  "mentorEntry": null
+ },
+ "2026MCB1697": {
+  "name": "SOVIT GAUTAM",
+  "entry": "2026MCB1697",
+  "branch": "MCB",
+  "academicGroup": "G3",
+  "division": "D1",
+  "ismpGroup": null,
+  "mentor": null,
+  "mentorEntry": null
+ },
+ "2025DAB1286": {
+  "name": "Ujjwal Kumar Mahur",
+  "entry": "2025DAB1286",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": null,
+  "mentor": null,
+  "mentorEntry": null
+ },
+ "2026DAB1289": {
+  "name": "ABHINAV MISHRA",
+  "entry": "2026DAB1289",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Akshar Verma",
+  "mentorEntry": "2025DAB1271"
+ },
+ "2026DAB1290": {
+  "name": "ABHISHEK",
+  "entry": "2026DAB1290",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Akshar Verma",
+  "mentorEntry": "2025DAB1271"
+ },
+ "2026DAB1291": {
+  "name": "BLESS SINGH KUKREJA",
+  "entry": "2026DAB1291",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Sahil bhari",
+  "mentorEntry": "2025DAB1283"
+ },
+ "2026DAB1292": {
+  "name": "DIVYDAKSH TIWARI",
+  "entry": "2026DAB1292",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Sahil bhari",
+  "mentorEntry": "2025DAB1283"
+ },
+ "2026DAB1293": {
+  "name": "HARKEERAT AGGARWAL",
+  "entry": "2026DAB1293",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Akshar Verma",
+  "mentorEntry": "2025DAB1271"
+ },
+ "2026DAB1294": {
+  "name": "HARSHIT JETHANI",
+  "entry": "2026DAB1294",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Sahil bhari",
+  "mentorEntry": "2025DAB1283"
+ },
+ "2026DAB1295": {
+  "name": "JAIPAL NAYAK",
+  "entry": "2026DAB1295",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Jasmine Kaur Dhaliwal",
+  "mentorEntry": "2025DAB1277"
+ },
+ "2026DAB1296": {
+  "name": "KANDIMALLA SHASHI VARMA",
+  "entry": "2026DAB1296",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Sahil bhari",
+  "mentorEntry": "2025DAB1283"
+ },
+ "2026DAB1297": {
+  "name": "N SHASANK KUMAR REDDY",
+  "entry": "2026DAB1297",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Jasmine Kaur Dhaliwal",
+  "mentorEntry": "2025DAB1277"
+ },
+ "2026DAB1298": {
+  "name": "NANONG TAMUT",
+  "entry": "2026DAB1298",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Akshar Verma",
+  "mentorEntry": "2025DAB1271"
+ },
+ "2026DAB1299": {
+  "name": "NIHAL KRISHNA CHETTEBHAKTULA",
+  "entry": "2026DAB1299",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Akshar Verma",
+  "mentorEntry": "2025DAB1271"
+ },
+ "2026DAB1300": {
+  "name": "PARVESH KUMAR",
+  "entry": "2026DAB1300",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Jasmine Kaur Dhaliwal",
+  "mentorEntry": "2025DAB1277"
+ },
+ "2026DAB1301": {
+  "name": "PRAMEYA KRISHN",
+  "entry": "2026DAB1301",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Akshar Verma",
+  "mentorEntry": "2025DAB1271"
+ },
+ "2026DAB1302": {
+  "name": "PRATIMA",
+  "entry": "2026DAB1302",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Sahil bhari",
+  "mentorEntry": "2025DAB1283"
+ },
+ "2026DAB1303": {
+  "name": "RAKSHITH A Y",
+  "entry": "2026DAB1303",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Jasmine Kaur Dhaliwal",
+  "mentorEntry": "2025DAB1277"
+ },
+ "2026DAB1304": {
+  "name": "RANDHI PUJITHA",
+  "entry": "2026DAB1304",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Jasmine Kaur Dhaliwal",
+  "mentorEntry": "2025DAB1277"
+ },
+ "2026DAB1305": {
+  "name": "RISHABH RAJPUT",
+  "entry": "2026DAB1305",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Akshar Verma",
+  "mentorEntry": "2025DAB1271"
+ },
+ "2026DAB1306": {
+  "name": "SANIYA JAIN",
+  "entry": "2026DAB1306",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Sahil bhari",
+  "mentorEntry": "2025DAB1283"
+ },
+ "2026DAB1307": {
+  "name": "SIDDHARTH KUMAR",
+  "entry": "2026DAB1307",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Sahil bhari",
+  "mentorEntry": "2025DAB1283"
+ },
+ "2026DAB1308": {
+  "name": "SUNIDHI BHAKUNI",
+  "entry": "2026DAB1308",
+  "branch": "DA",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Jasmine Kaur Dhaliwal",
+  "mentorEntry": "2025DAB1277"
+ },
+ "2026ESB1472": {
+  "name": "AADIT VERMA",
+  "entry": "2026ESB1472",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Yogendra Singh",
+  "mentorEntry": "2025ICB1451"
+ },
+ "2026ESB1473": {
+  "name": "ASHISH MEENA",
+  "entry": "2026ESB1473",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Gurnoor Singh",
+  "mentorEntry": "2025CSB1196"
+ },
+ "2026ESB1474": {
+  "name": "BARMAVATH HARSHAVARDHAN NAIK",
+  "entry": "2026ESB1474",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "DHARUV",
+  "mentorEntry": "2025ICB1441"
+ },
+ "2026ESB1475": {
+  "name": "GOPAL PARIHAR",
+  "entry": "2026ESB1475",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Ruhani Adlakha",
+  "mentorEntry": "2025MEB1585"
+ },
+ "2026ESB1476": {
+  "name": "HARSHIT BANSAL",
+  "entry": "2026ESB1476",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Divya Gupta",
+  "mentorEntry": "2025CSB1189"
+ },
+ "2026ESB1477": {
+  "name": "HEMANSHU SAMADHAN BORSE",
+  "entry": "2026ESB1477",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Poorab Singhi",
+  "mentorEntry": "2025CSB1235"
+ },
+ "2026ESB1478": {
+  "name": "KANAPARTHI SIVA SAI TANISHQ",
+  "entry": "2026ESB1478",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Yogendra Singh",
+  "mentorEntry": "2025ICB1451"
+ },
+ "2026ESB1479": {
+  "name": "KATURI SRI RAVICHARAN",
+  "entry": "2026ESB1479",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Poorab Singhi",
+  "mentorEntry": "2025CSB1235"
+ },
+ "2026ESB1480": {
+  "name": "KESHAV GARG",
+  "entry": "2026ESB1480",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Gurnoor Singh",
+  "mentorEntry": "2025CSB1196"
+ },
+ "2026ESB1481": {
+  "name": "MIRGANE ADITYA TANAJI",
+  "entry": "2026ESB1481",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Yogendra Singh",
+  "mentorEntry": "2025ICB1451"
+ },
+ "2026ESB1482": {
+  "name": "MOHD.AMAAN KHAN SETHI",
+  "entry": "2026ESB1482",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Gurnoor Singh",
+  "mentorEntry": "2025CSB1196"
+ },
+ "2026ESB1483": {
+  "name": "NELAPATI YADIDYA ROY",
+  "entry": "2026ESB1483",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Poorab Singhi",
+  "mentorEntry": "2025CSB1235"
+ },
+ "2026ESB1484": {
+  "name": "NIKITA PATEL",
+  "entry": "2026ESB1484",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Yogendra Singh",
+  "mentorEntry": "2025ICB1451"
+ },
+ "2026ESB1485": {
+  "name": "OM GUPTA",
+  "entry": "2026ESB1485",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Gurnoor Singh",
+  "mentorEntry": "2025CSB1196"
+ },
+ "2026ESB1486": {
+  "name": "PATHI KAUSHIK",
+  "entry": "2026ESB1486",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Ruhani Adlakha",
+  "mentorEntry": "2025MEB1585"
+ },
+ "2026ESB1487": {
+  "name": "PIYUSH TIWARI",
+  "entry": "2026ESB1487",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "DHARUV",
+  "mentorEntry": "2025ICB1441"
+ },
+ "2026ESB1488": {
+  "name": "PRATYAKSH SONI",
+  "entry": "2026ESB1488",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Divya Gupta",
+  "mentorEntry": "2025CSB1189"
+ },
+ "2026ESB1489": {
+  "name": "PUTHINEEDI VYSHNAVI",
+  "entry": "2026ESB1489",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Divya Gupta",
+  "mentorEntry": "2025CSB1189"
+ },
+ "2026ESB1490": {
+  "name": "RAJGURU GOURAV BABAN",
+  "entry": "2026ESB1490",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Poorab Singhi",
+  "mentorEntry": "2025CSB1235"
+ },
+ "2026ESB1491": {
+  "name": "SAHITTYA DUTTA",
+  "entry": "2026ESB1491",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Gurnoor Singh",
+  "mentorEntry": "2025CSB1196"
+ },
+ "2026ESB1492": {
+  "name": "SAKSHAM CHOPRA",
+  "entry": "2026ESB1492",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Poorab Singhi",
+  "mentorEntry": "2025CSB1235"
+ },
+ "2026ESB1493": {
+  "name": "SATMEET KAUR",
+  "entry": "2026ESB1493",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Yogendra Singh",
+  "mentorEntry": "2025ICB1451"
+ },
+ "2026ESB1494": {
+  "name": "SATYAKI MONDAL",
+  "entry": "2026ESB1494",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Divya Gupta",
+  "mentorEntry": "2025CSB1189"
+ },
+ "2026ESB1495": {
+  "name": "SNEHIT SINGH",
+  "entry": "2026ESB1495",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Yogendra Singh",
+  "mentorEntry": "2025ICB1451"
+ },
+ "2026ESB1496": {
+  "name": "SRINIDHI ADELLI",
+  "entry": "2026ESB1496",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Divya Gupta",
+  "mentorEntry": "2025CSB1189"
+ },
+ "2026ESB1497": {
+  "name": "TANISH ARORA",
+  "entry": "2026ESB1497",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "DHARUV",
+  "mentorEntry": "2025ICB1441"
+ },
+ "2026ESB1498": {
+  "name": "VARSHA YADAV",
+  "entry": "2026ESB1498",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "DHARUV",
+  "mentorEntry": "2025ICB1441"
+ },
+ "2026ESB1499": {
+  "name": "VIRAJ AMIT BAPAT",
+  "entry": "2026ESB1499",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Ruhani Adlakha",
+  "mentorEntry": "2025MEB1585"
+ },
+ "2026ESB1500": {
+  "name": "YADALA MONEESHA",
+  "entry": "2026ESB1500",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "DHARUV",
+  "mentorEntry": "2025ICB1441"
+ },
+ "2026ESB1501": {
+  "name": "YATHARTH GARG",
+  "entry": "2026ESB1501",
+  "branch": "ES",
+  "academicGroup": "G4",
+  "division": "D2",
+  "ismpGroup": 4,
+  "mentor": "Yogendra Singh",
+  "mentorEntry": "2025ICB1451"
+ },
+ "2026EEB1309": {
+  "name": "AADARSH KUMAR",
+  "entry": "2026EEB1309",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Anmol Kalra",
+  "mentorEntry": "2025EEB1300"
+ },
+ "2026EEB1310": {
+  "name": "AADITYA SHARMA",
+  "entry": "2026EEB1310",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vinayak Arora",
+  "mentorEntry": "2025EEB1400"
+ },
+ "2026EEB1311": {
+  "name": "AADYANT CHATURVEDI",
+  "entry": "2026EEB1311",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Parth Gurav",
+  "mentorEntry": "2025EEB1328"
+ },
+ "2026EEB1312": {
+  "name": "AASHISH KUMAR",
+  "entry": "2026EEB1312",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Deepti Ashwani",
+  "mentorEntry": "2025EEB1319"
+ },
+ "2026EEB1313": {
+  "name": "AAVIK",
+  "entry": "2026EEB1313",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Garv Sachdeva",
+  "mentorEntry": "2025EEB1325"
+ },
+ "2026EEB1314": {
+  "name": "ABHIMANYU SHARMA",
+  "entry": "2026EEB1314",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Charvi Garg",
+  "mentorEntry": "2025EEB1317"
+ },
+ "2026EEB1315": {
+  "name": "ABHINAV SINGH",
+  "entry": "2026EEB1315",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vaibhav Jain",
+  "mentorEntry": "2025EEB1396"
+ },
+ "2026EEB1316": {
+  "name": "ADAPA JASWANTH KUMAR",
+  "entry": "2026EEB1316",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vinayak Arora",
+  "mentorEntry": "2025EEB1400"
+ },
+ "2026EEB1317": {
+  "name": "AKSHAJ MISHRA",
+  "entry": "2026EEB1317",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Parth Gurav",
+  "mentorEntry": "2025EEB1328"
+ },
+ "2026EEB1318": {
+  "name": "AMARPREET SINGH",
+  "entry": "2026EEB1318",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Meghna Vashishtha",
+  "mentorEntry": "2025EEB1347"
+ },
+ "2026EEB1319": {
+  "name": "AMIT PATEL",
+  "entry": "2026EEB1319",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Avni Jain",
+  "mentorEntry": "2025EEB1310"
+ },
+ "2026EEB1320": {
+  "name": "ANKIT BASSI",
+  "entry": "2026EEB1320",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Suhaira",
+  "mentorEntry": "2025EEB1386"
+ },
+ "2026EEB1321": {
+  "name": "ANKIT RAJ",
+  "entry": "2026EEB1321",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Deepti Ashwani",
+  "mentorEntry": "2025EEB1319"
+ },
+ "2026EEB1322": {
+  "name": "ANKITA SAINI",
+  "entry": "2026EEB1322",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Pratibha",
+  "mentorEntry": "2025EEB1366"
+ },
+ "2026EEB1323": {
+  "name": "ANSH RAJ",
+  "entry": "2026EEB1323",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Yug Narang",
+  "mentorEntry": "2025EEB1406"
+ },
+ "2026EEB1324": {
+  "name": "ANUBHAB CHAKRABORTY",
+  "entry": "2026EEB1324",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Pratibha",
+  "mentorEntry": "2025EEB1366"
+ },
+ "2026EEB1325": {
+  "name": "ARJUN SOLANKI",
+  "entry": "2026EEB1325",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Mohit",
+  "mentorEntry": "2025EEB1349"
+ },
+ "2026EEB1326": {
+  "name": "ARNAV YADAV",
+  "entry": "2026EEB1326",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Charvi Garg",
+  "mentorEntry": "2025EEB1317"
+ },
+ "2026EEB1327": {
+  "name": "ARYAN JASHVANTKUMAR DARJI",
+  "entry": "2026EEB1327",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Mohit",
+  "mentorEntry": "2025EEB1349"
+ },
+ "2026EEB1328": {
+  "name": "ASHISH KUMAR",
+  "entry": "2026EEB1328",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Akshat Jain",
+  "mentorEntry": "2025EEB1296"
+ },
+ "2026EEB1329": {
+  "name": "AVANI GOUTAM",
+  "entry": "2026EEB1329",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Charvi Garg",
+  "mentorEntry": "2025EEB1317"
+ },
+ "2026EEB1330": {
+  "name": "AVISHI SOOD",
+  "entry": "2026EEB1330",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Sanchita Shrivastava",
+  "mentorEntry": "2025EEB1378"
+ },
+ "2026EEB1331": {
+  "name": "AYUSH KUMAR",
+  "entry": "2026EEB1331",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Anmol Kalra",
+  "mentorEntry": "2025EEB1300"
+ },
+ "2026EEB1332": {
+  "name": "BANNOTH VEDA KAILASH NAIK",
+  "entry": "2026EEB1332",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vedant Nagpal",
+  "mentorEntry": "2025EEB1398"
+ },
+ "2026EEB1333": {
+  "name": "BANOTH KARTHIK KUMAR",
+  "entry": "2026EEB1333",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Garv Sachdeva",
+  "mentorEntry": "2025EEB1325"
+ },
+ "2026EEB1334": {
+  "name": "BANOTH SUMANTH",
+  "entry": "2026EEB1334",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Meghna Vashishtha",
+  "mentorEntry": "2025EEB1347"
+ },
+ "2026EEB1335": {
+  "name": "BHARGAV SUGAT SHENDE",
+  "entry": "2026EEB1335",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Akshat Jain",
+  "mentorEntry": "2025EEB1296"
+ },
+ "2026EEB1336": {
+  "name": "BHAWISHYA ACHARY",
+  "entry": "2026EEB1336",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Retisha Arora",
+  "mentorEntry": "2025EEB1372"
+ },
+ "2026EEB1337": {
+  "name": "CHANDAN KUMAR",
+  "entry": "2026EEB1337",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Akshat Jain",
+  "mentorEntry": "2025EEB1296"
+ },
+ "2026EEB1338": {
+  "name": "DAMERA VYSHALI",
+  "entry": "2026EEB1338",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Suhaira",
+  "mentorEntry": "2025EEB1386"
+ },
+ "2026EEB1339": {
+  "name": "DAVULURI VINOD",
+  "entry": "2026EEB1339",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vinayak Arora",
+  "mentorEntry": "2025EEB1400"
+ },
+ "2026EEB1340": {
+  "name": "DEEPENDRA KUMAR SAINI",
+  "entry": "2026EEB1340",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Parth Gurav",
+  "mentorEntry": "2025EEB1328"
+ },
+ "2026EEB1341": {
+  "name": "DESHAVATH AKSHARA",
+  "entry": "2026EEB1341",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Retisha Arora",
+  "mentorEntry": "2025EEB1372"
+ },
+ "2026EEB1342": {
+  "name": "DEVANSH SINGH VARDHAN",
+  "entry": "2026EEB1342",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Yug Narang",
+  "mentorEntry": "2025EEB1406"
+ },
+ "2026EEB1343": {
+  "name": "DEVNANDAN MENON",
+  "entry": "2026EEB1343",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Rishabh Bains",
+  "mentorEntry": "2025EEB1373"
+ },
+ "2026EEB1344": {
+  "name": "DHARINISH M",
+  "entry": "2026EEB1344",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Parth Gurav",
+  "mentorEntry": "2025EEB1328"
+ },
+ "2026EEB1345": {
+  "name": "DIKSHANT KANSAL",
+  "entry": "2026EEB1345",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Sanchita Shrivastava",
+  "mentorEntry": "2025EEB1378"
+ },
+ "2026EEB1346": {
+  "name": "DIVESH SINGLA",
+  "entry": "2026EEB1346",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vinayak Arora",
+  "mentorEntry": "2025EEB1400"
+ },
+ "2026EEB1347": {
+  "name": "DIVYA GODARA",
+  "entry": "2026EEB1347",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Retisha Arora",
+  "mentorEntry": "2025EEB1372"
+ },
+ "2026EEB1348": {
+  "name": "DIVYA GOYAL",
+  "entry": "2026EEB1348",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vedant Nagpal",
+  "mentorEntry": "2025EEB1398"
+ },
+ "2026EEB1349": {
+  "name": "DIVYANSH KUMAR",
+  "entry": "2026EEB1349",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Khushi",
+  "mentorEntry": "2025EEB1338"
+ },
+ "2026EEB1350": {
+  "name": "GANTA KAVYA NAGA SRI",
+  "entry": "2026EEB1350",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Avni Jain",
+  "mentorEntry": "2025EEB1310"
+ },
+ "2026EEB1351": {
+  "name": "GEETANSH VERMA",
+  "entry": "2026EEB1351",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Aryan Kalra",
+  "mentorEntry": "2025EEB1306"
+ },
+ "2026EEB1352": {
+  "name": "GOUTHAM RAMANATHAN",
+  "entry": "2026EEB1352",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Avni Jain",
+  "mentorEntry": "2025EEB1310"
+ },
+ "2026EEB1353": {
+  "name": "HARSHIT AGRAWAL",
+  "entry": "2026EEB1353",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Yug Narang",
+  "mentorEntry": "2025EEB1406"
+ },
+ "2026EEB1354": {
+  "name": "HIMANSHU",
+  "entry": "2026EEB1354",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Meghna Vashishtha",
+  "mentorEntry": "2025EEB1347"
+ },
+ "2026EEB1355": {
+  "name": "JAI GUPTA",
+  "entry": "2026EEB1355",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Anmol Kalra",
+  "mentorEntry": "2025EEB1300"
+ },
+ "2026EEB1356": {
+  "name": "JANHVI YADAV",
+  "entry": "2026EEB1356",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Khushi",
+  "mentorEntry": "2025EEB1338"
+ },
+ "2026EEB1357": {
+  "name": "JARMIK SANDIPBHAI JETHWA",
+  "entry": "2026EEB1357",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Akshat Jain",
+  "mentorEntry": "2025EEB1296"
+ },
+ "2026EEB1358": {
+  "name": "JATIN",
+  "entry": "2026EEB1358",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Garv Sachdeva",
+  "mentorEntry": "2025EEB1325"
+ },
+ "2026EEB1359": {
+  "name": "JATIN",
+  "entry": "2026EEB1359",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vaibhav Jain",
+  "mentorEntry": "2025EEB1396"
+ },
+ "2026EEB1360": {
+  "name": "JURALA NIKHIL REDDY",
+  "entry": "2026EEB1360",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Aryan Kalra",
+  "mentorEntry": "2025EEB1306"
+ },
+ "2026EEB1361": {
+  "name": "KANNURU NARAYANA PRAYOG",
+  "entry": "2026EEB1361",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vedant Nagpal",
+  "mentorEntry": "2025EEB1398"
+ },
+ "2026EEB1362": {
+  "name": "KAUSHAL KEJARIWAL",
+  "entry": "2026EEB1362",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vaibhav Jain",
+  "mentorEntry": "2025EEB1396"
+ },
+ "2026EEB1363": {
+  "name": "KAVISHA JAISWARA",
+  "entry": "2026EEB1363",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Garv Sachdeva",
+  "mentorEntry": "2025EEB1325"
+ },
+ "2026EEB1364": {
+  "name": "KAYALVIZHI S U",
+  "entry": "2026EEB1364",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Deepti Ashwani",
+  "mentorEntry": "2025EEB1319"
+ },
+ "2026EEB1365": {
+  "name": "KHARATMOL SHALINI SATISH",
+  "entry": "2026EEB1365",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Deepti Ashwani",
+  "mentorEntry": "2025EEB1319"
+ },
+ "2026EEB1366": {
+  "name": "KINJAL KHATRI",
+  "entry": "2026EEB1366",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Suhaira",
+  "mentorEntry": "2025EEB1386"
+ },
+ "2026EEB1367": {
+  "name": "KONA BHASWANTH KAUSHIK",
+  "entry": "2026EEB1367",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Mohit",
+  "mentorEntry": "2025EEB1349"
+ },
+ "2026EEB1368": {
+  "name": "KRISHNA MUKESH KURIL",
+  "entry": "2026EEB1368",
+  "branch": "EE",
+  "academicGroup": "G5",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Vinayak Arora",
+  "mentorEntry": "2025EEB1400"
+ },
+ "2026EEB1369": {
+  "name": "KSHITIZ KUMAR",
+  "entry": "2026EEB1369",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 5,
+  "mentor": "Aryan Kalra",
+  "mentorEntry": "2025EEB1306"
+ },
+ "2026EEB1370": {
+  "name": "KUSHAGRA GUPTA",
+  "entry": "2026EEB1370",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Aryan Kalra",
+  "mentorEntry": "2025EEB1306"
+ },
+ "2026EEB1371": {
+  "name": "LAKKIREDDY THULASIRAM REDDY",
+  "entry": "2026EEB1371",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Anmol Kalra",
+  "mentorEntry": "2025EEB1300"
+ },
+ "2026EEB1372": {
+  "name": "LOKESH CHABDAL",
+  "entry": "2026EEB1372",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Vedant Nagpal",
+  "mentorEntry": "2025EEB1398"
+ },
+ "2026EEB1373": {
+  "name": "MAITRAYEE THUL",
+  "entry": "2026EEB1373",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Rishabh Bains",
+  "mentorEntry": "2025EEB1373"
+ },
+ "2026EEB1374": {
+  "name": "MALLIPUDI PRAVEENYA SAI",
+  "entry": "2026EEB1374",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Garv Sachdeva",
+  "mentorEntry": "2025EEB1325"
+ },
+ "2026EEB1375": {
+  "name": "MANAN KHURANA",
+  "entry": "2026EEB1375",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Vedant Nagpal",
+  "mentorEntry": "2025EEB1398"
+ },
+ "2026EEB1376": {
+  "name": "MASINA VEERENDRA KUMAR",
+  "entry": "2026EEB1376",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Yug Narang",
+  "mentorEntry": "2025EEB1406"
+ },
+ "2026EEB1377": {
+  "name": "MD AAYAN ALI",
+  "entry": "2026EEB1377",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Suhaira",
+  "mentorEntry": "2025EEB1386"
+ },
+ "2026EEB1378": {
+  "name": "MEESALA JYOTHI PRAKASH",
+  "entry": "2026EEB1378",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Suhaira",
+  "mentorEntry": "2025EEB1386"
+ },
+ "2026EEB1379": {
+  "name": "MISHIKA",
+  "entry": "2026EEB1379",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Pratibha",
+  "mentorEntry": "2025EEB1366"
+ },
+ "2026EEB1380": {
+  "name": "MOHAMMED RIZWAN N",
+  "entry": "2026EEB1380",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Mohit",
+  "mentorEntry": "2025EEB1349"
+ },
+ "2026EEB1381": {
+  "name": "MRINALIKA SINGH",
+  "entry": "2026EEB1381",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Meghna Vashishtha",
+  "mentorEntry": "2025EEB1347"
+ },
+ "2026EEB1382": {
+  "name": "NAITIK GOYAL",
+  "entry": "2026EEB1382",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Mohit",
+  "mentorEntry": "2025EEB1349"
+ },
+ "2026EEB1383": {
+  "name": "NAMAN GUPTA",
+  "entry": "2026EEB1383",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Suhaira",
+  "mentorEntry": "2025EEB1386"
+ },
+ "2026EEB1384": {
+  "name": "NENAVATH POOJITHA",
+  "entry": "2026EEB1384",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Aryan Kalra",
+  "mentorEntry": "2025EEB1306"
+ },
+ "2026EEB1385": {
+  "name": "NIHAL AHIRWAR",
+  "entry": "2026EEB1385",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Aryan Kalra",
+  "mentorEntry": "2025EEB1306"
+ },
+ "2026EEB1386": {
+  "name": "NIPUN SINGHAL",
+  "entry": "2026EEB1386",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Mohit",
+  "mentorEntry": "2025EEB1349"
+ },
+ "2026EEB1387": {
+  "name": "PALAGIRI BHAVESH",
+  "entry": "2026EEB1387",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Pratibha",
+  "mentorEntry": "2025EEB1366"
+ },
+ "2026EEB1388": {
+  "name": "PALAK TRIPATHI",
+  "entry": "2026EEB1388",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Sanchita Shrivastava",
+  "mentorEntry": "2025EEB1378"
+ },
+ "2026EEB1389": {
+  "name": "PARAS RAINA",
+  "entry": "2026EEB1389",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Vaibhav Jain",
+  "mentorEntry": "2025EEB1396"
+ },
+ "2026EEB1390": {
+  "name": "PARMEET",
+  "entry": "2026EEB1390",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Khushi",
+  "mentorEntry": "2025EEB1338"
+ },
+ "2026EEB1391": {
+  "name": "PARUL",
+  "entry": "2026EEB1391",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Rishabh Bains",
+  "mentorEntry": "2025EEB1373"
+ },
+ "2026EEB1392": {
+  "name": "PIYUSH KUMAR",
+  "entry": "2026EEB1392",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Vinayak Arora",
+  "mentorEntry": "2025EEB1400"
+ },
+ "2026EEB1393": {
+  "name": "PRANJAL",
+  "entry": "2026EEB1393",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Retisha Arora",
+  "mentorEntry": "2025EEB1372"
+ },
+ "2026EEB1394": {
+  "name": "PREM KIRAN GEDALA",
+  "entry": "2026EEB1394",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Deepti Ashwani",
+  "mentorEntry": "2025EEB1319"
+ },
+ "2026EEB1395": {
+  "name": "PRINCY SATAPATHY",
+  "entry": "2026EEB1395",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Aryan Kalra",
+  "mentorEntry": "2025EEB1306"
+ },
+ "2026EEB1396": {
+  "name": "RAJARSHI GHOSH",
+  "entry": "2026EEB1396",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Parth Gurav",
+  "mentorEntry": "2025EEB1328"
+ },
+ "2026EEB1397": {
+  "name": "RATNADIP BHATTACHARJEE",
+  "entry": "2026EEB1397",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Khushi",
+  "mentorEntry": "2025EEB1338"
+ },
+ "2026EEB1398": {
+  "name": "REDDI SARAN TEJA",
+  "entry": "2026EEB1398",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Avni Jain",
+  "mentorEntry": "2025EEB1310"
+ },
+ "2026EEB1399": {
+  "name": "RISHABH MAHAR",
+  "entry": "2026EEB1399",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Vaibhav Jain",
+  "mentorEntry": "2025EEB1396"
+ },
+ "2026EEB1400": {
+  "name": "RISHIT JHA",
+  "entry": "2026EEB1400",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Anmol Kalra",
+  "mentorEntry": "2025EEB1300"
+ },
+ "2026EEB1401": {
+  "name": "RUDRA BALESHKUMAR PARDE",
+  "entry": "2026EEB1401",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Sanchita Shrivastava",
+  "mentorEntry": "2025EEB1378"
+ },
+ "2026EEB1402": {
+  "name": "RUDRANSH SHARMA",
+  "entry": "2026EEB1402",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Sanchita Shrivastava",
+  "mentorEntry": "2025EEB1378"
+ },
+ "2026EEB1403": {
+  "name": "RUSHABH PETHAD",
+  "entry": "2026EEB1403",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Retisha Arora",
+  "mentorEntry": "2025EEB1372"
+ },
+ "2026EEB1404": {
+  "name": "SADHIL KHANDELWAL",
+  "entry": "2026EEB1404",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Yug Narang",
+  "mentorEntry": "2025EEB1406"
+ },
+ "2026EEB1405": {
+  "name": "SAHIL SHEKHAWAT",
+  "entry": "2026EEB1405",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Deepti Ashwani",
+  "mentorEntry": "2025EEB1319"
+ },
+ "2026EEB1406": {
+  "name": "SAMARTH GUPTA",
+  "entry": "2026EEB1406",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Rishabh Bains",
+  "mentorEntry": "2025EEB1373"
+ },
+ "2026EEB1407": {
+  "name": "SARIKA NAGA SAI SRIJA",
+  "entry": "2026EEB1407",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Charvi Garg",
+  "mentorEntry": "2025EEB1317"
+ },
+ "2026EEB1408": {
+  "name": "SATINDERPAL SINGH",
+  "entry": "2026EEB1408",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Parth Gurav",
+  "mentorEntry": "2025EEB1328"
+ },
+ "2026EEB1409": {
+  "name": "SEHAJPREET SINGH REEN",
+  "entry": "2026EEB1409",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Sanchita Shrivastava",
+  "mentorEntry": "2025EEB1378"
+ },
+ "2026EEB1410": {
+  "name": "SHISTI UPENDRA",
+  "entry": "2026EEB1410",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Yug Narang",
+  "mentorEntry": "2025EEB1406"
+ },
+ "2026EEB1411": {
+  "name": "SHIVANSH KAUSHAL",
+  "entry": "2026EEB1411",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Akshat Jain",
+  "mentorEntry": "2025EEB1296"
+ },
+ "2026EEB1412": {
+  "name": "SHREYAS SHYAM IYER",
+  "entry": "2026EEB1412",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Khushi",
+  "mentorEntry": "2025EEB1338"
+ },
+ "2026EEB1413": {
+  "name": "SHRINATH DIXIT",
+  "entry": "2026EEB1413",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Meghna Vashishtha",
+  "mentorEntry": "2025EEB1347"
+ },
+ "2026EEB1414": {
+  "name": "SHWET PURUSHOTTAM CHANDANKAR",
+  "entry": "2026EEB1414",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Anmol Kalra",
+  "mentorEntry": "2025EEB1300"
+ },
+ "2026EEB1415": {
+  "name": "SOHAM PRASHANT PHANSEKAR",
+  "entry": "2026EEB1415",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Vedant Nagpal",
+  "mentorEntry": "2025EEB1398"
+ },
+ "2026EEB1416": {
+  "name": "SUMEKSHA",
+  "entry": "2026EEB1416",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Khushi",
+  "mentorEntry": "2025EEB1338"
+ },
+ "2026EEB1417": {
+  "name": "SYED IBRAHIM AFFAN",
+  "entry": "2026EEB1417",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Charvi Garg",
+  "mentorEntry": "2025EEB1317"
+ },
+ "2026EEB1418": {
+  "name": "TEJASWA PRATAP",
+  "entry": "2026EEB1418",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Rishabh Bains",
+  "mentorEntry": "2025EEB1373"
+ },
+ "2026EEB1419": {
+  "name": "THOTA CHAYA SRI VEERA SUKESH",
+  "entry": "2026EEB1419",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Vaibhav Jain",
+  "mentorEntry": "2025EEB1396"
+ },
+ "2026EEB1420": {
+  "name": "TRISHA BANSAL",
+  "entry": "2026EEB1420",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Avni Jain",
+  "mentorEntry": "2025EEB1310"
+ },
+ "2026EEB1421": {
+  "name": "VAISHALI PARMAR",
+  "entry": "2026EEB1421",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Meghna Vashishtha",
+  "mentorEntry": "2025EEB1347"
+ },
+ "2026EEB1422": {
+  "name": "VARAD MAHESH PAWAR",
+  "entry": "2026EEB1422",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Garv Sachdeva",
+  "mentorEntry": "2025EEB1325"
+ },
+ "2026EEB1423": {
+  "name": "VATTE NAGAPPAGARI SHOBAN KUMAR SAI",
+  "entry": "2026EEB1423",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Pratibha",
+  "mentorEntry": "2025EEB1366"
+ },
+ "2026EEB1424": {
+  "name": "VINEET SHEKHAR",
+  "entry": "2026EEB1424",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Akshat Jain",
+  "mentorEntry": "2025EEB1296"
+ },
+ "2026EEB1425": {
+  "name": "VINEET SINGH LODHI",
+  "entry": "2026EEB1425",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Charvi Garg",
+  "mentorEntry": "2025EEB1317"
+ },
+ "2026EEB1426": {
+  "name": "YASH MEENA",
+  "entry": "2026EEB1426",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Pratibha",
+  "mentorEntry": "2025EEB1366"
+ },
+ "2026EEB1427": {
+  "name": "YASHNOOR SINGH",
+  "entry": "2026EEB1427",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": 6,
+  "mentor": "Rishabh Bains",
+  "mentorEntry": "2025EEB1373"
+ },
+ "2026EEB1695": {
+  "name": "RAJIT GUPTA",
+  "entry": "2026EEB1695",
+  "branch": "EE",
+  "academicGroup": "G6",
+  "division": "D2",
+  "ismpGroup": null,
+  "mentor": null,
+  "mentorEntry": null
+ },
+ "2026CSB1169": {
+  "name": "AADARSH MORE",
+  "entry": "2026CSB1169",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Daksh Gupta",
+  "mentorEntry": "2025CSB1181"
+ },
+ "2026CSB1170": {
+  "name": "AARAV AILAWADI",
+  "entry": "2026CSB1170",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Keerat Singh Vohra",
+  "mentorEntry": "2025CSB1205"
+ },
+ "2026CSB1171": {
+  "name": "AARUSH GOYAL",
+  "entry": "2026CSB1171",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Namit Jain",
+  "mentorEntry": "2025CSB1228"
+ },
+ "2026CSB1172": {
+  "name": "AARUSHI",
+  "entry": "2026CSB1172",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Anuradha kanaujiya",
+  "mentorEntry": "2025CSB1163"
+ },
+ "2026CSB1173": {
+  "name": "AAYAN ARORA",
+  "entry": "2026CSB1173",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Paridhi",
+  "mentorEntry": "2025CSB1231"
+ },
+ "2026CSB1174": {
+  "name": "ABDUL HABIB",
+  "entry": "2026CSB1174",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rudra",
+  "mentorEntry": "2025CSB1248"
+ },
+ "2026CSB1175": {
+  "name": "ABHAY SINGH",
+  "entry": "2026CSB1175",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Krishaa Sheetal Golghate",
+  "mentorEntry": "2025CSB1209"
+ },
+ "2026CSB1176": {
+  "name": "ABHIJIT",
+  "entry": "2026CSB1176",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Khush Varshney",
+  "mentorEntry": "2025CSB1206"
+ },
+ "2026CSB1177": {
+  "name": "ABHIJIT MADERNA",
+  "entry": "2026CSB1177",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Namit Jain",
+  "mentorEntry": "2025CSB1228"
+ },
+ "2026CSB1178": {
+  "name": "ABHILAKSH",
+  "entry": "2026CSB1178",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Sainyam sharma",
+  "mentorEntry": "2025CSB1250"
+ },
+ "2026CSB1179": {
+  "name": "ABHINAV AMRIT",
+  "entry": "2026CSB1179",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rudra",
+  "mentorEntry": "2025CSB1248"
+ },
+ "2026CSB1180": {
+  "name": "ABHINAV JINDAL",
+  "entry": "2026CSB1180",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Anuradha kanaujiya",
+  "mentorEntry": "2025CSB1163"
+ },
+ "2026CSB1181": {
+  "name": "ABHISHEK SARASWAT",
+  "entry": "2026CSB1181",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Sainyam sharma",
+  "mentorEntry": "2025CSB1250"
+ },
+ "2026CSB1182": {
+  "name": "ADVAIT NISARG SURADKAR",
+  "entry": "2026CSB1182",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Keerat Singh Vohra",
+  "mentorEntry": "2025CSB1205"
+ },
+ "2026CSB1183": {
+  "name": "AKSHIT",
+  "entry": "2026CSB1183",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Anuradha kanaujiya",
+  "mentorEntry": "2025CSB1163"
+ },
+ "2026CSB1184": {
+  "name": "AKSHITA",
+  "entry": "2026CSB1184",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Krishaa Sheetal Golghate",
+  "mentorEntry": "2025CSB1209"
+ },
+ "2026CSB1185": {
+  "name": "ANKIT SATPATI",
+  "entry": "2026CSB1185",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Chayan Juneja",
+  "mentorEntry": "2025CSB1180"
+ },
+ "2026CSB1186": {
+  "name": "ANKITA MALIK",
+  "entry": "2026CSB1186",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Anuradha kanaujiya",
+  "mentorEntry": "2025CSB1163"
+ },
+ "2026CSB1187": {
+  "name": "ARHA BHATTACHARYA",
+  "entry": "2026CSB1187",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Leeza",
+  "mentorEntry": "2025CSB1213"
+ },
+ "2026CSB1188": {
+  "name": "ARNAV KAISTHA",
+  "entry": "2026CSB1188",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Saurabhraj Singh",
+  "mentorEntry": "2025CSB1256"
+ },
+ "2026CSB1189": {
+  "name": "ARNAV SINGH",
+  "entry": "2026CSB1189",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Keerat Singh Vohra",
+  "mentorEntry": "2025CSB1205"
+ },
+ "2026CSB1190": {
+  "name": "ARSHPREET SINGH",
+  "entry": "2026CSB1190",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Chayan Juneja",
+  "mentorEntry": "2025CSB1180"
+ },
+ "2026CSB1191": {
+  "name": "ARYAN BHAGAT",
+  "entry": "2026CSB1191",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Ankush Raj",
+  "mentorEntry": "2025CSB1161"
+ },
+ "2026CSB1192": {
+  "name": "AVANI SHRIRANG PENDHARKAR",
+  "entry": "2026CSB1192",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Paridhi",
+  "mentorEntry": "2025CSB1231"
+ },
+ "2026CSB1193": {
+  "name": "AYUSHI",
+  "entry": "2026CSB1193",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rudra",
+  "mentorEntry": "2025CSB1248"
+ },
+ "2026CSB1194": {
+  "name": "BATTULA GEETHAM",
+  "entry": "2026CSB1194",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rishikesh Mishra",
+  "mentorEntry": "2025CSB1223"
+ },
+ "2026CSB1195": {
+  "name": "BHADANE HARSH VALMIK",
+  "entry": "2026CSB1195",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Krishaa Sheetal Golghate",
+  "mentorEntry": "2025CSB1209"
+ },
+ "2026CSB1196": {
+  "name": "BHARAT MALIK",
+  "entry": "2026CSB1196",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Saurabhraj Singh",
+  "mentorEntry": "2025CSB1256"
+ },
+ "2026CSB1197": {
+  "name": "BHOOMI KALE",
+  "entry": "2026CSB1197",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Mansi Goyal",
+  "mentorEntry": "2025CSB1218"
+ },
+ "2026CSB1198": {
+  "name": "CHARCHIT",
+  "entry": "2026CSB1198",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Daksh Gupta",
+  "mentorEntry": "2025CSB1181"
+ },
+ "2026CSB1199": {
+  "name": "CHAYANIT",
+  "entry": "2026CSB1199",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Krishaa Sheetal Golghate",
+  "mentorEntry": "2025CSB1209"
+ },
+ "2026CSB1200": {
+  "name": "CHETNA NANGIA",
+  "entry": "2026CSB1200",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Paridhi",
+  "mentorEntry": "2025CSB1231"
+ },
+ "2026CSB1201": {
+  "name": "DARA SAI PRANAV",
+  "entry": "2026CSB1201",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Mansi Goyal",
+  "mentorEntry": "2025CSB1218"
+ },
+ "2026CSB1202": {
+  "name": "DHAIRYA JAIN",
+  "entry": "2026CSB1202",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Sainyam sharma",
+  "mentorEntry": "2025CSB1250"
+ },
+ "2026CSB1203": {
+  "name": "DILRAJ MEENA",
+  "entry": "2026CSB1203",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Namit Jain",
+  "mentorEntry": "2025CSB1228"
+ },
+ "2026CSB1204": {
+  "name": "DIVSHA JAIN",
+  "entry": "2026CSB1204",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Krishaa Sheetal Golghate",
+  "mentorEntry": "2025CSB1209"
+ },
+ "2026CSB1205": {
+  "name": "DIVYANSH YADAV",
+  "entry": "2026CSB1205",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Ayush Raj",
+  "mentorEntry": "2025CSB1170"
+ },
+ "2026CSB1206": {
+  "name": "EKAMJOT KAUR",
+  "entry": "2026CSB1206",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Mansi Goyal",
+  "mentorEntry": "2025CSB1218"
+ },
+ "2026CSB1207": {
+  "name": "GAURAV KUMAR",
+  "entry": "2026CSB1207",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Mansi Goyal",
+  "mentorEntry": "2025CSB1218"
+ },
+ "2026CSB1208": {
+  "name": "GAURAV MEENA",
+  "entry": "2026CSB1208",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Namit Jain",
+  "mentorEntry": "2025CSB1228"
+ },
+ "2026CSB1209": {
+  "name": "GORATI PRANEETH",
+  "entry": "2026CSB1209",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Keerat Singh Vohra",
+  "mentorEntry": "2025CSB1205"
+ },
+ "2026CSB1210": {
+  "name": "GOURABATHINI VEDISHWAR",
+  "entry": "2026CSB1210",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Sainyam sharma",
+  "mentorEntry": "2025CSB1250"
+ },
+ "2026CSB1211": {
+  "name": "HAMDAN SAYEED",
+  "entry": "2026CSB1211",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Daksh Gupta",
+  "mentorEntry": "2025CSB1181"
+ },
+ "2026CSB1212": {
+  "name": "HARDIK CHOUDHARY",
+  "entry": "2026CSB1212",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Daksh Gupta",
+  "mentorEntry": "2025CSB1181"
+ },
+ "2026CSB1213": {
+  "name": "HARKIRAT SINGH",
+  "entry": "2026CSB1213",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rishikesh Mishra",
+  "mentorEntry": "2025CSB1223"
+ },
+ "2026CSB1214": {
+  "name": "IPSHITA SINGH",
+  "entry": "2026CSB1214",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Krishaa Sheetal Golghate",
+  "mentorEntry": "2025CSB1209"
+ },
+ "2026CSB1215": {
+  "name": "JAGARLAMUDI SAI KRISHNA GANESH",
+  "entry": "2026CSB1215",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Sainyam sharma",
+  "mentorEntry": "2025CSB1250"
+ },
+ "2026CSB1216": {
+  "name": "JANGALA SATYARSHI",
+  "entry": "2026CSB1216",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rishikesh Mishra",
+  "mentorEntry": "2025CSB1223"
+ },
+ "2026CSB1217": {
+  "name": "JASKAMAL SINGLA",
+  "entry": "2026CSB1217",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Amulya Kabra",
+  "mentorEntry": "2025CSB1159"
+ },
+ "2026CSB1218": {
+  "name": "JATAVATH VIJENDAR",
+  "entry": "2026CSB1218",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Ayush Raj",
+  "mentorEntry": "2025CSB1170"
+ },
+ "2026CSB1219": {
+  "name": "KAMPATI SAI NARESH",
+  "entry": "2026CSB1219",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rudra",
+  "mentorEntry": "2025CSB1248"
+ },
+ "2026CSB1220": {
+  "name": "KANAV MITTAL",
+  "entry": "2026CSB1220",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rudra",
+  "mentorEntry": "2025CSB1248"
+ },
+ "2026CSB1221": {
+  "name": "KARTIK",
+  "entry": "2026CSB1221",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Leeza",
+  "mentorEntry": "2025CSB1213"
+ },
+ "2026CSB1222": {
+  "name": "KASHISH VERMA",
+  "entry": "2026CSB1222",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Amulya Kabra",
+  "mentorEntry": "2025CSB1159"
+ },
+ "2026CSB1223": {
+  "name": "KESHAV GUPTA",
+  "entry": "2026CSB1223",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rishikesh Mishra",
+  "mentorEntry": "2025CSB1223"
+ },
+ "2026CSB1224": {
+  "name": "KHUSHI MEENA",
+  "entry": "2026CSB1224",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Leeza",
+  "mentorEntry": "2025CSB1213"
+ },
+ "2026CSB1225": {
+  "name": "KISHAN KUMAR",
+  "entry": "2026CSB1225",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Anuradha kanaujiya",
+  "mentorEntry": "2025CSB1163"
+ },
+ "2026CSB1226": {
+  "name": "KORUMILLI PRAGNYA NISHANTH",
+  "entry": "2026CSB1226",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Rudra",
+  "mentorEntry": "2025CSB1248"
+ },
+ "2026CSB1227": {
+  "name": "KSHITIJ ANAND",
+  "entry": "2026CSB1227",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Khush Varshney",
+  "mentorEntry": "2025CSB1206"
+ },
+ "2026CSB1228": {
+  "name": "KUSHALA S",
+  "entry": "2026CSB1228",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Amulya Kabra",
+  "mentorEntry": "2025CSB1159"
+ },
+ "2026CSB1229": {
+  "name": "KYADA CHARVI CHETANBHAI",
+  "entry": "2026CSB1229",
+  "branch": "CSE",
+  "academicGroup": "G7",
+  "division": "D3",
+  "ismpGroup": 7,
+  "mentor": "Anuradha kanaujiya",
+  "mentorEntry": "2025CSB1163"
+ },
+ "2026CSB1230": {
+  "name": "LAKSHAY KUMAR",
+  "entry": "2026CSB1230",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Ayush Raj",
+  "mentorEntry": "2025CSB1170"
+ },
+ "2026CSB1231": {
+  "name": "LAXMAN GANGASAGARE",
+  "entry": "2026CSB1231",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Saurabhraj Singh",
+  "mentorEntry": "2025CSB1256"
+ },
+ "2026CSB1232": {
+  "name": "LEBAKA SAHITHI",
+  "entry": "2026CSB1232",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Anuradha kanaujiya",
+  "mentorEntry": "2025CSB1163"
+ },
+ "2026CSB1233": {
+  "name": "MACHALA JOSHMITHA PRIYA",
+  "entry": "2026CSB1233",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Leeza",
+  "mentorEntry": "2025CSB1213"
+ },
+ "2026CSB1234": {
+  "name": "MAHENDRA SINWAR",
+  "entry": "2026CSB1234",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Chayan Juneja",
+  "mentorEntry": "2025CSB1180"
+ },
+ "2026CSB1235": {
+  "name": "MAJJI SANTHOSH SUMITH VARDHAN",
+  "entry": "2026CSB1235",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Daksh Gupta",
+  "mentorEntry": "2025CSB1181"
+ },
+ "2026CSB1236": {
+  "name": "MALIPEDDI ANISH",
+  "entry": "2026CSB1236",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Saurabhraj Singh",
+  "mentorEntry": "2025CSB1256"
+ },
+ "2026CSB1237": {
+  "name": "MANGADODDI CHARAN TEJA",
+  "entry": "2026CSB1237",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Paridhi",
+  "mentorEntry": "2025CSB1231"
+ },
+ "2026CSB1238": {
+  "name": "MANSI",
+  "entry": "2026CSB1238",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Leeza",
+  "mentorEntry": "2025CSB1213"
+ },
+ "2026CSB1239": {
+  "name": "MAYANK AGARWAL",
+  "entry": "2026CSB1239",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Khush Varshney",
+  "mentorEntry": "2025CSB1206"
+ },
+ "2026CSB1240": {
+  "name": "MEHAK MEHTA",
+  "entry": "2026CSB1240",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Chayan Juneja",
+  "mentorEntry": "2025CSB1180"
+ },
+ "2026CSB1241": {
+  "name": "MITTIN KUMAR",
+  "entry": "2026CSB1241",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Khush Varshney",
+  "mentorEntry": "2025CSB1206"
+ },
+ "2026CSB1242": {
+  "name": "MONISH GUPTA",
+  "entry": "2026CSB1242",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Amulya Kabra",
+  "mentorEntry": "2025CSB1159"
+ },
+ "2026CSB1243": {
+  "name": "MORE TRISHANK",
+  "entry": "2026CSB1243",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Namit Jain",
+  "mentorEntry": "2025CSB1228"
+ },
+ "2026CSB1244": {
+  "name": "MUDU ARAVIND NAYAK",
+  "entry": "2026CSB1244",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Rishikesh Mishra",
+  "mentorEntry": "2025CSB1223"
+ },
+ "2026CSB1245": {
+  "name": "MULLANGI SRAVAN",
+  "entry": "2026CSB1245",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Ankush Raj",
+  "mentorEntry": "2025CSB1161"
+ },
+ "2026CSB1246": {
+  "name": "MUNJAL VISHVAJIT PARASARAM",
+  "entry": "2026CSB1246",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Mansi Goyal",
+  "mentorEntry": "2025CSB1218"
+ },
+ "2026CSB1247": {
+  "name": "NAGA SATHISH REDDY",
+  "entry": "2026CSB1247",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Khush Varshney",
+  "mentorEntry": "2025CSB1206"
+ },
+ "2026CSB1248": {
+  "name": "NAITIK",
+  "entry": "2026CSB1248",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Amulya Kabra",
+  "mentorEntry": "2025CSB1159"
+ },
+ "2026CSB1249": {
+  "name": "NIDIGONDA KIRAN KUMAR",
+  "entry": "2026CSB1249",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Pranjal Agarwal",
+  "mentorEntry": "2025CSB1237"
+ },
+ "2026CSB1250": {
+  "name": "NISHIKA YADAV",
+  "entry": "2026CSB1250",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Mansi Goyal",
+  "mentorEntry": "2025CSB1218"
+ },
+ "2026CSB1251": {
+  "name": "NITIN DHAWAN",
+  "entry": "2026CSB1251",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Rudra",
+  "mentorEntry": "2025CSB1248"
+ },
+ "2026CSB1252": {
+  "name": "PAARTH KANSAL",
+  "entry": "2026CSB1252",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Ayush Raj",
+  "mentorEntry": "2025CSB1170"
+ },
+ "2026CSB1253": {
+  "name": "PALAK BATHLA",
+  "entry": "2026CSB1253",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Chayan Juneja",
+  "mentorEntry": "2025CSB1180"
+ },
+ "2026CSB1254": {
+  "name": "PALLERLA VIRAJ",
+  "entry": "2026CSB1254",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Pranjal Agarwal",
+  "mentorEntry": "2025CSB1237"
+ },
+ "2026CSB1255": {
+  "name": "PANDU TATHAGAT",
+  "entry": "2026CSB1255",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Khush Varshney",
+  "mentorEntry": "2025CSB1206"
+ },
+ "2026CSB1256": {
+  "name": "PARITOSH KUMAR MEHTA",
+  "entry": "2026CSB1256",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Ankush Raj",
+  "mentorEntry": "2025CSB1161"
+ },
+ "2026CSB1257": {
+  "name": "PATEL DARSH VINODBHAI",
+  "entry": "2026CSB1257",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Keerat Singh Vohra",
+  "mentorEntry": "2025CSB1205"
+ },
+ "2026CSB1258": {
+  "name": "PATTABHI RUTHVIK SUJAY",
+  "entry": "2026CSB1258",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Paridhi",
+  "mentorEntry": "2025CSB1231"
+ },
+ "2026CSB1259": {
+  "name": "PRATHAM GOYAL",
+  "entry": "2026CSB1259",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Paridhi",
+  "mentorEntry": "2025CSB1231"
+ },
+ "2026CSB1260": {
+  "name": "PRINCE KUMAR MEENA",
+  "entry": "2026CSB1260",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Ayush Raj",
+  "mentorEntry": "2025CSB1170"
+ },
+ "2026CSB1261": {
+  "name": "RAKSHIT KUMAR",
+  "entry": "2026CSB1261",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Sainyam sharma",
+  "mentorEntry": "2025CSB1250"
+ },
+ "2026CSB1262": {
+  "name": "RAMYAK JAIN",
+  "entry": "2026CSB1262",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Namit Jain",
+  "mentorEntry": "2025CSB1228"
+ },
+ "2026CSB1263": {
+  "name": "RASANIYA SOHAM SHIVKUMAR",
+  "entry": "2026CSB1263",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Pranjal Agarwal",
+  "mentorEntry": "2025CSB1237"
+ },
+ "2026CSB1264": {
+  "name": "RISHAB SINGLA",
+  "entry": "2026CSB1264",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Ankush Raj",
+  "mentorEntry": "2025CSB1161"
+ },
+ "2026CSB1265": {
+  "name": "ROHAN SUBHASH ADAL",
+  "entry": "2026CSB1265",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Saurabhraj Singh",
+  "mentorEntry": "2025CSB1256"
+ },
+ "2026CSB1266": {
+  "name": "ROHIT MEENA",
+  "entry": "2026CSB1266",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Paridhi",
+  "mentorEntry": "2025CSB1231"
+ },
+ "2026CSB1267": {
+  "name": "RUSHIKESH MAROTI HULKANE",
+  "entry": "2026CSB1267",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Ayush Raj",
+  "mentorEntry": "2025CSB1170"
+ },
+ "2026CSB1268": {
+  "name": "SAMYAK JEEVAN JADHAO",
+  "entry": "2026CSB1268",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Keerat Singh Vohra",
+  "mentorEntry": "2025CSB1205"
+ },
+ "2026CSB1269": {
+  "name": "SARA SETHI",
+  "entry": "2026CSB1269",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Mansi Goyal",
+  "mentorEntry": "2025CSB1218"
+ },
+ "2026CSB1270": {
+  "name": "SAYED MOHAMMED ISHAN",
+  "entry": "2026CSB1270",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Chayan Juneja",
+  "mentorEntry": "2025CSB1180"
+ },
+ "2026CSB1271": {
+  "name": "SHIVAM MISHRA",
+  "entry": "2026CSB1271",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Chayan Juneja",
+  "mentorEntry": "2025CSB1180"
+ },
+ "2026CSB1272": {
+  "name": "SHIVAM PATIDAR",
+  "entry": "2026CSB1272",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Khush Varshney",
+  "mentorEntry": "2025CSB1206"
+ },
+ "2026CSB1273": {
+  "name": "SHUBH KUMAR",
+  "entry": "2026CSB1273",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Pranjal Agarwal",
+  "mentorEntry": "2025CSB1237"
+ },
+ "2026CSB1274": {
+  "name": "SIDDHARTH SHARMA",
+  "entry": "2026CSB1274",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Keerat Singh Vohra",
+  "mentorEntry": "2025CSB1205"
+ },
+ "2026CSB1275": {
+  "name": "SOUHARDYA BISWAS",
+  "entry": "2026CSB1275",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Ankush Raj",
+  "mentorEntry": "2025CSB1161"
+ },
+ "2026CSB1276": {
+  "name": "SUHANI SEHRA",
+  "entry": "2026CSB1276",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Leeza",
+  "mentorEntry": "2025CSB1213"
+ },
+ "2026CSB1277": {
+  "name": "TAMANNA",
+  "entry": "2026CSB1277",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Leeza",
+  "mentorEntry": "2025CSB1213"
+ },
+ "2026CSB1278": {
+  "name": "TANUSHKA THAKUR",
+  "entry": "2026CSB1278",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Krishaa Sheetal Golghate",
+  "mentorEntry": "2025CSB1209"
+ },
+ "2026CSB1279": {
+  "name": "THALLADA VISHNU TEJA",
+  "entry": "2026CSB1279",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Sainyam sharma",
+  "mentorEntry": "2025CSB1250"
+ },
+ "2026CSB1280": {
+  "name": "UDARA JASWANTH",
+  "entry": "2026CSB1280",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Pranjal Agarwal",
+  "mentorEntry": "2025CSB1237"
+ },
+ "2026CSB1281": {
+  "name": "UTKARSH KUMAR",
+  "entry": "2026CSB1281",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Rishikesh Mishra",
+  "mentorEntry": "2025CSB1223"
+ },
+ "2026CSB1282": {
+  "name": "VAIBHAV KUMAR",
+  "entry": "2026CSB1282",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Pranjal Agarwal",
+  "mentorEntry": "2025CSB1237"
+ },
+ "2026CSB1283": {
+  "name": "VINCE KAUNDAL",
+  "entry": "2026CSB1283",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Saurabhraj Singh",
+  "mentorEntry": "2025CSB1256"
+ },
+ "2026CSB1284": {
+  "name": "VIPUL KUMAR GAUTAM",
+  "entry": "2026CSB1284",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Daksh Gupta",
+  "mentorEntry": "2025CSB1181"
+ },
+ "2026CSB1285": {
+  "name": "VIVAAN SINGH",
+  "entry": "2026CSB1285",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Saurabhraj Singh",
+  "mentorEntry": "2025CSB1256"
+ },
+ "2026CSB1286": {
+  "name": "YADLA CHARAN SAI",
+  "entry": "2026CSB1286",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Amulya Kabra",
+  "mentorEntry": "2025CSB1159"
+ },
+ "2026CSB1287": {
+  "name": "YOGANSHU KUMAWAT",
+  "entry": "2026CSB1287",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Ankush Raj",
+  "mentorEntry": "2025CSB1161"
+ },
+ "2026CSB1288": {
+  "name": "YUGAM GUPTA",
+  "entry": "2026CSB1288",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": 8,
+  "mentor": "Namit Jain",
+  "mentorEntry": "2025CSB1228"
+ },
+ "2026CSB1693": {
+  "name": "KARANDHIR ROY",
+  "entry": "2026CSB1693",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": null,
+  "mentor": null,
+  "mentorEntry": null
+ },
+ "2026CSB1694": {
+  "name": "MANDAPALLI DANNY RAJ",
+  "entry": "2026CSB1694",
+  "branch": "CSE",
+  "academicGroup": "G8",
+  "division": "D3",
+  "ismpGroup": null,
+  "mentor": null,
+  "mentorEntry": null
+ },
+ "2026EPB1447": {
+  "name": "AARYAN SANDEEP DHULE",
+  "entry": "2026EPB1447",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "J Freddin",
+  "mentorEntry": "2025EPB1416"
+ },
+ "2026EPB1448": {
+  "name": "AISHI JAIN",
+  "entry": "2026EPB1448",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Prachi",
+  "mentorEntry": "2025EPB1420"
+ },
+ "2026EPB1449": {
+  "name": "ANIRUDDH S B",
+  "entry": "2026EPB1449",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Prachi",
+  "mentorEntry": "2025EPB1420"
+ },
+ "2026EPB1450": {
+  "name": "ANUSHK MALIK",
+  "entry": "2026EPB1450",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "J Freddin",
+  "mentorEntry": "2025EPB1416"
+ },
+ "2026EPB1451": {
+  "name": "BALASUBRAMANIAN V",
+  "entry": "2026EPB1451",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Akshat Kulkarni",
+  "mentorEntry": "2025EPB1410"
+ },
+ "2026EPB1452": {
+  "name": "BHADANGE PARTH JAGDISH",
+  "entry": "2026EPB1452",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Vardhn Sharma",
+  "mentorEntry": "2025EPB1429"
+ },
+ "2026EPB1453": {
+  "name": "BHAVYA AGARWAL",
+  "entry": "2026EPB1453",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "J Freddin",
+  "mentorEntry": "2025EPB1416"
+ },
+ "2026EPB1454": {
+  "name": "DEVANSH CHAUDHARY",
+  "entry": "2026EPB1454",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Akshat Kulkarni",
+  "mentorEntry": "2025EPB1410"
+ },
+ "2026EPB1455": {
+  "name": "DHRUV RAJESH THATTE",
+  "entry": "2026EPB1455",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Vardhn Sharma",
+  "mentorEntry": "2025EPB1429"
+ },
+ "2026EPB1456": {
+  "name": "HIMANSHU",
+  "entry": "2026EPB1456",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Vardhn Sharma",
+  "mentorEntry": "2025EPB1429"
+ },
+ "2026EPB1457": {
+  "name": "JANVI CHAUDHARY",
+  "entry": "2026EPB1457",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Aairah",
+  "mentorEntry": "2025EPB1408"
+ },
+ "2026EPB1458": {
+  "name": "JOISH ACHYUTA",
+  "entry": "2026EPB1458",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Prachi",
+  "mentorEntry": "2025EPB1420"
+ },
+ "2026EPB1459": {
+  "name": "KANDREGULA LEELA SAI CHARAN",
+  "entry": "2026EPB1459",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Aairah",
+  "mentorEntry": "2025EPB1408"
+ },
+ "2026EPB1460": {
+  "name": "KASTURI AMOL BAGATE",
+  "entry": "2026EPB1460",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "J Freddin",
+  "mentorEntry": "2025EPB1416"
+ },
+ "2026EPB1461": {
+  "name": "KUMAR HARSHVARDHAN",
+  "entry": "2026EPB1461",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Vardhn Sharma",
+  "mentorEntry": "2025EPB1429"
+ },
+ "2026EPB1462": {
+  "name": "NAITIK CHANDOLIYA",
+  "entry": "2026EPB1462",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Prachi",
+  "mentorEntry": "2025EPB1420"
+ },
+ "2026EPB1463": {
+  "name": "NAVNEET KAUR",
+  "entry": "2026EPB1463",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "J Freddin",
+  "mentorEntry": "2025EPB1416"
+ },
+ "2026EPB1464": {
+  "name": "PARAV DEEP THAPPA",
+  "entry": "2026EPB1464",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Vardhn Sharma",
+  "mentorEntry": "2025EPB1429"
+ },
+ "2026EPB1465": {
+  "name": "PUSHKAR MOHANTY",
+  "entry": "2026EPB1465",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Prachi",
+  "mentorEntry": "2025EPB1420"
+ },
+ "2026EPB1466": {
+  "name": "RAM ANANTHARAM",
+  "entry": "2026EPB1466",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Aairah",
+  "mentorEntry": "2025EPB1408"
+ },
+ "2026EPB1467": {
+  "name": "SIDHARTH TOMAR",
+  "entry": "2026EPB1467",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Akshat Kulkarni",
+  "mentorEntry": "2025EPB1410"
+ },
+ "2026EPB1468": {
+  "name": "SOURIK GHOSH",
+  "entry": "2026EPB1468",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Akshat Kulkarni",
+  "mentorEntry": "2025EPB1410"
+ },
+ "2026EPB1469": {
+  "name": "VAIBHAVI HIREMATH",
+  "entry": "2026EPB1469",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Aairah",
+  "mentorEntry": "2025EPB1408"
+ },
+ "2026EPB1470": {
+  "name": "VAJRALA LAKSHIT",
+  "entry": "2026EPB1470",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Aairah",
+  "mentorEntry": "2025EPB1408"
+ },
+ "2026EPB1471": {
+  "name": "YASHAS SINGHAL",
+  "entry": "2026EPB1471",
+  "branch": "EP",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Akshat Kulkarni",
+  "mentorEntry": "2025EPB1410"
+ },
+ "2026ICB1428": {
+  "name": "AARYAN JAKHAR",
+  "entry": "2026ICB1428",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Nikait Garg",
+  "mentorEntry": "2025ICB1446"
+ },
+ "2026ICB1429": {
+  "name": "ADITYA SOMANATH GARAD",
+  "entry": "2026ICB1429",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Navvya",
+  "mentorEntry": "2025ICB1444"
+ },
+ "2026ICB1430": {
+  "name": "AKSHIT KUMAR",
+  "entry": "2026ICB1430",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Navvya",
+  "mentorEntry": "2025ICB1444"
+ },
+ "2026ICB1431": {
+  "name": "ARYAN GUPTA",
+  "entry": "2026ICB1431",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Thoihenba B",
+  "mentorEntry": "2025ICB1449"
+ },
+ "2026ICB1432": {
+  "name": "ASHVI SINGH",
+  "entry": "2026ICB1432",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Anshi Verma",
+  "mentorEntry": "2025ICB1435"
+ },
+ "2026ICB1433": {
+  "name": "BINGI ABHI CHERVITHA",
+  "entry": "2026ICB1433",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Anshi Verma",
+  "mentorEntry": "2025ICB1435"
+ },
+ "2026ICB1434": {
+  "name": "ISHPUNEET SINGH",
+  "entry": "2026ICB1434",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Thoihenba B",
+  "mentorEntry": "2025ICB1449"
+ },
+ "2026ICB1435": {
+  "name": "KANCHARLA MOHAN SAI GANESH MANIKANTA",
+  "entry": "2026ICB1435",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Nikait Garg",
+  "mentorEntry": "2025ICB1446"
+ },
+ "2026ICB1436": {
+  "name": "KIRTI",
+  "entry": "2026ICB1436",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Thoihenba B",
+  "mentorEntry": "2025ICB1449"
+ },
+ "2026ICB1437": {
+  "name": "MANCHI KARTHIK SAI",
+  "entry": "2026ICB1437",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Anshi Verma",
+  "mentorEntry": "2025ICB1435"
+ },
+ "2026ICB1438": {
+  "name": "NIPUN KAUSHIK",
+  "entry": "2026ICB1438",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Navvya",
+  "mentorEntry": "2025ICB1444"
+ },
+ "2026ICB1439": {
+  "name": "PRINCEPREET SINGH",
+  "entry": "2026ICB1439",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Anshi Verma",
+  "mentorEntry": "2025ICB1435"
+ },
+ "2026ICB1440": {
+  "name": "PUTUSH GUNJAN",
+  "entry": "2026ICB1440",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Nikait Garg",
+  "mentorEntry": "2025ICB1446"
+ },
+ "2026ICB1441": {
+  "name": "RIYA",
+  "entry": "2026ICB1441",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Thoihenba B",
+  "mentorEntry": "2025ICB1449"
+ },
+ "2026ICB1442": {
+  "name": "TARUNVIR DOGRA",
+  "entry": "2026ICB1442",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Thoihenba B",
+  "mentorEntry": "2025ICB1449"
+ },
+ "2026ICB1443": {
+  "name": "TEJASDEEP SINGH",
+  "entry": "2026ICB1443",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Navvya",
+  "mentorEntry": "2025ICB1444"
+ },
+ "2026ICB1444": {
+  "name": "VATSAL SRIVASTAVA",
+  "entry": "2026ICB1444",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Navvya",
+  "mentorEntry": "2025ICB1444"
+ },
+ "2026ICB1445": {
+  "name": "VINEET KUMAR AGRAWAL",
+  "entry": "2026ICB1445",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Nikait Garg",
+  "mentorEntry": "2025ICB1446"
+ },
+ "2026ICB1446": {
+  "name": "VISHAL MEENA",
+  "entry": "2026ICB1446",
+  "branch": "ICDT",
+  "academicGroup": "G9",
+  "division": "D3",
+  "ismpGroup": 9,
+  "mentor": "Anshi Verma",
+  "mentorEntry": "2025ICB1435"
+ },
+ "2026MEB1582": {
+  "name": "A PRAGNESH",
+  "entry": "2026MEB1582",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Siddh Jain",
+  "mentorEntry": "2025MEB1595"
+ },
+ "2026MEB1583": {
+  "name": "AAKASH PATEL",
+  "entry": "2026MEB1583",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pushkal Garg",
+  "mentorEntry": "2025MEB1578"
+ },
+ "2026MEB1584": {
+  "name": "AARAV JAIN",
+  "entry": "2026MEB1584",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Rachana patil",
+  "mentorEntry": "2025MEB1579"
+ },
+ "2026MEB1585": {
+  "name": "AARYAN AVINASH RASKAR",
+  "entry": "2026MEB1585",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Shreyash Mishra",
+  "mentorEntry": "2025MEB1593"
+ },
+ "2026MEB1586": {
+  "name": "ADITYA ARYA",
+  "entry": "2026MEB1586",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Siddh Jain",
+  "mentorEntry": "2025MEB1595"
+ },
+ "2026MEB1587": {
+  "name": "ADITYA CHAUDHARY",
+  "entry": "2026MEB1587",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Shivam",
+  "mentorEntry": "2025MEB1590"
+ },
+ "2026MEB1588": {
+  "name": "AISHWARYA RAJESH",
+  "entry": "2026MEB1588",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Khushi singh",
+  "mentorEntry": "2025MEB1561"
+ },
+ "2026MEB1589": {
+  "name": "AMAN KUMAR",
+  "entry": "2026MEB1589",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Ayush Malviya",
+  "mentorEntry": "2025MEB1542"
+ },
+ "2026MEB1590": {
+  "name": "AMAN VERMA",
+  "entry": "2026MEB1590",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Neev Sachdev",
+  "mentorEntry": "2025MEB1570"
+ },
+ "2026MEB1591": {
+  "name": "AMAN YADAV",
+  "entry": "2026MEB1591",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Garvit Singh",
+  "mentorEntry": "2025MEB1552"
+ },
+ "2026MEB1592": {
+  "name": "AMIT KUMAR",
+  "entry": "2026MEB1592",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pratham Bhanoo",
+  "mentorEntry": "2025MEB1576"
+ },
+ "2026MEB1593": {
+  "name": "ANAMIKA KUMARI",
+  "entry": "2026MEB1593",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Meenal Jain",
+  "mentorEntry": "2025MEB1564"
+ },
+ "2026MEB1594": {
+  "name": "ANANTHULA AKSHAYA",
+  "entry": "2026MEB1594",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pranav Patel",
+  "mentorEntry": "2025MEB1573"
+ },
+ "2026MEB1595": {
+  "name": "ARADHYA KUMAR CHOUDHARY",
+  "entry": "2026MEB1595",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Shreyash Mishra",
+  "mentorEntry": "2025MEB1593"
+ },
+ "2026MEB1596": {
+  "name": "ARATRIKA JHA",
+  "entry": "2026MEB1596",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pushkal Garg",
+  "mentorEntry": "2025MEB1578"
+ },
+ "2026MEB1597": {
+  "name": "ARDHANI SRI HARSHA OMKAR",
+  "entry": "2026MEB1597",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pranav Patel",
+  "mentorEntry": "2025MEB1573"
+ },
+ "2026MEB1598": {
+  "name": "ARKADIP BHAUMIK",
+  "entry": "2026MEB1598",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Spriha Revankar",
+  "mentorEntry": "2025MEB1601"
+ },
+ "2026MEB1599": {
+  "name": "ARYAN KUMAR",
+  "entry": "2026MEB1599",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Ayush Malviya",
+  "mentorEntry": "2025MEB1542"
+ },
+ "2026MEB1600": {
+  "name": "ASHMANJOT SINGH",
+  "entry": "2026MEB1600",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Spriha Revankar",
+  "mentorEntry": "2025MEB1601"
+ },
+ "2026MEB1601": {
+  "name": "ASHNA SANGHVI",
+  "entry": "2026MEB1601",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Rachana patil",
+  "mentorEntry": "2025MEB1579"
+ },
+ "2026MEB1602": {
+  "name": "AYAAN VINAYAK",
+  "entry": "2026MEB1602",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Siya",
+  "mentorEntry": "2025MEB1597"
+ },
+ "2026MEB1603": {
+  "name": "AYUSH KUMAR",
+  "entry": "2026MEB1603",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pushkal Garg",
+  "mentorEntry": "2025MEB1578"
+ },
+ "2026MEB1604": {
+  "name": "BANAVATHU CHANTI NAIK",
+  "entry": "2026MEB1604",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Shreyash Mishra",
+  "mentorEntry": "2025MEB1593"
+ },
+ "2026MEB1605": {
+  "name": "CHAUDHARI NISHTHA BHUPENDRAKUMAR",
+  "entry": "2026MEB1605",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pushkal Garg",
+  "mentorEntry": "2025MEB1578"
+ },
+ "2026MEB1606": {
+  "name": "DEV",
+  "entry": "2026MEB1606",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Garvit Singh",
+  "mentorEntry": "2025MEB1552"
+ },
+ "2026MEB1607": {
+  "name": "DEVANSH",
+  "entry": "2026MEB1607",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Rachana patil",
+  "mentorEntry": "2025MEB1579"
+ },
+ "2026MEB1608": {
+  "name": "DEVANSH BALASARIA",
+  "entry": "2026MEB1608",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Neev Sachdev",
+  "mentorEntry": "2025MEB1570"
+ },
+ "2026MEB1609": {
+  "name": "DINESH",
+  "entry": "2026MEB1609",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Aditya",
+  "mentorEntry": "2025MEB1531"
+ },
+ "2026MEB1610": {
+  "name": "DISHITA BATRA",
+  "entry": "2026MEB1610",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Meenal Jain",
+  "mentorEntry": "2025MEB1564"
+ },
+ "2026MEB1611": {
+  "name": "DIVYANSH",
+  "entry": "2026MEB1611",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Sparsh Sharma",
+  "mentorEntry": "2025MEB1599"
+ },
+ "2026MEB1612": {
+  "name": "EARI ADUKONDALU",
+  "entry": "2026MEB1612",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Shreyash Mishra",
+  "mentorEntry": "2025MEB1593"
+ },
+ "2026MEB1613": {
+  "name": "GAUTHAM ADITHYA YERNENI",
+  "entry": "2026MEB1613",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Meenal Jain",
+  "mentorEntry": "2025MEB1564"
+ },
+ "2026MEB1614": {
+  "name": "GOLLAPELLI LOHITH",
+  "entry": "2026MEB1614",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Shivam",
+  "mentorEntry": "2025MEB1590"
+ },
+ "2026MEB1615": {
+  "name": "GUNURU JAYENDRA",
+  "entry": "2026MEB1615",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Garvit Singh",
+  "mentorEntry": "2025MEB1552"
+ },
+ "2026MEB1616": {
+  "name": "HARKRIT SINGH",
+  "entry": "2026MEB1616",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Aditya",
+  "mentorEntry": "2025MEB1531"
+ },
+ "2026MEB1617": {
+  "name": "HARSHIT",
+  "entry": "2026MEB1617",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pranav Patel",
+  "mentorEntry": "2025MEB1573"
+ },
+ "2026MEB1618": {
+  "name": "HITESH KUSHWAHA",
+  "entry": "2026MEB1618",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Sparsh Sharma",
+  "mentorEntry": "2025MEB1599"
+ },
+ "2026MEB1619": {
+  "name": "ISHAN GARG",
+  "entry": "2026MEB1619",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Shreyash Mishra",
+  "mentorEntry": "2025MEB1593"
+ },
+ "2026MEB1620": {
+  "name": "ISHAN TYAGI",
+  "entry": "2026MEB1620",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pratham Bhanoo",
+  "mentorEntry": "2025MEB1576"
+ },
+ "2026MEB1621": {
+  "name": "KATHIRIYA SUZAL MANOJBHAI",
+  "entry": "2026MEB1621",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pranav Patel",
+  "mentorEntry": "2025MEB1573"
+ },
+ "2026MEB1622": {
+  "name": "KAUSTUBH VALLABH",
+  "entry": "2026MEB1622",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pratham Bhanoo",
+  "mentorEntry": "2025MEB1576"
+ },
+ "2026MEB1623": {
+  "name": "KAVYANJALI",
+  "entry": "2026MEB1623",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Rachana patil",
+  "mentorEntry": "2025MEB1579"
+ },
+ "2026MEB1624": {
+  "name": "KHUSHI SHARMA",
+  "entry": "2026MEB1624",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Siya",
+  "mentorEntry": "2025MEB1597"
+ },
+ "2026MEB1625": {
+  "name": "KORA SIVA RAMA KRISHNA",
+  "entry": "2026MEB1625",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Garvit Singh",
+  "mentorEntry": "2025MEB1552"
+ },
+ "2026MEB1626": {
+  "name": "KRISHIV AGGARWAL",
+  "entry": "2026MEB1626",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Shivam",
+  "mentorEntry": "2025MEB1590"
+ },
+ "2026MEB1627": {
+  "name": "KRISHNA SHAJU",
+  "entry": "2026MEB1627",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Spriha Revankar",
+  "mentorEntry": "2025MEB1601"
+ },
+ "2026MEB1628": {
+  "name": "KUSHAGRA PANDEY",
+  "entry": "2026MEB1628",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Neev Sachdev",
+  "mentorEntry": "2025MEB1570"
+ },
+ "2026MEB1629": {
+  "name": "LUCKY",
+  "entry": "2026MEB1629",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Siya",
+  "mentorEntry": "2025MEB1597"
+ },
+ "2026MEB1630": {
+  "name": "MAHESH MEENA",
+  "entry": "2026MEB1630",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Siddh Jain",
+  "mentorEntry": "2025MEB1595"
+ },
+ "2026MEB1631": {
+  "name": "MOODU PAVAN KALYAN",
+  "entry": "2026MEB1631",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pranav Patel",
+  "mentorEntry": "2025MEB1573"
+ },
+ "2026MEB1632": {
+  "name": "NARLA GURU PRAGNA",
+  "entry": "2026MEB1632",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Khushi singh",
+  "mentorEntry": "2025MEB1561"
+ },
+ "2026MEB1633": {
+  "name": "NEEL LAMBA",
+  "entry": "2026MEB1633",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Siddh Jain",
+  "mentorEntry": "2025MEB1595"
+ },
+ "2026MEB1634": {
+  "name": "PADALA SURYA VENKATA NAGI REDDY",
+  "entry": "2026MEB1634",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Khushi singh",
+  "mentorEntry": "2025MEB1561"
+ },
+ "2026MEB1635": {
+  "name": "PARTH HOODA",
+  "entry": "2026MEB1635",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Sparsh Sharma",
+  "mentorEntry": "2025MEB1599"
+ },
+ "2026MEB1636": {
+  "name": "PRANAY SADANA",
+  "entry": "2026MEB1636",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Rachana patil",
+  "mentorEntry": "2025MEB1579"
+ },
+ "2026MEB1637": {
+  "name": "PUSHKAR SANGWAN",
+  "entry": "2026MEB1637",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pushkal Garg",
+  "mentorEntry": "2025MEB1578"
+ },
+ "2026MEB1638": {
+  "name": "RAGHAV AGARWAL",
+  "entry": "2026MEB1638",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Pratham Bhanoo",
+  "mentorEntry": "2025MEB1576"
+ },
+ "2026MEB1639": {
+  "name": "RITIKA",
+  "entry": "2026MEB1639",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Siya",
+  "mentorEntry": "2025MEB1597"
+ },
+ "2026MEB1640": {
+  "name": "RUDRAKSH CHAUHAN",
+  "entry": "2026MEB1640",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Aditya",
+  "mentorEntry": "2025MEB1531"
+ },
+ "2026MEB1641": {
+  "name": "SAAVI",
+  "entry": "2026MEB1641",
+  "branch": "ME",
+  "academicGroup": "G10",
+  "division": "D4",
+  "ismpGroup": 10,
+  "mentor": "Spriha Revankar",
+  "mentorEntry": "2025MEB1601"
+ },
+ "2026MEB1642": {
+  "name": "SAMRADDHA SIDDHARTHA",
+  "entry": "2026MEB1642",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Ayush Malviya",
+  "mentorEntry": "2025MEB1542"
+ },
+ "2026MEB1643": {
+  "name": "SAMYAK MISHRA",
+  "entry": "2026MEB1643",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Neev Sachdev",
+  "mentorEntry": "2025MEB1570"
+ },
+ "2026MEB1644": {
+  "name": "SANDEEP MEHRA",
+  "entry": "2026MEB1644",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Aditya",
+  "mentorEntry": "2025MEB1531"
+ },
+ "2026MEB1645": {
+  "name": "SAPNA",
+  "entry": "2026MEB1645",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Sparsh Sharma",
+  "mentorEntry": "2025MEB1599"
+ },
+ "2026MEB1646": {
+  "name": "SARTHAK GUPTA",
+  "entry": "2026MEB1646",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Khushi singh",
+  "mentorEntry": "2025MEB1561"
+ },
+ "2026MEB1647": {
+  "name": "SARTHAK SHEKHAR",
+  "entry": "2026MEB1647",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Spriha Revankar",
+  "mentorEntry": "2025MEB1601"
+ },
+ "2026MEB1648": {
+  "name": "SHAMBHAVI SHRESTH",
+  "entry": "2026MEB1648",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Khushi singh",
+  "mentorEntry": "2025MEB1561"
+ },
+ "2026MEB1649": {
+  "name": "SHOIB ALI",
+  "entry": "2026MEB1649",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Garvit Singh",
+  "mentorEntry": "2025MEB1552"
+ },
+ "2026MEB1650": {
+  "name": "SUNIL KUMAR",
+  "entry": "2026MEB1650",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Pranav Patel",
+  "mentorEntry": "2025MEB1573"
+ },
+ "2026MEB1651": {
+  "name": "SUYASH",
+  "entry": "2026MEB1651",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Shivam",
+  "mentorEntry": "2025MEB1590"
+ },
+ "2026MEB1652": {
+  "name": "TALARI NEERAJ NETHRA",
+  "entry": "2026MEB1652",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Garvit Singh",
+  "mentorEntry": "2025MEB1552"
+ },
+ "2026MEB1653": {
+  "name": "TANMAY AGRAWAL",
+  "entry": "2026MEB1653",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Ayush Malviya",
+  "mentorEntry": "2025MEB1542"
+ },
+ "2026MEB1654": {
+  "name": "TANUSH CHADHA",
+  "entry": "2026MEB1654",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Siddh Jain",
+  "mentorEntry": "2025MEB1595"
+ },
+ "2026MEB1655": {
+  "name": "UJJWAL AGARWAL",
+  "entry": "2026MEB1655",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Siya",
+  "mentorEntry": "2025MEB1597"
+ },
+ "2026MEB1656": {
+  "name": "VANDIT",
+  "entry": "2026MEB1656",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Meenal Jain",
+  "mentorEntry": "2025MEB1564"
+ },
+ "2026MEB1657": {
+  "name": "VANTHALA GANESH KUMAR",
+  "entry": "2026MEB1657",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Shivam",
+  "mentorEntry": "2025MEB1590"
+ },
+ "2026MEB1658": {
+  "name": "VIKRAM SINGH",
+  "entry": "2026MEB1658",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Aditya",
+  "mentorEntry": "2025MEB1531"
+ },
+ "2026MEB1659": {
+  "name": "VINIT SHARMA",
+  "entry": "2026MEB1659",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Pratham Bhanoo",
+  "mentorEntry": "2025MEB1576"
+ },
+ "2026MEB1660": {
+  "name": "VIPULA KUNDANI",
+  "entry": "2026MEB1660",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Sparsh Sharma",
+  "mentorEntry": "2025MEB1599"
+ },
+ "2026MEB1661": {
+  "name": "YADAV ANKIT HANUMANPRASAD",
+  "entry": "2026MEB1661",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Ayush Malviya",
+  "mentorEntry": "2025MEB1542"
+ },
+ "2026MEB1662": {
+  "name": "YASHMEET",
+  "entry": "2026MEB1662",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Neev Sachdev",
+  "mentorEntry": "2025MEB1570"
+ },
+ "2026MEB1663": {
+  "name": "YUDHVEER RANA",
+  "entry": "2026MEB1663",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Meenal Jain",
+  "mentorEntry": "2025MEB1564"
+ },
+ "2026MEB1664": {
+  "name": "YUG CHAUHAN",
+  "entry": "2026MEB1664",
+  "branch": "ME",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Aditya",
+  "mentorEntry": "2025MEB1531"
+ },
+ "2026CHB1100": {
+  "name": "AARAV TOMAR",
+  "entry": "2026CHB1100",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Udit garg",
+  "mentorEntry": "2025CHB1150"
+ },
+ "2026CHB1101": {
+  "name": "AARYAN DEG",
+  "entry": "2026CHB1101",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Ankit Mundra",
+  "mentorEntry": "2025CHB1117"
+ },
+ "2026CHB1102": {
+  "name": "ABHINAV SAMAL",
+  "entry": "2026CHB1102",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Manvi Meena",
+  "mentorEntry": "2025CHB1127"
+ },
+ "2026CHB1103": {
+  "name": "ANJALI",
+  "entry": "2026CHB1103",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Ankit Mundra",
+  "mentorEntry": "2025CHB1117"
+ },
+ "2026CHB1104": {
+  "name": "ANKIT SINHA",
+  "entry": "2026CHB1104",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Neeraj Yadav",
+  "mentorEntry": "2025CHB1131"
+ },
+ "2026CHB1105": {
+  "name": "ARSHDEEP SINGH",
+  "entry": "2026CHB1105",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Ankit Mundra",
+  "mentorEntry": "2025CHB1117"
+ },
+ "2026CHB1106": {
+  "name": "CHANDAKA SARATH KUMAR",
+  "entry": "2026CHB1106",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Parag gupta",
+  "mentorEntry": "2025CHB1137"
+ },
+ "2026CHB1107": {
+  "name": "CHAVAN SRUSHTI DATTAPRASAD",
+  "entry": "2026CHB1107",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Shivang Sharma",
+  "mentorEntry": "2025CHB1148"
+ },
+ "2026CHB1108": {
+  "name": "CHIRAG",
+  "entry": "2026CHB1108",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Rudrakshi Dave",
+  "mentorEntry": "2025CHB1141"
+ },
+ "2026CHB1109": {
+  "name": "CHIRAGVIR SINGH TANDON",
+  "entry": "2026CHB1109",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Parag gupta",
+  "mentorEntry": "2025CHB1137"
+ },
+ "2026CHB1110": {
+  "name": "DAKSH BHASIN",
+  "entry": "2026CHB1110",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Neeraj Yadav",
+  "mentorEntry": "2025CHB1131"
+ },
+ "2026CHB1111": {
+  "name": "DIVYANSHU SAHU",
+  "entry": "2026CHB1111",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Ankit Mundra",
+  "mentorEntry": "2025CHB1117"
+ },
+ "2026CHB1112": {
+  "name": "HITESH",
+  "entry": "2026CHB1112",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Rudrakshi Dave",
+  "mentorEntry": "2025CHB1141"
+ },
+ "2026CHB1113": {
+  "name": "ISHA",
+  "entry": "2026CHB1113",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Rudrakshi Dave",
+  "mentorEntry": "2025CHB1141"
+ },
+ "2026CHB1114": {
+  "name": "JIYA",
+  "entry": "2026CHB1114",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Manvi Meena",
+  "mentorEntry": "2025CHB1127"
+ },
+ "2026CHB1115": {
+  "name": "KADAVATH DHEERAJ SINGH RATHOD",
+  "entry": "2026CHB1115",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Shivang Sharma",
+  "mentorEntry": "2025CHB1148"
+ },
+ "2026CHB1116": {
+  "name": "KADIVAL HETKUMAR NILESHBHAI",
+  "entry": "2026CHB1116",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Parag gupta",
+  "mentorEntry": "2025CHB1137"
+ },
+ "2026CHB1117": {
+  "name": "MADHAVA SAI B N",
+  "entry": "2026CHB1117",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Rudrakshi Dave",
+  "mentorEntry": "2025CHB1141"
+ },
+ "2026CHB1118": {
+  "name": "MANISHA MEENA",
+  "entry": "2026CHB1118",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Shivang Sharma",
+  "mentorEntry": "2025CHB1148"
+ },
+ "2026CHB1119": {
+  "name": "MAYANK MEENA",
+  "entry": "2026CHB1119",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Udit garg",
+  "mentorEntry": "2025CHB1150"
+ },
+ "2026CHB1120": {
+  "name": "MOHAMMAD AMAAN SIDDIQUI",
+  "entry": "2026CHB1120",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Parag gupta",
+  "mentorEntry": "2025CHB1137"
+ },
+ "2026CHB1121": {
+  "name": "NAMAN BANSAL",
+  "entry": "2026CHB1121",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Udit garg",
+  "mentorEntry": "2025CHB1150"
+ },
+ "2026CHB1122": {
+  "name": "NIHARIKA SHARMA",
+  "entry": "2026CHB1122",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Rudrakshi Dave",
+  "mentorEntry": "2025CHB1141"
+ },
+ "2026CHB1123": {
+  "name": "PARNEET SELWAL",
+  "entry": "2026CHB1123",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Ankit Mundra",
+  "mentorEntry": "2025CHB1117"
+ },
+ "2026CHB1124": {
+  "name": "PRAFULL GOTHWAL",
+  "entry": "2026CHB1124",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Manvi Meena",
+  "mentorEntry": "2025CHB1127"
+ },
+ "2026CHB1125": {
+  "name": "RONIT HITESHKUMAR MOHNANI",
+  "entry": "2026CHB1125",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Shivang Sharma",
+  "mentorEntry": "2025CHB1148"
+ },
+ "2026CHB1126": {
+  "name": "SAHIB SINGH",
+  "entry": "2026CHB1126",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Parag gupta",
+  "mentorEntry": "2025CHB1137"
+ },
+ "2026CHB1127": {
+  "name": "SAKILI SAI RUSHIKESH REDDY",
+  "entry": "2026CHB1127",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Shivang Sharma",
+  "mentorEntry": "2025CHB1148"
+ },
+ "2026CHB1128": {
+  "name": "SIDDAPPA REDDY GARI GURUCHARAN REDDY",
+  "entry": "2026CHB1128",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Manvi Meena",
+  "mentorEntry": "2025CHB1127"
+ },
+ "2026CHB1129": {
+  "name": "SOURAVJOT SINGH",
+  "entry": "2026CHB1129",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Neeraj Yadav",
+  "mentorEntry": "2025CHB1131"
+ },
+ "2026CHB1130": {
+  "name": "SURAJ MAURYA",
+  "entry": "2026CHB1130",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Manvi Meena",
+  "mentorEntry": "2025CHB1127"
+ },
+ "2026CHB1131": {
+  "name": "SUSHIL",
+  "entry": "2026CHB1131",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Udit garg",
+  "mentorEntry": "2025CHB1150"
+ },
+ "2026CHB1132": {
+  "name": "VARAD VEERPAL DHAKOLIYA",
+  "entry": "2026CHB1132",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Neeraj Yadav",
+  "mentorEntry": "2025CHB1131"
+ },
+ "2026CHB1133": {
+  "name": "YASH SHARMA",
+  "entry": "2026CHB1133",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Udit garg",
+  "mentorEntry": "2025CHB1150"
+ },
+ "2026CHB1134": {
+  "name": "YAXIT SACHDEVA",
+  "entry": "2026CHB1134",
+  "branch": "CH",
+  "academicGroup": "G11",
+  "division": "D4",
+  "ismpGroup": 11,
+  "mentor": "Neeraj Yadav",
+  "mentorEntry": "2025CHB1131"
+ },
+ "2026CEB1135": {
+  "name": "ABHISHEK",
+  "entry": "2026CEB1135",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ashlyn Reni Varghese",
+  "mentorEntry": "2025CEB1088"
+ },
+ "2026CEB1136": {
+  "name": "ADITYA ASHISH KAPOOR",
+  "entry": "2026CEB1136",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Bhavya Goel",
+  "mentorEntry": "2025CEB1092"
+ },
+ "2026CEB1137": {
+  "name": "ADITYA SINGH",
+  "entry": "2026CEB1137",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Mudit",
+  "mentorEntry": "2025CEB1100"
+ },
+ "2026CEB1138": {
+  "name": "ANKUSH DOI",
+  "entry": "2026CEB1138",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Abhinav Saxena",
+  "mentorEntry": "2025CEB1082"
+ },
+ "2026CEB1139": {
+  "name": "ARMAANDEEP SINGH",
+  "entry": "2026CEB1139",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Abhinav Saxena",
+  "mentorEntry": "2025CEB1082"
+ },
+ "2026CEB1140": {
+  "name": "BHUKYA LALPRASAD",
+  "entry": "2026CEB1140",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ashlyn Reni Varghese",
+  "mentorEntry": "2025CEB1088"
+ },
+ "2026CEB1141": {
+  "name": "DEVYANEE SHARAD JAWLE",
+  "entry": "2026CEB1141",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Bhavya Goel",
+  "mentorEntry": "2025CEB1092"
+ },
+ "2026CEB1142": {
+  "name": "DODIYA YASHRAJSINH YUVRAJSINH",
+  "entry": "2026CEB1142",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Apoorva Vaishnav",
+  "mentorEntry": "2025CEB1087"
+ },
+ "2026CEB1143": {
+  "name": "HARNISH",
+  "entry": "2026CEB1143",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Abhinav Saxena",
+  "mentorEntry": "2025CEB1082"
+ },
+ "2026CEB1144": {
+  "name": "HETKUMAR VIPUL PATEL",
+  "entry": "2026CEB1144",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aarhan Mahajan",
+  "mentorEntry": "2025CEB1081"
+ },
+ "2026CEB1145": {
+  "name": "ISHANT SARASWAT",
+  "entry": "2026CEB1145",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aarhan Mahajan",
+  "mentorEntry": "2025CEB1081"
+ },
+ "2026CEB1146": {
+  "name": "JASHANDEEP SINGH",
+  "entry": "2026CEB1146",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Mudit",
+  "mentorEntry": "2025CEB1100"
+ },
+ "2026CEB1147": {
+  "name": "KRITIKA MEENA",
+  "entry": "2026CEB1147",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Apoorva Vaishnav",
+  "mentorEntry": "2025CEB1087"
+ },
+ "2026CEB1148": {
+  "name": "MUKUL SURYAKANT SHINTRE",
+  "entry": "2026CEB1148",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Bhavya Goel",
+  "mentorEntry": "2025CEB1092"
+ },
+ "2026CEB1149": {
+  "name": "NABAM KOMJ",
+  "entry": "2026CEB1149",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Vinayak Sharma",
+  "mentorEntry": "2025CEB1114"
+ },
+ "2026CEB1150": {
+  "name": "NAVPREET KAUR",
+  "entry": "2026CEB1150",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aarhan Mahajan",
+  "mentorEntry": "2025CEB1081"
+ },
+ "2026CEB1151": {
+  "name": "PALAK VERMA",
+  "entry": "2026CEB1151",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ashlyn Reni Varghese",
+  "mentorEntry": "2025CEB1088"
+ },
+ "2026CEB1152": {
+  "name": "PARAM SHARMA",
+  "entry": "2026CEB1152",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Bhavya Goel",
+  "mentorEntry": "2025CEB1092"
+ },
+ "2026CEB1153": {
+  "name": "PARTH KANIFNATH THORAT",
+  "entry": "2026CEB1153",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Apoorva Vaishnav",
+  "mentorEntry": "2025CEB1087"
+ },
+ "2026CEB1154": {
+  "name": "PAYAL",
+  "entry": "2026CEB1154",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aarhan Mahajan",
+  "mentorEntry": "2025CEB1081"
+ },
+ "2026CEB1155": {
+  "name": "POTUGARI HEMAL",
+  "entry": "2026CEB1155",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Vinayak Sharma",
+  "mentorEntry": "2025CEB1114"
+ },
+ "2026CEB1156": {
+  "name": "PRINCE BHARTI",
+  "entry": "2026CEB1156",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Vinayak Sharma",
+  "mentorEntry": "2025CEB1114"
+ },
+ "2026CEB1157": {
+  "name": "PRINCE SINGHAL",
+  "entry": "2026CEB1157",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ashlyn Reni Varghese",
+  "mentorEntry": "2025CEB1088"
+ },
+ "2026CEB1158": {
+  "name": "RAGHVENDRA MISHRA",
+  "entry": "2026CEB1158",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Mudit",
+  "mentorEntry": "2025CEB1100"
+ },
+ "2026CEB1159": {
+  "name": "RENATI VAMSI KRISHNA VARMA",
+  "entry": "2026CEB1159",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Mudit",
+  "mentorEntry": "2025CEB1100"
+ },
+ "2026CEB1160": {
+  "name": "RISHABH SINGHAL",
+  "entry": "2026CEB1160",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Vinayak Sharma",
+  "mentorEntry": "2025CEB1114"
+ },
+ "2026CEB1161": {
+  "name": "ROHIT KUMAR",
+  "entry": "2026CEB1161",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Abhinav Saxena",
+  "mentorEntry": "2025CEB1082"
+ },
+ "2026CEB1162": {
+  "name": "SARA BANSAL",
+  "entry": "2026CEB1162",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Bhavya Goel",
+  "mentorEntry": "2025CEB1092"
+ },
+ "2026CEB1163": {
+  "name": "SARABJOT SINGH",
+  "entry": "2026CEB1163",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Vinayak Sharma",
+  "mentorEntry": "2025CEB1114"
+ },
+ "2026CEB1164": {
+  "name": "SHORYA RAJ SONAR",
+  "entry": "2026CEB1164",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Mudit",
+  "mentorEntry": "2025CEB1100"
+ },
+ "2026CEB1165": {
+  "name": "VEDASHREE VISHWAS PADELKAR",
+  "entry": "2026CEB1165",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ashlyn Reni Varghese",
+  "mentorEntry": "2025CEB1088"
+ },
+ "2026CEB1166": {
+  "name": "VISHAL",
+  "entry": "2026CEB1166",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Apoorva Vaishnav",
+  "mentorEntry": "2025CEB1087"
+ },
+ "2026CEB1167": {
+  "name": "VISHNU PRAKASH DHUMAL",
+  "entry": "2026CEB1167",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Abhinav Saxena",
+  "mentorEntry": "2025CEB1082"
+ },
+ "2026CEB1168": {
+  "name": "YASH BHARDWAJ",
+  "entry": "2026CEB1168",
+  "branch": "CE",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aarhan Mahajan",
+  "mentorEntry": "2025CEB1081"
+ },
+ "2026MMB1665": {
+  "name": "ABHINAV HAZRA",
+  "entry": "2026MMB1665",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aayush Mahajan",
+  "mentorEntry": "2025MMB1614"
+ },
+ "2026MMB1666": {
+  "name": "ADITYA GARG",
+  "entry": "2026MMB1666",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Smile Mittal",
+  "mentorEntry": "2025MMB1636"
+ },
+ "2026MMB1667": {
+  "name": "AKSHOM MANJHU",
+  "entry": "2026MMB1667",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Dhanish Sharma",
+  "mentorEntry": "2025MMB1620"
+ },
+ "2026MMB1668": {
+  "name": "ANIKET SINGH",
+  "entry": "2026MMB1668",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aayush Mahajan",
+  "mentorEntry": "2025MMB1614"
+ },
+ "2026MMB1669": {
+  "name": "ANKIT BAIRWA",
+  "entry": "2026MMB1669",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ayush Pawar",
+  "mentorEntry": "2025MMB1615"
+ },
+ "2026MMB1670": {
+  "name": "ANTRA SACHDEVA",
+  "entry": "2026MMB1670",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Dhanish Sharma",
+  "mentorEntry": "2025MMB1620"
+ },
+ "2026MMB1671": {
+  "name": "ANUBHAV LABH",
+  "entry": "2026MMB1671",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Shardul Vinod Khaire",
+  "mentorEntry": "2025MMB1634"
+ },
+ "2026MMB1672": {
+  "name": "BANOTH CHITRA TEJA",
+  "entry": "2026MMB1672",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Swayam Krishna",
+  "mentorEntry": "2025MMB1638"
+ },
+ "2026MMB1673": {
+  "name": "DIKSHA AGARWAL",
+  "entry": "2026MMB1673",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Smile Mittal",
+  "mentorEntry": "2025MMB1636"
+ },
+ "2026MMB1674": {
+  "name": "HARIBABU BONELA",
+  "entry": "2026MMB1674",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aayush Mahajan",
+  "mentorEntry": "2025MMB1614"
+ },
+ "2026MMB1675": {
+  "name": "JASHANPREET SINGH",
+  "entry": "2026MMB1675",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Shardul Vinod Khaire",
+  "mentorEntry": "2025MMB1634"
+ },
+ "2026MMB1676": {
+  "name": "JAYARAPU SURYA TEJA",
+  "entry": "2026MMB1676",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ayush Pawar",
+  "mentorEntry": "2025MMB1615"
+ },
+ "2026MMB1677": {
+  "name": "JIGYANSH PATIDAR",
+  "entry": "2026MMB1677",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Smile Mittal",
+  "mentorEntry": "2025MMB1636"
+ },
+ "2026MMB1678": {
+  "name": "KARAN SINGH",
+  "entry": "2026MMB1678",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ayush Pawar",
+  "mentorEntry": "2025MMB1615"
+ },
+ "2026MMB1679": {
+  "name": "LAKSHITA KAUSHIK",
+  "entry": "2026MMB1679",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Smile Mittal",
+  "mentorEntry": "2025MMB1636"
+ },
+ "2026MMB1680": {
+  "name": "LEKHRAM",
+  "entry": "2026MMB1680",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Shardul Vinod Khaire",
+  "mentorEntry": "2025MMB1634"
+ },
+ "2026MMB1681": {
+  "name": "MOHIT KUMAR MAURYA",
+  "entry": "2026MMB1681",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Swayam Krishna",
+  "mentorEntry": "2025MMB1638"
+ },
+ "2026MMB1682": {
+  "name": "MUDAVATH MATHRU",
+  "entry": "2026MMB1682",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Smile Mittal",
+  "mentorEntry": "2025MMB1636"
+ },
+ "2026MMB1683": {
+  "name": "NASPURI ABHIRAM",
+  "entry": "2026MMB1683",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aayush Mahajan",
+  "mentorEntry": "2025MMB1614"
+ },
+ "2026MMB1684": {
+  "name": "PARAM VIVEK GHIA",
+  "entry": "2026MMB1684",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ayush Pawar",
+  "mentorEntry": "2025MMB1615"
+ },
+ "2026MMB1685": {
+  "name": "PERAVALI SHRUTHA KEERTHI",
+  "entry": "2026MMB1685",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Dhanish Sharma",
+  "mentorEntry": "2025MMB1620"
+ },
+ "2026MMB1686": {
+  "name": "PRANJAL SRIVASTAVA",
+  "entry": "2026MMB1686",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Dhanish Sharma",
+  "mentorEntry": "2025MMB1620"
+ },
+ "2026MMB1687": {
+  "name": "SHUBHANGI SAW",
+  "entry": "2026MMB1687",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Aayush Mahajan",
+  "mentorEntry": "2025MMB1614"
+ },
+ "2026MMB1688": {
+  "name": "SOUNAK CHAKRABORTY",
+  "entry": "2026MMB1688",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Shardul Vinod Khaire",
+  "mentorEntry": "2025MMB1634"
+ },
+ "2026MMB1689": {
+  "name": "TIANA JAISWAL",
+  "entry": "2026MMB1689",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Dhanish Sharma",
+  "mentorEntry": "2025MMB1620"
+ },
+ "2026MMB1690": {
+  "name": "VED UMESH VARADE",
+  "entry": "2026MMB1690",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Swayam Krishna",
+  "mentorEntry": "2025MMB1638"
+ },
+ "2026MMB1691": {
+  "name": "VRISHANK BOJJAPURI",
+  "entry": "2026MMB1691",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Swayam Krishna",
+  "mentorEntry": "2025MMB1638"
+ },
+ "2026MMB1692": {
+  "name": "YOGENDRA SINGH",
+  "entry": "2026MMB1692",
+  "branch": "MME",
+  "academicGroup": "G12",
+  "division": "D4",
+  "ismpGroup": 12,
+  "mentor": "Ayush Pawar",
+  "mentorEntry": "2025MMB1615"
+ }
+}

@@ -1,0 +1,18 @@
+# Personal courses and notes
+public/c_*
+public/h_*
+public/ml/
+public/ph102/
+
+# Backup archives
+backups/*.tar.gz
+*.tar.gz
+
+# Firebase cache
+.firebase/
+
+# OS & Editor files
+.DS_Store
+*.DS_Store
+Thumbs.db
+.claude/

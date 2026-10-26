@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Orientation Planner — Group 2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root{
+    --bg:#0c0e18;
+    --bg2:#10121f;
+    --card:#161826;
+    --card2:#1b1e30;
+    --line:#272a3f;
+    --ink:#eae7f2;
+    --ink-soft:#8f8ba6;
+    --ink-faint:#5f5c74;
+
+    --gold:#d9a94f;
+    --gold-soft:rgba(217,169,79,0.14);
+    --teal:#59b3a8;
+    --teal-soft:rgba(89,179,168,0.14);
+    --rose:#e08a94;
+    --rose-soft:rgba(224,138,148,0.14);
+    --violet:#b39ae8;
+    --violet-soft:rgba(179,154,232,0.14);
+  }
+
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    min-height:100vh;
+    padding-bottom:48px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    background:linear-gradient(180deg,#0a0b13 0%, var(--bg2) 100%);
+    color:#f3efe4;
+    padding:26px 20px 20px;
+    position:sticky;
+    top:0;
+    z-index:40;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:6px;
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:27px;
+    margin:0 0 2px;
+    letter-spacing:-0.01em;
+  }
+  .sub{
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  .settings-toggle{
+    position:absolute;
+    top:24px;
+    right:18px;
+    width:38px;height:38px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--line);
+    color:#f3efe4;
+    font-size:17px;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+  }
+  .settings-toggle:active{background:rgba(255,255,255,0.1);}
+
+  .daystrip{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    margin-top:18px;
+    padding-bottom:4px;
+    scrollbar-width:none;
+  }
+  .daystrip::-webkit-scrollbar{display:none;}
+  .daychip{
+    flex:0 0 auto;
+    width:50px;
+    padding:8px 0 9px;
+    border-radius:12px;
+    text-align:center;
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--line);
+    cursor:pointer;
+  }
+  .daychip .dow{
+    font-size:10px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .daychip .dnum{
+    font-family:'Fraunces',serif;
+    font-size:18px;
+    font-weight:600;
+    color:var(--ink);
+    margin-top:2px;
+  }
+  .daychip.active{
+    background:var(--gold);
+    border-color:var(--gold);
+  }
+  .daychip.active .dow{color:#3a2c0f;}
+  .daychip.active .dnum{color:#241a06;}
+  .daychip.today:not(.active){border-color:var(--gold); border-width:1.5px;}
+  .daychip .dot{
+    width:4px;height:4px;border-radius:50%;
+    background:var(--gold);
+    margin:4px auto 0;
+    opacity:0;
+  }
+  .daychip.hasevent .dot{opacity:1;}
+  .daychip.active .dot{background:#3a2c0f;}
+
+  /* ---------- Settings panel ---------- */
+  .settings{
+    max-height:0;
+    overflow:hidden;
+    background:#08090f;
+    transition:max-height .35s ease;
+  }
+  .settings.open{max-height:360px;}
+  .settings-inner{
+    padding:18px 20px 22px;
+    color:#e7e3f0;
+  }
+  .settings-inner h3{
+    font-family:'Fraunces',serif;
+    font-size:15px;
+    margin:0 0 12px;
+    color:var(--gold);
+    font-weight:600;
+  }
+  .field{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+    font-size:13.5px;
+  }
+  .field label{color:#c9c5da;}
+  .field input[type=time], .field input[type=number]{
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--line);
+    color:#f3efe4;
+    border-radius:8px;
+    padding:6px 9px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    width:98px;
+  }
+  .field .hint{font-size:11px;color:var(--ink-faint);display:block;margin-top:2px;}
+  .reset-btn{
+    margin-top:14px;
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--gold);
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+  }
+
+  /* ---------- Main ---------- */
+  main{
+    max-width:640px;
+    margin:0 auto;
+    padding:20px 16px 0;
+  }
+
+  .banner{
+    display:flex;
+    gap:10px;
+    background:var(--teal-soft);
+    border:1px solid rgba(89,179,168,0.28);
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:12.5px;
+    line-height:1.5;
+    color:#bfe7e1;
+    margin-bottom:18px;
+  }
+  .banner b{color:#e3f7f3;}
+
+  .daycard{
+    background:var(--card);
+    border-radius:20px;
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+
+  .daycard-head{
+    padding:18px 20px 14px;
+    border-bottom:1px solid var(--line);
+  }
+  .daycard-head .dayname{
+    font-family:'Fraunces',serif;
+    font-size:22px;
+    font-weight:600;
+  }
+  .daycard-head .datestr{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    font-family:'JetBrains Mono',monospace;
+  }
+  .today-pill{
+    display:inline-block;
+    background:var(--gold);
+    color:#2b1f07;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding:3px 9px;
+    border-radius:99px;
+    margin-left:8px;
+    vertical-align:middle;
+  }
+
+  .sleepbar{
+    margin-top:12px;
+    background:var(--bg2);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:9px 13px;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    color:var(--ink-soft);
+  }
+  .sleepbar .moon{font-size:16px;}
+  .sleepbar .txt{flex:1; font-size:12px; line-height:1.4;}
+  .sleepbar .txt b{color:var(--ink);}
+  .sleepbar .hrs{
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px;
+    font-weight:600;
+  }
+  .sleepbar.good .hrs{color:#8fd19e;}
+  .sleepbar.ok .hrs{color:#e3b56b;}
+  .sleepbar.low .hrs{color:#e28b7d;}
+
+  /* ---------- Timeline ---------- */
+  .timeline{
+    padding:14px 20px 20px;
+  }
+
+  /* Compact utility rows: wake / prep / meals / sleep */
+  .u-row{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    padding:6px 0 6px 2px;
+    font-size:12px;
+    color:var(--ink-faint);
+    border-left:1px dashed var(--line);
+    margin-left:5px;
+    padding-left:16px;
+  }
+  .u-row .u-time{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:var(--ink-faint);
+    min-width:76px;
+    flex-shrink:0;
+  }
+  .u-row .u-label{color:#78748e;}
+  .u-row .u-note{color:var(--ink-faint); font-size:11px; margin-left:auto; text-align:right;}
+  .u-row.sleep-row{border-left-color:transparent; padding-bottom:2px;}
+
+  /* Prominent event cards */
+  .ev-wrap{
+    position:relative;
+    margin:10px 0 10px 5px;
+    padding-left:16px;
+    border-left:1px solid var(--line);
+  }
+  .ev-wrap::before{
+    content:'';
+    position:absolute;
+    left:-5px; top:14px;
+    width:9px; height:9px;
+    border-radius:50%;
+  }
+  .ev-wrap.group::before{background:var(--gold);}
+  .ev-wrap.common::before{background:var(--teal);}
+  .ev-wrap.sport::before{background:var(--rose);}
+  .ev-wrap.optional::before{background:var(--violet);}
+
+  .ev-card{
+    background:var(--card2);
+    border-radius:14px;
+    padding:13px 15px;
+    border:1px solid var(--line);
+  }
+  .ev-wrap.group .ev-card{border-color:rgba(217,169,79,0.35);}
+  .ev-wrap.sport .ev-card{border-color:rgba(224,138,148,0.28);}
+
+  .ev-time{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    margin-bottom:4px;
+  }
+  .ev-title{
+    font-size:15.5px;
+    font-weight:600;
+    line-height:1.35;
+    color:var(--ink);
+  }
+  .ev-meta{
+    display:flex;
+    gap:6px;
+    align-items:center;
+    margin-top:7px;
+    flex-wrap:wrap;
+  }
+  .tag{
+    font-size:9.5px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border-radius:99px;
+  }
+  .tag.group{background:var(--gold-soft); color:var(--gold);}
+  .tag.common{background:var(--teal-soft); color:var(--teal);}
+  .tag.sport{background:var(--rose-soft); color:var(--rose);}
+  .tag.optional{background:var(--violet-soft); color:var(--violet);}
+  .tag.venue{background:rgba(255,255,255,0.06); color:#c9c5da; font-weight:600;}
+
+  .pair-events{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .class-slot{
+    background:repeating-linear-gradient(135deg, #15172400, #15172400 8px, #1c1f3200 8px, #1c1f3200 16px);
+    border:1.5px dashed var(--line);
+    border-radius:10px;
+    padding:9px 12px;
+    font-size:12px;
+    color:var(--ink-faint);
+    margin:8px 0 8px 21px;
+  }
+
+  .freeday{
+    padding:10px 0 10px 21px;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  footer.appfoot{
+    max-width:640px;
+    margin:22px auto 0;
+    padding:0 16px;
+    font-size:11px;
+    color:var(--ink-faint);
+    text-align:center;
+    line-height:1.6;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <button class="settings-toggle" id="settingsBtn" aria-label="Settings">⚙</button>
+  <div class="eyebrow">Group 2 · Division 1</div>
+  <h1>Orientation Days</h1>
+  <div class="sub">27 Jul – 27 Aug · sessions, meals &amp; sleep, in one place</div>
+
+  <div class="daystrip" id="daystrip"></div>
+</header>
+
+<div class="settings" id="settingsPanel">
+  <div class="settings-inner">
+    <h3>Your rhythm</h3>
+    <div class="field">
+      <div><label>Time to be at breakfast by</label><span class="hint">how early you like to reach the mess</span></div>
+      <input type="time" id="arriveTime" value="07:45">
+    </div>
+    <div class="field">
+      <div><label>Getting-ready time</label><span class="hint">wake to walking out the door</span></div>
+      <input type="number" id="prepMins" value="75" min="15" max="180" step="5">
+    </div>
+    <div class="field">
+      <div><label>Buffer before that</label><span class="hint">slack for snooze / slow mornings</span></div>
+      <input type="number" id="bufferMins" value="10" min="0" max="60" step="5">
+    </div>
+    <div class="field">
+      <div><label>Target sleep</label><span class="hint">hours you're aiming for each night</span></div>
+      <input type="number" id="sleepTarget" value="7.5" min="5" max="10" step="0.5">
+    </div>
+    <div class="field">
+      <div><label>Wind-down after last event</label><span class="hint">time to actually fall asleep</span></div>
+      <input type="number" id="winddownMins" value="30" min="0" max="90" step="5">
+    </div>
+    <button class="reset-btn" id="resetBtn">Reset to defaults</button>
+  </div>
+</div>
+
+<main>
+  <div class="banner">
+    <span>ℹ️</span>
+    <div><b>Class timings aren't in here yet.</b> They're usually shared the evening before, along with the next day's group split. Daytime gaps below are left open on purpose — add classes into them once you have them.</div>
+  </div>
+
+  <div class="daycard" id="daycard"></div>
+</main>
+
+<footer class="appfoot">
+  Built from the Mess Timing notice and the Schedule + Venue sheet (merged cells resolved per group) · Sunday lunch runs 12:30–2:30 PM, every other day 12:15–2:30 PM
+</footer>
+
+<script>
+/* ---------------- Data ---------------- */
+const MESS = {
+  breakfast: {s:'07:30', e:'09:15'},
+  lunch:     {s:'12:15', e:'14:30'},
+  lunchSun:  {s:'12:30', e:'14:30'},
+  dinner:    {s:'19:30', e:'21:15'}
+};
+
+// type: group | common | sport | optional
+// items sharing an identical time string are rendered together as simultaneous options
+const DAYS = [
+{d:'2026-07-27', dow:'Mon', items:[
+  {t:'09:00–17:00', title:'Registration', type:'common'},
+  {t:'09:00–17:00', title:"Parent's Connect", type:'common'},
+  {t:'18:30–20:00', title:'1st Mentor–Mentee Meet', type:'common'},
+]},
+{d:'2026-07-28', dow:'Tue', items:[
+  {t:'07:00–08:30', title:'Morning Bhangra Session', venue:'G1–G6', type:'group'},
+  {t:'10:00–11:00', title:'AWC', type:'common'},
+  {t:'10:00–11:00', title:'BOWA Counsellor Talk', type:'common'},
+  {t:'11:45–13:00', title:'Admin Talks', type:'common'},
+  {t:'11:45–13:00', title:'Campus Tour', type:'common'},
+  {t:'15:00–17:00', title:'Meet with Council & ISMP', type:'common'},
+]},
+{d:'2026-07-29', dow:'Wed', items:[
+  {t:'09:30–10:00', title:'AWC', type:'common'},
+  {t:'10:00–11:00', title:'Mental Health Awareness', type:'common'},
+  {t:'11:00–12:00', title:'Anti-Ragging (POSH)', type:'common'},
+  {t:'20:00–22:30', title:'Club Introduction', type:'common'},
+]},
+{d:'2026-07-30', dow:'Thu', items:[
+  {t:'Time TBA', title:'E-Cell session', type:'common'},
+]},
+{d:'2026-07-31', dow:'Fri', items:[
+  {t:'20:00–21:15', title:'Zenith', venue:'M5', type:'group'},
+  {t:'21:15–22:30', title:'Filmski', venue:'MESH', type:'group'},
+]},
+{d:'2026-08-01', dow:'Sat', items:[
+  {t:'10:00–13:00', title:'Institute Orientation', type:'common'},
+  {t:'16:30–18:30', title:'Selfie Sprint', type:'common'},
+  {t:'20:00–21:15', title:'Undekha', venue:'MESH', type:'group'},
+  {t:'21:15–22:30', title:'Debsoc', venue:'M3', type:'group'},
+]},
+{d:'2026-08-02', dow:'Sun', items:[
+  {t:'10:00–11:00', title:'Peak Minds Session', type:'common'},
+  {t:'11:15–13:00', title:'Football', type:'sport'},
+  {t:'11:15–13:00', title:'Tennis', type:'sport'},
+  {t:'15:00–16:30', title:'Basketball', type:'sport'},
+  {t:'16:30–17:45', title:'Aeromodelling', venue:'M3', type:'group'},
+  {t:'20:00–21:15', title:'Automotive', venue:'M4', type:'group'},
+  {t:'21:15–22:30', title:'MUN', venue:'M4', type:'group'},
+]},
+{d:'2026-08-03', dow:'Mon', items:[
+  {t:'20:00–21:15', title:'Fincom', venue:'M6', type:'group'},
+  {t:'21:15–22:30', title:'SoftCom', venue:'M6', type:'group'},
+]},
+{d:'2026-08-04', dow:'Tue', items:[
+  {t:'20:00–21:00', title:'Alpha', venue:'M5', type:'group'},
+  {t:'21:00–22:30', title:'BOWA Session 1', venue:'Audi Foyer', type:'group'},
+]},
+{d:'2026-08-05', dow:'Wed', items:[
+  {t:'20:00–21:15', title:'Chess', venue:'M4', type:'group'},
+  {t:'21:15–22:30', title:'Monochrome', venue:'M6', type:'group'},
+]},
+{d:'2026-08-06', dow:'Thu', items:[
+  {t:'20:00–21:15', title:'Panache', venue:'CYSH', type:'group'},
+  {t:'21:15–22:30', title:'Coding', venue:'MESH', type:'group'},
+]},
+{d:'2026-08-07', dow:'Fri', items:[
+  {t:'20:00–22:30', title:'Film Screening', type:'common'},
+]},
+{d:'2026-08-08', dow:'Sat', items:[
+  {t:'09:30–10:50', title:'Weightlifting', type:'sport'},
+  {t:'09:30–10:50', title:'Volleyball', type:'sport'},
+  {t:'10:50–12:10', title:'Badminton', type:'sport'},
+  {t:'10:50–12:10', title:'Athletics', type:'sport'},
+  {t:'14:00–16:00', title:'Panache (Chic Soiree)', venue:'SAB Open Area', type:'common'},
+  {t:'16:00–17:20', title:'Cricket', type:'sport'},
+  {t:'16:00–17:20', title:'Table Tennis', type:'sport'},
+  {t:'17:20–18:40', title:'Tennis', type:'sport'},
+  {t:'17:20–18:40', title:'Weightlifting', type:'sport'},
+  {t:'19:30–23:00', title:'Jamming Night', type:'common'},
+]},
+{d:'2026-08-09', dow:'Sun', items:[
+  {t:'09:30–10:50', title:'Table Tennis', type:'sport'},
+  {t:'09:30–10:50', title:'Badminton', type:'sport'},
+  {t:'10:50–12:10', title:'Basketball', type:'sport'},
+  {t:'16:00–19:00', title:'Treasure Hunt', type:'common'},
+  {t:'21:00–22:30', title:"Trader's Arena", venue:'Audi', type:'group'},
+]},
+{d:'2026-08-10', dow:'Mon', items:[
+  {t:'20:00–21:15', title:'Ennarators', venue:'MESH', type:'group'},
+  {t:'21:15–22:30', title:'Robotics', venue:'M4', type:'group'},
+]},
+{d:'2026-08-11', dow:'Tue', items:[
+  {t:'20:00–21:15', title:'Alankar', venue:'M4', type:'group'},
+  {t:'21:15–22:30', title:'IOTA', venue:'M6', type:'group'},
+]},
+{d:'2026-08-12', dow:'Wed', items:[
+  {t:'20:00–21:15', title:'Esportz', venue:'M3', type:'group'},
+  {t:'21:15–22:30', title:'Epicure', venue:'M4', type:'group'},
+]},
+{d:'2026-08-13', dow:'Thu', items:[
+  {t:'20:00–21:15', title:'Enigma', venue:'MESH', type:'group'},
+  {t:'21:15–22:30', title:'CIM', venue:'M5', type:'group'},
+]},
+{d:'2026-08-14', dow:'Fri', items:[
+  {t:'20:00–21:15', title:'Arturo', venue:'M4', type:'group'},
+  {t:'21:15–22:30', title:'Book Club', venue:'M6', type:'group'},
+]},
+{d:'2026-08-15', dow:'Sat', items:[
+  {t:'17:00–19:30', title:'POV Rush (Alpha)', venue:'LHC', type:'common'},
+  {t:'20:00–22:30', title:'Open Mic', venue:'LHC Circle', type:'common'},
+]},
+{d:'2026-08-16', dow:'Sun', items:[
+  {t:'10:00–11:20', title:'Volleyball', type:'sport'},
+  {t:'11:20–12:40', title:'Athletics', type:'sport'},
+  {t:'17:00–18:00', title:'Hockey', type:'sport'},
+  {t:'18:00–19:00', title:'Cricket', type:'sport'},
+  {t:'19:00–20:00', title:'Football', type:'sport'},
+  {t:'21:00–22:30', title:'Steelwool Photography', type:'group'},
+]},
+{d:'2026-08-17', dow:'Mon', items:[
+  {t:'20:00–21:15', title:'Alfaaz', venue:'M3', type:'group'},
+  {t:'21:15–22:30', title:'Vibgyor', venue:'M3', type:'group'},
+]},
+{d:'2026-08-18', dow:'Tue', items:[
+  {t:'20:00–21:15', title:'Dcypher', venue:'LHC Common Area', type:'group'},
+  {t:'21:15–22:30', title:'Maths Club', venue:'M5', type:'group'},
+]},
+{d:'2026-08-19', dow:'Wed', items:[
+  {t:'20:00–22:00', title:'Debsoc Finals', venue:'M5', type:'optional'},
+  {t:'20:00–22:00', title:'IOTA Finals', venue:'M6', type:'optional'},
+]},
+{d:'2026-08-20', dow:'Thu', items:[
+  {t:'20:00–22:00', title:'Panache Fashion Show + Alpha Screening', venue:'Audi', type:'common'},
+]},
+{d:'2026-08-21', dow:'Fri', items:[
+  {t:'18:00–19:30', title:'Basketball Finals', type:'common'},
+  {t:'20:00–22:00', title:'ISMP Play — Undekha', venue:'Audi', type:'common'},
+]},
+{d:'2026-08-22', dow:'Sat', items:[
+  {t:'10:00–12:00', title:'Table Tennis Finals', type:'common'},
+  {t:'10:00–12:00', title:'Chess Finals', venue:'M4', type:'common'},
+  {t:'12:30–15:30', title:'Ennarators Round 1', venue:'M5', type:'optional'},
+  {t:'15:30–17:30', title:'Script the Comic', venue:'M5', type:'optional'},
+  {t:'19:00–23:00', title:'Cult Night', type:'common'},
+]},
+{d:'2026-08-23', dow:'Sun', items:[
+  {t:'10:00–16:00', title:"Fresher's MUN", type:'optional'},
+  {t:'11:00–13:00', title:'Space Day', type:'common'},
+  {t:'14:00–16:00', title:'Enigma Quiz', venue:'M5', type:'optional'},
+  {t:'16:00–18:30', title:'Ennarators Round 2', venue:'M5', type:'optional'},
+  {t:'19:00–23:00', title:'Cult Night (buffer)', type:'common'},
+]},
+{d:'2026-08-24', dow:'Mon', items:[
+  {t:'20:00–21:00', title:'Pehchaan Ek Safar', type:'common'},
+]},
+{d:'2026-08-25', dow:'Tue', items:[
+  {t:'20:00–21:00', title:'Maanjhi', type:'common'},
+  {t:'25–27 Aug', title:'Maths Club Freshers', type:'optional'},
+]},
+{d:'2026-08-26', dow:'Wed', items:[]},
+{d:'2026-08-27', dow:'Thu', items:[]},
+];
+
+const TODAY = '2026-08-01';
+
+/* ---------------- Helpers ---------------- */
+function toMin(hhmm){ const [h,m]=hhmm.split(':').map(Number); return h*60+m; }
+function toHHMM(mins){
+  mins = ((mins%1440)+1440)%1440;
+  let h = Math.floor(mins/60), m = mins%60;
+  const ap = h>=12?'PM':'AM';
+  let h12 = h%12; if(h12===0) h12=12;
+  return `${h12}:${String(m).padStart(2,'0')} ${ap}`;
+}
+function fmtDur(mins){
+  const h = Math.floor(mins/60), m = mins%60;
+  if(m===0) return `${h} hr`;
+  return `${h} hr ${m} min`;
+}
+function isSunday(dow){ return dow==='Sun'; }
+function dateLabel(dstr){
+  const d = new Date(dstr+'T00:00:00');
+  return d.toLocaleDateString('en-GB',{day:'numeric',month:'long'});
+}
+function fullDow(dow){
+  const map={Mon:'Monday',Tue:'Tuesday',Wed:'Wednesday',Thu:'Thursday',Fri:'Friday',Sat:'Saturday',Sun:'Sunday'};
+  return map[dow];
+}
+function to12(hhmm){ return toHHMM(toMin(hhmm)); }
+
+function lastEventEnd(day){
+  let latest = toMin(MESS.dinner.e);
+  day.items.forEach(it=>{
+    const parts = it.t.split(/[–-]/);
+    if(parts.length!==2) return;
+    let [s,e] = parts.map(x=>x.trim());
+    if(!/^\d{1,2}:\d{2}$/.test(s) || !/^\d{1,2}:\d{2}$/.test(e)) return;
+    let sm = toMin(s), em = toMin(e);
+    if(em < sm) em += 1440;
+    if(em > latest) latest = em;
+  });
+  return latest;
+}
+
+/* ---------------- Settings state ---------------- */
+const els = {
+  arrive: document.getElementById('arriveTime'),
+  prep: document.getElementById('prepMins'),
+  buffer: document.getElementById('bufferMins'),
+  sleepTarget: document.getElementById('sleepTarget'),
+  winddown: document.getElementById('winddownMins'),
+};
+let settings = { arrive:'07:45', prep:75, buffer:10, sleepTarget:7.5, winddown:30 };
+function readSettings(){
+  settings.arrive = els.arrive.value || '07:45';
+  settings.prep = Number(els.prep.value)||75;
+  settings.buffer = Number(els.buffer.value)||10;
+  settings.sleepTarget = Number(els.sleepTarget.value)||7.5;
+  settings.winddown = Number(els.winddown.value)||30;
+}
+[els.arrive, els.prep, els.buffer, els.sleepTarget, els.winddown].forEach(el=>{
+  el.addEventListener('change', ()=>{ readSettings(); render(); });
+});
+document.getElementById('resetBtn').addEventListener('click', ()=>{
+  els.arrive.value='07:45'; els.prep.value=75; els.buffer.value=10;
+  els.sleepTarget.value=7.5; els.winddown.value=30;
+  readSettings(); render();
+});
+document.getElementById('settingsBtn').addEventListener('click', ()=>{
+  document.getElementById('settingsPanel').classList.toggle('open');
+});
+
+/* ---------------- Day strip ---------------- */
+let activeIdx = DAYS.findIndex(d=>d.d===TODAY);
+if(activeIdx<0) activeIdx = 0;
+
+function buildStrip(){
+  const strip = document.getElementById('daystrip');
+  strip.innerHTML = '';
+  DAYS.forEach((day,i)=>{
+    const chip = document.createElement('div');
+    chip.className = 'daychip' + (i===activeIdx?' active':'') + (day.d===TODAY?' today':'') + (day.items.length?' hasevent':'');
+    chip.innerHTML = `<div class="dow">${day.dow}</div><div class="dnum">${Number(day.d.slice(8))}</div><div class="dot"></div>`;
+    chip.addEventListener('click', ()=>{ activeIdx=i; buildStrip(); renderDay(); scrollActiveIntoView(); });
+    strip.appendChild(chip);
+  });
+}
+function scrollActiveIntoView(){
+  const strip = document.getElementById('daystrip');
+  const chip = strip.children[activeIdx];
+  if(chip) chip.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+}
+
+/* ---------------- Render ---------------- */
+function uRow(time, label, note=''){
+  return `<div class="u-row"><span class="u-time">${time}</span><span class="u-label">${label}</span>${note?`<span class="u-note">${note}</span>`:''}</div>`;
+}
+
+function tagHtml(cls,label){ return `<span class="tag ${cls}">${label}</span>`; }
+
+function dispTime(t){
+  if(!/^\d{1,2}:\d{2}/.test(t)) return t;
+  return t.replace(/(\d{1,2}):(\d{2})[–-](\d{1,2}):(\d{2})/, (m,h1,m1,h2,m2)=> `${to12(h1+':'+m1)} – ${to12(h2+':'+m2)}`);
+}
+
+function eventCard(it){
+  let tags = [];
+  if(it.type==='group') tags.push(tagHtml('group','Group 2'));
+  if(it.type==='common') tags.push(tagHtml('common','Institute-wide'));
+  if(it.type==='sport') tags.push(tagHtml('sport','Sports'));
+  if(it.type==='optional') tags.push(tagHtml('optional','Optional / club'));
+  if(it.venue) tags.push(tagHtml('venue',it.venue));
+  return `<div class="ev-card">
+    <div class="ev-time">${dispTime(it.t)}</div>
+    <div class="ev-title">${it.title}</div>
+    ${tags.length?`<div class="ev-meta">${tags.join('')}</div>`:''}
+  </div>`;
+}
+
+// group consecutive items that share identical time string into one wrapper
+function renderEventGroup(items){
+  if(!items.length) return '';
+  let html = '';
+  let i = 0;
+  while(i < items.length){
+    const t = items[i].t;
+    const bucket = [items[i]];
+    let j = i+1;
+    while(j < items.length && items[j].t === t){ bucket.push(items[j]); j++; }
+    const primaryType = bucket[0].type;
+    html += `<div class="ev-wrap ${primaryType}"><div class="pair-events">${bucket.map(eventCard).join('')}</div></div>`;
+    i = j;
+  }
+  return html;
+}
+
+function isBeforeLunch(it){
+  const m = it.t.match(/^(\d{1,2}):(\d{2})/);
+  if(!m) return false;
+  return toMin(`${m[1]}:${m[2]}`) < 660;
+}
+function isAtLunch(it, lunch){
+  const m = it.t.match(/^(\d{1,2}):(\d{2})/);
+  if(!m) return false;
+  const s = toMin(`${m[1]}:${m[2]}`);
+  return s >= 660 && s < toMin(lunch.e);
+}
+function isAfternoon(it){
+  const m = it.t.match(/^(\d{1,2}):(\d{2})/);
+  if(!m) return false;
+  const s = toMin(`${m[1]}:${m[2]}`);
+  return s >= toMin('14:30') && s < toMin('19:30');
+}
+function isEvening(it){
+  const m = it.t.match(/^(\d{1,2}):(\d{2})/);
+  if(!m) return true;
+  const s = toMin(`${m[1]}:${m[2]}`);
+  return s >= toMin('19:30');
+}
+
+function renderDay(){
+  const day = DAYS[activeIdx];
+  const card = document.getElementById('daycard');
+  const lunch = isSunday(day.dow) ? MESS.lunchSun : MESS.lunch;
+
+  const arriveM = toMin(settings.arrive);
+  const wakeM = arriveM - settings.prep - settings.buffer;
+  const nextWakeM = arriveM - settings.prep - settings.buffer;
+
+  const lastEnd = lastEventEnd(day);
+  const bedtimeM = lastEnd + settings.winddown;
+  let sleepMins = (nextWakeM + 1440) - bedtimeM;
+  if(sleepMins < 0) sleepMins += 1440;
+
+  let sleepClass = 'good';
+  if(sleepMins < settings.sleepTarget*60 - 60) sleepClass='low';
+  else if(sleepMins < settings.sleepTarget*60) sleepClass='ok';
+
+  const dateBadge = day.d===TODAY ? '<span class="today-pill">Today</span>' : '';
+
+  let html = `
+    <div class="daycard-head">
+      <div class="dayname">${fullDow(day.dow)}${dateBadge}</div>
+      <div class="datestr">${dateLabel(day.d)}, 2026</div>
+      <div class="sleepbar ${sleepClass}">
+        <div class="moon">☾</div>
+        <div class="txt">Lights out ~<b>${toHHMM(bedtimeM)}</b> → up <b>${toHHMM(nextWakeM)}</b> tomorrow</div>
+        <div class="hrs">${fmtDur(sleepMins)}</div>
+      </div>
+    </div>
+    <div class="timeline">
+  `;
+
+  html += uRow(toHHMM(wakeM), 'Wake up');
+  html += uRow(`${toHHMM(wakeM)}–${to12(settings.arrive)}`, 'Get ready', `${settings.prep}+${settings.buffer} min`);
+  html += uRow(`${to12(MESS.breakfast.s)}–${to12(MESS.breakfast.e)}`, 'Breakfast · Mess');
+
+  const morning = day.items.filter(isBeforeLunch);
+  const midday = day.items.filter(it=>isAtLunch(it, lunch));
+  const afternoon = day.items.filter(isAfternoon);
+  const evening = day.items.filter(isEvening);
+
+  html += renderEventGroup(morning);
+  if(!morning.length){
+    html += `<div class="class-slot">Late morning — open for classes</div>`;
+  }
+
+  html += uRow(`${to12(lunch.s)}–${to12(lunch.e)}`, isSunday(day.dow)?'Lunch (Sun timing) · Mess':'Lunch · Mess');
+
+  html += renderEventGroup(midday);
+  html += renderEventGroup(afternoon);
+  if(!midday.length && !afternoon.length){
+    html += `<div class="class-slot">Afternoon — open for classes</div>`;
+  }
+
+  html += uRow(`${to12(MESS.dinner.s)}–${to12(MESS.dinner.e)}`, 'Dinner · Mess');
+
+  html += renderEventGroup(evening);
+
+  if(!morning.length && !midday.length && !afternoon.length && !evening.length){
+    html += `<div class="freeday">No listed sessions today — a genuinely free evening.</div>`;
+  }
+
+  html += uRow(toHHMM(bedtimeM), 'Asleep by', `${settings.winddown} min wind-down`);
+
+  html += `</div>`;
+  card.innerHTML = html;
+}
+
+function render(){
+  buildStrip();
+  renderDay();
+}
+
+render();
+setTimeout(scrollActiveIntoView, 50);
+</script>
+</body>
+</html>

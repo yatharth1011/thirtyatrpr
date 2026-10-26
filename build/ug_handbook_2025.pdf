@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/img/logos/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIT Ropar</title>
+  <!-- Load jQuery and other scripts before React -->
+  <!-- <script src="/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="/js/popper.min.js"></script> -->
+  <!--- <script src="/js/bootstrap.min.js"></script>-->
+  <!-- <script src="/js/plugins.js"></script>
+  <script src="/js/ajax-mail.js"></script>
+  <script src="/js/styleswitch.js"></script> -->
+  <script type="module" crossorigin src="/assets/index-BqIQvgQq.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Jhkaevua.css">
+</head>
+
+<body>
+  <div id="root"></div>
+
+</body>
+
+</html>

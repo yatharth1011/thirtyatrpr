@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<!-- Every theme is dark: say so, so browsers (and Chrome's forced "Auto Dark Mode for Web Contents") don't
+     re-darken it — that flipped light gradient text, like the kaizen hues' near-white end, to near-black. -->
+<meta name="color-scheme" content="dark">
+<title>THIRTY@RPR — BR Tools</title>
+<meta name="description" content="THIRTY@RPR — Branch Rep tool: see any kind of student's real timetable and fix it live.">
+<meta name="theme-color" content="#0d1117">
+<meta name="robots" content="noindex">
+<style>
+/*__SUB_THEME_CSS__*/
+
+  .layout{ display:grid; grid-template-columns:minmax(300px, 380px) minmax(0, 1fr); gap:14px; align-items:start; }
+  .layout > .side{ position:sticky; top:74px; max-height:calc(100vh - 90px); overflow:auto; }
+  @media (max-width:880px){
+    .layout{ grid-template-columns:minmax(0, 1fr); }
+    .layout > .side{ position:static; max-height:none; }
+  }
+  .screen{ display:none; }
+  .screen.active{ display:block; animation:screenIn .25s ease both; }
+  @keyframes screenIn{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:none; } }
+  .gate{ max-width:440px; margin:40px auto; }
+  .google-btn{
+    display:flex; align-items:center; justify-content:center; gap:10px; width:100%;
+    background:#fff; color:#1f1f1f; border:none; border-radius:10px; padding:12px 20px; font-size:13px; font-weight:700; cursor:pointer;
+  }
+  .google-btn svg{ width:18px; height:18px; }
+  .err-text{ color:var(--rose); font-size:11.5px; margin-top:10px; min-height:1em; }
+  .me-badge{ font-size:10.5px; font-weight:700; color:var(--ok); background:color-mix(in srgb, var(--ok) 14%, transparent); border-radius:99px; padding:3px 10px; white-space:nowrap; }
+  .link-btn{ background:none; border:none; color:var(--ink-faint); font-size:11px; text-decoration:underline; cursor:pointer; padding:0; }
+  .history{ display:flex; gap:4px; }
+
+  /* ---- picker (same as spectate) ---- */
+  .pk-top{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+  .pk-top .pk-mode{ margin-right:auto; }
+  .pk-summary{ font-size:12px; color:var(--ink-soft); margin-bottom:8px; line-height:1.6; }
+  .pk-summary b{ color:var(--ink); }
+  .pk-count{ font-weight:800; color:var(--ok); font-size:15px; }
+  .pk-nav{ display:flex; gap:8px; align-items:flex-start; margin:6px 0; }
+  .pk-nav-label{ font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); padding-top:6px; white-space:nowrap; width:70px; flex-shrink:0; }
+  .pk-sec{ border-top:1px dashed var(--line); padding:8px 0 4px; }
+  .pk-sec summary{ cursor:pointer; font-size:11.5px; font-weight:700; color:var(--ink); margin-bottom:6px; list-style:none; }
+  .pk-sec summary::-webkit-details-marker{ display:none; }
+  .pk-sec summary::before{ content:'▸ '; color:var(--ink-faint); }
+  .pk-sec[open] summary::before{ content:'▾ '; }
+  .pk-sec summary .muted{ font-weight:500; font-size:10.5px; }
+  .pk-family{ margin-bottom:8px; }
+  .pk-family-name{ display:block; font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); margin-bottom:4px; }
+
+  /* ---- student view ---- */
+  .view-head{ font-size:12px; color:var(--ink-soft); margin-bottom:10px; line-height:1.6; }
+  .view-head b{ color:var(--ink); }
+  .same-badge{ display:inline-block; font-size:10px; font-weight:700; padding:2px 8px; border-radius:99px; margin-left:4px; }
+  .same-badge.same{ background:color-mix(in srgb, var(--ok) 14%, transparent); color:var(--ok); }
+  .same-badge.mixed{ background:var(--amber-soft); color:var(--amber); }
+  .row-actions{ display:flex; gap:4px; flex-shrink:0; opacity:.75; }
+  .row:hover .row-actions{ opacity:1; }
+  .row{ padding:2px 0; }
+  .row.editing{ background:color-mix(in srgb, var(--ok) 6%, transparent); border-radius:8px; }
+  .add-bar{ display:flex; gap:8px; margin-top:12px; }
+
+  /* ---- inline editor ---- */
+  .editor{
+    border:1px solid color-mix(in srgb, var(--ok) 40%, var(--line)); background:var(--card2);
+    border-radius:12px; padding:12px; margin:8px 0 10px; animation:screenIn .2s ease both;
+  }
+  .editor-title{ font-weight:700; font-size:12px; margin-bottom:10px; }
+  .editor-title .muted{ font-weight:500; }
+  .ed-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px 10px; }
+  .ed-grid .full{ grid-column:1 / -1; }
+  .ed-field label{ display:block; font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); margin-bottom:3px; }
+  .ed-hint{ font-size:10.5px; color:var(--ink-faint); margin-top:4px; }
+  .ed-rooms{ display:flex; flex-wrap:wrap; gap:4px; margin-top:6px; }
+  .ed-rooms .chip{ padding:3px 8px; font-size:10.5px; }
+  .ed-actions{ display:flex; gap:8px; justify-content:flex-end; margin-top:12px; flex-wrap:wrap; }
+  .ed-actions .grow{ margin-right:auto; }
+  @media (max-width:600px){ .ed-grid{ grid-template-columns:1fr; } }
+
+  /* ---- all changes ---- */
+  .change-row{ background:var(--card2); border:1px solid transparent; border-radius:10px; padding:10px 12px; margin-bottom:8px; }
+  .change-sum{ font-size:12px; font-weight:600; line-height:1.55; }
+  .change-meta{ font-size:10.5px; color:var(--ink-faint); margin:4px 0 8px; }
+  .change-actions{ display:flex; gap:6px; }
+  .toast .btn{ padding:4px 10px; font-size:11px; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="home-btn" href="/" aria-label="Back to THIRTY@RPR home">&#8592; <span>Home</span></a>
+    <div class="prompt">./thirty --br <span class="ok">[ok]</span></div>
+    <div class="tabs" id="tabs" style="display:none;">
+      <button class="tab active" data-tab="tt">Timetable</button>
+      <button class="tab" data-tab="changes">All live changes</button>
+    </div>
+    <div class="topbar-spacer"></div>
+    <div class="history" id="historyBtns" style="display:none;">
+      <button class="btn btn-sm" id="undoBtn" title="Undo (Ctrl/⌘ Z)" disabled>↶ Undo</button>
+      <button class="btn btn-sm" id="redoBtn" title="Redo (Ctrl/⌘ Shift Z)" disabled>↷</button>
+    </div>
+    <span class="me-badge" id="meBadge" style="display:none;"></span>
+    <div class="theme-switch" id="themeSwitch"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="screen active" id="screen-signin">
+    <div class="panel gate">
+      <div class="panel-head">sign in</div>
+      <div class="panel-sub">Branch Reps only. Use your IIT Ropar Google account (@iitrpr.ac.in).</div>
+      <button class="google-btn" id="googleBtn">
+        <svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4c-7.4 0-13.8 4.1-17.1 10.1-.2.1-.4.4-.6.6z"/><path fill="#4CAF50" d="M24 44c5.5 0 10.4-1.9 14.3-5.1l-6.6-5.6c-2 1.4-4.6 2.3-7.7 2.3-5.3 0-9.7-3.3-11.3-8l-6.6 5.1C9.9 39.9 16.4 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.3 5.7l6.6 5.6C40.7 36.8 44 30.9 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        Sign in with Google
+      </button>
+      <div class="err-text" id="signinErr"></div>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-denied">
+    <div class="panel gate">
+      <div class="panel-head">not authorized</div>
+      <div class="panel-sub" id="deniedText"></div>
+      <button class="btn" id="deniedSignOutBtn" style="width:100%;">Sign out</button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-tt">
+    <div class="layout">
+      <div class="side panel">
+        <div class="panel-head">whose timetable?</div>
+        <div class="panel-sub" id="pickerSub">Tap a kind of student — a division, a group, a lab batch, an HS section — or combine them.</div>
+        <div id="picker"></div>
+      </div>
+      <div class="panel">
+        <div class="daynav">
+          <button class="icon-btn" data-day="-1" aria-label="Previous day">&#8249;</button>
+          <div class="daynav-date" id="dayDate"></div>
+          <button class="icon-btn" data-day="1" aria-label="Next day">&#8250;</button>
+          <button class="btn btn-sm" data-day="today">Today</button>
+        </div>
+        <div id="studentView"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-changes">
+    <div class="panel">
+      <div class="panel-head">all live changes</div>
+      <div class="panel-sub">Everything added, moved or removed through this tool that you can edit. Changes apply instantly for every student; Undo (top right) reverses your own last steps.</div>
+      <div id="changesList"></div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:10px;"><button class="link-btn" id="signOutBtn" style="display:none;">Sign out</button></div>
+  <footer>Unofficial, independent student project — not affiliated with or endorsed by IIT Ropar.</footer>
+</div>
+
+<div class="toast" id="toast"><span id="toastText"></span></div>
+<datalist id="venueList"></datalist>
+<datalist id="subjectList"></datalist>
+
+<script>
+/*__THIRTY_DATA__*/
+</script>
+<script>
+/*__ENGINE_JS__*/
+</script>
+<script>
+/*__PICKER_JS__*/
+</script>
+<script>
+/*__MONTHPICK_JS__*/
+</script>
+<script type="module">
+/*__BR_JS__*/
+</script>
+</body>
+</html>

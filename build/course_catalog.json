@@ -1,0 +1,1947 @@
+{
+ "AI200": {
+  "title": null,
+  "instructor": null,
+  "students": 22,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "AI101": {
+  "title": "Data Science and AI Essentials with Python",
+  "instructor": null,
+  "students": 342,
+  "slots": [
+   "PC-1",
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "AI300": {
+  "title": "Ethics in AI",
+  "instructor": "Abhilasha Nanda",
+  "students": 23,
+  "slots": [
+   "PHSME"
+  ],
+  "floated": true
+ },
+ "AI511": {
+  "title": "HCI & Visualization",
+  "instructor": "Puneet Kumar",
+  "students": 26,
+  "slots": [
+   "PC -3",
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "AI512": {
+  "title": "Artificial Intelligence",
+  "instructor": "Abhinav Kumar",
+  "students": 78,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "AI553": {
+  "title": "Speech and Audio Processing",
+  "instructor": "Anusha Prakash | Arun Kumar Sharma",
+  "students": 48,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "AI558": {
+  "title": "Secure AI Systems",
+  "instructor": "Mayuresh Pardeshi",
+  "students": 1,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "BM101A": {
+  "title": "Biology for Engineers",
+  "instructor": "Rakesh Kumar | Srivatsava Naidu",
+  "students": 213,
+  "slots": [
+   "PCPE"
+  ],
+  "floated": true
+ },
+ "BM526": {
+  "title": "Computational Problem Solving for BioEngineers",
+  "instructor": "Sukrit Gupta",
+  "students": 31,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "BM601": {
+  "title": "FUNDAMENTALS OF HUMAN PHYSIOLOGY",
+  "instructor": "Durba Pal",
+  "students": 15,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "BM605": {
+  "title": "BIOMEDICAL ELECTRONICS AND COMMUNICATION",
+  "instructor": "Suryasnata Tripathy",
+  "students": 20,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "BM606": {
+  "title": "BIOMATERIAL - TISSUE INTERACTIONS",
+  "instructor": "Bodhisatwa Das",
+  "students": 23,
+  "slots": [
+   "PCPE"
+  ],
+  "floated": true
+ },
+ "BM615": {
+  "title": "BIOMEDICAL PHOTONICS AN INTRODUCTION",
+  "instructor": "Rajesh kumar",
+  "students": 23,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "CB101": {
+  "title": "Introductory Chemistry",
+  "instructor": "Aslam Chandbhai Shaikh | Prasenjit Das | Rajendra Srivastava",
+  "students": 29,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "CB251": {
+  "title": "Inorganic Chemistry -2",
+  "instructor": "Aslam Chandbhai Shaikh | Prasenjit Das",
+  "students": 15,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "CB252": {
+  "title": "Physical Chemistry - 2",
+  "instructor": "Manoj Pandey | T. Dhilip",
+  "students": 15,
+  "slots": [
+   "PC -2",
+   "HSME",
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "CB253": {
+  "title": "Organic Chemistry II",
+  "instructor": "Indranil Chatterjee | Prabal Banerjee",
+  "students": 15,
+  "slots": [
+   "PCPE",
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "CB351": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": false,
+  "remark": "Coures not Floated due to non availability of Coures Instructor"
+ },
+ "CB352": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": false,
+  "remark": "Coures not Floated due to non availability of Coures Instructor"
+ },
+ "CB353": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": false,
+  "remark": "Coures not Floated due to non availability of Coures Instructor"
+ },
+ "CE201": {
+  "title": "Strength of Materials",
+  "instructor": "Naveen James",
+  "students": 28,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "CE202": {
+  "title": "Fundamentals of Fluid Mechanics",
+  "instructor": "Ickkshaanshu Sonkar",
+  "students": 31,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "CE304": {
+  "title": "Geomatics",
+  "instructor": "Shray Pathak",
+  "students": 29,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "CE401": {
+  "title": "Structural Analysis II",
+  "instructor": "Aditya Rajput",
+  "students": 32,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "CE402": {
+  "title": "WATER RESOURCES ENGINEERING",
+  "instructor": "Sagar Chavan | Sayantan Ganguly",
+  "students": 32,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "CE404": {
+  "title": "REINFORCED CONCRETE STRUCTURES",
+  "instructor": "Mitesh Surana",
+  "students": 32,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "CE501": {
+  "title": "ADVANCED SURFACE HYDROLOGY",
+  "instructor": "Sagar Chavan",
+  "students": 13,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "CE502": {
+  "title": "ADVANCED FLUID MECHANICS",
+  "instructor": "Sayantan Ganguly",
+  "students": 13,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "CE505": {
+  "title": "WATER QUALITY ASSESSMENT",
+  "instructor": "Neelam Gunjyal",
+  "students": 14,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "CE511": {
+  "title": "Air pollution Control and Industrial Management",
+  "instructor": "Indramani Dhada",
+  "students": 16,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "CE515": {
+  "title": "COMPUTATIONAL METHODS IN WATER AND ENVIRONMENT",
+  "instructor": "Ratan Sarmah",
+  "students": 13,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "CE520": {
+  "title": "Dynamics of Structures",
+  "instructor": "Putul Haldar",
+  "students": 25,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "CE521": {
+  "title": "Finite Element Analysis for Civil Engineering Applications",
+  "instructor": "Ganesh R",
+  "students": 30,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "CE522": {
+  "title": "Advanced Design of Concrete Structures",
+  "instructor": "Muthulingam Subramaniyan",
+  "students": 12,
+  "slots": [
+   "PCPE"
+  ],
+  "floated": true
+ },
+ "CE523": {
+  "title": "Advanced Foundation Engineering",
+  "instructor": "Resmi Sebastian",
+  "students": 12,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "CE524": {
+  "title": "Earth Retaining Structures and Slope Stability",
+  "instructor": "Raheena M.",
+  "students": 30,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "CE528": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true,
+  "remark": "Zero Enrollments, Exam not to be conducted"
+ },
+ "CH120": {
+  "title": "Seminar I",
+  "instructor": "Ajay Rawul",
+  "students": 27,
+  "slots": [
+   "PHSME"
+  ],
+  "floated": true
+ },
+ "CH201": {
+  "title": "Thermodynamics",
+  "instructor": "Arghya Banerjee",
+  "students": 28,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "CH202": {
+  "title": "Transport Phenomena",
+  "instructor": "Rajagopal Vellingiri",
+  "students": 27,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "CH230": {
+  "title": "CHE Simulation (Lab I)",
+  "instructor": "Rajagopal Vellingiri | SAIKAT ROY",
+  "students": 28,
+  "slots": [
+   "HSME",
+   "PCPE"
+  ],
+  "floated": true
+ },
+ "CH301": {
+  "title": "Separation Processes",
+  "instructor": "Santosh Kumar  Meena",
+  "students": 30,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "CH302": {
+  "title": "Chemical Reaction Engineering",
+  "instructor": "Asad Sahir",
+  "students": 30,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "CH303": {
+  "title": "Process Control",
+  "instructor": "Jayaram Valluru",
+  "students": 38,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "CH320": {
+  "title": "Seminar III",
+  "instructor": "kishant Kumar",
+  "students": 30,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "CH512": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": false,
+  "remark": "Elective Coures, Course Instructor details not available, course not floated on the AIMS"
+ },
+ "CH514": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": false,
+  "remark": "Elective Coures, Course Instructor details not available, course not floated on the AIMS"
+ },
+ "CH515": {
+  "title": "Theory and Hands-on Practice of CFD",
+  "instructor": "Chandi Sasmal",
+  "students": 15,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "CH600": {
+  "title": "Research Methodology and Ethics",
+  "instructor": "Neelkanth Nirmalkar | Sreekumar Jayadevan | Yashveer Singh",
+  "students": 16,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "CH602": {
+  "title": "ADVANCED T  RANSPORT PHENOMENA",
+  "instructor": "Vishwajeet Mehandia",
+  "students": 8,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "CH604": {
+  "title": "CHEMICAL REACTOR ANALYSIS AND DESIGN",
+  "instructor": "Tarak Mondal",
+  "students": 30,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "CH607": {
+  "title": "Advanced Water Treatment Techniques",
+  "instructor": "S. Gumfekar",
+  "students": 21,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "CH611": {
+  "title": "ADVANCED CHEMICAL REACTION ENGINEERING",
+  "instructor": "Navin Gopinathan",
+  "students": 8,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "CS201": {
+  "title": "Data Structures",
+  "instructor": "Shweta Jain | Swapnil Dhamal",
+  "students": 215,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "CS203": {
+  "title": "Digital Logic Design",
+  "instructor": "Geeta _",
+  "students": 134,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "CS205": {
+  "title": "Data Structures and Algorithms",
+  "instructor": "Tanushree Meena",
+  "students": 112,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "CS206": {
+  "title": "Foundation of Computer Systems",
+  "instructor": "Anusha Prakash | Arun Kumar Sharma",
+  "students": 88,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "CS301": {
+  "title": "Databases",
+  "instructor": "Manish Kumar",
+  "students": 150,
+  "slots": [
+   "Slot to be check"
+  ],
+  "floated": true
+ },
+ "CS302": {
+  "title": "Analysis and Design of Algorithms",
+  "instructor": "Anil Shukla",
+  "students": 94,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "CS303": {
+  "title": "Operating Systems",
+  "instructor": "Jagpreet Singh",
+  "students": 118,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "CS504": {
+  "title": "ARTIFICIAL NEURAL NETWORKS",
+  "instructor": "Deepti Bathula",
+  "students": 53,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "CS506": {
+  "title": "DATA STRUCTURES AND ALGORITHM",
+  "instructor": "Suresh Kumar Amalapuram | Tanushree Meena",
+  "students": 73,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "CS526": {
+  "title": "MATHEMATICAL FOUNDATION OF COMPUTER SCIENCE",
+  "instructor": "Mudasir Ahmad Ganaie",
+  "students": 73,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "CS527": {
+  "title": "COMPUTER SYSTEMS",
+  "instructor": "Kalyan T.V. | Neeraj Goel",
+  "students": 69,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "CS539": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true,
+  "remark": "Zero Enrollment, Cancel"
+ },
+ "CS552": {
+  "title": "Network security featuring Intrusion Detection Systems",
+  "instructor": "Basant Subba",
+  "students": 33,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "CS561": {
+  "title": "FOUNDATIONS OF NATURAL LANGUAGE PROCESSING AND LARGE LANGUAGE MODELS",
+  "instructor": "Loitongbam Gyanendro Singh",
+  "students": 39,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "CS607": {
+  "title": "CONTEMPORARY COMPUTING PLATFORMS",
+  "instructor": "Balwinder Sodhi",
+  "students": 9,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "CS733": {
+  "title": "Topics in RL",
+  "instructor": "Shashi Jha",
+  "students": 6,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "CY101": {
+  "title": "CHEMISTRY FOR ENGINEERS",
+  "instructor": "Aslam Chandbhai Shaikh | C.M. Nagaraja | D.Mandal D.Mandal | Indranil Chatterjee | Manoj Pandey | Prabal Banerjee | Rajendra Srivastava | Soumyajit Das | T. Dhilip | Tharamani C.N.",
+  "students": 333,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "CY400": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PCPE"
+  ],
+  "floated": true,
+  "remark": "Zero Enrollment, Cancel"
+ },
+ "CY411": {
+  "title": "CONCISE INORGANIC CHEMISTRY",
+  "instructor": "D.Mandal D.Mandal",
+  "students": 48,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "CY416": {
+  "title": "Reaction Rates And Classical Thermodynamics",
+  "instructor": "Rajendra Srivastava | Sudipta Sinha",
+  "students": 24,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "CY417": {
+  "title": "QUANTUM CHEMISTRY AND GROUP THEORY",
+  "instructor": "Manoj Pandey | T. Dhilip",
+  "students": 24,
+  "slots": [
+   "PEOE",
+   "PCE-2",
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "CY621": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": false,
+  "remark": "CLASSES FOR CY417 AND CY621 ARE RUNNING IN THE SAME CLASS ROOM AND COUESE INSTRUCTOR IS DR. M K PANDEY, CY621 NOT FLOATED ON THE AIMS PORTAL"
+ },
+ "CY511": {
+  "title": "INSTRUMENTATION ANALYSIS",
+  "instructor": "Tharamani C.N.",
+  "students": 24,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "CY513": {
+  "title": "POLYMER CHEMISTRY",
+  "instructor": "Narinder Singh",
+  "students": 25,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "CY514": {
+  "title": "ENVIRONMENTAL CHEMISTRY",
+  "instructor": "C.M. Nagaraja | Rajendra Srivastava",
+  "students": 24,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "CY515": {
+  "title": "BIO-ORGANIC CHEMISTRY",
+  "instructor": "Anupam Bandopadhyay | Prabal Banerjee",
+  "students": 24,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "CY517": {
+  "title": "Chemistry of Dyes and Drugs",
+  "instructor": "Anupam Bandopadhyay | Soumyajit Das",
+  "students": 16,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "DA201": {
+  "title": "Introduction to Farms of the Future",
+  "instructor": "Rakesh Sanodiya",
+  "students": 15,
+  "slots": [
+   "PHSME"
+  ],
+  "floated": true
+ },
+ "DA301": {
+  "title": "Database Systems and Data Modeling",
+  "instructor": "Abhilasha Nanda",
+  "students": 15,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "DR501": {
+  "title": "Drone aerodynamics and autonomous control",
+  "instructor": "S. Padhee",
+  "students": 28,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "DR502": {
+  "title": "Sensor Systems & Autonomy",
+  "instructor": "Shashi Jha | Sudeepta Mishra",
+  "students": 22,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "DR512": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true,
+  "remark": "Coures cancelled"
+ },
+ "ED503": {
+  "title": null,
+  "instructor": null,
+  "students": 14,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "EE201": {
+  "title": "Signals and Systems",
+  "instructor": "Abhishek Kumar Singh | Jyotindra Sahambi",
+  "students": 483,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "EE203": {
+  "title": "Digital Circuits",
+  "instructor": "Brajesh Rawat",
+  "students": 162,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "EE205": {
+  "title": "Electromechanics",
+  "instructor": "A. Ravi",
+  "students": 120,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "EE301": {
+  "title": "Analog Circuits",
+  "instructor": "DEVARSHI DAS",
+  "students": 106,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "EE303": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true,
+  "remark": "shifted to next 2nd semester of AY2026-27"
+ },
+ "EE305": {
+  "title": "Engineering Electromagnetics",
+  "instructor": "ASHWANI SHARMA",
+  "students": 84,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "EE511": {
+  "title": "HV POWER EQUIPMENT",
+  "instructor": "C. Reddy",
+  "students": 21,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "EE513": {
+  "title": "SIMULATION AND ANALYSIS OF MODERN POWER SYSTEMS",
+  "instructor": "Ranjana Sodhi",
+  "students": 14,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "EE515": {
+  "title": "POWER CONVERTER ANALYSIS AND DESIGN",
+  "instructor": "Saifullah Payami",
+  "students": 16,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "EE521": {
+  "title": "ANALYTICAL TECHNIQUES FOR SIGNAL PROCESSING AND COMMUNICATION",
+  "instructor": "Sam Darshi",
+  "students": 12,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "EE523": {
+  "title": "ADVANCED DIGITAL COMMUNICATIONS",
+  "instructor": "Satyam Agarwal",
+  "students": 43,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "EE527": {
+  "title": "ADVANCED DIGITAL SIGNAL PRCESSING",
+  "instructor": "Brijesh Kumbhani | Santosh Kumar Vipparthi",
+  "students": 11,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "EE531": {
+  "title": "SEMICONDUCTOR DEVICE PHYSICS & MODELING",
+  "instructor": "Pardeep Duhan",
+  "students": 26,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "EE533": {
+  "title": "CMOS ANALOG IC DESIGN",
+  "instructor": "Mahendra Sakare",
+  "students": 27,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "EE535": {
+  "title": "DIGITAL IC DESIGN",
+  "instructor": "Rohit Sharma",
+  "students": 32,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "EE629": {
+  "title": "SPECIAL TOPICS IN COMMUNICATION",
+  "instructor": "ASHWANI SHARMA | Brijesh Kumbhani | Jyotindra Sahambi | Sam Darshi | Santosh Kumar Vipparthi | Satyam Agarwal",
+  "students": 11,
+  "slots": [
+   "PCPE"
+  ],
+  "floated": true
+ },
+ "ER601": {
+  "title": ": Introduction to waste and e-waste management",
+  "instructor": "Indramani Dhada",
+  "students": 9,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "ER605": {
+  "title": "System Instrumentation and thermal characterisation",
+  "instructor": "Navin Gopinathan | S. Gumfekar",
+  "students": 9,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "GE104": {
+  "title": "INTRODUCTION TO ELECTRICAL ENGINEERING",
+  "instructor": "Bibhu Padhy",
+  "students": 10,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "GE108": {
+  "title": "Basic Electronics",
+  "instructor": "Pardeep Duhan | Raghav Sharma | Sam Darshi | Satyam Agarwal",
+  "students": 285,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "GE111": {
+  "title": "Introduction To Environmental Science And Engineering",
+  "instructor": "S. Gumfekar | Vishwajeet Mehandia",
+  "students": 217,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "GE201": {
+  "title": "Introduction to Materials Science and Engg.",
+  "instructor": "Khushboo Rakha",
+  "students": 101,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "GE203": {
+  "title": "Material Science for Civil Engineers",
+  "instructor": "Khushboo Rakha | L. Anand",
+  "students": 29,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "HB101": {
+  "title": "Language 1: English",
+  "instructor": "APARNA N. | DIBYAKUSUM RAY | Rano Ringo",
+  "students": 29,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "HB102": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PHSME"
+  ],
+  "floated": false,
+  "remark": "Not floated yet, Dr. KK Choudhary Suggested put it on hold till further decision"
+ },
+ "HB103": {
+  "title": "EVOLUTION OF INDIAN EDUCATION",
+  "instructor": "Kamal Chaudhary",
+  "students": 29,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "HB104": {
+  "title": "ARTS EDUCATION: THEATER",
+  "instructor": "DIBYAKUSUM RAY",
+  "students": 29,
+  "slots": [
+   "PHSME"
+  ],
+  "floated": true
+ },
+ "HB201": {
+  "title": "CHILD DEVELOPMENT AND EDUCATIONAL PSYCHOLOGY",
+  "instructor": "Parwinder Singh",
+  "students": 45,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "HB202": {
+  "title": "Basics of pedagogy",
+  "instructor": "Kamal Chaudhary",
+  "students": 45,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "HB302": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true,
+  "remark": "Sawyam or NPTL"
+ },
+ "HB303": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true,
+  "remark": "Sawyam or NPTL"
+ },
+ "HS104": {
+  "title": "Professional Ethics",
+  "instructor": "Sreekumar Jayadevan",
+  "students": 243,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "HS110": {
+  "title": null,
+  "instructor": null,
+  "students": 153,
+  "slots": [
+   "Slot to be check"
+  ],
+  "floated": true
+ },
+ "HS111": {
+  "title": "English Communication and Personality Development",
+  "instructor": null,
+  "students": 171,
+  "slots": [
+   "Slot to be check"
+  ],
+  "floated": true
+ },
+ "HS112": {
+  "title": "Professional Communication",
+  "instructor": null,
+  "students": 144,
+  "slots": [
+   "Slot to be check"
+  ],
+  "floated": true
+ },
+ "HS113": {
+  "title": null,
+  "instructor": null,
+  "students": 135,
+  "slots": [
+   "Slot to be check"
+  ],
+  "floated": true
+ },
+ "HS201": {
+  "title": "Economics",
+  "instructor": "Samaresh Bardhan | Smruti Ranjan Behera",
+  "students": 327,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "HS202": {
+  "title": "HUMAN GEOGRAPHY AND SOCIAL NEEDS",
+  "instructor": "Amritesh Amritesh",
+  "students": 214,
+  "slots": [
+   "PCPE"
+  ],
+  "floated": true
+ },
+ "HS301": {
+  "title": "Industrial Management",
+  "instructor": "Amritesh Amritesh | Ravi Kumar",
+  "students": 199,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "HS406": {
+  "title": "MANAGERIAL SCIENCE",
+  "instructor": "Ravi Kumar",
+  "students": 123,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "HS455": {
+  "title": "Applied Macroeconomics",
+  "instructor": "BHAVESH GARG | Samaresh Bardhan | Smruti Ranjan Behera",
+  "students": 95,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "HS513": {
+  "title": "Science of Happiness",
+  "instructor": "R. Maurya",
+  "students": 40,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "IK001": {
+  "title": "Science in Bhagavad Gita",
+  "instructor": "Amritesh Amritesh | Satyam Agarwal",
+  "students": 205,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "IK101": {
+  "title": "Indian Knowledge Systems: Insights for Modern Science and Living",
+  "instructor": null,
+  "students": 44,
+  "slots": [
+   "Slot to be check"
+  ],
+  "floated": true
+ },
+ "MM522": {
+  "title": "ELECTROCHEMISTRY AND DEGRADATION OF MATERIALS",
+  "instructor": "Rajiv Kumar",
+  "students": 1,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "MM531": {
+  "title": "Introductory Materials Informatics",
+  "instructor": "Pratik Ray",
+  "students": 19,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "MM551": {
+  "title": "Mathematical and Experimental Methods for Materials Engineering",
+  "instructor": "Sambit Bapari",
+  "students": 7,
+  "slots": [
+   "PC -2",
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "MM553": {
+  "title": "Physics of Materials",
+  "instructor": "Neha Sardana",
+  "students": 15,
+  "slots": [
+   "PCDE",
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "MM554": {
+  "title": "Mechanical Behaviour of Materials",
+  "instructor": "Avala Lavakumar",
+  "students": 9,
+  "slots": [
+   "PEOE",
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "MM555": {
+  "title": "X-RAY DIFFRACTION AND SPECTROSCOPIC TECHNIQUES",
+  "instructor": "Ravi Prasad",
+  "students": 17,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "MA101": {
+  "title": "CALCULUS",
+  "instructor": "G. Raju | Manju Khan | SAIRAM KALIRAJ | SANTANU SARKAR",
+  "students": 682,
+  "slots": [
+   "PC -2",
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "MA201": {
+  "title": "Differential Equations",
+  "instructor": "Hari Vansh Rai Mittal | Manoranjan Mishra | Shushma Rani | Subash Martha",
+  "students": 602,
+  "slots": [
+   "PC -3",
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "MA301": {
+  "title": "Computational Algebra",
+  "instructor": "Gurleen Kaur | Manju Khan",
+  "students": 41,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "MA411": {
+  "title": "REAL ANALYSIS",
+  "instructor": "M. Prabhakar",
+  "students": 107,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "MA412": {
+  "title": "LINEAR ALGEBRA",
+  "instructor": "Balesh Kumar",
+  "students": 25,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "MA413": {
+  "title": "COMPUTER PROGRAMMNG",
+  "instructor": "Arti Pandey",
+  "students": 25,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "MA414": {
+  "title": "ORDINARY DIFFERENTIAL EQUATION",
+  "instructor": "Hari Vansh Rai Mittal | Jitendra  Kumar",
+  "students": 23,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "MA415": {
+  "title": "ALGEBRA",
+  "instructor": "Tapas Chattejee",
+  "students": 23,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "MA511": {
+  "title": "FUNCTIONAL ANALYSIS",
+  "instructor": "Manmohan Vashisth",
+  "students": 27,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "MA512": {
+  "title": "MATHEMATICAL METHODS",
+  "instructor": "Jitendra  Kumar",
+  "students": 24,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "MA513": {
+  "title": "OPTIMIZATION TECHNIQUES",
+  "instructor": "Arvind Gupta",
+  "students": 29,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "MA514": {
+  "title": "Analysis and Design of Algorithms",
+  "instructor": "Kaushik Mondal",
+  "students": 40,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "MA515": {
+  "title": "Foundations of Data Science",
+  "instructor": "Arun Kumar",
+  "students": 97,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "MA610": {
+  "title": null,
+  "instructor": null,
+  "students": 7,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "MA630": {
+  "title": "Introduction to Applied Statistical Methods",
+  "instructor": "Deepak Singh",
+  "students": 63,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "MA634": {
+  "title": "Financial Risk Management",
+  "instructor": "Puneet Pasricha",
+  "students": 274,
+  "slots": [
+   "PCPE"
+  ],
+  "floated": true
+ },
+ "MA637": {
+  "title": "MACHINE LEARNING FOR SCIENTIFIC COMPUTING",
+  "instructor": "Arvind Gupta | P.S Dutta",
+  "students": 27,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "MB101": {
+  "title": "Calculus",
+  "instructor": "P.S Dutta | Parthapratim De",
+  "students": 31,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "MB201": {
+  "title": "Algebra",
+  "instructor": "Manmohan Vashisth | Tapas Chattejee",
+  "students": 14,
+  "slots": [
+   "PCPE"
+  ],
+  "floated": true
+ },
+ "MB202": {
+  "title": "Advanced Calculus",
+  "instructor": "Balesh Kumar | M. Prabhakar",
+  "students": 15,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "MB204": {
+  "title": "Probability and Statistics",
+  "instructor": "Arun Kumar | Puneet Pasricha",
+  "students": 21,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "MB301": {
+  "title": "Computer Programming",
+  "instructor": "Arti Pandey",
+  "students": 12,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "MB302": {
+  "title": "Optimization Techniques",
+  "instructor": "Kaushik Mondal | Subash Martha",
+  "students": 7,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "MB303": {
+  "title": "Special Functions and Integral Transforms",
+  "instructor": "Gurleen Kaur | Manoranjan Mishra",
+  "students": 7,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "ME102": {
+  "title": "Engineering Thermodynamics",
+  "instructor": "Harshad Gaikwad",
+  "students": 72,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "ME201": {
+  "title": "Solid Mechanics",
+  "instructor": "S. Padhee",
+  "students": 73,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "ME206": {
+  "title": "Manufacturing Technology",
+  "instructor": "Samir Roy",
+  "students": 70,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "ME301": {
+  "title": "Vibrations and Control",
+  "instructor": "Navin Kumar",
+  "students": 70,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "ME302": {
+  "title": "Heat and Mass Transfer",
+  "instructor": "Navaneeth  K.M",
+  "students": 70,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "ME501": {
+  "title": "MATHEMATICS FOR ENGINEERS",
+  "instructor": "Rajendra Kumar Munian",
+  "students": 62,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "ME502": {
+  "title": "APPLIED NUMERICAL METHODS",
+  "instructor": "Manish Agrawal",
+  "students": 46,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "ME503": {
+  "title": "MEASUREMENTS AND INSTRUMENTATION",
+  "instructor": "Lipika Kabiraj",
+  "students": 14,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "ME516": {
+  "title": "INTRODUCTION TO PLASTICITY",
+  "instructor": "sachin Kumar",
+  "students": 10,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "ME517": {
+  "title": "ADVANCED SOLID MECHANICS",
+  "instructor": "Prabhat Agnihotri",
+  "students": 27,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "ME518A": {
+  "title": "Multibody Dynamics",
+  "instructor": "Satwinder Jit Singh",
+  "students": 25,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "ME544": {
+  "title": "Smart Manufacturing",
+  "instructor": "Harpreet Singh | Ravi Kant",
+  "students": 29,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "ME547": {
+  "title": "ANALYSIS OF MATERIAL REMOVAL PROCESSES",
+  "instructor": "Chandrakant Nirala",
+  "students": 24,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "ME548": {
+  "title": null,
+  "instructor": null,
+  "students": 13,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "ME549": {
+  "title": "ADDITIVE MANUFACTURING",
+  "instructor": "Prabir Sarkar",
+  "students": 51,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "ME571": {
+  "title": "ADVANCED FLUID MECHANICS",
+  "instructor": "Chander Sharma",
+  "students": 36,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "ME579": {
+  "title": "ADVANCED THERMODYNAMICS",
+  "instructor": "R. Maurya",
+  "students": 13,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "ME583": {
+  "title": "Aerodynamics",
+  "instructor": "DEVRANJAN SAMANTA",
+  "students": 25,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "ME600": {
+  "title": "Research Methodolgy and Ethics",
+  "instructor": "Dhiraj Mahajan",
+  "students": 18,
+  "slots": [
+   "PHSME"
+  ],
+  "floated": true
+ },
+ "MM201": {
+  "title": "Metallurgical Thermodynamics and Kinetics",
+  "instructor": "Abhishek Tiwari",
+  "students": 24,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "MM203": {
+  "title": "Materials Characterization Techniques",
+  "instructor": "Neha Sardana | Poonam Yadav",
+  "students": 24,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "MM301": {
+  "title": "Iron And Steel Making",
+  "instructor": "Prince Singh",
+  "students": 24,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "MM302": {
+  "title": "Mechanical Behaviour And Testing of Materials",
+  "instructor": "Nitish Bibhanshu",
+  "students": 23,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "MM303": {
+  "title": "Materials Processing",
+  "instructor": "Atharva Poundarik",
+  "students": 23,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "MM321": {
+  "title": "Mesoscale and Microstructure Modeling",
+  "instructor": "Pratik Ray",
+  "students": 23,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "MM404": {
+  "title": null,
+  "instructor": null,
+  "students": null,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": false,
+  "remark": "Not floated for this year"
+ },
+ "MM431": {
+  "title": "Machine Learning in Materials Science",
+  "instructor": "Pratik Ray",
+  "students": 22,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "MM552": {
+  "title": "Thermodynamics and Kinetics of Materials",
+  "instructor": "Hariprasad Gopalan",
+  "students": 7,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "PB101": {
+  "title": "Introductory Physics",
+  "instructor": "Lakhan Bainsla",
+  "students": 29,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "PB201": {
+  "title": "Electricity and Magnetism",
+  "instructor": "Subhendu Sarkar",
+  "students": 15,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "PB202": {
+  "title": "WAVE AND OPTICS",
+  "instructor": "Srinivasarao Konda",
+  "students": 15,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "PB203": {
+  "title": "Mathematical Physics II",
+  "instructor": "Shubhrangshu Dasgupta",
+  "students": 16,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "PB300": {
+  "title": "Pedagogy in Physics",
+  "instructor": "Sandeep Gautam | Subhendu Sarkar",
+  "students": 18,
+  "slots": [
+   "HSPE"
+  ],
+  "floated": true
+ },
+ "PB301": {
+  "title": "SOLID STATE PHYSICS",
+  "instructor": "DEBANGSU ROY",
+  "students": 6,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "PH101": {
+  "title": "Physics for Engineers",
+  "instructor": "Gagan Kumar | Rakesh Kumar",
+  "students": 351,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "PH202": {
+  "title": "APPLIED MATHEMATICAL PHYSICS",
+  "instructor": "DEBANGSU ROY",
+  "students": 21,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "PH203": {
+  "title": "Classical Mechanics",
+  "instructor": "Ritu Gupta",
+  "students": 20,
+  "slots": [
+   "PCE-2"
+  ],
+  "floated": true
+ },
+ "PH204": {
+  "title": "ELECTROMAGNETIC THEORY",
+  "instructor": "Dr Girish Kulkarni",
+  "students": 20,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "PH301": {
+  "title": "THERMAL AND STATISTICAL PHYSICS",
+  "instructor": "Rajesh Gupta",
+  "students": 21,
+  "slots": [
+   "HSME"
+  ],
+  "floated": true
+ },
+ "PH302": {
+  "title": "Quantum Physics",
+  "instructor": "Mukesh Kumar",
+  "students": 22,
+  "slots": [
+   "PCE-3"
+  ],
+  "floated": true
+ },
+ "PH412": {
+  "title": "MATHEMATICAL  PHYSICS",
+  "instructor": null,
+  "students": 23,
+  "slots": [
+   "PC - 4"
+  ],
+  "floated": true
+ },
+ "PH413": {
+  "title": "Quantum Mechanics",
+  "instructor": null,
+  "students": 23,
+  "slots": [
+   "PCE-1"
+  ],
+  "floated": true
+ },
+ "PH414": {
+  "title": "Computational Physics",
+  "instructor": null,
+  "students": 23,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "PH513": {
+  "title": "NUMERICAL METHODS AND PROGRAMMING",
+  "instructor": "Vivekanad Shukla",
+  "students": 28,
+  "slots": [
+   "PC -2"
+  ],
+  "floated": true
+ },
+ "PH415": {
+  "title": "Electronics",
+  "instructor": null,
+  "students": 23,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "PH511": {
+  "title": "MODERN OPTICS",
+  "instructor": "Vishwa Pal",
+  "students": 26,
+  "slots": [
+   "PC-1"
+  ],
+  "floated": true
+ },
+ "PH512": {
+  "title": "STATISTICAL MECHANICS",
+  "instructor": "Asoka Biswas",
+  "students": 24,
+  "slots": [
+   "PC -3"
+  ],
+  "floated": true
+ },
+ "PH552": {
+  "title": "PHYSICS AND APPLICATION OFNANOMATERIALS",
+  "instructor": "Danveer Singh",
+  "students": 27,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "PH556": {
+  "title": "PARTICLE & RADIATION DETECTORS",
+  "instructor": "DEEPIKA CHOUDHARY",
+  "students": 6,
+  "slots": [
+   "PCPE"
+  ],
+  "floated": true
+ },
+ "PH564": {
+  "title": "TECHNIQUES FOR QUANTUM ENGINEERING",
+  "instructor": "Asoka Biswas | Shubhrangshu Dasgupta",
+  "students": 12,
+  "slots": [
+   "PCDE"
+  ],
+  "floated": true
+ },
+ "PH600": {
+  "title": "Research Methodology and Ethics",
+  "instructor": "Dr Girish Kulkarni | Gagan Kumar | Sreekumar Jayadevan | Vivekanad Shukla | Yashveer Singh",
+  "students": 23,
+  "slots": [
+   "PHSME"
+  ],
+  "floated": true
+ },
+ "PH614": {
+  "title": "LASER PHYSICS",
+  "instructor": "Rajesh Nair",
+  "students": 16,
+  "slots": [
+   "PEOE"
+  ],
+  "floated": true
+ },
+ "XY600": {
+  "title": null,
+  "instructor": null,
+  "students": 180,
+  "slots": [
+   "PHSME"
+  ],
+  "floated": true
+ }
+}

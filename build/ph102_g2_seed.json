@@ -1,0 +1,308 @@
+{
+  "originalTeamOf": {
+    "2026AIB1061": 1,
+    "2026AIB1062": 1,
+    "2026AIB1063": 1,
+    "2026AIB1064": 1,
+    "2026AIB1065": 1,
+    "2026AIB1066": 2,
+    "2026AIB1067": 2,
+    "2026AIB1068": 2,
+    "2026AIB1069": 2,
+    "2026AIB1070": 2,
+    "2026AIB1071": 3,
+    "2026AIB1072": 3,
+    "2026AIB1073": 3,
+    "2026AIB1074": 3,
+    "2026AIB1075": 3,
+    "2026AIB1076": 4,
+    "2026AIB1077": 4,
+    "2026AIB1078": 4,
+    "2026AIB1079": 4,
+    "2026AIB1080": 4,
+    "2026AIB1081": 5,
+    "2026AIB1082": 5,
+    "2026AIB1083": 5,
+    "2026AIB1084": 5,
+    "2026AIB1085": 5,
+    "2026AIB1086": 6,
+    "2026AIB1087": 6,
+    "2026AIB1088": 6,
+    "2026AIB1089": 6,
+    "2026AIB1090": 6,
+    "2026AIB1091": 7,
+    "2026AIB1092": 7,
+    "2026AIB1093": 7,
+    "2026AIB1094": 7,
+    "2026AIB1095": 7,
+    "2026AIB1096": 8,
+    "2026AIB1097": 8,
+    "2026AIB1098": 8,
+    "2026AIB1099": 8,
+    "2026MCB1502": 8,
+    "2026MCB1503": 9,
+    "2026MCB1504": 9,
+    "2026MCB1505": 9,
+    "2026MCB1506": 9,
+    "2026MCB1507": 9,
+    "2026MCB1508": 10,
+    "2026MCB1509": 10,
+    "2026MCB1510": 10,
+    "2026MCB1511": 10,
+    "2026MCB1512": 10,
+    "2026MCB1513": 11,
+    "2026MCB1514": 11,
+    "2026MCB1515": 11,
+    "2026MCB1516": 11,
+    "2026MCB1517": 11,
+    "2026MCB1518": 12,
+    "2026MCB1519": 12,
+    "2026MCB1520": 12,
+    "2026MCB1521": 12,
+    "2026MCB1522": 12
+  },
+  "students": {
+    "2026AIB1061": {
+      "branch": "AIDE",
+      "name": "NEHA"
+    },
+    "2026AIB1062": {
+      "branch": "AIDE",
+      "name": "NEIL VIKAS PATIL"
+    },
+    "2026AIB1063": {
+      "branch": "AIDE",
+      "name": "NENAVATH YASHWANTH"
+    },
+    "2026AIB1064": {
+      "branch": "AIDE",
+      "name": "NIRBHAV SINGH"
+    },
+    "2026AIB1065": {
+      "branch": "AIDE",
+      "name": "PATIL ADITYA ANIL"
+    },
+    "2026AIB1066": {
+      "branch": "AIDE",
+      "name": "PRABHNOOR KATARIA"
+    },
+    "2026AIB1067": {
+      "branch": "AIDE",
+      "name": "PRABHNOOR SINGH"
+    },
+    "2026AIB1068": {
+      "branch": "AIDE",
+      "name": "PRANJAL RAWAT"
+    },
+    "2026AIB1069": {
+      "branch": "AIDE",
+      "name": "PRATEEK"
+    },
+    "2026AIB1070": {
+      "branch": "AIDE",
+      "name": "PRIYAM VATSA"
+    },
+    "2026AIB1071": {
+      "branch": "AIDE",
+      "name": "RAHUL KUMAR"
+    },
+    "2026AIB1072": {
+      "branch": "AIDE",
+      "name": "RISHABH VISHNOI"
+    },
+    "2026AIB1073": {
+      "branch": "AIDE",
+      "name": "ROHIT RAJ"
+    },
+    "2026AIB1074": {
+      "branch": "AIDE",
+      "name": "SAJAL CHOUDHARY"
+    },
+    "2026AIB1075": {
+      "branch": "AIDE",
+      "name": "SARINA"
+    },
+    "2026AIB1076": {
+      "branch": "AIDE",
+      "name": "SARTHAK JAIN"
+    },
+    "2026AIB1077": {
+      "branch": "AIDE",
+      "name": "SARTHAK NITIN NAIK"
+    },
+    "2026AIB1078": {
+      "branch": "AIDE",
+      "name": "SATYAM RAJPUT"
+    },
+    "2026AIB1079": {
+      "branch": "AIDE",
+      "name": "SEJPAL AUM PARESHBHAI"
+    },
+    "2026AIB1080": {
+      "branch": "AIDE",
+      "name": "SHREYANSH"
+    },
+    "2026AIB1081": {
+      "branch": "AIDE",
+      "name": "SHUBHAM MAURYA"
+    },
+    "2026AIB1082": {
+      "branch": "AIDE",
+      "name": "SIDDHANT MAHAJAN"
+    },
+    "2026AIB1083": {
+      "branch": "AIDE",
+      "name": "SOHAM GUPTA"
+    },
+    "2026AIB1084": {
+      "branch": "AIDE",
+      "name": "SOUVIK DAS"
+    },
+    "2026AIB1085": {
+      "branch": "AIDE",
+      "name": "SWARNUM THAPPA"
+    },
+    "2026AIB1086": {
+      "branch": "AIDE",
+      "name": "TAPPETA SAI VARSITH REDDY"
+    },
+    "2026AIB1087": {
+      "branch": "AIDE",
+      "name": "TATE SHIVRAJ PRAMOD"
+    },
+    "2026AIB1088": {
+      "branch": "AIDE",
+      "name": "UTKARSH KUMAR GAUTAM"
+    },
+    "2026AIB1089": {
+      "branch": "AIDE",
+      "name": "UTTARAVELLI SAI ABHIJITH"
+    },
+    "2026AIB1090": {
+      "branch": "AIDE",
+      "name": "VANTALA VENU PRATHYUSH"
+    },
+    "2026AIB1091": {
+      "branch": "AIDE",
+      "name": "VATSAL GUPTA"
+    },
+    "2026AIB1092": {
+      "branch": "AIDE",
+      "name": "VEDANSH SINGLA"
+    },
+    "2026AIB1093": {
+      "branch": "AIDE",
+      "name": "VELPULA RAVANA SIDHARTHA"
+    },
+    "2026AIB1094": {
+      "branch": "AIDE",
+      "name": "VENKTESH SHARMA"
+    },
+    "2026AIB1095": {
+      "branch": "AIDE",
+      "name": "VENNA DIVIJA"
+    },
+    "2026AIB1096": {
+      "branch": "AIDE",
+      "name": "VIJVAL BHORIYA"
+    },
+    "2026AIB1097": {
+      "branch": "AIDE",
+      "name": "VORA PRIT ASHWINBHAI"
+    },
+    "2026AIB1098": {
+      "branch": "AIDE",
+      "name": "VUTUKURU VIGHNESH KOUNDINYA"
+    },
+    "2026AIB1099": {
+      "branch": "AIDE",
+      "name": "YATHARTH SHRIVASTAVA"
+    },
+    "2026MCB1502": {
+      "branch": "MCB",
+      "name": "AADITYA CHANDEL"
+    },
+    "2026MCB1503": {
+      "branch": "MCB",
+      "name": "AADRISH DEB"
+    },
+    "2026MCB1504": {
+      "branch": "MCB",
+      "name": "ABEER CHAWLA"
+    },
+    "2026MCB1505": {
+      "branch": "MCB",
+      "name": "ADITYA SINHA"
+    },
+    "2026MCB1506": {
+      "branch": "MCB",
+      "name": "AGRANI SONI"
+    },
+    "2026MCB1507": {
+      "branch": "MCB",
+      "name": "AJMEERA SHARATH"
+    },
+    "2026MCB1508": {
+      "branch": "MCB",
+      "name": "Alankrit Tripathi"
+    },
+    "2026MCB1509": {
+      "branch": "MCB",
+      "name": "ANANTHANENI NAGA SHISHIR"
+    },
+    "2026MCB1510": {
+      "branch": "MCB",
+      "name": "ANANYA"
+    },
+    "2026MCB1511": {
+      "branch": "MCB",
+      "name": "ANIKET"
+    },
+    "2026MCB1512": {
+      "branch": "MCB",
+      "name": "ANISH KUMAR RAKESH"
+    },
+    "2026MCB1513": {
+      "branch": "MCB",
+      "name": "ARINJAY GARG"
+    },
+    "2026MCB1514": {
+      "branch": "MCB",
+      "name": "ARUNIMA"
+    },
+    "2026MCB1515": {
+      "branch": "MCB",
+      "name": "ARYAN"
+    },
+    "2026MCB1516": {
+      "branch": "MCB",
+      "name": "ARYAN HEMANT SAWANT"
+    },
+    "2026MCB1517": {
+      "branch": "MCB",
+      "name": "ARYAN RAHUL BACHCHHAV"
+    },
+    "2026MCB1518": {
+      "branch": "MCB",
+      "name": "ASHMITA GUPTA"
+    },
+    "2026MCB1519": {
+      "branch": "MCB",
+      "name": "ATULYA SHARMA"
+    },
+    "2026MCB1520": {
+      "branch": "MCB",
+      "name": "AYATI JAIN"
+    },
+    "2026MCB1521": {
+      "branch": "MCB",
+      "name": "BHASWAT DAS"
+    },
+    "2026MCB1522": {
+      "branch": "MCB",
+      "name": "BHAVYA GUPTA"
+    }
+  },
+  "teamCount": 12,
+  "teamSize": 5
+}

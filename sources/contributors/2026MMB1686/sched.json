@@ -1,0 +1,166 @@
+{
+  "timetable": {
+    "Monday": {
+      "1.00-1.50": [
+        {
+          "course": "HS110",
+          "venue": "Audi"
+        },
+        {
+          "course": "HS111",
+          "venue": "SRC-005"
+        }
+      ]
+    },
+    "Tuesday": {
+      "1.00-1.50": [
+        {
+          "course": "HS110",
+          "venue": "Audi"
+        },
+        {
+          "course": "HS111",
+          "venue": "SRC-005"
+        }
+      ]
+    },
+    "Wednesday": {
+      "9.00 - 11.50": [
+        {
+          "course": "CY-101 (lab)",
+          "venue": null
+        }
+      ],
+      "1.00-1.50": [
+        {
+          "course": "HS110",
+          "venue": "Audi"
+        },
+        {
+          "course": "HS111",
+          "venue": "SRC-006"
+        },
+        {
+          "course": "HS112",
+          "venue": "SRC-107"
+        },
+        {
+          "course": "HS113",
+          "venue": "SENATE HALL"
+        },
+        {
+          "course": "IK101",
+          "venue": "EE-1"
+        }
+      ],
+      "3.00 - 3.50": [
+        {
+          "course": "MA101",
+          "venue": "Senate"
+        }
+      ],
+      "4.00 - 4.50": [
+        {
+          "course": "CY101(D4)",
+          "venue": "Senate"
+        }
+      ],
+      "5.00 - 5.50": [
+        {
+          "course": "CS100",
+          "venue": "Audi"
+        }
+      ]
+    },
+    "Thursday": {
+      "10.00 - 12.50": [
+        {
+          "course": "WP-101",
+          "venue": "G12"
+        }
+      ],
+      "1.00-1.50": [
+        {
+          "course": "HS112",
+          "venue": "SRC-107"
+        },
+        {
+          "course": "HS113",
+          "venue": "SENATE HALL"
+        },
+        {
+          "course": "IK101",
+          "venue": "EE-1"
+        }
+      ],
+      "3.00 - 3.50": [
+        {
+          "course": "MA101",
+          "venue": "Senate"
+        }
+      ],
+      "4.00 - 4.50": [
+        {
+          "course": "CY101(D4)",
+          "venue": "Senate"
+        }
+      ],
+      "6.00- 6.50": [
+        {
+          "course": "Chem (tut)",
+          "venue": null
+        }
+      ]
+    },
+    "Friday": {
+      "8.00 - 8.50": [
+        {
+          "course": "Maths (tut)",
+          "venue": null
+        }
+      ],
+      "9.00 - 11.50": [
+        {
+          "course": "CS100 lab",
+          "venue": "CS block"
+        }
+      ],
+      "1.00-1.50": [
+        {
+          "course": "HS112",
+          "venue": "SRC-107"
+        },
+        {
+          "course": "HS113",
+          "venue": "SENATE HALL"
+        },
+        {
+          "course": "IK101",
+          "venue": "EE-1"
+        }
+      ],
+      "3.00 - 3.50": [
+        {
+          "course": "MA101",
+          "venue": "Senate"
+        }
+      ],
+      "4.00 - 4.50": [
+        {
+          "course": "CY101(D4)",
+          "venue": "Senate"
+        }
+      ],
+      "5.00 - 5.50": [
+        {
+          "course": "CS100",
+          "venue": "Audi"
+        }
+      ]
+    }
+  },
+  "notes": [
+    "You need to ask the professor about the MA101, CY101 tutorial schedule and venue",
+    "nso/nss and life skilss will also be informed to u later"
+  ]
+}

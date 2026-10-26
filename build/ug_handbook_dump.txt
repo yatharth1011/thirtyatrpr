@@ -1,0 +1,3722 @@
+
+===== PAGE 1 =====
+2025-26
+UNDERGRADUATE (B.TECH.)
+PROGRAMME
+www.iitrpr.ac.in
+Page5
+===== PAGE 2 =====
+HANDBOOK OF
+INFORMATION
+UNDERGRADUATE B.TECH
+PROGRAMME 2025-26
+INDIAN INSTITUTE OF TECHNOLOGY ROPAR
+Rupnagar, Punjab-140001 (INDIA)
+www.iitrpr.ac.in
+Page6
+===== PAGE 3 =====
+TABLEOFCONTENTS
+1.INTRODUCTION..............................................................................................................................................................................................................1
+1.1BACKGROUND..................................................................................................................................................................................................................................1
+1.2DEPARTMENTS................................................................................................................................................................................................................................1
+1.3PROGRAMMES OFFERED...........................................................................................................................................................................................................1
+1.3.1UNDERGRADUATEPROGRAMMES.....................................................................................................................................................................................2
+2.ACADEMICSYSTEM.......................................................................................................................................................................................................3
+1.4STUDENT'SENTRYNUMBER...................................................................................................................................................................................................2
+2.1CREDIT SYSTEM...............................................................................................................................................................................................................................3
+2.1.1COURSECREDITS ASSIGNMENT..................................................................................................................................................................................3
+2.1.2EARNINGCREDITS...............................................................................................................................................................................................................3
+2.1.3COURSECOORDINATOR....................................................................................................................................................................................................3
+2.1.4GRADING SYSTEM...............................................................................................................................................................................................................4
+2.1.5DESCRIPTIONOFGRADES................................................................................................................................................................................................5
+2.1.6EVALUATIONOFPERFORMANCE.................................................................................................................................................................................6
+2.1.7COURSENUMBERINGSCHEME......................................................................................................................................................................................8
+2.2REGISTRATIONANDATTENDANCE................................................................................................................................................................................8
+2.2.1REGISTRATION......................................................................................................................................................................................................................8
+2.2.2REGISTRATIONANDSTUDENTSTATUS..................................................................................................................................................................8
+2.2.3ADVICEONCOURSES..........................................................................................................................................................................................................8
+2.2.4REGISTRATIONVALIDATION.........................................................................................................................................................................................8
+2.2.5LATEREGISTRATION..........................................................................................................................................................................................................9
+2.2.6.LATEREGISTRATIONFINE.............................................................................................................................................................................................9
+2.2.7ADD,DROP,AUDITANDWITHDRAWALFROMCOURSES.................................................................................................................................9
+2.2.8SEMESTERWITHDRAWAL..............................................................................................................................................................................................9
+2.2.9 REGISTRATIONANDFEESPAYMENT........................................................................................................................................................................9
+2.2.10REGISTRATIONRECORD.............................................................................................................................................................................................10
+2.2.11CONTINUOUSABSENCEANDREGISTRATIONSTATUS....................................................................................................................................10
+2.2.12 ATTENDANCERULES...................................................................................................................................................................................................10
+2.2.13AIMS(ACADEMIC INFORMATION MANAGEMENT SYSTEM).................................................................................................................10
+2.3RULESANDREGULATIONS......................................................................................................................................................................................................10
+2.3.1ABSENCEDURINGTHESEMESTER.........................................................................................................................................................................10
+2.3.2BRANCHCHANGEATTHEENDOFFIRSTYEAR.................................................................................................................................................11
+2.3.3MEASURESFORHELPINGSC/STSTUDENTS.......................................................................................................................................................12
+2.4CURRICULUM AND STRUCTURE OF THEBACHELOR OF TECHNOLOGYPROGRAMMES..................................................................12
+2.4.1PROGRAMMEANDCREDITSTRUCTURE................................................................................................................................................................12
+2.4.2CREDITSTRUCTUREOFTHEBASICB.TECH.PROGRAMME.......................................................................................................................12
+2.4.3OVERALLCREDITSTRUCTUREFORALLTHEFOUROPTIONSGIVENIN2.5.1..................................................................................13
+2.4.4CREDIT LIMITS...................................................................................................................................................................................................................13
+2.4.5CGPAREQUIREMENTFORMINOR,CONCENTRATION,HONORS,ADDITIONALINTERNSHIP..................................................13
+2.4.6MINORINAI...........................................................................................................................................................................................................................14
+2.4.7MINIMUMCGPAFORAWARDOFB.TECH.DEGREE..........................................................................................................................................14
+2.4.8SPECIALREQUIREMENTS..............................................................................................................................................................................................14
+2.5PERFORMANCE REQUIREMENTS ANDMONITORING..............................................................................................................................................14
+2.5.1MAXIMUMPERIODFORCOMPLETINGDEGREEREQUIREMENTS...........................................................................................................14
+2.5.2CONDITIONSFORTERMINATIONOFREGISTRATION,PROBATIONANDWARNING.......................................................................15
+2.5.3SLOW-PACEDPROGRAMME.........................................................................................................................................................................................15
+2.6SEINLETCETGIROANTEODFCCIORUCRUSITESDFEOSIRGNTHAENDBATSEICCHBN.TOELCOHG.YINCIVILENGINEERING/CHEMICALENGINEERING/COMPUTER
+SCIENCE&ENGINEERING/DIGITALAGRICULTURE/ELECTRICALENGINEERING/ELECTRICALENGINEERING
+( )/ENGINEERINGPHYSICS/MATHEMATICS&COMPUTING/
+MECHANICALENGINEERING&METALLURGICALANDMATERIALSENGINEERING.........................................................................16
+2.7SEQUENCEOF THECOURSESFORALLTHEBASICB.TECH.PROGRAMME:......................................................................................................17
+2.7.1B.TECH. ARTIFICIALINTELLIGENCE&DATAENGINEERING(AI)..........................................................................................................18
+2.7.2B.TECH.INCHEMICALENGINEERING.....................................................................................................................................................................23
+2.7.3.B.TECH.INCIVILENGINEERING...............................................................................................................................................................................25
+2.7.4B.TECH.INCOMPUTERSCIENCEANDENGINEERING....................................................................................................................................27
+2.7.5. B.TECH. DIGITALAGRICULTURE()CORE..........................................................................................................................................................30
+2.7.6.B.TECH.INELECTRICALENGINEERING................................................................................................................................................................33
+2.7.7ELECTRICALENGINEERING(INTEGRATEDCIRCUITDESIGNANDTECHNOLOGY).......................................................................35
+2.7.8.B.TECH.INENGINEERINGPHYSICS.........................................................................................................................................................................37
+2.7.9.B.TECH.INMATHEMATICSANDCOMPUTING...................................................................................................................................................40
+2.7.10.B.TECH.INMECHANICALENGINEERING...........................................................................................................................................................42
+2.7.11.B.TECH.INMETALLURGICALANDMATERIALSENGINEERING............................................................................................................44
+2.7.12 COURSEPLAN FOR B.TECH. WITH MINOR...................................................................................................................................................46
+Page7
+===== PAGE 4 =====
+2.7.13GUIDELINES FOR OFFERING OF MINORPROGRAMME FOR UG STUDENTS.............................................................................47
+2.7.14 COURSE PLAN FOR B.TECH. WITH CONCENTRATION............................................................................................................................47
+2.7.15GUIDELINES FOR OFFERING OF CONCENTRATIONPROGRAMMEFORUGSTUDENTS...........................................................47
+2.7.16COURSEPLANFORB.TECH.(HONORS)..................................................................................................................................................................47
+2.7.17COURSEPLANFORBASICB.TECH.WITHADDITIONALINTERNSHIP...................................................................................................47
+2.7.18GUIDELINES FOR OFFERINGOFADDITIONALINTERNSHIPFORUGSTUDENTS.........................................................................48
+2.7.19SUPPLEMENTARYEXAMINATIONGUIDELINESFORTHESTUDENTSOFB.TECH.WHOFAILSINCORE COURSES...48
+2.7.20 SUMMERSEMESTERGUIDELINES:......................................................................................................................................................................49
+2.7.21 GUIDELINESFORSELFSTUDY/INDEPENDENTMODEINTHESUMMERSEMESTER:.............................................................49
+3FEES .....................................................................................................................................................................................................................52
+2.7.22COMPARISONOFDIFFERENTOPTIONSGIVEIN2.5.1................................................................................................................................50
+3.1MODEOFPAYMENT....................................................................................................................................................................................................................52
+3.2DEADLINESFORPAYMENT......................................................................................................................................................................................................52
+3.3REFUNDOFFEES..........................................................................................................................................................................................................................52
+3.4GUIDELINESFORCONTINUATIONFEES DURINGSEMESTERWITHDRAWAL...........................................................................................52
+3.5WITHDRAWALFROMTHEINSTITUTE............................................................................................................................................................................52
+3.6TRANSCRIPTS,DEGREEANDOTHERCERTIfiCATES.................................................................................................................................................53
+3.7PROCEDUREFORISSUEOFDUPLICATEDEGREECERTIFICATE/GRADESHEETSFROMIITROPAR............................................53
+3.8 PROCEDUREFORNAMECHANGEINTHEINSTITUTE............................................................................................................................................56
+3.9DETAILSOFSEMESTERFEESFORTHEYEAR2025-26:..........................................................................................................................................56
+3.9.1DETAILSOFSEMESTERFEESFORTHEYEAR2025-26FORFOREIGNNATIONAL:...............................................................................56
+3.9.2DETAILSOFSEMESTERFEESFORTHEYEAR2025-26FORINDIANNATIONAL:..................................................................................57
+4DISCIPLINEANDATTENDANCE................................................................................................................................................................................58
+3.10 HOSTEL/MESSFEES:Tobenotifiedseparately......................................................................................................................................................58
+4.1DISCIPLINE......................................................................................................................................................................................................................................58
+4.2PUNISHMENTTOTHESTUDENTSWHOINDULGEINUNFAIRMEANSDURINGQUIZZES/MIDSEMESTER/END-SEMESTER
+5THEHONOURCODE.....................................................................................................................................................................................................60
+EXAMINATIONS.....................................................................................................................................................................................................................58
+6ACADEMICINTEGRITY................................................................................................................................................................................................61
+7SCHOLARSHIPSANDFELLOWSHIPS......................................................................................................................................................................63
+7.1SCHOLARSHIPFORB.TECH.STUDENTS.............................................................................................................................................................................63
+7.1.1INSTITUTEMERIT-CUM-MEANS(MCM)SCHOLARSHIPS............................................................................................................................63
+7.1.2INSTITUTEMERITPRIZESANDCERTIFICATES...............................................................................................................................................63
+7.1.3INSTITUTEFREESTUDENTSHIP...............................................................................................................................................................................64
+ContinuationofFreestudentship:Forthegeneralcategorystudents,therequirementsofmeritforthecontinuation
+ofInstituteFreestudentship Scholarshipare:...................................................................................................................................................64
+7.1.4SCHOLARSHIPPROVISIONFORSTUDENTSOFSC/STCATEGORY...........................................................................................................64
+7.2OTHERMISCELLANEOUSSCHOLARSHIPSFROMCENTRALGOVERNMENT/STATEGOVERNMENT/NGO'S/SOME
+EXTERNALAGENCIES:.......................................................................................................................................................................................................65
+7.2.1NATIONALSCHOLARSHIPSPORTAL(FORALLCATEGORYSTUDENTS):.............................................................................................65
+7.2.2DR.B.RAMBEDKARSCHOLARSHIPPORTAL :.................................................................................................................................................65
+7.2.3MUKHYAMANTRIMEDHAVIVIDHYARTIYOJANA(MMVY):.....................................................................................................................65
+7.2.4 E-KALYAN_DEPARTMENTOFSCHEDULEDTRIBE,SCHEDULEDCASTE,MINORITYANDBACKWARDCLASS
+WELFARE,GOVT.OFJHARKHAND : https://ekalyan.cgg.gov.in/.................................................................................................................65
+7.2.5BIHARPOSTMATRICSCHOLARSHIP:...................................................................................................................................................................65
+7.2.6PMSSSJ&KSCHOLARSHIP...........................................................................................................................................................................................65
+7.2.7SOMEEXTERNALAGENCIES:.......................................................................................................................................................................................65
+7.2.8 JEEADVANCEDRANKMERITSCHOLARSHIP:...................................................................................................................................................65
+7.2.9GUIDELINES FOR VIDYALAXMILOANSCHEME.............................................................................................................................................66
+8. NALANDALIBRARY....................................................................................................................................................................................................66
+7.2.10FINANCIALAIDANDSTUDENTLOANS..............................................................................................................................................................66
+9.HEALTHCARE................................................................................................................................................................................................................67
+10.HOSTELACCOMMODATION..................................................................................................................................................................................67
+11.STUDENTACTIVITIES..............................................................................................................................................................................................68
+12.STUDENTLIFEATINSTITUTE.............................................................................................................................................................................68
+13.GENERALFACILITIES...............................................................................................................................................................................................68
+14.DETAILSOFMEDALS...............................................................................................................................................................................................69
+15.ACADEMIC CALENDARFOR THE 1ST SEMESTER OF ACADEMIC YEAR2025-26..................................................................70
+16.UGCREGULATIONONCURBINGTHEMENACEOFRAGGINGIN HIGHEREDUCATIONALINSTITUTIONS,2009..............71
+CONTACTINFORMATION.....................................................................................................................................................................................83
+Page8
+===== PAGE 5 =====
+1 INTRODUCTION
+1.1 BACKGROUND
+TheIndian Institute ofTechnologyRoparisone ofthe eightIITssetupby the GovernmentofIndia,
+Ministry of Human Resource Development (MHRD) in 2008. In keeping with MoE (erstwhile) the
+spiritoftheIITsystem,thisinstituteiscommittedtoprovidestate-of-the-arttechnicaleducationina
+variety of fields, and also to facilitate transmission of knowledge using the latest developments in
+pedagogy.TheIndianInstituteofTechnologyRoparstartedfunctioningfromtheacademicyear2008-
+09fromthecampusofIITDelhi,thementorinstitute.Thefoundationstonelayingceremonywasheld
+on 24February 2009. The Indian Institute of Technology Ropar was registered under the
+Societies' Registration Act 1860 on 29 July 2009 and later on notified under the Institutes of
+Technology Act, 1961 vide gazette notification no. 59 of 1961. Now, the Institute has been declared
+as an Institute of national importance. The Institute shifted to its permanent campus and currently
+operatesfromitspermanentcampus.ThepermanentcampusofIITRoparisspreadacross501acresof
+landlocatedinRupnagarinthelapofnatureatthebanksofriverSatluj.Ithasbeenawardedthe5Star
+GRIHA (Green Rating for Integrated Habitat Assessment) rating, one of the highest national ratings
+1fo.r2GrDeeEnPBAuRildTinMgsE.NTS
+Eachcourseisofferedbyanacademicunitcalleddepartment.TheDepartmentsandtheirtwoletter
+codesaregivenbelow.Somecoursesareofferedjointlybymultipleacademicunitsandareclassifiedas
+AcademicDepartments
+interdisciplinarycourses.
+Sr.No. NameofAcademicUnit(alphabetical order) Code
+1 Biomedical Engineering BM
+2 ChemicalEngineering CH
+3 Chemistry CY
+4 CivilEngineering CE
+5 ComputerScienceandEngineering CS
+6 Electrical Engineering EE
+7 HumanitiesandSocialSciences HU
+8 Mathematics MA
+9 Mechanical Engineering ME
+10 Metallurgical andMaterialsEngineering MM
+School
+11 Physics PH
+Centers
+1 ArtificialIntelligence&DataEngineering(AI&DE) AI&DE
+1 CentreofExcellenceforStudiesandAppliedResearchinDefenseandSecurity
+2 CentreforAppliedResearchandDataEngineering
+3 CentreforEngineeringEducation
+4 CenterofResearchforEnergyandDecarburization(CRED)
+5 Indo-TaiwanJointResearchCenteronArtificialIntelligenceandMachineLearning
+6 CentreforDronandAutonomousSystem(DARS)
+1.3 P7ROGRACeMntMreEfSorOEnFgFiEneReEriDngSolutionsinDisasterResilience(CESDR)
+IITRoparoffersavarietyofacademicsprogrammesforstudentswithawiderangeofbackgrounds.
+Admission to these programmes are based on the students' performance in national level test JEE
+Advanced. For undergraduate programmes, students are admitted after 10+2 schooling. The
+admission is done through JEE advanced only. For further detail on admission to IIT Ropar, visit
+www.jeemain.nic.in,www.jeeadv.ac.in.Thedepartmentandtheirprogrammesarelistedbelow.
+Page1
+IIT ROPAR//www.iitrpr.ac.in
+===== PAGE 6 =====
+1.3.1 UNDERGRADUATEPROGRAMMES
+BachelorofTechnology(B.Tech.)
+Sr.No. Programme
+1 B.Tech.inArtificialIntelligence&DataEngineering(AI&DE)
+B.Tech.inChemicalEngineering
+2
+3 B.Tech.inCivilEngineering
+4 B.Tech. in Computer Science and Engineering
+5 B.Tech. InDigitalAgriculture
+6 B.Tech.inElectricalEngineering
+7 B.Tech.inElectricalEngineering(IntegratedCircuitDesignandTechnology)
+B.TechinEngineeringPhysics
+8
+B.Tech.inMathematicsandComputing
+9
+B.Tech.inMechanicalEngineering
+10
+B.Tech.inMetallurgicalandMaterialsEngineering
+11
+1.4 STUDENT'S ENTRY NUMBER
+Theentrynumberofastudentconsistsofelevenalpha-numerals.
+2 0 2 5 C S B 1 2 3 4
+1 2 3 4 5 6 7 8 9 10 11
+UniqueIdentification
+numberforeach
+EntryYear
+student.
+(Academicyearof
+Joining)
+ProgrammeCode
+Fields5&6 : AcademicUnitCode
+Field 7 : B.Tech. - B
+In case of a branch change, the three alphabets (fields 5, 6 and 7) will be changed. However, his /her
+uniquenumericcodewillremainunchanged.Suchstudentswillhavetwoentrynumbers,one priorto
+branchchangeandoneafterthechange.Atanytime,though,onlyoneentrynumberthatcorresponds
+tothestudent'spresentstatuswillbeinuse.
+Page2
+IIT ROPAR//www.iitrpr.ac.in
+===== PAGE 7 =====
+2 .ACADEMICSYSTEM
+TheoverallacademicsystemofIITRoparhasbeendesignedtoprovideascience-basedengineering
+educationwith a view to produce quality engineer-scientists. The curriculum provides broad-based
+knowledge and simultaneously builds a temper for life-long learning and exploring. The
+undergraduate programme begins with a set of science and general engineering courses which are
+reflected in the course plan for the first year. These courses provide a foundation for further
+discipline-specificcourses.ThemediumofinstructionatIITRoparisEnglish.
+ThecurrentAcademicyearbeginsonJuly 2023andexpectedtoendonDec,2023. Thedetailedschedule
+oftheactivitiesandacademicdeadlinesisgiveninthesemesterscheduleandisavailableonwebsite
+2lin.1k:ChRttpEsD:/I/TwwSwY.SiiTtrEprM.ac.in/academic.
+Education at the Institute is organized around the semester-based credit system of study. The
+prominent feature of credit system is a process of continuous evaluation of a student's
+performance/progressandtheflexibilitytoallowastudenttoprogressatanoptimumpacesuitedto
+his/herabilityorconvenience.Thisfeatureissubjecttothefulfillmentoftheminimumrequirement
+for continuation. A student's performance/progress is measured by the number of credits that
+he/shehasearned,i.e.completedwithapassgrade.Basedonthecoursecreditsandgradeobtained
+by the student, the gradepointaverage iscalculated. A minimum grade point average is requiredto
+bemaintainedforsatisfactoryprogressandcontinuationintheprogramme.
+Each programme has a maximum credit requirement and a pattern of credit distribution over c
+2o.u1r.s1esCoOfUdiRffSeErenCtRcEaDteIgToSrieAs.SDSeItGaiNlsMarEeNgTivenbelow.
+Each course, except a few special courses, has a certain number of credits assigned to it depending
+uponitslecture,tutorial,practicalandtotalpreparationhoursbythestudents(L-T-P-S-C)inaweek.
+Weightagealsoindicatestheacademicexpectationthatincludesin-classcontactandself-studybeyond
+classhours.Afewcoursesarewithoutcreditandarereferredtoasnon-credit(NC)courses.
+L=No.oflecture'hours'(actually50min.)perweek,
+T=No.oftutorial'hours'=L/3,bydefault.
+P=No.oflaboratory'hours'.
+S=Totalpreparation'hours'bystudentsincludingassignmentsandself-study,S=2L+P/2-T.C=
+2T.o1t.a2lcEreAdRitN-tIeNrmGsC,CR=ELD+PI/T2S.
+Attheendofeverycourse,alettergradeisawardedineachcourseforwhichastudenthadregistered.On
+obtaining a pass grade, the student accumulates the course credits as earned credits. A student's
+performanceismeasuredbythenumberofcreditsthathe/shehasearnedandbytheweightedgrade
+pointaverage.
+2.1.3 COURSE COORDINATOR
+Every course is usually coordinated by a member of the teaching staff of the department which is
+offeringthecourseinagivensemester.ThisfacultymemberisdesignatedastheCourseCoordinator.
+He/she has the full responsibility of conducting the course, coordinating the work of the other
+members of the faculty as well as teaching assistants involved in that course, holding the tests and
+assignments,andawardingthegrades.Foranydifficultyrelatedtoacourse,thestudentisexpectedto
+approach the respective Course Coordinator for advice and clarification. The distribution of the
+weightagefortests,quizzes,assignments,laboratorywork,workshopanddrawingassignment,term
+paper,etc.thatwillbethebasisfortheawardofthegradeinacoursewillbedecidedbythecourse
+coordinatorofthatcourseandgenerallyannouncedatthestartofthesemester.
+Page3
+IIT ROPAR//www.iitrpr.ac.in
+===== PAGE 8 =====
+2.1.4 GRADING SYSTEM
+The grading reflects a student's own proficiency in the course. While the relative standing of the
+student is clearly indicated by his/her grades, the process of awarding grades is not necessarily
+based upon some statistical distribution of performance of the whole class. The course coordinator
+and the associated faculty for a course formulate appropriate procedures to award grades that are
+reflectiveofthestudent'sperformancevis-a-vistheinstructor'sexpectation.
+Thecreditsystemenablescontinuousevaluationofastudent'sperformance,andallowsthestudentto
+progress at an optimum pace suited to individual ability and convenience. This is subject to the
+fulfillingoftheminimumrequirementsforcontinuation.
+The grades and their description, along with equivalent numerical points wherever applicable are
+listedbel
+Grade GradePoints Description
+A 10 Outstanding
+A(-) 9 Excellent
+B 8 Verygood
+B(-) 7 Good
+C 6 Average
+C(-) 5 Belowaverage
+D 4 Marginal
+E 2 Poor
+F 0 Verypoor
+NP - AuditPass
+NF - AuditFail
+I - Incomplete
+W - Withdrawal
+S - Satisfactory
+U - Unsatisfactory
+Page4
+IIT ROPAR//www.iitrpr.ac.in
+===== PAGE 9 =====
+Gradeswiththeirdescription
+2.1.5 DESCRIPTIONOFGRADES
+Agrade
+The 'A' grade stands for outstanding achievement. The minimum percentage for the award of an 'A'
+B grade
+gradeis80%.However,individualcoursecoordinatorsmaysetahigherperformancerequirement.
+C grade
+The'B'gradereferstoverygood/goodperformance.
+The 'C' grade stands for average performance. This average performance refers to “average” as per
+D grade
+instructor'sexpectationsinaholisticsenseandnotontheaveragemarks.
+The 'D' grade stands for marginal performance, i.e., it is the minimum pass grade in any course. The
+minimumpercentagefortheawardof'D'gradeis30%,however,individualcoursecoordinatorsmayset
+EandFgrades
+ahighermarksrequirement.
+The 'E' and 'F' grades denote poor and very poor performance, and indicate failing a course. An 'F'
+gradeisalsoawardedincaseofpoorattendance(seeAttendanceRules).Astudenthastorepeatallthe
+corecoursesinwhichhe/sheobtainseitheran'E'oran'F'grade,untilapassgradeisobtained.Incaseof
+the elective courses in which either an 'E' or an 'F' grade has been obtained the student maytake the
+same course or any other course from the same category. An 'E' grade in a course makes astudent
+eligibletorepeatthecourseinthesummersemester,ifthecourseisoffered.Further,'E'and'F'grades
+securedinanycoursestaypermanentlyonthegradecard.Thesegradesarenotcountedinthecalculation
+NP and NFgrades
+oftheCGPA;however,thesearecountedinthecalculationoftheSGPA.
+The 'NP' Gradedenotes completionofthe Auditcourse.The NFgrade denotesAuditfail. These grades
+areawardedinacoursethatthestudentoptstoaudit.Onlyanelectivecoursecanbeauditeduntil one
+weekafterthemidsemesterexamination.TheAuditPass(NP)isawardedifthestudent'sattendanceis
+above75%intheclassandhe/shehasobtainedatleasta'D'grade.TheCourseCoordinatorcanspecify
+ahighercriterionforauditpassatthebeginningofthesemester.Ifeitherofthese requirements is not
+fulfilled,anauditfail(NF)isawarded.Thegradesobtainedinanauditcoursearenotconsideredforthe
+Igrade
+calculationofSGPAorCGPA.
+The 'I' grade denotes incomplete performance in any L (lecture), P (practical), V (special module)
+category courses. It may be awarded in case of absence on medical grounds or other special
+circumstances, before or during the major examination period. The student should complete all
+(i)
+requirementswithin:
+(ii) 10daysofthelastdateoftheMajorTests;therequestistobemadetotheHeadoftheDepartment
+ofthestudent'sprogrammewhowillnotifythesametotheconcernedcoursecoordinators,OR
+WiththepermissionoftheDean(Academics)theperiodcanbeextendedtothefirstweekofthe
+nextsemester.Uponcompletionofallcourserequirements,the'I'gradeisconverted to a regular
+grade (AtoF, NPorNF).The 'I'gradedoesnotappearpermanentlyinthegradecard.Requests
+foranI-gradeshouldbemadeattheearliestbutnotlaterthanthelastdayofthemajortests.
+For(ii),therequestistobemadetotheDean(Academics).Astudentmaybeconsideredfortheawardofan
+'I'gradeinacourseonlyiftheattendanceinthecourseis75%.
+Attendance in the course for which an I-grade is being sought will be certified by the course
+W grade
+coordinatorofthecourse.
+The 'W' grade is awarded in a course where the student has opted to withdraw from the course.
+WSgitrhaddraew: al from a course is permitted until one week after the Mid Semester Examination. The W
+gradestaysonthegradecard.
+The‘S’gradedenotessatisfactoryperformanceandcompletionsacourse.
+Page5
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 10 =====
+Ugrade:
+2.1.6 EVATLhUeA‘UT’IOgrNadOeFdePnEoRteFsOuRnsMatAisNfaCcEtoryperformanceinacourse.
+The performance of a student will be evaluated in terms of two indices, viz. the Semester Grade Point
+Average(SGPA)which isthe Grade PointAverage fora semester, andCumulative Grade PointAverage
+(CGPA)whichistheGradePointAverageforallthecompletedsemestersatanypointoftime.
+TheEarnedCredits(E.C.)aredefinedasthesumofcoursecreditsofcoursesinwhichstudentshavebeen
+awardedgrades between A to D; forUG students, credits fromcourses inwhich an NPgrade hasbeen
+obtainedarealsoadded.
+Points earned in a course = (Course credits × Grade Point) for courses in which A– F grade has been
+obtained. The SGPA is calculated on the basis of grades obtained in all courses registered in the
+particularsemester,excepttheauditcoursesinwhichanNP/NFgradehasbeenawarded.
+Pointssecuredinthesemester
+SGPA=
+Creditsregisteredinthesemester,excludingauditgradecourses
+TheCGPAiscalculatedonthebasisofallpassgrades,exceptthecoursesinwhichNP/NFgradehasbeen
+awarded,obtainedinallcompletedsemesters.
+Cumulativepointssecuredinallpassedcourses(A-D)
+CGPA=
+Cumulativeearnedcredits,excludingauditgradecourses
+Courseno. Course Grade Earned Grade Points
+credits awarded credits Points secured
+(column1) (column2) (column3) (column4) (column5) (column6)
+MAXXX 5 C 5 6 30
+CSXXX 4 C(-) 4 5 20
+PHXXX 4 A 4 10 40
+PHXXX 2 B 2 8 16
+MEXXX 4 E 0 2 08
+CEXXX 2 NP 2 – –
+AnexampleofthesecalculatTioynpsiciaslgaivceandebmeloicwp:erformancecalculations-Isemester
+Creditsregisteredinthesemester(totalofcolumn2) =21
+Creditsregisteredinthesemesterexcludingauditgradecourse =19
+Earnedcreditsinthesemester(totalofcolumn4) =17
+Earnedcreditsinthesemesterexcludingauditgradecourses =15
+Pointssecuredinthissemester(totalofcolumn6) =114
+Pointssecuredinthissemesterinallpassedcourses
+(Totalofcolumn6&A–Dgrade) =106
+Pointssecuredinthesemester 114
+SGPA= = =6.000
+Creditsregisteredinthesemester,excludingauditgradecourse 19
+Cumulativepointssecuredinallpassedcourses(A-D) 106
+CGPA= = =7.067
+Cumulativeearnedcredits,excludingauditgradecourses 15
+Page6
+Semesterperformance: IIETaRrnOePdAcRre//d w its w ( w E . . i C it .) r = pr 1 .a 7 c.in SGPA = 6.000
+===== PAGE 11 =====
+Typicalacademicperformancecalculations-IIsemester
+CumulativePerformance: Earnedcredits(E.C.)=17 CGPA = 7.067
+Courseno. Course Grade Earned Grade Points
+credits awarded credits Points secured
+(column1) (column2) (column3) (column4) (column5) (column6)
+MAXXX 5 B 5 8 40
+EEXXX 4 A(-) 4 9 36
+CYXXX 4 W — — —
+CYXXX 2 B(-) 2 7 14
+MEXXX 4 C 4 6 24
+CHXXX 4 A 4 10 40
+HUXXX 1 NP 1 — —
+Creditsregisteredinthesemester(totalofcolumn2) =24
+Creditsregisteredinthesemesterexcludingauditgradecourses =23
+Earnedcreditsinthesemester(totalofcolumn4) =20
+Earnedcreditsinthesemesterexcludingauditgradecourses =19
+Pointssecuredinthissemester(totalofcolumn6) =154
+Pointssecuredinthissemesterinallpassedcourses
+(Totalofcolumn6&A-Dgrade) =154
+Cumulativepointsearnedinall
+passedcourses=106(pastsemesters)+154(thissemester) =26
+Cumulativepointssecuredinallpassedcourses(A-D) 106+154
+CGPA= = =7.647
+Cumulativeearnedcredits,excludingauditgradecourses 15+19
+Cumulativeearnedcredits=17(pastsemesters) + 20(thissemester) = 37
+Semesterperformance: Earnedcredits(E.C.)=20 SGPA = 8.105
+CumulativePerformance: Earnedcredits(E.C.)=37 CGPA = 7.647
+Page7
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 12 =====
+2.1.7 COURSENUMBERINGSCHEME
+Everycourserunsforthefulllengthofthesemester.Atthebeginningofthesemester,astudentregisters
+forthecoursesthathe/shewantstostudyandattheendofthesemesteragradeisawarded.Onobtaining
+apassgrade,thestudentearnsallthecreditsassociatedwiththecoursewhileafailgradedoesnotgetany
+(a)Levelof the course
+credit;partialcreditsarenotawarded.Eachcourseisassociatedwithacertainnumberofcredits.
+Thefirstdigitofthenumericpartofthecoursecodeindicatesthelevelofthecourseasdeterminedbythe
+prerequisitecourseand/orbythematurityrequiredforregisteringforthecourse.
+2.2 REGISTRATION AND ATTENDANCE
+2.2.1 REGISTRATION
+Registration is a very important procedural part of the academic system. The registration procedure
+ensuresthatthe student'sname isontheroll listof each course thathe/shewants to study.No creditis
+given if the student attends a course for which he/she has not registered. Registration for courses to be
+taken in a particular semester will be done according to a specified schedule before the end of the
+previous semester. The student is required to pay his/her dues before the beginning of the semester
+throughSBCollect.Studentswhodonotmakepaymentsbyastipulateddatewillnotberegisteredforthe
+particularsemester.Inabsentiaregistrationorregistrationafterthespecifieddatewillbeallowedonlyin
+rarecasesatthediscretionoftheDean(Academics).Incaseofillnessorabsenceduringregistration,the
+studentshouldintimatethe sametohis/hercourse advisorandDean(Academics).Astudentmustmeet
+his/her advisor within the first week of the new semester for the confirmation of his/her registration.
+Theregistrationrecordshouldbepreserveduntilthesemestergradecardisreceived.
+Variousactivitiesrelatedtoregistrationarelistedbelow.TherelevantdatesareincludedintheSemester
+Schedulethatisavailablebeforethestartofthesemester.
+2.2.2 REGISTRATION AND STUDENT STATUS
+Registration by a student confirms his/her status as a student at the Institute. Failure to register before
+the last date for late registration will imply that the student has discontinued studies and his/hername
+willbestruck-offtherolls.
+Every registered student is considered as a full-time student at the institute. He/She is expected to be
+2p.r2e.s3enAtiDnVthIeCIEnsOtiNtuCteOaUndRdSeEvSotefulltimetoacademics.
+Atthetime of registration, each studentmustconsulthis/herfaculty advisor/programme coordinatorto
+finalizethe academicprogrammekeepinginviewfactors, suchas, minimum/maximumnumbersof total
+and lecture credits, past performance, backlog of courses, SGPA/CGPA, pre-requisite, workload and
+2st.u2d.4enRt'EsGinISteTrResAtsT,IaOmNonVgAsLtIoDthAeTrsIO. SNpecial Provisions exist for academically weakstudents.
+Before the first day of classes, every student is required to be present on campus and validate his/her
+registrationonline..Theupdatedregistrationrecordwillbeavailableonthewebsiteandthehardcopywillbe
+availablewiththestudent'sadvisor.Studentswhodonotdoregistrationvalidationwillnotbepermittedto
+add/dropcourses.
+Page8
+===== PAGE 13 =====
+2.2.5 LATEREGISTRATION
+(a)
+Lateregistrationispermittedunderthefollowingconditions:
+Astudent,whowasnotoncampusduringtheperiodofregistrationintheprevioussemester,needsto
+complete the registration process on or before the first day of the semester before the
+or
+commencementofclasses.
+(b)
+For reasons beyond his/her control, if a student is not able to register or send an authorized
+representative with a medical certificate, he/she may intimate prior through email to
+academics@iitrpr.ac.in. He/She is required to apply to the Dean (Academics) for lateregistration.
+Dean (Academics) will consider and may approve late registration in genuine cases on payment of
+anextrafeecalledlateregistrationfee.Lateregistrationispermitteduntiloneweekafterthestartof
+thesemester.
+2.2.6.LATEREGISTRATIONFINE
+(
+AssumingRegistrationdayon0thday)
+(i)Lateregistrationfeesfrom1stto2nddayafterregistrationdate:Rs.1000/-
+(ii)Lateregistrationfeesfrom3rddaytoLastdayofLateRegistrationDate:Rs.2000/-
+(iii)LateregistrationfeesafterLastDayofLateRegistration:Rs.5000/-
+(iv) If late registration is due to medical reasons, the students are required to submit medical
+certificate duly mentioning the rest needed for recovery, and need to provide fitness certificate. The
+lateregistrationfinemaybewaivedoffoncase-to-casebasis,ingenuinemedicalcasesonly.
+(v) The students who fail to submit the late registration fee by the stipulated date will not be
+allowedtositinthemid-semester/endsemesterexamination.
+PleaseseeacademiccalendarforAY2025-26onInstitutewebsitefordatesofregistration.
+2.2.7ADD, DROP,AUDITANDWITHDRAWALFROMCOURSES
+a.
+Add/Drop:Astudenthastheoptiontoaddacourse(s)thathe/shehasnotregisteredfor,or dropa
+b. course(s)forwhichhe/shehasalreadyregisteredfor.Thisfacilityisrestrictedtothefirstweekofthe
+semester.
+Audit:Astudentmayapplyforchangingacreditcoursetoanauditonewithinoneweekoftheendofthe
+c. midsemesterexamination.Auditisnotallowedinany1styearcourseandalsoforanycorecourse.The
+creditofthecourseswhichareauditedwillnotbecountedinthefinaldegreerequirements.
+Withdrawal:Astudentwhowantstowithdrawfromacourseshouldapplywithinoneweekoftheend
+2.2.8SEMESTER WITHDRAWAL
+ofthemidsemesterexamination.Awithdrawalgrade(W)willbeawardedinsuchcases.
+Ifastudentisabsentformorethan20teachingdaysinasemesteronmedicalgrounds,he/shemayapply
+forwithdrawalforthatsemester,i.e.,withdrawalfromallcoursesregisteredinthatsemester.Application
+forsemesterwithdrawalmustbemadealongwithmedicalcertificatefromanauthorizeddoctornotbelow
+therankofMBBSasearlyaspossibleatleastbeforethestartofthemajortests.Partialwithdrawalfrom
+thecoursesregisteredinasemesterisnotallowed.However,incaseofun-authorizedabsenceof20days
+intotalduringthesemester,thestudentwouldbedeemedtohavewithdrawnthesemester.Semesterfee
+i2n.s2u.9chRcaEsGesISwTilRlnAoTtbIOerNefAunNdDedFoErEaSdjPusAtYedM. ENT
+Everyregisteredstudentmustpaythestipulatedfeesinfullbeforethespecifieddeadlines.Intheevent,a
+studentdoesnotmakethesepayments,he/shewillnotberegisteredfromallcoursesandhis/hernamewill
+bestruck-offfromtherolllist.
+Page9
+===== PAGE 14 =====
+2.2.10REGISTRATION RECORD
+In addition to web-based entries related to registration, the student should ensure that the same are
+entered on the Registration Record. Queries related to registration will be considered only when
+accompaniedbytheoriginalRegistrationRecord.Thisrecordmustbepreserveduntilthesemestergrade
+c2a.r2d.1is1reCcOeiNveTdINbyUtOheUsStuAdBeSnEt.NCEAND REGISTRATION STATUS
+If a student is absent from the Institute for more than four weeks without notifying the Head of the
+Department or the Dean (Academics), his/her registration will be terminated and the name will be
+r2e.m2.o1v2edAfrToTmEtNheDIAnsNtCitEuteRrUolLlsE.S
+All students must attend every lecture, tutorial and practical class. However, to account for late
+registration,sicknessorothersuchcontingencies,theattendancerequirementwillbeaminimumof75%of
+the classes actually held. If a student has less than 75% attendance in a course during the semester, in
+lectures, tutorials and practical taken together (as applicable), the course coordinatormayawardan'F'
+grade in that course irrespective of his/her performance in the tests. For the purpose of attendance
+calculation, every scheduled lecture, tutorial or practical class will count as one unit irrespective of the
+number of contact hours. Attendance record will be maintained based upon roll calls(oranyequivalent
+operation)ineveryscheduledlecture,tutorialandpracticalclass.Thecoursecoordinatorwillmaintainand
+consolidate attendance record for the course (lectures, tutorials and practical'stogether,asapplicable).
+Students are required to attend lectures, laboratories, workshops,etc., and not to absent themselves
+withoutadequatereasonsandpriorpermission.Applicationsforleaveofabsencearetobemadeinwriting
+totheHeadoftheDepartmentthroughtheFacultyAdvisor.Anytypeofabsenceformorethan10daysshould
+2be.2n.o1t3ifiAedIMtoSth(eAACcAaDdeEmMicICSeIcNtioFnOiRmMmAedTiaIOteNly.MANAGEMENT SYSTEM)
+The name and other details of a new student is entered in the AIMS Portal. All the process regarding
+registration of courses, Add / Drop, Audit / Withdrawal etc. are required to be done on the Academic
+InformationManagementSystem(AIMS)portal.The informationrelatedto courses, credits&gradesetc
+all is available on the AIMS portal. A student must check AIMS portal from time to time for various
+academicactivities.ThestudentcanlogintoAIMSportalthroughtheInstituteemailIDprovidedtothem.
+The link of AIMS portal is https://www.iitrpr.ac.in/aims/. Unauthorized accessing the records of other
+2st.u3deRnUtsLlEeaSdsAtNoDlocRkiEngGoUfLthAeTloIgOinNISDandpenaltymaybeimposed.
+2.3.1 ABSENCE DURING THE SEMESTER
+(a)
+AstudentmustinformtheDean(Academics)immediatelyofanyinstanceofcontinuousabsence
+(b)
+fromclasses.
+A student who is absent due to illness orany other emergency, up to a maximum of two weeks,
+(c)
+shouldapproachthecoursecoordinatorformake-upquizzes,assignmentsandlaboratorywork.
+A student who has been absent from mid semester examination due to illness should approach
+thecoursecoordinatorforamake-uptestimmediatelyonreturntoclass.Therequestshouldbe
+supported with a medical certificate from institute's medical officer. A certificate from a
+registeredmedicalpractitionerwillalsobeacceptableforastudentnormallyresidingoff-campus
+(d)
+providedregistrationnumberofthemedicalpractitionerappearsexplicitlyonthecertificate.
+Incaseofabsenceonmedicalgroundsorotherspecialcircumstances,beforeorduringthemajor
+examination period, the student can apply for I-grade. 75% attendance in a course is necessary
+for being eligible for anI-grade inthatcourse. An applicationrequesting I-gradeshouldbemade
+attheearliestbutnotlaterthanthelastdayofmajortests.Theapplicationshouldbemadetothe
+Page10
+===== PAGE 15 =====
+Head of the Department of the student's programme who will grant approval depending on the
+merit of the case and inform the course coordinators and UG section. The student should
+complete all the course requirements within ten days from thelastdayoftheMajorTests.TheI-
+(e)
+gradewillthenbeconvertedtoapropergrade(AtoF,NPorNF).
+Inspecialsituationsarisingduetotheinabilitytobepresentattheinstituteduringthestipulated
+period,in(d)above,theperiodforconversionofIgradecanbeextendedtothefirstweekofthenext
+semester. Approval for this extension can be granted by the Dean (Academics) on
+recommendationsoftheconcernedHeadoftheDepartmentandthecoursecoordinators.Arequest
+(f)
+tothiseffectmustbeincludedintheapplicationforI-grade.
+If a student is absent for more than 20 teaching days in a semester on medical grounds, he/she
+may apply for withdrawal for that semester, i.e., withdrawal from all courses registered in that
+semester. Application for semester withdrawal must be made alongwith medicalcertificatefrom
+anauthorizeddoctornotbelowtherankofMBBSasearlyaspossibleatleastbeforethestartofthe
+majortests.Partialwithdrawalfromthecoursesregisteredinasemesterisnotallowed.However,
+incaseofun-authorizedabsentof20daysintotalduringthesemester,thestudentwouldbedeem
+(g)
+tohavewithdrawnthesemester.Semesterfeeinsuchcaseswouldnotberefundedoradjusted.
+Ifastudentiscontinuouslyabsentfromtheinstituteformorethanfourweekswithoutnotifying
+2.3.2 BRthAeNDCeaHnC(AHcAadNeGmEicAs)T,hTisH/hEerEnNaDmOewFilFlbIReSreTmYoEveAdRfrominstituterolls.
+A. A student is eligible to apply for change of branch at the end of first year only, provided he/she
+satisfiesthefollowingcriteria:-
+i. CGPAforGE/OBCcategorystudent:- 7.50orgreater
+ii.CGPAforSC/ST/PDcategorystudent:- 6.50orgreater
+iii.Earnedcreditsattheendoffirstacademicsessionare36creditsormore.
+B. Change of the branch will be permitted strictly in the order of merit , in each category as determined
+byCGPAattheendofthefirstyear,subjecttothelimitationthat
+i. the actual number of students in the third semester in the discipline to which the transfer is to be
+madeshouldnotexceeditssanctionedstrengthbymorethan10%,and
+ii. the strength of the branch from which transfer is being sought does not fall below 85% of its
+sanctionedstrength.
+A minimum of two (2) students will, however, be eligible for consideration for change of branch from
+eachdiscipline,irrespectiveoftheregulationB(ii).
+rd
+IncaseoftieinCGPA,theCGPAwillbecomparedupto3 decimalplaceandifthetiestillpersists,allthe
+students,withthesameCGPA,wouldbeallowedtochangethebrancheven,ifitviolatestheupper/lower
+limitsof10%and85%respectively.
+C. The condition mentioned initem A (i) - (iii)above will not be insisted upon for a change to a branch in
+which a vacancy exists with the reference to the sanctioned strength and the concerned student was
+eligible as per JEE Rank for admission to that branch at the time of entry to IIT Ropar. However, these
+conditions will continue to apply in the case of students seeking change to a branch to which the
+concernedstudentwasnoteligibleforadmissionatthetimeofentrytoIITRopar.
+D. AtleastTwo(2)studentswillbeallowedtobeeligibleforbranchchangefromtheexistingbranchevenif
+the strength goes below 85% of the sanctioned strength subject to fulfilling the eligibility criteria as
+mentionedin2.3.2(a).Change ofbranchwill be permittedstrictlyinthe orderofmerit, ineach category
+asdeterminedbyCGPAattheendofthefirstyear.
+ForBranchchangereservationinseatsisapplicableasperGovernmentofIndianorms.
+Page11
+===== PAGE 16 =====
+2.3.3 MEASURESFORHELPINGSC/ST STUDENTS
+AnumberofmeasuresexistforhelpingstudentsbelongingtoSCandSTcategories.Aseniorfacultymember
+is appointed as advisor to SC/ST students for advising them on academic and non- academicmatters.
+FinancialmeasuresforhelpingSCandSTstudentsarealsoavailable
+2.4 CURRICULUM AND STRUCTURE OF THE BACHELOR OF TECHNOLOGY
+PROGRAMMES
+2.4.1 PROGRAMMEANDCREDITSTRUCTURE
+TheSre.Naore. fOouprtoiopntisofnosrfo4ry4e-aYreaUrGUGProgramTaostgaivlecnrebdeiltosw Remarks
+program requiredtocomplete
+thecourse
+B.Tech.”
+1 “ in an engineering 145Credits
+mB.aTjeorchd.iswciipthlinMei.nor”
+2 (minor 160Credits 145 Credit B.Tech. +15 Credit
+in any otherdiscipline than MinorCoursework
+B.Tech. with
+themajordiscipline)
+Concentration”
+3 “
+160Credits 145 credit B.Tech.+15 Credit
+concentrationCoursework
+(concentration areas will be
+“B.Tech.withHonors”
+within the majordiscipline).
+4 . 170Credits 145 Credit B.Tech. +15 Credit
+Coursework + 10 Credit Honors
+Project. An honors student can
+opt for minor/ concentration
+courses as part of the 15 credit
+coursework requirement of
+B.Tech. with “Additional
+honors.
+Internship”
+5
+160Credits 145 Credits B.Tech. + 15 credits
+“AdditionalInternship”.
+2.4.2 CREDITSTRUCTUREOFTHEBASICB.TECH.PROGRAMME
+Category Credits Requirements Remarks
+ScienceRequirementCore(SR) 24
+ScienceElectives(SE) 6
+GeneralEngineeringRequirement(GR) 23.5 16creditsas
+GEcoreforeach
+ProgrammeCore(PC) 36to42 Total48credits
+(PC+PE)
+ProgrammeElective(PE) 6to12
+HumanitiesandSocialSciences(HS)core 15(min)
+Hum·anitiesandSocialSciences(HS)Electives 6
+Caps·toneProjects Total9credits
+· DevelopmentEngineeringProject. 3
+CapstoneProjectI 3
+CapstoneProjectII 3
+IndustrialInternshipandComprehensiveViva
+3.5
+Page12
+===== PAGE 17 =====
+Extra-curricular 4credits
+NSO·/NSS
+Ope·nElectives 6(Total)
+OpenElectivesI 3
+Graduation Requirements(GR) 145
+OpenElectivesII 3
+2.4.3OVERALLCREDITSTRUCTUREFORALLTHEFOUROPTIONSGIVENIN2.5.1
+TotalCredits BasicB.Tech. B.Tech.with B.Tech.with
+(145) Concentration Minor(160)
+(160)
+Maths+ Science 30 30 30
+Humanities & Social Sciences 21 21 21
+General Engineering 23.5 23.5 23.5
+Program Core +Electives 48 63 48
+BTP +DE Capstone Projects 9 9 9
+Internship+ Comp. Viva 3.5 3.5 3.5
+Open Electives 6 6 21
+Extra-Curricular 4 4 4
+Honors Add-On 10 10
+Total 145 160 160
+2.4.4 CREDIT LIMITS
+(i)
+Thefollowingcreditlimitsmaybeadopted:
+(ii)
+B.Tech.:24Creditspersemester
+(iii)
+B.Tech.withMinor:24creditsper semester
+(iv)
+B.Tech.withMinor,Concentration,Honors,AdditionalInternship :24Creditspersemester
+nd
+The maximum credit limit for all regular semesters is 24 credits for 2 year to final year students
+(v)
+withCGPAof7.00.
+(vi)
+Theminimumcreditrequirementpersemesteris12credits.
+Along with the CGPA criterion, the students will be eligible for the 24 credit limit in the third
+semesteronlyiftheearnedcreditis36.5i.e.thereisnobacklogafterthefirstyear.
+2.4.5 CGPA REQUIREMENT FOR MINOR, CONCENTRATION, HONORS, ADDITIONAL
+INTERNSHIP
+The minimum CGPA for opting for Minor, Concentration, Honors, additional internship and 6-Month
+internship program is as follows. It is needed to be maintained the required CGPA in order to remain
+i)
+eiin)rolledtotheMinor,Concentration,Honors,AdditionalInternship.
+iii) MinorProgramme:7.00CGPA
+iv) ConcentrationProgramme:7.00CGPA
+AdditionalInternship:6.00CGPA
+Honours:7.50CGPA
+Page13
+===== PAGE 18 =====
+2.4.6 MINORINAI
+Minor in Artificial Intelligence (AI) in addition to their basic B.Tech. of 145 credits. Please note that it
+is completely optional to choose this option. If one chooses the Minor Programme, the same will be
+ELIGIBILITYCRITERIA:
+mentionedintheirdegrees,inadditiontoabasicB.Techdegree.
+ThestudentsstudyingatIITRoparshouldfulfilthefollowingeligibilitycriteria:
+· TheCGPAshouldbeequaltoormorethan6.0&hastomaintaina6CGPAduringthemajordegree
+programme.
+· ThestudentshouldnothaveoptedforanyMinor/Concentration/Honours/AdditionalInternship
+programmewithB.Tech.
+· The students who have registered and completed a Minor in AI will not be eligible for any other
+courseofMinor/Concentration/Honours/AdditionalInternshipprogramme.
+· ThestudentcannotoptforaMinorinAIifanyofthecoursesoverlapasmentionedintheattached
+Bucket list of courses and vice versa i.e. the student who has registered and completed a Minor in
+AI will not be eligible to take the courses attached in the Bucket list of courses. The student who
+WHOCANAalPrePaLdYy:opted for another minor/concentration/honours/additional internship programme or any
+ofthecoursesofMinorinAIareoverlapped,theyarenoteligibleforaDegreewithaMinorinAI.
+· B.Tech.1styearBatchcanoptforaMinorinAIfromthe3rdSemesteronwards.Whereas,B.Tech.
+2ndcanoptforfromthe5thSemesteronwardsandthe3rd year BatchcanoptforaMinorinAIfrom
+the7thSemesteronwards.
+Transferofcredits:-The15creditsfortheawardforaMinorinArtificialIntelligence(AI)willbetransferred
+tChOrUouRgShEtFhEeEA:cademicBankofCredits(ABC)
+ThetotalfeefortheAIminorwillbeRs.30,000anditwillcompriseof15credits.Meritoriousstudents
+willgetfeereimbursementbasedontheirperformanceintheminorprogramasfollows:
+ForaCGPAof9.5orabove:100%oftheMinorinAIcoursefeewillbereimbursed
+ForaCGPAof9.0orabove:75%oftheMinorinAIcoursefeewillbereimbursed.
+ForaCGPAof8.5orabove:50%oftheMinorinAIcoursefeewillbereimbursed.
+ForaCGPAof8.0orabove:25%oftheMinorinAIcoursefeewillbereimbursed.
+Thisfeestructureisdesignedtobeaffordablewhilecoveringthecostsassociatedwithprovidinghigh-quality
+sta2t.e4o.7fthMeIaNrtIMedU-tMechCnGoPloAgyFeOnRabAleWdeAdRuDcatOioFn.B.TECH.DEGREE
+2.4.8 SPECIALREQUIREMENTS
+TheminimumCGPA forawardoftheB.Tech.degreeis5.0
+CommunicationSkills
+Everystudentwillbe requiredtomake presentationsinvariouscoursesandifthe Departmentso feels,the
+2.5 PERFORMANCE REQUIREMENTS AND MONITORING
+studentcanbeaskedtotakearegularcourseonthisaspectforcredit.
+2.5.1 MAXIMUMPERIODFOR COMPLETING DEGREE REQUIREMENTS
+The maximum permitted duration of each programme is determined in terms of number of registered
+r(ae)gular semesters, herein after called registered semesters. Any semester in which a student has
+registeredforacoursewillbecalledregisteredsemestersubjecttothefollowing:
+(b) Onlythefirstandsecondsemestersofanacademicyearcanberegisteredsemesters.Thesummer
+semesterwillnotbeconsideredasaregisteredsemester.
+A semester when a student has been granted withdrawal or granted leave will not be
+consideredasaregisteredsemester.
+Page14
+===== PAGE 19 =====
+(c)
+ThesemesterwhenastudentissuspendedfromtheInstituteondisciplinarygroundswillnotbe
+countedtowardsthenumberofregisteredsemesters.
+The summer semesters falling in between the permitted registered semesters shall be available
+for earning credits. After the student has registered for the maximum permissiblenumber of
+registeredsemesters,thesubsequentsummersemesterswillnotbeavailableforearningcredits.
+The maximum permissible number of registered semesters for completing all degree
+requirements for the B. Tech. degree is twelve (12). If a student opts for the slow-paced
+(d) programme (as defined later), then the maximum permissible number of registered semesters
+shallbeincreasedbytwosemesters.
+AstudentwhoisnotabletocompletetheCGPArequirementof5.00fortheawardofdegree,after
+the stipulated maximum period of 6 years, can be offered to improve the courses / project(s)
+where he/she has secured a “D” grade to arrive at the CGPA of 5.00 for the award ofdegree to
+2.5.2 COhNimD/IhTeIrO. NSFORTERMINATIONOF REGISTRATION, PROBATIONAND WARNING
+If the performance at the end of first two registered semesters is very poor, then registration will be
+terminated.Iftheperformanceispoorbut not verypoor, thenthe studentwillbegivenanoptiontostart
+a)
+afresh.Rulesforre-start/terminationaregivenbelow.
+Student will be given a chance to re-start after the first two registered semesters if his/her total
+b)
+numberofearnedcreditsislessthanorequalto17attheendofthesecondsemester.
+If a student re-starts after the first two registered semesters, then his/her credits earned and
+semestersregisteredwillnotbecarriedover.There-startwillbeindicatedonthetranscript.There-
+startwillbepermittedonlyonce.Ifattheendoffirstacademicyearafterre-start,theearnedcredits
+c)
+arelessthanorequalto17thentheregistrationwillbeterminated.
+Eachstudentisexpectedtoearnatleast9creditsinthefirstregisteredsemesterand10.5creditsin
+each subsequent registered semesterwith an SGPAgreaterthanor equal to 5.0. If the performance
+of a studentatthe endof the anyregisteredsemesteris belowthisminimumacceptable level,then
+he/she will be placed on probation and a warning shall be given to him/her and intimation sent to
+d)
+theparentsalso.
+The student placed on probation shall be monitored, including mandatory attendance in classes,
+e)
+specialtutorialsandmentoring.
+If the performance of a student on probation does notmeet the above criterion (c) in the following
+registered semester, then the student will be permitted to register only if the department makes a
+favorable recommendation. The Headof the Department's recommendation shall be prepared after
+consultationwiththestudent,andwillinclude(i)feasibilityofcompletingthedegreerequirements,
+f)
+and(ii)identificationorremedialmeasuresfortheproblemsleadingtopoorperformance.
+The registration of any student is limited to 1.25 times the average earned credits of the previous
+2.5.3twSoLOseWm-ePstAeCrsE,DsuPbjReOctGtoRaAmMiMnimEumof8creditsandamaximumof19.5credits.
+Astudentwhohasearnedbetween18and27creditsattheendofthefirstacademicyearwillbeeligible
+to opt for the slow-paced programme. A student opting for such a programme shall be permitted two
+additionalregisteredsemestersforcompletingdegreerequirements.
+Intheslowpacedprogramme,theupperlimitforcreditsregisteredinasemesterwillbe12.5.Astudent
+inthisprogramme isexpected to earnat least8 creditswith minimum SGPA5.0 inanysemester,failing
+(wa)hichhe/shewillbeissuedawarningandplacedonprobation.
+(b) The student placed on probation shall be regularly monitored. Ensuring mandatory attendance in
+classes,engagingspecialtutorialsandmentoringwillbesomeofthewaysofmonitoring.
+If the performance of a student on probation does not meet the above criterion in the following
+registeredsemester,thenthestudentshouldbepermittedtoregisteronlyifthedepartmentmakesa
+favorable recommendation. The Head of the Department's recommendation shall be prepared after
+consultationwiththestudent,andshouldinclude(i)feasibilityofcompletingtheprogramme,and(ii)
+identificationofremedialmeasuresfortheproblemsleadingtopoorperformance.
+Suchslow-pacedprogrammeswillbedefinedbytherespectivedepartmentforeachstudent.
+Page15
+===== PAGE 20 =====
+2.6 SELECTION OF COURSES FOR THE BASIC B.TECH. IN CIVIL ENGINEERING / CHEMICAL
+ENGINEERING / COMPUTER SCIENCE & ENGINEERING / DIGITAL AGRICULTURE/
+ELECTRICAL ENGINEERING/ ELECTRICAL ENGINEERING (INTEGRATED CIRCUIT DESIGN
+AND TECHNOLOGY)/ ENGINEERING PHYSICS / MATHEMATICS & COMPUTING /
+MECHANICALENGINEERING&METALLURGICALANDMATERIALSENGINEERING.
+Sr.No. Courses DetailofCourses/Credits
+1. HSCore(15Credits) • HS101HistoryofTechnology(1.5)
+• HS103 Professional English CommunicationORHS102
+EnglishLanguageSkills(3)
+• HS201Economics(3)
+• HS301IndustrialManagement(3)
+• HS104ProfessionalEthics(1.5)
+•
+• HS202HumanGeographyandSocietalNeeds(3)
+•
+2. HSElectives(6Credits) HSElectiveI(3)*
+HSElectiveII(3)*
+*AnEnglishLanguage/Literatureelectivecourseineither
+7thor8thsemesterisrequiredforthestudentswhohad
+“HS102EnglishLanguageSkills”in1stSemester
+3. SciencesCore(24Credits) • PH101PhysicsforEngineers(3)
+• PH102PhysicsforEngineersLab(2)
+• CY101ChemistryforEngineers(4)
+• MA101Calculus(3)
+• MA102LinearAlgebra,IntegralTransformsand
+SpecialFunctions(3)
+• BM101BiologyforEngineers(3)
+• Program-SpecificScience-MathsI(3)(viz.MA201“Differential
+Equations”foralldepartments)
+• Program-SpecificScience-MathsII(3)(viz.MA202
+“ProbabilityandStatistics”byCSE,ME,CEandMA203;
+“ProbabilityandStochasticProcesses”byEE;achemistry
+• courseCY230“IntroductiontoOrganicChemistryand
+Biochemistry”byCH)
+•
+4. SciencesElectives(SE) Science-MathsElectiveI(3)
+(6Credits)(Theelective Science MathsElectiveII(3)
+coursesofferedbythe
+Departmentof
+Mathematics,Chemistry,
+Bio-medicalandPhysics
+willbecountedinSE
+Category).
+Page16
+===== PAGE 21 =====
+Sr.No. Courses Detailof
+Courses/Credits
+5. GeneralEngineering(23.5 •GE101TechnologyMuseumLab(1)
+Credits) •GE102WorkshopPractice(2)
+• GE103 Introduction to Computer Programming&
+DataStructure(4.5)
+•GE104IntroductiontoElectricalEng(3)
+•GE105 Engineering Drawing (1.5)
+•GE109 Introduction to Engineering Products (1)
+•GE107TinkeringLab(1.5)
+•GE108BasicElectronics(3)
+• Introduction to Environmental Science &
+Engineering(3)
+• Program-Specific General Engineering (3)*
+*The following Program - Specific General
+Engineering courses by the departments:
+GE201 “Introduction to Materials Science &
+Engineering”forME&CH,
+GE106 “Materials Science for Electrical and
+ElectronicsEngineers”forEE,
+GE203 “Materials Science for Civil Engineers” for
+•
+CE,andEE201“SignalsandSystems"forCSE
+•
+6. ProgramCoreandElectives(total ProgramCore(36to42Credits)
+48Credits) Program Electives [PE] (6 to 12 Credits) (The
+• elective courses offered by the respective
+DepartmentswillbecountedasPECategory).
+•
+7. CapstoneProjects(9 DevelopmentEngineeringProject(3)
+•
+Credits) CapstoneProjectI(3)
+•
+CapstoneProjectII(3)
+8. IndustrialInternshipand Industrial Internship and Comprehensive Viva
+•
+ComprehensiveViva(3.5Credits) Voce(3.5)
+9. Extra-Curricular(4Credits) • NC101 NCC I OR NO101 NSO I ORNS101
+NSSI(1)
+• NC102 NCC II OR NO102 NSO II ORNS102
+NSSII(1)
+•
+NCCIIIORNSOIIIORNSSIII(1)
+•
+NCCIVORNSOIVORNSSIV(1)
+•
+10. OpenElectives(6Credits) OpenElectiveI(3)
+OpenElectiveII(3)
+11. Extra-Curricular(4Credits) Willbenotifiedsoon
+2.7 SEQUENCE OF THE COURSES FOR ALL THE BASIC B.TECH. PROGRAMME:
+Mostofthecommoncorecoursesareplannedtoberuninboththesemestersoftheyear,sothathalfof
+thestudents(halfoftheentirebatch)studyacourseinonesemester andtheresthalfintheother.
+Page17
+===== PAGE 22 =====
+Semester1
+PlanA(about50%students) PlanB (rest50%students)
+MA101Calculus(3)[3-1-0-53]
+OR
+HS103ProfessionalEnglishCommunication(3)[2-2/3-2-13/3-3]
+/
+HS102EnglishLanguageSkills(3)[2-2/3-2-13/3-3]instead,forstudentsweakinEnglish
+[0-0-2-11]-(NS101NSSI NO101NSOI
+PH101 Physics for Engineers (3) [3-1-0-5-3] CY101ChemistryforEngineers(4)[3-1-2-6-4]
+PH102PhysicsforEngineersLab(2)[0-0-4-2-2]
+GE104 Introduction to Electrical Engineering (3) GE103 Introduction to Computer Programming
+[2-2/3-2-13/3-3] &DataStructure(4.5)[3-0-3-15/2-4.5]
+GE102WorkshopPractice(2)[0-0-4-2-2] GE105 Engineering Drawing (1.5) [0-0-3-3/2-
+1.5]
+HS101 History of Technology (1.5)T[o3t/a2l-1C/r2e-d0i-ts GE1180.51/T1e8chnologyMuseumLab(1)
+5/2-1.5] [0-0-2-1-1]
+Semester2
+PlanA(forthosehavingPlanBinSem1) PlanB(forthosehavingPlanAinSem1)
+MA102LinearAlgebra,IntegralTransformsandSpecialFunctions(3)[3-1-0-5-3]
+Program Core (3 ) (viz. ME101 “Engineering Mechanics” [3-1-0-5-3] for ME and CE, CH 101
+“OIRntroduction to Chemical Engineering” [3-1-0-5-3] for CH, CS101 “Discrete Mathematical
+Structures”[3-1-0-5-3]forCSEandMCB,CS111forAI)
+Program-SpecificGeneralEngineering(3)(viz.“GE106MaterialsScienceforElectricalandElectronics
+Engineers”[3-1-0-5-3],forEEandEP),GE110for MME,
+ED101FoundationofEntrepreneurshipDevelopment
+NO102NSOII(1)[0-0-2-1-1] OR
+NS102NSSII(1)[0-0-2-1-1]
+CY101ChemistryforEngineers(4)[3-1-2-6-4] PH101PhysicsforEngineers(3)[3-1-0-5-3]
+PH102PhysicsforEngineersLab(2)[0-0-4-2-2]
+GE103 Introduction to Computer Programming & GE104 Introductionto Electrical Engineering (3)
+DataStructure(4.5)[3-1-3-13/2-4.5] [2-2/3-2-13/3-3]
+GE105EngineeringDrawing(1.5)[0-0-3-3/2-1.5] GE102WorkshopPractice(2)[0-0-4-2-2]
+GTEo1ta01lCTreecdhnitoslo1g8y/M1u8s.e5umLab(1)[0-0-2-1-1] HS 101 History of Technology (1.5) [3/2-1/2-0-
+5/2-1.5]
+2.7.1B.TECH. ARTIFICIALINTELLIGENCE&DATAENGINEERING(AI)
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CSxxx FoundationofComputerSystems 3-1-0-5-3
+2 CSxxx FoundationofComputerSystemsLab 0-0-2-1-1
+3 MA201 DifferentialEquations 3-1-0-5-3
+4 CSxxx DataStructuresandAlgorithms 3-1-2-6-4
+5 EE201 SignalsandSystems 3-1-0-5-3
+6 NOIII/NSIII NSO/NSS 0-0-2-1-1
+Page18
+===== PAGE 23 =====
+7 HS201/GE108 Economics/BasicElectronics 3-1-0-5-3 / (2-2/3-
+2-13/3-3)
+8 GE107/GE109 Tinkering Lab / Introduction to Engineering [0-0-3-3/2-1.5]/[0
+Products -0-2-1-1]
+TOTALCREDITS 19or19.5
+Semester4
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CS503 MachineLearning 3-0-2-7-4
+2 EE207 ControlEngineering 3-1-2-6-4
+3 MA302 OptimizationTechniques(Prog.specificMaths’ 3-1-0-5-3
+core)
+4 HS202/BM101 HumanGeographyandSocietalNeeds/Biologyfor [1-1/3-4-11/3-3]/
+Engineers [3-1-0-5-3]
+5 NOIII/NSIII NSO/NSS 0-0-2-1-1
+6 HS201/GE108 Economics/BasicElectronics 3-1-0-5-3/(2-2/3-
+2-13/3-3)
+7 GE107/GE109 TinkeringLab/IntroductiontoEngineering [0-0-3-3/2-1.5]/[0
+Products TOTALCREDITS -109-2o-r11-19].5
+Semester5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CS301 Databases 3-1-2-6-4
+2 CSxxx ArtificialIntelligence 3-0-2-7-4
+3 EEXXX/CSXXX HCI&Visualization 2-0-2-5-3
+4 CSxxx EthicsinAI 1-0-0-2-1
+5 HS202/BM101 HumanGeographyandSocietalNeeds/Biologyfor [1-1/3-4-11/3-3]/
+Engineers [3-1-0-5-3]
+6 HS301/GE111 IndustrialManagement/Introductionto 3-1-0-5-3
+EnvironmentalScience&Engineering
+7 HS104 ProfessionalEthics[about50%studTeOnTtsA]LCREDITS 11-91o/3r-119-1.53/6-1.5
+Page19
+===== PAGE 24 =====
+Semester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 XXX BigDataAnalytics:Tools&Techniques 2-0-2-6-3
+2 XXX DeepLearning 3-0-0-6-3
+3 CSxxx MLOpsLab 0-0-4-2-2
+4 CSxxx/EExxx ProgramElectiveI 3credits
+5 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+6 HS301/GE111 IndustrialManagement/Introductionto 3-1-0-5-3
+EnvironmentalScience&Engineering
+7 HS104 ProfessionalEthics[about50%studTeOntTsA]LCREDITS 11-81o/3r-118-1.53/6-1.5
+SummerVacationfollowingSemester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 II301 IndustrialInternshipandComprehensiveVivaVoce 0-0-7-3.5-3.5
+(70%weightagefor8-weekfullinternshipand30%
+forcomprehensivevivaonprogramTfOuTndAaLmCeRnEtaDlIsT)S 3.5
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CP302 CapstoneProEjLecEtCITIVECOURSE(S) 0-0-6-3-3
+2 HSXXX AnEnglishLanguage/Literatureelectivecoursein 3Credits
+either7thor8thsemforstudentswhohad“English
+LanguageSkills”in1stSemester
+3 BMXXX/MAXXX ScienceMathsElectiveI 3Credits
+/CYXXX/PHXXX
+4 CSxxx/EExxx ProgramElectiveII 3credits
+5 XXXXX AnyextracreditstakenunderHSElective/Program 3Credits
+Elective/ScienceMathsElective TOTALCREDITS 15
+Page20
+===== PAGE 25 =====
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CP303 CapstoneProjEeLctEICITIVECOURSES 0-0-6-3-3
+2 HSXXX AnEnglishLanguage/Literatureelectivecoursein 3Credits
+either7thor8thsemforstudentswhohad“English
+LanguageSkills”in1stSemester
+3 BMXXX/MAXXX ScienceMathsElectiveII 3Credits
+/CYXXX/PHXXX
+4 CSxxx/EExxx ProgramElectiveIII 3credits
+5 XXXXX AnyextracreditstakenunderHSElective/Program 3Credits
+Elective/ScienceMathsElective TOTALCREDITS 15
+ProgramCore(asproposed)
+Sem Course Credits Neededin
+2 MathematicalFoundationsofAIandDE 3 2024Jan
+3 DataStructuresandAlgorithms(+Lab) 4 2024July
+3 FoundationofComputerSystems(+Lab) 4 2024July
+4 MachineLearning(+Lab) 4 2025Jan
+4 ControlEngineering(+Lab) 4 2025Jan
+5 Databases(+Lab) 4 2025July
+5 ArtificialIntelligence(+Lab) 4 2025July
+5 HCI&Visualization 3 2025July
+5 EthicsinAI 1 2025July
+6 BigDataAnalytics:Tools&Techniques 3 2026Jan
+6 DeepLearning(+Lab) 3 2026Jan
+6 MLOpsLab 2 22026Jan
+Total 48
+6-8 Prog.electivesin6,7,and8sems(3x3credits) 9 2026/2027
+GE103donein1stsem,MA302Optimizationisdonein4thsemasProg.specificMathscore.
+EE201(Signalsand systems)andMA201(DifferentialEquations)donein3rdsem
+Page21
+===== PAGE 26 =====
+TentativelistofElectiveCourses,electivesmaybeofferedbyCSEorEEdepartment*
+S.No. CourseName S.No. CourseName
+1 NonlinearControlTechniques 16 CloudComputing
+2 InformationTheoryandCoding 17 Robotics
+3 NaturalLanguageProcessing 18 IoT
+4 InformationRetrieval 19 ComputerNetworks
+5 TextProcessing 20 ProbabilisticGraphicalModels
+6 DigitalSignalProcessing 21 AdvancedMachineLearning
+7 AdvancedDSP 22 ANN
+8 ComputerVision 23 DataMining
+9 SpeechProcessing 24 AutonomousMultiAgentSystems
+10 DigitalImageProcessing 25 SecurityAnalytics
+11 AdvancedComputerVision 26 ComputerGraphicsLab
+12 SurveillanceVideoAnalytics 27 BiomedicalImageProcessing&Analysis
+13 AdvancedAI 28 AffectiveComputingandInteraction
+14 PredictiveAnalysis 29 ProbabilisticGraphicalModels
+15 DistributedSystems 30 MultimediaSurveillanceSystems
+*PleaseNote:
+i. Thislistwilladaptwithtimeasperneeds,feasibilityandrecruitmentofnewfacultymembers
+ii. Although the industrial internship is suggested to be done in “summer vacation following
+th
+semester6”,thecourseII301willnormallyberegisteredinthe7 semester.
+Page22
+===== PAGE 27 =====
+2.7.2B.TECH.INCHEMICALENGINEERING
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CH201 Thermodynamics 3-1-0-5-3
+2 CH202 TransportPhenomena 3-1-0-5-3
+3 CH230 CHESimulation(LabI) 0-0-4-2-2
+4 MA201 DifferentialEquations 3-1-0-5-3
+5 Seminar I (Technical communications for
+CH120 0-0-2-1-1
+ChemicalEngineers)
+6 GE201 MaterialsScienceandEngineering 3-1-0-5-3
+7 NOIII/NSIII NSO/NSS 0-0-2-1-1
+8 3-1-0-5-3/
+HS201/GE108 Economics/Basic Electronics
+(2-2/3-2-13/3-3)
+9 TTinOkTerAinLgCRLaEbDI/TISntroduction to Engineering [0-0-3-3/2-1.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+20or20.5
+Semester4
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CH203 Heat&MassTransfer 3-1-0-5-3
+2 CH204 FluidMechanics 3-1-0-5-3
+3 Fluid Mechanics, Heat & Mass Transfer Lab
+CH231 0-0-4-2-2
+(LABCOURSE)
+4 Seminar II (Data Analysis and Research
+CH220
+Skills) 0-0-2-1-1
+5 Introduction to Organic Chemistry and
+CY230 3-1-0-5-3
+Biochemistry
+6 Human Geography and Societal Needs / [1-1/3-4-11/3-3]/
+HS202/BM101
+BiologyforEngineers [3-1-0-5-3]
+7 NOIV/NSIV NSO/NSS 0-0-2-1-1
+8 3-1-0-5-3/
+HS201/GE108 Economics/Basic Electronics
+(2-2/3-2-13/3-3)
+9 TTinOkTeAriLngCRLEabDI/TSIntroduction to Engineering [0-0-3-3/2-1.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+Semester5 20or20.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CH301 SeparationProcesses 3-1-0-5-3
+2 CH302 ChemicalReactionEngineering 3-1-0-5-3
+3 CH303 ProcessControl 3-1-0-5-3
+4 CH330 ChemicalReactionEngineeringLab(LabIII) 0-0-4-2-2
+5 CH320 SeminarIII(ChemicalEngg.Applications) 0-0-2-1-1
+6 HumanGeographyandSocietalNeeds/ [1-1/3-4-11/3-3]/
+HS202/BM101
+BiologyforEngineers [3-1-0-5-3]
+7 IndustrialManagement/Introductionto
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+8 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+18or19.5 Page23
+===== PAGE 28 =====
+Semester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CH304 ProcessEquipmentDesign 3-1-0-5-3
+2 CH305 ProcessDesignandEconomics 3-1-0-5-3
+3 CH331 ProcessControlLab 0-0-4-2-2
+4 SeminarIV(ASPECTSOFCHEMICAL
+CH420 0-0-2-1-1
+BUSINESSANDETHICS)
+5 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+6 IndustrialManagement/Introductionto
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+7 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+15or16.5
+SummerVacationfollowingSemester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 IndustrialInternshipandComprehensiveVivaVoce
+TotalCreditsII301 (70%weightagefor8-weekfullinternshipand30% 0-0-73-3.5.5-3.5
+forcomprehensivevivaonprogramfundamentals)
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP302 CapstoneProjectI 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveI 3Credits
+/CYXXX/PHXXX
+4 CHXXX ProgramElectiveI 3Credits
+To5talCredits AnyextracreditstakenunderHSElective/Program 15Credits
+XXXXX 3Credits
+Elective/ScienceMathsElective
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP303 CapstoneProjectII 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3
+BMXXX/MAXXX
+ScienceMathsElectiveI 3Credits
+/CYXXX/PHXXX
+4
+CHXXX ProgramElectiveII 3Credits
+To5talCredits AnyextracreditstakenunderHSElective/Program 15Credits
+XXXXX 3Credits
+Elective/ScienceMathsElective
+Page24
+===== PAGE 29 =====
+XXXXXdenotesOpenElectiveCoursecode.
+GrandTotal:145
+PleaseNote:
+i. Contentsofallthecoursesareavailableonwww.iitrpr.ac.inasCoursebookletofUG2025-26.
+ii. Although the industrial internship is suggested to be done in “summer vacation following
+th
+semester6”,thecourseII301willnormallyberegisteredinthe7 semester.
+2.7.3.B.TECH.INCIVILENGINEERING
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CE201 StrengthofMaterials 2-1-2-4-3
+2 CE202 FundamentalsofFluidMechanics 2-1-0-3-2
+3 CE304 Geomatics 2-1-2-4-3
+4 MA201 DifferentialEquations 3-1-0-5-3
+5 GE203 MaterialsScienceforCivilEngineers 3-1-0-5-3
+6 NOIII/NSIII NSO/NSS 0-0-2-1-1
+7 3-1-0-5-3/
+HS201/GE108 Economics/BasicElectronics
+(2-2/3-2-13/3-3)
+8 TTiOnkTeArLinCgRLEaDbI/TISntroductiontoEngineering [0-10-93o-3r/129-1.5.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+Semester4
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CE301 StructuralAnalysis 2-2/3-0-3-2
+2 CE302 PipeandOpenChannelHydraulics 2-2/3-2-4-3
+3 CE303 SoilMechanics 2-2/3-2-4-3
+4 MA202 ProbabilityandStatistics 3-1-0-5-3
+5 HumanGeographyandSocietalNeeds/ [1-1/3-4-11/3-3]/
+HS202/BM101
+BiologyforEngineers [3-1-0-5-3]
+6 NOIV/NSIV NSO/NSS 0-0-2-1-1
+7 3-1-0-5-3/
+HS201/GE108 Economics/BasicElectronics
+(2-2/3-2-13/3-3)
+8 TTOinTkAeLriCnRgELDabIT/SIntroductiontoEngineering [0-10-93o-3r/129-1.5.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+Page25
+===== PAGE 30 =====
+Semester5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CE401 StructuralAnalysisII 2-1-0-3-2
+2 CE402 WaterResourcesEngineering 3-1-0-5-3
+3 CE203 ComputerAidedBuildingDrawing 0-1-2-0-1
+4 CE404 ReinforcedConcreteStructures 3-1-3-6.5-4.5
+5 HumanGeographyandSocietalNeeds/ [1-1/3-4-11/3-3]/
+HS202/BM101
+BiologyforEngineers [3-1-0-5-3]
+6 IntroductiontoEnvironmentalScience&
+GE111 3-1-0-5-3
+Engineering
+TOTALCREDITS 16.5or18
+7 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+*Civil Engineering students shall credit the course- Introduction to Environmental Science and
+ESenmgienseteerrin6gintheirfifthsemesteronly.
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CE405 WaterandWastewaterTreatment 2-1-3-4.5-3.5
+2 CE407 Transportation Engineering 3-1-2-6-4
+3 CE403 FOUNDATIONENGINEERING 2-1-0-3-2
+4 CE406 STEELSTRUCTURES 3-1-0-5-3
+5 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+6 HS301 IndustrialManagement 3-1-0-5-3
+TOTALCREDITS
+7 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+SummerVacationfollowingSemester6 18.5or20
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 IndustrialInternshipandComprehensiveViva
+Voce(70%weightagefor8-weekfull
+II301 0-0-7-3.5-3.5
+TotalCredits internshipand30%forcomprehensivevivaon 3.5
+programfundamentals)
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP302 CapstoneProjectI 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecourse
+HSXXX ineither7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveI 3Credits
+/CYXXX/PHXXX
+4 CEXXX ProgramElectiveI 3Credits
+5 AnyextracreditstakenunderHS
+TotalCreditXsXXXX Elective/ProgramElective/ScienceMaths 135CCrreedditists
+Elective
+Page26
+===== PAGE 31 =====
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP303 CapstoneProjectII 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecourse
+HSXXX ineither7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX/
+ScienceMathsElectiveII 3Credits
+CYXXX/PHXXX
+4 CEXXX ProgramElectiveII 3Credits
+5 AnyextracreditstakenunderHS
+TotalCreditsXXXXX Elective/ProgramElective/ScienceMaths 135CCrreedditists
+Elective
+XXXXXdenotesOpenElectiveCourseCode.
+GrandTotal:145
+PleaseNote:
+i. Contentsofallthecoursesareavailableonwww.iitrpr.ac.inasCoursebookletofUG2025-26.
+ii. Although the industrial internship is suggested to be done in “summer vacation following
+th
+semester6“,thecourseII301willnormallyberegisteredinthe7 semester.
+2.7.4B.TECH.INCOMPUTERSCIENCEANDENGINEERING
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CS201 DataStructures 3-1-2-6-4
+2 CS203 DigitalLogicDesign 3-1-2-6-4
+3 MA201 DifferentialEquations 3-1-0-5-3
+4 EE201 SignalsandSystems 3-1-0-5-3
+5 NOIII/NSIII NSO/NSS 0-0-2-1-1
+6 3-1-0-5-3/
+HS201/GE108 Economics/Basic Electronics
+(2-2/3-2-13/3-3)
+7 TTinOkTeAriLngCRLEaDbIT/SIntroduction to Engineering [0-0-3-3/2-1.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+19or19.5
+Page27
+===== PAGE 32 =====
+Semester4
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CS202 ProgrammingParadigmsandPragmatics 3-1-2-6-4
+2 CS204 ComputerArchitecture 3-1-2-6-4
+3 MA202 ProbabilityandStatistics 3-1-0-5-3
+4
+HumanGeographyandSocietalNeeds/Biology [1-1/3-4-11/3-3]/
+HS202/BM101
+forEngineers [3-1-0-5-3]
+5 NOIV/NSIV NSO/NSS 0-0-2-1-1
+6 3-1-0-5-3/
+HS201/GE108 Economics/BasicElectronics
+(2-2/3-2-13/3-3)
+7 TiTnOkeTrAinLgCRLaEbDI/TSIntroduction to Engineering [0-0-3-3/2-1.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+Semester5
+19or19.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CS301 IntroductiontoDatabaseSystems 3-1-2-6-4
+2 CS302 AnalysisandDesignofAlgorithms 3-1-0-5-3
+3 CS303 OperatingSystems 3-1-2-6-4
+4 Human Geography and Societal Needs / Biology [1-1/3-4-11/3-3]/
+HS202/BM101
+forEngineers [3-1-0-5-3]
+5 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+6 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+Semester6
+17or18.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CS304 ComputerNetworks 3-1-2-6-4
+2 CS305 SoftwareEngineering 3-1-2-6-4
+3 CS306 TheoryofComputation 3-1-0-5-3
+4 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+5 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+6 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+SummerVacationfollowingSemester6 17or18.5
+S.N CourseCode CourseDescription L-T-P-S-C
+o.
+1 IndustrialInternshipandComprehensiveViva
+Voce(70%weightagefor8-weekfullinternship
+II301 0-0-7-3.5-3.5
+TotalCredits and30%forcomprehensivevivaonprogram 3.5
+fundamentals)
+Page28
+===== PAGE 33 =====
+Semester7
+S.N CourseCode CourseDescription L-T-P-S-C
+o.
+ELECTIVECOURSES
+1 CP302 CapstoneProjectI 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveI 3Credits
+/CYXXX/PHXXX
+4 CSXXX ProgramElectiveI 3Credits
+To5talCredits AnyextracreditstakenunderHS 15Credits
+XXXXX 3Credits
+Elective/ProgramElective/ScienceMathsElective
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP303 CapstoneProjectII 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveII 3Credits
+/CYXXX/PHXXX
+4 CSXXX ProgramElectiveII 3Credits
+To5talCredits AnyextracreditstakenunderHSElective/Program 15Credits
+XXXXX 3Credits
+Elective/ScienceMathsElective
+XXXXXdenotesOpenElectiveCoursecode.
+GrandTotal:145
+PleaseNote:
+i. Contentsofallthecoursesareavailableonwww.iitrpr.ac.inasCoursebookletofUG2025-26.
+ii.
+iii. Although the industrial internship is suggested to be done in “summer vacation following
+th
+semester6“,thecourseII301willnormallyberegisteredinthe7 semester.
+Page29
+===== PAGE 34 =====
+2.7.5. B.TECH. DIGITALAGRICULTURE()CORE
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+BM101 BiologyforEngineers 3-1-0-5-3
+1
+2 DA201 Introductiontofarmsoffuture -------------2
+3 DA202 IntroductiontoAItools -------------3
+4 DA203 FoundationsofbigdataAnalytics -------------3
+5 DAL01 DataModeling -------------2
+6 GE107 Tinkering Lab 0-0-3-3/2-1.5
+7 NOIII/NSIII NSO/NSS 0-0-2-1-1
+8 CSxxx FoundationofComputerSystems 3-1-0-5-3
+9 CSxxx FounTdOaTtiAoLnCoRfCEoDmITpSuterSystemsLab 0-01-92.-51-1
+Semester4
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 HS202 HumanGeographyandSocietalNeeds [1-1/3-4-11/3-3]
+2 EE102 BasicElectronics -------------3
+3 GE109 IntroductiontoEngineeringProducts 0-0-2-1-1
+4 NOIII/NSIII NSO/NSS 0-0-2-1-1
+5 MA202 Probability 3-1-0-5-3
+6 DA204 Agriculturecentriccomputing -------------3
+-------------3
+7 DA205 Introductiontocyber-physicalsystems
+TOTALCREDITS 19
+8 DAL02 DAL02:Agri-CPS(BasicLab) -------------2
+Page30
+===== PAGE 35 =====
+Semester5
+S.No. CourseCode CourseDescription L-T-P-S-C
+3-1-0-5-3
+1 GE111 IntroductiontoEnvironmentalScienceand
+Engineering
+2 HS104 ProfessionalEthics 1-1/3-1-13/6-1.5
+3 DA301 AI/MLforagriculturesystems 3
+4 DAL03 Lab#3:Measurement&Interface: 1.5
+3
+5 DA302 ProcesscontrolandIndustrialAutomation
+3
+6 DA303 AIEthics
+3
+7 DAL04 LabT#O4TAAgLriC-RCEPDSI(TASdvance) 18
+Semester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+2 HS301 IndustrialManagement 3-1-0-5-3
+3 PE#1 ProgramElectiveI 3-0-0-6-3
+4 DA304 ComputerVisionforfarmmonitoring,assessment ------------3
+andsurveillance
+5 DA305 DA305:LMs/LLMs ------------3
+6 DAL05 LabT#O5T:DAaLtaCRMEoDdIeTliSng: -----1--8-.-5--3.5
+SummerVacationfollowing
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 II301 IndustrialInternshipandComprehensiveVivaVoce 0-0-7-3.5-3.5
+(70%weightagefor8-weekfullinternshipand30%
+forTcoOmTAprLeChRenEsDivIeTSvivaonprogramfundamentals) 3.5
+Page31
+===== PAGE 36 =====
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CP302 CapstoneProEjLecEtCITIVECOURSE(S) 0-0-6-3-3
+2 DAXXX ProgramElective ------------3
+DAXXX
+3 ProgramElective ------------3
+4 XXXXX OpenElective ------------3
+5 XXXXX OpeTnOETlAecLtiCvReEDITS ------1-5-----3
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 XXXXX JointIndustryProject -----------12
+2 XXXXX ProTjeOcTtAPrLeCseRnEtDatIiToSn/Seminar ------1-5-----3
+Page32
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 37 =====
+2.7.6.B.TECH.INELECTRICALENGINEERING
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 EE201 SignalsandSystems 3-1-0-5-3
+2 EE203 DigitalCircuits 3-1-0-5-3
+3 EE204 DigitalCircuitsLab 0-0-3-3-1.5
+4 EE205 Electromechanics 3-1-0-5-3
+5 MA201 DifferentialEquations 3-1-0-5-3
+6 NOIII/NSIII NSO/NSS 0-0-2-1-1
+7 3-1-0-5-3/
+HS201/GE108 Economics/Basic Electronics
+(2-2/3-2-13/3-3)
+8 TiTnOkeTrAinLgCRLaEbDI/TSIntroduction to Engineering [0-0-3-3/2-1.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+19or18.5
+Semester4
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 EE209 CircuitTheory 3-1-0-5-3
+2 EE207 ControlEngineering 3-1-0-5-3
+3 EE307 PowerElectronics 3-1-0-5-3
+4 MA203 ProbabilityandStochasticProcesses 3-1-0-5-3
+5 HumanGeographyandSocietalNeeds/Biology [1-1/3-4-11/3-3]/
+HS202/BM101
+forEngineers [3-1-0-5-3]
+6 NOIV/NSIV NSO/NSS 0-0-2-1-1
+7 3-1-0-5-3/
+HS201/GE108 Economics/BasicElectronics
+(2-2/3-2-13/3-3)
+8 TTinOkTerAinLgCRLEaDbIT/SIntroduction to Engineering [0-0-3-3/2-1.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+20or20.5
+Semester5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 EE208 ControlEngineeringLaboratory 0-0-3-3/2-1.5
+2 EE301 AnalogCircuits 3-1-0-5-3
+3 EE302 AnalogCircuitsLab 0-0-3-3-1.5
+4 EE308 PowerElectronicsLab 0-0-3-1.5-1.5
+5 EE206 ElectromechanicsLab 0-0-3-3-1.5
+6 EE305 EngineeringElectromagnetics 3-1-0-5-3
+7 Human Geography and Societal Needs / [1-1/3-4-11/3-3]/
+HS202/BM101
+BiologyforEngineers [3-1-0-5-3]
+8 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+9 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+18or19.5
+Page33
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 38 =====
+Semester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 EE304 CommunicationLab 0-0-3-1.5-1.5
+2 EE306 ElectromagneticsLab 0-0-3-1.5-1.5
+3 EE303 CommunicationEngineering 3-1-0-5-3
+4 EE309 PowerSystems 3-1-0-5-3
+5 EE310 PowerSystemsLaboratory 0-0-3-1.5-1.5
+6 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+7 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+8 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+SummerVacationfollowingSemester6 16.5/18
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 IndustrialInternshipandComprehensiveViva
+Voce(70%weightagefor8-weekfullinternship
+II301 0-0-7-3.5-3.5
+TotalCredits and30%forcomprehensivevivaonprogram 3.5
+fundamentals)
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP302 CapstoneProjectI 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveI 3Credits
+/CYXXX/PHXXX
+4 EEXXX ProgramElectiveI 3Credits
+To5talCredits AnyextracreditstakenunderHSElective/Program 15Credits
+XXXXX 3Credits
+Elective/ScienceMathsElective
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP303 CapstoneProjectII 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveII 3Credits
+/CYXXX/PHXXX
+4 EEXXX ProgramElectiveII 3Credits
+To5talCredits AnyextracreditstakenunderHSElective/Program 15Credits
+XXXXX 3Credits
+Elective/ScienceMathsElective
+Page34
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 39 =====
+XXXXXdenotesOpenElectiveCourseCode.
+GrandTotal:145
+PleaseNote:
+i. Contentsofallthecoursesareavailableonwww.iitrpr.ac.inasCoursebookletofUG2025-26.
+ii. Although the industrial internship is suggested to be done in “summer vacation following
+th
+2.7se.7mEeLsEteCrT6R“I,CtAheLcEoNuGrsIeNIEIE3R01INwGil(lInNoTrEmGaRllAyTbEeDreCgIisRtCerUeIdTiDnEthSeIG7NAseNmDeTstEeCr.HNOLOGY)
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 EE201 SignalsandSystems 3-1-0-5-3
+2 EE203 DigitalCircuits 3-1-0-5-3
+3 EE204 DigitalCircuitsLab 0-0-3-3-1.5
+4 CSxyz FundamentalsofArtificialIntelligenceandData 3-0-0-6-3
+Science
+5 MA201 DifferentialEquations 3-1-0-5-3
+6 NOIII/NSIII NSO/NSS 0-0-2-1-1
+7 GE108 BasicElectronics 2-1-2-5-3
+TOTALCREDITS 19credits
+8 GE107 TinkeringLab 0-0-3-3/2-1.5
+Semester4
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 EE209 CircuitTheory 3-1-0-5-3
+2 EE207 ControlEngineering 3-1-0-5-3
+3 MA203 ProbabilityandStochasticProcesses 3-1-0-5-3
+4 BM101 BiologyforEngineers 3-1-0-5-3
+5 NOIV/NSIV NSO/NSS 0-0-2-1-1
+6 CSxyz IntroductiontoComputerArchitecture 3-1-0-5-3
+TOTALCREDITS 17credits
+7 GE109 IntroductiontoEngineeringProducts 0-0-2-1-1
+Semester5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 EExyz ElectronicDevices 3-1-0-5-3
+2 EE301 AnalogCircuits 3-1-0-5-3
+3 EE302 AnalogCircuitsLab 0-0-3-3-1.5
+4 EE303 CommunicationEngineering 3-1-0-5-3
+5 EE305 EngineeringElectromagnetics 3-1-0-5-3
+6 HS202 HumanGeographyandSocietalNeeds 1-1/3-4-11/3-3
+TOTALCREDITS 19.5credits
+7 HS301 IndustrialManagement 3-1-0-5-3
+Page35
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 40 =====
+Semester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 EE307 PowerElectronics 3-1-0-5-3
+2 EExyz DigitalSignalProcessing 3-1-0-5-3
+3 EE530 VLSIFabricationTechnology 3-1-0-5-3
+4 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+5 GE111 IntroductiontoEnvironmentalScience& 3-1-0-5-3
+Engineering
+6 HS201 Economics 3-1-0-5-3
+TOTALCREDITS 19.5credits
+7 HS104 ProfessionalEthics 1-1/3-1-13/6-1.5
+SummerVacationfollowingSemester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 IndustrialInternshipandComprehensiveVivaVoce
+II301 (70%weightagefor8-weekfullinternshipand30% 0-0-7-3.5-3.5
+forcomprehensivevivaonprogram
+TotalCredits 3.5credits
+fundamentals)
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP302 CapstoneProjectI 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsemforstudentswhohad“English 3Credits
+LanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveI 3Credits
+/CYXXX/PHXXX
+4 EEXXX ProgramElectiveI 3Credits
+5 AnyextracreditstakenunderHSElective/Program
+TotalCrXeXdXitXsX 135CCrreedditists
+Elective/ScienceMathsElective
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP303 CapstoneProjectII 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsemforstudentswhohad“English 3Credits
+LanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveII 3Credits
+/CYXXX/PHXXX
+4 EEXXX ProgramElectiveII 3Credits
+5 AnyextracreditstakenunderHSElective/Program
+TotalCrXeXdXitXsX 135CCrreedditists
+Elective/ScienceMathsElective
+Page36
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 41 =====
+2.7.8.B.TECH.INENGINEERINGPHYSICS
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 PH202 AppliedMathematicalPhysics 3-1-0-5-3
+2 PH203 ClassicalMechanics 3-1-0-5-3
+3 PH204 ElectromagneticTheory 3-1-0-5-3
+4 PH201 PhysicsLab-I 0-0-3-1.5-1.5
+5 EE201 SignalsandSystems 3-1-0-5-3
+6 [2-2/3-2-13/3-3]
+GE108/HS201 BasicElectronics/Economics
+[3-1-0-5-3]
+7 IntroductiontoEngineering [0-0-2-1-1]
+GE109/GE107
+Products/TinkeringLab [0-0-3-3/2-1.5]
+8
+NSO-III/NSS-III NSO/NSS [0-0-2-1-1]
+TOTALCREDITS 19or19.5
+Semester4
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 MA203 ProbabilityandStochasticProcess 3-1-0-5-3
+2 PH210 PhysicsLab-II 0-0-3-1.5-1.5
+3 EE207 ControlEngineering 3-1-0-5-3
+4 EE209 CircuitTheory 3-1-0-5-3
+5 HumanGeography&SocietalNeeds [1-1/3-4-11/3-3]
+HS202/BM101
+/BiologyforEngineers [3-1-0-5-3]
+6 [3-1-0-5-3]
+HS201/GE108 Economics/BasicElectronics
+[2-2/3-2-13/3-3]
+7 TinkeringLab/Introductionto [0-0-3-3/2-1.5]
+GE107/GE109
+EngineeringProducts [0-0-2-1-1]
+8
+NSO-IV/NSS-IV NSO-IV/NSS-IV [0-0-2-1-1]
+TOTALCREDITS 19or19.5
+Page37
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 42 =====
+Semester5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 PH30X *QuantumPhysics 3-1-0-5-3
+2 PH30X *ThermalandStatisticalphysics 3-1-0-5-3
+3 EE208 ControlEngineeringLab 0-0-3-1.5-1.5
+4 EE301 AnalogCircuits 3-1-0-5-3
+5 EE302 AnalogCircuitsLab 0-0-3-1.5-1.5
+6 BiologyforEngineers/HumanGeography [3-1-0-5-3]
+BM101/HS202
+&SocietalNeeds [1-1/3-4-11/3-3]
+7 IndustrialManagement/Introductionto
+HS301/GE111 [3-1-0-5-3]
+EnvironmentalScience&Engineering
+8 HS104 ProfessionalEthics 1-1/3-1-13/6-1.5
+TOTALCREDITS 16.5or18
+Semester 6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 PH30X * Optics&Photonics 3-1-0-5-3
+2 PH30X * QuantumTheoryofSolids 3-1-0-5-3
+3 PH30X * SemiconductorPhysicsandApplications 3-1-0-5-3
+4 PH30X * NumericalMethodsandAnalysis 2-0-2-5-3
+5
+IntroductiontoEnvironmentalScience&
+GE111/HS301
+Engineering/IndustrialManagement [3-1-0-5-3]
+6
+CP301 DevelopmentEngineeringProject
+TotalCredits 0-0-6-138-3
+SummerVacationfollowingSemester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 IndustrialInternshipandComprehensiveViva
+Voce(70%weightagefor8-weekfullinternship
+II301 0-0-7-3.5-3.5
+and30%forcomprehensivevivaonprogram
+TotalCredits 3.5
+fundamentals)
+Page38
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 43 =====
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CP302 CapstonePr E oj L e E c C t T I IVECOURSES 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecourse
+HSXXX ineither7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX/
+ScienceMathsElectiveI 3Credits
+CYXXX/PHXXX
+4 EEXXX ProgramElectiveI 3Credits
+5 AnyextracreditstakenunderHS
+XXXXX Elective/ProgramElective/ScienceMaths 3Credits
+TotalCredits 15Credits
+Elective
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CP303 CapstonePr E oj L e E c C t T II IVECOURSES 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecourse
+HSXXX ineither7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX/
+ScienceMathsElectiveII 3Credits
+CYXXX/PHXXX
+4 EEXXX ProgramElectiveII 3Credits
+5 AnyextracreditstakenunderHS
+XXXXX Elective/ProgramElective/ScienceMaths 3Credits
+TotalCredits 15Credits
+Elective
+XXXXXdenotesOpenElectiveCourseCode.
+*GSruabnjdecTtototaalp:p1r4o5valofSenate.
+PleaseNote:
+i. Contentsofallthecoursesareavailableonwww.iitrpr.ac.inasCoursebookletofUG2025-26.
+ii. Although the industrial internship is suggested to be done in “summer vacation following
+th Page39
+IITROPAR//www.iitrpr.ac.in
+semester6“,thecourseII301willnormallyberegisteredinthe7 semester.
+===== PAGE 44 =====
+2.7.9.B.TECH.INMATHEMATICSANDCOMPUTING
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 CS201 DataStructures 3-1-2-6-4
+2 MA411 RealAnalysis 3-1-0-5-3
+3 MA201 DifferentialEquations 3-1-0-5-3
+4 EE201 SignalsandSystems 3-1-0-5-3
+5 NOIII/NSIII NSO/NSS 0-0-2-1-1
+6 3-1-0-5-3/
+HS201/GE108 Economics/Basic Electronics
+(2-2/3-2-13/3-3)
+7 TTOinTkAeLriCnRgELDabIT/SIntroduction to Engineering [0-0-3-3/2-1.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+18or18.5
+Semester4
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 MA204 IntroductiontoNumericalAnalysis 3-1-0-5-3
+2 MA426 Theoryofcomputation 3-0-0-6-3
+3 MA205 ComputingLab 0-0-4-2-2
+4 MA202 ProbabilityandStatistics 3-1-0-5-3
+5 Human Geography and Societal Needs / [1-1/3-4-11/3-3]/
+HS202/BM101
+BiologyforEngineers [3-1-0-5-3]
+6 NOIV/NSIV NSO/NSS 0-0-2-1-1
+7 3-1-0-5-3/
+HS201/GE108 Economics/BasicElectronics
+(2-2/3-2-13/3-3)
+8 TTOiTnkAeLriCnRgELDaIbT/S Introduction to Engineering [0-0-3-3/2-1.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+Semester5 19or19.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 MA514 Analysis&DesignOfAlgorithms 3-1-0-5-3
+2 MA515 FoundationsOfDataScience 3-0-2-7-4
+3 MA301 ComputationalAlgebra 3-0-0-6-3
+4 Human Geography and Societal Needs / [1-1/3-4-11/3-3]/
+HS202/BM101
+BiologyforEngineers [3-1-0-5-3]
+5 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+6 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+Semester6 16or17.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 MA302 OptimizationTechniques 3-1-0-5-3
+2 MA303 ComputingLab-II 0-0-4-2-2
+3 CS503 MachineLearning 3-0-2-7-4
+4 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+5 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+6 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+Page40
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 45 =====
+SummerVacationfollowingSemester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 IndustrialInternshipandComprehensiveViva
+Voce(70%weightagefor8-weekfull
+II301 0-0-7-3.5-3.5
+TotalCredits internshipand30%forcomprehensiveviva 3.5
+onprogramfundamentals)
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP302 CapstoneProjectI 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelective
+courseineither7thor8thsem forstudents
+HSXXX 3Credits
+whohad“EnglishLanguageSkills”in1st
+Semester
+3 BMXXX/CYXXX/PH
+ScienceMathsElectiveI 3Credits
+XXX
+4 MAXXX ProgramElectiveI 3Credits
+5 AnyextracreditstakenunderHS
+TotalCXreXdXiXtXs Elective/ProgramElective/ScienceMaths 135CCrreedditists
+Elective
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP303 CapstoneProjectII 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelective
+courseineither7thor8thsem forstudents
+HSXXX 3Credits
+whohad“EnglishLanguageSkills”in1st
+Semester
+3 BMXXX/CYXXX/PH
+ScienceMathsElectiveII 3Credits
+XXX
+4 MAXXX ProgramElectiveII 3Credits
+5 AnyextracreditstakenunderHS
+TotalCXreXdXiXtXs Elective/ProgramElective/ScienceMaths 135CCrreedditists
+Elective
+XXXXXdenotesOpenElectiveCourseCode.
+GrandTotal:145
+PleaseNote:
+i. Contentsofallthecoursesareavailableonwww.iitrpr.ac.inasCoursebookletofUG2025-26.
+ii. Although the industrial internship is suggested to be done in “summer vacation following
+th
+semester6“,thecourseII301willnormallyberegisteredinthe7 semester.
+Page41
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 46 =====
+2.7.10.B.TECH.INMECHANICALENGINEERING
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 ME102 EngineeringThermodynamics 3-1-0-5-3
+2 ME201 SolidMechanics 3-1-0-5-3
+3 ME202 MachineDrawing 0-0-4-2-2
+4 GE201 Introduction to Materials Science and
+Engineering 3-1-0-5-3
+5 MA201 DifferentialEquations 3-1-0-5-3
+6 NOIII/NSIII NSO/NSS 0-0-2-1-1
+7 3-1-0-5-3/
+HS201/GE108 Economics/Basic Electronics (2-2/3-2-13/3-
+3)
+8 TTiOnTkeArLinCgRELDabIT/S Introduction to Engineering [0-0-3-3/2-1.5]
+GE107/GE109
+Products /[0-0-2-1-1]
+Semester-4 19or19.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 ME203 TheoryofMachines 3-1-0-5-3
+2 ME204 FluidMechanics 3-1-0-5-3
+3 ME205 DesignLab-I 0-0-4-2-2
+4 MA202 ProbabilityandStatistics 3-1-0-5-3
+5 Human Geography and Societal Needs / [1-1/3-4-11/3-3]
+HS202/BM101
+BiologyforEngineers /[3-1-0-5-3]
+6 NOIV/NSIV NSO/NSS 0-0-2-1-1
+7 3-1-0-5-3/
+HS201/GE108 Economics/BasicElectronics
+(2-2/3-2-13/3-3)
+8 TTiOnTkeArLinCgRELDabIT/S Introduction to Engineering [0-0-3-3/2-1.5]/
+GE107/GE109
+Products [0-0-2-1-1]
+19or19.5
+Semester5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 ME206 ManufacturingTechnology-I 3-1-0-5-3
+2 ME207 ManufacturingLab-I 0-0-4-2-2
+3 ME301 VibrationsandControl 3-1-0-5-3
+4 ME302 HeatandMassTransfer 3-1-0-5-3
+5 ME303 Thermo-FluidsLab-I 0-0-2-1-1
+6 [1-1/3-4-11/3-
+HumanGeographyandSocietalNeeds/ Biology
+HS202/BM101 3]/
+forEngineers
+[3-1-0-5-3]
+7 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+8 TOTALCREDITS 1-1/3-1-13/6-
+HS104 ProfessionalEthics[about50%students]
+1.5
+18or19.5
+Page42
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 47 =====
+Semester6
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 ME304 MachineDesign 3-1-0-5-3
+2 ME305 ManufacturingTechnology-II 3-1-0-5-3
+3 ME306 DesignLab-II 0-0-3-1.5-1.5
+4 ME307 Thermo-FluidsLab-II 0-0-3-1.5-1.5
+5 ME308 ManufacturingLab-II 0-0-4-2-2
+6 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+7 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+8 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+SummerVacationfollowingSemester6 17or18.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 IndustrialInternshipandComprehensiveVivaVoce
+TotalCIrIe3d0i1ts (70%weightagefor8-weekfullinternshipand30% 0-0-73-3.5.5-3.5
+forcomprehensivevivaonprogramfundamentals)
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP302 CapstoneProjectI 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsemester forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveI 3Credits
+/CYXXX/PHXXX
+4 MEXXX ProgramElectiveI 3Credits
+To5talCredits AnyextracreditstakenunderHSElective/Program 15Credits
+XXXXX 3Credits
+Elective/ScienceMathsElective
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP303 CapstoneProjectII 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelectivecoursein
+HSXXX either7thor8thsem forstudentswhohad 3Credits
+“EnglishLanguageSkills”in1stSemester
+3 BMXXX/MAXXX
+ScienceMathsElectiveII 3Credits
+/CYXXX/PHXXX
+4 MEXXX ProgramElectiveII 3Credits
+To5talCredits AnyextracreditstakenunderHSElective/Program 15Credits
+XXXXX 3Credits
+Elective/ScienceMathsElective
+Page43
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 48 =====
+XXXXXdenotesOpenElectiveCoursecode.
+GrandTotal:145
+PleaseNote:
+i. Contentsofallthecoursesareavailableonwww.iitrpr.ac.inasCoursebookletofUG2025-26.
+ii. Although the industrial internship is suggested to be done in “summer vacation following
+th
+semester6“,thecourseII301willnormallyberegisteredinthe7 semester.
+2.7.11.B.TECH.INMETALLURGICALANDMATERIALSENGINEERING
+Semester3
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 MM201 Metallurgical Thermodynamics and 3-1-0-5-3
+Kinetics
+2 MM221 IntroductiontoMaterialsModelingLab 0-0-2-1-1
+3 MM203 MaterialsCharacterizationTechniques 3-0-0-5-3
+4 MM204 MaterialsCharacterizationTechniquesLab 0-0-2-1-1
+5 MM205 PhysicalMetallurgyLab 0-0-2-1-1
+6 MA201 DifferentialEquations 3-1-0-5-3
+7 NOIII/NSIII NSO/NSS 0-0-2-1-1
+8 3-1-0-5-3/
+HS201/GE108 Economics/Basic Electronics
+(2-2/3-2-13/3-3)
+9 TOTTinAkLeCriRnEgDITLSab / Introduction to [0-0-3-3/2-1.5]/
+GE107/GE109
+Engineering Products [0-0-2-1-1]
+Semester4 17or17.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 MM206 PrinciplesofExtractiveMetallurgy 3-1-0-5-3
+2 MM207 PhaseTransformationandHeatTreatment 3-1-0-5-3
+3 Phase Transformation and Heat Treatment
+MM208 0-0-2-1-1
+Lab
+4 MM222 ComputationalThermodynamicsLab 0-0-2-1-1
+5 MA202 ProbabilityandStatistics 3-1-0-5-3
+6 Human Geography and Societal Needs / [1-1/3-4-11/3-3]/
+HS202/BM101
+BiologyforEngineers [3-1-0-5-3]
+7 NOIV/NSIV NSO/NSS 0-0-2-1-1
+8 3-1-0-5-3/
+HS201/GE108 Economics/BasicElectronics
+(2-2/3-2-13/3-3)
+9 TOTTinAkLeCriRnEgDITLSab / Introduction to [0-0-3-3/2-1.5]/
+GE107/GE109
+EngineeringProducts [0-0-2-1-1]
+19or19.5
+Page44
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 49 =====
+Semester5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 MM301 IronandSteelMaking 3-1-0-5-3
+2 Mechanical Behaviour and Testing of
+MM302
+Materials 3-1-0-5-3
+3 MM303 MaterialsProcessing 3-1-0-5-3
+4 MM304 MechanicalBehaviorandTestingLab 0-0-3-1.5-1.5
+5 MM305 MaterialsProcessingLab 0-0-3-1.5-1.5
+6 MM321 MesoscaleModelingLab 0-0-2-1-1
+7 Human Geography and Societal Needs / [1-1/3-4-11/3-3]/
+HS202/BM101
+BiologyforEngineers [3-1-0-5-3]
+8 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+9 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+Semester6 19or20.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 MM202 TransportPhenomena 3-1-0-5-3
+2 MM306 CorrosionAndItsPrevention 2-2/3-0-10/3-2
+3 MM307 Electronic,MagneticandOpticalMaterials 3-1-0-5-3
+4 MM322 ModelingofMetallurgicalSystemLab 0-0-2-1-1
+5 MM310 CorrosionLab 0-0-2-1-1
+6 MM311 ModelingandSimulationLab 0-0-4-2-2
+7 CP301 DevelopmentEngineeringProject 0-0-6-3-3
+8 Industrial Management / Introduction to
+HS301/GE111 3-1-0-5-3
+EnvironmentalScience&Engineering
+TOTALCREDITS
+9 HS104 ProfessionalEthics[about50%students] 1-1/3-1-13/6-1.5
+SummerVacationfollowingSemester6 18or19.5
+S.No. CourseCode CourseDescription L-T-P-S-C
+1 IndustrialInternshipandComprehensive
+VivaVoce(70%weightagefor8-weekfull
+II301 0-0-7-3.5-3.5
+TotalCredits internshipand30%forcomprehensiveviva 3.5
+onprogramfundamentals)
+Page45
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 50 =====
+Semester7
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP302 CapstoneProjectI 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelective
+courseineither7thor8thsem forstudents
+HSXXX 3Credits
+whohad“EnglishLanguageSkills”in1st
+Semester
+3 BMXXX/MAXXX/CY
+ScienceMathsElectiveI 3Credits
+XXX/PHXXX
+4 MMXXX ProgramElectiveI 3Credits
+5 AnyextracreditstakenunderHS
+TotalCXreXdXiXtXs Elective/ProgramElective/ScienceMaths 135CCrreedditists
+Elective
+Semester8
+S.No. CourseCode CourseDescription L-T-P-S-C
+ELECTIVECOURSES
+1 CP303 CapstoneProjectII 0-0-6-3-3
+2 AnEnglishLanguage/Literatureelective
+courseineither7thor8thsem forstudents
+HSXXX 3Credits
+whohad“EnglishLanguageSkills”in1st
+Semester
+3 BMXXX/MAXXX/C
+ScienceMathsElectiveII 3Credits
+YXXX/PHXXX
+4 MMXXX ProgramElectiveII 3Credits
+5 AnyextracreditstakenunderHS
+TotalCXreXdXiXtXs Elective/ProgramElective/ScienceMaths 135CCrreedditists
+Elective
+XXXXXdenotesOpenElectiveCoursecode.
+GrandTotal:145
+PleaseNote:
+i. Contentsofallthecoursesareavailableonwww.iitrpr.ac.inasCoursebookletofUG2025-26.
+ii. Although the industrial internship is suggested to be done in “summer vacation following
+th
+2.7se.1m2esCtOerU6R“S,EthPeLcAoNurFseOIRI3B01.TwECilHln.oWrmITalHlyMbeINreOgRisteredinthe7 semester.
+Same as that for “Basic B.Tech." with Minor coursework (total 15 credits) added and distributed
+overfoursemesters-Semester5to8.
+Page46
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 51 =====
+2.7.13GUIDELINES FOR OFFERING OF MINORPROGRAMME FOR UG STUDENTS
+i.
+Students can take 15 credits of the Minor Programme, it is offered to the B.Tech. Students from
+2017batchonwards,B.Tech.withMinorisminorinanyotherdisciplinethanthemajordiscipline,
+ii. thecreditrequirementsisB.Tech.withMinorProgramme:145(basic B.Tech.)+15 (minorcredits)
+iii. =160credits.
+Astudentcantake15creditsofdesignatedcoursesinoneofotherdisciplinestoearnaMinor.
+iv. A student can opt for one minor. The student opting for minor is not eligible for opting
+v. concentrationandvice-versa.
+Astudentcantakemaximumcreditsof24forminorprogrammepersemester.
+TheminorcourseswouldbetypicallythemostbasicUGlevelcoursesofthediscipline.Forexample,
+vi. the Minor courses in Mechanical Engineering (ME) would be a subset of Program Core courses of
+vii. ME.Minorcoursesincludesomelabcomponents.
+viii. Theintakeofstudentsforminorwillbe20.
+ThestudentwithCGPA7iseligibleforoptingminor.
+ix. The department offering the courses for minor programme, shall check overlap of course(s)
+contentswithotherdepartments.
+x. The department shall recommend selection criteria for offering the minor programme to the
+xi. students.
+ThestudentsofB.Tech–M.TechDualDegreecanalsooptforMinorProgramme
+2.7.1T4hisCiOsUnoRtSaEmPaLndAaNtorFyOrRequBi.rTeEmCeHnt.foWrIcToHmpCleOtiNonCEofNbTaRsiAcBT.ITOeNchdegreeof145credits.
+Same as that for “Basic B.Tech." with Concentration coursework (total 15 credits) added and
+2.7d.i1st5riGbuUtIeDdEoLveINrfEoSurFsOemResOteFrFsE-RSeINmGestOeFr5CtOoN8.CENTRATIONPROGRAMMEFORUGSTUDENTS
+i)
+Students can take 15 credits of Concentration Programme courses within their discipline. For
+example, Mechanical Engineering students may choose to specialize in Design, Manufacturing or
+ii) Thermal and fluids. The credit requirements for B.Tech. with Concentration Programme is : 145
+iii) (basicB.Tech.)+15(concentrationcredits)=160credits.
+iv) Astudentcanoptforoneconcentrationprogrammeonly.
+Astudentcantakemaximum24creditsforconcentrationprogrammepersemester.
+v) A student can opt for one Minor/ Concentration programme. The student opting for minor is not
+vi) eligibleforoptingConcentrationandvice-versa
+vii) Theconcentrationprogrammecoursesmayincludelabcomponents.
+ThestudentwithCGPA7iseligibleforoptingconcentrationprogramme.
+2.7.1T6hiCsOisUnRoStEamPLanAdNatFoOryRrBeq.TuiErCemHe.(nHtfOorNcOoRmSp)letionofbasicB.Techdegreeof145credits.
+Same as thatfor“Basic B.Tech."with Honorscoursework (total 15credits) addedanddistributed over
+four semesters - Sem 5 to 8. Honors coursework may be the same as Minor or Concentration
+coursework.ThiswillbefollowedbyHonorsProject1and2of5creditseach.
+Thetrackoptions(Honours/Minor/Concentration/AdditionalInternship)tobeofferedtothestudents
+th th th
+after 4 semester and before start of the 5 semester. Honours may be opted after 6 semester (and
+th
+before start of 7 semester) as well, provided the remaining coursework (including the project)
+requirementsforHonourscanbecompletedwithoutexceedingthemaximumcreditlimit.
+2.7.17COURSE PLANFORBASICB.TECH.WITHADDITIONALINTERNSHIP
+The coursework required for “Basic B.Tech." may be completed in first seven semesters. Additional
+Internship I to III [About 6 Months, Mid December to Mid June] may be opted during the last 7th/8th
+semester.Thisoptionmaybeoptedbytheendof4thsemester.
+Page47
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 52 =====
+2.7.18GUIDELINES FOR OFFERINGOFADDITIONALINTERNSHIPFORUGSTUDENTS
+i.
+Students can take 15 credits of the additional internship, it is offered to the B.Tech. Students from
+ii. 2017batchonwards.ThecreditrequirementforbasicB.Tech.145+15(additionalinternship)=160
+iii. credits.
+iv. MinimumCGPAforoptingadditionalinternshipmaybe6.00.
+Thestudentcantaketheadditionalinternshipintheir7th/8thsemester.
+Astudentdoing BasicB.Tech. canfinishall requirementsby 7thsemester(forthoseproceeding
+v. in 8th) and for the students proceeding in 7th semester should have left with 22credits to
+vi. completeinthe8thsemester.
+vii. Astudentcanonlyoptoneoptioni.e.minor/concentration/additionalinternship.
+Therewillbetwogradesonlyi.e.Satisfactory/Unsatisfactory.
+viii. Thestudentwhofails togetsatisfactorygrade will beeligible onlyforthebasicdegreewithout
+ix. anymentionofadditionalinternship. th
+Astudentcanonlyoptforadditionalinternshipattheendof4 semester.
+x. There will be two reviews in between the Internship period by the faculty advisor and
+departmentforinternshipsupervisingtheInternship.
+xi. The courses to be done in the 7th/8th semester will be distributed to other semester so that
+xii. studentsareabletocompletecoursecreditrequirementsofbasicdegree.
+xiii. Astudentcantakemaximumcreditsof 24 foradditionalinternshipprogrammepersemester.
+TheinternshipwillbefacilitatedbytheCDPC Cell.
+xiv. Type of the internship (core/non-core) shall be decided by the parent department of the
+xv. student,itcouldbeinresearchlabs/industry/institutesetc.
+xvi. ThestudentsofB.Tech–M.TechDualDegreecanalsooptforadditionalinternship.
+xvii.The‘U’(“Unsatisfactory”)gradeinAdditionalinternshipwillbereflectedinthegradesheet.
+Undernocircumstances,Additionalinternshipcanbedonewithintheinstitute.
+For students opting additional internship in 8th semester, if the students could not avail the
+internship (outside the institute) forsome reason, the studentshall enroll to a new 15- credit“UG
+ResearchThesis”(lettergradingbased)courseinhis/herowndepartmenttoenablehim/hertodo
+xviii.researchwithintheinstitute.UGresearchThesiswillbeanindividualworkinlinewiththeM.Tech
+thesis.
+Successful enrollment to Additional Internship shall require approval from Academic Section
+basedontheofferletterofinternshipandconfirmationfromtheindustry.Theofferletterandother
+xix. information shall be submitted by the student well in advance, at least 7 days before start of the
+“AdditionalInternship”.
+The durationof II302 Additional Intenship forUG students is 14 weeks (if 6working days a week)
+2.7.19OSRU1P6PwLeEeMksE(NifT5AwRoYrkiEnXgAdaMysINaAwTeIeOk)NORGU80IDwEoLrkINinEgSdaFyOsRorTmHorEe.STUDENTS OF B.TECH.
+WHOFAILSINCORE COURSES.
+i.
+ii. Students who get “E” in a core course are eligible to seek Supplementary Examination in the
+immediatelyfollowingsemester.
+A student is eligible for writing only one Supplementary Examination in a course. In case a
+iii. student fails in the Supplementary Examination, he/she has to repeat the course in a regular
+semester,asandwhenitisoffered.
+iv. The Supplementary Examination will be held on the 1st Saturday/ Sunday of the following
+semester,beforetheadd/drop processends.
+v. The Supplementary Examination shall be scheduled with the mutual convenience of the
+instructorandthestudent,withintimationtotheAcademicSection.
+vi. ThesyllabusforsupplementaryexammustremainthesameaspertheregularSemesterPolicy
+(declaredbytheInstructorintherespectivecourseintheregularsemester).
+Final grade will be based on the marks obtained in PMT plus new marks secured in
+vii. thesupplementaryexamnotexceeding‘D’gradeonthesamegradingpolicyasthatusedinthe
+viii. regularsemester.
+Maximumnumberofsupplementaryexamstobewrittenbyastudentistwoinasemester.
+Not more than five supplementary examinations can be written by the student in the entire
+Page48
+durationof his/herdegreeprogIIrTaRmOmPeA.R//www.iitrpr.ac.in
+===== PAGE 53 =====
+2.7.20 SUMMERSEMESTERGUIDELINES:
+i. The summer semester courses will be floated for all backloggers of core courses, subject to
+availability of teachers. Keeping in mind smaller class strengths in some departments, the
+departments may fix the criteria for the minimum number of students for floating departmental
+coursesduringsummersemester.
+ii. The credit limit for the summer semester (for back loggers only) will be 9 credits subject to
+maximum3coursesonly.
+iii. No elective course will be floated to the students during summersemester, exceptforthe students
+ofthegraduatingbatch.
+iv. Thestudentswhowishtotakebacklogcoursesfloatedinsummersemesterarerequiredtoregister
+bypayingtherequisitefeeasfollows.
+Feepercredit (Tuitionfee) :
+Rs.4000/-percredit(i.e.ifastudenttakesa3creditcourse
+Otherfees :
+his/hertuitionfeewillbe4000*3=12000)
+Rs.2000/-
+Note: SC/ST/PH students are exempted from payment of Tuition fee. However, they have to pay
+2.7.2o1theGrUfeIeDoEfLRINs.2E0S0F0O/-R. SELFSTUDY/INDEPENDENTMODEINTHESUMMERSEMESTER:
+i. Thecoursesinwhichtherearelessthanorequalto5students,thecoursesbefloatedasselfstudy/
+independentcoursesinthesummersemester.
+ii. OnlythestudentswhoarehavingbackloginthecoursesbeallowedtotakethecourseinSelfstudy/
+independentmode.
+iii. The instructor(s) will provide the study material to the students and give assignments, conduct
+quizzesandexaminations.Theevaluationwillbedoneinofflinemodeonlyaspersummersemester
+academiccalendar.
+iv. B.Tech. students are allowed to take total two (02) course in self-study/independent mode during
+the entire duration of the program and 1 course as self-study/ independent mode during each
+summersemesteronly.
+v. The courses will be offered in the self-study / independent mode preferably to the graduating
+students,subjecttoneedofthecourse,availabilityoftheinstructorsandapprovalbytheDirector.
+Page49
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 54 =====
+2.7.22COMPARISONOFDIFFERENTOPTIONSGIVEIN2.5.1
+Semester===>> 1 2 3 4 5 6 Summer 7 8 Total
+betweensem6 Credits
+and7
+HSS
+Professional Economics(3) Human Professional Industrial HSS HSS 21
+English Geography Ethics Management ElectiveI ElectiveII
+Communication and (1.5) (3) (3) (3)
+(3)+Historyof Societal
+Technology Needs
+Physics
+(1.5) (3)
+Physicsfor 5
+Chemistry
+Engineers(5)
+Chemistry 4
+forEngineers
+Mathematics
+(4)
+Engineering Engineering 6
+MathematicsI Mathematics
+Science-Maths
+(3) II(3)
+Program- Program- Science- Science- 12
+Specific Specific Maths Maths
+Science- Science- ElectiveI ElectiveII
+MathsI(3) MathsII (3) (3)
+General
+(3)
+Engineering
+Introto Workshop(2) Program- Introto Environment 23.5
+ElectricalEng +Museum specific Engineerin al Sc & Engg
+(3)+ Lab(1)+ General gProducts (3)
+Engineering Programming Engineering (1)
+Drawing(1.5) &DataStruct (3)+ +Basic
+(4.5) Tinkering Electronic
+Projects(BTP+
+Lab(1.5) s(3)
+DE) +Internship
++ Development Industrial BTP BTP 12.5
+Comprehensive Engineering Internship& Capstone Capstone
+Viva Project(3) Comprehensive ProjectI ProjectII(3)
+Viva(3.5)* (3)
+th
+*IndustrialInternshipwillbeinthesummersemester,howeveritwillberegisteredinaregularsemester(e.g.)7 semester.Evaluationfortheinternship
+andcomprehensivevivawillbeconductedintheregularsemester. IITROPAR//www.iitrpr.ac.in Page50
+===== PAGE 55 =====
+ProgramCore
+(CSE/EE/ME/
+CE/CH) Program Program Program Program ProgramCore Program Program 48
+Core(3) Core(8) Core(8) Core(10.5) (6.5)+ Elective Elective
+ProgramCore (3) (3)
+and/or
+Honors(CSE/ Honors Honors
+Electives(6)
+EE/ME/ Project1 Project2
+CE/CH) (5) (5) 10
+Extra-
+Curricula
+r NCC/NSS/NSOI NCC/NSS/N NCC/NSS/N NCC/NSS/N 4
+(1) SOII(1) SOIII(1) SOIV(1)
+Biology
+Biologyfor 3
+Minor/ Minor/ Minor/ Minor/ Minor/
+Engineers(3)
+Concentration/ Concentrati Concentrati Concentra Concentrati
+HonorsRelated on/Honors on/Honors tion/ on/ 15
+OpenElective Related Related Honors Honors
+Coursewor Coursework Related Related
+k(4) (4) Coursework Coursewor
+(4) k(3)
+OpenElectives
+Open Open 6
+ElectiveI Elective
+(3) II
+Totalcredits
+(3)
+(B.Tech.+Minors
++Honors) 18 18.5 19.5 19 22 22.5 3.5 24 23 170
+Totalcredits
+(B.Tech.+Minor)
+18 18.5 19.5 19 22 22.5 3.5 19 18 160
+Totalcredits
+(B.Tech.)
+18 18.5 19.5 19 18 18.5 3.5 15 15 145
+Page51
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 56 =====
+3 FEES
+3.1 MODEOF PAYMENT
+(a) Institutedues
+AllInstituteduesshallbepaidthroughSBCollectto“IITRoparFeeaccount,IITRopar”.Incaseof
+Bankloanbythestudent,thefeecanbe deposited/transferredthroughInternetBanking.No
+(b) Mfeeesinsdcuasehsisaccepted.
+Mess dues shall be paid through SB Collect to “The Director, IIT Ropar, Hostel Account”. In
+case of Bank loan by the student, the fee can be deposited / transferred through Internet
+3.2 DBaEnAkiDngL.INNoEfSeeFiOnRcaPshAiYsMaccEeNptTed.
+(a) Institutedues
+(i)
+(ii) All the students will be informed through email the schedule for deposit of Institute fee,
+Hostelfee.
+(iii) All Institute dues to be paid in full before the last date for Late Registration (this is
+typicallyoneweekafterthefirstdayofclasses).
+Studentswhodonotpaytherequiredamountbytheduedate,orthosewhomakepartial
+(b) Messpdauyemsents,theirregistrationshallbecancelled.Theirregistrationwillberestoredonpayment
+offeesandafineasstipulatedintheInstituterules.
+AllMessduesaretobepaidonorbeforethedateforRegistrationValidationasnotifiedbythe
+3.3 REIFnUstNituDteO. F FEES
+Thewholeamountoffees/otherchargesdepositedbythestudentswillberefundableafterdeductionofRs.
+1,000/,ifthestudentsdonotjointheprogrammeafterpayingtheduesandleavetheInstitutebyapplying
+for refund on or before the date of registration. No refund of fees will be permissible to the students
+who have registered for the programme but leave immediately thereafter or later. In such cases, only
+c3a.u4tiGonUmIDoEneLyINwEilSlbFeOreRfuCnOdeNdTaInNdUthAaTttIoOoNonFlEyEatSthDeUenRdINofGthSeEsMemEeSsTteErR. WITHDRAWAL
+a. Wherever semester withdrawal for a student is approved as per the Institute rules, the semester
+feesiswaivedoffforthestudent(s).
+b. During the withdrawal period, a continuation fee of 3000/- will be charged to maintain his / her
+enrollment/registrationintheInstitute.
+c.3.5ThWesItTuHdeDntRiAsrWeqAuLireFdRtoOpMayTseHmEesItNerSfTeeIsTfUorTaEperiodofatleast8semester(4Years).
+If a student is continuously absentfrom the Institute for more than fourweeks without informing the
+Dean(Academics),his/hernamewillberemovedfromtheInstituterolls.Suchabsenceduringthefirst
+yearwillrendertheB.Tech.studentineligibleforre-admission.
+A B.Tech. student wishing to leave the Institute on his/her own should submit an application duly
+countersigned by his/her father/guardian. He/she shall also obtain “Clearance Certificate” from the
+Department, the Librarian, the Warden, the Officer Commanding, NCC, and the Accounts Section, and
+submittotheAcademicsSection(UG)forsettlinghis/heraccountsintheAccountsSection.Thestudent
+shallremainliabletopayallduestillthedateonwhichhis/hernameisformallystruckofftheInstitute
+Page52
+rolls. IITROPAR//www.iitrpr.ac.in
+===== PAGE 57 =====
+3.6TRANSCRIPTS,DEGREEANDOTHERCERTIfiCATES
+Additionaltranscripts,duplicatedegrees/diplomas,etccanbeobtainedonpaymentofthe
+followingcharges:
+a)Degree,inperson :Rs.1000
+b)Degree,inabsentia (InIndia) :Rs.1000
+(InAbroad) :Rs.1500
+Or :US$150
+c)MigrationCertificate* :Rs.500
+(Onlyoneoriginal)
+d)DuplicateDegree/certificate*(Only (InIndia) :Rs.2500
+oneOriginal)
+(InAbroad) :US$250
+e)Transcripts* (InIndia) :Rs.1000
+(1Original+4AttestedCopies) (InAbroad) :US$50
+f)DuplicateIdentityCard* :Rs.500
+g)CertificateofmediumofinstructioninEnglish* (InIndia) :Rs.100
+(Onlyoneoriginal) (InAbroad) :US$10
+h)Verificationofdegreecertificate,JEE (InIndia) :Rs.1000
+Rank,membershipofInstitutebodies, (InAbroad) :US$100
+etc.(foreachindividualverification)
+*iP)oCshtaarlacchtearrCgeerstiefixctartae(onlyoneoriginal)* (InIndia) :100
+(InAbroad) : US$10
+3.7 PROCEDURE FOR ISSUE OF DUPLICATE DEGREE CERTIFICATE / GRADE
+SHEETSFROMIITROPAR.
+The duplicate Degree certificate/Grade Sheets are issued only if the original Degree
+certificate/GradeSheetsarelostorstolen.
+A. Procedure
+ThefollowingprocedureistobeadoptedbythecandidateforgettingduplicateDegreecertificate/
+Gr1a.deSheetsissuedfromIITRopar:
+2. LodgeanFIR(FirstInformationReport)forthesametothenearestPoliceStation.
+3. PublishinthenewspaperaboutthelossoftheDegreecertificate/GradeSheets.
+Provide an affidavit prepared by a Notary on a non-judicial stamp paper. (The matter to be
+4. printedontheaffidavitisdetailedbelow)
+Writeanapplicationaddressedto“TheDean(Academics),IITRopar”mentioningthelossofyour
+5. degreeandreferenceoftheabovedocuments.
+Attach a photocopy of the original Degree certificate / Gradesheets conferred on you by IIT
+Ropar(ifavailable).
+Page53
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 58 =====
+B. Charges
+a. ForDuplicateDegreeCertificate
+:Candidatehastopayonline anamountofRs.2500/-(Rupees
+Two Thousand Five Hundred Only) in India or US$ 250 (US Dollar Two Hundred Fifty Only) in
+b. aFbororaGdr.ade Sheet (for one or all grade sheet):
+Candidate has to pay online an amount of Rs
+c. 2500/- (Rupees Rup.ees Two Thousand Five Hundred Only) in India or US$ 250 (US Dollar Two
+d. H T u h n e d f r o e l d lo F w ift i y ng On is ly t ) h i e n s a t b e r p o s a t d obeusedforpayment
+a.PostalChargesExtra
+:
+b.
+Gotohttps://www.onlinesbi.sbi/
+c.
+SelectSBCollect
+d. FEEFORDUPLICATEDEGREECERTIFICATE/GRADESHEETS
+SelectIITRopar(Institutename)
+e.
+Selectpaymentcategory:
+f.
+EnteryourentrynumberandclickonFetchpaymentdetails
+g.
+Fillthedetailsandcompletethepaymentprocedure.
+PleasefillthecorrectMobilenumberandemailIDtogetpaymentstatus.
+C. Processing
+Attach all the above documents in Original along with your application and send it at the following
+Dean(Academics),AcademicSection
+address:
+nd
+EastWing,2 Floor,
+M.VisvesvarayaBuilding
+IndianInstituteofTechnologyRopar,Rupnagar-140001(Punjab)INDIA
+Kindly note that it takes approximately 15 working days from the day of receiving the above
+documentstoprocessanapplicationfortheissuanceofaduplicateDegree(thisexcludespostaltime).
+Page54
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 59 =====
+ProformaforAffidavit
+(Tobeprintedonanon-judicialstamppaperofRs.50/-)
+AFFIDAVIT
+I, <NAMEOFTHECANDIDATE> sonofShri. <NAMEOFFATHER/MOTHER>, Residentof <PRESENT
+RESIDENTIAL ADDRESS>,herebysolemnly declareandaffirmasunder:
+1.
+That, I wasastudentof Indian Institute of Technology Ropar from <MONTH &YEAR>
+till <MONTH&YEAR>.
+2.
+That, I appeared and passed < NAME OF THE PROGRAMME> the Degree in <NAME OF BRANCH>
+fromIndianInstituteofTechnologyRoparintheyear<GRADUATINGYEAR>.
+3.
+That,theoriginal<NAMEOFTHEPROGRAMME> DegreeCertificate/GradeSheetsconferredupon
+me by the Indian Institute of Technology Ropar has actually been lost and to the best of my
+knowledge and belief, there is no immediate likelihood of the said original certificate being traced
+out.
+4.
+That,intheunlikelyeventoftheoriginaldegreecertificateevergettingfound,willnotbemisused.
+Deponent
+Verification
+Verifiedthatthecontentsofthisaffidavitaretrueandcorrecttothebestofmyknowledgeandbeliefand
+nothinghasbeenconcealedtherein.
+Date: <DATE OF WRITING AFFIDAVIT>
+Place:<CURRENT CITYOFYOURSTAY>
+Deponent
+Page55
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 60 =====
+3.8 PROCEDUREFORNAMECHANGEINTHEINSTITUTE
+The procedure foranamecorrection/changeintheInstitute follows aformal process.Thegeneral
+procedureusuallyincludesthefollowing:
+Write a Formal Application to the Dean Undergraduate (UG) stating reason for name change along
+withsupportingdocumentsasfollowing.
+ th
+ 12 certificatewithcorrected/changedname.
+ Gazettenotification
+ Affidavitofnamechange
+Updatedgovernment-issuedID(passport,driver’slicense,Aadharcard,etc.)
+Informationaboutnamechangemustbepublishedinthetwonewspapers(Onemustbein
+thelocalnewspaper)
+3.9DETAILSOFSEMESTER FEESFORTHEYEAR2025-26:
+3.9.1DETAILSOFSEMESTERFEESFORTHEYEAR2025-26FORFOREIGNNATIONAL:
+InstituteFees ForeignNationals
+TuitionFees Rs.1LacforSAARCcountries&Rs.
+1.5LacsforNon-SAARCcountries(persemester)
+Non-refundablefees Rs.6090/-(one-timepaymentatthetimeofadmission)
+/
+Refundablefees Rs.10,500/-
+Othermisc.fees Rs.16,435/- Rs.15,645/-
+Totalfees Rs.1,33,025/-forSAARC
+/
+Rs.1,83,025/-forNon-SAARC
+/
+Feespersemester
+Rs.1,16,435/- Rs.1,15,645/- forSAARC
+Rs.1,66,435/- Rs.1,65,645/-forNon-SAARC
+NOTE:OCI/PIOISTOBETREATEDASINDIANNATIONALSFORPAYMENTOFFEE.
+Page56
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 61 =====
+3.9.2DETAILSOFSEMESTERFEESFORTHEYEAR2025-26FORINDIANNATIONAL:
+Sr.No. Particulars Amount
+1 SEMESTERFEES (INR)
+1.1
+INSTITUTEFEES
+i)TuitionFee 100000
+ii)ExaminationFee 735
+iv)GymkhanaFee
+iii)Registration/EnrolmentFee 525
+v)MedicalFee
+1260
+vi)Laboratory&otherfacilities
+210
+2100
+vii)Library 1050
+viii)DevelopmentFund 2100
+1.2 HOSTELFEES+
+ix)StudentAmenitiesFee 2100
+i)HostelSeatRent 3150
+115645
+ii)Fan,Electricityandwatercharges 2415
+2 ONETIMEPAYMENTS(Non-Refundable)
+TOTAL(SemesterFeestobepaid)
+Tobepaidatthetimeofadmission.
+GradeCard
+AdmissionFees 1050
+420
+ProvisionalCertificate 210
+StudentWelfareFund 630
+ModernizationFees 420
+Identitycard 210
+Benevolentfund 525
+AlumniAffairsfee 2100
+TTroatianlin(ognaentdimPleacpeamymenetntatthetimeofadmission) 6059205
+3
+Deposits(Refundable)
+Institutesecuritydeposit 5250
+4 OTHERPAYMENTS
+Librarysecuritydeposit 5250
+TOTALFEES 133025
+Insurancescheme(tobepaideveryyearin1stsemester) 790
+Note:
+I) ThefeepayableatIITRoparissubjecttochangeaspertheInstituterules.
+II)
+AllSCandSTstudentswillget100%exemptionfrompaymentoftuitionfee.
+III) The *Economically weaker students (whose family income is less than Rs.1 lakh per
+annum, shallgetfullexemptionfrompaymentoftuitionfee).
+The*otherEconomicallyweakerstudents(whosefamilyincomeisbetweenRs.1lakhtoRs.5
+rd
+lakh per annum, shall get exemption from payment of tuition fee equivalent to 2/3 of the
+tuitionfee.
+*Irrespectiveofthecastecategoryofthestudents. Page57
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 62 =====
+3.10 HOSTEL/MESS FEES : To be notified separately
+*subjecttorevisionineverysemester.
+PleaseNote:ThestudentsarerequiredtopaytheHostel/MessFeeseverysemester.
+4 DISCIPLINEANDATTENDANCE
+4.1 DISCIPLINE
+(a)
+(b)
+Studentsareexpectedtodressandtoconductthemselvesinapropermanner.
+All forms of ragging are prohibited. If any incident of ragging comes to the notice of the
+authorities,thestudentconcernedshallbegiventheopportunitytoexplain.Iftheexplanationis
+notfoundtobesatisfactory,theauthoritiescanexpelhim/herfromtheInstitute.Thecasewillbe
+(c) handled as per UGC REGULATION ON CURBING THE MENACE OF RAGGING IN HIGHER
+EDUCATIONALINSTITUTIONS,2009.Thedetailedguidelinesarementionedatpageno61.
+The students are expected to conduct themselves in a manner that provides a safe working
+environment for women. Sexual harassment of any kind is not tolerable and will attract
+4.2 PapUpNroIpSrHiaMteEdiNscTipliTnOaryTacHtiEon.STUDENTS WHO INDULGE IN UNFAIR MEANS
+DURING QUIZZES/MIDSEMESTER/END-SEMESTER EXAMINATIONS.
+The following graded punishments will be imposed on those who indulge in Academic Mal-
+practices—unfairmeansduringquizzes/Mid-semester/End-semesterexaminations. Insuchcases,
+(a) Fothrerpuadreenbteshoaftvhioatusrtudentwouldbeinformedofsuchindiscipline:
+(i)
+Severewarningshallbeissuedtoastudentwhoisfoundtodisplayrudebehaviourtowards
+(ii) fellowstudents/invigilators.
+(b) MaTlphreascttuidceesntainsdliacbolerrtoesbpeoenxpdeinllgedPfuronmishthmeeexnatms:inationhall.
+S.No. NatureofMalpractice Recommended Punishment
+1 Communicatingwithneighboursinthe The erring student(s) shall be awarded `F’
+examinationhall. gradeinthesubjectconcerned.
+2. Possessing incriminating* materials The Disciplinary Committee shall
+insidetheexaminationhall. have the discretion to recommend
+(a)
+(or) oneofthefollowingpunishments:
+Possessing the answer book of Theerringstudents(s)shallbeawarded
+anothercandidate. ‘(Fb)’gradeinthesubjectconcerned.
+(or) (or)
+Passing on answer book to another The erring student(s) shall be awarded
+student.(or) ‘F’grade in the subject concerned and one
+Exchange of question papers, with gradeless in all the other subjects in the
+someanswersnoteddownonthem. c(co)ncernedsemester.
+(or) (or)
+Individual referral of The concerned student(s) shall be
+material/discussionwithotherstudents, awarded
+duringvisitoutsidetheexaminationhall. `F’ grade in all the subjects in the
+Page58
+IITROPAR//www.icitornpcr.earcn.inedsemester.
+===== PAGE 63 =====
+i)
+3. Theconcernedstudent
+Involved in malpractice in the
+shallbeawarded‘F’gradeinallsubjects,
+examinationfor the second time, in a ii)
+intheconcernedsemesterand
+premeditatedmanner.
+shall be debarred from attending classes
+andtakingexaminationsinthesubsequent
+semester.
+4. i)
+Impersonationintheexamination. Theconcernedstudent
+shallbeawarded`F’gradeinallsubjects,
+ii)
+intheconcernedsemesterand
+shall be debarred from attending classes
+and taking examinations in the next two
+subsequentsemesters.
+(*incriminatingmaterialsincludewritten/printedmaterial;unauthorizedadditionalsheetswithoutorwith
+write-ups,bits,scribblesonscales/handkerchief/onthebody;abuseofcalculator/organizer/cellphone,etc.)
+Page59
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 64 =====
+5 INDIAN INSTITUTEOF TECHNOLOGYROPAR,PUNJAB
+THE HONOUR CODE
+I,………………………………………..….....................................…EntryNo……………………...…………..
+D1.oherebyundertakethatasastudentofIITRopar,Punjab:
+I will not give or receive aid in examination; that I will not give or receive unpermitted aid in
+classwork,inpreparationofreportsorinotherworkthatistobeusedbytheinstructorasthe
+2. basisofgrading;and
+IwilldomyshareandtakeanactivepartinseeingtoitthatothersaswellasIupholdthespiritand
+3. letteroftheHonourCode.
+I realize that some examples of misconduct which are regarded as being in violation of the
+HonourCodeinclude:
+Copying from another's examination paper or allowing another to copy from one's own
+ paper;
+ Unpermitted collaboration;
+ Plagiarism;
+Revising and resubmitting a marked quiz or examination paper for regarding without t h e
+ instructor'sknowledgeandconcern;
+ Givingorreceivingunpermittedaidontakehomeexamination;
+Representingasone'sownworktheworkofanother,includinginformationavailableonthe
+ internet;
+Giving or receiving aid on academic assignments under circumstances in which a
+ responsiblepersonshouldhaveknownthatsuchaidwasnotpermitted;and
+Committing a cyber offence such as breaking passwords and accounts, sharingpasswords,
+electroniccopying,plantingvirusesetc.
+I accept that any act of mine that can be considered to be an Honour Code violation will invite
+disciplinaryaction.
+Date:……………………. Student'sSignature………………....……………..................
+Name:…………………………………….….................…….
+EntryNo:……………………………….................................
+Page60
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 65 =====
+6 ACADEMIC INTEGRITY
+1.
+Casesofethicallapsesemanatingfrominstitutionsofscientificresearchareincreasinglybeing
+reported in the news. In this context, we need to create awareness and come up with aset of
+clear guidelines to maintain academic integrity. A flourishing academic environmententails
+individualand community responsibilityfordoing so. The three broadcategories ofimproper
+2. academic behavior that will be considered are: I) plagiarism, II) cheating and III) conflictof
+interest.
+Cases of ethical plagiarism are the use of material, ideas, figures, code or data without
+appropriate acknowledgment or permission (in some cases) of the original source. This may
+(ai)nvolvesubmissionofmaterial,verbatimorparaphrased,thatisauthoredbyanotherpersonor
+publishedearlierbyoneself.Examplesofplagiarisminclude:
+(b)Reproducing, in whole or part, text/sentences from a report, book, thesis, publication or
+internet.
+(c)Reproducingone'sownpreviouslypublished data, illustrations,figures,images, orsomeone
+else'sdata,etc.
+Taking material from class-notes or downloading material from internet sites, and
+(d)incorporatingitinone'sclassreports,presentations,manuscriptsorthesiswithoutcitingthe
+originalsource.
+Self-plagiarism,whichconstitutescopyingverbatimfromone'sownearlierpublishedworkina
+journalorconferenceproceedingswithoutappropriatecitations.
+3. The resources given in Subsection (8) explain how to carry out proper referencing, as well as
+examplesofplagiarismandhowtoavoidit.
+(aC)heating is another form of unacceptable academic behavior and may be classified into
+(bd)ifferentcategories:
+(c)Copyingduringexams,andcopyingofhomeworkassignments,termpapersormanuscripts.
+Allowingorfacilitatingcopying,orwritingareportorexamforsomeoneelse.
+(d)Usingunauthorizedmaterial,copying,collaboratingwhennotauthorized,andpurchasingor
+borrowingpapersormaterialfromvarioussources.
+4.Fabricating (making up) or falsifying (manipulating) data and reporting them in thesis and
+publications.
+(a) Some guidelines for academic conduct are provided below to guard against negligence as
+wellasdeliberatedishonesty:
+(b)Use proper methodology for experiments and computational work. Accurately describe and
+compiledata.
+Carefullyrecord and save primary and secondary data such as original pictures, instrument
+datareadouts, laboratorynotebooks,andcomputerfolders.There shouldbe minimaldigital
+(c)manipulationofimages/photos;theoriginalversionshouldbesavedforlaterscrutiny,ifre-
+quired,andthechangesmadeshouldbeclearlydescribed.
+Ensure robust reproducibility and statistical analysis of experiments and simulations. It is
+(d)important to be truthful about the data and not to omit some data points to make an
+impressivefigure(commonlyknownas“cherrypicking”).
+(e)Lab notebooks must be well maintained in bound notebooks with printed page numbers to
+enablecheckinglaterduringpublicationsorpatent.Dateshouldbeindicatedoneachpage.
+(f) Writeclearly inyourownwords. Itisnecessaryto resistthetemptationto “copyandpaste'
+fromtheInternetorothersourcesforclassassignments,manuscriptsandthesis.
+Give due credit to previous reports, methods, computer programs etc. with appropriate
+5. citations. Material taken from your own published work should also be cited; as mentioned
+above,itwillbeconsideredself-plagiarismotherwise.
+A clash of personal or private interests with professional activities can lead to a potential
+conflict of interest, in diverse activities such as teaching, research, publication, work on
+committees, research funding and consultancy. It is necessary to protect actual professional
+independence, objectivity and commitment, and also to avoid an appearance of any
+impropriety arising from conflicts of interest. Conflict of interest is not restricted to personal
+financial gain; it extends to a large gamut of professional academic activities including peer
+reviewing,servingonvariouscommittees,whichmay,forexample,overseefundingorgivPeage61
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 66 =====
+recognition, as well as influencing public policy. To promote transparency and enhance
+credibility, potential conflicts of interests must be disclosed in writing to appropriate
+6. authorities,sothataconsidereddecisioncanbemadeonacase-by-casebasis.Someadditional
+informationisavailableinthesectionbelowdealingwithresources.
+(a)
+Theresponsibilityvarieswiththeroleoneplays.
+Student roles: Before submitting a thesis to the department, the student is responsible for
+checkingthethesisforplagiarismusingsoftwarethatisavailableontheweb.Inaddition,the
+studentshouldcertifythattheyareawareof theacademicguidelinesoftheinstitute, have
+(b) checkedtheirdocumentforplagiarism,andthatthethesisisoriginalwork.Aweb-checkdoes
+notnecessarilyruleoutplagiarism.
+Facultyshouldensurethatpropermethodsarefollowedforexperiments,computationsand
+theoreticaldevelopments,andthatdataareproperlyrecordedandsavedforfuturereference.
+In addition, they should review manuscripts and theses carefully. Apart from the student
+certificationregardingaweb-checkforplagiarismfortheses,theInstitutewillprovidesome
+commercial softwareatSERCforplagiarismchecking. Facultymembersare encouraged to
+use this facility for checking reports, theses and manuscripts. Faculty members are also
+(c) responsible for ensuring personal compliance with the above broad issues relating to
+academicintegrity.
+Abreachofacademicintegrityisaserious offencewithlonglastingconsequencesforboth
+theindividualandtheinstitute,andthiscanleadtovarioussections.Inthecaseofastudent,
+the first violation of academic breach will lead to a warning and/or an “F” course grade.
+Arepeatoffence, if deemedsufficiently serious,could leadto expulsion. Itis recommended
+that faculty members bring any academic violations to the notice of the Department
+Chairman. Upon receipt of reports of scientific misconduct, the Director may appoint a
+7. committee to investigate the matter and suggest appropriate measures on a case to case
+basis.
+The Indian Institute of Technology Ropar will own the Intellectual Property (IP) made or
+created by any student carrying out research under the supervision of any employee of the
+Institute,ortheIPdevelopedindividuallybythestudentinthecourseofhis/herstudiesatIIT
+Ropar, or with any use of IIT Ropar facilities. By accepting admission to IIT Ropar, a student
+agreestoassigntotheIITRoparallsuchIPmadeorcreatedatIITRopar,includinginventionsand
+8. copyright-able material; and to execute all papers required to assign, apply for, obtain,
+maintain,issueandenforceIPandIPrights.
+1.
+References:
+2. NationalAcademyofSciencesarticle“Onbeingascientist,”
+3. http://www.nap.edu/openbook.php?record_id=4917&paRI
+4. http://www.admin.cam.ac.uk/univ/plagiarism/
+5. http://www.aresearchguide.com/6plagiar.html
+6. https://www.indiana.edu/~tedfrick/plagiarism
+7. http://www.files.chem.vt.edu/chem-ed/ethics/index.html
+8. http://www.ncusd203.org/central/html/where/plagiarism_stoppers.html
+9. http://sja.ucdavis.edu/files/plagiarism.pdf
+10. http://web.mit.edu/academicintegrity/
+11. http://www.northwestern.edu/provost/students/integrity/
+12. http://www.ais.up.ac.za/plagiarism/websources.htm#info
+http://ori.dhhs.gov/
+http://www.scientificvalues.org/ceses.html
+Page62
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 67 =====
+7 SCHOLARSHIPS AND FELLOWSHIPS
+7.1 SCHOLARSHIPFOR B.TECH.STUDENTS
+7.1.1 INSTITUTE MERIT-CUM-MEANS (MCM)SCHOLARSHIPS
+The Institute offers Merit-cum-Means scholarships to under-graduate students in engineering and
+technology. These are permissible to about 25% of the students. The present value of Merit-cum-
+MeansscholarshipisRs.1000permonthforgeneralcategorystudentsandtherecipientisexemptedfrom
+payingtuitionfee.4-yearB.Tech.studentsareeligibletoreceiveMerit-cum-Meansscholarshipatthetime
+of joining the Institute. The criterion of merit for the first year is All India Rank (AIR) in theJEE. The
+scholarships are renewed on a yearly basis until he/she clears all academic requirements of the
+programme,providedthathe/shecontinuestosatisfytheeligibilityandcontinuationcriteria.
+ForcontinuationofMCM,theperformanceofthestudentswillbereviewedattheendofeachsemester.
+Thefirstsuchreviewwillbeheldattheendofthesecondsemester.
+Onthecriterionofmeans,onlythosestudentsarepresentlyeligiblewhoseparentshaveagrossyearly
+incomeuptoRs.4.5lacsperannum.Thiscriterionisapplicableforallcategoriesofstudentsincluding
+SC/STstudents.Thetermsandconditionsoftheawardofthescholarshiparelaiddownintherulesand
+regulationsthereofinforceandaresubjecttochangefromtimetotime.
+ContinuationofMCMScholarship:
+Forthegeneralcategorystudents,therequirementsofmeritforthe
+
+continuationofInstituteMerit-cum-MeansScholarshipare:
+
+CGPAmustbe6.0ormore;and
+Earnedcreditsshouldnotlessthan18timesthenumberofsemestersregisteredforORactualno.of
+
+creditsofferedbythedepartment;
+
+SGPAintheprevioussemestermustbe6.0ormore
+
+TheSGPA,CGPA,CreditsofBasicB.Tech.willonlybeconsidered.
+The SGPA requirement will be waived for the students having only “Additional Internship” in the
+7.1s.e2mIeNsSteTrIiTnUwThEichMhEeR/sIhTePdoReIsZaEdSdiAtiNonDalCinEtRerTnIsFhIiCpA. TES
+T1h.e Institute offers merit prizes and certificates to the top 7% of the students of each 4-year B.Tech.
+Programmeforthe1stand2ndsemester.ThevalueofmeritprizeisRs.2500.Therulesareasfollows
+For Merit Prizes and Certificates, the top 7% of the students admitted or sanctioned capacity
+whicheverislesswillbeeligibleinorderofmerit.Incasethe7%limitisexceededbyvirtueof
+morethanonestudenthavingsamemerit,thosestudentswillalsobeeligiblefortheseawards.
+2. The students having SGPA/CGPA less than 8.50 will not be considered for the awardofmerit
+prizesandcertificates.
+3. If 7% departmental strength is less than one, the students with highest CGPA subject to
+minimum8.5willbeawardedthemeritprizesofRs.2500/-.
+4. AprizeofRs.2500/-willbepaidtoallstudentsentitledtomeritprizes.Thiswillbeinadditionto
+anyscholarshipthatstudentmayreceivefromanysourcewhatsoever.
+5. The SGPA, CGPA, Credits of Basic B. Tech. will only be considered for award of 7% merit prize
+andcertificates.
+6. The award will be given to top 7% of the students each semester based on their SGPA in the
+previoussemester.
+7. Theawardof1styearstudentswillbegivenin2ndsemesterbasedontheirperformancein1st
+semester.
+8. Therewillbecommonmeritlistofallstudentsforthefirstyearstudents.Themeritlistfrom2nd
+to5thyearwillbemadedisciplinewise.
+Any student except final semester, having less than 18 earned credits in the semester under
+consideration will not be eligible for merit prizes. All the credits of courses repeated by the
+student in the semester under consideration will not count towards the 18 earned credits
+Page63
+mentionedabove. IITROPAR//www.iitrpr.ac.in
+===== PAGE 68 =====
+9.
+All graduating students subject to 7% limit will be considered eligible for awards on SGPA
+10. basis obtained during 8th/10th semester. In case of a tie, merit prize will be awarded to the
+studentwithhigher CGPA.
+11. The SGPA, CGPA, Credits of Basic B.Tech. will only be considered for award of 7% merit prize
+andcertificates.
+The SGPA requirement will be waived for the students having only “Additional Internship” in
+thesemesterinwhichhe/shedoesadditionalinternship.
+7.1.3 INSTITUTE FREE STUDENTSHIP
+TheInstituteoffersfreestudentshipto10%ofthestudentsonthebasisofmeansalone.Therecipientis
+exemptedfrompayingtuitionfee.StudentswhoarenoteligiblefortheawardofMCMScholarshiponthe
+basis of their parent's income will not be considered eligible for the award of Free Studentship
+Scholarship.
+Onthecriterionofmeans,onlythosestudentsarepresentlyeligiblewhoseparentshaveagrossyearly
+income up to Rs. 4.5 lac per annum. This criterion is applicable for all categories of studentsincluding
+SC/STstudents.Iftheslotsareavailableinthisscholarshipscheme,theeligiblestudentscanbegranted
+scholarship at any time, during their program on their request only. The terms and conditions of the
+award of the scholarship are laid down intherulesandregulationsthereofinforceandaresubjectto
+changefromtimetotime.
+ContinuationofFreestudentship:
+Forthegeneralcategorystudents,therequirementsofmeritforthe
+
+continuationofInstituteFreestudentship Scholarshipare:
+
+CGPAmustbe6.0ormore;and
+Earnedcreditsshouldnotlessthan18timesthenumberofsemestersregisteredforORactualno.of
+
+creditsofferedbythedepartment;
+
+SGPAintheprevioussemestermustbe6.0ormore
+
+TheSGPA,CGPA,CreditsofBasicB.Tech.willonlybeconsidered.
+The SGPA requirement will be waived for the students having only “Additional Internship” in the
+semesterinwhichhe/shedoesadditionalinternship.
+7.1.4 SCHOLARSHIP PROVISION FORSTUDENTSOF SC/ST CATEGORY
+(a)
+TuitionfeeexemptionisadmissibletoallSC/STstudentsirrespectiveoftheirparents/guardians
+(b)
+income.
+TheInstituteoffersascholarshipofRs.300/-permonthandexemptionfrompayingroomrent
+of the hostel, only to those SC/ST students whose parent'/guardians' income does notexceed
+thelimitprescribedbytheGovernmentofIndiafromtimetotimefortheawardofMerit-cum-
+Meansscholarship.
+or
+Freemessingscholarship:Thestudentscanoptforfreemessfacilities(basicmenu)andRs.250/-
+permonthaspocketallowanceinlieuoftheamountofthescholarship.
+All the eligible SC/ST students while on training or doing courses during semester breaks or
+requiredtostayintheInstituteduringthesemesterbreaksorexemptedtotakemealsfromthe
+hostelduetomedicalreasonsetc.maybegivenapaymentofRs.70/-aspocketallowance(per
+month)andaperdiemallowanceinlieuoffreemessfacilitiesonthebasisofprevalentaverage
+(c) rateofmesschargesasapplicablefromtimetotime.
+Where an SC/ST candidate fails in the examination for the first time, the award may be
+renewedsubjecttoamaximumlimitof5years.
+Page64
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 69 =====
+7.2 OTHER MISCELLANEOUS SCHOLARSHIPS FROM CENTRAL GOVERNMENT
+/STATEGOVERNMENT /NGO'S/SOMEEXTERNALAGENCIES:
+7.2.1NATIONALSCHOLARSHIPSPORTAL(FORALLCATEGORYSTUDENTS):
+National Scholarships Portal is one-stop solution through which various services starting from student
+application,applicationreceipt,processing,sanction anddisbursal of various scholarships to Student are
+enabled. Where all scholarships information available under one umbrella. Various scholarship schemes
+are launched/offered by Union Government, State Government and Union Territories for students on
+NationalScholarshipPortal.Singleintegratedapplicationusedforallscholarships.
+ThestudentcanoptforthesescholarshipofferedtothembyState/CentralGovernmentandotherexternal
+a7g.2en.2ciDesR/N.BG.OR’sA.SMtuBdeEnDtsKaArRerSeCqHuiOreLdAtRoSaHppIlPyPfoOrRthTisAsLcho:larshiptohttps://scholarships.gov.in.
+http://www.scholarships.punjab.gov.in/Default.aspx.
+7.2.3MUKHYAMANTRIMEDHAVIVIDHYARTIYOJANA(MMVY):
+http://scholarshipportal.mp.nic.in/slogin.aspx?ReturnUrl=%2fInstituteAdmin%2fVariousSchemes%2fM
+M7.V2Y.4%2Ef-RKeApLorYtAs%N2_fDViEePwA_ARpTpMlicEaNtiTonOs.FasSpCxHEDULEDTRIBE,SCHEDULEDCASTE,MINORITYAND
+BACKWARDCLASSWELFARE,GOVT.OFJHARKHAND
+: https://ekalyan.cgg.gov.in/
+7.2.5BIHARPOSTMATRICSCHOLARSHIP:
+htt7p.s2:./6/pPmMsSoSnSlinJe&.biKh.nSiCcH.inO/LpAmRseSdHuI/P(S(0srb2etyanwscwqty5tlki53))/pms/Default.aspx
+h7t.t2p.s7:/S/OwMwEw.EaXicTteE-jRk-NsAchLolAaGrsEhNipC-gIEovS.:in/institutes/login.php
+FAEA/Reliancefoundation/NTSEetc.Studentcanavailscholarshipsfromtheirparentsemployer,ifany
+departmentsoffers.
+7.2.8 JEEADVANCEDRANKMERITSCHOLARSHIP:
+B.Tech.StudentssatisfyingthebelowcriteriaareeligiblefortheJEEAdvancedrankmeritscholarship:
+(A). Merit scholarship to 2% to 3% of the students having JEE Advanced Rank given below will be
+providedscholarshipasfollows:
+1 JEE Advanced Rank 1to 500 in common Scholarshipequivalenttothefulltuitionfees.
+Ranklist(CRL)
+2 JEE Advanced Rank 501 to 1000 in Scholarshipequivalenttothehalf tuitionfees.
+commonRanklist(CRL)
+(B). Forcontinuationofthescholarship,thestudentshavetofulfillthefollowing criteria.
+i. CGPAmustbe7.0ormore;and
+ii. Earnedcreditsshouldnotlessthan18timestheno.ofsemestersregisteredfor.
+SGPAintheprevioussemestermustbe7.0more.
+Page65
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 70 =====
+7.2.9GUIDELINES FOR VIDYALAXMILOANSCHEME.
+Vidya Lakshmi Education Loan Scheme was launched under the Pradhan Mantri Vidya Lakshmi
+Karyakram to increase the literacy rates in the country. Under this scheme, the interest subvention is
+given to the students subject to their satisfactory academic performance in the institution. students
+interested to take loan are required to visit to the website www.vidyalakshm.com.in. Students can view,
+applyandtracktheeducationloanapplicationstobanksanytime,anywherebyaccessingtheportal.
+Following is the criteria for satisfactory Academic performance for Vidya Laxmi Loan
+Scheme
+1.ThestudentshouldsecureaminimumCGPAof5.00attheendofeachsemester.
+2.Thereshouldnotbeanybackloginanyregisteredcoursethroughouttheacademicprogramme.
+3. Earned credits should not less than 18 times the number of semesters registered for OR actual no. of
+creditsofferedbythedepartment.
+4. There should not be any disciplinary action against the student seeking interest subvention on
+educationloan.
+7.2.10FINANCIALAIDANDSTUDENTLOANS
+allmeritoriousstudents
+ThePM-VidyalaxmiScheme,aGovernmentofIndiainitiativeofferingcollateral-freeandguarantor-free
+educationloansisavailablefor whoaregettingadmissioninthisInstitution
+https://pmvidyalaxmi.co.in
+andwhoaredesirousofavailingeducationloanstopursuehighereducation.Youcanvisitthe
+portal .Theportaldoesnotchargeanyamountfromtheapplicant.Through
+theportal,youcan:
+· Applytomultiplebanksforeducationloan,
+· Accesscollateral-freeandguarantor-freeeducationloans,
+https://www.education.gov.in/sites/upload_files/mhrd/files/document-
+· Benefitofinterestsubsidiesavailabletoeligiblestudentsasperschemesguidelinesaccessible
+reports/PM_Vidyalaxmi_Scheme_Guidelines.pdf ).
+at
+(Annexure-D
+· Toaddressqueriesraisedbythestudents,thereisadedicatedToll-freenumber1800-1031.”
+8. NALANDA LIBRARY
+TheNalandaLibraryatIITRoparisaninvaluableresourceforknowledgeandlearning,playingacrucial
+role in supporting various academic and research activities at the institute. The library's primary
+objectiveistoprovideuserswiththenecessaryinformationresourcesandsupportbyofferingthelatest
+servicesthatareintegratedwithteaching,learning,andresearch.
+Inadditiontotextbooksandrecommendedreadingsforeachcourseofferedattheinstitute,thelibrary
+houses a growing collection of research monographs, reports, multi-volume reference works,
+dictionaries, encyclopedias, handbooks, and more. It also boasts a substantial collection of theses,
+dissertations, and annual reports, as well as standards inthe fields of science, engineering, technology,
+humanities,andsocialsciences.Thelibraryfacilitatesaccesstoover13,000electronicjournalsfrom30
+publishers through its participation in the One Nation One Subscription (ONOS) initiative by the
+Government of India. Additionally, it subscribes to several e-journals directly from publishers and
+throughreputablesubscriptionagencies.
+Currently, users can consult more than 25,000 books available on shelves, along with thousands of
+Page66
+IITROPAR//www.iitrpr.ac.in
+electronic books. The library provides online access to specialized databases, including economic and
+===== PAGE 71 =====
+politicaldatabasessuchasProwessIQandCMIEStatesofIndia,aswellasscientometricdatabaseslike
+Scopus,MathSciNet,andWebofScience.Toassistresearchersinimprovingtheirscientificwritingskills
+and ensuring the originality of their work, the library offers online access to tools such as Overleaf,
+Grammarly,andTurnitin.
+The library's circulation operations have been automated using RFID-based LMS-KOHA software. The
+Online Public Access Catalogue (OPAC), which is publicly accessible, enables users to search for
+documents in the library's collection. The library implements Radio Frequency Identification
+Technology(RFID),acutting-edgeauto-identificationtechniquethatsupportsself-serviceandenhances
+security.
+AdedicatedDigitalLearningHubhasbeenestablishedinthelibrary,whereuserscanaccesse-journals
+and browse CDs and DVDs containing books, theses, and dissertations. Additionally, the library has
+created an Institutional Digital Repository (IDR) using open-source DSpace software to archive and
+provide online access to the institute’s intellectual output. The IDR is publicly available, facilitating the
+disseminationofscholarlyworkwhilepromotingtheinstitution'svisibility.
+To further enhance resource accessibility, the library has developed a web-based Subject/Research
+Guide using the Subject Plus tool. This guide allows users to explore comprehensive library resources
+based on subject areas or research interests, including e-journals, books/e-books, databases, and
+theses/dissertations. The library is continually striving to identify and adopt emerging academic and
+researchsupporttools,therebyhelpingtheinstituteachieveitsvisionandmission.
+9. HEALTH CARE
+The Institute Medical Centre is located in a separate building adjacent to the hostel complex on the
+MainCampus.Ateamofdoctors,pharmacists,andnursingstaffhasbeenappointedtoassistcampus
+residents in case of a medical emergency. We also have a state-of-the-art ambulance for medical
+emergencies. Additionally, the Institute collaborates with several super specialty hospitals in the
+10c.itiHesOofSRTopEaLr,MAoChCalOi,aMndMChOaDndAigTarIhOtoNprovideadvancedmedicalcaretoitsmembers.
+The vibrant campus of IIT Ropar boasts an impressive array of accommodations with four boys’
+hostels—Satluj, Beas, Chenab, and Brahmaputra Boys—and three girls’ hostels—Raavi, T-6, and
+Brahmaputra Girls—each situated within the central expanse of the grounds. These hostels are
+thoughtfullydesignedandwell-furnished,providingacomfortablehavenforstudents.Eachresidence
+features inviting common rooms that serve as lively spaces for recreational activities, fostering a
+senseofcommunityamongtheresidents.
+The campus further enhances the student experience with spacious and airy common dining areas,
+allowing for social gatherings over shared meals. Excellent drinking water facilities are readily
+available in all hostels, ensuring the wellness of students. Each hostel is equipped with a wealth of
+common amenities, including indoor recreational spaces and various games, catering to diverse
+interests. Adding to the convenience, a selection of shops within the hostel precincts caters to the
+everydayneedsoftheresidents,makinglifeoncampusevenmoreaccommodating.
+Moreover, the institute takes pride in its well-maintained gymnasium, offering students fitness
+facilities to help them stay active and healthy amid their rigorous academic schedules. The lush
+greenery surrounding the IIT campus breathes life into the daily routines of students, creating an
+enchantingenvironmentthatinspirescreativityandtranquility.
+Page67
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 72 =====
+At IIT Ropar, campus life is vibrant and dynamic, with students encouraged to explore their hidden
+talents and reignite their passions. State-of-the-art classrooms equipped with advanced audiovisual
+aids,alongsidecutting-edgelaboratoriesthatofferthelatestresearchtools,significantlyenhancethe
+teaching and learning experience. The high-tech library, replete with a vast collection of books,
+journals,andperiodicals,servesasagatewayforstudentstoconnectwithaworldofknowledgeand
+information.
+Tocatertodiversepalates,themesshasundergonethoughtfulupdatestoitsmenu,offeringstudents
+an extensive selection of meal options. With a foundation of a fixed base menu, students can also
+choosefromadditionalitemsatanextracost,allowingforamorepersonalizeddiningexperience.
+At IITRopar, studentsnot only engage inrigorous academicpursuits but also thrive inresearch and
+extracurricular activities, developing into well-rounded aspiring engineers grounded in moral and
+ethical integrity. The carefully curated environment nurtures both personal growth and academic
+excellence,preparingstudentsfortheirfutureendeavors.
+*Note: Hostel accommodation will be provided on a sharing basis only depending upon the
+availability.
+11. STUDENT ACTIVITIES
+Under the ambit of Student Affairs Section, there are various Boards/Clubs viz Board of Science &
+Technology (BOST), Board of Cultural Affairs (BOCA), Board of Sports Affairs (BOSA), Board of
+Literary Affairs (BOLA) etc. which aims to promote various technological, cultural and other aspects
+amongthestudentfraternityandtodeveloptheiroverallskills.
+In addition, there are various clubs under these boards viz Alankar (Music) Club, Dance Club,
+Dramatics (Undekha) Club, Arturo (Photography) Club, Fine Arts clubs, Epicure-The Cooking Club,
+andalso ClubsinBoardofScience&TechnologyvizRobotic,Monochrome,Astronomy,Quiz,Coding
+clubs,wherethestudentscanparticipateanddevelopawell–roundedpersonality.Apartfromabove
+all, an Outdoor Adventure Club (ODAC), Snehita Wellbeing Cell are also there for the physical and
+mentalwellnessofStudents.
+12. STUDENT LIFE AT INSTITUTE
+Currently, the Main Campusoffers excellent facilities for a variety of sports, including a cricket field,
+three lawn tennis courts, a football field, a hockey field, a gymnasium, a basketball court, badminton
+courts,anathleticstrack,andatabletennisroom.TheInstituteencouragesstudentstoparticipatein
+inter-IIT sports events and other competitions. There are also spaces available for recreational and
+creativeactivities.
+13. GENERAL FACILITIES
+The Institute has a Bank branch of SBI as well as a Post office to cater to the needs of the
+faculty,staffandstudents.
+Page68
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 73 =====
+14.DETAILS OF MEDALS
+Nameofthe CriteriaforAward
+Medal
+PresidentGold Medal
+A candidate who obtains the highest CGPA among allstudents
+obtainingaB.Tech.degreeinthatyearfrom-the4year
+B.Tech.programme.Incasethereisatie,themedalisawardedtothe
+DirectorGold Medal studentwiththelargestearnedcredits.
+A candidate who is adjudged as the best all-rounder from
+InstituteGold Medal amongst the graduating students of the 4 year B.Tech.
+programme.
+A candidate securing a CGPA of 10, other than the one whohasbeen
+InstituteSilver
+awardedthePresident'sGoldmedal.
+Medal(Foreach
+programme) A candidate (one in each programme) who obtains the highestCGPA
+among and undergraduate graduating class of the Institute in
+his/herprogramme.Nosilvermedalwillbe
+awardedinthedisciplinefromwhichastudentgetsthe
+President's Gold Medal & Institute Gold Medal. A minimum CGPAof
+8.5 is required for the Institute Silver Medal; in case no graduating
+studentsatisfiesthiscriterion,the studentwith the highestCGPAis
+givenacertificate.
+SlNo Nameofthe CriteriaforawardofMedals Recommending
+Medal authority
+1 PresidentGold ThestudentgettinghighestCGPAinthebatchof Director
+Medal graduatingstudents
+2 Director'sGold Student who is adjudged to be the best all- HOD-For
+medal rounder (in semester examinations, activities in academic
+the Department, Hall of Residence and performance
+participation in Gymkhana games & sports) at the
+Dept- for
+endofthe eighth semesterforB.Tech.Aminimum
+departmental
+CGPA of 8.5 is required for the Director's Gold
+activities
+medal.
+Warden for Hall
+Distribution of weightage of different activities for
+ofresidence
+determining the eligibility for the award is as
+follows: Convenors of
+sports /
+(i)Academicrecord : 40%
+Gymkhana for
+otheractivities
+(ii)Departmentalactivities : 20%
+(iii)ActivitiesintheHallsof : 20%
+Residences
+(iv)Performanceunder : 20%
+Technology,Students’Gymkhana:
+Page69
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 74 =====
+3 InstituteSilver To a candidate (one in each programme) who HOD
+Medal obtains the highest CGPA among and
+undergraduate graduating class of the Institute
+in his/her programme. No silver medal will be
+awarded in the discipline from which a student
+gets the President’s Gold Medal & Institute Gold
+Medal. A minimum CGPA of 8.5 is required for
+theInstituteSilverMedal.
+Itmayfurtherbenotedthat:Astudentiseligiblefortheawardofanymedalsorprizeif:
+(i)InawardingallthemedalstheminimumCGPArequiredis8.5.inthecaseofInstitutesilver
+medal,iftheCGPAofthestudentinaparticulardepartmentislessthan8.5,acertificatewillbe
+issued.
+(ii)He/shehasnotfailedinanysubjectatanystageduringhis/heracademiccareertillthetimeof
+theaward.
+(iii)Nodisciplinaryactionhasbeentakenagainsthim/herforanyoffenceatanytimepriortothe
+award.
+(iv)He/shehasnotbeenpunishedunderexaminationmalpracticeandinvolvedinviolationofcode
+ofconductatanystageofthecourseintheInstitute/HallofResidence/Department/Gymkhanaetc.
+Intheeventofatiebetweentwoormorestudents,thenumberofcreditsonehascompletedatthe
+endofthedegreeistakenintoconsiderationtoarriveatadecision.Incasethereisatieagaintheir
+performanceattheendoftheimmediatelyprecedingsemesterwillbetakenintoconsiderationfor
+decidingtheaward.ThiscriterionwillbeexclusivelyappliedincludingusingtheAll-India-Rankin
+theJEEtillthetieisbroken.
+ACADEMIC CALENDAR FOR THE 1ST SEMESTER OF ACADEMIC
+YEAR 2025-26
+15.
+Pleasevisit-www.iitrpr.ac.in/academic-calendar-
+Page70
+IITROPAR//www.iitrpr.ac.in
+===== PAGE 75 =====
+16. UGC REGULATION ON CURBING THE MENACE OF RAGGING IN HIGHER
+EDUCATIONALINSTITUTIONS,2009
+In exercise of the powers conferred by Clause (g) of Sub-Section (I) of Section 26 of the University Grants
+CommissionAct,I956,theUniversityGrantsCommissionherebymakesthefollowingRegulations,namely-
+1. Title,commencementandapplicability:-
+11..12..Theseregulationsshallbecalledthe"UGCRegulationsonCurbingtheMenaceofRaggingin
+1.3.HigherEducationalInstitutions,2009".
+Theyshallcomeintoforcewithimmediateeffect.
+TheyshallapplytoalltheuniversitiesestablishedorincorporatedbyorunderaCentralAct,
+aProvincialActoraStateAct,toallinstitutionsdeemedtobe universityunderSection3oftheUGCAct,
+1956,toallotherhighereducationalinstitutions,includingthedepartments,constituentunitsandallthe
+premises(academic,residential,sports,canteen, etc)ofsuchuniversities,deemeduniversitiesandother
+higher educational institutions,whether located within the campus or outside, and to all means of
+2. Otbrjaencstpivoert:a-tionofstudentswhetherpublicorprivate.
+To root out ragging in all its forms from universities, colleges and other educational institutions in the
+countrybyprohibitingitbylaw,preventingitsoccurrencebyfollowingtheprovisionsoftheseRegulations
+andpunishingthosewhoindulgeinraggingasprovidedforintheseRegulationsandtheappropriatelawin
+3. fDoercfien.itions:-
+ForthepurposesoftheseRegulations:-
+3.1. “college"meansanyinstitution,whetherknownassuchorbyanyothername,whichprovidesfora
+programmeofstudybeyond12yearsofschoolingforobtainingqualificationfromauniversityand
+which,inaccordancewiththerulesandregulationsofsuchuniversity,isrecognizedascompetent
+to provide for such programme of study and present students undergoing such programme of
+studyfortheexaminationfortheawardofsuchqualification.
+3.2.
+"Headoftheinstitution"meansthe'Vice-Chancellor'incaseofauniversity/deemed
+tobeuniversity,'Principal'incaseofacollege,'Director'incaseofaninstitute
+3.3.
+"institution" means a higher educational institution (HEI), like a university, a college,an institute,
+etc. imparting higher education beyond 12 years of schooling leading to a degree (graduate,
+3.4. postgraduateand/orhigherlevel)and/ortoauniversitydiploma.
+"Ragging"meansthefollowing:
+Any conduct whether by words spoken or written or by an act which has the effect of teasing,
+treating or handling with rudeness any other student, indulging in rowdy or undisciplined
+activitieswhichcausesorislikelyto causeannoyance, hardshiporpsychological harmorto raise
+fearorapprehensionthereofinafresherorajuniorstudentoraskingthestudentstodoanyactor
+performsomethingwhichsuchstudentwillnotintheordinarycourseandwhichhastheeffectof
+causingorgeneratingasenseofshameorembarrassmentsoastoadverselyaffectthephysiqueor
+psycheofafresherorajuniorstudent.
+Page71
+===== PAGE 76 =====
+3.5.
+"Statutory/Regulatory body" means a body so constituted by a Central/ State Government
+legislationforsettingandmaintainingstandardsintherelevantareasofhighereducation,suchas
+the All India Council for Technical Education (AICTE), the Bar Council of India (BCI), the Dental
+Council of India(DCI),the Distance Education Council(DEC),the Indian Council of Agricultural
+Research(ICAR),theIndianNursingCouncil(INC),theMedicalCouncilofIndia(MCI),theNational
+Council for Teacher Education (NCTE), the Pharmacy Council of lndia (PCI), etc. and the State
+3.6.
+HigherEducationCouncils.
+"University" meansa university establishedorincorporated by orundera CentralAct, a Provincial
+ActoraStateAct,aninstitutiondeemedto beuniversityunderSection3 oftheUGCAct,1956,or
+4.PaunniinsshtiatbutlieoninsgpreecdiailelynetmsopofwReargegdinbgy:a-nActofParliamenttoconferorgrantdegrees.
+•
+•
+Abetmenttoragging;
+•
+Criminalconspiracytorag;
+•
+Unlawfulassemblyandriotingwhileragging;
+•
+Publicnuisancecreatedduringragging;
+•
+Violationofdecencyandmoralsthroughragging;
+•
+Injurytobody,causinghurtorgrievoushurt;
+•
+Wrongfulrestraint;
+•
+Wrongfulconfinement;
+•
+Useofcriminalforce;
+•
+Assaultaswellassexualoffencesorunnaturaloffences;
+•
+Extortion;
+•
+Criminaltrespass;
+•
+Offencesagainstproperty;
+•
+Criminalintimidation;
+Attempts to commit any or all of the above mentioned offences against the
+•
+victim(s);
+•
+Physicalorpsychologicalhumiliation;
+Measuresforprohibitionofraggingattheinstitutionlevel:-
+Allotheroffencesfollowingfromthedefinitionof"Ragging".
+5. 4.1
+The institution shall strictly observe the provisions of the Act of the Central Government
+andtheStateGovernments,ifany,orifenacted,consideringraggingasacognizableoffence
+4.2 under the law on a par with rape and other atrocities against women and ill-treatment of
+personsbelongingtotheSC/ST,andprohibitingragginginallitsformsinallinstitutions.
+Ragginginallitsformsshallbetotallybannedintheentireinstitution,including
+its departments, constituent units, all its premises (academic, residential,
+4.3 sports,canteen, etc) whether located within the campus or outside and in all
+meansoftransportationofstudentswhetherpublicorprivate.
+The institution shall take strict action against those found guilty of ragging
+6.Measuresforparnedv/eonrtioofnaboeftrtaingggirnagggaitntgh.einstitutionlevel
+6.1 Beforeadmissions:- :-
+6.1.1
+The advertisement for admissions shall clearly mention that ragging is totally
+banned in the institution, and anyone found guilty of ragging and/or abetting
+ragging is liable to be punished appropriately (for punishments, ref section 8
+below).
+Page72
+===== PAGE 77 =====
+6.1.2
+6.1.3 The brochure of admission/instruction booklet for candidates shall print in
+blockletterstheseRegulationsinfull(includingAnnexures).
+The 'Prospectus' and other admission related documents shall incorporate all
+directions of the Supreme Court and /or the Central or State Governments as
+applicable,sothatthecandidatesandtheirparents/guardiansaresensitizedin
+respect of the prohibition and consequences of ragging. If the institution is an
+6.1.4 affiliating university, it shall make it mandatory for the institutions under it to
+compulsorilyincorporatesuchinformationintheir'Prospectus'.
+The application form for admission/ enrolment shall have a printed
+undertaking, preferably both in English/Hindi and in one of the regional
+languages known to the institution and the applicant (English version given in
+AnnexureI,PartI),tobefilledupandsignedbythecandidatetotheeffectthat
+he/she is aware of the law regarding prohibition of ragging as well as the
+punishments, and to the effect that he/she has not been expelled and/or
+debarred from admission by any institution and that he/she, if found guilty of
+6.1.5 the offence of ragging and/or abetting ragging, is liable to be punished
+appropriately.
+The application form shall also contain a printed undertaking, preferably
+both in English/Hindi and in one of the regional languages known to the
+institutionand the parent/guardian (English version given inAnnexure I, Part
+II), to be signed by the parent/ guardian of the applicant to the effect that he/
+she is also aware of the law in this regard and agrees to abide by the
+6.1.6 punishment meted out to his/ her ward in case the latter is found guilty of
+raggingand/orabettingragging.
+Theapplicationforadmissionshallbeaccompaniedbyadocumentintheform
+of the School Leaving Certificate/Transfer Certificate/ Migration Certificate/
+Character Certificate which shall include a report on the behavioral pattern of
+6.1.7 the applicant, so that the institution can thereafter keep intense watch upon a
+studentwhohasanegativeentryinthisregard.
+A student seeking admission to the hostel shall have to submit additional
+6.1.8 undertaking in the form of Annexure I(both Parts) along with his/ her
+applicationforhostelaccommodation.
+AtthecommencementoftheacademicsessiontheHeadof theInstitutionshall
+convene and address a meeting of various functionaries/agencies, like Hostel
+Wardens, representatives of students, parents/ guardians, faculty, district
+administrationincludingpolice, todiscussthemeasuresto be takento prevent
+6.1.9 ragging in the Institution and steps to be taken to identify the offenders and
+punishthemsuitably.
+To make the community at large and the students in particular aware of the
+dehumanizing effect of ragging, and the approach of the institution towards
+those indulging in ragging, big posters (preferably multicolored with different
+colours for the provisions of law, punishments, etc.) shall be prominently
+displayedonallNoticeBoardsofalldepartments,hostelsandotherbuildingsas
+6.1.10 wellasatvulnerableplaces.Someofsuchpostersshallbeofpermanentnature
+incertainvulnerableplaces.
+The institution shall request the media to give adequate publicity to the law
+6.1.11 prohibiting ragging and the negative aspects of ragging and the institution's
+resolvetobanraggingandpunishthosefoundguiltywithoutfearorfavour.
+6.1.12 The institution shall identify, properly illuminate and man all vulnerable
+locations.
+Theinstitutionshalltightensecurityinitspremises,especiallyatthevulnerable
+6.1.13 places. If necessary, intense policing shall be resorted to at such points at odd
+hoursduringtheearlymonthsoftheacademicsession.
+The institution shall utilize the vacation period before the start of the new
+academic year to launch wide publicity campaign against ragging thPraogueg7h3
+===== PAGE 78 =====
+6.1.14
+posters,leaflets.seminars,streetplays,etc.
+The faculties/ departments/ units of the institution shall have induction arrangements
+(includingthosewhichanticipate,identifyandplantomeetanyspecial needsofanyspecific
+6.2 sOenctaiodnmoifssstiuodne:n-ts) in place well in advance of the beginning of the academic year with a
+clearsenseofthemainaimsandobjectivesoftheinductionprocess.
+6.2.1
+Everyfreshstudentadmittedtotheinstitutionshallbegivenaprintedleafletdetailingwhen
+and to whom he/she has to turn to for help and guidance for various purposes (including
+Wardens, Head of the institution, members of the anti-ragging committees, relevant district
+and police authorities), addresses and telephone numbers of such persons/authorities ,etc.,
+sothatthefresherneednotlookuptotheseniorsforhelpinsuchmattersandgetindebtedto
+them and start doing things, right or wrong, at their behest. Such a step will reduce the
+6.2.2 freshers'dependenceontheirseniors.
+The institution through the leaflet mentioned above shall explain to the new entrants the
+arrangements for their induction and orientation which promote efficient and effective
+6.2.3
+meansofintegratingthemfullyasstudent.
+The leaflet mentioned above shall also inform the freshers about their rights as bona fide
+students of the institution and clearly instructing them that they should desist from doing
+anything againsttheir will even if ordered by the seniors, andthat they have nothing to fear
+astheinstitutioncaresforthemandshallnottolerateanyatrocitiesagainstthem.
+6.2.4
+The leaflet mentioned above shall contain a calendar of events and activities laid down by
+the institution to facilitate and complement familiarization of freshers with the academic
+environmentoftheinstitution.
+6.2.5
+Theinstitutionshallalsoorganizejointsensitizationprogrammesof'freshers'andseniors.
+6.2.6
+Freshers shall be encouraged to report incidents of ragging, either as victims, or even as
+6.3 Atthweitennesdseosf.theacademicyear:-
+6.3.1
+AttheendofeveryacademicyeartheVice-Chancellor/DeanofStudentsWelfare/Director/
+Principal shall send a letter to the parents/ guardians of the students who are completing
+the first year informing them about the law regarding ragging and the punishments, and
+6.3.2 appealing to them to impress upon their wards to desist from indulging in ragging when
+theycomebackatthebeginningofthenextacademicsession.
+Atthe endof everyacademicyearthe institutionshallforma 'MentoringCell'consistingof
+Mentorsforthesucceedingacademicyear.ThereshallbeasmanylevelsortiersofMentors
+as the number of batches in the institution, at the rate of 1 Mentor for 6 freshers and 1
+Mentorofahigherlevelfor6Mentorsofthelowerlevel.
+6.4 SettingupofCommitteesandtheirfunctions:-
+6.4.1
+TheAnti-RaggingCommittee:-TheAnti-RaggingCommitteeshallbe headedbytheHeadof
+the institution and shall consist of representatives of faculty members, parents, students
+belonging to the freshers' category as well as seniors and non-teaching staff. It shall
+monitortheanti-raggingactivitiesintheinstitution,considertherecommendationsofthe
+Anti-Ragging Squad and take appropriate decisions, including spelling out suitable
+6.4.2 punishmentstothosefoundguilty.
+The Anti-Ragging Squad:- The Anti-Ragging Squad shall be nominated by the HeadPoafgteh7e4
+===== PAGE 79 =====
+institutionwithsuchrepresentationasconsiderednecessaryandshallconsistofmembers
+belonging to the various sections of the campus community. The Squad shall have vigil,
+oversightandpatrollingfunctions.Itshallbekeptmobile,alertandactiveatalltimesand
+shall be empowered to inspect places of potential ragging and make surprise raids on
+hostels and other hot spots. The Squad shall investigate incidents of ragging and make
+recommendations to the Anti-Ragging Committee and shall work under the overall
+6.4.3 guidanceofthesaidCommittee.
+Monitoring Cell on Ragging:- If the institution is an affiliating university, it shall have a
+MonitoringCellonRaggingtocoordinatewiththeinstitutionsaffiliatedtoitbycallingfor
+reports from the Heads of such institutions regarding the activities of the Anti-Ragging
+Committees, Squads, and Mentoring Cells , regarding compliance with the instructions on
+conductingorientationprogrammes,counselingsessions,etc.,andregardingtheincidents
+of ragging, the problems faced by wardens and other officials, etc. This Cell shall also
+review the efforts made by such institutions to publicize anti-ragging measures, cross-
+verify the receipt of undertakings from candidates/students and their parents/guardians
+everyyear,andshallbetheprimemoverforinitiatingactionbytheuniversityauthorities
+tosuitablyamendtheStatutesorOrdinancesorBye-lawstofacilitatetheimplementation
+ofantiraggingmeasuresattheleveloftheinstitution.
+6.5 Othermeasures:-
+6.5.1
+The Annexuresmentioned insub-clauses6.1.4, 6.1.5and6.1.7of theseRegulationsshall be
+6.5.2 furnished at the beginning of each academic year by every student, that is, by freshers as
+wellassemors.
+The institution shall arrange for regular and periodic psychological counseling and
+orientation for students (for freshers separately, as well as jointly with seniors) by
+professionalcounselorsduringthefirstthreemonthsofthenewacademicyear.Thisshall
+6.5.3 be done at the institution and department/ course levels. Parents and teachers Shall also
+beinvolvedinsuchsessions.
+Apart from placing posters mentioned ins ub-clause 6.1.9 above at strategic places, the
+institution shall undertake measures for extensive publicity against ragging by means of
+6.5.4 audio-visual aids, by holding counseling sessions, workshops, painting and design
+competitionsamongstudentsandothermethodsasitdeemsfit.
+If the institution has B.Ed. and other Teacher training programmes, these courses shall be
+mandated to provide for anti-ragging and the relevant human rights appreciation inputs,
+as well as topics on sensitization against corporal punishments and checking of bullying
+amongststudents,sothateveryteacherisequippedtohandleatleasttherudimentsofthe
+6.5.5 counselingapproach.
+Wardens shall be appointed as per the eligibility criteria laid down for the post reflecting
+boththecommandandcontrolaspectsofmaintainingdiscipline,aswellasthesofterskills
+of counseling and communicating with the youth outside the class-room situations.
+Wardens shall be accessible at all hours and shall be provided with mobile phones. The
+6.5.6 institution shall reviewand suitably enhance the powersand perquisites of Wardens and
+authoritiesinvolvedincurbingthemenaceofragging.
+6.5.7 The security personnel posted in hostels shall be under the direct control of the Wardens
+andassessedbythem.
+Private commercially managed lodges and hostels shall be registered with the local police
+authorities, and this shall be done necessarily on the recommendation of the Head of the
+institution.Localpolice,localadministrationandtheinstitutionalauthoritiesshallensure
+vigil on incidents thatmay come withinthe definitionof ragging and shall be responsible
+for action in the event of ragging in such premises, just as they would be for incidents
+within the campus. Managements of such private hostels shall be responsible for not
+reportingcasesofraggingintheirpremises. Page75
+===== PAGE 80 =====
+6.5.8
+TheHeadoftheinstitutionshalltake immediateactiononreceiptof therecommendations
+6.5.9 oftheAnti-RaggingSquad.He/Sheshallalsotakeactionsuomottoifthecircumstancesso
+warrant.
+Freshers who do not reportthe incidents of ragging either as victims or as witnesses shall
+6.5.10 alsobepunishedsuitably.
+st
+Anonymous random surveys shall be conducted across the I year batch of freshers every
+fortnight during the first three months of the academic year to verify and cross-check
+6.5.11 whether the campus is indeed free of ragging or not. The institution may design its own
+methodologyofconductingsuchsurveys.
+6.5.12
+Theburdenofproofshalllieontheperpetratorofraggingandnotonthevictim.
+The institution shall file an FIR with the police / local authorities whenever a case of
+ragging is reported, but continue with its own enquiry and other measures without
+6.5.13 waiting for action on the part of the police/ local authorities. Remedial action shall be
+initiatedandcompletedwithintheoneweekoftheincidentitself
+The Migration / Transfer Certificate issued to the student by the institution shall have an
+entry, apart from those relating to general conduct and behaviour, whether the student
+has been punished for the offence of committing or abetting ragging, or not, as also
+6.5.14 whether the student has displayed persistent violent or aggressive behaviour or any
+inclinationtoharmothers.
+Preventing or acting against ragging shall be the collective responsibility of all levels and
+6.5.15 sectionsofauthoritiesorfunctionariesintheinstitution,includingfaculty,andnotmerely
+thatofthespecificbody/committeeconstitutedforpreventionofragging.
+The Heads of institutions other than universities shall submit weekly reports to the Vice-
+chancelloroftheuniversitytheinstitutionisaffiliatedtoorrecognizedby,duringthefirst
+threemonthsofnewacademicyearandthereaftereachmonthonthestatusofcompliance
+withanti-raggingmeasures.TheViceChancellorofeachuniversityshallsubmitfortnightly
+6.5.16 reports of the university, including those of the Monitoring Cell on Ragging in case of an
+affiliatinguniversity,totheChancellor.
+Accessto mobile phones and public phones shall be unrestricted in hostels and campuses,
+except in class-rooms, seminar halls, library etc. where jammers shall be installed to
+6.6 Measuresrefsotrriectntchoeuursaegoifnmgohbeilaelpthhoynienst.eractionbetweenfresher’sandseniors:-
+6.6.1
+The institution shall set up appropriate committees including the course- in-
+charge, student advisor, Warden and some senior students to actively monitor,
+6.6.2 promote and regulate healthy interaction between the freshers and senior
+students.
+Freshers' welcome parties shall be organized in each department by the senior
+students andthe faculty togethersoonafter admissions,preferablywithin thefirst
+twoweeksofthebeginningoftheacademicsession,forproperintroductiontoone
+another and where the talents of thefreshers are brought out properly in the
+6.6.3 presence of the faculty, thus helping them to shed their inferiority complex, if any,
+andremovetheirinhibitions.
+The institution shall enhance the student-faculty interaction by involving the
+students in all matters of the institution, except those relating to the actual
+processes of evaluation andof faculty appointments, so that the students shall feel
+that they are responsible partners in managing the affairs of the institution and
+6.6.4 consequentlythecreditdueto theinstitutionforgoodwork/performanceisdueto them
+aswell.
+Page76
+===== PAGE 81 =====
+7. MeasuresattheUGC/Statutory/Regulatory body level:-
+7.1 Regulatorymeasures:-
+7.1.1 TheUGCand otherStatutory/Regulatorybodiesshall makeitmandatoryfor
+the institutions to compulsorily incorporate in their 'Prospectus' the directions of the
+Supreme Court and/or the Central or State Governments with regard to prohibition and
+consequencesofragging,andthatnon-compliancewiththedirectivesagainstragginginany
+manner whatsoever shall be considered as lowering of academic standards by the erring
+institutionmakingitliableforappropriateaction.
+7.1.2 TheUGC(includingNAACandUGCExpertCommitteesvisitinginstitutionsfor
+variouspurposes)andsimilarCommitteesofotherStatutory/Regulatorybodiesshallcross-
+verifythattheinstitutionsstrictlycomplywiththerequirementofgettingtheundertakings
+fromthestudentsandtheirparents/guardiansasenvisagedundertheseRegulations.
+7.1.3 The UGC and other funding bodies shall make it one of the conditions in the
+UtilizationCertificateforsanctioninganyfinancialassistanceoraidtotheinstitutionunder
+anyofthegeneralorspecialschemesthattheinstitutionhasstrictlycompliedwiththeanti-
+ragging measures and has a blemish-less record in terms of there being no incidents of
+raggingduringtheperiodpertainingtotheUtilizationCertificate.
+7.1.4 TheNAACandotheraccreditingbodiesshallfactorinanyincidentof ragging
+7.i2nthInecinesntittiuvteiosnfworhicleurabssiensgsirnaggthgeinings:t-itutionindifferentgrades.
+7.2.1 The UGC shall consider providing special/ additional annual financial grants-in-aid to those
+eligibleinstitutionswhichreportablemish-lessrecordintermsoftherebeingnoincidentsof
+ragging.
+7.2.2 TheUGCshallalsoconsiderinstitutinganothercategoryoffinancialawardsorincentivesfor
+those eligible institutionswhich takestringent actionagainstthose responsibleforincidents
+ofragging.
+7.2.3 TheUGCshalllaydownthenecessaryincentiveforthepostofWardeninordertoattractthe
+7.3rigMhottnyipteoroifnegligmibelechcaanndiisdmatetso,aenndsmuroetivcaotmetphleiainnccuem:b-ents.
+Apartfromthemonitoringmechanismbuiltinunderdifferentsub-clausesofthese
+Regu7l.a3t.i1ons,thereshallalsobethefollowingmonitoringmechanism:
+The UGC shall constitute an Inter-Council Committee for prevention of Ragging
+consisting of representatives of the AICTE, the IITs, the NITs, the IIMs, the MCI,
+theDCI, the NCI, the ICARandsuchother bodieswhich haveto deal withhigher
+education to coordinate and monitor the anti-ragging movement across the
+country and to make certain policy decisions. The said Committee shallmeet at
+leasttwiceayearinthenormalcourse.
+7.3.2 The UGC shall also have an Anti-Ragging Cell within the Commission as an
+institutional mechanism to provide secretarial support for collection of
+informationandmonitoring,andtocoordinatewiththeStatelevelanduniversity
+levelCommitteesforeffectiveimplementationofanti-raggingmeasures.
+8. Punishments:-
+8.1 Attheinstitutionlevel:-
+Depending upon the nature and gravity of the offence as established by the Anti- Ragging
+Committee of the institution, the possible punishments for those found guilty of ragging at
+Page77
+===== PAGE 82 =====
+8.1.1theinstitutionlevelshallbeanyoneoranycombinationofthefollowing:
+8.1.2
+8.1.3 Suspensionfromattendingclassesandacademicprivileges
+8.1.4 Withholding/withdrawingscholarship/fellowshipandotherbenefits
+8.1.5 Debarringfromappearinginanytest/examinationorotherevaluationprocess
+Withholdingresults
+8.1.6 Debarring from representing the institution in any regional, national or
+8.1.7 internationalmeet,tournament,youthfestival,etc.
+8.1.8 Suspension/expulsionfromthehostel
+8.1.9 Cancellationofadmission
+Rusticationfromtheinstitutionforperiodrangingfrom1to4semesters
+8.1.10 Expulsion from the institution and consequent debarring from admission to any other
+8.1.11 institutionforaspecifiedperiod.
+FinerangingbetweenRupees25,000/-andRupees1lakh
+8.2 AttheuConlilveectrisvietypluenvieslhimnernets:pWechteonftihnestpiteurtsioonnsscuonmdmerittitin:-g or abetting the crime of ragging
+arenotidentified,theinstitutionshallresorttocollectivepunishment.
+Ifaninstitutionunderauniversity(beingconstituentof,affiliatedtoorrecognizedbyit)failsto
+complywith any of the provisions of these Regulations and fails to curb ragging effectively, the
+8.1.1
+universitymayimposeanyoneoranycombinationofthefollowingpenaltiesonit:
+8.1.2
+Withdrawalofaffiliation/recognitionorotherprivilegesconferredonit
+Prohibiting such institution from presenting any students then undergoing any
+8.1.3
+programmeofstudythereinfortheawardofanydegree/diplomaoftheuniversity
+8.1.4
+Withholdinggrantsallocatedtoitbytheuniversity,ifany
+8.1.5
+Withholdinganygrantschanellisedthroughtheuniversitytotheinstitution
+8.3 Atthe appointingauthoritylevel:-
+Anyotherappropriatepenaltywithinthepowersoftheuniversity.
+The authorities of the institution, particularly the Headof the institution, shall be responsible
+to ensure that no incident of ragging takes place in the institution. In case any incident of
+ragging takes place, the Head shall take prompt and appropriate action against the person(s)
+whose dereliction of duty lead to the incident. The authority designated to appoint the Head
+8.4 AtsthhaellU,iGnCit/sSttuartnu,ttoakrey/pRroemgupltaatnodryapbpordopyrlieavteela:c-tionagainsttheHead.
+If an institution fails to curb ragging, the UGC/Statutory/Regulatory body concerned may
+8.4.1
+imposeanyoneoranycombinationofthefollowingpenaltiesonit:
+Delistingtheinstitutionfromsection12BoftheUGCActoranysimilarprovisioninthe
+ActoftheStatutory/Regulatorybodyconcerned.
+1.4.2 Withholdinganygrantsallocatedtoit
+1.4.3 Declaringtheinstitutionineligibleforconsiderationforanyassistanceunderanyofthe
+general or special assistance programmes of the UGC/Statutory/ Regulatory body
+concerned
+1.4.4 Declaring that the institution does not have the minimum academic standards and
+warning the potential candidates for admission accordingly through public notice and
+postingontheUGCWebsite/WebsiteoftheStatutory/Regulatorybodyconcerned.
+1.4.5 Taking such other action within its powers as it may deem fit and impose such other
+penalties as provided till such time as the institution achieves the objective of curbing
+ragging.
+1.4.6 Collaboratingwithoneanothertoworkoutotherpossibledeterrents.
+Page78
+===== PAGE 83 =====
+PLEASENOTE:
+AdvisoryfromUGCregardingrevisedprocedureofAnti-RaggingUndertaking:
+
+The students have to mandatorily fill the undertaking at the below
+
+link: https://antiragging.in/affidavit_registration_disclaimer.html
+Further,notedownthegenerateduniquereferencenumberforfuturereference.
+NationalAnti-RaggingHelpline
+24x7TollFree
+1800-180-5522
+helpline@antiragging.in|www.antiragging.in
+8.2 Attheuniversity level in respect ofinstitutions under it:-
+lf an institution undera university (being constituent of, affiliated to or recognized by it)
+fails to comply with any of the provisions of these Regulations and fails to curb ragging
+effectively,theuniversitymayimposeanyoneoranycombinationofthefollowingpenalties
+8.2.1
+on
+8.2.2it:
+Withdrawalofaffiliation/ recognitionorotherprivilegesconferred onit
+Prohibiting such institution from presenting any students then undergoing any
+programme of study therein for the award of any degree/diploma of the
+8.2.3
+university
+8.2.4
+Withholdinggrantsallocatedtoit bytheuniversity,ifany
+8.2.5
+Withholdinganygrants chanellised throughtheuniversitytotheinstitution
+8.3 AttheaApnpyooitnhteinrgapapurtohporriaittye lpeevneall:t-ywithinthepowersoftheuniversity.
+Theauthoritiesoftheinstitution,particularlytheHeadoftheinstitution, shallbe responsible
+to ensure that no incident of ragging takes place in the institution. In case any incident of
+ragging takes place, the Head shall take prompt and appropriate action against the person(s)
+whose dereliction of duty lead to the incident. The authority designated to appoint the Head
+8.4 sAhtatlhl,einUitGsCtu/rSnt,attaukteoprryo/mRpetgaunldaatpoprryobporidatyelaecvtieoln:-againsttheHead.
+8If.4a.n1 institution fails to curb ragging, the UGC/Statutory/Regulatory body concerned may
+imposeanyoneoranycombinationof thefollowingpenaltiesonit:
+8.4.2 Delisting the institution from section 12B of the UGC Act or any similar
+8.4.3 provisionintheActoftheStatutory/Regulatorybodyconcerned
+Withholdinganygrantsallocatedtoit
+Declaring the institution ineligible for consideration for any assistance under
+any of the general or special assistance programmes of the UGC/Statut6ry/
+Regulatory bodyconcerned
+Page79
+===== PAGE 84 =====
+8.4.4
+Declaring that the institution does not have the minimum academic standards
+and warning the potential candidates for admission accordingly through public
+8.4.5 notice and posting on the UGC Website/ Website of the Statutory/Regulatory
+bodyconcerned.
+Taking such other action within its powers as it may deem fit and impose such
+other penalties as provided till such time as the institution achieves the
+8.4.6 objectiveofcurbingragging.
+Collaborating with one another to workoutotherpossibledeterrents.
+Page80
+===== PAGE 85 =====
+ANNEXURE I,PartI
+UNDERTAKING BY THE CANDIDATE/STUDENT
+.I,……………………………………
+1 S/o.O/o.ofMr./Mrs./Ms.………………………………
+havecarefullyreadandfullyunderstoodthelawprohibitingraggingandthedirectionsof
+the SupremeCourtandtheCentral/StateGovernmentinthisregard.
+2.IhavereceivedacopyoftheUGCRegulationsonCurbingtheMenaceofRagginginHigher
+EducationalInstitutions,2009,andhavecarefullygonethroughit.
+•
+3.I hereby undertake that
+Iwillnotindulgeinanybehaviororactthatmaycome
+•
+underthedefinitionofragging,
+•
+Iwillnotparticipateinor abetorpropagateragginginanyform,
+Iwillnothurtanyonephysicallyorpsychologicallyorcause
+anyotherharm.
+4.Iherebyagreethatif foundguiltyofanyaspectofragging,Imaybepunishedas
+pertheprovisionsoftheUGCRegulationsmentionedaboveand/orasperthelaw
+inforce.
+5.IherebyaffrrmthatIhavenotbeenexpelledordebarredfromadmissionby
+anyinstitution.
+Signed this dayof monthof Year
+Signature
+Name: Address:
+Page81
+===== PAGE 86 =====
+ANNEXUREI,PartII
+UNDERTAKING BY PARENT/GUARDIAN
+F/o.M/o.
+1.I,……………………………………… G/o…………………………..
+havecarefullyreadandfullyunderstoodthelawprohibitingraggingandthe
+directionsoftheSupremeCourtandtheCentral/StateGovernment inthisregard
+aswellastheUGCRegulationsonCurbingtheMenaceofRagginginHigherEducational
+Institutions,2009.
+2. Iassureyouthatmyson/daughter/wardwillnotindulgeinanyactofragging.
+3. I herebyagree that ifhe/she isfound guiltyofanyaspect ofragging, he/she may be
+punished as per the provisions ofthe UGC Regulations mentioned above and/or as
+perthelawinforce.
+Signed this dayof monthof Year
+Signature
+Name: Address:
+Page82
+===== PAGE 87 =====
+CONTACTINFORMATION
+Prof.RajeevAhuja
+Director
+Dean DErm.aSial:cdhiirnecKtuorm@airitrpr.ac.in
+(DAecaadnemics-UG)
+EPmroafi.lR:daejeannudgr@aSiirtrivpar.satca.ivna
+(DAecaadnemics-PG)
+EDmr.aAilr:udneaKnupmg@ariitrpr.ac.in
+(ASstsuodceinatteAfDfaeiarsn)
+EDmr.aPila:rddeeaenpsaD@uihitarpnr.ac.in
+(JoHionstteRleMgiasntargaerment)
+EMmr.aLila:gavdi.shhmK@uimitraprr.ac.in
+(AAscsaisdteamnitcRs)egistrar
+EMmr.aAilm:jro.adcaKda@nihiterrper.ac.in
+(Academics)
+Email:officer-academics-1@iitrpr.ac.in
+Page83
+===== PAGE 88 =====
+Website:www.iitrpr.ac.in
+Email:office-academics-1@iitrpr.ac.in
+(NemINaiSlTseInTtUtoTthEisOaFddTrEesCsHwNillOoLnlOyGbeYmRoOniPtoArRed)
+ContactNo.01881-231176,231169,231111,231112,231113
+www.iitrpr.ac.in
+Page84

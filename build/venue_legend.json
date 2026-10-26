@@ -1,0 +1,207 @@
+{
+ "SRC001": {
+  "code": "SRC-001",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 50 Capacity",
+  "alias": "M1"
+ },
+ "M1": {
+  "code": "M1",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 50 Capacity",
+  "alias": "SRC-001"
+ },
+ "SRC002": {
+  "code": "SRC-002",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 50 Capacity",
+  "alias": "M2"
+ },
+ "M2": {
+  "code": "M2",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 50 Capacity",
+  "alias": "SRC-002"
+ },
+ "SRC003": {
+  "code": "SRC-003",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 100 Capacity",
+  "alias": "M3"
+ },
+ "M3": {
+  "code": "M3",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 100 Capacity",
+  "alias": "SRC-003"
+ },
+ "SRC004": {
+  "code": "SRC-004",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 100 Capacity",
+  "alias": "M4"
+ },
+ "M4": {
+  "code": "M4",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 100 Capacity",
+  "alias": "SRC-004"
+ },
+ "SRC005": {
+  "code": "SRC-005",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 195 Capacity",
+  "alias": "M5"
+ },
+ "M5": {
+  "code": "M5",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 195 Capacity",
+  "alias": "SRC-005"
+ },
+ "SRC006": {
+  "code": "SRC-006",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 180 Capacity",
+  "alias": "M6"
+ },
+ "M6": {
+  "code": "M6",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 180 Capacity",
+  "alias": "SRC-006"
+ },
+ "CS1": {
+  "code": "CS1",
+  "desc": "Classroom of 60 Capacity in CSE Block",
+  "alias": null
+ },
+ "CS2": {
+  "code": "CS2",
+  "desc": "Classroom of 40 Capacity in CSE Block",
+  "alias": null
+ },
+ "CSSH": {
+  "code": "CS(SH)",
+  "desc": "CSE Seminar Hall (90 capacity)",
+  "alias": null
+ },
+ "EE1": {
+  "code": "EE1",
+  "desc": "Classroom of 65 Capacity in EE Block",
+  "alias": null
+ },
+ "EE2": {
+  "code": "EE2",
+  "desc": "Classroom of 35 Capacity in EE Block",
+  "alias": null
+ },
+ "EE3": {
+  "code": "EE3",
+  "desc": "Classroom of 60 Capacity in EE Block(Room No. 204)",
+  "alias": null
+ },
+ "EESH": {
+  "code": "EE(SH)",
+  "desc": "EE Seminar Hall \u2014 JC Bose Block (80 capacity)",
+  "alias": null
+ },
+ "ME1": {
+  "code": "ME1",
+  "desc": "Classroom of 70 Capacity in ME Block",
+  "alias": null
+ },
+ "ME2": {
+  "code": "ME2",
+  "desc": "Classroom of 35 Capacity in ME Block",
+  "alias": null
+ },
+ "MESH": {
+  "code": "ME(SH)",
+  "desc": "Mechanical Engineering Seminar Hall",
+  "alias": null
+ },
+ "CYSH": {
+  "code": "CY(SH)",
+  "desc": "Chemistry Seminar Hall",
+  "alias": null
+ },
+ "CY1": {
+  "code": "CY1",
+  "desc": "Classroom of 35 Capacity in Chemistry Block",
+  "alias": null
+ },
+ "CY2": {
+  "code": "CY2",
+  "desc": "Classroom of 30 Capacity in Chemistry Block",
+  "alias": null
+ },
+ "S001": {
+  "code": "S-001",
+  "desc": "Classroom of 70 Capacity in Super Academic Block (ground floor PART C)",
+  "alias": null
+ },
+ "S002": {
+  "code": "S-002",
+  "desc": "Classroom of 70 Capacity in Super Academic Block (ground floor PART C)",
+  "alias": null
+ },
+ "S003": {
+  "code": "S-003",
+  "desc": "Classroom of 70 Capacity in Super Academic Block (ground floor PART C)",
+  "alias": null
+ },
+ "S102": {
+  "code": "S-102",
+  "desc": "Classroom of 70 Capacity in Super Academic Block (First floor PART A)",
+  "alias": null
+ },
+ "S103": {
+  "code": "S-103",
+  "desc": "Classroom of 70 Capacity in Super Academic Block (First floor PART A)",
+  "alias": null
+ },
+ "S104": {
+  "code": "S-104",
+  "desc": "Classroom of 70 Capacity in Super Academic Block (First floor PART A)",
+  "alias": null
+ },
+ "S105": {
+  "code": "S-105",
+  "desc": "Classroom of 70 Capacity in Super Academic Block (First floor PART A)",
+  "alias": null
+ },
+ "S106": {
+  "code": "S-106",
+  "desc": "Classroom of 70 Capacity in Super Academic Block (First floor PART C)",
+  "alias": null
+ },
+ "S107": {
+  "code": "S-107",
+  "desc": "Classroom of 70 Capacity in Super Academic Block (First floor PART C)",
+  "alias": null
+ },
+ "S202": {
+  "code": "S-202",
+  "desc": "SAB - allotted for MSDSM courses (Capacity planned 70)",
+  "alias": null
+ },
+ "SENATE": {
+  "code": "Senate",
+  "desc": "Senate Hall \u2014 M. Visvesvaraya Block, West Wing (280 capacity)",
+  "alias": null
+ },
+ "SRC107": {
+  "code": "SRC-107",
+  "desc": "S. RadhaKrishnan Complex (LHC) \u2014 Classroom of 170 Capacity at First Floor of LHC",
+  "alias": null
+ },
+ "AUDITORIUM": {
+  "code": "AUDITORIUM",
+  "desc": "Swami Vivekanand Auditorium",
+  "alias": null
+ },
+ "AUDI": {
+  "code": "AUDI",
+  "desc": "Swami Vivekanand Auditorium",
+  "alias": null
+ },
+ "SENATEHALL": {
+  "code": "SENATEHALL",
+  "desc": "Senate Hall \u2014 M. Visvesvaraya Block, West Wing (280 capacity)",
+  "alias": null
+ },
+ "MESH2": {
+  "code": "MESH2",
+  "desc": "ME Seminar Hall",
+  "alias": null
+ }
+}

@@ -1,0 +1,1990 @@
+{
+ "Monday": [
+  {
+   "raw": "PH101(S001)",
+   "subject": "PH101",
+   "venue": null,
+   "division": [
+    "D1"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T- PCPE",
+   "col": "B",
+   "row": 5,
+   "universal": false
+  },
+  {
+   "raw": "PH101(EE-SH)",
+   "subject": "PH101",
+   "venue": "EE-SH",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T- PCPE",
+   "col": "B",
+   "row": 6,
+   "universal": false
+  },
+  {
+   "raw": "PH101(EE-1)",
+   "subject": "PH101",
+   "venue": "EE-1",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T- PCPE",
+   "col": "B",
+   "row": 7,
+   "universal": false
+  },
+  {
+   "raw": "PH101(EE-3)",
+   "subject": "PH101",
+   "venue": "EE-3",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T- PCPE",
+   "col": "B",
+   "row": 8,
+   "universal": false
+  },
+  {
+   "raw": "PH101(CS-1)",
+   "subject": "PH101",
+   "venue": "CS-1",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T- PCPE",
+   "col": "B",
+   "row": 9,
+   "universal": false
+  },
+  {
+   "raw": "PH101(CS-SH)",
+   "subject": "PH101",
+   "venue": "CS-SH",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T- PCPE",
+   "col": "B",
+   "row": 10,
+   "universal": false
+  },
+  {
+   "raw": "AI101(D1&D2) / AI200 /  / Auditorium",
+   "subject": "AI101",
+   "venue": "Auditorium",
+   "division": [
+    "D1",
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PC-1",
+   "col": "C",
+   "row": 5,
+   "universal": false
+  },
+  {
+   "raw": "CY101-LAB(CSE 1169-1254)",
+   "subject": "CY101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "CSE",
+     1169,
+     1254
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PC-1",
+   "col": "C",
+   "row": 39,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D1) / SENATE HALL",
+   "subject": "MA101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D1"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "10.00 - 10. 50",
+   "category": "PC -2",
+   "col": "D",
+   "row": 5,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D2) / SRC-107",
+   "subject": "MA101",
+   "venue": "SRC-107",
+   "division": [
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "10.00 - 10. 50",
+   "category": "PC -2",
+   "col": "D",
+   "row": 6,
+   "universal": false
+  },
+  {
+   "raw": "PH101(D1) / SENATE HALL",
+   "subject": "PH101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D1"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "11.00 - 11.50",
+   "category": "PC -3",
+   "col": "E",
+   "row": 5,
+   "universal": false
+  },
+  {
+   "raw": "PH101(D2) / SCR-107",
+   "subject": "PH101",
+   "venue": "SRC-107",
+   "division": [
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "11.00 - 11.50",
+   "category": "PC -3",
+   "col": "E",
+   "row": 6,
+   "universal": false
+  },
+  {
+   "raw": "HS110  / SRC-006",
+   "subject": "HS110",
+   "venue": "SRC-006",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "12.00 - 12. 50",
+   "category": "PC - 4",
+   "col": "F",
+   "row": 5,
+   "universal": false
+  },
+  {
+   "raw": "HS111  / SRC-107",
+   "subject": "HS111",
+   "venue": "SRC-107",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "12.00 - 12. 50",
+   "category": "PC - 4",
+   "col": "F",
+   "row": 6,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026CSB1239-1273)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "CSE",
+     1239,
+     1273
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "HSME",
+   "col": "H",
+   "row": 38,
+   "universal": false
+  },
+  {
+   "raw": "PH101-LAB(G6)",
+   "subject": "PH101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G6"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "HSME",
+   "col": "H",
+   "row": 44,
+   "universal": false
+  },
+  {
+   "raw": "AI101LAB(SRC-005) / TILL 18.08.2026",
+   "subject": "AI101LAB",
+   "venue": "SRC-005",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "HSPE",
+   "col": "J",
+   "row": 5,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026CSB1274-1288&1693,1694 AND ALL DA BATCH)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "CSE",
+     1274,
+     1288
+    ],
+    [
+     "nums",
+     "CSE",
+     [
+      1693,
+      1694
+     ]
+    ],
+    [
+     "branch",
+     "DA"
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "HSPE",
+   "col": "J",
+   "row": 38,
+   "universal": false
+  },
+  {
+   "raw": "AI101 (LAB) (D1)",
+   "subject": "AI101",
+   "venue": "LAB",
+   "division": [
+    "D1"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "HSPE",
+   "col": "J",
+   "row": 43,
+   "universal": false
+  },
+  {
+   "raw": "IK101(SRC-107)",
+   "subject": "IK101",
+   "venue": "SRC-107",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "PHSME",
+   "col": "K",
+   "row": 5,
+   "universal": false
+  },
+  {
+   "raw": "NCC/NSO/NSS",
+   "subject": "NCC/NSO/NSS",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "PHSME",
+   "col": "K",
+   "row": 40,
+   "universal": true
+  },
+  {
+   "raw": "TL101(SENATE)",
+   "subject": "TL101",
+   "venue": "SENATE",
+   "division": [],
+   "group": [],
+   "branch": [
+    "AIDE",
+    "CSE",
+    "DA",
+    "EP",
+    "MCB"
+   ],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "6.00- 6.50",
+   "category": "T-PC-1",
+   "col": "L",
+   "row": 5,
+   "universal": false
+  }
+ ],
+ "Tuesday": [
+  {
+   "raw": "MA101(EE-1)",
+   "subject": "MA101",
+   "venue": "EE-1",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -HSPE",
+   "col": "B",
+   "row": 46,
+   "universal": false
+  },
+  {
+   "raw": "MA101(EE-SH)",
+   "subject": "MA101",
+   "venue": "EE-SH",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -HSPE",
+   "col": "B",
+   "row": 47,
+   "universal": false
+  },
+  {
+   "raw": "MA101(CS-1)",
+   "subject": "MA101",
+   "venue": "CS-1",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -HSPE",
+   "col": "B",
+   "row": 48,
+   "universal": false
+  },
+  {
+   "raw": "MA101(SRC-004)",
+   "subject": "MA101",
+   "venue": "SRC-004",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -HSPE",
+   "col": "B",
+   "row": 49,
+   "universal": false
+  },
+  {
+   "raw": "MA101(EE-3)",
+   "subject": "MA101",
+   "venue": "EE-3",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -HSPE",
+   "col": "B",
+   "row": 50,
+   "universal": false
+  },
+  {
+   "raw": "MA101(ME-1)",
+   "subject": "MA101",
+   "venue": "ME-1",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -HSPE",
+   "col": "B",
+   "row": 51,
+   "universal": false
+  },
+  {
+   "raw": "MA101(S-105)",
+   "subject": "MA101",
+   "venue": "S-105",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -HSPE",
+   "col": "B",
+   "row": 52,
+   "universal": false
+  },
+  {
+   "raw": "AI101(D1&D2) / AI200 /  / Auditorium",
+   "subject": "AI101",
+   "venue": "Auditorium",
+   "division": [
+    "D1",
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PC-1",
+   "col": "C",
+   "row": 46,
+   "universal": false
+  },
+  {
+   "raw": "CY101-LAB(2026CSB1255-1694 & EP & ICDT BATCHS)",
+   "subject": "CY101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "CSE",
+     1255,
+     1694
+    ],
+    [
+     "branch",
+     "EP"
+    ],
+    [
+     "branch",
+     "ICDT"
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PC-1",
+   "col": "C",
+   "row": 74,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D1) / SENATE HALL",
+   "subject": "MA101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D1"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "10.00 - 10. 50",
+   "category": "PC -2",
+   "col": "D",
+   "row": 46,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D2) / SRC-107",
+   "subject": "MA101",
+   "venue": "SRC-107",
+   "division": [
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "10.00 - 10. 50",
+   "category": "PC -2",
+   "col": "D",
+   "row": 47,
+   "universal": false
+  },
+  {
+   "raw": "PH101(D1) / SENATE HALL",
+   "subject": "PH101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D1"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "11.00 - 11.50",
+   "category": "PC -3",
+   "col": "E",
+   "row": 46,
+   "universal": false
+  },
+  {
+   "raw": "PH101(D2) / SCR-107",
+   "subject": "PH101",
+   "venue": "SRC-107",
+   "division": [
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "11.00 - 11.50",
+   "category": "PC -3",
+   "col": "E",
+   "row": 47,
+   "universal": false
+  },
+  {
+   "raw": "HS110  / SRC-006",
+   "subject": "HS110",
+   "venue": "SRC-006",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "12.00 - 12. 50",
+   "category": "PC - 4",
+   "col": "F",
+   "row": 46,
+   "universal": false
+  },
+  {
+   "raw": "HS111  / SRC-107",
+   "subject": "HS111",
+   "venue": "SRC-107",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "12.00 - 12. 50",
+   "category": "PC - 4",
+   "col": "F",
+   "row": 47,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026CSB1169-1203)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "CSE",
+     1169,
+     1203
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCDE",
+   "col": "H",
+   "row": 68,
+   "universal": false
+  },
+  {
+   "raw": "WP101-LAB(G12)",
+   "subject": "WP101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G12"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCDE",
+   "col": "H",
+   "row": 69,
+   "universal": false
+  },
+  {
+   "raw": "PH101-LAB(G5)",
+   "subject": "PH101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G5"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCDE",
+   "col": "H",
+   "row": 76,
+   "universal": false
+  },
+  {
+   "raw": "AI101LAB(SRC-005) / TILL 18.08.2026",
+   "subject": "AI101LAB",
+   "venue": "SRC-005",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "HSPE",
+   "col": "J",
+   "row": 46,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026CSB1204-1238)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "CSE",
+     1204,
+     1238
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "HSPE",
+   "col": "J",
+   "row": 68,
+   "universal": false
+  },
+  {
+   "raw": "AI101 (LAB) (D2)",
+   "subject": "AI101",
+   "venue": "LAB",
+   "division": [
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "HSPE",
+   "col": "J",
+   "row": 70,
+   "universal": false
+  },
+  {
+   "raw": "IK101(SRC-107)",
+   "subject": "IK101",
+   "venue": "SRC-107",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "PHSME",
+   "col": "K",
+   "row": 46,
+   "universal": false
+  },
+  {
+   "raw": "LIFE SKILL/ NCC/NSO/NSS ",
+   "subject": "LIFE SKILL/ NCC/NSO/NSS",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "PHSME",
+   "col": "K",
+   "row": 73,
+   "universal": true
+  },
+  {
+   "raw": "`",
+   "subject": "`",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "6.00- 6.50",
+   "category": "T-PEOE",
+   "col": "L",
+   "row": 75,
+   "universal": false
+  }
+ ],
+ "Wednesday": [
+  {
+   "raw": "AI101(D1&D2) / AI200 /  / Auditorium",
+   "subject": "AI101",
+   "venue": "Auditorium",
+   "division": [
+    "D1",
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PC-1",
+   "col": "C",
+   "row": 79,
+   "universal": false
+  },
+  {
+   "raw": "CY101-LAB( ME BATCH 2026)        ",
+   "subject": "CY101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "branch",
+     "ME"
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PC-1",
+   "col": "C",
+   "row": 111,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D1) / SENATE HALL",
+   "subject": "MA101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D1"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "10.00 - 10. 50",
+   "category": "PC -2",
+   "col": "D",
+   "row": 79,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D2) / SRC-107",
+   "subject": "MA101",
+   "venue": "SRC-107",
+   "division": [
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "10.00 - 10. 50",
+   "category": "PC -2",
+   "col": "D",
+   "row": 80,
+   "universal": false
+  },
+  {
+   "raw": "PH101(D1) / SENATE HALL",
+   "subject": "PH101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D1"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "11.00 - 11.50",
+   "category": "PC -3",
+   "col": "E",
+   "row": 79,
+   "universal": false
+  },
+  {
+   "raw": "PH101(D2) / SCR-107",
+   "subject": "PH101",
+   "venue": "SRC-107",
+   "division": [
+    "D2"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "11.00 - 11.50",
+   "category": "PC -3",
+   "col": "E",
+   "row": 80,
+   "universal": false
+  },
+  {
+   "raw": "HS110  / SRC-006, EE-SH",
+   "subject": "HS110",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "12.00 - 12. 50",
+   "category": "PC - 4",
+   "col": "F",
+   "row": 79,
+   "universal": false
+  },
+  {
+   "raw": "HS111  / SRC-107, CS-SH",
+   "subject": "HS111",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "12.00 - 12. 50",
+   "category": "PC - 4",
+   "col": "F",
+   "row": 80,
+   "universal": false
+  },
+  {
+   "raw": "HS112  / SRC-107",
+   "subject": "HS112",
+   "venue": "SRC-107",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 79,
+   "universal": false
+  },
+  {
+   "raw": "HS113 / SENATE HALL",
+   "subject": "HS113",
+   "venue": "SENATE HALL",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 80,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026MNC1537-1571)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "MCB",
+     1537,
+     1571
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 106,
+   "universal": false
+  },
+  {
+   "raw": "WP101-LAB(ES,ICDT ALL STUDENTS OF BATCH 2026)",
+   "subject": "WP101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "branch",
+     "ES"
+    ],
+    [
+     "branch",
+     "ICDT"
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 111,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D3) / SRC-107",
+   "subject": "MA101",
+   "venue": "SRC-107",
+   "division": [
+    "D3"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "3.00 - 3.50",
+   "category": "PCE-2",
+   "col": "I",
+   "row": 79,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D4) / SENATE HALL",
+   "subject": "MA101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "3.00 - 3.50",
+   "category": "PCE-2",
+   "col": "I",
+   "row": 80,
+   "universal": false
+  },
+  {
+   "raw": "CY101(D3) / SRC-107",
+   "subject": "CY101",
+   "venue": "SRC-107",
+   "division": [
+    "D3"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "PCE-3",
+   "col": "J",
+   "row": 79,
+   "universal": false
+  },
+  {
+   "raw": "CY101(D4) / SENATE HALL",
+   "subject": "CY101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "PCE-3",
+   "col": "J",
+   "row": 80,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026MNC1572-1581, 1696 & 1697 AND ALL EP STUDENTS)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "MCB",
+     1572,
+     1581
+    ],
+    [
+     "nums",
+     "MCB",
+     [
+      1696,
+      1697
+     ]
+    ],
+    [
+     "branch",
+     "EP"
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "PCE-3",
+   "col": "J",
+   "row": 106,
+   "universal": false
+  },
+  {
+   "raw": "GE103(D3 & D4) (Auditorium)",
+   "subject": "GE103",
+   "venue": "Auditorium",
+   "division": [
+    "D3",
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "PHSME",
+   "col": "K",
+   "row": 79,
+   "universal": false
+  },
+  {
+   "raw": "IK101(SRC-107)",
+   "subject": "IK101",
+   "venue": "SRC-107",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "PHSME",
+   "col": "K",
+   "row": 81,
+   "universal": false
+  },
+  {
+   "raw": "LIFE SKILL/ NCC/NSO/NSS ",
+   "subject": "LIFE SKILL/ NCC/NSO/NSS",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "PHSME",
+   "col": "K",
+   "row": 107,
+   "universal": true
+  },
+  {
+   "raw": "GE103(D3 & D4) (Auditorium)",
+   "subject": "GE103",
+   "venue": "Auditorium",
+   "division": [
+    "D3",
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "6.00- 6.50",
+   "category": "T -HSME/ PC-3",
+   "col": "L",
+   "row": 79,
+   "universal": false
+  },
+  {
+   "raw": "T - PC -3",
+   "subject": "T - PC -3",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "6.00- 6.50",
+   "category": "T -HSME/ PC-3",
+   "col": "L",
+   "row": 108,
+   "universal": false
+  }
+ ],
+ "Thursday": [
+  {
+   "raw": "WP101-LAB(G11)",
+   "subject": "WP101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G11"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PCPE",
+   "col": "C",
+   "row": 138,
+   "universal": false
+  },
+  {
+   "raw": "CY101-LAB( WHOLE 2026 BATCH OF MM, CE, CH)        ",
+   "subject": "CY101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "branch",
+     "MME"
+    ],
+    [
+     "branch",
+     "CE"
+    ],
+    [
+     "branch",
+     "CH"
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PCPE",
+   "col": "C",
+   "row": 139,
+   "universal": false
+  },
+  {
+   "raw": "GE103 (LAB) (D3)",
+   "subject": "GE103",
+   "venue": "LAB",
+   "division": [
+    "D3"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PCPE",
+   "col": "C",
+   "row": 144,
+   "universal": false
+  },
+  {
+   "raw": "PH101-LAB(G1)",
+   "subject": "PH101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G1"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PCPE",
+   "col": "C",
+   "row": 145,
+   "universal": false
+  },
+  {
+   "raw": "HS112  / SRC-107",
+   "subject": "HS112",
+   "venue": "SRC-107",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 114,
+   "universal": false
+  },
+  {
+   "raw": "HS113 / SENATE HALL",
+   "subject": "HS113",
+   "venue": "SENATE HALL",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 115,
+   "universal": false
+  },
+  {
+   "raw": "PH101-LAB(G4)",
+   "subject": "PH101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G4"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 138,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026AIB1067-1099)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "AIDE",
+     1067,
+     1099
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 139,
+   "universal": false
+  },
+  {
+   "raw": "WP101-LAB(G5)",
+   "subject": "WP101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G5"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 143,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D3) / SRC-107",
+   "subject": "MA101",
+   "venue": "SRC-107",
+   "division": [
+    "D3"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "3.00 - 3.50",
+   "category": "PCE-2",
+   "col": "I",
+   "row": 114,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D4) / SENATE HALL",
+   "subject": "MA101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "3.00 - 3.50",
+   "category": "PCE-2",
+   "col": "I",
+   "row": 115,
+   "universal": false
+  },
+  {
+   "raw": "CY101(D3) / SRC-107",
+   "subject": "CY101",
+   "venue": "SRC-107",
+   "division": [
+    "D3"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "PCE-3",
+   "col": "J",
+   "row": 114,
+   "universal": false
+  },
+  {
+   "raw": "CY101(D4) / SENATE HALL",
+   "subject": "CY101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "PCE-3",
+   "col": "J",
+   "row": 115,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026MNC1502-1536)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "MCB",
+     1502,
+     1536
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "PCE-3",
+   "col": "J",
+   "row": 139,
+   "universal": false
+  },
+  {
+   "raw": "GE103(D3 & D4) (Auditorium)",
+   "subject": "GE103",
+   "venue": "Auditorium",
+   "division": [
+    "D3",
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "S",
+   "col": "K",
+   "row": 114,
+   "universal": false
+  },
+  {
+   "raw": "LIFE SKILL/ NCC/NSO/NSS ",
+   "subject": "LIFE SKILL/ NCC/NSO/NSS",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "S",
+   "col": "K",
+   "row": 137,
+   "universal": true
+  },
+  {
+   "raw": "CY101(SRC-005)",
+   "subject": "CY101",
+   "venue": "SRC-005",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "6.00- 6.50",
+   "category": "T-PCE-3",
+   "col": "L",
+   "row": 114,
+   "universal": false
+  },
+  {
+   "raw": "CY101(SRC-006)",
+   "subject": "CY101",
+   "venue": "SRC-006",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "6.00- 6.50",
+   "category": "T-PCE-3",
+   "col": "L",
+   "row": 115,
+   "universal": false
+  }
+ ],
+ "Friday": [
+  {
+   "raw": "MA101(SRC-001)",
+   "subject": "MA101",
+   "venue": "SRC-001",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -PCE-2",
+   "col": "B",
+   "row": 149,
+   "universal": false
+  },
+  {
+   "raw": "MA101(SRC-004)",
+   "subject": "MA101",
+   "venue": "SRC-004",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -PCE-2",
+   "col": "B",
+   "row": 150,
+   "universal": false
+  },
+  {
+   "raw": "MA101(001)",
+   "subject": "MA101",
+   "venue": "S-001",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -PCE-2",
+   "col": "B",
+   "row": 151,
+   "universal": false
+  },
+  {
+   "raw": "MA101(002)",
+   "subject": "MA101",
+   "venue": "S-002",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -PCE-2",
+   "col": "B",
+   "row": 152,
+   "universal": false
+  },
+  {
+   "raw": "MA101(EE-SH)",
+   "subject": "MA101",
+   "venue": "EE-SH",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -PCE-2",
+   "col": "B",
+   "row": 153,
+   "universal": false
+  },
+  {
+   "raw": "MA101(EE-3)",
+   "subject": "MA101",
+   "venue": "EE-3",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -PCE-2",
+   "col": "B",
+   "row": 154,
+   "universal": false
+  },
+  {
+   "raw": "MA101(S-105)",
+   "subject": "MA101",
+   "venue": "S-105",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "8.00 - 8.50",
+   "category": "T -PCE-2",
+   "col": "B",
+   "row": 155,
+   "universal": false
+  },
+  {
+   "raw": "WP101-LAB(G10)                        ",
+   "subject": "WP101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G10"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PCPE",
+   "col": "C",
+   "row": 173,
+   "universal": false
+  },
+  {
+   "raw": "GE103 (LAB) (D4)",
+   "subject": "GE103",
+   "venue": "LAB",
+   "division": [
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PCPE",
+   "col": "C",
+   "row": 177,
+   "universal": false
+  },
+  {
+   "raw": "PH101-LAB(G2)",
+   "subject": "PH101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G2"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "9.00 - 9.50",
+   "category": "PCPE",
+   "col": "C",
+   "row": 178,
+   "universal": false
+  },
+  {
+   "raw": "HS112  / SRC-107",
+   "subject": "HS112",
+   "venue": "SRC-107",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 149,
+   "universal": false
+  },
+  {
+   "raw": "HS113 / SENATE HALL",
+   "subject": "HS113",
+   "venue": "SENATE HALL",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 150,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026AIB1001-1033)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "AIDE",
+     1001,
+     1033
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 172,
+   "universal": false
+  },
+  {
+   "raw": "WP101-LAB(G6)",
+   "subject": "WP101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G6"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 173,
+   "universal": false
+  },
+  {
+   "raw": "PH101-LAB(G3)",
+   "subject": "PH101-LAB",
+   "venue": null,
+   "division": [],
+   "group": [
+    "G3"
+   ],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "2.00 - 2.50",
+   "category": "PCE-1",
+   "col": "H",
+   "row": 174,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D3) / SRC-107",
+   "subject": "MA101",
+   "venue": "SRC-107",
+   "division": [
+    "D3"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "3.00 - 3.50",
+   "category": "PCE-2",
+   "col": "I",
+   "row": 149,
+   "universal": false
+  },
+  {
+   "raw": "MA101(D4) / SENATE HALL",
+   "subject": "MA101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "3.00 - 3.50",
+   "category": "PCE-2",
+   "col": "I",
+   "row": 150,
+   "universal": false
+  },
+  {
+   "raw": "CY101(D3) / SRC-107",
+   "subject": "CY101",
+   "venue": "SRC-107",
+   "division": [
+    "D3"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "PCE-3",
+   "col": "J",
+   "row": 149,
+   "universal": false
+  },
+  {
+   "raw": "CY101(D4) / SENATE HALL",
+   "subject": "CY101",
+   "venue": "SENATE HALL",
+   "division": [
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "PCE-3",
+   "col": "J",
+   "row": 150,
+   "universal": false
+  },
+  {
+   "raw": "TL101-LAB(2026AIB1034-1066)",
+   "subject": "TL101-LAB",
+   "venue": "B004, Har Gobind Khorana Block (SAB), ground floor",
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [
+    [
+     "range",
+     "AIDE",
+     1034,
+     1066
+    ]
+   ],
+   "notes": [],
+   "unknowns": [],
+   "time": "4.00 - 4.50",
+   "category": "PCE-3",
+   "col": "J",
+   "row": 172,
+   "universal": false
+  },
+  {
+   "raw": "GE103(D3 & D4) (Auditorium)",
+   "subject": "GE103",
+   "venue": "Auditorium",
+   "division": [
+    "D3",
+    "D4"
+   ],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "HSPE",
+   "col": "K",
+   "row": 149,
+   "universal": false
+  },
+  {
+   "raw": "LIFE SKILL/ NCC/NSO/NSS",
+   "subject": "LIFE SKILL/ NCC/NSO/NSS",
+   "venue": null,
+   "division": [],
+   "group": [],
+   "branch": [],
+   "roll": [],
+   "notes": [],
+   "unknowns": [],
+   "time": "5.00 - 5.50",
+   "category": "HSPE",
+   "col": "K",
+   "row": 177,
+   "universal": true
+  }
+ ]
+}

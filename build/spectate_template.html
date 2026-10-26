@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<!-- Every theme is dark: say so, so browsers (and Chrome's forced "Auto Dark Mode for Web Contents") don't
+     re-darken it — that flipped light gradient text, like the kaizen hues' near-white end, to near-black. -->
+<meta name="color-scheme" content="dark">
+<title>THIRTY@RPR — Spectate</title>
+<meta name="description" content="THIRTY@RPR Spectate — no login needed. Any cohort's day at a glance, when they're free, and which rooms are free right now.">
+<meta name="theme-color" content="#0d1117">
+<meta name="robots" content="noindex">
+<style>
+/*__SUB_THEME_CSS__*/
+
+  /* ---- layout: picker beside the view on wide screens, stacked on phones ---- */
+  .layout{ display:grid; grid-template-columns:minmax(300px, 380px) minmax(0, 1fr); gap:14px; align-items:start; }
+  .layout > .side{ position:sticky; top:74px; max-height:calc(100vh - 90px); overflow:auto; }
+  @media (max-width:880px){
+    .layout{ grid-template-columns:minmax(0, 1fr); }
+    .layout > .side{ position:static; max-height:none; }
+  }
+  .view[hidden]{ display:none; }
+
+  /* ---- view titles: each tab announces itself, so switching never looks like nothing happened ---- */
+  .view-title{ display:flex; align-items:center; gap:10px; margin-bottom:12px; padding-bottom:10px; border-bottom:1px dashed var(--line); }
+  .view-title.standalone{ background:var(--card); border:1px solid transparent; border-radius:14px; padding:12px 16px; margin-bottom:14px; }
+  body.glass .view-title.standalone{ background:color-mix(in srgb, var(--card) 82%, transparent); }
+  .view-icon{ font-size:20px; width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; background:color-mix(in srgb, var(--ok) 14%, transparent); flex-shrink:0; }
+  .view-title b{ display:block; font-size:15px; }
+  .view-title span{ font-size:11px; color:var(--ink-faint); }
+  .view.enter, #view-day.enter{ animation:viewIn .28s ease both; }
+  @keyframes viewIn{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:none; } }
+
+  /* ---- "who" panel: collapses to one line on phones once a selection exists ---- */
+  .who-bar{ display:flex; align-items:center; gap:10px; }
+  .who-summary{ flex:1; min-width:0; font-size:12px; color:var(--ink-soft); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .who-summary b{ color:var(--ink); }
+  .who-toggle{ display:none; }
+  @media (max-width:880px){
+    .who-toggle{ display:inline-block; }
+    #whoPanel.collapsed .who-body{ display:none; }
+    #whoPanel.collapsed{ padding:10px 14px; }
+  }
+  @media (min-width:881px){ .who-summary{ display:none; } }
+
+  /* ---- picker ---- */
+  .pk-top{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+  .pk-top .pk-mode{ margin-right:auto; }
+  .pk-summary{ font-size:12px; color:var(--ink-soft); margin-bottom:8px; line-height:1.6; }
+  .pk-summary b{ color:var(--ink); }
+  .pk-count{ font-weight:800; color:var(--ok); font-size:15px; }
+  .pk-nav{ display:flex; gap:8px; align-items:flex-start; margin:6px 0; }
+  .pk-nav-label{ font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); padding-top:6px; white-space:nowrap; width:70px; flex-shrink:0; }
+  .pk-sec{ border-top:1px dashed var(--line); padding:8px 0 4px; }
+  .pk-sec summary{ cursor:pointer; font-size:11.5px; font-weight:700; color:var(--ink); margin-bottom:6px; list-style:none; }
+  .pk-sec summary::-webkit-details-marker{ display:none; }
+  .pk-sec summary::before{ content:'▸ '; color:var(--ink-faint); }
+  .pk-sec[open] summary::before{ content:'▾ '; }
+  .pk-sec summary .muted{ font-weight:500; font-size:10.5px; }
+  .pk-family{ margin-bottom:8px; }
+  .pk-family-name{ display:block; font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); margin-bottom:4px; }
+
+  /* ---- day view ---- */
+  .cohort-head{ font-size:12px; color:var(--ink-soft); margin-bottom:10px; line-height:1.6; }
+  .cohort-head b{ color:var(--ink); }
+  .contacts{ font-size:11px; color:var(--ink-faint); margin:-4px 0 12px; line-height:1.6; }
+  .contacts b{ color:var(--ink-soft); font-weight:600; }
+
+  /* ---- find a time ---- */
+  .controls-row{ display:flex; flex-wrap:wrap; gap:14px; margin-bottom:12px; align-items:flex-end; }
+  .control-field{ display:flex; flex-direction:column; gap:4px; }
+  .control-field label{ font-size:10.5px; color:var(--ink-faint); }
+  .control-field .input{ width:auto; min-width:90px; }
+  .control-check{ display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); }
+  .heat-scroll-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; margin:0 -16px; padding:0 16px; }
+  .heat-row{ display:flex; align-items:center; gap:1px; margin-bottom:3px; width:max-content; }
+  .heat-row-label{ width:86px; flex-shrink:0; font-size:10.5px; color:var(--ink-soft); }
+  .heat-row-cells{ display:flex; gap:2px; }
+  .heat-axis-cell{ width:20px; text-align:center; font-size:9px; color:var(--ink-faint); flex-shrink:0; }
+  /* The heat strip is the [ok] green of the top bar (--ok: tag green #85e89d under Graphite, the
+     theme accent elsewhere), stepped by mixing into the surface. */
+  .heat-cell{
+    width:20px; height:20px; border-radius:4px; background:color-mix(in srgb, var(--ink) 7%, var(--card)); display:inline-block;
+    cursor:pointer; border:1.5px solid transparent; flex-shrink:0; position:relative;
+  }
+  .heat-cell:hover{ border-color:var(--ink-faint); }
+  .heat-cell.sel{ border-color:var(--ink); }
+  /* density stays green under Graphite, like the main page's semester heatmap */
+  body[data-theme="github"] .heat-cell{ --ok:#85e89d; }
+  .heat-cell.h1{ background:color-mix(in srgb, var(--ok) 22%, var(--bg2)); }
+  .heat-cell.h2{ background:color-mix(in srgb, var(--ok) 42%, var(--bg2)); }
+  .heat-cell.h3{ background:color-mix(in srgb, var(--ok) 68%, var(--bg2)); }
+  .heat-cell.h4{ background:var(--ok); }
+  .heat-cell.meal::after{ content:''; position:absolute; left:3px; right:3px; bottom:2px; height:2px; border-radius:2px; background:var(--amber); }
+  .heat-legend{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:10px; font-size:10px; color:var(--ink-faint); }
+  .heat-legend .heat-cell{ width:11px; height:11px; border-radius:2px; cursor:default; }
+  .heat-legend-scale{ display:flex; align-items:center; gap:3px; }
+  .slot-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding:7px 0; border-bottom:1px dashed var(--line); font-size:12px; }
+  .slot-row:last-child{ border-bottom:none; }
+  .slot-date{ font-weight:700; min-width:96px; }
+  .pct{ margin-left:auto; font-weight:700; padding:2px 8px; border-radius:999px; font-size:11px; }
+  .pct-hi{ background:color-mix(in srgb, var(--ok) 16%, transparent); color:var(--ok); }
+  .pct-mid{ background:var(--amber-soft); color:var(--amber); }
+  .pct-lo{ background:var(--rose-soft); color:var(--rose); }
+  #heatDetail{ margin-top:12px; font-size:12px; line-height:1.7; }
+  #copyHint{ display:none; margin-top:10px; padding:10px; background:var(--card2); border-radius:8px; font-size:11.5px; color:var(--ink-soft); white-space:pre-wrap; }
+
+  /* ---- rooms (same idea as the dashboard's self-study rooms: status + day timeline per room) ---- */
+  .rooms-controls{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:10px; }
+  .rooms-controls .input{ width:auto; }
+  .rooms-controls .search{ flex:1; min-width:180px; }
+  .rooms-summary{ font-size:12px; color:var(--ink-soft); margin-bottom:12px; }
+  .rooms-summary b{ color:var(--ok); }
+  .room-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:10px; }
+  .room-card{
+    padding:12px 14px 10px; border-radius:12px; border:1px solid transparent; background:var(--card2);
+    cursor:pointer; animation:cardIn .3s ease both;
+  }
+  .room-card.expanded{ border-color:var(--ok); grid-column:1 / -1; }
+  @keyframes cardIn{ from{ opacity:0; transform:translateY(5px); } to{ opacity:1; transform:none; } }
+  .room-top{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:4px; }
+  .room-name{ font-size:14px; font-weight:700; }
+  .room-desc{ font-size:10px; color:var(--ink-faint); margin-bottom:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .pill{ font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:99px; flex-shrink:0; }
+  .pill.free{ background:color-mix(in srgb, var(--ok) 16%, transparent); color:var(--ok); }
+  .pill.busy{ background:var(--rose-soft); color:var(--rose); }
+  .room-line{ font-size:11.5px; color:var(--ink-soft); margin-bottom:8px; line-height:1.55; }
+  .room-line b{ color:var(--ink); font-weight:600; }
+  .room-detail{ display:none; margin-top:10px; border-top:1px dashed var(--line); padding-top:10px; }
+  .room-card.expanded .room-detail{ display:block; }
+  .room-book{ display:grid; grid-template-columns:150px 1fr; gap:8px; font-size:11.5px; padding:3px 0; }
+  .room-book .t{ color:var(--ink-faint); white-space:nowrap; }
+  .room-book.past{ opacity:.45; }
+  .room-week{ display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:10px; margin-top:12px; }
+  .room-week-day{ font-size:10.5px; color:var(--ink-soft); margin-bottom:3px; }
+  .legend-dot{ display:inline-block; width:9px; height:9px; border-radius:2px; vertical-align:-1px; margin:0 3px 0 8px; }
+  /* ---- courses ---- */
+  .course-list{ display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:10px; }
+  .course-card{ padding:12px 14px; border-radius:12px; border:1px solid transparent; background:var(--card2); cursor:pointer; animation:cardIn .3s ease both; min-width:0; }
+  .course-card.expanded{ border-color:var(--ok); grid-column:1 / -1; cursor:default; }
+  .course-top{ display:flex; align-items:baseline; gap:8px; justify-content:space-between; }
+  .course-code{ font-weight:800; font-size:14px; }
+  .course-title{ font-size:12px; color:var(--ink-soft); margin:2px 0 4px; }
+  .course-meta{ font-size:10.5px; color:var(--ink-faint); margin-bottom:6px; }
+  .course-next{ font-size:11.5px; color:var(--ink-soft); }
+  .course-next b{ color:var(--ok); font-weight:700; }
+  .course-next.now b{ color:var(--rose); }
+  .tag-batch{ font-size:9.5px; font-weight:700; padding:2px 7px; border-radius:99px; white-space:nowrap; background:var(--teal-soft); color:var(--teal); }
+  .tag-batch.fresher{ background:color-mix(in srgb, var(--ok) 14%, transparent); color:var(--ok); }
+  .course-pattern{ display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
+  .course-pattern span{ font-size:10px; color:var(--ink-faint); border:1px solid transparent; border-radius:6px; padding:1px 6px; }
+  .course-detail{ margin-top:10px; border-top:1px dashed var(--line); padding-top:10px; }
+  .course-day{ margin-bottom:8px; }
+  .course-day-head{ font-size:10.5px; color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:.04em; margin-bottom:3px; }
+  .course-sess{ display:grid; grid-template-columns:150px 1fr; gap:8px; font-size:11.5px; padding:2px 0; }
+  .course-sess .t{ color:var(--ink-faint); white-space:nowrap; }
+  .course-actions{ display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
+  details.lb summary{ cursor:pointer; font-size:11.5px; color:var(--ink-soft); }
+  .lb-row{ display:flex; align-items:center; gap:8px; padding:4px 0; }
+  .lb-name{ width:110px; flex-shrink:0; font-size:11px; color:var(--ink-soft); }
+  .lb-track{ flex:1; height:7px; background:var(--bg2); border-radius:4px; overflow:hidden; }
+  .lb-bar{ display:block; height:100%; background:var(--rose); }
+  .lb-hrs{ width:42px; text-align:right; font-size:11px; color:var(--ink-faint); }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="home-btn" href="/" aria-label="Back to THIRTY@RPR home">&#8592; <span>Home</span></a>
+    <div class="prompt">./thirty --spectate <span class="ok">[ok]</span></div>
+    <div class="tabs" id="tabs">
+      <button class="tab" data-tab="day">Day</button>
+      <button class="tab" data-tab="courses">Courses</button>
+      <button class="tab" data-tab="rooms">Rooms</button>
+      <button class="tab" data-tab="time">Find a time</button>
+    </div>
+    <div class="topbar-spacer"></div>
+    <div class="theme-switch" id="themeSwitch"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="layout" id="cohortLayout">
+    <div class="side panel" id="whoPanel">
+      <div class="who-bar">
+        <div class="panel-head" style="margin:0;">who</div>
+        <div class="who-summary" id="whoSummary"></div>
+        <button class="btn btn-sm who-toggle" id="whoToggle">Change</button>
+      </div>
+      <div class="who-body">
+        <div class="panel-sub" style="margin-top:4px;">No login, nothing to type — tap groups of students. Spectate never needs an entry number.</div>
+        <div id="picker"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="view panel" id="view-day">
+        <div class="view-title"><span class="view-icon">&#128197;</span><div><b>Day</b><span>what each of them is doing, hour by hour</span></div></div>
+        <div class="daynav">
+          <button class="icon-btn" data-day="-1" aria-label="Previous day">&#8249;</button>
+          <div class="daynav-date" id="dayDate"></div>
+          <button class="icon-btn" data-day="1" aria-label="Next day">&#8250;</button>
+          <button class="btn btn-sm" data-day="today">Today</button>
+        </div>
+        <div id="dayView"></div>
+      </div>
+
+      <div class="view" id="view-time" hidden>
+        <div class="view-title standalone"><span class="view-icon">&#9201;&#65039;</span><div><b>Find a time</b><span>when the most of them are free — next two weeks</span></div></div>
+        <div class="panel">
+          <div class="panel-head">busy heat-strip</div>
+          <div class="panel-sub">Each cell is one hour; the deeper the green, the more of the selection is busy. Tap a cell for who's free and which rooms are open then.</div>
+          <div class="heat-scroll-wrap"><div id="heatAxis"></div><div id="heatStrip"></div></div>
+          <div class="heat-legend">
+            <span class="heat-legend-scale">quieter <span class="heat-cell"></span><span class="heat-cell h1"></span><span class="heat-cell h2"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span> busier</span>
+            <span><span class="heat-cell meal" style="vertical-align:-2px"></span> mess hour</span>
+          </div>
+          <div id="heatDetail"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">best slots</div>
+          <div class="controls-row">
+            <div class="control-field"><label>Duration (min)</label><input class="input" type="number" id="durationInput" value="60" min="15" max="240" step="15"></div>
+            <div class="control-field"><label>Look ahead (days)</label><input class="input" type="number" id="daysInput" value="14" min="1" max="60"></div>
+            <label class="control-check"><input type="checkbox" id="require100Input"> everyone free (100%)</label>
+          </div>
+          <div id="slotResults"></div>
+          <button class="btn" id="copySummaryBtn" style="margin-top:12px;">Copy the best time as text</button>
+          <div id="copyHint"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">fully free days</div>
+          <div id="bestDays"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="view" id="view-courses" hidden>
+    <div class="panel">
+      <div class="panel-head">courses</div>
+      <div class="panel-sub">Every course running this semester, every batch — when it meets next, where, who's in it. Sorted by what's on soonest.</div>
+      <div class="rooms-controls">
+        <input class="input search" id="courseSearch" type="search" placeholder="Search a course, title or instructor — MA101, Operating Systems, Gagan…" autocomplete="off">
+        <div class="seg" id="courseFilter"><button data-f="all" class="on">All</button><button data-f="fresher">2026 batch</button><button data-f="other">Other batches</button></div>
+      </div>
+      <div class="rooms-summary" id="coursesSummary"></div>
+      <div class="course-list" id="courseList"></div>
+      <div style="text-align:center; margin-top:12px;"><button class="btn btn-sm" id="courseMore" hidden>Show more</button></div>
+      <div style="margin-top:14px; font-size:10.5px; color:var(--ink-faint);">
+        2026 batch sessions follow every override, cancellation, room change and live BR update — the same as each student's dashboard.
+        Other batches' come from the institute's semester timetable; titles, instructors and enrolment from the Academic Section's course list.
+      </div>
+    </div>
+  </div>
+
+  <div class="view" id="view-rooms" hidden>
+    <div class="panel">
+      <div class="panel-head">rooms</div>
+      <div class="panel-sub">Every room on campus, every batch's classes — not just freshers'. Free now, until when, and who has it next.</div>
+      <div class="rooms-controls">
+        <input class="input search" id="roomSearch" type="search" placeholder="Search a room — SRC-107, Senate, CS-1…" autocomplete="off">
+        <div class="seg" id="roomFilter"><button data-f="free" class="on">Free</button><button data-f="all">All</button></div>
+        <select class="input" id="roomSort" aria-label="Sort rooms">
+          <option value="free-long">Free first · longest free</option>
+          <option value="free-short">Free first · shortest free</option>
+          <option value="busy-soon">Busy first · frees soonest</option>
+          <option value="busy-long">Busy first · busy longest</option>
+          <option value="name">Name A–Z</option>
+        </select>
+        <button class="btn btn-sm" id="roomNowBtn">Now</button>
+        <input class="input" type="date" id="roomDate">
+        <select class="input" id="roomTime"></select>
+      </div>
+      <div class="rooms-summary" id="roomsSummary"></div>
+      <div class="room-grid" id="roomGrid"></div>
+      <div style="margin-top:14px; font-size:10.5px; color:var(--ink-faint);">
+        Bar = 8 AM – 9 PM. <span class="legend-dot" style="background:var(--rose)"></span>2026 batch class
+        <span class="legend-dot" style="background:color-mix(in srgb, var(--rose) 60%, var(--bg2))"></span>other batches
+        <span class="legend-dot" style="background:color-mix(in srgb, var(--ok) 22%, var(--bg2))"></span>free.
+        Other batches' rooms come from the institute's semester timetable — a room can still have an
+        unlisted one-off booking.
+      </div>
+      <details class="lb" style="margin-top:12px;"><summary>Busiest rooms, next 7 days</summary><div id="leaderboard" style="margin-top:8px;"></div></details>
+    </div>
+  </div>
+
+  <footer>Unofficial, independent student project — not affiliated with or endorsed by IIT Ropar.</footer>
+</div>
+
+<script>
+/*__THIRTY_DATA__*/
+</script>
+<script>
+/*__ENGINE_JS__*/
+</script>
+<script>
+/*__PICKER_JS__*/
+</script>
+<script>
+/*__MONTHPICK_JS__*/
+</script>
+<script>
+/*__SPECTATE_JS__*/
+</script>
+<script type="module">
+/*__LIVE_OVERLAY_JS__*/
+</script>
+</body>
+</html>

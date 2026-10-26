@@ -1,0 +1,320 @@
+A1='TIME TABLE - 1st  Semester of A.Y. 2026-27'
+--- row 2 empty ---
+A3='Timings' | B3='8.00 - 8.50' | C3='9.00 - 9.50' | D3='10.00 - 10. 50' | E3='11.00 - 11.50' | F3='12.00 - 12. 50' | G3='Lunch Break' | H3='2.00 - 2.50' | I3='3.00 - 3.50' | J3='4.00 - 4.50' | K3='5.00 - 5.50' | L3='6.00- 6.50' | M3='7.00-7.50'
+A4='Monday' | B4='T- PCPE' | C4='PC-1' | D4='PC -2' | E4='PC -3' | F4='PC - 4' | H4='HSME' | I4='PCPE' | J4='HSPE' | K4='PHSME' | L4='T-PC-1' | AE4='MA513 (S001)'
+B5='PH101(S001)' | C5='AI101(D1&D2) / AI200\n\nAuditorium' | D5='MA101(D1)\nSENATE HALL' | E5='PH101(D1)\nSENATE HALL' | F5='HS110 \nSRC-006' | J5='AI101LAB(SRC-005)\nTILL 18.08.2026' | K5='IK101(SRC-107)' | L5='TL101(SENATE)' | AE5='PH413 (S102)'
+B6='PH101(EE-SH)' | D6='MA101(D2)\nSRC-107' | E6='PH101(D2)\nSCR-107' | F6='HS111 \nSRC-107' | T6='CE401(SRC-002)' | AE6='AI300 (CS2)'
+B7='PH101(EE-1)' | T7='CH303(S-001)' | AA7='GE104(SRC-005)' | AE7='PH513(S-103)' | AF7='GE201(SRC-005)'
+B8='PH101(EE-3)' | T8='ME301(ME-SH)' | AA8='PH101(SRC-006)' | AE8='EE513(EE-1)' | AF8='GE203(SRC-001)'
+B9='PH101(CS-1)' | T9='EE303(SRC-003)' | AE9='M52(ME-2)' | AF9='EE201(CS+MCB)(SRC-006)'
+B10='PH101(CS-SH)' | T10='CS303(SRC-006)' | W10=' ' | AE10='CS733(CS-2)' | AF10='EE201(EE+EP+AI)(SRC-004)'
+T11='MA301(SRC-005)' | AE11='ME547(ME-SH)' | AF11='CY415(CY-1)'
+T12='MM303(S-002)' | W12='CS552' | Z12='CY414*' | AE12='GE201(SRC-005)' | AF12='CY514(SRC-102)'
+T13='PH301(SRC-001)' | W13='CY412' | AE13='GE203(SRC-001)' | AF13='MA413(SRC-002)'
+T14='HS513(SRC-004)' | AE14='EE201(CSB+EPB+ICDT) (SRC-006)' | AF14='MA513(S-001)'
+T15='ME503(ME-1)' | Z15='ME571' | AE15='EE201(mcb+aib)(SRC-005)' | AF15='PH415(S-104)'
+Q16='This is first time after 2020, 2021 AY' | T16='CE524(S-103)' | X16='CY417/CY621(CY-1)' | AE16='EE201(EEB) (SRC-003)' | AF16='PH513(S-103)'
+Q17='No enrollment for this coures in the AIMS' | T17='CH230(L/P)' | AE17='EE523 (EE2)' | AF17='ME518-A (ME-1)'
+T18='PH451 (S-003)' | V18='EE521(EE-1)' | AA18='CS504(CS-SH)' | AE18='CY415(CY-1)' | AF18='CE502(S-102)'
+T19='HS505 (EE-SH)' | AE19='CY514(SRC-102)' | AF19='CH611(S-002)'
+V20='ME502(ME-SH)' | X20='MA718(EE-1)' | AE20='MA413(SRC-002)' | AF20='CS526(CS-1)'
+V21='M51(S-104)' | AA21='ME579(ME-1)' | AE21='MA513(S-001)' | AF21='EE513(EE-1)'
+X22='EE511(EE-SH)' | AA22='EE608(EE-1)' | AE22='PH415(S-104)' | AF22='BM606(CY-SH)'
+X23='M53(S-002)' | AA23='M55(S-002)' | AE23='PH513(S-103)' | AF23='M52(ME-2)'
+X24='CS522(CS-1)' | AA24='MA610(EE-2)' | AE24='ME518-A (ME-1)' | AF24='CE524(S-EE3)'
+AE25='CE502(S-102)' | AF25='CS733(EE-2)'
+AE26='CH611(S-002)' | AF26='ME547(ME-SH)'
+AE27='CS526(CS-1)'
+AE28='EE513(EE-1)'
+AE29='BM606(CY-SH)'
+AE30='M52(ME-2)'
+AE31='CE524(S-EE3)'
+AE32='CS733(EE-2)'
+AE33='ME547(ME-SH)'
+AE34='MA513 (S001)'
+AE35='PH413 (S102)'
+AE36='AI300 (CS2)'
+AE37='PH513(S-103)'
+H38='TL101-LAB(2026CSB1239-1273)' | J38='TL101-LAB(2026CSB1274-1288&1693,1694 AND ALL DA BATCH)' | X38='ME501(ME-1)' | AA38='PH202(EE-SH)' | AE38='EE513(EE-1)'
+C39='CY101-LAB(CSE 1169-1254)' | AA39='EE523(EE-3)' | AE39='M52(ME-2)'
+K40='NCC/NSO/NSS' | AE40='CS733(CS-2)'
+AE41='ME547(ME-SH)'
+--- row 42 empty ---
+J43='AI101 (LAB) (D1)'
+H44='PH101-LAB(G6)'
+A45='Tuesday' | B45='T -HSPE' | C45='PC-1' | D45='PC -2' | E45='PC -3' | F45='PC - 4' | H45='PCDE' | I45='PEOE' | J45='HSPE' | K45='PHSME' | L45='T-PEOE'
+B46='MA101(EE-1)' | C46='AI101(D1&D2) / AI200\n\nAuditorium' | D46='MA101(D1)\nSENATE HALL' | E46='PH101(D1)\nSENATE HALL' | F46='HS110 \nSRC-006' | J46='AI101LAB(SRC-005)\nTILL 18.08.2026' | K46='IK101(SRC-107)'
+B47='MA101(EE-SH)' | D47='MA101(D2)\nSRC-107' | E47='PH101(D2)\nSCR-107' | F47='HS111 \nSRC-107'
+B48='MA101(CS-1)'
+B49='MA101(SRC-004)'
+B50='MA101(EE-3)'
+B51='MA101(ME-1)'
+B52='MA101(S-105)' | T52='CS550' | U52='aSK TO pUNEET sIR cse'
+T53='CS733' | U53='rOOM NOT ALLOTED AS IT IS SPECILIZED COURSE'
+T54='MM404' | U54='rOOM NOT ALLOTED AS IT IS SPECILIZED COURSE'
+--- row 55 empty ---
+--- row 56 empty ---
+--- row 57 empty ---
+--- row 58 empty ---
+--- row 59 empty ---
+--- row 60 empty ---
+--- row 61 empty ---
+--- row 62 empty ---
+--- row 63 empty ---
+--- row 64 empty ---
+--- row 65 empty ---
+--- row 66 empty ---
+--- row 67 empty ---
+H68='TL101-LAB(2026CSB1169-1203)' | J68='TL101-LAB(2026CSB1204-1238)'
+H69='WP101-LAB(G12)'
+J70='AI101 (LAB) (D2)'
+--- row 71 empty ---
+--- row 72 empty ---
+K73='LIFE SKILL/ NCC/NSO/NSS '
+C74='CY101-LAB(2026CSB1255-1694 & EP & ICDT BATCHS)'
+L75='`'
+H76='PH101-LAB(G5)'
+--- row 77 empty ---
+A78='Wednesday' | B78='T -PCDE' | C78='PC-1' | D78='PC -2' | E78='PC -3' | F78='PC - 4' | H78='PCE-1' | I78='PCE-2' | J78='PCE-3' | K78='PHSME' | L78='T -HSME/ PC-3'
+C79='AI101(D1&D2) / AI200\n\nAuditorium' | D79='MA101(D1)\nSENATE HALL' | E79='PH101(D1)\nSENATE HALL' | F79='HS110 \nSRC-006, EE-SH' | H79='HS112 \nSRC-107' | I79='MA101(D3)\nSRC-107' | J79='CY101(D3)\nSRC-107' | K79='GE103(D3 & D4) (Auditorium)' | L79='GE103(D3 & D4) (Auditorium)' | W79='MA201(CSE+AI)(SRC-003)' | X79='Already exist in PC3 slot' | AA79='CY101(SRC-005)' | AB79='No information available in the Pre registrartion sheet'
+D80='MA101(D2)\nSRC-107' | E80='PH101(D2)\nSCR-107' | F80='HS111 \nSRC-107, CS-SH' | H80='HS113\nSENATE HALL' | I80='MA101(D4)\nSENATE HALL' | J80='CY101(D4)\nSENATE HALL' | W80='MA201(SRC-004)(MCB+CE+CH)' | X80='Already exist in PC3 slot' | AA80='CY101(SRC-006)' | AB80='No information available in the Pre registrartion sheet'
+K81='IK101(SRC-107)'
+--- row 82 empty ---
+--- row 83 empty ---
+--- row 84 empty ---
+--- row 85 empty ---
+--- row 86 empty ---
+--- row 87 empty ---
+--- row 88 empty ---
+--- row 89 empty ---
+--- row 90 empty ---
+--- row 91 empty ---
+--- row 92 empty ---
+--- row 93 empty ---
+AA94='EE511(EE-SH)' | AB94='It also showing in PC2 slot and in old time, but this course is for M.Tech only.'
+--- row 95 empty ---
+--- row 96 empty ---
+--- row 97 empty ---
+--- row 98 empty ---
+--- row 99 empty ---
+--- row 100 empty ---
+--- row 101 empty ---
+--- row 102 empty ---
+--- row 103 empty ---
+--- row 104 empty ---
+--- row 105 empty ---
+H106='TL101-LAB(2026MNC1537-1571)' | J106='TL101-LAB(2026MNC1572-1581, 1696 & 1697 AND ALL EP STUDENTS)'
+K107='LIFE SKILL/ NCC/NSO/NSS '
+L108='T - PC -3'
+--- row 109 empty ---
+--- row 110 empty ---
+C111='CY101-LAB( ME BATCH 2026)        ' | H111='WP101-LAB(ES,ICDT ALL STUDENTS OF BATCH 2026)'
+--- row 112 empty ---
+A113='Thursday' | B113='T -PC - 4' | C113='PCPE' | D113='HSME' | E113='PCDE' | F113='PEOE' | H113='PCE-1' | I113='PCE-2' | J113='PCE-3' | K113='S' | L113='T-PCE-3'
+H114='HS112 \nSRC-107' | I114='MA101(D3)\nSRC-107' | J114='CY101(D3)\nSRC-107' | K114='GE103(D3 & D4) (Auditorium)' | L114='CY101(SRC-005)'
+H115='HS113\nSENATE HALL' | I115='MA101(D4)\nSENATE HALL' | J115='CY101(D4)\nSENATE HALL' | L115='CY101(SRC-006)'
+--- row 116 empty ---
+--- row 117 empty ---
+--- row 118 empty ---
+--- row 119 empty ---
+--- row 120 empty ---
+--- row 121 empty ---
+--- row 122 empty ---
+--- row 123 empty ---
+--- row 124 empty ---
+--- row 125 empty ---
+--- row 126 empty ---
+--- row 127 empty ---
+--- row 128 empty ---
+--- row 129 empty ---
+--- row 130 empty ---
+--- row 131 empty ---
+--- row 132 empty ---
+--- row 133 empty ---
+--- row 134 empty ---
+--- row 135 empty ---
+--- row 136 empty ---
+K137='LIFE SKILL/ NCC/NSO/NSS '
+C138='WP101-LAB(G11)' | H138='PH101-LAB(G4)'
+C139='CY101-LAB( WHOLE 2026 BATCH OF MM, CE, CH)        ' | H139='TL101-LAB(2026AIB1067-1099)' | J139='TL101-LAB(2026MNC1502-1536)'
+--- row 140 empty ---
+--- row 141 empty ---
+--- row 142 empty ---
+H143='WP101-LAB(G5)'
+C144='GE103 (LAB) (D3)'
+C145='PH101-LAB(G1)'
+--- row 146 empty ---
+--- row 147 empty ---
+A148='Friday' | B148='T -PCE-2' | C148='PCPE' | D148='HSME' | E148='PCDE' | F148='PEOE' | H148='PCE-1' | I148='PCE-2' | J148='PCE-3' | K148='HSPE' | L148='T -PCE-1'
+B149='MA101(SRC-001)' | H149='HS112 \nSRC-107' | I149='MA101(D3)\nSRC-107' | J149='CY101(D3)\nSRC-107' | K149='GE103(D3 & D4) (Auditorium)'
+B150='MA101(SRC-004)' | H150='HS113\nSENATE HALL' | I150='MA101(D4)\nSENATE HALL' | J150='CY101(D4)\nSENATE HALL'
+B151='MA101(001)'
+B152='MA101(002)'
+B153='MA101(EE-SH)'
+B154='MA101(EE-3)'
+B155='MA101(S-105)'
+--- row 156 empty ---
+--- row 157 empty ---
+--- row 158 empty ---
+--- row 159 empty ---
+--- row 160 empty ---
+--- row 161 empty ---
+--- row 162 empty ---
+--- row 163 empty ---
+--- row 164 empty ---
+--- row 165 empty ---
+--- row 166 empty ---
+--- row 167 empty ---
+--- row 168 empty ---
+--- row 169 empty ---
+--- row 170 empty ---
+--- row 171 empty ---
+H172='TL101-LAB(2026AIB1001-1033)' | J172='TL101-LAB(2026AIB1034-1066)'
+C173='WP101-LAB(G10)                        ' | H173='WP101-LAB(G6)'
+H174='PH101-LAB(G3)'
+--- row 175 empty ---
+--- row 176 empty ---
+C177='GE103 (LAB) (D4)' | K177='LIFE SKILL/ NCC/NSO/NSS'
+C178='PH101-LAB(G2)'
+A179='Saturday'
+--- row 180 empty ---
+--- row 181 empty ---
+B182='New Names' | C182='Old Names' | D182='Capacity of Class Rooms' | F182='Location of Class Rooms'
+B183='SRC-001' | C183='M1' | D183='Classroom of 50 Capacity' | F183='S. RadhaKrishnan Complex (LHC)'
+B184='SRC-002' | C184='M2' | D184='Classroom of 50 Capacity' | F184='S. RadhaKrishnan Complex (LHC)'
+B185='SRC-003' | C185='M3' | D185='Classroom of 100 Capacity' | F185='S. RadhaKrishnan Complex (LHC)'
+B186='SRC-004' | C186='M4' | D186='Classroom of 100 Capacity' | F186='S. RadhaKrishnan Complex (LHC)'
+B187='SRC-005' | C187='M5' | D187='Classroom of 195 Capacity' | F187='S. RadhaKrishnan Complex (LHC)'
+B188='SRC-006' | C188='M6' | D188='Classroom of 180 Capacity' | F188='S. RadhaKrishnan Complex (LHC)'
+C189='CS1' | D189='Classroom of 60 Capacity in CSE Block'
+C190='CS2' | D190='Classroom of 40 Capacity in CSE Block'
+C191='CS(SH)' | D191='Seminar Hall of 90 Capacity in CSE Block'
+C192='EE1' | D192='Classroom of 65 Capacity in EE Block'
+C193='EE2' | D193='Classroom of 35 Capacity in EE Block'
+C194='EE3' | D194='Classroom of 60 Capacity in EE Block(Room No. 204)'
+C195='EE(SH)' | D195='Seminar Hall of 80 Capacity in EE Block'
+C196='ME1' | D196='Classroom of 70 Capacity in ME Block'
+C197='ME2' | D197='Classroom of 35 Capacity in ME Block'
+C198='ME(SH)' | D198='Seminar Hall of 90 Capacity in ME Block'
+C199='CY(SH)' | D199='Seminar Hall of 90 Capacity in Chemistry Block'
+C200='CY1' | D200='Classroom of 35 Capacity in Chemistry Block'
+C201='CY2' | D201='Classroom of 30 Capacity in Chemistry Block'
+C202='S-001' | D202='Classroom of 70 Capacity in Super Academic Block (ground floor PART C)'
+C203='S-002' | D203='Classroom of 70 Capacity in Super Academic Block (ground floor PART C)'
+C204='S-003' | D204='Classroom of 70 Capacity in Super Academic Block (ground floor PART C)'
+C205='S-102' | D205='Classroom of 70 Capacity in Super Academic Block (First floor PART A)'
+C206='S-103' | D206='Classroom of 70 Capacity in Super Academic Block (First floor PART A)'
+C207='S-104' | D207='Classroom of 70 Capacity in Super Academic Block (First floor PART A)'
+C208='S-105' | D208='Classroom of 70 Capacity in Super Academic Block (First floor PART A)'
+C209='S-106' | D209='Classroom of 70 Capacity in Super Academic Block (First floor PART C)'
+C210='S-107' | D210='Classroom of 70 Capacity in Super Academic Block (First floor PART C)'
+C211='S-202' | D211='SAB - allotted for MSDSM courses (Capacity planned 70)'
+C212='S-003' | D212='Classroom of 70 Capacity in Super Academic Block (ground floor PART C)'
+C213='CY-SH' | D213='Reserved for Thesis submission Proposal on every Monday and Tuesday in the Afternoon'
+C214='Senate' | D214='Classroom of 280 Capacity in Admin Block, Ground Floor'
+C215='SRC-107' | D215='Classroom of 170 Capacity at First Floor of LHC' | F215='S. RadhaKrishnan Complex (LHC)'
+
+
+MERGED CELLS:
+E139:F139
+C79:C80
+D76:F76
+K114:K115
+K40:M40
+J146:K146
+I145:J145
+H76:K76
+J68:K68
+H179:K179
+C145:F145
+K73:M73
+A45:A76
+K137:M137
+H39:K39
+D176:E176
+C173:F173
+H139:I139
+H108:K108
+A148:A178
+J139:K139
+C43:F43
+H40:J40
+C111:D111
+H172:I172
+J110:K110
+I141:K141
+K79:K80
+H41:I41
+H74:I74
+H68:I68
+C175:F175
+C46:C47
+C139:D139
+A78:A111
+H143:K143
+H75:I75
+J75:K75
+D109:F109
+K177:M177
+C146:F146
+I71:L71
+D142:E142
+H69:K69
+D40:F40
+C73:E73
+C138:F138
+H106:I106
+C5:C6
+C110:F110
+H111:K111
+H38:I38
+J38:K38
+H43:I43
+J178:L178
+C174:F174
+J147:L147
+A2:L2
+C143:D143
+E143:F143
+I140:L140
+C179:F179
+C108:F108
+C144:E144
+J74:K74
+C141:F141
+J172:K172
+H173:K173
+C44:F44
+J106:K106
+H42:I42
+J42:K42
+C178:F178
+H174:K174
+J144:K144
+C177:E177
+C41:E41
+H112:I112
+C42:D42
+J112:K112
+E42:F42
+C74:D74
+J176:K176
+C140:F140
+K107:M107
+A179:A180
+E74:F74
+H70:I70
+J175:K175
+K149:K150
+J70:K70
+H44:K44
+A113:A147
+J41:K41
+J109:K109
+C39:D39
+I77:K77
+J43:K43
+C75:F75
+A1:L1
+H138:K138
+A4:A44

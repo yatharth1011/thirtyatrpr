@@ -1,0 +1,2452 @@
+[
+ {
+  "code": "U01-LA-01-RD",
+  "title": "Linear Algebra Review and Reference (Kolter, 2020)",
+  "unit": "U01 · LA — Linear algebra & matrix calculus",
+  "part": "Part I — Mathematical foundations",
+  "hours": 6,
+  "links": [
+   [
+    "review",
+    "_dark/CA/cs229-linear_algebra_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U01-LA-02-BS",
+  "title": "Linear Algebra bridge set — 73 questions",
+  "unit": "U01 · LA — Linear algebra & matrix calculus",
+  "part": "Part I — Mathematical foundations",
+  "hours": 8,
+  "links": [
+   [
+    "set",
+    "CA/linear_algebra_problem_set/linear_algebra_problem_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U01-LA-03-BR",
+  "title": "Linear Algebra bridge review — gradients from first principles, the chain rule, outer products, PSD arguments and column reasoning",
+  "unit": "U01 · LA — Linear algebra & matrix calculus",
+  "part": "Part I — Mathematical foundations",
+  "hours": 3,
+  "links": [
+   [
+    "review",
+    "CA/linear_algebra_problem_set/linear_algebra_bridge_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U01-LA-04-RB",
+  "title": "Linear Algebra re-bridge set — 12 questions",
+  "unit": "U01 · LA — Linear algebra & matrix calculus",
+  "part": "Part I — Mathematical foundations",
+  "hours": 3,
+  "links": [
+   [
+    "set",
+    "CA/linear_algebra_problem_set/linear_algebra_rebridge.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U01-LA-05-PS",
+  "title": "CS229 Problem Set 0 (linear algebra and multivariable calculus)",
+  "unit": "U01 · LA — Linear algebra & matrix calculus",
+  "part": "Part I — Mathematical foundations",
+  "hours": 3,
+  "links": [
+   [
+    "PS0",
+    "_dark/PS/ps0.pdf"
+   ],
+   [
+    "answer key",
+    "_dark/cs229self-study-master/OldStuff/ps0_key.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U01-LA-06-SY",
+  "title": "Synthesis: one page from memory — the four views of matrix multiplication, PSD matrices, the eigendecomposition and the gradient rules",
+  "unit": "U01 · LA — Linear algebra & matrix calculus",
+  "part": "Part I — Mathematical foundations",
+  "hours": 1,
+  "links": [
+   [
+    "synthesis sheet",
+    "bridges/synthesis/s01_linear_algebra.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-00-CN",
+  "title": "Connector: From linear algebra to linear regression — predictions as inner products, the gradient of the squared error, the normal equations and gradient descent, in miniature",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c01_linear_algebra_to_regression.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-01-VD",
+  "title": "Lecture 1 — Introduction",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/jGwO_UgTS7I"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-02-VD",
+  "title": "Lecture 2 — Linear Regression & Gradient Descent (video)",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/4b4MUYve_U8"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-03-RD",
+  "title": "Lecture Notes 1, part A — LMS, gradient descent and the normal equations",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 2.5,
+  "links": [
+   [
+    "notes 1, part A",
+    "_dark/splits/notes1_A_lms_normal_equations.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-04-PR",
+  "title": "AI101 prerequisite: DPP-1",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/2026AIB1099_DPP1.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-05-PR",
+  "title": "AI101 prerequisite: DPP-2",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/2026AIB1099_DPP2.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-06-PR",
+  "title": "AI101 prerequisite: DPP-3",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/2026AIB1099_DPP3.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-07-PR",
+  "title": "AI101 prerequisite: DPP-4",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/DPP_4.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-08-PR",
+  "title": "AI101 prerequisite: DPP-5",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/DPP_5__final_AI101.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-09-PR",
+  "title": "AI101 prerequisite: DPP-6 (the whole notebook)",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/AIDE2026_099.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-10-PR",
+  "title": "AI101 prerequisite: CDPP-6 (all parts)",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/CDPP6/CDPP6_unsolved.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-11-PR",
+  "title": "AI101 prerequisite: Matplotlib",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/matplotlib.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-12-PR",
+  "title": "Lab 01 — Python and NumPy for machine learning: classes, broadcasting, vectorized models, np.linalg, seeded randomness and loading data",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 4,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab01-numpy-for-ml/lab01-numpy-for-ml.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab01-numpy-for-ml/lab01-numpy-for-ml_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U02-REG-13-PR",
+  "title": "Lab 02 — Linear regression by gradient descent: the cost, gradient checking, batch and stochastic gradient descent, the normal equations and feature scaling",
+  "unit": "U02 · REG — Linear regression & gradient descent",
+  "part": "Part II — Supervised learning",
+  "hours": 4,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab02-linear-regression-gd/lab02-linear-regression-gd.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab02-linear-regression-gd/lab02-linear-regression-gd_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U03-PRB-00-CN",
+  "title": "Connector: From fitting lines to reasoning about uncertainty — why least squares needs probability, and how covariance matrices and the multivariate Gaussian are linear algebra",
+  "unit": "U03 · PRB — Probability & estimation",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c02_regression_to_probability.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U03-PRB-01-RD",
+  "title": "Probability Theory Review and Reference (2022, including the multivariate Gaussian)",
+  "unit": "U03 · PRB — Probability & estimation",
+  "part": "Part II — Supervised learning",
+  "hours": 6,
+  "links": [
+   [
+    "review",
+    "_dark/CA/cs229-probability_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U03-PRB-02-BR",
+  "title": "Probability bridge review — likelihood, maximum likelihood, MAP estimation and generative classifiers",
+  "unit": "U03 · PRB — Probability & estimation",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "review",
+    "CA/probability_problem_set/probability_bridge_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U03-PRB-03-BS",
+  "title": "Probability bridge set — 43 questions",
+  "unit": "U03 · PRB — Probability & estimation",
+  "part": "Part II — Supervised learning",
+  "hours": 8,
+  "links": [
+   [
+    "set",
+    "CA/probability_problem_set/probability_problem_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U03-PRB-04-PR",
+  "title": "Lab 03 — Probability by simulation: the law of large numbers, the CLT, sampling and conditioning Gaussians, MLE and MAP, and the sigmoid posterior",
+  "unit": "U03 · PRB — Probability & estimation",
+  "part": "Part II — Supervised learning",
+  "hours": 4,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab03-probability-by-simulation/lab03-probability-by-simulation.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab03-probability-by-simulation/lab03-probability-by-simulation_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U04-CVX-00-CN",
+  "title": "Connector: From likelihoods to landscapes — why setting a derivative to zero can fail, concave log-likelihoods, and Jensen's inequality",
+  "unit": "U04 · CVX — Convexity",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c03_probability_to_convexity.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U04-CVX-01-RD",
+  "title": "Convex Optimization Overview, Part I (convex sets, functions and problems)",
+  "unit": "U04 · CVX — Convexity",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "notes",
+    "_dark/cs229self-study-master/doc/NOTES/section_notes/4 - cs229-cvxopt.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U04-CVX-02-BR",
+  "title": "Convexity bridge review",
+  "unit": "U04 · CVX — Convexity",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "review",
+    "CA/convex_optimization_problem_set/convexity_bridge_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U04-CVX-03-BS",
+  "title": "Convexity bridge set — 26 questions",
+  "unit": "U04 · CVX — Convexity",
+  "part": "Part II — Supervised learning",
+  "hours": 6,
+  "links": [
+   [
+    "set",
+    "CA/convex_optimization_problem_set/convexity_problem_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U04-CVX-04-PR",
+  "title": "Lab 04 — Convex and non-convex optimization, hands on: gradient descent paths, step sizes, conditioning, Newton's method and numerical convexity checks",
+  "unit": "U04 · CVX — Convexity",
+  "part": "Part II — Supervised learning",
+  "hours": 4,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab04-convex-optimization/lab04-convex-optimization.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab04-convex-optimization/lab04-convex-optimization_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U05-GLM-00-CN",
+  "title": "Connector: From convexity to classification — why least squares fails for labels, the sigmoid, the Bernoulli likelihood, and Newton's method",
+  "unit": "U05 · GLM — Logistic regression, Newton's method & GLMs",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c04_convexity_to_classification.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U05-GLM-01-VD",
+  "title": "Lecture 3 — Locally Weighted & Logistic Regression (video)",
+  "unit": "U05 · GLM — Logistic regression, Newton's method & GLMs",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/het9HFqo1TQ"
+   ]
+  ]
+ },
+ {
+  "code": "U05-GLM-02-RD",
+  "title": "Lecture Notes 1, part B — the probabilistic interpretation, locally weighted regression, logistic regression and Newton's method",
+  "unit": "U05 · GLM — Logistic regression, Newton's method & GLMs",
+  "part": "Part II — Supervised learning",
+  "hours": 2.5,
+  "links": [
+   [
+    "notes 1, part B",
+    "_dark/splits/notes1_B_probabilistic_lwr_logistic_newton.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U05-GLM-03-VD",
+  "title": "Lecture 4 — Perceptron & Generalized Linear Models (video)",
+  "unit": "U05 · GLM — Logistic regression, Newton's method & GLMs",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/iZTeva0WSTQ"
+   ]
+  ]
+ },
+ {
+  "code": "U05-GLM-04-RD",
+  "title": "Lecture Notes 1, part C — the perceptron, the exponential family and generalized linear models",
+  "unit": "U05 · GLM — Logistic regression, Newton's method & GLMs",
+  "part": "Part II — Supervised learning",
+  "hours": 2.5,
+  "links": [
+   [
+    "notes 1, part C",
+    "_dark/splits/notes1_C_perceptron_glms.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U05-GLM-05-BS",
+  "title": "Logistic regression, Newton's method & GLMs bridge set — 30 questions",
+  "unit": "U05 · GLM — Logistic regression, Newton's method & GLMs",
+  "part": "Part II — Supervised learning",
+  "hours": 7,
+  "links": [
+   [
+    "set",
+    "bridges/U05_glm/glm_bridge_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U05-GLM-06-PS",
+  "title": "PS1 Q1(a)–(b) (logistic regression and Newton's method) and Q5 (locally weighted regression)",
+  "unit": "U05 · GLM — Logistic regression, Newton's method & GLMs",
+  "part": "Part II — Supervised learning",
+  "hours": 8,
+  "links": [
+   [
+    "problems",
+    "_dark/splits/ps1_Q1ab_Q5.pdf"
+   ],
+   [
+    "starter code",
+    "cs229self-study-master/2018/ps1.zip"
+   ],
+   [
+    "data",
+    "cs229self-study-master/2018/data.zip"
+   ]
+  ]
+ },
+ {
+  "code": "U05-GLM-07-PS",
+  "title": "PS1 Q3 (Poisson regression) and Q4 (convexity of GLMs)",
+  "unit": "U05 · GLM — Logistic regression, Newton's method & GLMs",
+  "part": "Part II — Supervised learning",
+  "hours": 6,
+  "links": [
+   [
+    "problems",
+    "_dark/splits/ps1_Q3_Q4.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U05-GLM-08-GP",
+  "title": "Optional: linear invariance of optimization algorithms (older PS1 Q4, with its solution)",
+  "unit": "U05 · GLM — Logistic regression, Newton's method & GLMs",
+  "part": "Part II — Supervised learning",
+  "hours": 2,
+  "links": [
+   [
+    "problem and solution",
+    "_dark/splits/oldps1_Q4_linear_invariance.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U06-GEN-00-CN",
+  "title": "Connector: Two ways to build a classifier — Bayes' rule as a classifier, Gaussian classes, fitting by counting, and the Naive Bayes assumption",
+  "unit": "U06 · GEN — Generative classifiers",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c05_discriminative_to_generative.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U06-GEN-01-VD",
+  "title": "Lecture 5 — GDA & Naive Bayes (video)",
+  "unit": "U06 · GEN — Generative classifiers",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/nt63k3bfXS0"
+   ]
+  ]
+ },
+ {
+  "code": "U06-GEN-02-RD",
+  "title": "Lecture Notes 2, part A — Gaussian discriminant analysis and Naive Bayes",
+  "unit": "U06 · GEN — Generative classifiers",
+  "part": "Part II — Supervised learning",
+  "hours": 2.5,
+  "links": [
+   [
+    "notes 2, part A",
+    "_dark/splits/notes2_A_gda_naive_bayes.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U06-GEN-03-BS",
+  "title": "Generative classifiers bridge set — 26 questions",
+  "unit": "U06 · GEN — Generative classifiers",
+  "part": "Part II — Supervised learning",
+  "hours": 6,
+  "links": [
+   [
+    "set",
+    "bridges/U06_generative/generative_bridge_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U06-GEN-04-PS",
+  "title": "PS1 Q1(c)–(h) (GDA versus logistic regression) and Q2 (positive-only labels), which completes PS1",
+  "unit": "U06 · GEN — Generative classifiers",
+  "part": "Part II — Supervised learning",
+  "hours": 8,
+  "links": [
+   [
+    "problems",
+    "_dark/splits/ps1_Q1ch_Q2.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U06-GEN-05-SY",
+  "title": "Synthesis: discriminative versus generative classifiers — logistic regression, GDA and Naive Bayes, their assumptions and objectives, and when each one wins",
+  "unit": "U06 · GEN — Generative classifiers",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "synthesis sheet",
+    "bridges/synthesis/s06_classifiers.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U07-DUA-00-CN",
+  "title": "Connector: From free to constrained optimization — the constraint hiding in Naive Bayes, why Lagrange multipliers work, and active constraints",
+  "unit": "U07 · DUA — Lagrange duality",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c06_generative_to_duality.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U07-DUA-01-RD",
+  "title": "Convex Optimization Overview, Part II (the Lagrangian, duality and the KKT conditions)",
+  "unit": "U07 · DUA — Lagrange duality",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "notes",
+    "_dark/cs229self-study-master/doc/NOTES/section_notes/5 - cs229-cvxopt2.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U07-DUA-02-BR",
+  "title": "Duality bridge review",
+  "unit": "U07 · DUA — Lagrange duality",
+  "part": "Part II — Supervised learning",
+  "hours": 2,
+  "links": [
+   [
+    "review",
+    "CA/convex_optimization_problem_set/duality_bridge_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U07-DUA-03-BS",
+  "title": "Duality bridge set — 14 questions",
+  "unit": "U07 · DUA — Lagrange duality",
+  "part": "Part II — Supervised learning",
+  "hours": 5,
+  "links": [
+   [
+    "set",
+    "CA/convex_optimization_problem_set/duality_problem_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-00-CN",
+  "title": "Connector: From the dual to the support vector machine — Laplace smoothing, the distance to a hyperplane, support vectors, and why inner products lead to kernels",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c07_duality_to_svm.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-01-VD",
+  "title": "Lecture 6 — Support Vector Machines (video)",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/lDwow4aOrtg"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-02-RD",
+  "title": "Lecture Notes 2, part B — Laplace smoothing and the event models for text",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notes 2, part B",
+    "_dark/splits/notes2_B_laplace_event_models.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-03-RD",
+  "title": "Lecture Notes 3, part A — margins and the optimal margin classifier",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "notes 3, part A",
+    "_dark/splits/notes3_A_margins_optimal_margin.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-04-VD",
+  "title": "Lecture 7 — Kernels (video)",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/8NYoQiRANpg"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-05-RD",
+  "title": "Lecture Notes 3, part B — the SVM dual, kernels and SMO",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "notes 3, part B",
+    "_dark/splits/notes3_B_dual_kernels_smo.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-06-RD",
+  "title": "Notes 6 — the perceptron and online learning",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notes 6",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes6.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-07-RD",
+  "title": "The representer theorem",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "representer theorem",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/representer-function.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-08-RD",
+  "title": "Loss functions",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "loss functions",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/loss-functions.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-09-BR",
+  "title": "Kernels bridge review — feature maps, Gram matrices, valid and invalid kernels, elementwise products and the kernel trick",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "review",
+    "bridges/U08_svm/kernels_bridge_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-10-PR",
+  "title": "Lab 05 — Kernels and support vector machines you can see: margins, the constant C, kernel widths, feature maps and kernel matrices",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab05-kernels-and-svms/lab05-kernels-and-svms.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab05-kernels-and-svms/lab05-kernels-and-svms_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-11-BS",
+  "title": "Margins, kernels & text classification bridge set — 28 questions",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 6,
+  "links": [
+   [
+    "set",
+    "bridges/U08_svm/svm_bridge_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-12-PS",
+  "title": "PS2 Q4 (constructing kernels), Q5 (the kernelized perceptron) and Q6 (spam classification)",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 10,
+  "links": [
+   [
+    "problems",
+    "_dark/splits/ps2_Q4_Q5_Q6.pdf"
+   ],
+   [
+    "starter code",
+    "cs229self-study-master/2018/ps2.zip"
+   ]
+  ]
+ },
+ {
+  "code": "U08-SVM-13-RD",
+  "title": "Gaussian processes — kernels meet Gaussian conditioning (no lecture covers this)",
+  "unit": "U08 · SVM — Support vector machines & kernels",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "GP note",
+    "_dark/cs229self-study-master/doc/NOTES/section_notes/9 - cs229-gaussian_processes.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-00-CN",
+  "title": "Connector: From powerful models to models that generalize — overfitting in four points, flexibility knobs, priors as penalties, and why averages can be trusted",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c08_svm_to_generalization.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-01-VD",
+  "title": "Lecture 8 — Data Splits, Models & Cross-Validation (video)",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/rjbkWSTjHzM"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-02-RD",
+  "title": "Notes 5 — regularization and model selection",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 2,
+  "links": [
+   [
+    "notes 5",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes5.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-03-VD",
+  "title": "Discussion Section — Learning Theory (video)",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/iVOxMcumR4A"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-04-RD",
+  "title": "Notes 4 — learning theory",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 2,
+  "links": [
+   [
+    "notes 4",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes4.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-05-RD",
+  "title": "Hoeffding's inequality",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 0.5,
+  "links": [
+   [
+    "Hoeffding",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/hoeffding.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-06-RD",
+  "title": "Bias, variance and error analysis",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "bias and variance",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/error-analysis.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-07-BR",
+  "title": "Regularization & generalization bridge review — separable data, optimality conditions, priors as penalties, and bias and variance",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "review",
+    "bridges/U09_generalization/regularization_bridge_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-08-BS",
+  "title": "Regularization & generalization bridge set — 28 questions",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 6,
+  "links": [
+   [
+    "set",
+    "bridges/U09_generalization/generalization_bridge_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-09-PS",
+  "title": "PS2 Q1 (logistic regression: training stability)",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "problem",
+    "_dark/splits/ps2_Q1.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-10-PS",
+  "title": "PS2 Q2 (model calibration) and Q3 (the Bayesian interpretation of regularization), which completes PS2",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 6,
+  "links": [
+   [
+    "problems",
+    "_dark/splits/ps2_Q2_Q3.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-11-GP",
+  "title": "Uniform convergence and VC dimension (older PS3 Q1–Q2, with solutions)",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 5,
+  "links": [
+   [
+    "problems and solutions",
+    "_dark/splits/oldps3_Q1_Q2_learning_theory.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-12-VD",
+  "title": "Lecture 9 — Decision Trees & Ensemble Methods (video)",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/wr9gUr-eWdA"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-13-LB",
+  "title": "Lecture bridge: decision trees and ensembles — written notes for Lecture 9, and a translation into the notation of the boosting notes",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "notes",
+    "bridges/U09_generalization/lecture9_trees_ensembles_notes.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-14-RD",
+  "title": "Supplemental notes — boosting",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1.5,
+  "links": [
+   [
+    "boosting",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/boosting.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-15-PR",
+  "title": "Lab 06 — Bias, variance and regularization: the U-shaped curve, measured bias and variance, ridge and a lasso from scratch, k-fold cross-validation, learning curves and ensembles",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 4,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab06-bias-variance-regularization/lab06-bias-variance-regularization.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab06-bias-variance-regularization/lab06-bias-variance-regularization_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-16-RD",
+  "title": "Midterm review sheet",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "review sheet",
+    "_dark/cs229self-study-master/Exams/cs229-mt-review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-17-EX",
+  "title": "Checkpoint: the 2017 Autumn midterm (timed)",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 3,
+  "links": [
+   [
+    "exam",
+    "_dark/cs229self-study-master/Exams/2017_Aut_Midterm.pdf"
+   ],
+   [
+    "solution",
+    "_dark/cs229self-study-master/Exams/2017_Aut_Midterm_soln.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-18-PR",
+  "title": "AI101 prerequisite: Pandas",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/pandas.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-19-PR",
+  "title": "AI101 prerequisite: Seaborn",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "notebook",
+    "IIT_Ropar_AI101_DPPs/seaborn.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-20-PJ",
+  "title": "Mini-project 1: a complete supervised-learning study",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 15,
+  "links": [
+   [
+    "CS229 report guidelines",
+    "_dark/cs229self-study-master/Exams/cs229_final_report_guidelines.pdf.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U09-GEZ-21-SY",
+  "title": "Synthesis: Part II on one page — every supervised method so far, its loss, its assumptions and how it is trained",
+  "unit": "U09 · GEZ — Generalization, model selection & ensembles",
+  "part": "Part II — Supervised learning",
+  "hours": 1,
+  "links": [
+   [
+    "synthesis sheet",
+    "bridges/synthesis/s09_supervised.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-00-CN",
+  "title": "Connector: From chosen features to learned features — a neuron is logistic regression, hidden layers build features, training is the chain rule",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c09_generalization_to_neural_networks.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-01-VD",
+  "title": "Lecture 10 — Introduction to Neural Networks (video)",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/MfIjxPh6Pys"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-02-VD",
+  "title": "Lecture 11 — Backprop & Improving Neural Networks (video)",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/zUazLXZZA2U"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-03-RD",
+  "title": "Deep learning notes",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 3,
+  "links": [
+   [
+    "notes",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes-deep_learning.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-04-RD",
+  "title": "Backpropagation notes",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 1,
+  "links": [
+   [
+    "backprop notes",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes-backprop.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-05-RD",
+  "title": "Derivatives, Backpropagation and Vectorization",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 1,
+  "links": [
+   [
+    "Derivatives, Backprop & Vectorization",
+    "_dark/cs229self-study-master/doc/Derivatives Backpropagation and Vectorization.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-06-RD",
+  "title": "backprop.py — a worked backpropagation script",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 0.5,
+  "links": [
+   [
+    "backprop.py",
+    "cs229self-study-master/doc/cs229-notes-all/backprop.py"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-07-RD",
+  "title": "Convolutional networks — CS231n notes (no CS229 lecture covers them)",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 2.5,
+  "links": [
+   [
+    "CS231n notes: ConvNets",
+    "external/web_latex/cs231n_convolutional_networks/cs231n_convolutional_networks.pdf"
+   ],
+   [
+    "online",
+    "https://cs231n.github.io/convolutional-networks/"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-08-RD",
+  "title": "Convolutional networks — the deep learning cheatsheet page",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 0.5,
+  "links": [
+   [
+    "cheatsheet page",
+    "_dark/splits/dl_cheatsheet_cnn.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-09-BR",
+  "title": "Backpropagation bridge review — layers, softmax and cross-entropy, convolution and pooling, and what step networks can represent",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 3,
+  "links": [
+   [
+    "review",
+    "bridges/U10_neural_networks/backprop_bridge_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-10-BS",
+  "title": "Neural networks by hand bridge set — 28 questions",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 6,
+  "links": [
+   [
+    "set",
+    "bridges/U10_neural_networks/nns_bridge_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-11-PR",
+  "title": "Lab 07 — Backpropagation from scratch: a scalar autograd engine, vectorized layers with gradient checks, and networks trained on a spiral and on digits",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 5,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab07-backprop-from-scratch/lab07-backprop-from-scratch.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab07-backprop-from-scratch/lab07-backprop-from-scratch_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-12-PS",
+  "title": "PS3 Q1 (a simple neural network)",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 4,
+  "links": [
+   [
+    "problem",
+    "_dark/splits/ps3_Q1.pdf"
+   ],
+   [
+    "starter code",
+    "cs229self-study-master/2018/ps3.zip"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-13-GP",
+  "title": "A fully connected network for MNIST, from scratch in NumPy (2017 PS4 Q1)",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 6,
+  "links": [
+   [
+    "problem",
+    "_dark/splits/ps2017_4_Q1_fully_connected_mnist.pdf"
+   ],
+   [
+    "starter code",
+    "cs229self-study-master/OldStuff/Problem-set-4/1-Neural-networks-MNIST-image-classification/"
+   ],
+   [
+    "data",
+    "cs229self-study-master/OldStuff/Problem-set-4/data/"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-14-PR",
+  "title": "Lab 08 — PyTorch basics: tensors, autograd, modules, the training loop, optimizers, a small CNN, and saving models",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 4,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab08-pytorch-basics/lab08-pytorch-basics.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab08-pytorch-basics/lab08-pytorch-basics_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-15-PS",
+  "title": "PS4 Q1 (MNIST with a convolutional network)",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 8,
+  "links": [
+   [
+    "problem",
+    "_dark/splits/ps4_Q1.pdf"
+   ],
+   [
+    "code and autograder",
+    "cs229self-study-master/2018/ps4_v5_release.zip"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-16-VD",
+  "title": "Lecture 12 — Debugging ML Models & Error Analysis (video)",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/ORrStCArmP4"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-17-RD",
+  "title": "Advice for applying machine learning",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 1.5,
+  "links": [
+   [
+    "ML advice",
+    "_dark/cs229self-study-master/doc/ML-advice.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U10-NNS-18-SY",
+  "title": "Synthesis: Part III on one page — the forward pass, backpropagation, initialization, regularization, and how you would debug a network that will not learn",
+  "unit": "U10 · NNS — Neural networks",
+  "part": "Part III — Neural networks",
+  "hours": 1,
+  "links": [
+   [
+    "synthesis sheet",
+    "bridges/synthesis/s10_neural_networks.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-00-CN",
+  "title": "Connector: From labelled data to hidden structure — GDA with hidden labels, k-means, soft assignments, and why EM needs Jensen's inequality",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c10_neural_networks_to_latent.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-01-RD",
+  "title": "Refresher: Jensen's inequality (Convex Optimization Overview, §3.3)",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 0.3,
+  "links": [
+   [
+    "Jensen refresher",
+    "_dark/splits/cvxopt_3_3_jensen.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-02-VD",
+  "title": "Lecture 13 — Expectation-Maximization (video)",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/rVfZHWTwXSA"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-03-RD",
+  "title": "Notes 7a — k-means clustering",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 0.7,
+  "links": [
+   [
+    "k-means",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes7a.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-04-RD",
+  "title": "Notes 7b — mixtures of Gaussians and EM",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1,
+  "links": [
+   [
+    "mixtures of Gaussians",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes7b.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-05-RD",
+  "title": "Notes 8 — the EM algorithm",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1.5,
+  "links": [
+   [
+    "EM",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes8.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-06-BR",
+  "title": "Information and Fisher information bridge review — entropy, KL divergence, the empirical distribution, the score, Fisher information, Taylor expansions and EM by hand",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 3,
+  "links": [
+   [
+    "review",
+    "bridges/U11_latent/information_bridge_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-07-BS",
+  "title": "EM, KL divergence and Fisher information bridge set — 28 questions",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 6,
+  "links": [
+   [
+    "set",
+    "bridges/U11_latent/latent_bridge_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-08-PS",
+  "title": "PS3 Q2 (KL divergence and maximum likelihood) and Q5 (k-means for compression)",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 8,
+  "links": [
+   [
+    "problems",
+    "_dark/splits/ps3_Q2_Q5.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-09-GP",
+  "title": "Optional: EM for MAP estimation (older PS4 Q1, with its solution)",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 2,
+  "links": [
+   [
+    "problem and solution",
+    "_dark/splits/oldps4_Q1_em_for_map.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-10-RD",
+  "title": "Refresher: Gaussian conditionals and closure (Probability Review, §5.5–5.6)",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 0.5,
+  "links": [
+   [
+    "Gaussian conditionals refresher",
+    "_dark/splits/prob_review_5_6_gaussian_closure.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-11-VD",
+  "title": "Lecture 14 — EM & Factor Analysis (video)",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/tw6cmL5STuY"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-12-RD",
+  "title": "Notes 9 — factor analysis",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 2,
+  "links": [
+   [
+    "notes 9",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes9.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-13-PS",
+  "title": "PS3 Q3 (the natural gradient) and Q4 (semi-supervised EM), which completes PS3",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 10,
+  "links": [
+   [
+    "problems",
+    "_dark/splits/ps3_Q3_Q4.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-14-RD",
+  "title": "Semi-supervised learning beyond EM — co-training and the transductive SVM (CMU 10-601 L19)",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 2,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/gnNLjX50F7U"
+   ],
+   [
+    "slides (follow along)",
+    "_dark/external/cmu_10601/19_ssl_03-30-2015.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-15-RD",
+  "title": "Active learning — the other way to learn from few labels (CMU 10-601 L20)",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 2,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/2BZhsEakEH8"
+   ],
+   [
+    "slides (follow along)",
+    "_dark/external/cmu_10601/20_al_4-1-2015.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U11-LAT-16-EX",
+  "title": "Checkpoint: the 2016 Spring midterm",
+  "unit": "U11 · LAT — EM and latent-variable models",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 4,
+  "links": [
+   [
+    "exam",
+    "_dark/cs229self-study-master/Exams/2016_Spr_Midterm.pdf"
+   ],
+   [
+    "solution",
+    "_dark/cs229self-study-master/Exams/2016_Spr_Midterm_soln.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-00-CN",
+  "title": "Connector: From mixtures to graphs and sequences — every model is a factorization, Markov chains as matrix multiplication, and HMMs",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c11_latent_to_graphical.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-01-VD",
+  "title": "CMU 10-601 Lecture 11 — Bayesian networks (video with slides)",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/vdV81hCLwLE"
+   ],
+   [
+    "slides (follow along)",
+    "_dark/external/cmu_10601/11_GrMod1_2-18-2015.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-02-VD",
+  "title": "CMU 10-601 Lecture 12 — Bayesian networks, continued (video with slides)",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://www.cs.cmu.edu/~ninamf/courses/601sp15/video/12.html"
+   ],
+   [
+    "slides (follow along)",
+    "_dark/external/cmu_10601/12_GrMod1_2-23-2015-ann.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-03-VD",
+  "title": "CMU 10-601 Lecture 13 — conditional independence and inference (video with slides)",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/E16cqVHXow8"
+   ],
+   [
+    "slides (follow along)",
+    "_dark/external/cmu_10601/13_GrMod3_2-25-2015.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-04-RD",
+  "title": "Bishop §8.1–8.2 — Bayesian networks and conditional independence",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 3.5,
+  "links": [
+   [
+    "Bishop §8.1–8.2",
+    "_dark/splits/bishop_8_1_8_2_bayesian_networks.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-05-RD",
+  "title": "Hidden Markov models",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 3,
+  "links": [
+   [
+    "HMM note",
+    "_dark/cs229self-study-master/doc/NOTES/section_notes/6 - cs229-hmm.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-06-PR",
+  "title": "Graphical models and hidden Markov models practice set — 24 questions",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 5,
+  "links": [
+   [
+    "set",
+    "bridges/U12_graphical/graphical_models_practice_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-07-PR",
+  "title": "Lab 09 — Hidden Markov models: the occasionally dishonest casino, the forward algorithm, Viterbi and posterior decoding, and Baum–Welch",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 4,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab09-hidden-markov-models/lab09-hidden-markov-models.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab09-hidden-markov-models/lab09-hidden-markov-models_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-08-VD",
+  "title": "Spring 2026 #11 — Diffusion models (video)",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/dqUMCzWjZSI"
+   ]
+  ]
+ },
+ {
+  "code": "U12-GMS-09-SY",
+  "title": "Synthesis: Part IV on one page — latent variables, the two steps of EM and why EM never decreases the likelihood, and how HMMs and diffusion extend the idea",
+  "unit": "U12 · GMS — Graphical models, sequences & diffusion",
+  "part": "Part IV — Latent variables & generative models",
+  "hours": 1,
+  "links": [
+   [
+    "synthesis sheet",
+    "bridges/synthesis/s12_latent.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U13-REP-00-CN",
+  "title": "Connector: From hidden causes to compact representations — projections, the variance along a direction, and PCA as an eigenvector problem",
+  "unit": "U13 · REP — PCA & ICA",
+  "part": "Part V — Representations",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c12_graphical_to_representations.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U13-REP-01-VD",
+  "title": "Lecture 15 — PCA & ICA (video)",
+  "unit": "U13 · REP — PCA & ICA",
+  "part": "Part V — Representations",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/dyb_cFywuik"
+   ]
+  ]
+ },
+ {
+  "code": "U13-REP-02-RD",
+  "title": "Notes 10 — principal components analysis",
+  "unit": "U13 · REP — PCA & ICA",
+  "part": "Part V — Representations",
+  "hours": 1,
+  "links": [
+   [
+    "PCA (notes 10)",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes10.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U13-REP-03-VD",
+  "title": "Lecture 16 — the end of ICA, and an introduction to reinforcement learning (video)",
+  "unit": "U13 · REP — PCA & ICA",
+  "part": "Part V — Representations",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/YQA9lLdLig8"
+   ]
+  ]
+ },
+ {
+  "code": "U13-REP-04-RD",
+  "title": "Notes 11 — independent components analysis",
+  "unit": "U13 · REP — PCA & ICA",
+  "part": "Part V — Representations",
+  "hours": 1.3,
+  "links": [
+   [
+    "notes",
+    "_dark/cs229self-study-master/doc/cs229-notes-all/cs229-notes11.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U13-REP-05-BS",
+  "title": "PCA and ICA bridge set — 22 questions",
+  "unit": "U13 · REP — PCA & ICA",
+  "part": "Part V — Representations",
+  "hours": 5,
+  "links": [
+   [
+    "set",
+    "bridges/U13_representations/pca_ica_bridge_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U13-REP-06-PR",
+  "title": "Lab 10 — PCA on images (eigen-digits, reconstruction, a 2-D map, denoising) and a first look at ICA",
+  "unit": "U13 · REP — PCA & ICA",
+  "part": "Part V — Representations",
+  "hours": 3,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab10-pca-and-ica/lab10-pca-and-ica.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab10-pca-and-ica/lab10-pca-and-ica_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U13-REP-07-PS",
+  "title": "PS4 Q3 (PCA) and Q4 (ICA, the cocktail party)",
+  "unit": "U13 · REP — PCA & ICA",
+  "part": "Part V — Representations",
+  "hours": 6,
+  "links": [
+   [
+    "problems",
+    "_dark/splits/ps4_Q3_Q4.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-00-CN",
+  "title": "Connector: From learning from data to learning by acting — rewards, discounting, and the Bellman equation as a linear system",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c13_representations_to_reinforcement.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-01-RD",
+  "title": "Lecture Notes 12, part A — Markov decision processes (the second half of Lecture 16)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1,
+  "links": [
+   [
+    "notes 12, part A",
+    "_dark/splits/notes12_A_mdps.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-02-VD",
+  "title": "Lecture 17 — MDPs & Value/Policy Iteration (video)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/d5gaWTo6kDM"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-03-RD",
+  "title": "Lecture Notes 12, part B — value iteration, policy iteration and learning a model",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1.5,
+  "links": [
+   [
+    "notes 12, part B",
+    "_dark/splits/notes12_B_value_policy_iteration.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-04-BR",
+  "title": "Reinforcement learning bridge review — Bellman equations as linear systems, the max-norm, contractions, importance sampling, control variates, and exploration versus exploitation (from the end of Lecture 17)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 3,
+  "links": [
+   [
+    "review",
+    "bridges/U14_reinforcement/rl_bridge_review.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-05-BS",
+  "title": "MDPs, contractions and off-policy evaluation bridge set — 24 questions",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 5,
+  "links": [
+   [
+    "set",
+    "bridges/U14_reinforcement/rl_bridge_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-06-PS",
+  "title": "PS4 Q5 (Markov decision processes)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 3,
+  "links": [
+   [
+    "problem",
+    "_dark/splits/ps4_Q5.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-07-PR",
+  "title": "Lab 11 — Reinforcement learning in a gridworld: value iteration, the contraction made visible, policy iteration and Q-learning",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 4,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab11-gridworld-rl/lab11-gridworld-rl.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab11-gridworld-rl/lab11-gridworld-rl_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-08-VD",
+  "title": "Lecture 18 — Continuous-State MDP & Model Simulation (video)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/QFu5nuc-S0s"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-09-RD",
+  "title": "Lecture Notes 12, part C — continuous-state MDPs, simulators and fitted value iteration",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 2,
+  "links": [
+   [
+    "notes 12, part C",
+    "_dark/splits/notes12_C_continuous_state.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-10-GP",
+  "title": "The inverted pendulum — the course's only RL coding task (older PS4 Q6, with its solution)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 8,
+  "links": [
+   [
+    "problem and solution",
+    "_dark/splits/oldps4_Q6_inverted_pendulum.pdf"
+   ],
+   [
+    "code",
+    "cs229self-study-master/OldStuff/Problem-set-4/6-reinforcement-learning-the-inverted-pendulum/"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-11-VD",
+  "title": "Lecture 19 — Reward Model & Linear Dynamical System (video)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/0rt2CsEQv6U"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-12-RD",
+  "title": "Lecture Notes 13, part A — finite-horizon MDPs and LQR",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 2,
+  "links": [
+   [
+    "notes 13, part A",
+    "_dark/splits/notes13_A_finite_horizon_lqr.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-13-RD",
+  "title": "Optional: Lecture Notes 13, part B — differential dynamic programming and LQG",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1.5,
+  "links": [
+   [
+    "notes 13, part B",
+    "_dark/splits/notes13_B_ddp_lqg.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-14-VD",
+  "title": "Lecture 20 — RL Debugging & Diagnostics, then direct policy search (video)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1.5,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/pLhPQynL0tY"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-15-RD",
+  "title": "Critiques of machine learning (for the debugging half of Lecture 20)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 0.5,
+  "links": [
+   [
+    "critiques of ML",
+    "_dark/cs229self-study-master/doc/NOTES/section_notes/critiques-ml.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-16-LB",
+  "title": "Lecture bridge: direct policy search and REINFORCE — written notes for the second half of Lecture 20",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1,
+  "links": [
+   [
+    "notes",
+    "bridges/U14_reinforcement/lecture20_policy_search_notes.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-17-PS",
+  "title": "PS4 Q2 (off-policy evaluation and causal inference), which completes PS4",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 4,
+  "links": [
+   [
+    "problem",
+    "_dark/splits/ps4_Q2.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-18-VD",
+  "title": "Spring 2026 #16 — policy gradients and REINFORCE (skip the MDP recap at the start)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 2,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/xveNBYVTrqw"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-19-EX",
+  "title": "Checkpoint: the 2019 Autumn midterm (keep the others for revision)",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 4,
+  "links": [
+   [
+    "exam and solution",
+    "_dark/cs229self-study-master/Exams/2019_autumn_midterm_solutions.pdf.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U14-RLC-20-SY",
+  "title": "Synthesis: Parts V–VI on one page — PCA versus ICA, the Bellman equations, value versus policy iteration, LQR, and what a policy gradient estimates",
+  "unit": "U14 · RLC — MDPs, control & policy gradients",
+  "part": "Part VI — Reinforcement learning & control",
+  "hours": 1,
+  "links": [
+   [
+    "synthesis sheet",
+    "bridges/synthesis/s14_representations_rl.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-00-CN",
+  "title": "Connector: From policies to language models — embeddings, next-token prediction as classification, attention as a weighted average, and RL fine-tuning",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c14_reinforcement_to_language_models.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-01-VD",
+  "title": "Spring 2026 #12 — the end of diffusion (first 34 minutes), then foundation models: pre-training, linear probing and fine-tuning",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 1.4,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/_kREM2UAiJ8"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-02-VD",
+  "title": "Spring 2026 #13 — Representation learning: contrastive learning, data augmentation and hard negatives, semantic search and retrieval",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 2,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/lNTajqxxOn4"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-03-VD",
+  "title": "Spring 2026 #14 — Language models: tokenization, the next-token prediction loss, and the transformer with masked attention",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 2,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/pwQ0l4hFCVI"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-04-PR",
+  "title": "Language models and attention by hand practice set — 22 questions",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 4,
+  "links": [
+   [
+    "set",
+    "bridges/U15_language_models/language_models_practice_set.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-05-PR",
+  "title": "Lab 12 — Language models from scratch: bigrams by counting and by gradient descent, temperature, a causal attention head, and a tiny transformer",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 4,
+  "links": [
+   [
+    "lab notebook",
+    "ml-from-first-principles/lab12-language-models-from-scratch/lab12-language-models-from-scratch.ipynb"
+   ],
+   [
+    "reference solutions",
+    "labs_reference/lab12-language-models-from-scratch/lab12-language-models-from-scratch_solutions.ipynb"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-06-PR",
+  "title": "Build a small GPT from scratch, following Karpathy's “Let's build GPT”",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 6,
+  "links": [
+   [
+    "video",
+    "https://www.youtube.com/watch?v=kCc8FmEb1nY"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-07-VD",
+  "title": "Spring 2026 #15 — Efficient transformers; prompting versus training",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 2,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/hHC-SF3utxg"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-08-VD",
+  "title": "Spring 2026 #17 — Credit assignment, PPO and RL for language models",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 2,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/J7CossjMvEg"
+   ]
+  ]
+ },
+ {
+  "code": "U15-LLM-09-SY",
+  "title": "Synthesis: Part VII on one page — embeddings, attention, the training objective of a language model, and how RL fine-tuning changes it",
+  "unit": "U15 · LLM — From embeddings to aligned language models",
+  "part": "Part VII — Representation learning & language models",
+  "hours": 1,
+  "links": [
+   [
+    "synthesis sheet",
+    "bridges/synthesis/s15_language_models.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U16-CAP-00-CN",
+  "title": "Connector: From learner to researcher — choosing a question, baselines, honest measurement, error analysis, and writing it up",
+  "unit": "U16 · CAP — Your own project",
+  "part": "Part VIII — Capstone",
+  "hours": 1,
+  "links": [
+   [
+    "connector",
+    "bridges/connectors/c15_course_to_capstone.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U16-CAP-01-PJ",
+  "title": "Capstone project in the CS229 final-project format: proposal, milestone and final report",
+  "unit": "U16 · CAP — Your own project",
+  "part": "Part VIII — Capstone",
+  "hours": 40,
+  "links": [
+   [
+    "report guidelines",
+    "_dark/cs229self-study-master/Exams/cs229_final_report_guidelines.pdf.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U16-CAP-02-EX",
+  "title": "Revision: the 2019 Spring midterm",
+  "unit": "U16 · CAP — Your own project",
+  "part": "Part VIII — Capstone",
+  "hours": 2,
+  "links": [
+   [
+    "2019 Spring",
+    "_dark/cs229self-study-master/Exams/2019_spring_midterm_solutions.pdf.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U16-CAP-03-EX",
+  "title": "Revision: the 2016 Autumn midterm",
+  "unit": "U16 · CAP — Your own project",
+  "part": "Part VIII — Capstone",
+  "hours": 2,
+  "links": [
+   [
+    "2016 Autumn",
+    "_dark/cs229self-study-master/Exams/2016_Aut_Midterm.pdf"
+   ],
+   [
+    "2016 Autumn solution",
+    "_dark/cs229self-study-master/Exams/2016_Aut_Midterm_2.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U16-CAP-04-EX",
+  "title": "Revision: the 2015 midterm",
+  "unit": "U16 · CAP — Your own project",
+  "part": "Part VIII — Capstone",
+  "hours": 2,
+  "links": [
+   [
+    "2015",
+    "_dark/cs229self-study-master/Exams/midterm2015.pdf"
+   ],
+   [
+    "2015 solution",
+    "_dark/cs229self-study-master/Exams/practicemidterm2sol.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U16-CAP-05-EX",
+  "title": "Revision: the 2014 midterm",
+  "unit": "U16 · CAP — Your own project",
+  "part": "Part VIII — Capstone",
+  "hours": 2,
+  "links": [
+   [
+    "2014",
+    "_dark/cs229self-study-master/Exams/midterm2014.pdf"
+   ],
+   [
+    "2014 solution",
+    "_dark/cs229self-study-master/Exams/practicemidterm1sol.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U16-CAP-06-RD",
+  "title": "Optional: never-ending learning (CMU 10-601 Lecture 23)",
+  "unit": "U16 · CAP — Your own project",
+  "part": "Part VIII — Capstone",
+  "hours": 1,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/OsPRlf4B6qg"
+   ],
+   [
+    "slides (follow along)",
+    "_dark/external/cmu_10601/23_nell_4-13-2015.pdf"
+   ]
+  ]
+ },
+ {
+  "code": "U16-CAP-07-RD",
+  "title": "Optional: differential privacy (CMU 10-601 Lecture 26)",
+  "unit": "U16 · CAP — Your own project",
+  "part": "Part VIII — Capstone",
+  "hours": 1,
+  "links": [
+   [
+    "video",
+    "https://youtu.be/5B3tZPNH85s"
+   ],
+   [
+    "slides (follow along)",
+    "_dark/external/cmu_10601/26_privacy_4-22-2015.pdf"
+   ]
+  ]
+ }
+]
