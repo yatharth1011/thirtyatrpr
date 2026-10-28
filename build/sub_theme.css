@@ -277,3 +277,4 @@
   .pq-read b{ color:var(--ink); }
   .pq-title{ font-size:12px; font-weight:800; color:var(--ink); }
   .pk-adv.on{ background:color-mix(in srgb, var(--ok) 22%, transparent); color:var(--ink); }
+  .pq-expr .pq-inline{ display:inline-block; flex:1 1 90px; min-width:90px; width:auto; margin:0; padding:4px 6px; background:transparent; box-shadow:none; border-left:2px solid var(--ok); border-radius:0; }

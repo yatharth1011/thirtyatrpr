@@ -74,14 +74,15 @@ function mount(el, opts){
   function queryHtml(){
     var r = E.queryEval(state.q, universe), ends = qEndsOperand(), open = qOpenParens();
     var canOp = ends, canOpen = true, canClose = ends && qOpenBeforeCursor() > 0;
-    var caret = '<span class="pq-caret" aria-hidden="true"></span>';
+    // the set search lives inside the equation, at the cursor: type a name right where the set will go
+    var caret = '<input class="pq-search pq-inline" type="search" placeholder="' + (state.q.length ? 'find a set' : 'find a set — G3, HS110, PH101 lab…') + '" value="' + esc(state.qSearch) + '" autocomplete="off">';
     var expr = state.q.length
       ? '<button class="pq-start" data-qat="0" title="put the cursor at the start">' + (state.qCur === 0 ? caret : '') + '</button>' +
         state.q.map(function(t, i){
           var inner = t.t === 'set' ? esc((E.UNIT_BY_ID[t.id] || {}).label || '?') : (t.t === 'op' ? t.v : t.t === 'not' ? '¬' : t.t);
           return '<button class="' + (t.t === 'set' ? 'pq-tok' : 'pq-sym') + '" data-qat="' + (i + 1) + '" title="put the cursor after this">' + inner + '</button>' + (state.qCur === i + 1 ? caret : '');
         }).join('')
-      : '<span class="muted">start with a set below, or ¬ / (</span>';
+      : caret;
     var btn = function(attr, label, on, title){ return '<button class="btn btn-sm pq-b" ' + attr + (on ? '' : ' disabled') + ' title="' + title + '">' + label + '</button>'; };
     // unfinished is not wrong: while a set or a ")" is still to come, prompt the next step instead of flagging an error
     var pending = r.error && (/ends too early/.test(r.error) || /never closed/.test(r.error));
@@ -101,7 +102,6 @@ function mount(el, opts){
         btn('data-qact="left"', '◀', state.qCur > 0, 'move the cursor left') + btn('data-qact="right"', '▶', state.qCur < state.q.length, 'move the cursor right') +
         btn('data-qact="back"', '⌫', state.qCur > 0, 'remove the piece before the cursor') + btn('data-qact="clear"', 'Clear', state.q.length, 'start over') +
       '</div>' + result +
-      '<input class="pq-search" type="search" placeholder="Find a set — G3, HS110, PH101 lab, NSO…" value="' + esc(state.qSearch) + '" autocomplete="off">' +
       '<div class="chips pq-sugg">' + qSuggest() + '</div>' +
     '</div>';
   }
@@ -185,7 +185,10 @@ function mount(el, opts){
   el.addEventListener('click', function(e){
     // a click in the query box but not on a piece (the empty space after it) puts the cursor at the end, like a text field
     var box = e.target.closest && e.target.closest('.pq-expr');
-    if(box && !e.target.closest('button')){ state.qCur = state.q.length; render(); return; }
+    if(box && !e.target.closest('button')){
+      if(e.target.classList && e.target.classList.contains('pq-search')) return;   // typing in the inline search
+      state.qCur = state.q.length; render(); var inp = el.querySelector('.pq-inline'); if(inp) inp.focus(); return;
+    }
     var t = e.target.closest && e.target.closest('button');
     if(!t || !el.contains(t)) return;
     if(t.hasAttribute('data-mode')){ state.mode = t.getAttribute('data-mode'); render(); return; }
