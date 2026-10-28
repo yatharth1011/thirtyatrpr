@@ -1863,6 +1863,21 @@ window.__overlayFast = (function(){
     .mini-bar.show .mini-icon:nth-child(2){ animation-delay:.2s; }
     .mini-bar.show .mini-icon:nth-child(3){ animation-delay:.26s; }
     .mini-bar.show .mini-study{ animation-delay:.32s; }
+    /* leaving (scrolled back up): the cascade plays in reverse — shortcuts fade, r p r @ slide back under the tile, the tile
+       shrinks — and only then does the bar lift away (the delayed, ease-in slide below). Nothing is removed instantly. */
+    @keyframes ml-out-r{ to{ opacity:0; transform:translateX(var(--from)); } }
+    @keyframes ml-tile-out{ to{ opacity:0; transform:scale(.6); } }
+    @keyframes ml-ui-out{ to{ opacity:0; transform:translateY(-10px); } }
+    .mini-bar.hiding{ transition:transform .4s cubic-bezier(.55,0,.8,.4) .24s; }
+    .mini-bar.hiding .ml-r2{ --from:-64px; animation:ml-out-r .26s cubic-bezier(.5,0,.8,.5) .02s both; }
+    .mini-bar.hiding .ml-p{  --from:-52px; animation:ml-out-r .26s cubic-bezier(.5,0,.8,.5) .06s both; }
+    .mini-bar.hiding .ml-r1{ --from:-40px; animation:ml-out-r .26s cubic-bezier(.5,0,.8,.5) .10s both; }
+    .mini-bar.hiding .ml-at{ --from:-22px; animation:ml-out-r .26s cubic-bezier(.5,0,.8,.5) .14s both; }
+    .mini-bar.hiding .ml-tile{ transform-box:fill-box; transform-origin:center; animation:ml-tile-out .24s cubic-bezier(.5,0,.8,.5) .18s both; }
+    .mini-bar.hiding .mini-study{ animation:ml-ui-out .2s ease-in both; }
+    .mini-bar.hiding .mini-icon:nth-child(3){ animation:ml-ui-out .2s ease-in .03s both; }
+    .mini-bar.hiding .mini-icon:nth-child(2){ animation:ml-ui-out .2s ease-in .06s both; }
+    .mini-bar.hiding .mini-icon:nth-child(1){ animation:ml-ui-out .2s ease-in .09s both; }
   }
   @media (max-width: 959px){ .mini-bar{ display:flex; } }
   @media (min-width: 960px){ .mini-bar{ display:none !important; } }

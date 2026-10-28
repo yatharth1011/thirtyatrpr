@@ -30,11 +30,31 @@ splash_html = open(BASE + '/build/splash.html', 'r', encoding='utf-8').read()
 def with_splash(html, label_html=''):
     if '<!--__SPLASH__-->' not in html:
         raise SystemExit('splice.py: a page is missing the <!--__SPLASH__--> marker — aborting')
-    return html.replace('<!--__SPLASH__-->', splash_html.replace('__SPLASH_LABEL_HTML__', label_html))
+    return html.replace('<!--__SPLASH__-->', splash_html.replace('__SPLASH_LABEL_HTML__', label_html).replace('__SPLASH_WIDGETS_JSON__', _json.dumps(SPLASH_WIDGETS, ensure_ascii=False)))
 
 
-SPECTATE_LABEL = '  <div class="bl-sub"><span><b>&#128301;</b> Spectate</span></div>\n'
-BR_LABEL = '  <div class="bl-sub"><span><b>&#128736;&#65039;</b> BR Tools</span></div>\n'
+import json as _json
+_data = _json.load(open(BASE + '/build/thirty_data.json', 'r', encoding='utf-8'))
+_n_students = len(_data['roster'])
+_groups = sorted({s['academicGroup'] for s in _data['roster'].values()}, key=lambda g: int(g[1:]))
+_n_rooms = len(_data.get('venueLegend', {}))
+_branches = sorted({s['branch'] for s in _data['roster'].values()})
+_n_reps = len({e for r in _data.get('batchReps', []) for e in r['reps']})
+_short = lambda b: 'MnC' if b == 'MCB' else b
+
+# Spectate: one dot per (group column x 4 rows), lighting up column by column; counters tick up to the real totals
+SPECTATE_WIDGET = ('  <!--bl-load--><div class="bl-load"><div class="bl-dots">'
+    + ''.join('<i style="--c:%d;--r:%d"></i>' % (i % len(_groups), i // len(_groups)) for i in range(len(_groups) * 4))
+    + '</div><div class="bl-stats"><b style="--to:%d"></b> students &middot; <b style="--to:%d"></b> groups &middot; <b style="--to:%d"></b> rooms</div></div><!--/bl-load-->\n'
+    % (_n_students, len(_groups), _n_rooms))
+# BR Tools: the branch codes appear one by one, then a pulsing line (this loader really is waiting for the Google sign-in)
+BR_WIDGET = ('  <!--bl-load--><div class="bl-load"><div class="bl-chips">'
+    + ''.join('<i style="--i:%d">%s</i>' % (i, _short(b)) for i, b in enumerate(_branches))
+    + '</div><div class="bl-stats bl-status"><u></u><span>restoring sign-in &middot; <b style="--to:%d"></b> branch reps</span></div></div><!--/bl-load-->\n' % _n_reps)
+SPLASH_WIDGETS = {'/spectate': SPECTATE_WIDGET.strip('\n'), '/br': BR_WIDGET.strip('\n')}
+
+SPECTATE_LABEL = '  <div class="bl-sub"><span><b>&#128301;</b> Spectate</span></div>\n' + SPECTATE_WIDGET
+BR_LABEL = '  <div class="bl-sub"><span><b>&#128736;&#65039;</b> BR Tools</span></div>\n' + BR_WIDGET
 
 
 def inject_shared(html, label):

@@ -1523,13 +1523,14 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
   console.log(okLogin ? 'PASS' : 'FAIL', 'login screen stays hidden until the app is ready (never stands in for a loader)');
   allPass &= okLogin;
   // behaviour of the splash's startup rules, run for real
-  const m = splash.match(/var __bootT0[\s\S]*?(?=window\.__bootDone = )/);
+  const splashJs = splash.replace('__SPLASH_WIDGETS_JSON__', JSON.stringify({ '/spectate': '<!--bl-load-->W<!--/bl-load-->', '/br': '<!--bl-load-->W<!--/bl-load-->' }));
+  const m = splashJs.match(/var __bootT0[\s\S]*?(?=window\.__bootDone = )/);
   const run = (referrer, pathname, store) => {
     const added = [];
     const sandbox = { Date, URL, JSON, location: { origin: 'https://thirtyatrpr.web.app', pathname },
       sessionStorage: { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = v; }, removeItem: (k) => { delete store[k]; } },
       window: { matchMedia: () => ({ matches: false }), navigator: {} }, navigator: {},
-      document: { referrer, getElementById: () => ({ classList: { add: (c) => added.push(c) }, outerHTML: '<div id="bootLoader"></div>' }) } };
+      document: { referrer, querySelector: () => null, getElementById: () => ({ classList: { add: (c) => added.push(c) }, outerHTML: '<div id="bootLoader"></div>' }) } };
     sandbox.matchMedia = sandbox.window.matchMedia;
     vm.runInNewContext(m[0] + '\n;__out = { min: __bootMin, handoff: __handoff };', sandbox);
     return { added, min: sandbox.__out.min, handoff: sandbox.__out.handoff, store };
@@ -1561,12 +1562,12 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
       setTimeout: (fn, ms) => { timers.push([fn, ms]); return 1; },
       window: { matchMedia: () => ({ matches: !!opts.reduced }), addEventListener: () => {}, navigator: {} }, matchMedia: () => ({ matches: !!opts.reduced }), navigator: {},
       document: { referrer: '', body: { appendChild: (n) => appended.push(n) },
-        getElementById: (id) => (id === 'bootLoader' && bootPhase ? { classList: { add() {} }, outerHTML: '<div id="bootLoader"><svg></svg></div>' } : null),
+        getElementById: (id) => (id === 'bootLoader' && bootPhase ? { classList: { add() {} }, outerHTML: '<div id="bootLoader" class="handoff pwa skip" aria-hidden="true"><svg></svg></div>' } : null),
         querySelector: () => null,
         createElement: () => { const el = { classList: { add() {} }, set innerHTML(v) { el._h = v; }, get firstElementChild() { return { classList: { add() {} }, html: el._h }; } }; return el; },
         addEventListener: (t, fn) => { if (t === 'click') handler = fn; } } };
     sandbox.matchMedia = sandbox.window.matchMedia;
-    vm.runInNewContext(splash.match(/<script>(?:(?!<\/script>)[\s\S])*?__bootT0(?:(?!<\/script>)[\s\S])*?<\/script>/)[0].replace(/<\/?script>/g, ''), sandbox);
+    vm.runInNewContext(splashJs.match(/<script>(?:(?!<\/script>)[\s\S])*?__bootT0(?:(?!<\/script>)[\s\S])*?<\/script>/)[0].replace(/<\/?script>/g, ''), sandbox);
     bootPhase = false;   // the boot splash has been removed by now
     const evt = Object.assign({ defaultPrevented: false, button: 0, target: { closest: () => ({ href, getAttribute: () => null, hasAttribute: () => false, target: '' }) }, preventDefault: () => { prevented = true; } }, opts.evt || {});
     handler(evt);
@@ -1575,11 +1576,12 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
   const toSpec = click('https://thirtyatrpr.web.app/spectate'), toBr = click('https://thirtyatrpr.web.app/br'), toHome = click('https://thirtyatrpr.web.app/', { path: '/spectate' });
   const modified = click('https://thirtyatrpr.web.app/spectate', { evt: { ctrlKey: true } }), onSpec = click('https://thirtyatrpr.web.app/spectate', { path: '/spectate' }), reduced = click('https://thirtyatrpr.web.app/br', { reduced: true });
   const onDash = click('https://thirtyatrpr.web.app/', { path: '/' });
-  const okLeave = toSpec.prevented && toSpec.appended.length === 1 && /Spectate/.test(toSpec.appended[0].html) && toSpec.timers.some((t) => t[1] === 1450)
-    && toBr.prevented && /BR Tools/.test(toBr.appended[0].html)
+  const okLeave = toSpec.prevented && toSpec.appended.length === 1 && /Spectate/.test(toSpec.appended[0].html) && toSpec.timers.some((t) => t[1] === 1750)
+    && toBr.prevented && /BR Tools/.test(toBr.appended[0].html) && /bl-load/.test(toSpec.appended[0].html) && /bl-load/.test(toBr.appended[0].html) && !/bl-load/.test(toHome.appended[0].html) && toBr.timers.some((t) => t[1] === 1750)
     && toHome.prevented && toHome.appended.length === 1 && !/bl-sub/.test(toHome.appended[0].html) && toHome.timers.some((t) => t[1] === 1450)
+    && !/handoff|pwa|skip/.test(toSpec.appended[0].html) && !/handoff|pwa|skip/.test(toHome.appended[0].html)   // the copy must start clean even if this page's own splash was in the handoff/installed state
     && !onDash.prevented && !modified.prevented && !onSpec.prevented && !reduced.prevented;
-  console.log(okLeave ? 'PASS' : 'FAIL', 'leaving animation: Spectate/BR links and Home play the animation first (redirect after 1.45 s; Home shows the mark alone); ctrl-click, the page you are on and reduced-motion just navigate: ' + JSON.stringify({ toSpec: toSpec.prevented, toBr: toBr.prevented, toHome: toHome.prevented, modified: modified.prevented, onSpec: onSpec.prevented, reduced: reduced.prevented }));
+  console.log(okLeave ? 'PASS' : 'FAIL', 'leaving animation: Spectate/BR links and Home play the animation first (redirect after 1.75 s with the data-loading widget, 1.45 s for Home which shows the mark alone); ctrl-click, the page you are on and reduced-motion just navigate: ' + JSON.stringify({ toSpec: toSpec.prevented, toBr: toBr.prevented, toHome: toHome.prevented, modified: modified.prevented, onSpec: onSpec.prevented, reduced: reduced.prevented }));
   allPass &= okLeave;
 }
 

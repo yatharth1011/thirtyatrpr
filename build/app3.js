@@ -3809,12 +3809,19 @@ initStudyPanel();
       if(src) src.click();
     });
   });
+  var hideTimer = null;
   function sync(){
     var studyBtn = document.getElementById('studyToggleBtn');
     document.getElementById('miniStudy').style.display = studyBtn && studyBtn.style.display !== 'none' ? '' : 'none';
     var amb = document.getElementById('studyAmbient');
     document.getElementById('miniStudyAmbient').textContent = amb ? amb.textContent : '';
-    bar.classList.toggle('show', window.scrollY > head.offsetHeight - 8);
+    var want = window.scrollY > head.offsetHeight - 8, shown = bar.classList.contains('show');
+    if(want && !shown){ clearTimeout(hideTimer); bar.classList.remove('hiding'); bar.classList.add('show'); }
+    else if(!want && shown){
+      // going away: play the cascade backwards first (.hiding), THEN the bar lifts off — not an instant removal
+      bar.classList.remove('show'); bar.classList.add('hiding');
+      clearTimeout(hideTimer); hideTimer = setTimeout(function(){ bar.classList.remove('hiding'); }, 750);
+    }
   }
   var scrollTimer = null;
   window.addEventListener('scroll', function(){
