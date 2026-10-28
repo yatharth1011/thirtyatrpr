@@ -2054,7 +2054,16 @@ function mount(el, opts){
     }).join('');
   }
   function queryHtml(){
-    var r = E.queryEval(state.q, universe), ends = qEndsOperand(), open = qOpenParens();
+    var effectiveQ = state.q.slice();
+    var pendingMatch = state.qSearch.trim() ? qBestMatch(state.qSearch) : null;
+    if(pendingMatch){
+      if(qEndsOperand()){
+        effectiveQ.splice(state.qCur, 0, { t: 'op', v: '∪' }, { t: 'set', id: pendingMatch.id });
+      } else {
+        effectiveQ.splice(state.qCur, 0, { t: 'set', id: pendingMatch.id });
+      }
+    }
+    var r = E.queryEval(effectiveQ, universe), ends = isOperand(effectiveQ[effectiveQ.length - 1]), open = qOpenParens();
     var canOp = ends, canOpen = true, canClose = ends && qOpenBeforeCursor() > 0;
     // the set search lives inside the equation, at the cursor: type a name right where the set will go
     var w = state.qSearch ? (state.qSearch.length + 0.5) + 'ch' : '2px';
@@ -2070,9 +2079,9 @@ function mount(el, opts){
     // unfinished is not wrong: while a set or a ")" is still to come, prompt the next step instead of flagging an error
     var pending = r.error && (/ends too early/.test(r.error) || /never closed/.test(r.error));
     var solved = r.idxs && r.idxs.length ? E.describe(r.idxs, universe).join(' + ') : 'nobody';
-    var isComplex = state.q.filter(function(t){ return t.t === 'set'; }).length > 1 || state.q.some(function(t){ return t.t === 'not' || t.t === '('; });
+    var isComplex = effectiveQ.filter(function(t){ return t.t === 'set'; }).length > 1 || effectiveQ.some(function(t){ return t.t === 'not' || t.t === '('; });
     var solvedHtml = isComplex && !r.error && !pending ? ' · solves to <b>' + esc(solved) + '</b>' : '';
-    var result = !state.q.length ? '' : pending
+    var result = !effectiveQ.length ? '' : pending
       ? '<div class="pq-result">next: ' + (/never closed/.test(r.error) && ends ? 'close the bracket with )' : 'pick a set below') + '</div>'
       : r.error
       ? '<div class="pq-result pq-err">' + esc(r.error) + '</div>'
@@ -2121,7 +2130,13 @@ function mount(el, opts){
   function focusInput(){
     var inp = el.querySelector('.pq-inline');
     if(inp){
-      try { inp.focus({ preventScroll: true }); } catch(x){ inp.focus(); }
+      try {
+        inp.focus({ preventScroll: true });
+        if(typeof inp.setSelectionRange === 'function'){
+          var len = (inp.value || '').length;
+          inp.setSelectionRange(len, len);
+        }
+      } catch(x){ inp.focus(); }
     }
   }
 
@@ -2183,27 +2198,36 @@ function mount(el, opts){
     }
   }
 
+  var OP_WORDS = { 'in': 1, 'and': 1, 'or': 1, 'not': 1, 'minus': 1, 'plus': 1, 'except': 1 };
+
   function qBestMatch(term){
     term = (term || '').trim().toLowerCase();
-    if(!term) return null;
+    if(!term || OP_WORDS[term]) return null;
     if(term === 'all' || term === '*' || term === 'everyone') return E.UNIT_BY_ID['all'];
     var pool = E.UNITS.filter(function(u){ return u.level !== 'atom' && visible(u); });
-    // Exact label match (e.g. "g2", "d1", "nso", "hs111", "cse")
+    // Exact label match (e.g. "g2", "d1", "nso", "hs111", "cse", "aide")
     var exact = pool.find(function(u){ return u.label.toLowerCase() === term; });
     if(exact) return exact;
-    // Match ID suffix (e.g. "grp:G2" -> "g2", "br:CSE" -> "cse")
+    // Match ID suffix (e.g. "grp:G2" -> "g2", "br:CSE" -> "cse", "br:MCB" -> "mcb")
     var idMatch = pool.find(function(u){
       var idParts = u.id.toLowerCase().split(':');
       return idParts[idParts.length - 1] === term;
     });
     if(idMatch) return idMatch;
-    // Common synonyms (e.g. "mnc" for MCB)
+    // Common synonyms
     if(term === 'mnc') return E.UNIT_BY_ID['br:MCB'];
+    if(term === 'aide') return E.UNIT_BY_ID['br:AIDE'];
     // Prefix match on label
     var prefix = pool.find(function(u){ return u.label.toLowerCase().indexOf(term) === 0; });
     if(prefix) return prefix;
-    // Substring match
-    return pool.find(function(u){ return (u.label + ' ' + (u.sub || '') + ' ' + (u.family || '')).toLowerCase().indexOf(term) !== -1; }) || null;
+    // Substring match on label
+    var labelSub = pool.find(function(u){ return u.label.toLowerCase().indexOf(term) !== -1; });
+    if(labelSub) return labelSub;
+    // Substring match on sub/family only if term length >= 3
+    if(term.length >= 3){
+      return pool.find(function(u){ return (u.sub || '').toLowerCase().indexOf(term) !== -1 || (u.family || '').toLowerCase().indexOf(term) !== -1; }) || null;
+    }
+    return null;
   }
 
   function parseTextToTokens(raw){
@@ -2257,6 +2281,8 @@ function mount(el, opts){
       }
       state.qSearch = '';
     }
+    var curInp = el.querySelector('.pq-inline');
+    if(curInp){ curInp.value = ''; curInp.style.width = '2px'; }
     if(char === '*'){
       qInsertSet('all');
     } else if(char === '!'){
@@ -2290,6 +2316,125 @@ function mount(el, opts){
     state.qSearch = '';
     qChanged();
     focusInput();
+  }
+
+  var lastHandled = { t: 0, k: '' };
+  function guardedOp(char, pending){
+    var now = Date.now();
+    if(lastHandled.k === char && (now - lastHandled.t) < 60) return;
+    lastHandled = { t: now, k: char };
+    handleOpChar(char, pending);
+  }
+
+  function updateQueryDisplay(){
+    var effectiveQ = state.q.slice();
+    var pendingMatch = state.qSearch.trim() ? qBestMatch(state.qSearch) : null;
+    if(pendingMatch){
+      if(qEndsOperand()){
+        effectiveQ.splice(state.qCur, 0, { t: 'op', v: '∪' }, { t: 'set', id: pendingMatch.id });
+      } else {
+        effectiveQ.splice(state.qCur, 0, { t: 'set', id: pendingMatch.id });
+      }
+    }
+    var r = E.queryEval(effectiveQ, universe);
+    var ends = isOperand(effectiveQ[effectiveQ.length - 1]);
+    var canOp = ends, canOpen = true, canClose = ends && qOpenBeforeCursor() > 0;
+
+    if(!r.error && qOpenParens() === 0){
+      state.ops = effectiveQ.length ? [{ op: 'expr', tokens: effectiveQ.slice() }] : [];
+      if(opts.onChange) opts.onChange(api.get());
+    } else if(!state.q.length && !pendingMatch){
+      if(state.ops.length){
+        state.ops = [];
+        if(opts.onChange) opts.onChange(api.get());
+      }
+    }
+
+    var resEl = el.querySelector('.pq-result');
+    if(resEl){
+      var isComp = effectiveQ.filter(function(t){ return t.t === 'set'; }).length > 1 || effectiveQ.some(function(t){ return t.t === 'not' || t.t === '('; });
+      var solvedStr = r.idxs && r.idxs.length ? E.describe(r.idxs, universe).join(' + ') : 'nobody';
+      var pend = r.error && (/ends too early/.test(r.error) || /never closed/.test(r.error));
+      if(pend){
+        resEl.className = 'pq-result';
+        resEl.innerHTML = 'next: ' + (/never closed/.test(r.error) && ends ? 'close the bracket with )' : 'pick a set below');
+      } else if(r.error){
+        resEl.className = 'pq-result pq-err';
+        resEl.textContent = r.error;
+      } else {
+        resEl.className = 'pq-result';
+        resEl.innerHTML = '<b>' + r.idxs.length + '</b> student' + (r.idxs.length === 1 ? '' : 's') + (isComp ? ' · solved: <b>' + esc(solvedStr) + '</b>' : (r.idxs.length ? ' · ' + esc(solvedStr) : ''));
+      }
+    }
+
+    var sumEl = el.querySelector('.pk-summary');
+    if(sumEl){
+      if(!r.error && qOpenParens() === 0 && effectiveQ.length){
+        var slv = r.idxs && r.idxs.length ? E.describe(r.idxs, universe).join(' + ') : 'nobody';
+        var rawT = E.queryText(effectiveQ);
+        var lbl = slv && slv !== rawT ? rawT + ' (= ' + slv + ')' : rawT;
+        sumEl.innerHTML = '<span class="pk-count">' + r.idxs.length + '</span> student' + (r.idxs.length === 1 ? '' : 's') + ' · <b>' + esc(lbl) + '</b>';
+      } else if(!state.q.length && !pendingMatch){
+        sumEl.innerHTML = '<span class="pk-count">0</span> students — tap any chip below';
+      }
+    }
+
+    var readEl = el.querySelector('.pq-read');
+    if(readEl){
+      if(state.q.length){
+        var isCompR = state.q.filter(function(t){ return t.t === 'set'; }).length > 1 || state.q.some(function(t){ return t.t === 'not' || t.t === '('; });
+        var slvR = r.idxs && r.idxs.length ? E.describe(r.idxs, universe).join(' + ') : 'nobody';
+        var pendR = r.error && (/ends too early/.test(r.error) || /never closed/.test(r.error));
+        var solvedHtmlR = isCompR && !r.error && !pendR ? ' · solves to <b>' + esc(slvR) + '</b>' : '';
+        readEl.innerHTML = 'Students in ' + qWords(state.q) + solvedHtmlR;
+        readEl.style.display = '';
+      } else {
+        readEl.style.display = 'none';
+      }
+    }
+
+    var ops = el.querySelector('.pq-ops');
+    if(ops){
+      var setDis = function(sel, on){ var b = ops.querySelector(sel); if(b) b.disabled = !on; };
+      setDis('[data-qop="∪"]', canOp);
+      setDis('[data-qop="∩"]', canOp);
+      setDis('[data-qop="−"]', canOp);
+      setDis('[data-qop="not"]', canOpen);
+      setDis('[data-qop="("]', canOpen);
+      setDis('[data-qop=")"]', canClose);
+      setDis('[data-qact="left"]', state.qCur > 0);
+      setDis('[data-qact="right"]', state.qCur < state.q.length);
+      setDis('[data-qact="back"]', state.qCur > 0);
+      setDis('[data-qact="clear"]', state.q.length > 0);
+    }
+
+    var box = el.querySelector('.pq-sugg');
+    if(box) box.innerHTML = qSuggest();
+  }
+
+  var lastDeleteTime = 0;
+  function deleteTokenBeforeInput(){
+    var now = Date.now();
+    if(now - lastDeleteTime < 15) return;
+    lastDeleteTime = now;
+
+    if(state.qCur <= 0) return;
+    state.q.splice(state.qCur - 1, 1);
+    state.qCur--;
+
+    var inp = el.querySelector('.pq-inline');
+    if(!inp){ qChanged(); return; }
+
+    var prevNode = inp.previousElementSibling;
+    if(prevNode && !prevNode.classList.contains('pq-start')){
+      prevNode.remove();
+    }
+    var exprEl = el.querySelector('.pq-expr');
+    if(exprEl){
+      var btns = exprEl.querySelectorAll('button[data-qidx]');
+      for(var i=0; i<btns.length; i++){ btns[i].setAttribute('data-qidx', i); }
+    }
+    updateQueryDisplay();
   }
 
   function preventBlur(e){
@@ -2342,7 +2487,7 @@ function mount(el, opts){
     }
     if(qa === 'left'){ if(state.qCur > 0) state.qCur--; render(); focusInput(); return; }
     if(qa === 'right'){ if(state.qCur < state.q.length) state.qCur++; render(); focusInput(); return; }
-    if(qa === 'back'){ if(state.qCur > 0){ state.q.splice(state.qCur - 1, 1); state.qCur--; } qChanged(); focusInput(); return; }
+    if(qa === 'back'){ deleteTokenBeforeInput(); return; }
     if(qa === 'clear'){ state.q = []; state.qCur = 0; qChanged(); focusInput(); return; }
     var act = t.getAttribute('data-act');
     if(act === 'adv'){ state.adv = !state.adv; try { localStorage.setItem('thirtyatrpr_picker_adv', state.adv ? '1' : '0'); } catch(x){} render(); return; }
@@ -2358,9 +2503,11 @@ function mount(el, opts){
     if(!state.ops.length) mode = 'add';
     apply(mode, id);
   });
+  var commitTimer = null;
   // the set search only refreshes its own suggestions (a full re-render would drop the keyboard focus)
   el.addEventListener('input', function(e){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
+    clearTimeout(commitTimer);
     var val = e.target.value;
     var hasOp = /[+&*!(\)\-∪∩−¬]/.test(val) || /\b(in|and|or|not|minus|plus|except|all|everyone)\b/i.test(val);
     if(hasOp){
@@ -2375,24 +2522,71 @@ function mount(el, opts){
         return;
       }
     }
+    // Space after a valid set name immediately turns it into a pill
+    if(/\s+$/.test(val)){
+      var trimmed = val.trim();
+      var match = qBestMatch(trimmed);
+      if(match){
+        qInsertSet(match.id);
+        state.qSearch = '';
+        e.target.value = '';
+        e.target.style.width = '2px';
+        qChanged();
+        focusInput();
+        return;
+      }
+    }
     state.qSearch = val;
     e.target.style.width = val ? (val.length + 0.5) + 'ch' : '2px';
-    var box = el.querySelector('.pq-sugg'); if(box) box.innerHTML = qSuggest();
+
+    // Auto-commit timer on brief pause when typing a valid set name
+    var trimmedVal = val.trim();
+    if(trimmedVal){
+      var exactMatch = qBestMatch(trimmedVal);
+      if(exactMatch){
+        commitTimer = setTimeout(function(){
+          if(e.target && e.target.value === val){
+            qInsertSet(exactMatch.id);
+            state.qSearch = '';
+            e.target.value = '';
+            e.target.style.width = '2px';
+            qChanged();
+            focusInput();
+          }
+        }, 350);
+      }
+    }
+
+    updateQueryDisplay();
+  });
+  el.addEventListener('focusout', function(e){
+    if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
+    clearTimeout(commitTimer);
+    var val = (e.target.value || state.qSearch || '').trim();
+    if(val){
+      var match = qBestMatch(val);
+      if(match){
+        qInsertSet(match.id);
+        state.qSearch = '';
+        e.target.value = '';
+        e.target.style.width = '2px';
+        qChanged();
+      }
+    }
   });
   el.addEventListener('beforeinput', function(e){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
     if(e.inputType === 'deleteContentBackward' && !e.target.value && state.qCur > 0){
       e.preventDefault();
-      state.q.splice(state.qCur - 1, 1);
-      state.qCur--;
-      qChanged();
-      focusInput();
+      deleteTokenBeforeInput();
       return;
     }
     var d = e.data;
     if(d && (d === '+' || d === '&' || d === '-' || d === '*' || d === '!' || d === '(' || d === ')')){
       e.preventDefault();
-      handleOpChar(d, e.target.value);
+      var pending = e.target.value;
+      e.target.value = '';
+      guardedOp(d, pending);
       return;
     }
   });
@@ -2400,6 +2594,7 @@ function mount(el, opts){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
     if(e.key === 'Enter'){
       e.preventDefault();
+      clearTimeout(commitTimer);
       var val = (e.target.value || state.qSearch).trim();
       if(val){
         var parsed = parseTextToTokens(val);
@@ -2416,6 +2611,7 @@ function mount(el, opts){
           qInsertSet(match.id);
           state.qSearch = '';
           e.target.value = '';
+          e.target.style.width = '2px';
           qChanged();
           focusInput();
           return;
@@ -2425,10 +2621,7 @@ function mount(el, opts){
     }
     if((e.key === 'Backspace' || e.keyCode === 8) && !e.target.value && state.qCur > 0){
       e.preventDefault();
-      state.q.splice(state.qCur - 1, 1);
-      state.qCur--;
-      qChanged();
-      focusInput();
+      deleteTokenBeforeInput();
       return;
     }
     if(e.key === 'ArrowLeft' && !e.target.value && state.qCur > 0){
@@ -2448,7 +2641,9 @@ function mount(el, opts){
     var ch = e.key;
     if(ch === '+' || ch === '&' || ch === '-' || ch === '*' || ch === '!' || ch === '(' || ch === ')'){
       e.preventDefault();
-      handleOpChar(ch, e.target.value);
+      var pending = e.target.value;
+      e.target.value = '';
+      guardedOp(ch, pending);
       return;
     }
   });
