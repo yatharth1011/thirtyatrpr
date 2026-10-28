@@ -14,7 +14,7 @@ function mount(el, opts){
   opts = opts || {};
   var universe = opts.universe || null;         // idxs a BR is limited to (their branch), or null
   var uniMask = universe ? E.maskOf(universe) : null;
-  var state = { ops: (opts.initial || []).slice(), mode: 'add', past: [], q: [], qSearch: '' };   // q: the set query being built (opts.query)
+  var state = { ops: (opts.initial || []).slice(), mode: 'add', past: [], q: [], qCur: 0, qSearch: '' };   // qCur: cursor position in the query (0 = before the first piece)   // q: the set query being built (opts.query)
   var openSections = { div: true, grp: true };
   // Advanced mode (opts.query): the set-query builder instead of the chip sections; off by default, remembered per device
   try { state.adv = !!opts.query && localStorage.getItem('thirtyatrpr_picker_adv') === '1'; } catch(e){ state.adv = false; }
@@ -29,13 +29,24 @@ function mount(el, opts){
   }
 
   /* ---- set query builder (opts.query): built only with buttons; the search box just finds a set to add ---- */
-  function qLast(){ return state.q[state.q.length - 1]; }
+  // everything works at the cursor (state.qCur), so a "(" can go in front of what is already there and a ")" after it
+  function qBefore(){ return state.q[state.qCur - 1]; }
+  function qAfter(){ return state.q[state.qCur]; }
+  function isOperand(t){ return !!t && (t.t === 'set' || t.t === ')'); }
+  function startsOperand(t){ return !!t && (t.t === 'set' || t.t === '(' || t.t === 'not'); }
   function qOpenParens(){ var n = 0; state.q.forEach(function(t){ if(t.t === '(') n++; else if(t.t === ')') n--; }); return n; }
-  function qEndsOperand(){ var l = qLast(); return !!l && (l.t === 'set' || l.t === ')'); }
-  function qInsertSet(id){
-    if(qEndsOperand()) state.q.push({ t: 'op', v: '∪' });   // two sets in a row: join them with ∪ (visible, ⌫ removes it)
-    state.q.push({ t: 'set', id: id });
+  function qOpenBeforeCursor(){ var n = 0; state.q.slice(0, state.qCur).forEach(function(t){ if(t.t === '(') n++; else if(t.t === ')') n--; }); return n; }
+  function qEndsOperand(){ return isOperand(qBefore()); }
+  function qPut(list){ state.q.splice.apply(state.q, [state.qCur, 0].concat(list)); state.qCur += list.length; }
+  // a set (or a "(" / "¬") placed next to another operand gets joined with ∪ on that side — visible, ⌫ removes it
+  function qInsertOperandStart(tk, closesItself){
+    var list = [];
+    if(qEndsOperand()) list.push({ t: 'op', v: '∪' });
+    list.push(tk);
+    qPut(list);
+    if(closesItself && startsOperand(qAfter())){ state.q.splice(state.qCur, 0, { t: 'op', v: '∪' }); }
   }
+  function qInsertSet(id){ qInsertOperandStart({ t: 'set', id: id }, true); }
   // the selection follows the query by itself: whenever it is complete and valid it becomes the selection (cleared query -> nobody)
   function qChanged(){
     var r = E.queryEval(state.q, universe);
@@ -62,11 +73,15 @@ function mount(el, opts){
   }
   function queryHtml(){
     var r = E.queryEval(state.q, universe), ends = qEndsOperand(), open = qOpenParens();
-    var canOp = ends, canOpen = !ends, canClose = ends && open > 0;
-    var expr = state.q.length ? state.q.map(function(t){
-      if(t.t === 'set'){ var u = E.UNIT_BY_ID[t.id]; return '<span class="pq-tok">' + esc(u ? u.label : '?') + '</span>'; }
-      return '<span class="pq-sym">' + (t.t === 'op' ? t.v : t.t === 'not' ? '¬' : t.t) + '</span>';
-    }).join('') : '<span class="muted">start with a set below, or ¬ / (</span>';
+    var canOp = ends, canOpen = true, canClose = ends && qOpenBeforeCursor() > 0;
+    var caret = '<span class="pq-caret" aria-hidden="true"></span>';
+    var expr = state.q.length
+      ? '<button class="pq-start" data-qat="0" title="put the cursor at the start">' + (state.qCur === 0 ? caret : '') + '</button>' +
+        state.q.map(function(t, i){
+          var inner = t.t === 'set' ? esc((E.UNIT_BY_ID[t.id] || {}).label || '?') : (t.t === 'op' ? t.v : t.t === 'not' ? '¬' : t.t);
+          return '<button class="' + (t.t === 'set' ? 'pq-tok' : 'pq-sym') + '" data-qat="' + (i + 1) + '" title="put the cursor after this">' + inner + '</button>' + (state.qCur === i + 1 ? caret : '');
+        }).join('')
+      : '<span class="muted">start with a set below, or ¬ / (</span>';
     var btn = function(attr, label, on, title){ return '<button class="btn btn-sm pq-b" ' + attr + (on ? '' : ' disabled') + ' title="' + title + '">' + label + '</button>'; };
     // unfinished is not wrong: while a set or a ")" is still to come, prompt the next step instead of flagging an error
     var pending = r.error && (/ends too early/.test(r.error) || /never closed/.test(r.error));
@@ -83,7 +98,8 @@ function mount(el, opts){
         btn('data-qop="∪"', '∪ or', canOp, 'union: in either set') + btn('data-qop="∩"', '∩ and', canOp, 'intersection: in both sets') +
         btn('data-qop="−"', '− not in', canOp, 'difference: in the first, not the second') + btn('data-qop="not"', '¬ all but', canOpen, 'complement: everyone except the next set') +
         btn('data-qop="("', '(', canOpen, 'open a bracket') + btn('data-qop=")"', ')', canClose, 'close a bracket') +
-        btn('data-qact="back"', '⌫', state.q.length, 'remove the last piece') + btn('data-qact="clear"', 'Clear', state.q.length, 'start over') +
+        btn('data-qact="left"', '◀', state.qCur > 0, 'move the cursor left') + btn('data-qact="right"', '▶', state.qCur < state.q.length, 'move the cursor right') +
+        btn('data-qact="back"', '⌫', state.qCur > 0, 'remove the piece before the cursor') + btn('data-qact="clear"', 'Clear', state.q.length, 'start over') +
       '</div>' + result +
       '<input class="pq-search" type="search" placeholder="Find a set — G3, HS110, PH101 lab, NSO…" value="' + esc(state.qSearch) + '" autocomplete="off">' +
       '<div class="chips pq-sugg">' + qSuggest() + '</div>' +
@@ -173,14 +189,17 @@ function mount(el, opts){
     if(t.hasAttribute('data-qset')){ qInsertSet(t.getAttribute('data-qset')); state.qSearch = ''; qChanged(); return; }
     if(t.hasAttribute('data-qop')){
       var v = t.getAttribute('data-qop');
-      if(v === '(' || v === 'not'){ if(qEndsOperand()) state.q.push({ t: 'op', v: '∪' }); state.q.push(v === 'not' ? { t: 'not' } : { t: '(' }); }
-      else if(v === ')') state.q.push({ t: ')' });
-      else state.q.push({ t: 'op', v: v });
+      if(v === '(' || v === 'not') qInsertOperandStart(v === 'not' ? { t: 'not' } : { t: '(' }, false);
+      else if(v === ')'){ qPut([{ t: ')' }]); if(startsOperand(qAfter())) state.q.splice(state.qCur, 0, { t: 'op', v: '∪' }); }
+      else qPut([{ t: 'op', v: v }]);
       qChanged(); return;
     }
     var qa = t.getAttribute('data-qact');
-    if(qa === 'back'){ state.q.pop(); qChanged(); return; }
-    if(qa === 'clear'){ state.q = []; qChanged(); return; }
+    if(t.hasAttribute('data-qat')){ state.qCur = Math.max(0, Math.min(state.q.length, +t.getAttribute('data-qat'))); render(); return; }
+    if(qa === 'left'){ if(state.qCur > 0) state.qCur--; render(); return; }
+    if(qa === 'right'){ if(state.qCur < state.q.length) state.qCur++; render(); return; }
+    if(qa === 'back'){ if(state.qCur > 0){ state.q.splice(state.qCur - 1, 1); state.qCur--; } qChanged(); return; }
+    if(qa === 'clear'){ state.q = []; state.qCur = 0; qChanged(); return; }
     var act = t.getAttribute('data-act');
     if(act === 'adv'){ state.adv = !state.adv; try { localStorage.setItem('thirtyatrpr_picker_adv', state.adv ? '1' : '0'); } catch(x){} render(); return; }
     if(act === 'undo'){ if(state.past.length){ state.ops = state.past.pop(); changed(); } return; }
