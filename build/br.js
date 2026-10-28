@@ -635,5 +635,13 @@ onAuthStateChanged(auth, function(user){
   paintHistory();
   setTab(state.tab);
 });
-// ready: let the boot splash (build/splash.html) go
-if(typeof document !== 'undefined' && document.addEventListener) document.addEventListener('DOMContentLoaded', function(){ if(typeof window !== 'undefined' && window.__bootDone) window.__bootDone(); });
+// ready: the boot splash (build/splash.html) stays up until Firebase has restored — or ruled out — the Google session, so the
+// sign-in screen never stands in for a loader. Firebase calls auth listeners in registration order, so by the time this one
+// runs the listener above has already put up the sign-in / denied / BR screen. If Firebase never loads, the splash's own
+// 10 s timer lets go.
+var bootReleased = false;
+onAuthStateChanged(auth, function(){
+  if(bootReleased) return;
+  bootReleased = true;
+  if(typeof window !== 'undefined' && window.__bootDone) window.__bootDone();
+});

@@ -31,8 +31,10 @@
   #bootLoader.pwa .bl-sub{ animation-delay:.8s; }
   /* tapping Spectate / BR Tools: this overlay is built on the current page and plays the whole animation before the redirect;
      the next page then opens on the finished frame ("handoff": nothing replays, only the gradient keeps flowing) and takes over */
-  @keyframes bl-fadein{ from{ opacity:0; } to{ opacity:1; } }
-  #bootLoader.leaving{ opacity:0; animation:bl-fadein .22s ease forwards; }
+  /* starts at the instant of the tap: the dark backdrop fades in over the page while the mark is already animating on top
+     (fading the whole overlay hid the first frames of the mark) */
+  @keyframes bl-backdrop{ from{ background-color:transparent; } to{ background-color:var(--bg); } }
+  #bootLoader.leaving{ opacity:1; transition:none; background-color:transparent; animation:bl-backdrop .24s ease-out forwards; }
   #bootLoader.handoff :not(.bl-glow){ animation:none !important; }
 
   /* ---- entrances: as the splash leaves (body.revealed), each block rises into place one after another instead of
