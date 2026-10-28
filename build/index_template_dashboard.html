@@ -695,8 +695,8 @@ window.__overlayFast = (function(){
   .study-week-grid.open .study-week-row:nth-child(6){ animation-delay:.2s; }
   .study-week-grid.open .study-week-row:nth-child(7){ animation-delay:.24s; }
   @keyframes weekRowReveal{
-    from{ opacity:0; transform:translateX(-4px); }
-    to{ opacity:1; transform:translateX(0); }
+    from{ opacity:0; transform:translateY(-6px); }
+    to{ opacity:1; transform:translateY(0); }
   }
   .club-past-toggle{
     border:none; background:transparent; color:var(--gold); font-size:11px; font-weight:600;
@@ -1850,6 +1850,9 @@ window.__overlayFast = (function(){
   }
   /* every time the bar drops in, the logo plays the loader's springy cascade (same keyframes: bl-pop / bl-out), and the shortcuts rise in behind it */
   @media (prefers-reduced-motion: no-preference){
+    /* the gradient flows only while the page is being scrolled and holds its phase when scrolling stops */
+    .mini-bar .ml-glow{ opacity:0; animation:bl-glow 1.1s ease-in-out infinite alternate; animation-play-state:paused; }
+    .mini-bar.scrolling .ml-glow{ animation-play-state:running; }
     .mini-bar.show .ml-tile{ transform-box:fill-box; transform-origin:center; animation:bl-pop .5s var(--spring) .05s both; }
     .mini-bar.show .ml-at{ --from:-22px; animation:bl-out .7s var(--spring-soft) .12s both; }
     .mini-bar.show .ml-r1{ --from:-40px; animation:bl-out .6s var(--spring-soft) .24s both; }
@@ -2125,16 +2128,19 @@ var ROLES = {
       <svg class="mini-logo" viewBox="0 0 78 34" width="78" height="34" aria-hidden="true">
         <defs>
           <linearGradient id="miniKz" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="34"><stop offset="0" style="stop-color:var(--kz-1)"/><stop offset=".55" style="stop-color:var(--kz-2)"/><stop offset="1" style="stop-color:var(--kz-3)"/></linearGradient>
+          <!-- the same three colours the other way round, cross-faded over the first while the page is scrolling (.mini-bar.scrolling) -->
+          <linearGradient id="miniKz2" gradientUnits="userSpaceOnUse" x1="48" y1="34" x2="0" y2="0"><stop offset="0" style="stop-color:var(--kz-1)"/><stop offset=".55" style="stop-color:var(--kz-2)"/><stop offset="1" style="stop-color:var(--kz-3)"/></linearGradient>
           <clipPath id="miniTileClip"><rect width="34" height="34" rx="9"/></clipPath>
         </defs>
         <!-- "30@rpr" is one monospace line (19px, 11.4px per character, one baseline): the 30 is centred in the tile,
              the @ lands on its right edge — gradient outside the tile, dark inside — and rpr continues after it.
              Each part has a class so the bar can replay the loader's springy cascade every time it drops in (.mini-bar.show) -->
         <text class="ml-at" x="28.4" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" fill="url(#miniKz)">@</text>
+        <g class="ml-glow"><text class="ml-at" x="28.4" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" fill="url(#miniKz2)">@</text></g>
         <text class="ml-r1" x="39.8" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--ink)">r</text>
         <text class="ml-p" x="51.2" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--ink)">p</text>
         <text class="ml-r2" x="62.6" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--ink)">r</text>
-        <g class="ml-tile"><rect width="34" height="34" rx="9" fill="url(#miniKz)"/>
+        <g class="ml-tile"><rect width="34" height="34" rx="9" fill="url(#miniKz)"/><rect class="ml-glow" width="34" height="34" rx="9" fill="url(#miniKz2)"/>
         <text x="5.6" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--bg)" opacity=".88">30</text></g>
         <g clip-path="url(#miniTileClip)"><text class="ml-at" x="28.4" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--bg)" opacity=".88">@</text></g>
       </svg>

@@ -3816,7 +3816,13 @@ initStudyPanel();
     document.getElementById('miniStudyAmbient').textContent = amb ? amb.textContent : '';
     bar.classList.toggle('show', window.scrollY > head.offsetHeight - 8);
   }
-  window.addEventListener('scroll', sync, {passive: true});
+  var scrollTimer = null;
+  window.addEventListener('scroll', function(){
+    bar.classList.add('scrolling');                       // the logo's gradient flows while the page is moving…
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function(){ bar.classList.remove('scrolling'); }, 160);   // …and holds when it stops
+    sync();
+  }, {passive: true});
   window.addEventListener('resize', sync);
   setInterval(sync, 2000);
   sync();
