@@ -897,7 +897,10 @@ window.__overlayFast = (function(){
   .examweek-banner{
     display:block;
   }
-  .notice-banner{ border-left:3px solid var(--rose); }
+  /* the apology / notice card: a soft red-to-amber wash so it stands out from the ordinary panels without shouting */
+  html body .notice-banner{ border-left:3px solid var(--rose);
+    background:linear-gradient(135deg, color-mix(in srgb, var(--rose) 16%, var(--card)), color-mix(in srgb, #ffab70 12%, var(--card))) !important; }
+  .notice-banner .notice-title{ color:color-mix(in srgb, var(--rose) 55%, var(--ink)) !important; }
   .notice-banner .notice-title{ font-weight:800; color:var(--ink); margin-bottom:6px; }
   .notice-banner .notice-text{ font-size:12.5px; line-height:1.55; color:var(--ink-soft); }
   .notice-banner .notice-seat{ margin-top:10px; padding:8px 10px; border-radius:8px; background:var(--card2); font-weight:700; color:var(--ink); }
