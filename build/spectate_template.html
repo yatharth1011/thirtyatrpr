@@ -32,7 +32,7 @@
   .view-icon{ font-size:20px; width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; background:color-mix(in srgb, var(--ok) 14%, transparent); flex-shrink:0; }
   .view-title b{ display:block; font-size:15px; }
   .view-title span{ font-size:11px; color:var(--ink-faint); }
-  .view.enter, #view-day.enter{ animation:viewIn .28s ease both; }
+  .view.enter, #view-day.enter{ animation:viewIn .6s var(--spring-soft, ease) both; }
   @keyframes viewIn{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:none; } }
 
   /* ---- "who" panel: collapses to one line on phones once a selection exists ---- */

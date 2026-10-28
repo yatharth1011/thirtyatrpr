@@ -1829,7 +1829,7 @@ window.__overlayFast = (function(){
     display:none; position:fixed; top:0; left:0; right:0; z-index:39;
     flex-direction:column; padding:12px; gap:10px;
     background:var(--bg2); box-shadow:0 6px 20px rgba(0,0,0,.4);
-    transform:translateY(-110%); transition:transform .2s ease;
+    transform:translateY(-110%); transition:transform .5s var(--spring-soft, ease);
   }
   .mini-bar.show{ transform:none; }
   .mini-top{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
