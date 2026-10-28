@@ -24,8 +24,12 @@ function mount(el, opts){
   function selection(){ return E.evalSelection(state.ops, universe); }
   function label(idxs){
     if(!idxs.length) return 'nobody yet';
-    if(state.ops.length === 1 && state.ops[0].op === 'expr') return E.queryText(state.ops[0].tokens);   // a query names itself
-    return E.describe(idxs).join(' + ');
+    if(state.ops.length === 1 && state.ops[0].op === 'expr'){
+      var solved = E.describe(idxs, universe).join(' + ');
+      var raw = E.queryText(state.ops[0].tokens);
+      return solved && solved !== raw ? raw + ' (= ' + solved + ')' : raw;
+    }
+    return E.describe(idxs, universe).join(' + ');
   }
 
   /* ---- set query builder (opts.query): built only with buttons; the search box just finds a set to add ---- */
@@ -75,26 +79,30 @@ function mount(el, opts){
     var r = E.queryEval(state.q, universe), ends = qEndsOperand(), open = qOpenParens();
     var canOp = ends, canOpen = true, canClose = ends && qOpenBeforeCursor() > 0;
     // the set search lives inside the equation, at the cursor: type a name right where the set will go
-    var caret = '<input class="pq-search pq-inline" type="search" placeholder="' + (state.q.length ? 'find a set' : 'find a set — G3, HS110, PH101 lab…') + '" value="' + esc(state.qSearch) + '" autocomplete="off">';
+    var w = state.qSearch ? (state.qSearch.length + 0.5) + 'ch' : '2px';
+    var caret = '<input class="pq-search pq-inline" type="text" value="' + esc(state.qSearch) + '" autocomplete="off" autocapitalize="off" spellcheck="false" style="width:' + w + ';">';
     var expr = state.q.length
-      ? '<button class="pq-start" data-qat="0" title="put the cursor at the start">' + (state.qCur === 0 ? caret : '') + '</button>' +
+      ? (state.qCur === 0 ? caret : '<button class="pq-start" data-qat="0" title="put the cursor at the start"></button>') +
         state.q.map(function(t, i){
           var inner = t.t === 'set' ? esc((E.UNIT_BY_ID[t.id] || {}).label || '?') : (t.t === 'op' ? t.v : t.t === 'not' ? '¬' : t.t);
-          return '<button class="' + (t.t === 'set' ? 'pq-tok' : 'pq-sym') + '" data-qat="' + (i + 1) + '" title="put the cursor after this">' + inner + '</button>' + (state.qCur === i + 1 ? caret : '');
+          return '<button class="' + (t.t === 'set' ? 'pq-tok' : 'pq-sym') + '" data-qidx="' + i + '" title="tap left or right side to place cursor">' + inner + '</button>' + (state.qCur === i + 1 ? caret : '');
         }).join('')
       : caret;
     var btn = function(attr, label, on, title){ return '<button class="btn btn-sm pq-b" ' + attr + (on ? '' : ' disabled') + ' title="' + title + '">' + label + '</button>'; };
     // unfinished is not wrong: while a set or a ")" is still to come, prompt the next step instead of flagging an error
     var pending = r.error && (/ends too early/.test(r.error) || /never closed/.test(r.error));
+    var solved = r.idxs && r.idxs.length ? E.describe(r.idxs, universe).join(' + ') : 'nobody';
+    var isComplex = state.q.filter(function(t){ return t.t === 'set'; }).length > 1 || state.q.some(function(t){ return t.t === 'not' || t.t === '('; });
+    var solvedHtml = isComplex && !r.error && !pending ? ' · solves to <b>' + esc(solved) + '</b>' : '';
     var result = !state.q.length ? '' : pending
       ? '<div class="pq-result">next: ' + (/never closed/.test(r.error) && ends ? 'close the bracket with )' : 'pick a set below') + '</div>'
       : r.error
       ? '<div class="pq-result pq-err">' + esc(r.error) + '</div>'
-      : '<div class="pq-result"><b>' + r.idxs.length + '</b> student' + (r.idxs.length === 1 ? '' : 's') + (r.idxs.length ? ' · ' + esc(E.describe(r.idxs).join(' + ')) : '') + '</div>';
+      : '<div class="pq-result"><b>' + r.idxs.length + '</b> student' + (r.idxs.length === 1 ? '' : 's') + (isComplex ? ' · solved: <b>' + esc(solved) + '</b>' : (r.idxs.length ? ' · ' + esc(solved) : '')) + '</div>';
     return '<div class="pq">' +
       '<div class="pq-hint">Build a group of students: pick a set, then choose how the next one combines with it. Brackets group parts together.</div>' +
       '<div class="pq-expr">' + expr + '</div>' +
-      (state.q.length ? '<div class="pq-read">Students in ' + qWords(state.q) + '</div>' : '') +
+      (state.q.length ? '<div class="pq-read">Students in ' + qWords(state.q) + solvedHtml + '</div>' : '') +
       '<div class="pq-ops">' +
         btn('data-qop="∪"', '∪ or', canOp, 'union: in either set') + btn('data-qop="∩"', '∩ and', canOp, 'intersection: in both sets') +
         btn('data-qop="−"', '− not in', canOp, 'difference: in the first, not the second') + btn('data-qop="not"', '¬ all but', canOpen, 'complement: everyone except the next set') +
@@ -132,7 +140,19 @@ function mount(el, opts){
       units.map(function(u){ return chip(u, selMask); }).join('')+'</div></details>';
   }
 
+  function focusInput(){
+    var inp = el.querySelector('.pq-inline');
+    if(inp){
+      try { inp.focus({ preventScroll: true }); } catch(x){ inp.focus(); }
+    }
+  }
+
   function render(){
+    var hadFocus = false;
+    if(state.adv){
+      var curInp = el.querySelector('.pq-inline');
+      hadFocus = curInp && (document.activeElement === curInp);
+    }
     var idxs = selection();
     var selMask = E.maskOf(idxs);
     var byLevel = function(l){ return E.UNITS.filter(function(u){ return u.level === l; }); };
@@ -180,32 +200,109 @@ function mount(el, opts){
       section('atom', 'Finest ranges', 'the smallest blocks the timetable splits students into', E.ATOMS, selMask)+
       (kindHtml ? '<details class="pk-sec" data-sec="kind"'+(openSections.kind ? ' open' : '')+'><summary>Kinds <span class="muted">HSS · IKS · NSO · NSS · Life Skills · lab batches</span></summary>'+kindHtml+'</details>' : '')));
     el.innerHTML = html;
+    if(state.adv && hadFocus){
+      focusInput();
+    }
   }
+
+  function handleOpChar(char){
+    // If user was searching for a set and types an operator, commit the top matching set first
+    if(state.qSearch.trim()){
+      var firstChip = el.querySelector('.pq-sugg button[data-qset]');
+      if(firstChip){
+        qInsertSet(firstChip.getAttribute('data-qset'));
+        state.qSearch = '';
+      }
+    }
+    if(char === '*'){
+      // '*' means 'all' (Everyone)
+      qInsertSet('all');
+    } else if(char === '!'){
+      // '!' is the NOT operation (¬ all but)
+      qInsertOperandStart({ t: 'not' }, false);
+    } else if(char === '+' || char === '|' || char === '∪'){
+      if(qEndsOperand()){
+        qPut([{ t: 'op', v: '∪' }]);
+      } else if(state.qCur > 0 && state.q[state.qCur - 1] && state.q[state.qCur - 1].t === 'op'){
+        state.q[state.qCur - 1].v = '∪';
+      }
+    } else if(char === '&' || char === '∩'){
+      if(qEndsOperand()){
+        qPut([{ t: 'op', v: '∩' }]);
+      } else if(state.qCur > 0 && state.q[state.qCur - 1] && state.q[state.qCur - 1].t === 'op'){
+        state.q[state.qCur - 1].v = '∩';
+      }
+    } else if(char === '-' || char === '−'){
+      if(qEndsOperand()){
+        qPut([{ t: 'op', v: '−' }]);
+      } else {
+        qInsertOperandStart({ t: 'not' }, false);
+      }
+    } else if(char === '('){
+      qInsertOperandStart({ t: '(' }, false);
+    } else if(char === ')'){
+      if(qOpenBeforeCursor() > 0 && qEndsOperand()){
+        qPut([{ t: ')' }]);
+        if(startsOperand(qAfter())) state.q.splice(state.qCur, 0, { t: 'op', v: '∪' });
+      }
+    }
+    state.qSearch = '';
+    qChanged();
+    focusInput();
+  }
+
+  function preventBlur(e){
+    if(e.target.classList && e.target.classList.contains('pq-search')) return;
+    var btn = e.target.closest && e.target.closest('.pq-sugg button, .pq-ops button, .pq-expr button, .pq-expr, .pq-start');
+    if(btn){
+      e.preventDefault();
+    }
+  }
+  el.addEventListener('pointerdown', preventBlur);
+  el.addEventListener('mousedown', preventBlur);
 
   el.addEventListener('click', function(e){
     // a click in the query box but not on a piece (the empty space after it) puts the cursor at the end, like a text field
     var box = e.target.closest && e.target.closest('.pq-expr');
     if(box && !e.target.closest('button')){
       if(e.target.classList && e.target.classList.contains('pq-search')) return;   // typing in the inline search
-      state.qCur = state.q.length; render(); var inp = el.querySelector('.pq-inline'); if(inp) inp.focus(); return;
+      state.qCur = state.q.length; render(); focusInput(); return;
     }
     var t = e.target.closest && e.target.closest('button');
     if(!t || !el.contains(t)) return;
     if(t.hasAttribute('data-mode')){ state.mode = t.getAttribute('data-mode'); render(); return; }
-    if(t.hasAttribute('data-qset')){ qInsertSet(t.getAttribute('data-qset')); state.qSearch = ''; qChanged(); return; }
+    if(t.hasAttribute('data-qset')){ qInsertSet(t.getAttribute('data-qset')); state.qSearch = ''; qChanged(); focusInput(); return; }
     if(t.hasAttribute('data-qop')){
       var v = t.getAttribute('data-qop');
       if(v === '(' || v === 'not') qInsertOperandStart(v === 'not' ? { t: 'not' } : { t: '(' }, false);
       else if(v === ')'){ qPut([{ t: ')' }]); if(startsOperand(qAfter())) state.q.splice(state.qCur, 0, { t: 'op', v: '∪' }); }
       else qPut([{ t: 'op', v: v }]);
-      qChanged(); return;
+      qChanged(); focusInput(); return;
     }
     var qa = t.getAttribute('data-qact');
-    if(t.hasAttribute('data-qat')){ state.qCur = Math.max(0, Math.min(state.q.length, +t.getAttribute('data-qat'))); render(); return; }
-    if(qa === 'left'){ if(state.qCur > 0) state.qCur--; render(); return; }
-    if(qa === 'right'){ if(state.qCur < state.q.length) state.qCur++; render(); return; }
-    if(qa === 'back'){ if(state.qCur > 0){ state.q.splice(state.qCur - 1, 1); state.qCur--; } qChanged(); return; }
-    if(qa === 'clear'){ state.q = []; state.qCur = 0; qChanged(); return; }
+    if(t.hasAttribute('data-qidx')){
+      var idx = +t.getAttribute('data-qidx');
+      var rect = t.getBoundingClientRect();
+      var isLeft = false;
+      if(typeof e.clientX === 'number' && e.clientX > 0 && rect.width > 0){
+        var mid = rect.left + rect.width / 2;
+        isLeft = (e.clientX < mid);
+      }
+      state.qCur = isLeft ? idx : (idx + 1);
+      render();
+      focusInput();
+      return;
+    }
+    if(t.hasAttribute('data-qat')){
+      state.qCur = Math.max(0, Math.min(state.q.length, +t.getAttribute('data-qat')));
+      render();
+      focusInput();
+      return;
+    }
+    if(qa === 'left'){ if(state.qCur > 0) state.qCur--; render(); focusInput(); return; }
+    if(qa === 'right'){ if(state.qCur < state.q.length) state.qCur++; render(); focusInput(); return; }
+    if(qa === 'back'){ if(state.qCur > 0){ state.q.splice(state.qCur - 1, 1); state.qCur--; } qChanged(); focusInput(); return; }
+    if(qa === 'clear'){ state.q = []; state.qCur = 0; qChanged(); focusInput(); return; }
     var act = t.getAttribute('data-act');
     if(act === 'adv'){ state.adv = !state.adv; try { localStorage.setItem('thirtyatrpr_picker_adv', state.adv ? '1' : '0'); } catch(x){} render(); return; }
     if(act === 'undo'){ if(state.past.length){ state.ops = state.past.pop(); changed(); } return; }
@@ -223,8 +320,81 @@ function mount(el, opts){
   // the set search only refreshes its own suggestions (a full re-render would drop the keyboard focus)
   el.addEventListener('input', function(e){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
-    state.qSearch = e.target.value;
+    var val = e.target.value;
+    if(val === '*-'){
+      handleOpChar('*');
+      handleOpChar('-');
+      return;
+    }
+    var opMatch = val.match(/[+&*!(\)\-]/);
+    if(opMatch){
+      var char = opMatch[0];
+      state.qSearch = val.slice(0, opMatch.index);
+      handleOpChar(char);
+      return;
+    }
+    state.qSearch = val;
+    e.target.style.width = val ? (val.length + 0.5) + 'ch' : '2px';
     var box = el.querySelector('.pq-sugg'); if(box) box.innerHTML = qSuggest();
+  });
+  el.addEventListener('beforeinput', function(e){
+    if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
+    if(e.inputType === 'deleteContentBackward' && !e.target.value && state.qCur > 0){
+      e.preventDefault();
+      state.q.splice(state.qCur - 1, 1);
+      state.qCur--;
+      qChanged();
+      focusInput();
+      return;
+    }
+    var d = e.data;
+    if(d && (d === '+' || d === '&' || d === '-' || d === '*' || d === '!' || d === '(' || d === ')')){
+      e.preventDefault();
+      handleOpChar(d);
+      return;
+    }
+  });
+  el.addEventListener('keydown', function(e){
+    if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      var firstChip = el.querySelector('.pq-sugg button[data-qset]');
+      if(firstChip){
+        qInsertSet(firstChip.getAttribute('data-qset'));
+        state.qSearch = '';
+        qChanged();
+        focusInput();
+      }
+      return;
+    }
+    if((e.key === 'Backspace' || e.keyCode === 8) && !e.target.value && state.qCur > 0){
+      e.preventDefault();
+      state.q.splice(state.qCur - 1, 1);
+      state.qCur--;
+      qChanged();
+      focusInput();
+      return;
+    }
+    if(e.key === 'ArrowLeft' && !e.target.value && state.qCur > 0){
+      e.preventDefault();
+      state.qCur--;
+      render();
+      focusInput();
+      return;
+    }
+    if(e.key === 'ArrowRight' && !e.target.value && state.qCur < state.q.length){
+      e.preventDefault();
+      state.qCur++;
+      render();
+      focusInput();
+      return;
+    }
+    var ch = e.key;
+    if(ch === '+' || ch === '&' || ch === '-' || ch === '*' || ch === '!' || ch === '(' || ch === ')'){
+      e.preventDefault();
+      handleOpChar(ch);
+      return;
+    }
   });
   el.addEventListener('toggle', function(e){
     var d = e.target;
