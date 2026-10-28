@@ -1518,24 +1518,62 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
   const okCss = /@view-transition\s*\{\s*navigation:\s*auto/.test(dash) && /@view-transition\s*\{\s*navigation:\s*auto/.test(sub) && /^\s*(\/\*[\s\S]*?\*\/\s*)?@import/.test(sub);
   console.log(okCss ? 'PASS' : 'FAIL', 'cross-document view transitions enabled on dashboard + sub pages (font @import still first rule)');
   allPass &= okCss;
-  const okLogin = /body:not\(\.booted\) #loginScreen\{\s*visibility:hidden/.test(dash) && /document\.body\.classList\.add\('booted'\)/.test(dash);
+  const splash = fs2.readFileSync(__dirname + '/splash.html', 'utf8');
+  const okLogin = /body:not\(\.booted\) #loginScreen\{\s*visibility:hidden/.test(splash) && /document\.body\.classList\.add\('booted'\)/.test(splash);
   console.log(okLogin ? 'PASS' : 'FAIL', 'login screen stays hidden until the app is ready (never stands in for a loader)');
   allPass &= okLogin;
-  // behaviour of the referrer rule, run for real
-  const m = dash.match(/var __bootT0[\s\S]*?(?=window\.__bootDone = )/);
-  const run = (referrer) => {
+  // behaviour of the splash's startup rules, run for real
+  const m = splash.match(/var __bootT0[\s\S]*?(?=window\.__bootDone = )/);
+  const run = (referrer, pathname, store) => {
     const added = [];
-    const sandbox = { Date, URL, sessionStorage: { getItem: () => null, setItem: () => {} }, location: { origin: 'https://thirtyatrpr.web.app' },
+    const sandbox = { Date, URL, JSON, location: { origin: 'https://thirtyatrpr.web.app', pathname },
+      sessionStorage: { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = v; }, removeItem: (k) => { delete store[k]; } },
       window: { matchMedia: () => ({ matches: false }), navigator: {} }, navigator: {},
-      document: { referrer, getElementById: () => ({ classList: { add: (c) => added.push(c) } }) } };
+      document: { referrer, getElementById: () => ({ classList: { add: (c) => added.push(c) }, outerHTML: '<div id="bootLoader"></div>' }) } };
     sandbox.matchMedia = sandbox.window.matchMedia;
-    vm.runInNewContext(m[0] + '\n;__out = { min: __bootMin };', sandbox);
-    return { added, min: sandbox.__out.min };
+    vm.runInNewContext(m[0] + '\n;__out = { min: __bootMin, handoff: __handoff };', sandbox);
+    return { added, min: sandbox.__out.min, handoff: sandbox.__out.handoff, store };
   };
-  const inSite = run('https://thirtyatrpr.web.app/spectate'), fresh = run(''), other = run('https://www.google.com/');
+  const inSite = run('https://thirtyatrpr.web.app/spectate', '/', {}), fresh = run('', '/', {}), other = run('https://www.google.com/', '/', {});
   const okRef = inSite.added.indexOf('skip') !== -1 && inSite.min === 0 && fresh.added.indexOf('skip') === -1 && fresh.min === 1200 && other.added.indexOf('skip') === -1;
-  console.log(okRef ? 'PASS' : 'FAIL', 'splash is skipped when arriving from another page of the site, but plays for a fresh visit / external referrer: ' + JSON.stringify({ inSite, fresh, other }));
+  console.log(okRef ? 'PASS' : 'FAIL', 'splash is skipped when arriving from another page of the site (Home link), but plays for a fresh visit / external referrer: ' + JSON.stringify({ inSite: inSite.added, fresh: fresh.added, other: other.added }));
   allPass &= okRef;
+  // handoff: arriving by tapping Spectate/BR Tools -> open on the finished frame, no skip, short hold, flag consumed
+  const hand = run('https://thirtyatrpr.web.app/', '/spectate', { thirtyatrpr_splash_handoff: JSON.stringify({ to: '/spectate', t: Date.now() }) });
+  const wrongPage = run('https://thirtyatrpr.web.app/', '/br', { thirtyatrpr_splash_handoff: JSON.stringify({ to: '/spectate', t: Date.now() }) });
+  const stale = run('https://thirtyatrpr.web.app/', '/spectate', { thirtyatrpr_splash_handoff: JSON.stringify({ to: '/spectate', t: Date.now() - 60000 }) });
+  const okHand = hand.handoff === true && hand.added.indexOf('handoff') !== -1 && hand.added.indexOf('skip') === -1 && hand.min === 250 && !('thirtyatrpr_splash_handoff' in hand.store)
+    && wrongPage.handoff === false && stale.handoff === false;
+  console.log(okHand ? 'PASS' : 'FAIL', 'handoff: destination opens on the finished frame (short hold, flag consumed); a handoff for another page or an old one is ignored: ' + JSON.stringify({ hand: hand.added, wrongPage: wrongPage.added, stale: stale.added }));
+  allPass &= okHand;
+  // the leaving handler: Spectate/BR links are intercepted, the main page and modified clicks are not
+  const click = (href, opts) => {
+    opts = opts || {};
+    let handler = null, prevented = false, nav = null; const timers = []; const store = {};
+    let bootPhase = true;
+    const appended = [];
+    const sandbox = { Date, URL, JSON, location: { origin: 'https://thirtyatrpr.web.app', pathname: opts.path || '/', set href(v){ nav = v; }, get href(){ return 'https://thirtyatrpr.web.app' + (opts.path || '/'); } },
+      sessionStorage: { getItem: () => null, setItem: (k, v) => { store[k] = v; }, removeItem: () => {} },
+      setTimeout: (fn, ms) => { timers.push([fn, ms]); return 1; },
+      window: { matchMedia: () => ({ matches: !!opts.reduced }), addEventListener: () => {}, navigator: {} }, matchMedia: () => ({ matches: !!opts.reduced }), navigator: {},
+      document: { referrer: '', body: { appendChild: (n) => appended.push(n) },
+        getElementById: (id) => (id === 'bootLoader' && bootPhase ? { classList: { add() {} }, outerHTML: '<div id="bootLoader"><svg></svg></div>' } : null),
+        querySelector: () => null,
+        createElement: () => { const el = { classList: { add() {} }, set innerHTML(v) { el._h = v; }, get firstElementChild() { return { classList: { add() {} }, html: el._h }; } }; return el; },
+        addEventListener: (t, fn) => { if (t === 'click') handler = fn; } } };
+    sandbox.matchMedia = sandbox.window.matchMedia;
+    vm.runInNewContext(splash.match(/<script>(?:(?!<\/script>)[\s\S])*?__bootT0(?:(?!<\/script>)[\s\S])*?<\/script>/)[0].replace(/<\/?script>/g, ''), sandbox);
+    bootPhase = false;   // the boot splash has been removed by now
+    const evt = Object.assign({ defaultPrevented: false, button: 0, target: { closest: () => ({ href, getAttribute: () => null, hasAttribute: () => false, target: '' }) }, preventDefault: () => { prevented = true; } }, opts.evt || {});
+    handler(evt);
+    return { prevented, timers, appended, nav, store };
+  };
+  const toSpec = click('https://thirtyatrpr.web.app/spectate'), toBr = click('https://thirtyatrpr.web.app/br'), toHome = click('https://thirtyatrpr.web.app/');
+  const modified = click('https://thirtyatrpr.web.app/spectate', { evt: { ctrlKey: true } }), onSpec = click('https://thirtyatrpr.web.app/spectate', { path: '/spectate' }), reduced = click('https://thirtyatrpr.web.app/br', { reduced: true });
+  const okLeave = toSpec.prevented && toSpec.appended.length === 1 && /Spectate/.test(toSpec.appended[0].html) && toSpec.timers.some((t) => t[1] === 1800)
+    && toBr.prevented && /BR Tools/.test(toBr.appended[0].html) && !toHome.prevented && !modified.prevented && !onSpec.prevented && !reduced.prevented;
+  console.log(okLeave ? 'PASS' : 'FAIL', 'leaving animation: Spectate/BR links play the animation first (redirect after 1.8 s); Home, ctrl-click, the page you are on and reduced-motion just navigate: ' + JSON.stringify({ toSpec: toSpec.prevented, toBr: toBr.prevented, toHome: toHome.prevented, modified: modified.prevented, onSpec: onSpec.prevented, reduced: reduced.prevented }));
+  allPass &= okLeave;
 }
 
 console.log(allPass ? '\nALL SCENARIOS PASSED' : '\nSOME SCENARIOS FAILED');

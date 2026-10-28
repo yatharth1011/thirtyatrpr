@@ -528,4 +528,6 @@ document.addEventListener('thirty:overlay', function(){
   renderActive();
 });
 document.addEventListener('DOMContentLoaded', init);
+// ready: let the boot splash (build/splash.html) go — runs after init, listeners fire in registration order
+document.addEventListener('DOMContentLoaded', function(){ if(typeof window !== 'undefined' && window.__bootDone) window.__bootDone(); });
 })();

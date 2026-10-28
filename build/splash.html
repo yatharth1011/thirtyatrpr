@@ -1,0 +1,137 @@
+<!-- Boot splash — shared by the dashboard, /spectate and /br (build/splash.html, spliced in by splice.py). Pure CSS, plays while the page's big script loads: the 30 tile pops in, the @ slides out from inside it
+     (dark while inside the tile, gradient once past the edge — the same two-copy trick as the nav logo), then r p r slide
+     out from behind the tile. Removed by window.__bootDone(), called when each page is ready (end of app3.js / spectate.js / br.js); a timer removes it anyway. -->
+<style>
+  #bootLoader{ position:fixed; inset:0; z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; background:var(--bg);
+    transition:opacity .3s ease; }
+  #bootLoader.done{ opacity:0; pointer-events:none; }
+  #bootLoader.skip{ display:none; }
+  body:not(.booted) #loginScreen{ visibility:hidden; }   /* the login screen must never stand in for a loader */
+  #bootLoader svg{ width:min(72vw, 300px); height:auto; overflow:visible; }
+  @keyframes bl-pop{ from{ opacity:0; transform:scale(.6); } to{ opacity:1; transform:none; } }
+  @keyframes bl-out{ 0%{ opacity:0; transform:translateX(var(--from)); } 25%{ opacity:1; } 100%{ opacity:1; transform:none; } }
+  @keyframes bl-shift{ from{ transform:translateX(22px); } to{ transform:none; } }
+  #bootLoader .bl-shift{ animation:bl-shift .9s cubic-bezier(.3,.7,.2,1) .3s both; }
+  @keyframes bl-glow{ from{ opacity:0; } to{ opacity:1; } }
+  #bootLoader .bl-glow{ opacity:0; animation:bl-glow 1.1s ease-in-out infinite alternate; }
+  #bootLoader .bl-tile{ transform-box:fill-box; transform-origin:center; animation:bl-pop .3s cubic-bezier(.2,.9,.3,1.2) both; }
+  #bootLoader.pwa .bl-tile{ animation:none; }
+  #bootLoader .bl-at{ --from:-22px; animation:bl-out .6s cubic-bezier(.2,.8,.2,1) .3s both; }
+  #bootLoader .bl-r1{ --from:-40px; animation:bl-out .5s cubic-bezier(.2,.8,.2,1) .6s both; }
+  #bootLoader .bl-p{  --from:-52px; animation:bl-out .5s cubic-bezier(.2,.8,.2,1) .7s both; }
+  #bootLoader .bl-r2{ --from:-64px; animation:bl-out .5s cubic-bezier(.2,.8,.2,1) .8s both; }
+  @media (prefers-reduced-motion: reduce){ #bootLoader *{ animation:none !important; opacity:1; transform:none; } }
+  /* the page's own name under the mark (Spectate / BR Tools): a quiet pill that rises in once r p r has landed */
+  @keyframes bl-sub{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:none; } }
+  #bootLoader .bl-sub{ animation:bl-sub .5s cubic-bezier(.2,.8,.2,1) 1s both; }
+  #bootLoader .bl-sub span{ display:inline-flex; align-items:center; gap:7px; padding:7px 15px; border-radius:99px; background:rgba(255,255,255,0.05);
+    box-shadow:0 1px 3px rgba(0,0,0,.32), 0 2px 6px -2px rgba(0,0,0,.28); color:var(--ink-soft);
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+  #bootLoader .bl-sub b{ font-weight:400; letter-spacing:0; font-size:14px; }
+  #bootLoader.pwa .bl-sub{ animation-delay:.8s; }
+  /* tapping Spectate / BR Tools: this overlay is built on the current page and plays the whole animation before the redirect;
+     the next page then opens on the finished frame ("handoff": nothing replays, only the gradient keeps flowing) and takes over */
+  @keyframes bl-fadein{ from{ opacity:0; } to{ opacity:1; } }
+  #bootLoader.leaving{ opacity:0; animation:bl-fadein .22s ease forwards; }
+  #bootLoader.handoff :not(.bl-glow){ animation:none !important; }
+
+  /* ---- entrances: as the splash leaves (body.revealed), each block rises into place one after another instead of
+     appearing all at once. Only transform/opacity; skipped entirely for reduced motion. ---- */
+  @media (prefers-reduced-motion: no-preference){
+    @keyframes rev-rise{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:none; } }
+    @keyframes rev-fade{ from{ opacity:0; } to{ opacity:1; } }
+    body.revealed #loginScreen > *,
+    body.revealed #app.show main > *, body.revealed #app.show .panel-grid > *,
+    body.revealed .wrap > *, body.revealed .layout > *, body.revealed .screen.active > *{ animation:rev-rise .55s cubic-bezier(.2,.7,.2,1) both; }
+    body.revealed #app.show header, body.revealed .topbar{ animation:rev-fade .5s ease both; }
+    body.revealed #loginScreen > :nth-child(2), body.revealed #app.show main > :nth-child(2), body.revealed .wrap > :nth-child(2), body.revealed .layout > :nth-child(2){ animation-delay:.06s; }
+    body.revealed #loginScreen > :nth-child(3), body.revealed #app.show main > :nth-child(3), body.revealed .wrap > :nth-child(3){ animation-delay:.12s; }
+    body.revealed #loginScreen > :nth-child(4), body.revealed #app.show main > :nth-child(4){ animation-delay:.18s; }
+    body.revealed #loginScreen > :nth-child(5), body.revealed #app.show main > :nth-child(5){ animation-delay:.24s; }
+    body.revealed #app.show main > :nth-child(n+6){ animation-delay:.3s; }
+    body.revealed #app.show .panel-grid > :nth-child(1){ animation-delay:.18s; }
+    body.revealed #app.show .panel-grid > :nth-child(2){ animation-delay:.24s; }
+  }
+</style>
+<div id="bootLoader" aria-hidden="true">
+  <svg viewBox="0 0 78 34">
+    <defs>
+      <linearGradient id="blKz" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="34"><stop offset="0" style="stop-color:var(--kz-1,#b392f0)"/><stop offset=".55" style="stop-color:var(--kz-2,#79b8ff)"/><stop offset="1" style="stop-color:var(--kz-3,#d1d5da)"/></linearGradient>
+      <!-- the same three colours, running the other way: cross-faded over the first so the gradient visibly flows (opacity animation: smooth even while the page script is still parsing) -->
+      <linearGradient id="blKz2" gradientUnits="userSpaceOnUse" x1="48" y1="34" x2="0" y2="0"><stop offset="0" style="stop-color:var(--kz-1,#b392f0)"/><stop offset=".55" style="stop-color:var(--kz-2,#79b8ff)"/><stop offset="1" style="stop-color:var(--kz-3,#d1d5da)"/></linearGradient>
+      <clipPath id="blClip"><rect width="34" height="34" rx="9"/></clipPath>
+    </defs>
+    <g class="bl-shift" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0">
+      <!-- outside the tile: these sit BEHIND it, so each letter appears as it slides out from under the tile -->
+      <text class="bl-at" x="28.4" y="23.8" fill="url(#blKz)">@</text>
+      <g class="bl-glow"><text class="bl-at" x="28.4" y="23.8" fill="url(#blKz2)">@</text></g>
+      <text class="bl-r1" x="39.8" y="23.8" style="fill:var(--ink)">r</text>
+      <text class="bl-p" x="51.2" y="23.8" style="fill:var(--ink)">p</text>
+      <text class="bl-r2" x="62.6" y="23.8" style="fill:var(--ink)">r</text>
+      <g class="bl-tile"><rect width="34" height="34" rx="9" fill="url(#blKz)"/><rect class="bl-glow" width="34" height="34" rx="9" fill="url(#blKz2)"/><text x="5.6" y="23.8" style="fill:var(--bg)" opacity=".88">30</text></g>
+      <!-- inside the tile: the same @, dark, clipped to the tile — together with the copy above it blends across the edge -->
+      <g clip-path="url(#blClip)"><text class="bl-at" x="28.4" y="23.8" style="fill:var(--bg)" opacity=".88">@</text></g>
+    </g>
+  </svg>
+__SPLASH_LABEL_HTML__</div>
+<script>
+// Installed app: Chrome/Android has already shown its own launch screen (the app icon centred on the manifest's
+// background colour), so start from that exact picture — the finished 30 tile, centred, no pop-in — and let @rpr come out of it.
+try { if((window.matchMedia && (matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: window-controls-overlay)').matches)) || window.navigator.standalone === true) document.getElementById('bootLoader').classList.add('pwa'); } catch(e){}
+var __bootT0 = Date.now(), __bootMin = 1200;
+// Arrived by tapping Spectate / BR Tools on another page (see the click handler below): that page already played the
+// animation, so open on its finished frame and just take over from it.
+var __handoff = false;
+try {
+  var __h = JSON.parse(sessionStorage.getItem('thirtyatrpr_splash_handoff') || 'null');
+  sessionStorage.removeItem('thirtyatrpr_splash_handoff');
+  __handoff = !!(__h && Date.now() - __h.t < 20000 && __h.to === location.pathname.replace(/\/+$/, ''));
+} catch(e){}
+if(__handoff){
+  document.getElementById('bootLoader').classList.add('handoff');
+} else {
+  // Any other arrival from a page of this site (e.g. the Home link): no splash — the browser's crossfade does the transition.
+  try { var __ref = document.referrer && new URL(document.referrer); if(__ref && __ref.origin === location.origin){ document.getElementById('bootLoader').classList.add('skip'); __bootMin = 0; } } catch(e){}
+}
+try { if(sessionStorage.getItem('thirtyatrpr_splash_seen')) __bootMin = 0; sessionStorage.setItem('thirtyatrpr_splash_seen', '1'); } catch(e){}
+if(__handoff) __bootMin = 250;   // the animation already ran on the previous page; just a beat so the swap is not a flicker
+var __splashHTML = document.getElementById('bootLoader').outerHTML;   // kept to rebuild the overlay for the leaving animation
+window.__bootDone = function(){
+  document.body.classList.add('booted');
+  var el = document.getElementById('bootLoader');
+  if(!el || el.__leaving){ if(!el) document.body.classList.add('revealed'); return; }
+  el.__leaving = true;
+  // the first load of a session lets the whole animation play; later loads in the same session go straight through
+  setTimeout(function(){
+    document.body.classList.add('revealed');
+    el.classList.add('done');
+    setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 400);
+  }, Math.max(0, __bootMin - (Date.now() - __bootT0)));
+};
+// Tapping a link to /spectate or /br (from any other page): play the whole animation HERE first, then redirect.
+(function(){
+  var LABELS = { '/spectate': ['&#128301;', 'Spectate'], '/br': ['&#128736;&#65039;', 'BR Tools'] }, going = false;
+  function norm(p){ return p.replace(/\/+$/, ''); }
+  document.addEventListener('click', function(e){
+    if(going || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target && e.target.closest && e.target.closest('a[href]');
+    if(!a || (a.target && a.target !== '_self') || a.hasAttribute('download')) return;
+    var u; try { u = new URL(a.href, location.href); } catch(x){ return; }
+    var to = norm(u.pathname), lab = LABELS[to];
+    if(u.origin !== location.origin || !lab || to === norm(location.pathname)) return;
+    if(document.getElementById('bootLoader')) return;                                           // still booting: just navigate
+    if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;     // no animation, no wait
+    e.preventDefault(); going = true;
+    var wrap = document.createElement('div');
+    wrap.innerHTML = __splashHTML.replace(/<div class="bl-sub">[\s\S]*?<\/div>/, '').replace('</svg>', '</svg>\n  <div class="bl-sub"><span><b>' + lab[0] + '</b> ' + lab[1] + '</span></div>');
+    var ov = wrap.firstElementChild; ov.classList.add('leaving'); document.body.appendChild(ov);
+    setTimeout(function(){
+      try { sessionStorage.setItem('thirtyatrpr_splash_handoff', JSON.stringify({ to: to, t: Date.now() })); } catch(x){}
+      location.href = u.href;
+    }, 1800);   // the sequence ends at ~1.1 s and the label lands at ~1.5 s
+  }, true);
+  // coming back with the browser's Back button can restore this page frozen mid-animation: clear the overlay
+  window.addEventListener('pageshow', function(e){ if(e.persisted){ going = false; var o = document.querySelector('#bootLoader.leaving'); if(o && o.parentNode) o.parentNode.removeChild(o); } });
+})();
+setTimeout(function(){ __bootMin = 0; window.__bootDone(); }, 10000);   // never trap anyone behind the splash if the app script fails
+</script>

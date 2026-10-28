@@ -2009,72 +2009,7 @@ window.__overlayFast = (function(){
   document.body.classList.add('glass');
 })();
 </script>
-<!-- Boot splash (pure CSS, plays while the page's big script loads): the 30 tile pops in, the @ slides out from inside it
-     (dark while inside the tile, gradient once past the edge — the same two-copy trick as the nav logo), then r p r slide
-     out from behind the tile. Removed by window.__bootDone(), called at the end of app3.js; a timer removes it anyway. -->
-<style>
-  #bootLoader{ position:fixed; inset:0; z-index:9999; display:flex; align-items:center; justify-content:center; background:var(--bg);
-    transition:opacity .3s ease; }
-  #bootLoader.done{ opacity:0; pointer-events:none; }
-  #bootLoader.skip{ display:none; }
-  body:not(.booted) #loginScreen{ visibility:hidden; }   /* the login screen must never stand in for a loader */
-  #bootLoader svg{ width:min(72vw, 300px); height:auto; overflow:visible; }
-  @keyframes bl-pop{ from{ opacity:0; transform:scale(.6); } to{ opacity:1; transform:none; } }
-  @keyframes bl-out{ 0%{ opacity:0; transform:translateX(var(--from)); } 25%{ opacity:1; } 100%{ opacity:1; transform:none; } }
-  @keyframes bl-shift{ from{ transform:translateX(22px); } to{ transform:none; } }
-  #bootLoader .bl-shift{ animation:bl-shift .9s cubic-bezier(.3,.7,.2,1) .3s both; }
-  @keyframes bl-glow{ from{ opacity:0; } to{ opacity:1; } }
-  #bootLoader .bl-glow{ opacity:0; animation:bl-glow 1.1s ease-in-out infinite alternate; }
-  #bootLoader .bl-tile{ transform-box:fill-box; transform-origin:center; animation:bl-pop .3s cubic-bezier(.2,.9,.3,1.2) both; }
-  #bootLoader.pwa .bl-tile{ animation:none; }
-  #bootLoader .bl-at{ --from:-22px; animation:bl-out .6s cubic-bezier(.2,.8,.2,1) .3s both; }
-  #bootLoader .bl-r1{ --from:-40px; animation:bl-out .5s cubic-bezier(.2,.8,.2,1) .6s both; }
-  #bootLoader .bl-p{  --from:-52px; animation:bl-out .5s cubic-bezier(.2,.8,.2,1) .7s both; }
-  #bootLoader .bl-r2{ --from:-64px; animation:bl-out .5s cubic-bezier(.2,.8,.2,1) .8s both; }
-  @media (prefers-reduced-motion: reduce){ #bootLoader *{ animation:none !important; opacity:1; transform:none; } }
-</style>
-<div id="bootLoader" aria-hidden="true">
-  <svg viewBox="0 0 78 34">
-    <defs>
-      <linearGradient id="blKz" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="34"><stop offset="0" style="stop-color:var(--kz-1,#b392f0)"/><stop offset=".55" style="stop-color:var(--kz-2,#79b8ff)"/><stop offset="1" style="stop-color:var(--kz-3,#d1d5da)"/></linearGradient>
-      <!-- the same three colours, running the other way: cross-faded over the first so the gradient visibly flows (opacity animation: smooth even while the page script is still parsing) -->
-      <linearGradient id="blKz2" gradientUnits="userSpaceOnUse" x1="48" y1="34" x2="0" y2="0"><stop offset="0" style="stop-color:var(--kz-1,#b392f0)"/><stop offset=".55" style="stop-color:var(--kz-2,#79b8ff)"/><stop offset="1" style="stop-color:var(--kz-3,#d1d5da)"/></linearGradient>
-      <clipPath id="blClip"><rect width="34" height="34" rx="9"/></clipPath>
-    </defs>
-    <g class="bl-shift" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0">
-      <!-- outside the tile: these sit BEHIND it, so each letter appears as it slides out from under the tile -->
-      <text class="bl-at" x="28.4" y="23.8" fill="url(#blKz)">@</text>
-      <g class="bl-glow"><text class="bl-at" x="28.4" y="23.8" fill="url(#blKz2)">@</text></g>
-      <text class="bl-r1" x="39.8" y="23.8" style="fill:var(--ink)">r</text>
-      <text class="bl-p" x="51.2" y="23.8" style="fill:var(--ink)">p</text>
-      <text class="bl-r2" x="62.6" y="23.8" style="fill:var(--ink)">r</text>
-      <g class="bl-tile"><rect width="34" height="34" rx="9" fill="url(#blKz)"/><rect class="bl-glow" width="34" height="34" rx="9" fill="url(#blKz2)"/><text x="5.6" y="23.8" style="fill:var(--bg)" opacity=".88">30</text></g>
-      <!-- inside the tile: the same @, dark, clipped to the tile — together with the copy above it blends across the edge -->
-      <g clip-path="url(#blClip)"><text class="bl-at" x="28.4" y="23.8" style="fill:var(--bg)" opacity=".88">@</text></g>
-    </g>
-  </svg>
-</div>
-<script>
-// Installed app: Chrome/Android has already shown its own launch screen (the app icon centred on the manifest's
-// background colour), so start from that exact picture — the finished 30 tile, centred, no pop-in — and let @rpr come out of it.
-try { if((window.matchMedia && (matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: window-controls-overlay)').matches)) || window.navigator.standalone === true) document.getElementById('bootLoader').classList.add('pwa'); } catch(e){}
-var __bootT0 = Date.now(), __bootMin = 1200;
-// Arriving from another page of this site (Spectate/BR/Home links): no splash — the browser's crossfade does the transition.
-try { var __ref = document.referrer && new URL(document.referrer); if(__ref && __ref.origin === location.origin){ document.getElementById('bootLoader').classList.add('skip'); __bootMin = 0; } } catch(e){}
-try { if(sessionStorage.getItem('thirtyatrpr_splash_seen')) __bootMin = 0; sessionStorage.setItem('thirtyatrpr_splash_seen', '1'); } catch(e){}
-window.__bootDone = function(){
-  document.body.classList.add('booted');
-  var el = document.getElementById('bootLoader');
-  if(!el || el.__leaving) return;
-  el.__leaving = true;
-  // the first load of a session lets the whole animation play; later loads in the same session go straight through
-  setTimeout(function(){
-    el.classList.add('done');
-    setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 400);
-  }, Math.max(0, __bootMin - (Date.now() - __bootT0)));
-};
-setTimeout(function(){ __bootMin = 0; window.__bootDone(); }, 10000);   // never trap anyone behind the splash if the app script fails
-</script>
+<!--__SPLASH__-->
 
 <!-- ===== ROLES ===== Edit this list to grant roles by entry number. Search "ROLES" to find it. -->
 <script>

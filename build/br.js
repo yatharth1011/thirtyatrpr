@@ -635,3 +635,5 @@ onAuthStateChanged(auth, function(user){
   paintHistory();
   setTab(state.tab);
 });
+// ready: let the boot splash (build/splash.html) go
+if(typeof document !== 'undefined' && document.addEventListener) document.addEventListener('DOMContentLoaded', function(){ if(typeof window !== 'undefined' && window.__bootDone) window.__bootDone(); });

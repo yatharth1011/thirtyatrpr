@@ -22,6 +22,21 @@ sub_theme_css = open(BASE + '/build/sub_theme.css', 'r', encoding='utf-8').read(
 sub_theme_css += '\n' + monthpick_css   # the month picker's styles ride along for /spectate and /br
 
 
+# Boot splash shared by the dashboard, /spectate and /br (the dashboard has no page label; the sub pages name themselves
+# under the mark).
+splash_html = open(BASE + '/build/splash.html', 'r', encoding='utf-8').read()
+
+
+def with_splash(html, label_html=''):
+    if '<!--__SPLASH__-->' not in html:
+        raise SystemExit('splice.py: a page is missing the <!--__SPLASH__--> marker — aborting')
+    return html.replace('<!--__SPLASH__-->', splash_html.replace('__SPLASH_LABEL_HTML__', label_html))
+
+
+SPECTATE_LABEL = '  <div class="bl-sub"><span><b>&#128301;</b> Spectate</span></div>\n'
+BR_LABEL = '  <div class="bl-sub"><span><b>&#128736;&#65039;</b> BR Tools</span></div>\n'
+
+
 def inject_shared(html, label):
     for ph, val in [('/*__SUB_THEME_CSS__*/', sub_theme_css), ('/*__ENGINE_JS__*/', engine_js), ('/*__PICKER_JS__*/', picker_js), ('/*__MONTHPICK_JS__*/', monthpick_js)]:
         if ph not in html:
@@ -29,7 +44,7 @@ def inject_shared(html, label):
         html = html.replace(ph, val)
     return html
 
-out = template.replace('/*__THIRTY_DATA__*/', data_js)
+out = with_splash(template).replace('/*__THIRTY_DATA__*/', data_js)
 out = out.replace('/*__APP_JS__*/', app_js)
 out = out.replace('/*__LIVE_OVERLAY_JS__*/', live_overlay_js)
 out = out.replace('/*__KAIZEN_BRIDGE_JS__*/', kaizen_bridge_js)
@@ -48,7 +63,7 @@ for target in [BASE + '/public/index.html', BASE + '/public/dashboard-app-previe
 # introduces no new privacy exposure). Kept out of the main app entirely; not linked from it yet.
 spectate_template = open(BASE + '/build/spectate_template.html', 'r', encoding='utf-8').read()
 spectate_js = open(BASE + '/build/spectate.js', 'r', encoding='utf-8').read()
-spectate_out = inject_shared(spectate_template, 'spectate').replace('/*__THIRTY_DATA__*/', data_js)
+spectate_out = with_splash(inject_shared(spectate_template, 'spectate'), SPECTATE_LABEL).replace('/*__THIRTY_DATA__*/', data_js)
 spectate_out = spectate_out.replace('/*__SPECTATE_JS__*/', spectate_js)
 if '/*__THIRTY_DATA__*/' in spectate_out or '/*__SPECTATE_JS__*/' in spectate_out:
     raise SystemExit('splice.py: a spectate placeholder was not replaced — aborting')
@@ -67,7 +82,7 @@ print('wrote', spectate_target, 'size:', len(spectate_out))
 # spectate's reuse of it.
 br_template = open(BASE + '/build/br_template.html', 'r', encoding='utf-8').read()
 br_js = open(BASE + '/build/br.js', 'r', encoding='utf-8').read()
-br_out = inject_shared(br_template, '/br').replace('/*__THIRTY_DATA__*/', data_js)
+br_out = with_splash(inject_shared(br_template, '/br'), BR_LABEL).replace('/*__THIRTY_DATA__*/', data_js)
 br_out = br_out.replace('/*__BR_JS__*/', br_js)
 if '/*__THIRTY_DATA__*/' in br_out or '/*__BR_JS__*/' in br_out:
     raise SystemExit('splice.py: a /br placeholder was not replaced — aborting')
