@@ -258,7 +258,8 @@
     background:var(--card2, rgba(255,255,255,.05)); box-shadow:inset 0 1px 3px rgba(0,0,0,.3); font-size:12px; }
   .pq-tok{ padding:3px 9px; border-radius:99px; background:color-mix(in srgb, var(--ok) 18%, transparent); color:var(--ink); font-weight:700; }
   .pq-sym{ font-weight:800; color:var(--ok); font-size:14px; padding:0 2px; }
-  .pq-expr button{ font:inherit; border:none; cursor:pointer; }
+  .pq-expr, .pq-expr button{ cursor:text; }   /* clicking in the expression places the insertion point, like a text field */
+  .pq-expr button{ font:inherit; border:none; }
   .pq-expr .pq-sym{ background:none; }
   .pq-start{ background:none; width:10px; height:22px; padding:0; }
   .pq-caret{ display:inline-block; width:2px; height:18px; border-radius:1px; background:var(--ok); vertical-align:middle; animation:pq-blink 1s steps(1) infinite; }
