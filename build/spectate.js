@@ -401,6 +401,7 @@ function openCourseCohort(code){
 function init(){
   E.mountThemeSwitcher(document.getElementById('themeSwitch'));
   picker = PICKER.mount(document.getElementById('picker'), {
+    query: true,   // the set-query builder (∪ ∩ − ¬, brackets)
     onChange: function(sel){ state.sel = sel; state.heatSel = null; renderWhoSummary(); renderActive(); }
   });
   var opts = [];

@@ -600,6 +600,7 @@ function evalSelection(ops, universeIdxs){
   var uni = universeIdxs ? maskOf(universeIdxs) : null;
   var m = new Uint8Array(N);
   ops.forEach(function(op){
+    if(op.op === 'expr'){ m = maskOf(queryEval(op.tokens).idxs); return; }   // a set query replaces the running selection
     var u = UNIT_BY_ID[op.id];
     if(!u) return;
     if(op.op === 'add') u.idxs.forEach(function(i){ m[i] = 1; });
@@ -609,6 +610,54 @@ function evalSelection(ops, universeIdxs){
   if(uni) for(var j=0;j<N;j++) if(!uni[j]) m[j] = 0;
   return idxsOfMask(m);
 }
+/* ================= set queries: (G2 ∪ G3) ∩ HS110 − D1, ¬NSO … =================
+   Tokens: {t:'set', id} | {t:'op', v:'∪'|'∩'|'−'} | {t:'not'} | {t:'('} | {t:')'}. Precedence: ¬ binds tightest, then ∩, then
+   ∪ and − (equal, left to right) — the usual set-algebra convention. ¬ is the complement within everyone (or within the
+   universe a page is limited to). Queries are built with buttons in the picker (no typed syntax); this only evaluates them. */
+function queryText(tokens){
+  return (tokens || []).map(function(tk){
+    if(tk.t === 'set'){ var u = UNIT_BY_ID[tk.id]; return u ? u.label : '?'; }
+    if(tk.t === 'op') return ' ' + tk.v + ' ';
+    if(tk.t === 'not') return '¬';
+    return tk.t;
+  }).join('').replace(/\(\s+/g, '(').replace(/\s+\)/g, ')').replace(/\s+/g, ' ').trim();
+}
+// -> { idxs, error } ; error names the problem in plain words
+function queryEval(tokens, universeIdxs){
+  var uni = universeIdxs ? maskOf(universeIdxs) : null, pos = 0, toks = tokens || [];
+  function fail(msg){ throw new Error(msg); }
+  function all(){ var m = new Uint8Array(N); for(var i=0;i<N;i++) m[i] = uni ? uni[i] : 1; return m; }
+  function factor(){
+    var tk = toks[pos];
+    if(!tk) fail('the query ends too early — add a set');
+    if(tk.t === 'not'){ pos++; var inner = factor(), base = all(); for(var i=0;i<N;i++) base[i] = base[i] && !inner[i] ? 1 : 0; return base; }
+    if(tk.t === '('){ pos++; var e = expr(); if(!toks[pos] || toks[pos].t !== ')') fail('a "(" is never closed'); pos++; return e; }
+    if(tk.t === 'set'){ pos++; var u = UNIT_BY_ID[tk.id]; if(!u) fail('unknown set'); var m = new Uint8Array(N); u.idxs.forEach(function(i){ m[i] = 1; }); return m; }
+    if(tk.t === ')') fail('a ")" has nothing to close');
+    fail('"' + tk.v + '" needs a set before it');
+  }
+  function term(){
+    var m = factor();
+    while(toks[pos] && toks[pos].t === 'op' && toks[pos].v === '∩'){ pos++; var r = factor(); for(var i=0;i<N;i++) m[i] = m[i] && r[i] ? 1 : 0; }
+    return m;
+  }
+  function expr(){
+    var m = term();
+    while(toks[pos] && toks[pos].t === 'op' && (toks[pos].v === '∪' || toks[pos].v === '−')){
+      var v = toks[pos].v; pos++; var r = term();
+      for(var i=0;i<N;i++) m[i] = v === '∪' ? (m[i] || r[i] ? 1 : 0) : (m[i] && !r[i] ? 1 : 0);
+    }
+    return m;
+  }
+  try {
+    if(!toks.length) return { idxs: [], error: null };
+    var m = expr();
+    if(pos < toks.length) fail(toks[pos].t === 'set' || toks[pos].t === '(' || toks[pos].t === 'not' ? 'two sets in a row — put ∪, ∩ or − between them' : 'unexpected "' + (toks[pos].v || toks[pos].t) + '"');
+    if(uni) for(var i=0;i<N;i++) if(!uni[i]) m[i] = 0;
+    return { idxs: idxsOfMask(m), error: null };
+  } catch(err){ return { idxs: [], error: err.message }; }
+}
+
 // Units that strictly contain the selection (to widen) and units/atoms strictly inside it (to
 // narrow) — the "supersets / subsets" navigation.
 function supersetsOf(idxs, universeIdxs){
@@ -1214,7 +1263,7 @@ return {
   setOverlay: setOverlay, overlayScopeMatches: overlayScopeMatches, overlayAppliesOnDate: overlayAppliesOnDate,
   studentDay: studentDay, busyIntervals: busyIntervals, overlaps: overlaps, dayContext: dayContext,
   maskOf: maskOf, sameSet: sameSet, intersect: intersect, describe: describe, describeStructural: describeStructural,
-  evalSelection: evalSelection, supersetsOf: supersetsOf, subsetsOf: subsetsOf, atomsIn: atomsIn,
+  evalSelection: evalSelection, queryEval: queryEval, queryText: queryText, supersetsOf: supersetsOf, subsetsOf: subsetsOf, atomsIn: atomsIn,
   cohortDay: cohortDay, freeWindows: freeWindows, isHomogeneousDay: isHomogeneousDay, contactsFor: contactsFor,
   venueKey: venueKey, venueNameFor: venueNameFor, venueOccupancy: venueOccupancy, venueBlocks: venueBlocks, venueStatus: venueStatus,
   mealWindows: mealWindows, mealTagForHour: mealTagForHour, freeVenuesAt: freeVenuesAt, busyVenuesAt: busyVenuesAt,

@@ -3815,7 +3815,12 @@ initStudyPanel();
     document.getElementById('miniStudy').style.display = studyBtn && studyBtn.style.display !== 'none' ? '' : 'none';
     var amb = document.getElementById('studyAmbient');
     document.getElementById('miniStudyAmbient').textContent = amb ? amb.textContent : '';
-    var want = window.scrollY > head.offsetHeight - 8, shown = bar.classList.contains('show');
+    // The bar takes over at the moment the header's own Study rooms button reaches the spot where the bar's Study rooms pill
+    // sits (they line up), and hands back at that same moment on the way up — so one visually becomes the other.
+    var want, hdrStudy = document.getElementById('studyToggleBtn'), barStudy = document.getElementById('miniStudy');
+    if(hdrStudy && barStudy && hdrStudy.offsetParent && barStudy.style.display !== 'none') want = hdrStudy.getBoundingClientRect().top <= barStudy.offsetTop;
+    else want = window.scrollY > head.offsetHeight - 8;
+    var shown = bar.classList.contains('show');
     if(want && !shown){ clearTimeout(hideTimer); bar.classList.remove('hiding'); bar.classList.add('show'); }
     else if(!want && shown){
       // going away: play the cascade backwards first (.hiding), THEN the bar lifts off — not an instant removal

@@ -1635,5 +1635,31 @@ allPass &= (function(){
   return ok;
 })();
 
+// === Spectate set queries: results equal a direct roster count (precedence: ¬, then ∩, then ∪ and − left to right) ===
+allPass &= runSpectateScenario('set queries give the same students as a direct roster count, with readable errors', (sp) => {
+  const E = sp.ENGINE, R = Object.values(sp.DATA.roster);
+  const S = (id) => ({ t: 'set', id }), O = (v) => ({ t: 'op', v }), NOT = { t: 'not' }, L = { t: '(' }, P = { t: ')' };
+  const n = (f) => R.filter(f).length;
+  const g = (s, x) => s.academicGroup === x;
+  const cases = [
+    [[S('grp:G2'), O('∪'), S('grp:G3')], n((s) => g(s, 'G2') || g(s, 'G3'))],
+    [[S('div:D1'), O('−'), S('grp:G2')], n((s) => s.division === 'D1' && !g(s, 'G2'))],
+    [[NOT, S('div:D1')], n((s) => s.division !== 'D1')],
+    [[S('br:CSE'), O('∩'), S('kind:HS110')], n((s) => s.branch === 'CSE' && s.hsElective === 'HS110')],
+    [[L, S('grp:G2'), O('∪'), S('grp:G3'), P, O('∩'), S('div:D1')], n((s) => (g(s, 'G2') || g(s, 'G3')) && s.division === 'D1')],
+    [[S('grp:G2'), O('∪'), S('grp:G3'), O('∩'), S('div:D3')], n((s) => g(s, 'G2') || (g(s, 'G3') && s.division === 'D3'))],
+    [[S('div:D1'), O('−'), S('grp:G1'), O('−'), S('grp:G2')], n((s) => s.division === 'D1' && !g(s, 'G1') && !g(s, 'G2'))],
+  ];
+  cases.forEach((c, i) => {
+    const r = E.queryEval(c[0]);
+    assert(!r.error && r.idxs.length === c[1], 'case ' + i + ' "' + E.queryText(c[0]) + '": ' + (r.error || r.idxs.length) + ' vs roster ' + c[1]);
+  });
+  assert(/two sets in a row/.test(E.queryEval([S('grp:G1'), S('grp:G2')]).error), 'adjacent sets explained');
+  assert(/never closed/.test(E.queryEval([L, S('grp:G2')]).error), 'open bracket explained');
+  assert(/ends too early/.test(E.queryEval([S('grp:G2'), O('∪')]).error), 'dangling operator explained');
+  const sel = E.evalSelection([{ op: 'expr', tokens: cases[0][0] }]);
+  assert(sel.length === cases[0][1], 'a query used as the selection gives the same students');
+});
+
 console.log(allPass ? '\nALL SCENARIOS PASSED' : '\nSOME SCENARIOS FAILED');
 process.exit(allPass ? 0 : 1);

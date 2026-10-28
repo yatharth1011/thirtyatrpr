@@ -14,15 +14,75 @@ function mount(el, opts){
   opts = opts || {};
   var universe = opts.universe || null;         // idxs a BR is limited to (their branch), or null
   var uniMask = universe ? E.maskOf(universe) : null;
-  var state = { ops: (opts.initial || []).slice(), mode: 'add', past: [] };
+  var state = { ops: (opts.initial || []).slice(), mode: 'add', past: [], q: [], qSearch: '' };   // q: the set query being built (opts.query)
   var openSections = { div: true, grp: true };
+  // Advanced mode (opts.query): the set-query builder instead of the chip sections; off by default, remembered per device
+  try { state.adv = !!opts.query && localStorage.getItem('thirtyatrpr_picker_adv') === '1'; } catch(e){ state.adv = false; }
 
   function partOf(u){ return uniMask ? E.intersect(u.idxs, uniMask) : u.idxs; }
   function visible(u){ return partOf(u).length > 0; }
   function selection(){ return E.evalSelection(state.ops, universe); }
   function label(idxs){
     if(!idxs.length) return 'nobody yet';
+    if(state.ops.length === 1 && state.ops[0].op === 'expr') return E.queryText(state.ops[0].tokens);   // a query names itself
     return E.describe(idxs).join(' + ');
+  }
+
+  /* ---- set query builder (opts.query): built only with buttons; the search box just finds a set to add ---- */
+  function qLast(){ return state.q[state.q.length - 1]; }
+  function qOpenParens(){ var n = 0; state.q.forEach(function(t){ if(t.t === '(') n++; else if(t.t === ')') n--; }); return n; }
+  function qEndsOperand(){ var l = qLast(); return !!l && (l.t === 'set' || l.t === ')'); }
+  function qInsertSet(id){
+    if(qEndsOperand()) state.q.push({ t: 'op', v: '∪' });   // two sets in a row: join them with ∪ (visible, ⌫ removes it)
+    state.q.push({ t: 'set', id: id });
+  }
+  function qSuggest(){
+    var term = state.qSearch.trim().toLowerCase();
+    var pool = E.UNITS.filter(function(u){ return u.level !== 'atom' && visible(u); });
+    var list = term
+      ? pool.filter(function(u){ return (u.label + ' ' + (u.sub || '') + ' ' + (u.family || '')).toLowerCase().indexOf(term) !== -1; }).slice(0, 24)
+      : pool.filter(function(u){ return u.level === 'all' || u.level === 'division' || u.level === 'group' || u.level === 'branch'; });
+    if(!list.length) return '<span class="muted">no set matches “' + esc(state.qSearch) + '”</span>';
+    return list.map(function(u){ return '<button class="chip" data-qset="' + u.id + '">' + esc(u.label) + ' <span class="n">' + partOf(u).length + '</span></button>'; }).join('');
+  }
+  function qWords(tokens){
+    return tokens.map(function(t){
+      if(t.t === 'set'){ var u = E.UNIT_BY_ID[t.id]; return '<b>' + esc(u ? u.label : '?') + '</b>'; }
+      if(t.t === 'op') return t.v === '∪' ? ' or ' : t.v === '∩' ? ' and also in ' : ' but not in ';
+      if(t.t === 'not') return 'everyone except ';
+      return t.t === '(' ? '(' : ')';
+    }).join('');
+  }
+  function queryHtml(){
+    var r = E.queryEval(state.q, universe), ends = qEndsOperand(), open = qOpenParens();
+    var canOp = ends, canOpen = !ends, canClose = ends && open > 0;
+    var expr = state.q.length ? state.q.map(function(t){
+      if(t.t === 'set'){ var u = E.UNIT_BY_ID[t.id]; return '<span class="pq-tok">' + esc(u ? u.label : '?') + '</span>'; }
+      return '<span class="pq-sym">' + (t.t === 'op' ? t.v : t.t === 'not' ? '¬' : t.t) + '</span>';
+    }).join('') : '<span class="muted">start with a set below, or ¬ / (</span>';
+    var btn = function(attr, label, on, title){ return '<button class="btn btn-sm pq-b" ' + attr + (on ? '' : ' disabled') + ' title="' + title + '">' + label + '</button>'; };
+    // unfinished is not wrong: while a set or a ")" is still to come, prompt the next step instead of flagging an error
+    var pending = r.error && (/ends too early/.test(r.error) || /never closed/.test(r.error));
+    var result = !state.q.length ? '' : pending
+      ? '<div class="pq-result">next: ' + (/never closed/.test(r.error) && ends ? 'close the bracket with )' : 'pick a set below') + '</div>'
+      : r.error
+      ? '<div class="pq-result pq-err">' + esc(r.error) + '</div>'
+      : '<div class="pq-result"><b>' + r.idxs.length + '</b> student' + (r.idxs.length === 1 ? '' : 's') + (r.idxs.length ? ' · ' + esc(E.describe(r.idxs).join(' + ')) : '') + '</div>';
+    var ready = state.q.length && !r.error && open === 0;
+    return '<div class="pq">' +
+      '<div class="pq-hint">Build a group of students: pick a set, then choose how the next one combines with it. Brackets group parts together.</div>' +
+      '<div class="pq-expr">' + expr + '</div>' +
+      (state.q.length ? '<div class="pq-read">Students in ' + qWords(state.q) + '</div>' : '') +
+      '<div class="pq-ops">' +
+        btn('data-qop="∪"', '∪ or', canOp, 'union: in either set') + btn('data-qop="∩"', '∩ and', canOp, 'intersection: in both sets') +
+        btn('data-qop="−"', '− not in', canOp, 'difference: in the first, not the second') + btn('data-qop="not"', '¬ all but', canOpen, 'complement: everyone except the next set') +
+        btn('data-qop="("', '(', canOpen, 'open a bracket') + btn('data-qop=")"', ')', canClose, 'close a bracket') +
+        btn('data-qact="back"', '⌫', state.q.length, 'remove the last piece') + btn('data-qact="clear"', 'Clear', state.q.length, 'start over') +
+      '</div>' + result +
+      '<input class="pq-search" type="search" placeholder="Find a set — G3, HS110, PH101 lab, NSO…" value="' + esc(state.qSearch) + '" autocomplete="off">' +
+      '<div class="chips pq-sugg">' + qSuggest() + '</div>' +
+      '<button class="btn pq-use" data-qact="use"' + (ready ? '' : ' disabled') + '>Use as selection</button>' +
+    '</div>';
   }
   function apply(op, id){
     state.past.push(state.ops.slice());
@@ -75,27 +135,29 @@ function mount(el, opts){
     var everyone = E.UNIT_BY_ID['all'];
     var html =
       '<div class="pk-top">'+
-        '<div class="seg pk-mode">'+
+        (state.adv ? '<span class="pk-mode pq-title">Advanced query</span>' : '<div class="seg pk-mode">'+
           ['add','narrow','remove'].map(function(m){
             var t = m === 'add' ? '＋ Add' : m === 'narrow' ? '∩ Narrow' : '− Remove';
             return '<button data-mode="'+m+'" class="'+(state.mode === m ? 'on' : '')+'" title="'+
               (m === 'add' ? 'tap a chip to include those students' : m === 'narrow' ? 'tap a chip to keep only selected students who are also in it' : 'tap a chip to take those students out')+'">'+t+'</button>';
           }).join('')+
-        '</div>'+
+        '</div>')+
+        (opts.query ? '<button class="btn btn-sm pk-adv'+(state.adv ? ' on' : '')+'" data-act="adv" title="switch between tapping chips and building a set query">'+(state.adv ? 'Simple' : 'Advanced')+'</button>' : '')+
         '<button class="btn btn-sm" data-act="undo"'+(state.past.length ? '' : ' disabled')+'>↶</button>'+
         '<button class="btn btn-sm" data-act="clear"'+(state.ops.length ? '' : ' disabled')+'>Clear</button>'+
       '</div>'+
       '<div class="pk-summary"><span class="pk-count">'+idxs.length+'</span> student'+(idxs.length === 1 ? '' : 's')+
         (idxs.length ? ' · <b>'+esc(label(idxs))+'</b>' : ' — tap any chip below')+'</div>'+
-      (supers.length ? '<div class="pk-nav"><span class="pk-nav-label">widen to</span><div class="chips">'+supers.map(function(u){ return '<button class="chip ghost" data-jump="'+u.id+'">'+esc(u.label)+' <span class="n">'+partOf(u).length+'</span></button>'; }).join('')+'</div></div>' : '')+
-      (subs.length ? '<div class="pk-nav"><span class="pk-nav-label">narrow to</span><div class="chips">'+subs.map(function(u){ return '<button class="chip ghost" data-jump="'+u.id+'">'+esc(u.label)+' <span class="n">'+partOf(u).length+'</span></button>'; }).join('')+'</div></div>' : '')+
+      (!state.adv && supers.length ? '<div class="pk-nav"><span class="pk-nav-label">widen to</span><div class="chips">'+supers.map(function(u){ return '<button class="chip ghost" data-jump="'+u.id+'">'+esc(u.label)+' <span class="n">'+partOf(u).length+'</span></button>'; }).join('')+'</div></div>' : '')+
+      (!state.adv && subs.length ? '<div class="pk-nav"><span class="pk-nav-label">narrow to</span><div class="chips">'+subs.map(function(u){ return '<button class="chip ghost" data-jump="'+u.id+'">'+esc(u.label)+' <span class="n">'+partOf(u).length+'</span></button>'; }).join('')+'</div></div>' : '')+
+      (state.adv ? queryHtml() : (
       (universe ? '' : '<div class="chips" style="margin:10px 0 2px;">'+chip(everyone, selMask)+'</div>')+
       section('div', 'Divisions', '', byLevel('division'), selMask)+
       section('grp', 'Groups', 'shared labels list both branches', byLevel('group'), selMask)+
       section('br', 'Branches', '', byLevel('branch'), selMask)+
       section('bg', 'One branch of a shared group', 'when only part of a group is meant', byLevel('bgroup'), selMask)+
       section('atom', 'Finest ranges', 'the smallest blocks the timetable splits students into', E.ATOMS, selMask)+
-      (kindHtml ? '<details class="pk-sec" data-sec="kind"'+(openSections.kind ? ' open' : '')+'><summary>Kinds <span class="muted">HSS · IKS · NSO · NSS · Life Skills · lab batches</span></summary>'+kindHtml+'</details>' : '');
+      (kindHtml ? '<details class="pk-sec" data-sec="kind"'+(openSections.kind ? ' open' : '')+'><summary>Kinds <span class="muted">HSS · IKS · NSO · NSS · Life Skills · lab batches</span></summary>'+kindHtml+'</details>' : '')));
     el.innerHTML = html;
   }
 
@@ -103,7 +165,20 @@ function mount(el, opts){
     var t = e.target.closest && e.target.closest('button');
     if(!t || !el.contains(t)) return;
     if(t.hasAttribute('data-mode')){ state.mode = t.getAttribute('data-mode'); render(); return; }
+    if(t.hasAttribute('data-qset')){ qInsertSet(t.getAttribute('data-qset')); state.qSearch = ''; render(); return; }
+    if(t.hasAttribute('data-qop')){
+      var v = t.getAttribute('data-qop');
+      if(v === '(' || v === 'not'){ if(qEndsOperand()) state.q.push({ t: 'op', v: '∪' }); state.q.push(v === 'not' ? { t: 'not' } : { t: '(' }); }
+      else if(v === ')') state.q.push({ t: ')' });
+      else state.q.push({ t: 'op', v: v });
+      render(); return;
+    }
+    var qa = t.getAttribute('data-qact');
+    if(qa === 'back'){ state.q.pop(); render(); return; }
+    if(qa === 'clear'){ state.q = []; render(); return; }
+    if(qa === 'use'){ var res = E.queryEval(state.q, universe); if(!res.error){ state.past.push(state.ops.slice()); state.ops = [{ op: 'expr', tokens: state.q.slice() }]; changed(); } return; }
     var act = t.getAttribute('data-act');
+    if(act === 'adv'){ state.adv = !state.adv; try { localStorage.setItem('thirtyatrpr_picker_adv', state.adv ? '1' : '0'); } catch(x){} render(); return; }
     if(act === 'undo'){ if(state.past.length){ state.ops = state.past.pop(); changed(); } return; }
     if(act === 'clear'){ state.past.push(state.ops.slice()); state.ops = []; changed(); return; }
     if(t.hasAttribute('data-jump')){ apply('set', t.getAttribute('data-jump')); return; }
@@ -115,6 +190,12 @@ function mount(el, opts){
     // The very first tap always starts a selection, whatever the mode.
     if(!state.ops.length) mode = 'add';
     apply(mode, id);
+  });
+  // the set search only refreshes its own suggestions (a full re-render would drop the keyboard focus)
+  el.addEventListener('input', function(e){
+    if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
+    state.qSearch = e.target.value;
+    var box = el.querySelector('.pq-sugg'); if(box) box.innerHTML = qSuggest();
   });
   el.addEventListener('toggle', function(e){
     var d = e.target;

@@ -73,6 +73,17 @@ QUOTES = [
     ["The only way to do great work is to love what you do.", "Steve Jobs"],
     ["Genius is one percent inspiration and ninety-nine percent perspiration.", "Thomas Edison"],
     ["There is no royal road to geometry.", "Euclid"],
+    ["The first principle is that you must not fool yourself — and you are the easiest person to fool.", "Richard Feynman"],
+    ["What I cannot create, I do not understand.", "Richard Feynman"],
+    ["Science is a way of thinking much more than it is a body of knowledge.", "Carl Sagan"],
+    ["Nothing in life is to be feared, it is only to be understood.", "Marie Curie"],
+    ["The function of education is to teach one to think intensively and to think critically.", "Martin Luther King Jr."],
+    ["Arise, awake, and stop not till the goal is reached.", "Swami Vivekananda"],
+    ["You have to dream before your dreams can come true.", "A. P. J. Abdul Kalam"],
+    ["Any sufficiently advanced technology is indistinguishable from magic.", "Arthur C. Clarke"],
+    ["Debugging is twice as hard as writing the code in the first place.", "Brian Kernighan"],
+    ["Mathematics is the queen of the sciences.", "Carl Friedrich Gauss"],
+    ["Programs must be written for people to read, and only incidentally for machines to execute.", "Abelson & Sussman"],
 ]
 DASHBOARD_LABEL = '  <div class="bl-quote"></div>\n'   # filled by the splash script with a random quote
 
