@@ -16,3 +16,6 @@ backups/*.tar.gz
 *.DS_Store
 Thumbs.db
 .claude/
+.env*
+*_key*
+*secret*

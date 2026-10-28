@@ -220,7 +220,7 @@ function mount(el, opts){
     }
   }
 
-  var OP_WORDS = { 'in': 1, 'and': 1, 'or': 1, 'not': 1, 'minus': 1, 'plus': 1, 'except': 1, 'also': 1 };
+  var OP_WORDS = { 'in': 1, 'and': 1, 'or': 1, 'not': 1, 'minus': 1, 'plus': 1, 'except': 1, 'also': 1, 'of': 1, 'from': 1, 'students': 1 };
 
   function qBestMatch(term){
     term = (term || '').trim().toLowerCase();
