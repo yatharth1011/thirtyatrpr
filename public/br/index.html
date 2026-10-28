@@ -2217,16 +2217,6 @@ function mount(el, opts){
     // Common synonyms
     if(term === 'mnc') return E.UNIT_BY_ID['br:MCB'];
     if(term === 'aide') return E.UNIT_BY_ID['br:AIDE'];
-    // Prefix match on label
-    var prefix = pool.find(function(u){ return u.label.toLowerCase().indexOf(term) === 0; });
-    if(prefix) return prefix;
-    // Substring match on label
-    var labelSub = pool.find(function(u){ return u.label.toLowerCase().indexOf(term) !== -1; });
-    if(labelSub) return labelSub;
-    // Substring match on sub/family only if term length >= 3
-    if(term.length >= 3){
-      return pool.find(function(u){ return (u.sub || '').toLowerCase().indexOf(term) !== -1 || (u.family || '').toLowerCase().indexOf(term) !== -1; }) || null;
-    }
     return null;
   }
 
@@ -2503,11 +2493,9 @@ function mount(el, opts){
     if(!state.ops.length) mode = 'add';
     apply(mode, id);
   });
-  var commitTimer = null;
   // the set search only refreshes its own suggestions (a full re-render would drop the keyboard focus)
   el.addEventListener('input', function(e){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
-    clearTimeout(commitTimer);
     var val = e.target.value;
     var hasOp = /[+&*!(\)\-∪∩−¬]/.test(val) || /\b(in|and|or|not|minus|plus|except|all|everyone)\b/i.test(val);
     if(hasOp){
@@ -2538,30 +2526,10 @@ function mount(el, opts){
     }
     state.qSearch = val;
     e.target.style.width = val ? (val.length + 0.5) + 'ch' : '2px';
-
-    // Auto-commit timer on brief pause when typing a valid set name
-    var trimmedVal = val.trim();
-    if(trimmedVal){
-      var exactMatch = qBestMatch(trimmedVal);
-      if(exactMatch){
-        commitTimer = setTimeout(function(){
-          if(e.target && e.target.value === val){
-            qInsertSet(exactMatch.id);
-            state.qSearch = '';
-            e.target.value = '';
-            e.target.style.width = '2px';
-            qChanged();
-            focusInput();
-          }
-        }, 350);
-      }
-    }
-
     updateQueryDisplay();
   });
   el.addEventListener('focusout', function(e){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
-    clearTimeout(commitTimer);
     var val = (e.target.value || state.qSearch || '').trim();
     if(val){
       var match = qBestMatch(val);
@@ -2594,7 +2562,6 @@ function mount(el, opts){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
     if(e.key === 'Enter'){
       e.preventDefault();
-      clearTimeout(commitTimer);
       var val = (e.target.value || state.qSearch).trim();
       if(val){
         var parsed = parseTextToTokens(val);
