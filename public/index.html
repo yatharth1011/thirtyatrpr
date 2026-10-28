@@ -1848,6 +1848,19 @@ window.__overlayFast = (function(){
     background:rgba(255,255,255,0.04); border:none; border-radius:99px; padding:7px 13px; cursor:pointer;
     box-shadow:0 1px 3px rgba(0,0,0,.32), 0 2px 6px -2px rgba(0,0,0,.28); white-space:nowrap;
   }
+  /* every time the bar drops in, the logo plays the loader's springy cascade (same keyframes: bl-pop / bl-out), and the shortcuts rise in behind it */
+  @media (prefers-reduced-motion: no-preference){
+    .mini-bar.show .ml-tile{ transform-box:fill-box; transform-origin:center; animation:bl-pop .5s var(--spring) .05s both; }
+    .mini-bar.show .ml-at{ --from:-22px; animation:bl-out .7s var(--spring-soft) .12s both; }
+    .mini-bar.show .ml-r1{ --from:-40px; animation:bl-out .6s var(--spring-soft) .24s both; }
+    .mini-bar.show .ml-p{  --from:-52px; animation:bl-out .6s var(--spring-soft) .32s both; }
+    .mini-bar.show .ml-r2{ --from:-64px; animation:bl-out .6s var(--spring-soft) .40s both; }
+    .mini-bar.show .mini-icon, .mini-bar.show .mini-study{ animation:rev-rise .7s var(--spring) both, rev-fade .3s ease both; }
+    .mini-bar.show .mini-icon:nth-child(1){ animation-delay:.14s; }
+    .mini-bar.show .mini-icon:nth-child(2){ animation-delay:.2s; }
+    .mini-bar.show .mini-icon:nth-child(3){ animation-delay:.26s; }
+    .mini-bar.show .mini-study{ animation-delay:.32s; }
+  }
   @media (max-width: 959px){ .mini-bar{ display:flex; } }
   @media (min-width: 960px){ .mini-bar{ display:none !important; } }
   @media (min-width: 960px){
@@ -2314,12 +2327,15 @@ var ROLES = {
           <clipPath id="miniTileClip"><rect width="34" height="34" rx="9"/></clipPath>
         </defs>
         <!-- "30@rpr" is one monospace line (19px, 11.4px per character, one baseline): the 30 is centred in the tile,
-             the @ lands on its right edge — gradient outside the tile, dark inside — and rpr continues after it -->
-        <text x="28.4" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" fill="url(#miniKz)">@</text>
-        <rect width="34" height="34" rx="9" fill="url(#miniKz)"/>
-        <g clip-path="url(#miniTileClip)"><text x="28.4" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--bg)" opacity=".88">@</text></g>
-        <text x="5.6" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--bg)" opacity=".88">30</text>
-        <text x="39.8" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--ink)">rpr</text>
+             the @ lands on its right edge — gradient outside the tile, dark inside — and rpr continues after it.
+             Each part has a class so the bar can replay the loader's springy cascade every time it drops in (.mini-bar.show) -->
+        <text class="ml-at" x="28.4" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" fill="url(#miniKz)">@</text>
+        <text class="ml-r1" x="39.8" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--ink)">r</text>
+        <text class="ml-p" x="51.2" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--ink)">p</text>
+        <text class="ml-r2" x="62.6" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--ink)">r</text>
+        <g class="ml-tile"><rect width="34" height="34" rx="9" fill="url(#miniKz)"/>
+        <text x="5.6" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--bg)" opacity=".88">30</text></g>
+        <g clip-path="url(#miniTileClip)"><text class="ml-at" x="28.4" y="23.8" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0" style="fill:var(--bg)" opacity=".88">@</text></g>
       </svg>
     </a>
     <div class="mini-icons">
