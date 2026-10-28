@@ -30,28 +30,51 @@ splash_html = open(BASE + '/build/splash.html', 'r', encoding='utf-8').read()
 def with_splash(html, label_html=''):
     if '<!--__SPLASH__-->' not in html:
         raise SystemExit('splice.py: a page is missing the <!--__SPLASH__--> marker — aborting')
-    return html.replace('<!--__SPLASH__-->', splash_html.replace('__SPLASH_LABEL_HTML__', label_html).replace('__SPLASH_WIDGETS_JSON__', _json.dumps(SPLASH_WIDGETS, ensure_ascii=False)))
+    return html.replace('<!--__SPLASH__-->', splash_html.replace('__SPLASH_LABEL_HTML__', label_html).replace('__SPLASH_WIDGETS_JSON__', _json.dumps(SPLASH_WIDGETS, ensure_ascii=False)).replace('__SPLASH_QUOTES_JSON__', _json.dumps(QUOTES, ensure_ascii=False)))
 
 
 import json as _json
 _data = _json.load(open(BASE + '/build/thirty_data.json', 'r', encoding='utf-8'))
-_n_students = len(_data['roster'])
-_groups = sorted({s['academicGroup'] for s in _data['roster'].values()}, key=lambda g: int(g[1:]))
-_n_rooms = len(_data.get('venueLegend', {}))
-_branches = sorted({s['branch'] for s in _data['roster'].values()})
-_n_reps = len({e for r in _data.get('batchReps', []) for e in r['reps']})
-_short = lambda b: 'MnC' if b == 'MCB' else b
+# The loader numbers come from the engine itself (build/loader_counts.js), not from a second way of counting the raw data
+import subprocess as _sp
+_counts = _json.loads(_sp.run(['node', BASE + '/build/loader_counts.js'], check=True, capture_output=True, text=True).stdout)
+_n_students = _counts['students']
+_groups = ['G%d' % (i + 1) for i in range(_counts['groups'])]   # one dot column per group
+_n_rooms = _counts['rooms']
+_branches = _counts['branches']                                   # display names, already MCB -> MnC
+_n_reps = _counts['reps']
+_short = lambda b: b
 
 # Spectate: one dot per (group column x 4 rows), lighting up column by column; counters tick up to the real totals
 SPECTATE_WIDGET = ('  <!--bl-load--><div class="bl-load"><div class="bl-dots">'
     + ''.join('<i style="--c:%d;--r:%d"></i>' % (i % len(_groups), i // len(_groups)) for i in range(len(_groups) * 4))
-    + '</div><div class="bl-stats"><b style="--to:%d"></b> students &middot; <b style="--to:%d"></b> groups &middot; <b style="--to:%d"></b> rooms</div></div><!--/bl-load-->\n'
+    + '</div><div class="bl-stats"><b style="--to:%d"></b> students &middot; <b style="--to:%d;--d:.4s"></b> groups &middot; <b style="--to:%d;--d:.6s"></b> rooms</div></div><!--/bl-load-->\n'
     % (_n_students, len(_groups), _n_rooms))
 # BR Tools: the branch codes appear one by one, then a pulsing line (this loader really is waiting for the Google sign-in)
 BR_WIDGET = ('  <!--bl-load--><div class="bl-load"><div class="bl-chips">'
     + ''.join('<i style="--i:%d">%s</i>' % (i, _short(b)) for i, b in enumerate(_branches))
     + '</div><div class="bl-stats bl-status"><u></u><span>restoring sign-in &middot; <b style="--to:%d"></b> branch reps</span></div></div><!--/bl-load-->\n' % _n_reps)
 SPLASH_WIDGETS = {'/spectate': SPECTATE_WIDGET.strip('\n'), '/br': BR_WIDGET.strip('\n')}
+
+# Quotes for the dashboard loader. Only ones with well-documented attribution (several popular "quotes" are misattributed —
+# e.g. Durant's line is often credited to Aristotle — so those are credited correctly or left out).
+QUOTES = [
+    ["The important thing is not to stop questioning.", "Albert Einstein"],
+    ["Imagination is more important than knowledge.", "Albert Einstein"],
+    ["I have no special talents. I am only passionately curious.", "Albert Einstein"],
+    ["If I have seen further, it is by standing on the shoulders of giants.", "Isaac Newton"],
+    ["Premature optimization is the root of all evil.", "Donald Knuth"],
+    ["Talk is cheap. Show me the code.", "Linus Torvalds"],
+    ["Simplicity is prerequisite for reliability.", "Edsger W. Dijkstra"],
+    ["The best way to predict the future is to invent it.", "Alan Kay"],
+    ["A journey of a thousand miles begins with a single step.", "Lao Tzu"],
+    ["Fall seven times, stand up eight.", "Japanese proverb"],
+    ["We are what we repeatedly do. Excellence, then, is not an act, but a habit.", "Will Durant"],
+    ["The only way to do great work is to love what you do.", "Steve Jobs"],
+    ["Genius is one percent inspiration and ninety-nine percent perspiration.", "Thomas Edison"],
+    ["There is no royal road to geometry.", "Euclid"],
+]
+DASHBOARD_LABEL = '  <div class="bl-quote"></div>\n'   # filled by the splash script with a random quote
 
 SPECTATE_LABEL = '  <div class="bl-sub"><span><b>&#128301;</b> Spectate</span></div>\n' + SPECTATE_WIDGET
 BR_LABEL = '  <div class="bl-sub"><span><b>&#128736;&#65039;</b> BR Tools</span></div>\n' + BR_WIDGET
@@ -64,7 +87,7 @@ def inject_shared(html, label):
         html = html.replace(ph, val)
     return html
 
-out = with_splash(template).replace('/*__THIRTY_DATA__*/', data_js)
+out = with_splash(template, DASHBOARD_LABEL).replace('/*__THIRTY_DATA__*/', data_js)
 out = out.replace('/*__APP_JS__*/', app_js)
 out = out.replace('/*__LIVE_OVERLAY_JS__*/', live_overlay_js)
 out = out.replace('/*__KAIZEN_BRIDGE_JS__*/', kaizen_bridge_js)

@@ -447,7 +447,7 @@
     animation:bl-dot .42s ease-out both; animation-delay:calc(.7s + var(--c) * 42ms + var(--r) * 9ms); }
   #bootLoader .bl-dots i:nth-child(3n){ background:var(--kz-1,#b392f0); } #bootLoader .bl-dots i:nth-child(3n+1){ background:var(--kz-3,#d1d5da); }
   #bootLoader .bl-stats{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--ink-faint); letter-spacing:.04em; white-space:nowrap; }
-  #bootLoader .bl-stats b{ --bl-n:var(--to); counter-reset:blc var(--bl-n); font-weight:700; color:var(--ink-soft); animation:bl-n .9s cubic-bezier(.2,.7,.2,1) .7s both; }
+  #bootLoader .bl-stats b{ --bl-n:var(--to); counter-reset:blc var(--bl-n); font-weight:700; color:var(--ink-soft); animation:bl-n var(--d,.9s) cubic-bezier(.2,.7,.2,1) .7s both; }   /* small numbers settle sooner than big ones (12 groups lands by ~1.0s) */
   #bootLoader .bl-stats b::before{ content:counter(blc); }
   #bootLoader .bl-chips{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px; max-width:230px; }
   #bootLoader .bl-chips i{ font-style:normal; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700; letter-spacing:.06em; padding:4px 8px; border-radius:99px;
@@ -456,10 +456,15 @@
   #bootLoader .bl-status{ display:flex; align-items:center; gap:8px; }
   #bootLoader .bl-status u{ width:7px; height:7px; border-radius:50%; background:var(--kz-2,#79b8ff); text-decoration:none; animation:bl-pulse 1.1s ease-in-out infinite; }
   #bootLoader.leaving .bl-load{ animation-delay:.65s; }
+  /* a random quote under the dashboard's mark (resting state = visible, so the handoff frame shows it) */
+  #bootLoader .bl-quote{ max-width:min(78vw, 300px); text-align:center; font-family:'JetBrains Mono',monospace; font-size:12.5px; line-height:1.6; color:var(--ink-soft);
+    animation:bl-sub .7s var(--spring-soft) .75s both; }
+  #bootLoader .bl-quote q{ display:block; quotes:'\201C' '\201D'; }
+  #bootLoader .bl-quote small{ display:block; margin-top:6px; font-size:10.5px; letter-spacing:.08em; color:var(--ink-faint); }
   /* ---- entrances: as the splash leaves (body.revealed), each block rises into place one after another instead of
      appearing all at once. Only transform/opacity; skipped entirely for reduced motion. ---- */
   @media (prefers-reduced-motion: no-preference){
-    @keyframes rev-rise{ from{ transform:translateY(18px) scale(.97); } to{ transform:none; } }   /* movement springs; opacity has its own plain fade (a spring would flicker it) */
+    @keyframes rev-rise{ from{ transform:translateY(18px); } to{ transform:none; } }   /* movement springs; opacity has its own plain fade (a spring would flicker it) */
     @keyframes rev-fade{ from{ opacity:0; } to{ opacity:1; } }
     body.revealed #loginScreen > *,
     body.revealed #app.show main > *, body.revealed #app.show .panel-grid > *,
@@ -512,7 +517,9 @@
 // Installed app: Chrome/Android has already shown its own launch screen (the app icon centred on the manifest's
 // background colour), so start from that exact picture — the finished 30 tile, centred, no pop-in — and let @rpr come out of it.
 try { if((window.matchMedia && (matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: window-controls-overlay)').matches)) || window.navigator.standalone === true) document.getElementById('bootLoader').classList.add('pwa'); } catch(e){}
-var __bootT0 = Date.now(), __bootMin = document.querySelector('#bootLoader .bl-load') ? 1750 : 1300;   // pages with a data-loading widget let it finish
+var __bootT0 = Date.now(), __bootMin = document.querySelector('#bootLoader .bl-load, #bootLoader .bl-quote') ? 1750 : 1300;   // pages with a data-loading widget or a quote let it finish
+var __QUOTES = [["The important thing is not to stop questioning.", "Albert Einstein"], ["Imagination is more important than knowledge.", "Albert Einstein"], ["I have no special talents. I am only passionately curious.", "Albert Einstein"], ["If I have seen further, it is by standing on the shoulders of giants.", "Isaac Newton"], ["Premature optimization is the root of all evil.", "Donald Knuth"], ["Talk is cheap. Show me the code.", "Linus Torvalds"], ["Simplicity is prerequisite for reliability.", "Edsger W. Dijkstra"], ["The best way to predict the future is to invent it.", "Alan Kay"], ["A journey of a thousand miles begins with a single step.", "Lao Tzu"], ["Fall seven times, stand up eight.", "Japanese proverb"], ["We are what we repeatedly do. Excellence, then, is not an act, but a habit.", "Will Durant"], ["The only way to do great work is to love what you do.", "Steve Jobs"], ["Genius is one percent inspiration and ninety-nine percent perspiration.", "Thomas Edison"], ["There is no royal road to geometry.", "Euclid"]];
+function __quoteHTML(i){ var q = __QUOTES[i] || __QUOTES[0]; return '<div class="bl-quote"><q>' + q[0] + '</q><small>\u2014 ' + q[1] + '</small></div>'; }
 // Arrived by tapping Spectate / BR Tools on another page (see the click handler below): that page already played the
 // animation, so open on its finished frame and just take over from it.
 var __handoff = false;
@@ -531,8 +538,11 @@ try { if(sessionStorage.getItem('thirtyatrpr_splash_seen')) __bootMin = 0; sessi
 if(__handoff) __bootMin = 250;   // the animation already ran on the previous page; just a beat so the swap is not a flicker
 // kept to rebuild the overlay for the leaving animation — WITHOUT the state classes (handoff / pwa / skip) this page's own splash may
 // carry: those freeze or hide the coming-out animation, and a copy taken after arriving by a handoff made every later tap show a still logo
-var __splashHTML = document.getElementById('bootLoader').outerHTML.replace(/^<div id="bootLoader"[^>]*>/, '<div id="bootLoader" aria-hidden="true">').replace(/<!--bl-load-->[\s\S]*?<!--\/bl-load-->/, '');
-var __WIDGETS = {"/spectate": "  <!--bl-load--><div class=\"bl-load\"><div class=\"bl-dots\"><i style=\"--c:0;--r:0\"></i><i style=\"--c:1;--r:0\"></i><i style=\"--c:2;--r:0\"></i><i style=\"--c:3;--r:0\"></i><i style=\"--c:4;--r:0\"></i><i style=\"--c:5;--r:0\"></i><i style=\"--c:6;--r:0\"></i><i style=\"--c:7;--r:0\"></i><i style=\"--c:8;--r:0\"></i><i style=\"--c:9;--r:0\"></i><i style=\"--c:10;--r:0\"></i><i style=\"--c:11;--r:0\"></i><i style=\"--c:0;--r:1\"></i><i style=\"--c:1;--r:1\"></i><i style=\"--c:2;--r:1\"></i><i style=\"--c:3;--r:1\"></i><i style=\"--c:4;--r:1\"></i><i style=\"--c:5;--r:1\"></i><i style=\"--c:6;--r:1\"></i><i style=\"--c:7;--r:1\"></i><i style=\"--c:8;--r:1\"></i><i style=\"--c:9;--r:1\"></i><i style=\"--c:10;--r:1\"></i><i style=\"--c:11;--r:1\"></i><i style=\"--c:0;--r:2\"></i><i style=\"--c:1;--r:2\"></i><i style=\"--c:2;--r:2\"></i><i style=\"--c:3;--r:2\"></i><i style=\"--c:4;--r:2\"></i><i style=\"--c:5;--r:2\"></i><i style=\"--c:6;--r:2\"></i><i style=\"--c:7;--r:2\"></i><i style=\"--c:8;--r:2\"></i><i style=\"--c:9;--r:2\"></i><i style=\"--c:10;--r:2\"></i><i style=\"--c:11;--r:2\"></i><i style=\"--c:0;--r:3\"></i><i style=\"--c:1;--r:3\"></i><i style=\"--c:2;--r:3\"></i><i style=\"--c:3;--r:3\"></i><i style=\"--c:4;--r:3\"></i><i style=\"--c:5;--r:3\"></i><i style=\"--c:6;--r:3\"></i><i style=\"--c:7;--r:3\"></i><i style=\"--c:8;--r:3\"></i><i style=\"--c:9;--r:3\"></i><i style=\"--c:10;--r:3\"></i><i style=\"--c:11;--r:3\"></i></div><div class=\"bl-stats\"><b style=\"--to:698\"></b> students &middot; <b style=\"--to:12\"></b> groups &middot; <b style=\"--to:42\"></b> rooms</div></div><!--/bl-load-->", "/br": "  <!--bl-load--><div class=\"bl-load\"><div class=\"bl-chips\"><i style=\"--i:0\">AIDE</i><i style=\"--i:1\">CE</i><i style=\"--i:2\">CH</i><i style=\"--i:3\">CSE</i><i style=\"--i:4\">DA</i><i style=\"--i:5\">EE</i><i style=\"--i:6\">EP</i><i style=\"--i:7\">ES</i><i style=\"--i:8\">ICDT</i><i style=\"--i:9\">MnC</i><i style=\"--i:10\">ME</i><i style=\"--i:11\">MME</i></div><div class=\"bl-stats bl-status\"><u></u><span>restoring sign-in &middot; <b style=\"--to:24\"></b> branch reps</span></div></div><!--/bl-load-->"};   // the Spectate / BR Tools data-loading widgets, built with the page (real counts)
+var __splashHTML = document.getElementById('bootLoader').outerHTML.replace(/^<div id="bootLoader"[^>]*>/, '<div id="bootLoader" aria-hidden="true">').replace(/<!--bl-load-->[\s\S]*?<!--\/bl-load-->/, '').replace(/<div class="bl-quote">[\s\S]*?<\/div>/, '');
+var __WIDGETS = {"/spectate": "  <!--bl-load--><div class=\"bl-load\"><div class=\"bl-dots\"><i style=\"--c:0;--r:0\"></i><i style=\"--c:1;--r:0\"></i><i style=\"--c:2;--r:0\"></i><i style=\"--c:3;--r:0\"></i><i style=\"--c:4;--r:0\"></i><i style=\"--c:5;--r:0\"></i><i style=\"--c:6;--r:0\"></i><i style=\"--c:7;--r:0\"></i><i style=\"--c:8;--r:0\"></i><i style=\"--c:9;--r:0\"></i><i style=\"--c:10;--r:0\"></i><i style=\"--c:11;--r:0\"></i><i style=\"--c:0;--r:1\"></i><i style=\"--c:1;--r:1\"></i><i style=\"--c:2;--r:1\"></i><i style=\"--c:3;--r:1\"></i><i style=\"--c:4;--r:1\"></i><i style=\"--c:5;--r:1\"></i><i style=\"--c:6;--r:1\"></i><i style=\"--c:7;--r:1\"></i><i style=\"--c:8;--r:1\"></i><i style=\"--c:9;--r:1\"></i><i style=\"--c:10;--r:1\"></i><i style=\"--c:11;--r:1\"></i><i style=\"--c:0;--r:2\"></i><i style=\"--c:1;--r:2\"></i><i style=\"--c:2;--r:2\"></i><i style=\"--c:3;--r:2\"></i><i style=\"--c:4;--r:2\"></i><i style=\"--c:5;--r:2\"></i><i style=\"--c:6;--r:2\"></i><i style=\"--c:7;--r:2\"></i><i style=\"--c:8;--r:2\"></i><i style=\"--c:9;--r:2\"></i><i style=\"--c:10;--r:2\"></i><i style=\"--c:11;--r:2\"></i><i style=\"--c:0;--r:3\"></i><i style=\"--c:1;--r:3\"></i><i style=\"--c:2;--r:3\"></i><i style=\"--c:3;--r:3\"></i><i style=\"--c:4;--r:3\"></i><i style=\"--c:5;--r:3\"></i><i style=\"--c:6;--r:3\"></i><i style=\"--c:7;--r:3\"></i><i style=\"--c:8;--r:3\"></i><i style=\"--c:9;--r:3\"></i><i style=\"--c:10;--r:3\"></i><i style=\"--c:11;--r:3\"></i></div><div class=\"bl-stats\"><b style=\"--to:698\"></b> students &middot; <b style=\"--to:12;--d:.4s\"></b> groups &middot; <b style=\"--to:37;--d:.6s\"></b> rooms</div></div><!--/bl-load-->", "/br": "  <!--bl-load--><div class=\"bl-load\"><div class=\"bl-chips\"><i style=\"--i:0\">AIDE</i><i style=\"--i:1\">CE</i><i style=\"--i:2\">CH</i><i style=\"--i:3\">CSE</i><i style=\"--i:4\">DA</i><i style=\"--i:5\">EE</i><i style=\"--i:6\">EP</i><i style=\"--i:7\">ES</i><i style=\"--i:8\">ICDT</i><i style=\"--i:9\">MnC</i><i style=\"--i:10\">ME</i><i style=\"--i:11\">MME</i></div><div class=\"bl-stats bl-status\"><u></u><span>restoring sign-in &middot; <b style=\"--to:24\"></b> branch reps</span></div></div><!--/bl-load-->"};
+var __qIndex = __h && __h.q != null && __handoff ? __h.q : Math.floor(Math.random() * __QUOTES.length);   // a handoff keeps the quote the previous page showed
+var __qEl = document.querySelector('#bootLoader .bl-quote');
+if(__qEl){ __qEl.outerHTML = __quoteHTML(__qIndex); }   // the Spectate / BR Tools data-loading widgets, built with the page (real counts)
 window.__bootDone = function(){
   document.body.classList.add('booted');
   var el = document.getElementById('bootLoader');
@@ -567,13 +577,14 @@ document.addEventListener('click', function(e){
     if(document.getElementById('bootLoader')) return;                                           // still booting: just navigate
     if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;     // no animation, no wait
     e.preventDefault(); going = true;
+    var leaveQ = Math.floor(Math.random() * __QUOTES.length);   // Home: this quote also appears on the dashboard once it opens
     var wrap = document.createElement('div');
-    wrap.innerHTML = __splashHTML.replace(/<div class="bl-sub">[\s\S]*?<\/div>/, '').replace('</svg>', '</svg>' + (lab[1] ? '\n  <div class="bl-sub"><span><b>' + lab[0] + '</b> ' + lab[1] + '</span></div>' : '') + (__WIDGETS[to] || ''));
+    wrap.innerHTML = __splashHTML.replace(/<div class="bl-sub">[\s\S]*?<\/div>/, '').replace('</svg>', '</svg>' + (lab[1] ? '\n  <div class="bl-sub"><span><b>' + lab[0] + '</b> ' + lab[1] + '</span></div>' : '') + (__WIDGETS[to] || '') + (to === '' ? __quoteHTML(leaveQ) : ''));
     var ov = wrap.firstElementChild; ov.classList.add('leaving'); document.body.appendChild(ov);
     setTimeout(function(){
-      try { sessionStorage.setItem('thirtyatrpr_splash_handoff', JSON.stringify({ to: to, t: Date.now() })); } catch(x){}
+      try { sessionStorage.setItem('thirtyatrpr_splash_handoff', JSON.stringify({ to: to, t: Date.now(), q: leaveQ })); } catch(x){}
       location.href = u.href;
-    }, __WIDGETS[to] ? 1750 : 1450);   // the word has landed by ~1.15 s and the label by ~1.3 s; the data-loading widget finishes by ~1.65 s
+    }, (__WIDGETS[to] || to === '') ? 1750 : 1450);   // the word has landed by ~1.15 s and the label by ~1.3 s; the data-loading widget finishes by ~1.65 s
   }, true);
   // coming back with the browser's Back button can restore this page frozen mid-animation: clear the overlay
   window.addEventListener('pageshow', function(e){ if(e.persisted){ going = false; var o = document.querySelector('#bootLoader.leaving'); if(o && o.parentNode) o.parentNode.removeChild(o); } });

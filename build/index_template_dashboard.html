@@ -1036,7 +1036,7 @@ window.__overlayFast = (function(){
   /* extras popping in (staggered, overshoot, kaizen flash) and slipping out */
   /* colour comes from the text glowing in kaizen hues — no box, no blur */
   .extra-in{ animation:extra-in .42s cubic-bezier(.34,1.56,.64,1) both; }
-  @keyframes extra-in{ 0%{ opacity:0; transform:translateX(-14px) scale(.94); } 100%{ opacity:1; transform:none; } }
+  @keyframes extra-in{ 0%{ opacity:0; transform:translateY(-12px); } 100%{ opacity:1; transform:none; } }   /* vertical only: the spring never slides or squeezes sideways */
   .extra-in .check-label, .extra-in .check-time, .extra-in.material-links .material-link{ animation:extra-glow .8s ease-out both; animation-delay:inherit; }
   @keyframes extra-glow{
     0%{ text-shadow:0 0 12px var(--kz-1), 0 0 4px var(--kz-2); }
@@ -1044,7 +1044,7 @@ window.__overlayFast = (function(){
     100%{ text-shadow:none; }
   }
   .extra-out{ animation:extra-out .22s ease-in both; }       /* the rows below then glide up (extrasFlip in app3.js) */
-  @keyframes extra-out{ to{ opacity:0; transform:translateX(18px) scale(.96); } }
+  @keyframes extra-out{ to{ opacity:0; transform:translateY(-8px); } }
   .extra-out .check-label, .extra-out .check-time{ animation:extra-flare .22s ease-in both; animation-delay:inherit; }
   @keyframes extra-flare{ to{ text-shadow:0 0 12px var(--kz-2), 0 0 4px var(--kz-3); } }
   @media (prefers-reduced-motion: reduce){ .extra-in, .extra-out, .extra-in *, .extra-out *, .kz-switch.flip i{ animation:none; } }
@@ -1981,7 +1981,7 @@ window.__overlayFast = (function(){
   html.theme-fading *:not(.theme-knob), html.theme-fading *::before, html.theme-fading *::after{
     transition:background-color .4s, color .4s, border-color .4s, box-shadow .4s, fill .4s !important; }
   .kz-appear{ animation:kz-appear .35s cubic-bezier(.2,.8,.3,1) both; }
-  @keyframes kz-appear{ from{ opacity:0; transform:translateY(8px) scale(.98); } to{ opacity:1; transform:none; } }
+  @keyframes kz-appear{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:none; } }
   @media (prefers-reduced-motion: reduce){ .set-fold-body, .set-fold-body.closing, .kz-appear{ animation:none; } }
   .set-more{ display:grid; grid-template-rows:0fr; opacity:0; transition:grid-template-rows .32s cubic-bezier(.2,.8,.3,1), opacity .25s; }
   .set-more > div{ overflow:hidden; }

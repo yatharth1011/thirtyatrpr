@@ -1523,20 +1523,20 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
   console.log(okLogin ? 'PASS' : 'FAIL', 'login screen stays hidden until the app is ready (never stands in for a loader)');
   allPass &= okLogin;
   // behaviour of the splash's startup rules, run for real
-  const splashJs = splash.replace('__SPLASH_WIDGETS_JSON__', JSON.stringify({ '/spectate': '<!--bl-load-->W<!--/bl-load-->', '/br': '<!--bl-load-->W<!--/bl-load-->' }));
+  const splashJs = splash.replace('__SPLASH_QUOTES_JSON__', JSON.stringify([['Q one.', 'A. One'], ['Q two.', 'B. Two']])).replace('__SPLASH_WIDGETS_JSON__', JSON.stringify({ '/spectate': '<!--bl-load-->W<!--/bl-load-->', '/br': '<!--bl-load-->W<!--/bl-load-->' }));
   const m = splashJs.match(/var __bootT0[\s\S]*?(?=window\.__bootDone = )/);
   const run = (referrer, pathname, store) => {
     const added = [];
-    const sandbox = { Date, URL, JSON, location: { origin: 'https://thirtyatrpr.web.app', pathname },
+    const sandbox = { Date, URL, JSON, Math, location: { origin: 'https://thirtyatrpr.web.app', pathname },
       sessionStorage: { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = v; }, removeItem: (k) => { delete store[k]; } },
       window: { matchMedia: () => ({ matches: false }), navigator: {} }, navigator: {},
-      document: { referrer, querySelector: () => null, getElementById: () => ({ classList: { add: (c) => added.push(c) }, outerHTML: '<div id="bootLoader"></div>' }) } };
+      document: { referrer, querySelector: (q) => (/bl-quote/.test(q) ? { outerHTML: '' } : null), getElementById: () => ({ classList: { add: (c) => added.push(c) }, outerHTML: '<div id="bootLoader"></div>' }) } };
     sandbox.matchMedia = sandbox.window.matchMedia;
-    vm.runInNewContext(m[0] + '\n;__out = { min: __bootMin, handoff: __handoff };', sandbox);
-    return { added, min: sandbox.__out.min, handoff: sandbox.__out.handoff, store };
+    vm.runInNewContext(m[0] + '\n;__out = { min: __bootMin, handoff: __handoff, q: typeof __qIndex === "undefined" ? null : __qIndex };', sandbox);
+    return { added, min: sandbox.__out.min, handoff: sandbox.__out.handoff, q: sandbox.__out.q, store };
   };
   const inSite = run('https://thirtyatrpr.web.app/spectate', '/', {}), fresh = run('', '/', {}), other = run('https://www.google.com/', '/', {});
-  const okRef = inSite.added.indexOf('skip') !== -1 && inSite.min === 0 && fresh.added.indexOf('skip') === -1 && fresh.min === 1300 && other.added.indexOf('skip') === -1;
+  const okRef = inSite.added.indexOf('skip') !== -1 && inSite.min === 0 && fresh.added.indexOf('skip') === -1 && fresh.min === 1750 && other.added.indexOf('skip') === -1;
   console.log(okRef ? 'PASS' : 'FAIL', 'splash is skipped when arriving from another page of the site (Home link), but plays for a fresh visit / external referrer: ' + JSON.stringify({ inSite: inSite.added, fresh: fresh.added, other: other.added }));
   allPass &= okRef;
   // handoff: arriving by tapping Spectate/BR Tools -> open on the finished frame, no skip, short hold, flag consumed
@@ -1547,8 +1547,8 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     && wrongPage.handoff === false && stale.handoff === false;
   console.log(okHand ? 'PASS' : 'FAIL', 'handoff: destination opens on the finished frame (short hold, flag consumed); a handoff for another page or an old one is ignored: ' + JSON.stringify({ hand: hand.added, wrongPage: wrongPage.added, stale: stale.added }));
   allPass &= okHand;
-  const handHome = run('https://thirtyatrpr.web.app/spectate', '/', { thirtyatrpr_splash_handoff: JSON.stringify({ to: '', t: Date.now() }) });
-  const okHandHome = handHome.handoff === true && handHome.added.indexOf('handoff') !== -1 && handHome.added.indexOf('skip') === -1;
+  const handHome = run('https://thirtyatrpr.web.app/spectate', '/', { thirtyatrpr_splash_handoff: JSON.stringify({ to: '', t: Date.now(), q: 1 }) });
+  const okHandHome = handHome.handoff === true && handHome.added.indexOf('handoff') !== -1 && handHome.added.indexOf('skip') === -1 && handHome.q === 1;
   console.log(okHandHome ? 'PASS' : 'FAIL', 'handoff to the dashboard (Home): opens on the finished frame instead of being skipped: ' + JSON.stringify(handHome.added));
   allPass &= okHandHome;
   // the leaving handler: Spectate/BR links are intercepted, the main page and modified clicks are not
@@ -1557,7 +1557,7 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     let handler = null, prevented = false, nav = null; const timers = []; const store = {};
     let bootPhase = true;
     const appended = [];
-    const sandbox = { Date, URL, JSON, location: { origin: 'https://thirtyatrpr.web.app', pathname: opts.path || '/', set href(v){ nav = v; }, get href(){ return 'https://thirtyatrpr.web.app' + (opts.path || '/'); } },
+    const sandbox = { Date, URL, JSON, Math, location: { origin: 'https://thirtyatrpr.web.app', pathname: opts.path || '/', set href(v){ nav = v; }, get href(){ return 'https://thirtyatrpr.web.app' + (opts.path || '/'); } },
       sessionStorage: { getItem: () => null, setItem: (k, v) => { store[k] = v; }, removeItem: () => {} },
       setTimeout: (fn, ms) => { timers.push([fn, ms]); return 1; },
       window: { matchMedia: () => ({ matches: !!opts.reduced }), addEventListener: () => {}, navigator: {} }, matchMedia: () => ({ matches: !!opts.reduced }), navigator: {},
@@ -1571,19 +1571,69 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     bootPhase = false;   // the boot splash has been removed by now
     const evt = Object.assign({ defaultPrevented: false, button: 0, target: { closest: () => ({ href, getAttribute: () => null, hasAttribute: () => false, target: '' }) }, preventDefault: () => { prevented = true; } }, opts.evt || {});
     handler(evt);
+    timers.filter((x) => x[1] >= 1400 && x[1] <= 2000).forEach((x) => x[0]());   // let the wait elapse: writes the handoff record and navigates
     return { prevented, timers, appended, nav, store };
   };
   const toSpec = click('https://thirtyatrpr.web.app/spectate'), toBr = click('https://thirtyatrpr.web.app/br'), toHome = click('https://thirtyatrpr.web.app/', { path: '/spectate' });
   const modified = click('https://thirtyatrpr.web.app/spectate', { evt: { ctrlKey: true } }), onSpec = click('https://thirtyatrpr.web.app/spectate', { path: '/spectate' }), reduced = click('https://thirtyatrpr.web.app/br', { reduced: true });
   const onDash = click('https://thirtyatrpr.web.app/', { path: '/' });
   const okLeave = toSpec.prevented && toSpec.appended.length === 1 && /Spectate/.test(toSpec.appended[0].html) && toSpec.timers.some((t) => t[1] === 1750)
-    && toBr.prevented && /BR Tools/.test(toBr.appended[0].html) && /bl-load/.test(toSpec.appended[0].html) && /bl-load/.test(toBr.appended[0].html) && !/bl-load/.test(toHome.appended[0].html) && toBr.timers.some((t) => t[1] === 1750)
-    && toHome.prevented && toHome.appended.length === 1 && !/bl-sub/.test(toHome.appended[0].html) && toHome.timers.some((t) => t[1] === 1450)
+    && toBr.prevented && /BR Tools/.test(toBr.appended[0].html) && /bl-load/.test(toSpec.appended[0].html) && /bl-load/.test(toBr.appended[0].html) && !/bl-load/.test(toHome.appended[0].html) && !/bl-quote/.test(toSpec.appended[0].html) && toBr.timers.some((t) => t[1] === 1750)
+    && toHome.prevented && toHome.appended.length === 1 && !/bl-sub/.test(toHome.appended[0].html) && /bl-quote/.test(toHome.appended[0].html) && /Q (one|two)\./.test(toHome.appended[0].html) && toHome.timers.some((t) => t[1] === 1750) && /"q":[01]/.test(toHome.store.thirtyatrpr_splash_handoff || '')
     && !/handoff|pwa|skip/.test(toSpec.appended[0].html) && !/handoff|pwa|skip/.test(toHome.appended[0].html)   // the copy must start clean even if this page's own splash was in the handoff/installed state
     && !onDash.prevented && !modified.prevented && !onSpec.prevented && !reduced.prevented;
-  console.log(okLeave ? 'PASS' : 'FAIL', 'leaving animation: Spectate/BR links and Home play the animation first (redirect after 1.75 s with the data-loading widget, 1.45 s for Home which shows the mark alone); ctrl-click, the page you are on and reduced-motion just navigate: ' + JSON.stringify({ toSpec: toSpec.prevented, toBr: toBr.prevented, toHome: toHome.prevented, modified: modified.prevented, onSpec: onSpec.prevented, reduced: reduced.prevented }));
+  console.log(okLeave ? 'PASS' : 'FAIL', 'leaving animation: Spectate/BR links and Home play the animation first (redirect after 1.75 s (data-loading widget, or the quote shown for Home); Home shows the mark plus a quote); ctrl-click, the page you are on and reduced-motion just navigate: ' + JSON.stringify({ toSpec: toSpec.prevented, toBr: toBr.prevented, toHome: toHome.prevented, modified: modified.prevented, onSpec: onSpec.prevented, reduced: reduced.prevented }));
   allPass &= okLeave;
 }
+
+// === Every number the loaders show must equal what the pages themselves compute (a second way of counting once put "42 rooms" on screen) ===
+allPass &= runSpectateScenario('loader numbers on /spectate and /br (students, groups, rooms, branches, branch reps) equal the engine\'s own counts', (sp) => {
+  const E = sp.ENGINE, D = sp.DATA;
+  const units = Object.keys(E.UNIT_BY_ID).map((k) => E.UNIT_BY_ID[k]);
+  const reps = {}; (D.batchReps || []).forEach((r) => r.reps.forEach((e) => { reps[e] = 1; }));
+  const want = { students: E.N, groups: units.filter((u) => u.level === 'group').length, rooms: E.ALL_VENUES.length, reps: Object.keys(reps).length,
+    branches: units.filter((u) => u.level === 'branch').map((u) => u.label) };
+  const spec = fs.readFileSync(path.join(BASE, '..', 'public', 'spectate.html'), 'utf8');
+  const br = fs.readFileSync(path.join(BASE, '..', 'public', 'br', 'index.html'), 'utf8');
+  const num = (html, re) => { const m = html.match(re); assert(m, 'found in built page: ' + re); return Number(m[1]); };
+  assert(num(spec, /--to:(\d+)"><\/b> students/) === want.students, 'students ' + want.students);
+  assert(num(spec, /--to:(\d+);--d:\.4s"><\/b> groups/) === want.groups, 'groups ' + want.groups);
+  assert(num(spec, /--to:(\d+);--d:\.6s"><\/b> rooms/) === want.rooms, 'rooms (Rooms tab total) ' + want.rooms);
+  assert(num(br, /--to:(\d+)"><\/b> branch reps/) === want.reps, 'branch reps ' + want.reps);
+  const chips = (br.match(/<i style="--i:\d+">([^<]+)<\/i>/g) || []).map((c) => c.replace(/<[^>]+>/g, ''));
+  assert(JSON.stringify(chips) === JSON.stringify(want.branches), 'branch chips ' + chips.join(',') + ' vs ' + want.branches.join(','));
+  const dots = (spec.match(/<i style="--c:\d+;--r:\d+"><\/i>/g) || []).length;
+  assert(dots === want.groups * 4, 'one dot column per group (' + want.groups + ' x 4 = ' + dots + ')');
+  assert(want.students === Object.keys(D.roster).length && want.groups === 12 && want.branches.length === 12, 'sanity: 698-style roster, 12 groups, 12 branches');
+});
+allPass &= (function(){
+  const html = fs.readFileSync(path.join(BASE, '..', 'public', 'index.html'), 'utf8');
+  const m = html.match(/var __QUOTES = (\[[\s\S]*?\]);/);
+  let ok = !!m, why = 'quotes table present';
+  if (ok) {
+    const q = JSON.parse(m[1]);
+    ok = q.length >= 8 && q.every((x) => x.length === 2 && x[0].length > 8 && x[1].length > 2) && new Set(q.map((x) => x[0])).size === q.length
+      && !q.some((x) => /Aristotle/.test(x[1]) && /repeatedly do/.test(x[0]));   // that line is Will Durant's, not Aristotle's
+    why = q.length + ' quotes, each with text + author, no duplicates, no Durant-as-Aristotle';
+  }
+  console.log(ok ? 'PASS' : 'FAIL', 'dashboard loader quotes: ' + why);
+  return ok;
+})();
+
+// === Springs are vertical-only: no sideways movement and no scaling (which squeezes width) in any entrance / sheet / collapsible animation ===
+allPass &= (function(){
+  const dash = fs.readFileSync(path.join(BASE, 'index_template_dashboard.html'), 'utf8') + '\n' + fs.readFileSync(path.join(BASE, 'splash.html'), 'utf8');
+  const names = ['rev-rise', 'sheet-in', 'det-rise', 'extra-in', 'extra-out', 'kz-appear', 'weekRowReveal'];
+  const bad = [];
+  names.forEach((n) => {
+    const m = dash.match(new RegExp('@keyframes ' + n + '\\s*\\{[\\s\\S]*?\\}\\s*\\}|@keyframes ' + n + '\\s*\\{[^}]*\\}[^}]*\\}'));
+    if (!m) { bad.push(n + ' (not found)'); return; }
+    if (/translateX|scale|translate\(/.test(m[0])) bad.push(n + ' -> ' + m[0].replace(/\s+/g, ' ').slice(0, 90));
+  });
+  const ok = bad.length === 0;
+  console.log(ok ? 'PASS' : 'FAIL', 'spring keyframes (' + names.join(', ') + ') move vertically only: ' + (ok ? 'ok' : bad.join(' | ')));
+  return ok;
+})();
 
 console.log(allPass ? '\nALL SCENARIOS PASSED' : '\nSOME SCENARIOS FAILED');
 process.exit(allPass ? 0 : 1);
