@@ -168,6 +168,15 @@
 </style>
 </head>
 <body>
+<script>
+/* apply the saved colour theme before first paint (engine.js's applyTheme runs only at the end of this big page) */
+(function(){
+  var t = 'github';
+  try { t = localStorage.getItem('thirtyatrpr_color_theme') || 'github'; } catch(e){}
+  if(t !== 'default') document.body.setAttribute('data-theme', t);
+  document.body.classList.add('glass');
+})();
+</script>
 <div class="topbar">
   <div class="topbar-inner">
     <a class="home-btn" href="/" aria-label="Back to THIRTY@RPR home">&#8592; <span>Home</span></a>

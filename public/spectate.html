@@ -265,6 +265,10 @@
   .tab:hover, .chip:hover, .btn:hover, .icon-btn:hover{ box-shadow:0 2px 5px rgba(0,0,0,.36), 0 4px 10px -3px rgba(0,0,0,.32); }
   .tab:active, .chip:active, .btn:active, .icon-btn:active{ box-shadow:0 1px 1px rgba(0,0,0,.3); transform:translateY(1px); }
 
+/* smooth page-to-page moves (Chrome/Edge and Safari 18.2+ crossfade same-site navigations; others just load as before) */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root){ animation-duration:.18s; animation-timing-function:ease; }
+
 /* Month picker styles (build/monthpick.js) — appended to sub_theme.css for /spectate and /br, and spliced into
    the dashboard for its Squads panel, by build/splice.py. */
   /* Month picker (build/monthpick.js): the date opens it. Dates are raised, shadowed buttons — no outlines. */
@@ -447,6 +451,15 @@
 </style>
 </head>
 <body>
+<script>
+/* apply the saved colour theme before first paint (engine.js's applyTheme runs only at the end of this big page) */
+(function(){
+  var t = 'github';
+  try { t = localStorage.getItem('thirtyatrpr_color_theme') || 'github'; } catch(e){}
+  if(t !== 'default') document.body.setAttribute('data-theme', t);
+  document.body.classList.add('glass');
+})();
+</script>
 <div class="topbar">
   <div class="topbar-inner">
     <a class="home-btn" href="/" aria-label="Back to THIRTY@RPR home">&#8592; <span>Home</span></a>

@@ -248,3 +248,7 @@
   .tab, .chip, .btn, .icon-btn{ box-shadow:0 1px 3px rgba(0,0,0,.32), 0 2px 6px -2px rgba(0,0,0,.28); }
   .tab:hover, .chip:hover, .btn:hover, .icon-btn:hover{ box-shadow:0 2px 5px rgba(0,0,0,.36), 0 4px 10px -3px rgba(0,0,0,.32); }
   .tab:active, .chip:active, .btn:active, .icon-btn:active{ box-shadow:0 1px 1px rgba(0,0,0,.3); transform:translateY(1px); }
+
+/* smooth page-to-page moves (Chrome/Edge and Safari 18.2+ crossfade same-site navigations; others just load as before) */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root){ animation-duration:.18s; animation-timing-function:ease; }

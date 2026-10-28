@@ -1989,6 +1989,10 @@ window.__overlayFast = (function(){
   .cal-toggle:active, .settings-toggle:active, .daynav button:active, .material-link:active, .chip-filter:active, .reset-btn:active,
   .kz-btn:active, .elective-pick-btn:active, #loginBtn:active{ box-shadow:0 1px 1px rgba(0,0,0,.3); transform:translateY(1px); }
 /*__MONTHPICK_CSS__*/
+
+/* smooth page-to-page moves (Chrome/Edge and Safari 18.2+ crossfade same-site navigations; others just load as before) */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root){ animation-duration:.18s; animation-timing-function:ease; }
 </style>
 </head>
 <body>
@@ -2012,6 +2016,8 @@ window.__overlayFast = (function(){
   #bootLoader{ position:fixed; inset:0; z-index:9999; display:flex; align-items:center; justify-content:center; background:var(--bg);
     transition:opacity .3s ease; }
   #bootLoader.done{ opacity:0; pointer-events:none; }
+  #bootLoader.skip{ display:none; }
+  body:not(.booted) #loginScreen{ visibility:hidden; }   /* the login screen must never stand in for a loader */
   #bootLoader svg{ width:min(72vw, 300px); height:auto; overflow:visible; }
   @keyframes bl-pop{ from{ opacity:0; transform:scale(.6); } to{ opacity:1; transform:none; } }
   @keyframes bl-out{ 0%{ opacity:0; transform:translateX(var(--from)); } 25%{ opacity:1; } 100%{ opacity:1; transform:none; } }
@@ -2053,8 +2059,11 @@ window.__overlayFast = (function(){
 // background colour), so start from that exact picture — the finished 30 tile, centred, no pop-in — and let @rpr come out of it.
 try { if((window.matchMedia && (matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: window-controls-overlay)').matches)) || window.navigator.standalone === true) document.getElementById('bootLoader').classList.add('pwa'); } catch(e){}
 var __bootT0 = Date.now(), __bootMin = 1200;
+// Arriving from another page of this site (Spectate/BR/Home links): no splash — the browser's crossfade does the transition.
+try { var __ref = document.referrer && new URL(document.referrer); if(__ref && __ref.origin === location.origin){ document.getElementById('bootLoader').classList.add('skip'); __bootMin = 0; } } catch(e){}
 try { if(sessionStorage.getItem('thirtyatrpr_splash_seen')) __bootMin = 0; sessionStorage.setItem('thirtyatrpr_splash_seen', '1'); } catch(e){}
 window.__bootDone = function(){
+  document.body.classList.add('booted');
   var el = document.getElementById('bootLoader');
   if(!el || el.__leaving) return;
   el.__leaving = true;

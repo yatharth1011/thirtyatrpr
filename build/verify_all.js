@@ -1501,5 +1501,42 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
   allPass &= ok2;
 }
 
+// === Smooth page transitions: theme first on sub pages, crossfade rule everywhere, splash skipped for in-site moves ===
+{
+  const fs2 = require('fs');
+  for (const f of ['spectate_template.html', 'br_template.html']) {
+    const html = fs2.readFileSync(__dirname + '/' + f, 'utf8');
+    const bodyAt = html.indexOf('<body>');
+    const first = html.indexOf('<script>', bodyAt);
+    const early = html.slice(first, html.indexOf('</script>', first));
+    const ok = /setAttribute\('data-theme'/.test(early) && /thirtyatrpr_color_theme/.test(early) && first - bodyAt < 40;
+    console.log(ok ? 'PASS' : 'FAIL', f + ': saved colour theme is applied by the very first script in <body>');
+    allPass &= ok;
+  }
+  const dash = fs2.readFileSync(__dirname + '/index_template_dashboard.html', 'utf8');
+  const sub = fs2.readFileSync(__dirname + '/sub_theme.css', 'utf8');
+  const okCss = /@view-transition\s*\{\s*navigation:\s*auto/.test(dash) && /@view-transition\s*\{\s*navigation:\s*auto/.test(sub) && /^\s*(\/\*[\s\S]*?\*\/\s*)?@import/.test(sub);
+  console.log(okCss ? 'PASS' : 'FAIL', 'cross-document view transitions enabled on dashboard + sub pages (font @import still first rule)');
+  allPass &= okCss;
+  const okLogin = /body:not\(\.booted\) #loginScreen\{\s*visibility:hidden/.test(dash) && /document\.body\.classList\.add\('booted'\)/.test(dash);
+  console.log(okLogin ? 'PASS' : 'FAIL', 'login screen stays hidden until the app is ready (never stands in for a loader)');
+  allPass &= okLogin;
+  // behaviour of the referrer rule, run for real
+  const m = dash.match(/var __bootT0[\s\S]*?(?=window\.__bootDone = )/);
+  const run = (referrer) => {
+    const added = [];
+    const sandbox = { Date, URL, sessionStorage: { getItem: () => null, setItem: () => {} }, location: { origin: 'https://thirtyatrpr.web.app' },
+      window: { matchMedia: () => ({ matches: false }), navigator: {} }, navigator: {},
+      document: { referrer, getElementById: () => ({ classList: { add: (c) => added.push(c) } }) } };
+    sandbox.matchMedia = sandbox.window.matchMedia;
+    vm.runInNewContext(m[0] + '\n;__out = { min: __bootMin };', sandbox);
+    return { added, min: sandbox.__out.min };
+  };
+  const inSite = run('https://thirtyatrpr.web.app/spectate'), fresh = run(''), other = run('https://www.google.com/');
+  const okRef = inSite.added.indexOf('skip') !== -1 && inSite.min === 0 && fresh.added.indexOf('skip') === -1 && fresh.min === 1200 && other.added.indexOf('skip') === -1;
+  console.log(okRef ? 'PASS' : 'FAIL', 'splash is skipped when arriving from another page of the site, but plays for a fresh visit / external referrer: ' + JSON.stringify({ inSite, fresh, other }));
+  allPass &= okRef;
+}
+
 console.log(allPass ? '\nALL SCENARIOS PASSED' : '\nSOME SCENARIOS FAILED');
 process.exit(allPass ? 0 : 1);
