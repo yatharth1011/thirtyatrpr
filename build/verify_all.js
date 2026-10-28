@@ -31,7 +31,7 @@ window.__debug = {
   stepDay: (typeof stepDay!=='undefined')?stepDay:undefined,
   jumpToIdx: jumpToIdx, jumpToToday: (typeof jumpToToday!=='undefined')?jumpToToday:undefined,
   renderMessPanel: renderMessPanel, renderStudyRooms: (typeof renderStudyRooms!=='undefined')?renderStudyRooms:undefined,
-  renderExamBanner: renderExamBanner, renderTodayPanel: renderTodayPanel,
+  renderExamBanner: renderExamBanner, renderNotices: renderNotices, renderTodayPanel: renderTodayPanel,
   buildDays: buildDays, classDuration: classDuration,
   verifierForStudent: verifierForStudent, renderVerifiedBadge: renderVerifiedBadge,
   brsForStudent: brsForStudent, renderBrNote: renderBrNote, renderMentorNote: renderMentorNote,
@@ -1406,6 +1406,100 @@ allPass &= runScenario('exam banner folds into a collapsed <details> "memory" on
   assert(html.indexOf('examweek-rows') !== -1, 'the actual exam rows are still present underneath (just collapsed), not deleted: ' + html);
   assert(html.indexOf('Physics for Engineers') !== -1, 'their real mid-sem history (e.g. the PH101 exam) is still there to look back at: ' + html);
 });
+
+// === New: End-Sem timetable, MA101 Quiz 2 seating, AI101 mini-project deadlines (27 Oct 2026 data) ===
+function dayItems(dbg, entry, iso){
+  return dbg.buildDays(dbg.DATA.roster[entry]).find((d) => d.d === iso).items;
+}
+allPass &= runScenario('End-Sem: a D1/D2 student gets MA101 (17 Nov), PH101 (21 Nov) and AI101 (25 Nov) as 3-hour morning exams, and no CS100/CY101', '2026AIB1001', {}, (win, doc) => {
+  const dbg = win.__debug;
+  const exam = (iso, re) => dayItems(dbg, '2026AIB1001', iso).find((it) => it.category === 'Exam' && re.test(it.title));
+  const ma = exam('2026-11-17', /Calculus|Mathematics/); assert(ma && ma.t === '9:30 AM – 12:30 PM', 'MA101 9:30-12:30 on 17 Nov: ' + JSON.stringify(ma));
+  const ph = exam('2026-11-21', /Physics/); assert(ph && ph.t === '9:30 AM – 12:30 PM', 'PH101 on 21 Nov: ' + JSON.stringify(ph));
+  const ai = exam('2026-11-25', /Data Science/); assert(ai && ai.t === '9:30 AM – 12:30 PM' && /End-Sem Exam$/.test(ai.title), 'AI101 on 25 Nov: ' + JSON.stringify(ai));
+  assert(!exam('2026-11-21', /Chemistry/), 'no CY101 for D1');
+  assert(!dayItems(dbg, '2026AIB1001', '2026-11-23').some((it) => it.category === 'Exam'), 'no CS100 for D1/D2 on 23 Nov');
+  const banner = doc.getElementById('examWeekBanner').innerHTML;
+  assert(dbg.renderExamBanner(dbg.DATA.roster['2026AIB1001']) === undefined && /end-sem exams/.test(doc.getElementById('examWeekBanner').innerHTML), 'end-sem banner is shown: ' + banner);
+});
+allPass &= runScenario('End-Sem: a D3/D4 student gets CY101 (21 Nov) and CS100 (23 Nov), not PH101/AI101; the HS elective exam is only their own', '2026MEB1641', {}, (win, doc) => {
+  const dbg = win.__debug;
+  const ex = (iso) => dayItems(dbg, '2026MEB1641', iso).filter((it) => it.category === 'Exam');
+  assert(ex('2026-11-21').length === 1 && /Chemistry/.test(ex('2026-11-21')[0].title), 'only CY101 on 21 Nov: ' + JSON.stringify(ex('2026-11-21').map((i) => i.title)));
+  assert(ex('2026-11-23').length === 1 && /End-Sem Exam$/.test(ex('2026-11-23')[0].title), 'CS100 on 23 Nov: ' + JSON.stringify(ex('2026-11-23').map((i) => i.title)));
+  assert(ex('2026-11-25').length === 0, 'no AI101 for D3/D4');
+  assert(ex('2026-11-19').length <= 1, 'at most the student\'s own HS/IKS exam on 19 Nov: ' + JSON.stringify(ex('2026-11-19').map((i) => i.title)));
+});
+allPass &= runScenario('MA101 Quiz 2 (28 Oct) is 7:10-8:00 PM in the Auditorium with the student\'s own seat', '2026AIB1001', {}, (win, doc) => {
+  const dbg = win.__debug;
+  const q = dayItems(dbg, '2026AIB1001', '2026-10-28').find((it) => it.category === 'Quiz');
+  assert(q, 'quiz item exists');
+  assert(q.t === '7:10 PM – 8:00 PM', 'time is 7:10-8:00 PM: ' + q.t);
+  assert(q.venue === 'Auditorium · Seat A-101', 'seat from the seating plan: ' + q.venue);
+});
+allPass &= runScenario('AI101 mini-project: deadline items on 30 Oct and 11 Nov (D1/D2 only), with the sheet link on 30 Oct', '2026AIB1001', {}, (win, doc) => {
+  const dbg = win.__debug;
+  const a = dayItems(dbg, '2026AIB1001', '2026-10-30').find((it) => it.category === 'Deadline');
+  assert(a && /Google Sheet/.test(a.title), '30 Oct deadline: ' + JSON.stringify(a));
+  assert(a.materialLink && /1nuQtJk0rrWL8cmUAe26M9cnT8Wl31BwghIbVkf1WvqQ/.test(a.materialLink), 'sheet link attached: ' + JSON.stringify(a));
+  const b = dayItems(dbg, '2026AIB1001', '2026-11-11').find((it) => it.category === 'Deadline');
+  assert(b && /final submission/.test(b.title), '11 Nov deadline: ' + JSON.stringify(b));
+  assert(!dayItems(dbg, '2026MEB1641', '2026-10-30').some((it) => it.category === 'Deadline'), 'D3/D4 do not get the AI101 deadline');
+});
+
+// === MA101 Quiz 2: hall is per student (not "Auditorium" for all) + the apology banner that expires ===
+allPass &= runScenario('Quiz 2 venue is the student\'s own hall: M3 student gets M3, unlabelled-block student gets "Venue TBC", nobody is told Auditorium by default', '2026CSB1169', {}, (win, doc) => {
+  const dbg = win.__debug;
+  const q = (entry) => dayItems(dbg, entry, '2026-10-28').find((it) => it.category === 'Quiz');
+  assert(q('2026CSB1169').venue === 'M3 · Seat A-105', 'CSE student in M3: ' + q('2026CSB1169').venue);
+  assert(q('2026CHB1120').venue === 'Venue TBC', 'unlabelled block, no seat: ' + q('2026CHB1120').venue);
+  assert(q('2026CEB1142').venue === 'Venue TBC · Seat B-101', 'unlabelled block with seat: ' + q('2026CEB1142').venue);
+  assert(q('2026CSB1200').venue === 'M3', 'hall known, seat blank in the sheet: ' + q('2026CSB1200').venue);
+  assert(!q('2026AIB1001').venue.indexOf('Auditorium') && /Seat A-101/.test(q('2026AIB1001').venue), 'AIDE student still Auditorium A-101');
+});
+allPass &= runScenario('apology banner shows the viewer\'s own hall+seat while the quiz is on, and disappears by itself once it has ended', '2026CSB1169', {}, (win, doc) => {
+  const dbg = win.__debug;
+  const box = doc.getElementById('noticeBanner');
+  dbg.DATA.notices[0].until = '2099-01-01T00:00:00+05:30';
+  dbg.renderNotices(dbg.DATA.roster['2026CSB1169']);
+  assert(box.style.display === 'block' && /Sorry/.test(box.innerHTML), 'banner visible before the end time: ' + box.innerHTML);
+  assert(/Your venue: M3 · Seat A-105/.test(box.innerHTML), 'own hall and seat in the banner: ' + box.innerHTML);
+  dbg.DATA.notices[0].until = '2020-01-01T00:00:00+05:30';
+  dbg.renderNotices(dbg.DATA.roster['2026CSB1169']);
+  assert(box.style.display === 'none' && box.innerHTML === '', 'banner gone once its end time has passed: ' + box.innerHTML);
+  assert(/T20:00:00\+05:30$/.test(JSON.parse(JSON.stringify(require('fs').readFileSync(__dirname + '/merge.py', 'utf8').match(/'until': '([^']+)'/)[1])) ), 'the real notice ends at 8 PM IST');
+});
+
+allPass &= runScenario('apology banner tells a student whose hall is not in the sheet to confirm it, instead of printing "Venue TBC"', '2026CEB1142', {}, (win, doc) => {
+  const dbg = win.__debug;
+  dbg.DATA.notices[0].until = '2099-01-01T00:00:00+05:30';
+  dbg.renderNotices(dbg.DATA.roster['2026CEB1142']);
+  const html = doc.getElementById('noticeBanner').innerHTML;
+  assert(/does not name your hall \(it gives seat B-101\)/.test(html) && !/Your venue: Venue TBC/.test(html), 'banner wording for an unnamed hall: ' + html);
+});
+
+// === No green flash: the saved colour theme is applied by a tiny script at the very top of <body>, before first paint ===
+{
+  const html = require('fs').readFileSync(__dirname + '/index_template_dashboard.html', 'utf8');
+  const bodyStart = html.indexOf('<body>');
+  const firstScript = html.indexOf('<script>', bodyStart);
+  const early = html.slice(firstScript, html.indexOf('</script>', firstScript));
+  const heavy = html.indexOf('/*__THIRTY_DATA__*/');
+  const ok = /setAttribute\('data-theme'/.test(early) && /thirtyatrpr_color_theme/.test(early) && /classList\.add\('glass'\)/.test(early) && firstScript > 0 && firstScript < heavy;
+  console.log(ok ? 'PASS' : 'FAIL', 'colour theme + glass class are applied by the first script in <body>, ahead of the big data script');
+  allPass &= ok;
+  // and it behaves: github by default, a saved non-default choice after the rollout marker, nothing for "default"
+  const run = (store) => {
+    const attrs = {}; const cls = [];
+    const sandbox = { localStorage: { getItem: (k) => (k in store ? store[k] : null) }, document: { body: { setAttribute: (k, v) => { attrs[k] = v; }, classList: { add: (c) => cls.push(c) } } } };
+    vm.runInNewContext(early.replace('<script>', ''), sandbox);
+    return { attrs, cls };
+  };
+  const a = run({}), b = run({ thirtyatrpr_theme_github_rollout: '1', thirtyatrpr_color_theme: 'sunset' }), c = run({ thirtyatrpr_theme_github_rollout: '1', thirtyatrpr_color_theme: 'default' });
+  const ok2 = a.attrs['data-theme'] === 'github' && b.attrs['data-theme'] === 'sunset' && c.attrs['data-theme'] === undefined && a.cls[0] === 'glass';
+  console.log(ok2 ? 'PASS' : 'FAIL', 'early theme script: github by default/pre-rollout, saved choice after rollout, none for "default"');
+  allPass &= ok2;
+}
 
 console.log(allPass ? '\nALL SCENARIOS PASSED' : '\nSOME SCENARIOS FAILED');
 process.exit(allPass ? 0 : 1);

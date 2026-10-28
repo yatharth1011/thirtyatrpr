@@ -10971,5 +10971,2784 @@
       "room": "SRC-006",
       "seat": "F-103"
     }
+  },
+  "2026-10-28": {
+    "2026AIB1001": {
+      "room": "Auditorium",
+      "seat": "A-101"
+    },
+    "2026AIB1091": {
+      "room": "Auditorium",
+      "seat": "B-101"
+    },
+    "2026MCB1697": {
+      "room": "Auditorium",
+      "seat": "A-103"
+    },
+    "2026EEB1344": {
+      "room": "Auditorium",
+      "seat": "B-103"
+    },
+    "2026AIB1002": {
+      "room": "Auditorium",
+      "seat": "A-105"
+    },
+    "2026AIB1092": {
+      "room": "Auditorium",
+      "seat": "B-105"
+    },
+    "2025DAB1286": {
+      "room": "Auditorium",
+      "seat": "A-107"
+    },
+    "2026EEB1345": {
+      "room": "Auditorium",
+      "seat": "B-107"
+    },
+    "2026AIB1003": {
+      "room": "Auditorium",
+      "seat": "A-109"
+    },
+    "2026AIB1093": {
+      "room": "Auditorium",
+      "seat": "B-109"
+    },
+    "2026DAB1289": {
+      "room": "Auditorium",
+      "seat": "A-201"
+    },
+    "2026EEB1346": {
+      "room": "Auditorium",
+      "seat": "B-111"
+    },
+    "2026AIB1004": {
+      "room": "Auditorium",
+      "seat": "A-203"
+    },
+    "2026AIB1094": {
+      "room": "Auditorium",
+      "seat": "B-201"
+    },
+    "2026DAB1290": {
+      "room": "Auditorium",
+      "seat": "A-205"
+    },
+    "2026EEB1347": {
+      "room": "Auditorium",
+      "seat": "B-203"
+    },
+    "2026AIB1005": {
+      "room": "Auditorium",
+      "seat": "A-207"
+    },
+    "2026AIB1095": {
+      "room": "Auditorium",
+      "seat": "B-205"
+    },
+    "2026DAB1291": {
+      "room": "Auditorium",
+      "seat": "A-209"
+    },
+    "2026EEB1348": {
+      "room": "Auditorium",
+      "seat": "B-207"
+    },
+    "2026AIB1006": {
+      "room": "Auditorium",
+      "seat": "A-211"
+    },
+    "2026AIB1096": {
+      "room": "Auditorium",
+      "seat": "B-209"
+    },
+    "2026DAB1292": {
+      "room": "Auditorium",
+      "seat": "A-301"
+    },
+    "2026EEB1349": {
+      "room": "Auditorium",
+      "seat": "B-211"
+    },
+    "2026AIB1007": {
+      "room": "Auditorium",
+      "seat": "A-303"
+    },
+    "2026AIB1097": {
+      "room": "Auditorium",
+      "seat": "B-213"
+    },
+    "2026DAB1293": {
+      "room": "Auditorium",
+      "seat": "A-305"
+    },
+    "2026EEB1350": {
+      "room": "Auditorium",
+      "seat": "B-301"
+    },
+    "2026AIB1008": {
+      "room": "Auditorium",
+      "seat": "A-307"
+    },
+    "2026AIB1098": {
+      "room": "Auditorium",
+      "seat": "B-303"
+    },
+    "2026DAB1294": {
+      "room": "Auditorium",
+      "seat": "A-309"
+    },
+    "2026EEB1351": {
+      "room": "Auditorium",
+      "seat": "B-305"
+    },
+    "2026AIB1009": {
+      "room": "Auditorium",
+      "seat": "C-101"
+    },
+    "2026AIB1099": {
+      "room": "Auditorium",
+      "seat": "B-307"
+    },
+    "2026DAB1295": {
+      "room": "Auditorium",
+      "seat": "C-103"
+    },
+    "2026EEB1352": {
+      "room": "Auditorium",
+      "seat": "B-309"
+    },
+    "2026AIB1010": {
+      "room": "Auditorium",
+      "seat": "C-105"
+    },
+    "2026MCB1502": {
+      "room": "Auditorium",
+      "seat": "B-311"
+    },
+    "2026DAB1296": {
+      "room": "Auditorium",
+      "seat": "C-107"
+    },
+    "2026EEB1353": {
+      "room": "Auditorium",
+      "seat": "D-103"
+    },
+    "2026AIB1011": {
+      "room": "Auditorium",
+      "seat": "C-109"
+    },
+    "2026MCB1503": {
+      "room": "Auditorium",
+      "seat": "D-101"
+    },
+    "2026DAB1297": {
+      "room": "Auditorium",
+      "seat": "C-111"
+    },
+    "2026EEB1354": {
+      "room": "Auditorium",
+      "seat": "D-107"
+    },
+    "2026AIB1012": {
+      "room": "Auditorium",
+      "seat": "C-201"
+    },
+    "2026MCB1504": {
+      "room": "Auditorium",
+      "seat": "D-105"
+    },
+    "2026DAB1298": {
+      "room": "Auditorium",
+      "seat": "C-203"
+    },
+    "2026EEB1355": {
+      "room": "Auditorium",
+      "seat": "D-111"
+    },
+    "2026AIB1013": {
+      "room": "Auditorium",
+      "seat": "C-205"
+    },
+    "2026MCB1505": {
+      "room": "Auditorium",
+      "seat": "D-109"
+    },
+    "2026DAB1299": {
+      "room": "Auditorium",
+      "seat": "C-207"
+    },
+    "2026EEB1356": {
+      "room": "Auditorium",
+      "seat": "D-203"
+    },
+    "2026AIB1014": {
+      "room": "Auditorium",
+      "seat": "C-209"
+    },
+    "2026MCB1506": {
+      "room": "Auditorium",
+      "seat": "D-201"
+    },
+    "2026DAB1300": {
+      "room": "Auditorium",
+      "seat": "C-211"
+    },
+    "2026EEB1357": {
+      "room": "Auditorium",
+      "seat": "D-207"
+    },
+    "2026AIB1015": {
+      "room": "Auditorium",
+      "seat": "C-213"
+    },
+    "2026MCB1507": {
+      "room": "Auditorium",
+      "seat": "D-205"
+    },
+    "2026DAB1301": {
+      "room": "Auditorium",
+      "seat": "C-301"
+    },
+    "2026EEB1358": {
+      "room": "Auditorium",
+      "seat": "D-211"
+    },
+    "2026AIB1016": {
+      "room": "Auditorium",
+      "seat": "C-303"
+    },
+    "2026MCB1508": {
+      "room": "Auditorium",
+      "seat": "D-209"
+    },
+    "2026DAB1302": {
+      "room": "Auditorium",
+      "seat": "C-305"
+    },
+    "2026EEB1359": {
+      "room": "Auditorium",
+      "seat": "D-301"
+    },
+    "2026AIB1017": {
+      "room": "Auditorium",
+      "seat": "C-307"
+    },
+    "2026MCB1509": {
+      "room": "Auditorium",
+      "seat": "D-213"
+    },
+    "2026DAB1303": {
+      "room": "Auditorium",
+      "seat": "C-309"
+    },
+    "2026EEB1360": {
+      "room": "Auditorium",
+      "seat": "D-305"
+    },
+    "2026AIB1018": {
+      "room": "Auditorium",
+      "seat": "C-311"
+    },
+    "2026MCB1510": {
+      "room": "Auditorium",
+      "seat": "D-303"
+    },
+    "2026DAB1304": {
+      "room": "Auditorium",
+      "seat": "E-103"
+    },
+    "2026EEB1361": {
+      "room": "Auditorium",
+      "seat": "D-309"
+    },
+    "2026AIB1019": {
+      "room": "Auditorium",
+      "seat": "E-101"
+    },
+    "2026MCB1511": {
+      "room": "Auditorium",
+      "seat": "D-307"
+    },
+    "2026DAB1305": {
+      "room": "Auditorium",
+      "seat": "E-107"
+    },
+    "2026EEB1362": {
+      "room": "Auditorium",
+      "seat": "F-103"
+    },
+    "2026AIB1020": {
+      "room": "Auditorium",
+      "seat": "E-105"
+    },
+    "2026MCB1512": {
+      "room": "Auditorium",
+      "seat": "D-311"
+    },
+    "2026DAB1306": {
+      "room": "Auditorium",
+      "seat": "E-111"
+    },
+    "2026EEB1363": {
+      "room": "Auditorium",
+      "seat": "F-107"
+    },
+    "2026AIB1021": {
+      "room": "Auditorium",
+      "seat": "E-109"
+    },
+    "2026MCB1513": {
+      "room": "Auditorium",
+      "seat": "F-101"
+    },
+    "2026DAB1307": {
+      "room": "Auditorium",
+      "seat": "E-203"
+    },
+    "2026EEB1364": {
+      "room": "Auditorium",
+      "seat": "F-111"
+    },
+    "2026AIB1022": {
+      "room": "Auditorium",
+      "seat": "E-201"
+    },
+    "2026MCB1514": {
+      "room": "Auditorium",
+      "seat": "F-105"
+    },
+    "2026DAB1308": {
+      "room": "Auditorium",
+      "seat": "E-207"
+    },
+    "2026EEB1365": {
+      "room": "Auditorium",
+      "seat": "F-201"
+    },
+    "2026AIB1023": {
+      "room": "Auditorium",
+      "seat": "E-205"
+    },
+    "2026MCB1515": {
+      "room": "Auditorium",
+      "seat": "F-109"
+    },
+    "2026ESB1472": {
+      "room": "Auditorium",
+      "seat": "E-211"
+    },
+    "2026EEB1366": {
+      "room": "Auditorium",
+      "seat": "F-205"
+    },
+    "2026AIB1024": {
+      "room": "Auditorium",
+      "seat": "E-209"
+    },
+    "2026MCB1516": {
+      "room": "Auditorium",
+      "seat": "F-113"
+    },
+    "2026ESB1473": {
+      "room": "Auditorium",
+      "seat": "E-301"
+    },
+    "2026EEB1367": {
+      "room": "Auditorium",
+      "seat": "F-209"
+    },
+    "2026AIB1025": {
+      "room": "Auditorium",
+      "seat": "E-213"
+    },
+    "2026MCB1517": {
+      "room": "Auditorium",
+      "seat": "F-203"
+    },
+    "2026ESB1474": {
+      "room": "Auditorium",
+      "seat": "E-305"
+    },
+    "2026EEB1368": {
+      "room": "Auditorium",
+      "seat": "F-213"
+    },
+    "2026AIB1026": {
+      "room": "Auditorium",
+      "seat": "E-303"
+    },
+    "2026MCB1518": {
+      "room": "Auditorium",
+      "seat": "F-207"
+    },
+    "2026ESB1475": {
+      "room": "Auditorium",
+      "seat": "E-309"
+    },
+    "2026EEB1369": {
+      "room": "Auditorium",
+      "seat": "F-303"
+    },
+    "2026AIB1027": {
+      "room": "Auditorium",
+      "seat": "E-307"
+    },
+    "2026MCB1519": {
+      "room": "Auditorium",
+      "seat": "F-211"
+    },
+    "2026ESB1476": {
+      "room": "Auditorium",
+      "seat": "E-313"
+    },
+    "2026EEB1370": {
+      "room": "Auditorium",
+      "seat": "F-307"
+    },
+    "2026AIB1028": {
+      "room": "Auditorium",
+      "seat": "E-311"
+    },
+    "2026MCB1520": {
+      "room": "Auditorium",
+      "seat": "F-301"
+    },
+    "2026ESB1477": {
+      "room": "Auditorium",
+      "seat": "G-103"
+    },
+    "2026EEB1371": {
+      "room": "Auditorium",
+      "seat": "F-311"
+    },
+    "2026AIB1029": {
+      "room": "Auditorium",
+      "seat": "G-101"
+    },
+    "2026MCB1521": {
+      "room": "Auditorium",
+      "seat": "F-305"
+    },
+    "2026ESB1478": {
+      "room": "Auditorium",
+      "seat": "G-107"
+    },
+    "2026EEB1372": {
+      "room": "Auditorium",
+      "seat": "H-103"
+    },
+    "2026AIB1030": {
+      "room": "Auditorium",
+      "seat": "G-105"
+    },
+    "2026MCB1522": {
+      "room": "Auditorium",
+      "seat": "F-309"
+    },
+    "2026ESB1479": {
+      "room": "Auditorium",
+      "seat": "G-111"
+    },
+    "2026EEB1373": {
+      "room": "Auditorium",
+      "seat": "H-107"
+    },
+    "2026AIB1031": {
+      "room": "Auditorium",
+      "seat": "G-109"
+    },
+    "2026MCB1523": {
+      "room": "Auditorium",
+      "seat": "F-313"
+    },
+    "2026ESB1480": {
+      "room": "Auditorium",
+      "seat": "G-201"
+    },
+    "2026EEB1374": {
+      "room": "Auditorium",
+      "seat": "H-111"
+    },
+    "2026AIB1032": {
+      "room": "Auditorium",
+      "seat": "G-113"
+    },
+    "2026MCB1524": {
+      "room": "Auditorium",
+      "seat": "H-101"
+    },
+    "2026ESB1481": {
+      "room": "Auditorium",
+      "seat": "G-205"
+    },
+    "2026EEB1375": {
+      "room": "Auditorium",
+      "seat": "H-201"
+    },
+    "2026AIB1033": {
+      "room": "Auditorium",
+      "seat": "G-203"
+    },
+    "2026MCB1525": {
+      "room": "Auditorium",
+      "seat": "H-105"
+    },
+    "2026ESB1482": {
+      "room": "Auditorium",
+      "seat": "G-209"
+    },
+    "2026EEB1376": {
+      "room": "Auditorium",
+      "seat": "H-205"
+    },
+    "2026AIB1034": {
+      "room": "Auditorium",
+      "seat": "G-207"
+    },
+    "2026MCB1526": {
+      "room": "Auditorium",
+      "seat": "H-109"
+    },
+    "2026ESB1483": {
+      "room": "Auditorium",
+      "seat": "G-213"
+    },
+    "2026EEB1377": {
+      "room": "Auditorium",
+      "seat": "H-209"
+    },
+    "2026AIB1035": {
+      "room": "Auditorium",
+      "seat": "G-211"
+    },
+    "2026MCB1527": {
+      "room": "Auditorium",
+      "seat": "H-113"
+    },
+    "2026ESB1484": {
+      "room": "Auditorium",
+      "seat": "G-303"
+    },
+    "2026EEB1378": {
+      "room": "Auditorium",
+      "seat": "H-213"
+    },
+    "2026AIB1036": {
+      "room": "Auditorium",
+      "seat": "G-301"
+    },
+    "2026MCB1528": {
+      "room": "Auditorium",
+      "seat": "H-203"
+    },
+    "2026ESB1485": {
+      "room": "Auditorium",
+      "seat": "G-307"
+    },
+    "2026EEB1379": {
+      "room": "Auditorium",
+      "seat": "H-303"
+    },
+    "2026AIB1037": {
+      "room": "Auditorium",
+      "seat": "G-305"
+    },
+    "2026MCB1529": {
+      "room": "Auditorium",
+      "seat": "H-207"
+    },
+    "2026ESB1486": {
+      "room": "Auditorium",
+      "seat": "G-311"
+    },
+    "2026EEB1380": {
+      "room": "Auditorium",
+      "seat": "H-307"
+    },
+    "2026AIB1038": {
+      "room": "Auditorium",
+      "seat": "G-309"
+    },
+    "2026MCB1530": {
+      "room": "Auditorium",
+      "seat": "H-211"
+    },
+    "2026ESB1487": {
+      "room": "Auditorium",
+      "seat": "I-103"
+    },
+    "2026EEB1381": {
+      "room": "Auditorium",
+      "seat": "H-311"
+    },
+    "2026AIB1039": {
+      "room": "Auditorium",
+      "seat": "G-313"
+    },
+    "2026MCB1531": {
+      "room": "Auditorium",
+      "seat": "H-301"
+    },
+    "2026ESB1488": {
+      "room": "Auditorium",
+      "seat": "I-107"
+    },
+    "2026EEB1382": {
+      "room": "Auditorium",
+      "seat": "H-315"
+    },
+    "2026AIB1040": {
+      "room": "Auditorium",
+      "seat": "I-101"
+    },
+    "2026MCB1532": {
+      "room": "Auditorium",
+      "seat": "H-305"
+    },
+    "2026ESB1489": {
+      "room": "Auditorium",
+      "seat": "I-201"
+    },
+    "2026EEB1383": {
+      "room": "Auditorium",
+      "seat": "J-103"
+    },
+    "2026AIB1041": {
+      "room": "Auditorium",
+      "seat": "I-105"
+    },
+    "2026MCB1533": {
+      "room": "Auditorium",
+      "seat": "H-309"
+    },
+    "2026ESB1490": {
+      "room": "Auditorium",
+      "seat": "I-205"
+    },
+    "2026EEB1384": {
+      "room": "Auditorium",
+      "seat": "J-107"
+    },
+    "2026AIB1042": {
+      "room": "Auditorium",
+      "seat": "I-109"
+    },
+    "2026MCB1534": {
+      "room": "Auditorium",
+      "seat": "H-313"
+    },
+    "2026ESB1491": {
+      "room": "Auditorium",
+      "seat": "I-209"
+    },
+    "2026EEB1385": {
+      "room": "Auditorium",
+      "seat": "J-201"
+    },
+    "2026AIB1043": {
+      "room": "Auditorium",
+      "seat": "I-203"
+    },
+    "2026MCB1535": {
+      "room": "Auditorium",
+      "seat": "J-101"
+    },
+    "2026ESB1492": {
+      "room": "Auditorium",
+      "seat": "I-301"
+    },
+    "2026EEB1386": {
+      "room": "Auditorium",
+      "seat": "J-205"
+    },
+    "2026AIB1044": {
+      "room": "Auditorium",
+      "seat": "I-207"
+    },
+    "2026MCB1536": {
+      "room": "Auditorium",
+      "seat": "J-105"
+    },
+    "2026ESB1493": {
+      "room": "Auditorium",
+      "seat": "I-305"
+    },
+    "2026EEB1387": {
+      "room": "Auditorium",
+      "seat": "J-209"
+    },
+    "2026AIB1045": {
+      "room": "Auditorium",
+      "seat": "I-211"
+    },
+    "2026MCB1537": {
+      "room": "Auditorium",
+      "seat": "J-109"
+    },
+    "2026ESB1494": {
+      "room": "Auditorium",
+      "seat": "I-309"
+    },
+    "2026EEB1388": {
+      "room": "Auditorium",
+      "seat": "J-213"
+    },
+    "2026AIB1046": {
+      "room": "Auditorium",
+      "seat": "I-303"
+    },
+    "2026MCB1538": {
+      "room": "Auditorium",
+      "seat": "J-203"
+    },
+    "2026ESB1495": {
+      "room": "Auditorium",
+      "seat": "K-103"
+    },
+    "2026EEB1389": {
+      "room": "Auditorium",
+      "seat": "J-303"
+    },
+    "2026AIB1047": {
+      "room": "Auditorium",
+      "seat": "I-307"
+    },
+    "2026MCB1539": {
+      "room": "Auditorium",
+      "seat": "J-207"
+    },
+    "2026ESB1496": {
+      "room": "Auditorium",
+      "seat": "K-107"
+    },
+    "2026EEB1390": {
+      "room": "Auditorium",
+      "seat": "J-307"
+    },
+    "2026AIB1048": {
+      "room": "Auditorium",
+      "seat": "K-101"
+    },
+    "2026MCB1540": {
+      "room": "Auditorium",
+      "seat": "J-211"
+    },
+    "2026ESB1497": {
+      "room": "Auditorium",
+      "seat": "K-201"
+    },
+    "2026EEB1391": {
+      "room": "Auditorium",
+      "seat": "L-103"
+    },
+    "2026AIB1049": {
+      "room": "Auditorium",
+      "seat": "K-105"
+    },
+    "2026MCB1541": {
+      "room": "Auditorium",
+      "seat": "J-301"
+    },
+    "2026ESB1498": {
+      "room": "Auditorium",
+      "seat": "K-205"
+    },
+    "2026EEB1392": {
+      "room": "Auditorium",
+      "seat": "L-107"
+    },
+    "2026AIB1050": {
+      "room": "Auditorium",
+      "seat": "K-109"
+    },
+    "2026MCB1542": {
+      "room": "Auditorium",
+      "seat": "J-305"
+    },
+    "2026ESB1499": {
+      "room": "Auditorium",
+      "seat": "K-209"
+    },
+    "2026EEB1393": {
+      "room": "Auditorium",
+      "seat": "L-203"
+    },
+    "2026AIB1051": {
+      "room": "Auditorium",
+      "seat": "K-203"
+    },
+    "2026MCB1543": {
+      "room": "Auditorium",
+      "seat": "J-309"
+    },
+    "2026ESB1500": {
+      "room": "Auditorium",
+      "seat": "K-213"
+    },
+    "2026EEB1394": {
+      "room": "Auditorium",
+      "seat": "L-207"
+    },
+    "2026AIB1052": {
+      "room": "Auditorium",
+      "seat": "K-207"
+    },
+    "2026MCB1544": {
+      "room": "Auditorium",
+      "seat": "L-101"
+    },
+    "2026ESB1501": {
+      "room": "Auditorium",
+      "seat": "K-303"
+    },
+    "2026EEB1395": {
+      "room": "Auditorium",
+      "seat": "L-211"
+    },
+    "2026AIB1053": {
+      "room": "Auditorium",
+      "seat": "K-211"
+    },
+    "2026MCB1545": {
+      "room": "Auditorium",
+      "seat": "L-105"
+    },
+    "2025EEB1376": {
+      "room": "Auditorium",
+      "seat": "K-307"
+    },
+    "2026EEB1396": {
+      "room": "Auditorium",
+      "seat": "L-301"
+    },
+    "2026AIB1054": {
+      "room": "Auditorium",
+      "seat": "K-301"
+    },
+    "2026MCB1546": {
+      "room": "Auditorium",
+      "seat": "L-201"
+    },
+    "2026EEB1309": {
+      "room": "Auditorium",
+      "seat": "M-103"
+    },
+    "2026EEB1397": {
+      "room": "Auditorium",
+      "seat": "L-305"
+    },
+    "2026AIB1055": {
+      "room": "Auditorium",
+      "seat": "K-305"
+    },
+    "2026MCB1547": {
+      "room": "Auditorium",
+      "seat": "L-205"
+    },
+    "2026EEB1310": {
+      "room": "Auditorium",
+      "seat": "M-107"
+    },
+    "2026EEB1398": {
+      "room": "Auditorium",
+      "seat": "N-103"
+    },
+    "2026AIB1056": {
+      "room": "Auditorium",
+      "seat": "K-309"
+    },
+    "2026MCB1548": {
+      "room": "Auditorium",
+      "seat": "L-209"
+    },
+    "2026EEB1311": {
+      "room": "Auditorium",
+      "seat": "M-203"
+    },
+    "2026EEB1399": {
+      "room": "Auditorium",
+      "seat": "N-201"
+    },
+    "2026AIB1057": {
+      "room": "Auditorium",
+      "seat": "M-101"
+    },
+    "2026MCB1549": {
+      "room": "Auditorium",
+      "seat": "L-213"
+    },
+    "2026EEB1312": {
+      "room": "Auditorium",
+      "seat": "M-207"
+    },
+    "2026EEB1400": {
+      "room": "Auditorium",
+      "seat": "N-205"
+    },
+    "2026AIB1058": {
+      "room": "Auditorium",
+      "seat": "M-105"
+    },
+    "2026MCB1550": {
+      "room": "Auditorium",
+      "seat": "L-303"
+    },
+    "2026EEB1313": {
+      "room": "Auditorium",
+      "seat": "M-211"
+    },
+    "2026EEB1401": {
+      "room": "Auditorium",
+      "seat": "N-209"
+    },
+    "2026AIB1059": {
+      "room": "Auditorium",
+      "seat": "M-201"
+    },
+    "2026MCB1551": {
+      "room": "Auditorium",
+      "seat": "L-307"
+    },
+    "2026EEB1314": {
+      "room": "Auditorium",
+      "seat": "M-215"
+    },
+    "2026EEB1402": {
+      "room": "Auditorium",
+      "seat": "N-213"
+    },
+    "2026AIB1060": {
+      "room": "Auditorium",
+      "seat": "M-205"
+    },
+    "2026MCB1552": {
+      "room": "Auditorium",
+      "seat": "N-101"
+    },
+    "2026EEB1315": {
+      "room": "Auditorium",
+      "seat": "M-303"
+    },
+    "2026EEB1403": {
+      "room": "Auditorium",
+      "seat": "N-301"
+    },
+    "2026AIB1061": {
+      "room": "Auditorium",
+      "seat": "M-209"
+    },
+    "2026MCB1553": {
+      "room": "Auditorium",
+      "seat": "N-105"
+    },
+    "2026EEB1316": {
+      "room": "Auditorium",
+      "seat": "M-307"
+    },
+    "2026EEB1404": {
+      "room": "Auditorium",
+      "seat": "P-103"
+    },
+    "2026AIB1062": {
+      "room": "Auditorium",
+      "seat": "M-213"
+    },
+    "2026MCB1554": {
+      "room": "Auditorium",
+      "seat": "N-203"
+    },
+    "2026EEB1317": {
+      "room": "Auditorium",
+      "seat": "O-103"
+    },
+    "2026EEB1405": {
+      "room": "Auditorium",
+      "seat": "P-111"
+    },
+    "2026AIB1063": {
+      "room": "Auditorium",
+      "seat": "M-301"
+    },
+    "2026MCB1555": {
+      "room": "Auditorium",
+      "seat": "N-207"
+    },
+    "2026EEB1318": {
+      "room": "Auditorium",
+      "seat": "O-201"
+    },
+    "2026EEB1406": {
+      "room": "Auditorium",
+      "seat": "P-201"
+    },
+    "2026AIB1064": {
+      "room": "Auditorium",
+      "seat": "M-305"
+    },
+    "2026MCB1556": {
+      "room": "Auditorium",
+      "seat": "N-211"
+    },
+    "2026EEB1319": {
+      "room": "Auditorium",
+      "seat": "O-205"
+    },
+    "2026EEB1407": {
+      "room": "Auditorium",
+      "seat": "P-205"
+    },
+    "2026AIB1065": {
+      "room": "Auditorium",
+      "seat": "O-101"
+    },
+    "2026MCB1557": {
+      "room": "Auditorium",
+      "seat": "N-215"
+    },
+    "2026EEB1320": {
+      "room": "Auditorium",
+      "seat": "O-209"
+    },
+    "2026EEB1408": {
+      "room": "Auditorium",
+      "seat": "P-213"
+    },
+    "2026AIB1066": {
+      "room": "Auditorium",
+      "seat": "O-105"
+    },
+    "2026MCB1558": {
+      "room": "Auditorium",
+      "seat": "N-303"
+    },
+    "2026EEB1321": {
+      "room": "Auditorium",
+      "seat": "O-213"
+    },
+    "2026EEB1409": {
+      "room": "Auditorium",
+      "seat": "P-301"
+    },
+    "2026AIB1067": {
+      "room": "Auditorium",
+      "seat": "O-203"
+    },
+    "2026MCB1559": {
+      "room": "Auditorium",
+      "seat": "P-101"
+    },
+    "2026EEB1322": {
+      "room": "Auditorium",
+      "seat": "O-301"
+    },
+    "2026EEB1410": {
+      "room": "Auditorium",
+      "seat": "P-311"
+    },
+    "2026AIB1068": {
+      "room": "Auditorium",
+      "seat": "O-207"
+    },
+    "2026MCB1560": {
+      "room": "Auditorium",
+      "seat": "P-105"
+    },
+    "2026EEB1323": {
+      "room": "Auditorium",
+      "seat": "O-305"
+    },
+    "2026EEB1411": {
+      "room": "Auditorium",
+      "seat": "P-315"
+    },
+    "2026AIB1069": {
+      "room": "Auditorium",
+      "seat": "O-211"
+    },
+    "2026MCB1561": {
+      "room": "Auditorium",
+      "seat": "P-113"
+    },
+    "2026EEB1324": {
+      "room": "Auditorium",
+      "seat": "Q-103"
+    },
+    "2026EEB1412": {
+      "room": "Auditorium",
+      "seat": "R-103"
+    },
+    "2026AIB1070": {
+      "room": "Auditorium",
+      "seat": "O-215"
+    },
+    "2026MCB1562": {
+      "room": "Auditorium",
+      "seat": "P-203"
+    },
+    "2026EEB1325": {
+      "room": "Auditorium",
+      "seat": "Q-107"
+    },
+    "2026EEB1413": {
+      "room": "Auditorium",
+      "seat": "R-201"
+    },
+    "2026AIB1071": {
+      "room": "Auditorium",
+      "seat": "O-303"
+    },
+    "2026MCB1563": {
+      "room": "Auditorium",
+      "seat": "P-211"
+    },
+    "2026EEB1326": {
+      "room": "Auditorium",
+      "seat": "Q-201"
+    },
+    "2026EEB1414": {
+      "room": "Auditorium",
+      "seat": "R-205"
+    },
+    "2026AIB1072": {
+      "room": "Auditorium",
+      "seat": "Q-101"
+    },
+    "2026MCB1564": {
+      "room": "Auditorium",
+      "seat": "P-215"
+    },
+    "2026EEB1327": {
+      "room": "Auditorium",
+      "seat": "Q-205"
+    },
+    "2026EEB1415": {
+      "room": "Auditorium",
+      "seat": "R-211"
+    },
+    "2026AIB1073": {
+      "room": "Auditorium",
+      "seat": "Q-105"
+    },
+    "2026MCB1565": {
+      "room": "Auditorium",
+      "seat": "P-303"
+    },
+    "2026EEB1328": {
+      "room": "Auditorium",
+      "seat": "Q-211"
+    },
+    "2026EEB1416": {
+      "room": "Auditorium",
+      "seat": "R-215"
+    },
+    "2026AIB1074": {
+      "room": "Auditorium",
+      "seat": "Q-109"
+    },
+    "2026MCB1566": {
+      "room": "Auditorium",
+      "seat": "P-313"
+    },
+    "2026EEB1329": {
+      "room": "Auditorium",
+      "seat": "Q-215"
+    },
+    "2026EEB1417": {
+      "room": "Auditorium",
+      "seat": "R-301"
+    },
+    "2026AIB1075": {
+      "room": "Auditorium",
+      "seat": "Q-203"
+    },
+    "2026MCB1567": {
+      "room": "Auditorium",
+      "seat": "R-101"
+    },
+    "2026EEB1330": {
+      "room": "Auditorium",
+      "seat": "Q-301"
+    },
+    "2026EEB1418": {
+      "room": "Auditorium",
+      "seat": "R-305"
+    },
+    "2026AIB1076": {
+      "room": "Auditorium",
+      "seat": "Q-207"
+    },
+    "2026MCB1568": {
+      "room": "Auditorium",
+      "seat": "R-105"
+    },
+    "2026EEB1331": {
+      "room": "Auditorium",
+      "seat": "Q-305"
+    },
+    "2026EEB1419": {
+      "room": "Auditorium",
+      "seat": "R-309"
+    },
+    "2026AIB1077": {
+      "room": "Auditorium",
+      "seat": "Q-213"
+    },
+    "2026MCB1569": {
+      "room": "Auditorium",
+      "seat": "R-203"
+    },
+    "2026EEB1332": {
+      "room": "Auditorium",
+      "seat": "Q-309"
+    },
+    "2026EEB1420": {
+      "room": "Auditorium",
+      "seat": "T-103"
+    },
+    "2026AIB1078": {
+      "room": "Auditorium",
+      "seat": "Q-217"
+    },
+    "2026MCB1570": {
+      "room": "Auditorium",
+      "seat": "R-207"
+    },
+    "2026EEB1333": {
+      "room": "Auditorium",
+      "seat": "S-103"
+    },
+    "2026EEB1421": {
+      "room": "Auditorium",
+      "seat": "T-203"
+    },
+    "2026AIB1079": {
+      "room": "Auditorium",
+      "seat": "Q-303"
+    },
+    "2026MCB1571": {
+      "room": "Auditorium",
+      "seat": "R-213"
+    },
+    "2026EEB1334": {
+      "room": "Auditorium",
+      "seat": "S-203"
+    },
+    "2026EEB1422": {
+      "room": "Auditorium",
+      "seat": "T-207"
+    },
+    "2026AIB1080": {
+      "room": "Auditorium",
+      "seat": "Q-307"
+    },
+    "2026MCB1572": {
+      "room": "Auditorium",
+      "seat": "R-217"
+    },
+    "2026EEB1335": {
+      "room": "Auditorium",
+      "seat": "S-207"
+    },
+    "2026EEB1423": {
+      "room": "Auditorium",
+      "seat": "T-213"
+    },
+    "2026AIB1081": {
+      "room": "Auditorium",
+      "seat": "S-101"
+    },
+    "2026MCB1573": {
+      "room": "Auditorium",
+      "seat": "R-303"
+    },
+    "2026EEB1336": {
+      "room": "Auditorium",
+      "seat": "S-213"
+    },
+    "2026EEB1424": {
+      "room": "Auditorium",
+      "seat": "T-217"
+    },
+    "2026AIB1082": {
+      "room": "Auditorium",
+      "seat": "S-201"
+    },
+    "2026MCB1574": {
+      "room": "Auditorium",
+      "seat": "R-307"
+    },
+    "2026EEB1337": {
+      "room": "Auditorium",
+      "seat": "S-217"
+    },
+    "2026EEB1425": {
+      "room": "Auditorium",
+      "seat": "T-303"
+    },
+    "2026AIB1083": {
+      "room": "Auditorium",
+      "seat": "S-205"
+    },
+    "2026MCB1575": {
+      "room": "Auditorium",
+      "seat": "T-101"
+    },
+    "2026EEB1338": {
+      "room": "Auditorium",
+      "seat": "S-303"
+    },
+    "2026EEB1426": {
+      "room": "Auditorium"
+    },
+    "2026AIB1084": {
+      "room": "Auditorium",
+      "seat": "S-211"
+    },
+    "2026MCB1576": {
+      "room": "Auditorium",
+      "seat": "T-201"
+    },
+    "2026EEB1339": {
+      "room": "Auditorium",
+      "seat": "U-203"
+    },
+    "2026EEB1427": {
+      "room": "Auditorium"
+    },
+    "2026AIB1085": {
+      "room": "Auditorium",
+      "seat": "S-215"
+    },
+    "2026MCB1577": {
+      "room": "Auditorium",
+      "seat": "T-205"
+    },
+    "2026EEB1340": {
+      "room": "Auditorium",
+      "seat": "U-207"
+    },
+    "2026AIB1086": {
+      "room": "Auditorium",
+      "seat": "S-301"
+    },
+    "2026MCB1578": {
+      "room": "Auditorium",
+      "seat": "T-211"
+    },
+    "2026EEB1341": {
+      "room": "Auditorium",
+      "seat": "U-213"
+    },
+    "2026AIB1087": {
+      "room": "Auditorium",
+      "seat": "U-201"
+    },
+    "2026MCB1579": {
+      "room": "Auditorium",
+      "seat": "T-215"
+    },
+    "2026EEB1342": {
+      "room": "Auditorium",
+      "seat": "U-217"
+    },
+    "2026AIB1088": {
+      "room": "Auditorium",
+      "seat": "U-205"
+    },
+    "2026MCB1580": {
+      "room": "Auditorium",
+      "seat": "T-301"
+    },
+    "2026EEB1343": {
+      "room": "Auditorium"
+    },
+    "2026AIB1089": {
+      "room": "Auditorium",
+      "seat": "U-211"
+    },
+    "2026MCB1581": {
+      "room": "Auditorium"
+    },
+    "2026AIB1090": {
+      "room": "Auditorium",
+      "seat": "U-215"
+    },
+    "2026MCB1696": {
+      "room": "Auditorium"
+    },
+    "2026EEB1695": {
+      "room": "M3",
+      "seat": "A-101"
+    },
+    "2026CSB1188": {
+      "room": "M3",
+      "seat": "B-101"
+    },
+    "2026CSB1208": {
+      "room": "M3",
+      "seat": "A-103"
+    },
+    "2026CSB1169": {
+      "room": "M3",
+      "seat": "A-105"
+    },
+    "2026CSB1189": {
+      "room": "M3",
+      "seat": "B-105"
+    },
+    "2026CSB1209": {
+      "room": "M3",
+      "seat": "A-107"
+    },
+    "2026CSB1170": {
+      "room": "M3",
+      "seat": "A-108"
+    },
+    "2026CSB1190": {
+      "room": "M3",
+      "seat": "B-109"
+    },
+    "2026CSB1210": {
+      "room": "M3",
+      "seat": "A-110"
+    },
+    "2026CSB1171": {
+      "room": "M3",
+      "seat": "A-112"
+    },
+    "2026CSB1191": {
+      "room": "M3",
+      "seat": "B-113"
+    },
+    "2026CSB1211": {
+      "room": "M3",
+      "seat": "A-114"
+    },
+    "2026CSB1172": {
+      "room": "M3",
+      "seat": "C-101"
+    },
+    "2026CSB1192": {
+      "room": "M3",
+      "seat": "D-101"
+    },
+    "2026CSB1212": {
+      "room": "M3",
+      "seat": "C-103"
+    },
+    "2026CSB1173": {
+      "room": "M3",
+      "seat": "C-105"
+    },
+    "2026CSB1193": {
+      "room": "M3",
+      "seat": "D-105"
+    },
+    "2026CSB1213": {
+      "room": "M3",
+      "seat": "C-107"
+    },
+    "2026CSB1174": {
+      "room": "M3",
+      "seat": "C--109"
+    },
+    "2026CSB1194": {
+      "room": "M3",
+      "seat": "D-109"
+    },
+    "2026CSB1214": {
+      "room": "M3",
+      "seat": "C-111"
+    },
+    "2026CSB1175": {
+      "room": "M3",
+      "seat": "C-113"
+    },
+    "2026CSB1195": {
+      "room": "M3",
+      "seat": "D-113"
+    },
+    "2026CSB1215": {
+      "room": "M3",
+      "seat": "C-115"
+    },
+    "2026CSB1176": {
+      "room": "M3",
+      "seat": "E-101"
+    },
+    "2026CSB1196": {
+      "room": "M3",
+      "seat": "F-101"
+    },
+    "2026CSB1216": {
+      "room": "M3",
+      "seat": "E-103"
+    },
+    "2026CSB1177": {
+      "room": "M3",
+      "seat": "E-105"
+    },
+    "2026CSB1197": {
+      "room": "M3",
+      "seat": "F-105"
+    },
+    "2026CSB1217": {
+      "room": "M3",
+      "seat": "E-107"
+    },
+    "2026CSB1178": {
+      "room": "M3",
+      "seat": "E-109"
+    },
+    "2026CSB1198": {
+      "room": "M3",
+      "seat": "F-109"
+    },
+    "2026CSB1179": {
+      "room": "M3",
+      "seat": "E-113"
+    },
+    "2026CSB1199": {
+      "room": "M3",
+      "seat": "F-113"
+    },
+    "2026CSB1180": {
+      "room": "M3",
+      "seat": "G-101"
+    },
+    "2026CSB1200": {
+      "room": "M3"
+    },
+    "2026CSB1181": {
+      "room": "M3",
+      "seat": "G-103"
+    },
+    "2026CSB1201": {
+      "room": "M3"
+    },
+    "2026CSB1182": {
+      "room": "M3",
+      "seat": "G-105"
+    },
+    "2026CSB1202": {
+      "room": "M3"
+    },
+    "2026CSB1183": {
+      "room": "M3",
+      "seat": "G-107"
+    },
+    "2026CSB1203": {
+      "room": "M3"
+    },
+    "2026CSB1184": {
+      "room": "M3"
+    },
+    "2026CSB1204": {
+      "room": "M3"
+    },
+    "2026CSB1185": {
+      "room": "M3"
+    },
+    "2026CSB1205": {
+      "room": "M3"
+    },
+    "2026CSB1186": {
+      "room": "M3"
+    },
+    "2026CSB1206": {
+      "room": "M3"
+    },
+    "2026CSB1187": {
+      "room": "M3"
+    },
+    "2026CSB1207": {
+      "room": "M3"
+    },
+    "2026CSB1218": {
+      "room": "M4",
+      "seat": "A-101"
+    },
+    "2026CSB1238": {
+      "room": "M4",
+      "seat": "B-101"
+    },
+    "2026CSB1258": {
+      "room": "M4",
+      "seat": "A-103"
+    },
+    "2026CSB1219": {
+      "room": "M4",
+      "seat": "A-105"
+    },
+    "2026CSB1239": {
+      "room": "M4",
+      "seat": "B-105"
+    },
+    "2026CSB1259": {
+      "room": "M4",
+      "seat": "A-107"
+    },
+    "2026CSB1220": {
+      "room": "M4",
+      "seat": "A-108"
+    },
+    "2026CSB1240": {
+      "room": "M4",
+      "seat": "B-109"
+    },
+    "2026CSB1260": {
+      "room": "M4",
+      "seat": "A-110"
+    },
+    "2026CSB1221": {
+      "room": "M4",
+      "seat": "A-112"
+    },
+    "2026CSB1241": {
+      "room": "M4",
+      "seat": "B-113"
+    },
+    "2026CSB1261": {
+      "room": "M4",
+      "seat": "A-114"
+    },
+    "2026CSB1222": {
+      "room": "M4",
+      "seat": "C-101"
+    },
+    "2026CSB1242": {
+      "room": "M4",
+      "seat": "D-101"
+    },
+    "2026CSB1262": {
+      "room": "M4",
+      "seat": "C-103"
+    },
+    "2026CSB1223": {
+      "room": "M4",
+      "seat": "C-105"
+    },
+    "2026CSB1243": {
+      "room": "M4",
+      "seat": "D-105"
+    },
+    "2026CSB1263": {
+      "room": "M4",
+      "seat": "C-107"
+    },
+    "2026CSB1224": {
+      "room": "M4",
+      "seat": "C--109"
+    },
+    "2026CSB1244": {
+      "room": "M4",
+      "seat": "D-109"
+    },
+    "2026CSB1264": {
+      "room": "M4",
+      "seat": "C-111"
+    },
+    "2026CSB1225": {
+      "room": "M4",
+      "seat": "C-113"
+    },
+    "2026CSB1245": {
+      "room": "M4",
+      "seat": "D-113"
+    },
+    "2026CSB1265": {
+      "room": "M4",
+      "seat": "C-115"
+    },
+    "2026CSB1226": {
+      "room": "M4",
+      "seat": "E-101"
+    },
+    "2026CSB1246": {
+      "room": "M4",
+      "seat": "F-101"
+    },
+    "2026CSB1266": {
+      "room": "M4",
+      "seat": "E-103"
+    },
+    "2026CSB1227": {
+      "room": "M4",
+      "seat": "E-105"
+    },
+    "2026CSB1247": {
+      "room": "M4",
+      "seat": "F-105"
+    },
+    "2026CSB1267": {
+      "room": "M4",
+      "seat": "E-107"
+    },
+    "2026CSB1228": {
+      "room": "M4",
+      "seat": "E-109"
+    },
+    "2026CSB1248": {
+      "room": "M4",
+      "seat": "F-109"
+    },
+    "2026CSB1229": {
+      "room": "M4",
+      "seat": "E-113"
+    },
+    "2026CSB1249": {
+      "room": "M4",
+      "seat": "F-113"
+    },
+    "2026CSB1230": {
+      "room": "M4",
+      "seat": "G-101"
+    },
+    "2026CSB1250": {
+      "room": "M4"
+    },
+    "2026CSB1231": {
+      "room": "M4",
+      "seat": "G-103"
+    },
+    "2026CSB1251": {
+      "room": "M4"
+    },
+    "2026CSB1232": {
+      "room": "M4",
+      "seat": "G-105"
+    },
+    "2026CSB1252": {
+      "room": "M4"
+    },
+    "2026CSB1233": {
+      "room": "M4",
+      "seat": "G-107"
+    },
+    "2026CSB1253": {
+      "room": "M4"
+    },
+    "2026CSB1234": {
+      "room": "M4"
+    },
+    "2026CSB1254": {
+      "room": "M4"
+    },
+    "2026CSB1235": {
+      "room": "M4"
+    },
+    "2026CSB1255": {
+      "room": "M4"
+    },
+    "2026CSB1236": {
+      "room": "M4"
+    },
+    "2026CSB1256": {
+      "room": "M4"
+    },
+    "2026CSB1237": {
+      "room": "M4"
+    },
+    "2026CSB1257": {
+      "room": "M4"
+    },
+    "2026CSB1268": {
+      "room": "M5",
+      "seat": "A-101"
+    },
+    "2026CSB1694": {
+      "room": "M5",
+      "seat": "B-101"
+    },
+    "2026EPB1468": {
+      "room": "M5",
+      "seat": "A-103"
+    },
+    "2026ICB1446": {
+      "room": "M5",
+      "seat": "B-103"
+    },
+    "2026CSB1269": {
+      "room": "M5",
+      "seat": "A-105"
+    },
+    "2026EPB1447": {
+      "room": "M5",
+      "seat": "B-105"
+    },
+    "2026EPB1469": {
+      "room": "M5",
+      "seat": "A-107"
+    },
+    "2026MEB1582": {
+      "room": "M5",
+      "seat": "B-107"
+    },
+    "2026CSB1270": {
+      "room": "M5",
+      "seat": "A-108"
+    },
+    "2026EPB1448": {
+      "room": "M5",
+      "seat": "B-109"
+    },
+    "2026EPB1470": {
+      "room": "M5",
+      "seat": "A-110"
+    },
+    "2026MEB1583": {
+      "room": "M5",
+      "seat": "B-111"
+    },
+    "2026CSB1271": {
+      "room": "M5",
+      "seat": "A-112"
+    },
+    "2026EPB1449": {
+      "room": "M5",
+      "seat": "B-113"
+    },
+    "2026EPB1471": {
+      "room": "M5",
+      "seat": "A-114"
+    },
+    "2026MEB1584": {
+      "room": "M5",
+      "seat": "B-115"
+    },
+    "2026CSB1272": {
+      "room": "M5",
+      "seat": "A-116"
+    },
+    "2026EPB1450": {
+      "room": "M5",
+      "seat": "B-117"
+    },
+    "2026ICB1428": {
+      "room": "M5",
+      "seat": "A-118"
+    },
+    "2026MEB1585": {
+      "room": "M5",
+      "seat": "B-119"
+    },
+    "2026CSB1273": {
+      "room": "M5",
+      "seat": "C-101"
+    },
+    "2026EPB1451": {
+      "room": "M5",
+      "seat": "D-101"
+    },
+    "2026ICB1429": {
+      "room": "M5",
+      "seat": "C-103"
+    },
+    "2026MEB1586": {
+      "room": "M5",
+      "seat": "D-103"
+    },
+    "2026CSB1274": {
+      "room": "M5",
+      "seat": "C-105"
+    },
+    "2026EPB1452": {
+      "room": "M5",
+      "seat": "D-105"
+    },
+    "2026ICB1430": {
+      "room": "M5",
+      "seat": "C-107"
+    },
+    "2026MEB1587": {
+      "room": "M5",
+      "seat": "D-107"
+    },
+    "2026CSB1275": {
+      "room": "M5",
+      "seat": "C-109"
+    },
+    "2026EPB1453": {
+      "room": "M5",
+      "seat": "D-109"
+    },
+    "2026ICB1431": {
+      "room": "M5",
+      "seat": "C-111"
+    },
+    "2026MEB1588": {
+      "room": "M5",
+      "seat": "D-111"
+    },
+    "2026CSB1276": {
+      "room": "M5",
+      "seat": "C-113"
+    },
+    "2026EPB1454": {
+      "room": "M5",
+      "seat": "D-113"
+    },
+    "2026ICB1432": {
+      "room": "M5",
+      "seat": "C-115"
+    },
+    "2026MEB1589": {
+      "room": "M5",
+      "seat": "D-115"
+    },
+    "2026CSB1277": {
+      "room": "M5",
+      "seat": "C-117"
+    },
+    "2026EPB1455": {
+      "room": "M5",
+      "seat": "D-117"
+    },
+    "2026ICB1433": {
+      "room": "M5",
+      "seat": "C-119"
+    },
+    "2026MEB1590": {
+      "room": "M5",
+      "seat": "D-119"
+    },
+    "2026CSB1278": {
+      "room": "M5",
+      "seat": "C-121"
+    },
+    "2026EPB1456": {
+      "room": "M5",
+      "seat": "D-121"
+    },
+    "2026ICB1434": {
+      "room": "M5",
+      "seat": "E-103"
+    },
+    "2026MEB1591": {
+      "room": "M5",
+      "seat": "F-103"
+    },
+    "2026CSB1279": {
+      "room": "M5",
+      "seat": "E-101"
+    },
+    "2026EPB1457": {
+      "room": "M5",
+      "seat": "F-101"
+    },
+    "2026ICB1435": {
+      "room": "M5",
+      "seat": "E-107"
+    },
+    "2026MEB1592": {
+      "room": "M5",
+      "seat": "F-107"
+    },
+    "2026CSB1280": {
+      "room": "M5",
+      "seat": "E-105"
+    },
+    "2026EPB1458": {
+      "room": "M5",
+      "seat": "F-105"
+    },
+    "2026ICB1436": {
+      "room": "M5",
+      "seat": "E-110"
+    },
+    "2026MEB1593": {
+      "room": "M5",
+      "seat": "F-111"
+    },
+    "2026CSB1281": {
+      "room": "M5",
+      "seat": "E-108"
+    },
+    "2026EPB1459": {
+      "room": "M5",
+      "seat": "F-109"
+    },
+    "2026ICB1437": {
+      "room": "M5",
+      "seat": "E-114"
+    },
+    "2026MEB1594": {
+      "room": "M5",
+      "seat": "F-115"
+    },
+    "2026CSB1282": {
+      "room": "M5",
+      "seat": "E-112"
+    },
+    "2026EPB1460": {
+      "room": "M5",
+      "seat": "F-113"
+    },
+    "2026ICB1438": {
+      "room": "M5",
+      "seat": "E-117"
+    },
+    "2026MEB1595": {
+      "room": "M5",
+      "seat": "F-119"
+    },
+    "2026CSB1283": {
+      "room": "M5",
+      "seat": "E-115"
+    },
+    "2026EPB1461": {
+      "room": "M5",
+      "seat": "F-117"
+    },
+    "2026ICB1439": {
+      "room": "M5",
+      "seat": "E-121"
+    },
+    "2026MEB1596": {
+      "room": "M5",
+      "seat": "H-103"
+    },
+    "2026CSB1284": {
+      "room": "M5",
+      "seat": "E-119"
+    },
+    "2026EPB1462": {
+      "room": "M5",
+      "seat": "F-121"
+    },
+    "2026ICB1440": {
+      "room": "M5",
+      "seat": "G-103"
+    },
+    "2026MEB1597": {
+      "room": "M5",
+      "seat": "H-107"
+    },
+    "2026CSB1285": {
+      "room": "M5",
+      "seat": "G-101"
+    },
+    "2026EPB1463": {
+      "room": "M5",
+      "seat": "H-101"
+    },
+    "2026ICB1441": {
+      "room": "M5",
+      "seat": "G-107"
+    },
+    "2026MEB1598": {
+      "room": "M5",
+      "seat": "H-111"
+    },
+    "2026CSB1286": {
+      "room": "M5",
+      "seat": "G-105"
+    },
+    "2026EPB1464": {
+      "room": "M5",
+      "seat": "H-105"
+    },
+    "2026ICB1442": {
+      "room": "M5",
+      "seat": "G-111"
+    },
+    "2026MEB1599": {
+      "room": "M5",
+      "seat": "H-115"
+    },
+    "2026CSB1287": {
+      "room": "M5",
+      "seat": "G-109"
+    },
+    "2026EPB1465": {
+      "room": "M5",
+      "seat": "H-109"
+    },
+    "2026ICB1443": {
+      "room": "M5",
+      "seat": "G-115"
+    },
+    "2022CEB1012": {
+      "room": "M5",
+      "seat": "H-119"
+    },
+    "2026CSB1288": {
+      "room": "M5",
+      "seat": "G-113"
+    },
+    "2026EPB1466": {
+      "room": "M5",
+      "seat": "H-113"
+    },
+    "2026ICB1444": {
+      "room": "M5",
+      "seat": "G-119"
+    },
+    "2022CEB1030": {
+      "room": "M5",
+      "seat": "H-123"
+    },
+    "2026CSB1693": {
+      "room": "M5",
+      "seat": "G-117"
+    },
+    "2026EPB1467": {
+      "room": "M5",
+      "seat": "H-117"
+    },
+    "2026ICB1445": {
+      "room": "M5"
+    },
+    "2022CSB1106": {
+      "room": "M5"
+    },
+    "2026MEB1600": {
+      "room": "M6",
+      "seat": "A-101"
+    },
+    "2026MEB1622": {
+      "room": "M6",
+      "seat": "B-101"
+    },
+    "2026MEB1644": {
+      "room": "M6",
+      "seat": "A-103"
+    },
+    "2026CHB1101": {
+      "room": "M6",
+      "seat": "B-103"
+    },
+    "2026MEB1601": {
+      "room": "M6",
+      "seat": "A-105"
+    },
+    "2026MEB1623": {
+      "room": "M6",
+      "seat": "B-105"
+    },
+    "2026MEB1645": {
+      "room": "M6",
+      "seat": "A-107"
+    },
+    "2026CHB1102": {
+      "room": "M6",
+      "seat": "B-107"
+    },
+    "2026MEB1602": {
+      "room": "M6",
+      "seat": "A-109"
+    },
+    "2026MEB1624": {
+      "room": "M6",
+      "seat": "B-109"
+    },
+    "2026MEB1646": {
+      "room": "M6",
+      "seat": "A-110"
+    },
+    "2026CHB1103": {
+      "room": "M6",
+      "seat": "B-111"
+    },
+    "2026MEB1603": {
+      "room": "M6",
+      "seat": "A-113"
+    },
+    "2026MEB1625": {
+      "room": "M6",
+      "seat": "B-113"
+    },
+    "2026MEB1647": {
+      "room": "M6",
+      "seat": "A-114"
+    },
+    "2026CHB1104": {
+      "room": "M6",
+      "seat": "B-115"
+    },
+    "2026MEB1604": {
+      "room": "M6",
+      "seat": "A-116"
+    },
+    "2026MEB1626": {
+      "room": "M6",
+      "seat": "B-117"
+    },
+    "2026MEB1648": {
+      "room": "M6",
+      "seat": "A-118"
+    },
+    "2026CHB1105": {
+      "room": "M6",
+      "seat": "B-119"
+    },
+    "2026MEB1605": {
+      "room": "M6",
+      "seat": "A-120"
+    },
+    "2026MEB1627": {
+      "room": "M6",
+      "seat": "D-101"
+    },
+    "2026MEB1649": {
+      "room": "M6",
+      "seat": "C-103"
+    },
+    "2026CHB1106": {
+      "room": "M6",
+      "seat": "D-103"
+    },
+    "2026MEB1606": {
+      "room": "M6",
+      "seat": "C-101"
+    },
+    "2026MEB1628": {
+      "room": "M6",
+      "seat": "D-105"
+    },
+    "2026MEB1650": {
+      "room": "M6",
+      "seat": "C-107"
+    },
+    "2026CHB1107": {
+      "room": "M6",
+      "seat": "D-107"
+    },
+    "2026MEB1607": {
+      "room": "M6",
+      "seat": "C-105"
+    },
+    "2026MEB1629": {
+      "room": "M6",
+      "seat": "D-109"
+    },
+    "2026MEB1651": {
+      "room": "M6",
+      "seat": "C-111"
+    },
+    "2026CHB1108": {
+      "room": "M6",
+      "seat": "D-111"
+    },
+    "2026MEB1608": {
+      "room": "M6",
+      "seat": "C-109"
+    },
+    "2026MEB1630": {
+      "room": "M6",
+      "seat": "D-113"
+    },
+    "2026MEB1652": {
+      "room": "M6",
+      "seat": "C-115"
+    },
+    "2026CHB1109": {
+      "room": "M6",
+      "seat": "D-115"
+    },
+    "2026MEB1609": {
+      "room": "M6",
+      "seat": "C-113"
+    },
+    "2026MEB1631": {
+      "room": "M6",
+      "seat": "D-117"
+    },
+    "2026MEB1653": {
+      "room": "M6",
+      "seat": "C-119"
+    },
+    "2026CHB1110": {
+      "room": "M6",
+      "seat": "D-119"
+    },
+    "2026MEB1610": {
+      "room": "M6",
+      "seat": "C-117"
+    },
+    "2026MEB1632": {
+      "room": "M6",
+      "seat": "D-121"
+    },
+    "2026MEB1654": {
+      "room": "M6",
+      "seat": "E-103"
+    },
+    "2026CHB1111": {
+      "room": "M6",
+      "seat": "F-103"
+    },
+    "2026MEB1611": {
+      "room": "M6",
+      "seat": "C-121"
+    },
+    "2026MEB1633": {
+      "room": "M6",
+      "seat": "F-101"
+    },
+    "2026MEB1655": {
+      "room": "M6",
+      "seat": "E-107"
+    },
+    "2026CHB1112": {
+      "room": "M6",
+      "seat": "F-107"
+    },
+    "2026MEB1612": {
+      "room": "M6",
+      "seat": "E-101"
+    },
+    "2026MEB1634": {
+      "room": "M6",
+      "seat": "F-105"
+    },
+    "2026MEB1656": {
+      "room": "M6",
+      "seat": "E-110"
+    },
+    "2026CHB1113": {
+      "room": "M6",
+      "seat": "F-111"
+    },
+    "2026MEB1613": {
+      "room": "M6",
+      "seat": "E-105"
+    },
+    "2026MEB1635": {
+      "room": "M6",
+      "seat": "F-109"
+    },
+    "2026MEB1657": {
+      "room": "M6",
+      "seat": "E-114"
+    },
+    "2026CHB1114": {
+      "room": "M6",
+      "seat": "F-115"
+    },
+    "2026MEB1614": {
+      "room": "M6",
+      "seat": "E-108"
+    },
+    "2026MEB1636": {
+      "room": "M6",
+      "seat": "F-113"
+    },
+    "2026MEB1658": {
+      "room": "M6",
+      "seat": "E-117"
+    },
+    "2026CHB1115": {
+      "room": "M6",
+      "seat": "F-119"
+    },
+    "2026MEB1615": {
+      "room": "M6",
+      "seat": "E-112"
+    },
+    "2026MEB1637": {
+      "room": "M6",
+      "seat": "F-117"
+    },
+    "2026MEB1659": {
+      "room": "M6",
+      "seat": "E-121"
+    },
+    "2026CHB1116": {
+      "room": "M6",
+      "seat": "H-103"
+    },
+    "2026MEB1616": {
+      "room": "M6",
+      "seat": "E-116"
+    },
+    "2026MEB1638": {
+      "room": "M6",
+      "seat": "F-121"
+    },
+    "2026MEB1660": {
+      "room": "M6",
+      "seat": "G-103"
+    },
+    "2026CHB1117": {
+      "room": "M6",
+      "seat": "H-107"
+    },
+    "2026MEB1617": {
+      "room": "M6",
+      "seat": "E-120"
+    },
+    "2026MEB1639": {
+      "room": "M6",
+      "seat": "H-101"
+    },
+    "2026MEB1661": {
+      "room": "M6",
+      "seat": "G-107"
+    },
+    "2026CHB1118": {
+      "room": "M6",
+      "seat": "H-111"
+    },
+    "2026MEB1618": {
+      "room": "M6",
+      "seat": "G-101"
+    },
+    "2026MEB1640": {
+      "room": "M6",
+      "seat": "H-105"
+    },
+    "2026MEB1662": {
+      "room": "M6",
+      "seat": "G-111"
+    },
+    "2026CHB1119": {
+      "room": "M6",
+      "seat": "H-115"
+    },
+    "2026MEB1619": {
+      "room": "M6",
+      "seat": "G-105"
+    },
+    "2026MEB1641": {
+      "room": "M6",
+      "seat": "H-109"
+    },
+    "2026MEB1663": {
+      "room": "M6",
+      "seat": "G-115"
+    },
+    "2022EEB1216": {
+      "room": "M6",
+      "seat": "H-119"
+    },
+    "2026MEB1620": {
+      "room": "M6",
+      "seat": "G-108"
+    },
+    "2026MEB1642": {
+      "room": "M6",
+      "seat": "H-113"
+    },
+    "2026MEB1664": {
+      "room": "M6",
+      "seat": "G-119"
+    },
+    "2026MEB1621": {
+      "room": "M6",
+      "seat": "G-112"
+    },
+    "2026MEB1643": {
+      "room": "M6",
+      "seat": "H-117"
+    },
+    "2026CHB1100": {
+      "room": "M6"
+    },
+    "2026CHB1120": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1142": {
+      "room": "Venue TBC",
+      "seat": "B-101"
+    },
+    "2026CEB1164": {
+      "room": "Venue TBC",
+      "seat": "A-103"
+    },
+    "2026MMB1682": {
+      "room": "Venue TBC",
+      "seat": "B-103"
+    },
+    "2026CHB1121": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1143": {
+      "room": "Venue TBC",
+      "seat": "B-105"
+    },
+    "2026CEB1165": {
+      "room": "Venue TBC",
+      "seat": "A-107"
+    },
+    "2026MMB1683": {
+      "room": "Venue TBC",
+      "seat": "B-107"
+    },
+    "2026CHB1122": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1144": {
+      "room": "Venue TBC",
+      "seat": "B-109"
+    },
+    "2026CEB1166": {
+      "room": "Venue TBC",
+      "seat": "A-110"
+    },
+    "2026MMB1684": {
+      "room": "Venue TBC",
+      "seat": "B-111"
+    },
+    "2026CHB1123": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1145": {
+      "room": "Venue TBC",
+      "seat": "B-113"
+    },
+    "2026CEB1167": {
+      "room": "Venue TBC",
+      "seat": "A-114"
+    },
+    "2026MMB1685": {
+      "room": "Venue TBC",
+      "seat": "B-115"
+    },
+    "2026CHB1124": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1146": {
+      "room": "Venue TBC",
+      "seat": "B-117"
+    },
+    "2026CEB1168": {
+      "room": "Venue TBC",
+      "seat": "A-118"
+    },
+    "2026MMB1686": {
+      "room": "Venue TBC",
+      "seat": "B-119"
+    },
+    "2026CHB1125": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1147": {
+      "room": "Venue TBC",
+      "seat": "D-101"
+    },
+    "2026MMB1665": {
+      "room": "Venue TBC",
+      "seat": "C-103"
+    },
+    "2026MMB1687": {
+      "room": "Venue TBC",
+      "seat": "D-103"
+    },
+    "2026CHB1126": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1148": {
+      "room": "Venue TBC",
+      "seat": "D-105"
+    },
+    "2026MMB1666": {
+      "room": "Venue TBC",
+      "seat": "C-107"
+    },
+    "2026MMB1688": {
+      "room": "Venue TBC",
+      "seat": "D-107"
+    },
+    "2026CHB1127": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1149": {
+      "room": "Venue TBC",
+      "seat": "D-109"
+    },
+    "2026MMB1667": {
+      "room": "Venue TBC",
+      "seat": "C-111"
+    },
+    "2026MMB1689": {
+      "room": "Venue TBC",
+      "seat": "D-111"
+    },
+    "2026CHB1128": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1150": {
+      "room": "Venue TBC",
+      "seat": "D-113"
+    },
+    "2026MMB1668": {
+      "room": "Venue TBC",
+      "seat": "C-115"
+    },
+    "2026MMB1690": {
+      "room": "Venue TBC",
+      "seat": "D-115"
+    },
+    "2026CHB1129": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1151": {
+      "room": "Venue TBC",
+      "seat": "D-117"
+    },
+    "2026MMB1669": {
+      "room": "Venue TBC",
+      "seat": "C-119"
+    },
+    "2026MMB1691": {
+      "room": "Venue TBC",
+      "seat": "D-119"
+    },
+    "2026CHB1130": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1152": {
+      "room": "Venue TBC",
+      "seat": "D-121"
+    },
+    "2026MMB1670": {
+      "room": "Venue TBC",
+      "seat": "E-103"
+    },
+    "2026MMB1692": {
+      "room": "Venue TBC",
+      "seat": "F-103"
+    },
+    "2026CHB1131": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1153": {
+      "room": "Venue TBC",
+      "seat": "F-101"
+    },
+    "2026MMB1671": {
+      "room": "Venue TBC",
+      "seat": "E-107"
+    },
+    "2024CEB1055": {
+      "room": "Venue TBC",
+      "seat": "F-107"
+    },
+    "2026CHB1132": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1154": {
+      "room": "Venue TBC",
+      "seat": "F-105"
+    },
+    "2026MMB1672": {
+      "room": "Venue TBC",
+      "seat": "E-110"
+    },
+    "2024EEB1184": {
+      "room": "Venue TBC",
+      "seat": "F-111"
+    },
+    "2026CHB1133": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1155": {
+      "room": "Venue TBC",
+      "seat": "F-109"
+    },
+    "2026MMB1673": {
+      "room": "Venue TBC",
+      "seat": "E-114"
+    },
+    "2025CSB1241": {
+      "room": "Venue TBC",
+      "seat": "F-115"
+    },
+    "2026CHB1134": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1156": {
+      "room": "Venue TBC",
+      "seat": "F-113"
+    },
+    "2026MMB1674": {
+      "room": "Venue TBC",
+      "seat": "E-117"
+    },
+    "2022MEB1342": {
+      "room": "Venue TBC",
+      "seat": "F-119"
+    },
+    "2026CEB1135": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1157": {
+      "room": "Venue TBC",
+      "seat": "F-117"
+    },
+    "2026MMB1675": {
+      "room": "Venue TBC",
+      "seat": "E-121"
+    },
+    "2022MEB1355": {
+      "room": "Venue TBC",
+      "seat": "H-103"
+    },
+    "2026CEB1136": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1158": {
+      "room": "Venue TBC",
+      "seat": "F-121"
+    },
+    "2026MMB1676": {
+      "room": "Venue TBC",
+      "seat": "G-103"
+    },
+    "2026CEB1137": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1159": {
+      "room": "Venue TBC",
+      "seat": "H-101"
+    },
+    "2026MMB1677": {
+      "room": "Venue TBC",
+      "seat": "G-107"
+    },
+    "2026CEB1138": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1160": {
+      "room": "Venue TBC",
+      "seat": "H-105"
+    },
+    "2026MMB1678": {
+      "room": "Venue TBC",
+      "seat": "G-111"
+    },
+    "2026CEB1139": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1161": {
+      "room": "Venue TBC",
+      "seat": "H-109"
+    },
+    "2026MMB1679": {
+      "room": "Venue TBC",
+      "seat": "G-115"
+    },
+    "2026CEB1140": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1162": {
+      "room": "Venue TBC",
+      "seat": "H-113"
+    },
+    "2026MMB1680": {
+      "room": "Venue TBC",
+      "seat": "G-119"
+    },
+    "2026CEB1141": {
+      "room": "Venue TBC"
+    },
+    "2026CEB1163": {
+      "room": "Venue TBC",
+      "seat": "H-117"
+    },
+    "2026MMB1681": {
+      "room": "Venue TBC"
+    }
   }
 }

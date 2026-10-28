@@ -52,6 +52,7 @@ var TIME_ORDER = {
   '2.00 - 2.50': 840, '3.00 - 3.50': 900, '4.00 - 4.50': 960,
   '5.00 - 5.50': 1020, '6.00- 6.50': 1080, '6.00 - 6.50': 1080, '7.00-7.50': 1140, '7.00 - 7.50': 1140,
   '9.30 - 11.30': 570, '12.30 - 2.30': 750, '3.30 - 5.30': 930,
+  '9.30 - 12.30': 570, '2.30 - 5.30': 870, '7.10 - 8.00': 1150,
   '9.30 AM': 570, '11.00 AM': 660, '2.30 PM': 870, '4.00 PM': 960,
   '11.00 - 12.00': 660, '3.00 - 4.00': 900,
   '2.00 - 5.00': 840, '9.00 - 12.00': 540,
@@ -95,6 +96,7 @@ function classDuration(e){
   if(e.subject === 'HS111-PRESENT') return 8;
   if(/^PH101-LAB/.test(e.subject)) return 230;
   if(/-MIDSEM/.test(e.subject)) return 120;
+  if(/-ENDSEM/.test(e.subject)) return 180;
   if(/-VIVA/.test(e.subject)) return 90;
   if(e.subject === 'WP101-LAB' && e.branch && e.branch.indexOf('CE') !== -1) return 240;
   if(e.subject === 'WP101-LAB' && e.branch && e.branch.indexOf('MME') !== -1) return 170;
@@ -110,6 +112,7 @@ function classDuration(e){
   if(e.subject === 'LS101') return 60;
   if(e.subject === 'MA101-TUT' && e.time === '8.00 - 9.00') return 60;
   if(e.subject === 'MA101-TUT' && e.time === '6.00 - 7.00') return 60;
+  if(e.subject === 'MA101-QUIZ' && e.time === '7.10 - 8.00') return 50;
   if(/-QUIZ/.test(e.subject)) return 60;
   return 50;
 }
@@ -119,6 +122,7 @@ function courseName(subject){
   var name = DATA.courseNames[m[1]];
   if(!name) return null;
   if(/-MIDSEM/.test(subject)) return name+' — Mid-Sem Exam';
+  if(/-ENDSEM/.test(subject)) return name+' — End-Sem Exam';
   if(/-VIVA/.test(subject)) return name+' — Mid-Sem Viva';
   if(/-TUT/.test(subject)) return name+' — Tutorial';
   return /lab/i.test(subject) ? name+' — Lab' : name;
@@ -227,9 +231,13 @@ function itemFromEntry(e, iso, source, student){
     venue: e.venue || null, category: e.category || null, color: subjectColor(e.subject),
     source: source, contributedBy: e.contributedBy || null, link: e.link || null
   };
-  if(source === 'override' && it.category === 'Exam' && student){
+  if(source === 'override' && (it.category === 'Exam' || it.category === 'Quiz') && student){
     var seat = DATA.examSeating && DATA.examSeating[iso] && DATA.examSeating[iso][student.entry];
-    if(seat) it.venue = seat.room + (seat.seat ? ' · Seat ' + seat.seat : '');
+    if(seat){
+      it.baseVenue = it.venue;
+      it.venue = seat.room + (seat.seat ? ' · Seat ' + seat.seat : '');
+      it.seatRoom = seat.room; it.seat = seat.seat || null;
+    }
   }
   return it;
 }
@@ -285,7 +293,7 @@ function studentDay(student, iso, opts){
   });
 
   var overrideRaw = ((DATA.dateOverrides && DATA.dateOverrides[iso]) || []).filter(function(e){
-    if(!/^(HS11[0-3]|IK101)-MIDSEM/.test(e.subject)) return true;
+    if(!/^(HS11[0-3]|IK101)-(MID|END)SEM/.test(e.subject)) return true;
     return hsCode && e.subject.indexOf(hsCode) === 0;
   });
   var overridden = {};
@@ -341,7 +349,7 @@ function studentDay(student, iso, opts){
       it.venue = r.venue;
       if(r.movedFrom) it.venueMovedFrom = r.movedFrom;
     }
-    it.uid = [it.source, it.subject || it.title, it.sMin, it.eMin, it.venue || '', it.overlayId || ''].join('|');
+    it.uid = [it.source, it.subject || it.title, it.sMin, it.eMin, (it.seatRoom ? (it.baseVenue || '') : (it.venue || '')), it.overlayId || ''].join('|');
   });
   function bySMin(a, b){ return (a.sMin == null ? 9999 : a.sMin) - (b.sMin == null ? 9999 : b.sMin); }
   items.sort(bySMin); hidden.sort(bySMin);
@@ -374,6 +382,11 @@ function sameSet(a, b){ if(a.length !== b.length) return false; for(var i=0;i<a.
 function intersect(a, mask){ return a.filter(function(i){ return mask[i]; }); }
 
 var BRANCH_NAMES = DATA.branchNames || {};
+// The roster's internal branch key for Mathematics & Computing is 'MCB' (the segment inside entry numbers like
+// 2026MCB1546, also what live BR edits are stored under); students call it MnC, so every on-screen branch label
+// goes through bshort(). Entry-number ranges ("MCB1502–1522") keep MCB.
+function bshort(b){ return b === 'MCB' ? 'MnC' : b; }
+function bshortKey(k){ return String(k).replace(/^MCB(?=·|$)/, 'MnC'); }
 var ENTRY_CODE = {}; // branch -> the 3-letter code inside its entry numbers (AIB, CSB, MCB, ...)
 ROSTER.forEach(function(s){ if(!ENTRY_CODE[s.branch]) ENTRY_CODE[s.branch] = s.entry.slice(4, 7); });
 
@@ -394,19 +407,19 @@ function addUnit(u){ u.idxs = u.idxs.slice().sort(function(a,b){ return a-b; });
   });
   function branchesIn(idxs){ var b = {}; idxs.forEach(function(i){ b[ROSTER[i].branch] = 1; }); return Object.keys(b).sort(); }
   Object.keys(divs).sort().forEach(function(d){
-    addUnit({ id: 'div:'+d, level: 'division', label: d, sub: branchesIn(divs[d]).join(' · '), idxs: divs[d], rank: 1 });
+    addUnit({ id: 'div:'+d, level: 'division', label: d, sub: branchesIn(divs[d]).map(bshort).join(' · '), idxs: divs[d], rank: 1 });
   });
   Object.keys(groups).sort(function(a, b){ return parseInt(a.slice(1)) - parseInt(b.slice(1)); }).forEach(function(g){
     var bs = branchesIn(groups[g]);
-    addUnit({ id: 'grp:'+g, level: 'group', label: g, sub: bs.join(' + '), idxs: groups[g], rank: 2, shared: bs.length > 1 });
+    addUnit({ id: 'grp:'+g, level: 'group', label: g, sub: bs.map(bshort).join(' + '), idxs: groups[g], rank: 2, shared: bs.length > 1 });
   });
   Object.keys(branches).sort().forEach(function(b){
-    addUnit({ id: 'br:'+b, level: 'branch', label: b, sub: BRANCH_NAMES[b] || b, idxs: branches[b], rank: 3, branch: b });
+    addUnit({ id: 'br:'+b, level: 'branch', label: bshort(b), sub: BRANCH_NAMES[b] || b, idxs: branches[b], rank: 3, branch: b });
   });
   Object.keys(bgroups).sort().forEach(function(k){
     var p = k.split('·');
     if(UNIT_BY_ID['grp:'+p[1]].shared){
-      addUnit({ id: 'bg:'+k, level: 'bgroup', label: k, sub: (BRANCH_NAMES[p[0]] || p[0]) + ', group ' + p[1], idxs: bgroups[k], rank: 4, branch: p[0], group: p[1] });
+      addUnit({ id: 'bg:'+k, level: 'bgroup', label: bshortKey(k), sub: (BRANCH_NAMES[p[0]] || p[0]) + ', group ' + p[1], idxs: bgroups[k], rank: 4, branch: p[0], group: p[1] });
     }
   });
 })();
@@ -435,7 +448,7 @@ function rangeLabels(idxs, withinMask){
     }
     runs.push(cur);
     var code = ENTRY_CODE[b];
-    if(runs.length > 4){ out.push(list.length + ' of ' + b); return; }
+    if(runs.length > 4){ out.push(list.length + ' of ' + bshort(b)); return; }
     runs.forEach(function(r){
       var a = ROSTER[r[0]].entry.slice(-4), z = ROSTER[r[r.length-1]].entry.slice(-4);
       out.push(code + a + (r.length > 1 ? '–' + z : ''));
@@ -631,6 +644,60 @@ function atomsIn(idxs){
    One line per distinct activity at each start time — "who · what · @where · till" — where "who"
    is the selection's own students doing exactly that, named by describe(). Plus who's free at
    each of those moments, and the windows where the whole selection is free together. */
+// Exam/quiz seats are per student: a row shows the shared room, and keeps the seats in row.seats
+// ([{i, seat}]) for the collapsible, searchable list (seatListHtml) instead of one row per seat.
+function noteSeat(row, i, it){
+  if(!it.seatRoom) return;
+  (row.seats = row.seats || []).push({ i: i, seat: it.seat, room: it.seatRoom });
+}
+function finishSeats(rows){
+  rows.forEach(function(r){
+    if(!r.seats) return;
+    if(r.who.length < 2) return;
+    // Students of one exam can sit in several rooms: the row names them (or just counts them when there are many),
+    // and every entry in the seat list carries its own room.
+    var rooms = [];
+    r.seats.forEach(function(x){ if(x.room && rooms.indexOf(x.room) === -1) rooms.push(x.room); });
+    r.item = Object.assign({}, r.item, { venue: rooms.length > 3 ? rooms.length + ' venues' : rooms.join(', '), seat: null });
+  });
+}
+var seatUid = 0;
+// Collapsed by default; the box filters the list by name, entry number or seat.
+function seatListHtml(r, esc){
+  if(!r.seats || r.who.length < 2) return '';
+  var id = 'seatlist' + (++seatUid);
+  var counts = {}, order = [];
+  r.seats.forEach(function(x){ if(!x.room) return; if(!counts[x.room]){ counts[x.room] = 0; order.push(x.room); } counts[x.room]++; });
+  var roomChips = order.length > 1 ? '<div class="seat-rooms">' + order.map(function(rm){ return '<button type="button" class="seat-chip" data-q="' + esc(rm) + '">' + esc(rm) + ' <i>' + counts[rm] + '</i></button>'; }).join('') + '</div>' : '';
+  var rows = r.seats.slice().sort(function(a, b){ return ROSTER[a.i].entry < ROSTER[b.i].entry ? -1 : 1; }).map(function(x){
+    var s = ROSTER[x.i];
+    return '<div class="seat-row"><span class="seat-who">' + esc(titleCase(s.name)) + '</span><span class="seat-entry">' + esc(s.entry) + '</span><span class="seat-room">' + esc(x.room || '') + '</span><b class="seat-no">' + esc(x.seat || '—') + '</b></div>';
+  }).join('');
+  return '<details class="seat-list" id="' + id + '"><summary>Venue &amp; seat · ' + r.seats.length + (r.seats.length < r.who.length ? ' of ' + r.who.length : '') + ' students</summary>' +
+    roomChips + '<input class="seat-search" type="search" placeholder="Search name, entry no., venue or seat" autocomplete="off">' +
+    '<div class="seat-rows">' + rows + '</div><div class="seat-none" style="display:none">No match</div></details>';
+}
+if(typeof document !== 'undefined' && document.addEventListener){
+  document.addEventListener('click', function(ev){
+    var c = ev.target && ev.target.closest && ev.target.closest('.seat-chip');
+    if(!c) return;
+    var inp = c.closest('.seat-list').querySelector('.seat-search');
+    inp.value = inp.value === c.getAttribute('data-q') ? '' : c.getAttribute('data-q');
+    inp.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+  document.addEventListener('input', function(ev){
+    var t = ev.target;
+    if(!t || !t.classList || !t.classList.contains('seat-search')) return;
+    var q = t.value.trim().toLowerCase(), box = t.parentNode, shown = 0;
+    Array.prototype.forEach.call(box.querySelectorAll('.seat-row'), function(row){
+      var ok = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+      row.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    var none = box.querySelector('.seat-none');
+    if(none) none.style.display = shown ? 'none' : '';
+  });
+}
 function cohortDay(idxs, iso, opts){
   opts = opts || {};
   var slots = {}, untimed = {}, busy = [], hiddenRows = {};
@@ -646,12 +713,14 @@ function cohortDay(idxs, iso, opts){
       if(it.sMin == null){
         var u = untimed[k] || (untimed[k] = { item: it, who: [] });
         u.who.push(i);
+        noteSeat(u, i, it);
         return;
       }
       mine.push([it.sMin, it.eMin == null ? it.sMin + 50 : it.eMin]);
       var slot = slots[it.sMin] || (slots[it.sMin] = {});
       var row = slot[k] || (slot[k] = { item: it, who: [] });
       row.who.push(i);
+      noteSeat(row, i, it);
     });
     busy.push(mine);
     (day.hidden || []).forEach(function(it){
@@ -665,11 +734,13 @@ function cohortDay(idxs, iso, opts){
     var rows = Object.keys(slots[sMin]).map(function(k){ return slots[sMin][k]; });
     rows.sort(function(a, b){ return b.who.length - a.who.length || (a.item.eMin || 0) - (b.item.eMin || 0); });
     rows.forEach(function(r){ r.label = describe(r.who, idxs); });
+    finishSeats(rows);
     var free = [];
     idxs.forEach(function(i, p){ if(!busy[p].some(function(iv){ return iv[0] <= sMin && sMin < iv[1]; })) free.push(i); });
     return { sMin: sMin, rows: rows, free: free, freeLabel: free.length ? describe(free, idxs) : null };
   });
   var untimedRows = Object.keys(untimed).map(function(k){ var r = untimed[k]; r.label = describe(r.who, idxs); return r; });
+  finishSeats(untimedRows);
   var hidden = Object.keys(hiddenRows).map(function(k){ var r = hiddenRows[k]; r.label = describe(r.who, idxs); return r; })
     .sort(function(a, b){ return (a.item.sMin || 0) - (b.item.sMin || 0); });
   return { iso: iso, timeline: timeline, untimed: untimedRows, hidden: hidden, notes: Object.keys(notes),
@@ -985,7 +1056,7 @@ function courseSessions(code, iso){
       if(seen[i]) return; seen[i] = 1;
       studentDay(ROSTER[i], iso).items.forEach(function(it){
         if(baseCode(it.subject) !== code || it.sMin == null) return;
-        var venue = it.category === 'Exam' && /Seat/.test(it.venue || '') ? 'exam seating' : (it.venue ? venueNameFor(it.venue) : '');
+        var venue = it.seatRoom ? venueNameFor(it.seatRoom) : (it.venue ? venueNameFor(it.venue) : '');
         var k = it.subject + '|' + it.sMin + '|' + it.eMin + '|' + venue;
         var r = out[k] || (out[k] = { s: it.sMin, e: it.eMin, venue: venue || null, title: it.title, subject: it.subject, source: it.source,
           movedFrom: it.venueMovedFrom || null, who: [], batch: '2026', note: it.overlay && it.overlay.note || null });
@@ -1136,7 +1207,7 @@ function timelineBar(blocks, opts){
 
 return {
   DATA: DATA, ROSTER: ROSTER, INDEX: INDEX, N: N, UNITS: UNITS, UNIT_BY_ID: UNIT_BY_ID, KINDS: KINDS, ATOMS: ATOMS,
-  BRANCH_NAMES: BRANCH_NAMES, ALL_VENUES: ALL_VENUES, TIME_ORDER: TIME_ORDER,
+  BRANCH_NAMES: BRANCH_NAMES, bshort: bshort, seatListHtml: seatListHtml, ALL_VENUES: ALL_VENUES, TIME_ORDER: TIME_ORDER,
   isoToDate: isoToDate, addDaysISO: addDaysISO, weekdayNameOf: weekdayNameOf, todayISO: todayISO, nowMinutes: nowMinutes,
   dateLabel: dateLabel, toHHMM: toHHMM, weekRange: weekRange, titleCase: titleCase, escapeHtml: escapeHtml, WEEKDAYS: WEEKDAYS,
   courseName: courseName, subjectColor: subjectColor, classDuration: classDuration, ttMatches: ttMatches,

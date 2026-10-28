@@ -152,6 +152,8 @@ var TIME_ORDER = {
   '5.00 - 5.50': 1020, '6.00- 6.50': 1080, '6.00 - 6.50': 1080, '7.00-7.50': 1140, '7.00 - 7.50': 1140,
   /* clock-time exam slots (Mid-Sem Examination Time Table) — distinct from the 50-min period grid above */
   '9.30 - 11.30': 570, '12.30 - 2.30': 750, '3.30 - 5.30': 930,
+  /* End-Sem slots (3 h): morning 9:30-12:30, evening 2:30-5:30; MA101 Quiz 2 (28 Oct) 7:10-8:00 PM */
+  '9.30 - 12.30': 570, '2.30 - 5.30': 870, '7.10 - 8.00': 1150,
   /* TL101 mid-sem viva start times (26 Sep batches) — point-in-time, not ranges like the above */
   '9.30 AM': 570, '11.00 AM': 660, '2.30 PM': 870, '4.00 PM': 960,
   /* PH101 (D1) one-off extra class, 24 Sept 2026 */
@@ -227,6 +229,7 @@ function courseName(subject){
   var name = DATA.courseNames[m[1]];
   if(!name) return null;
   if(/-MIDSEM/.test(subject)) return name+' — Mid-Sem Exam';
+  if(/-ENDSEM/.test(subject)) return name+' — End-Sem Exam';
   if(/-VIVA/.test(subject)) return name+' — Mid-Sem Viva';
   if(/-TUT/.test(subject)) return name+' — Tutorial';
   return /lab/i.test(subject) ? name+' — Lab' : name;
@@ -347,6 +350,7 @@ function classDuration(e){
   if(e.subject === 'HS111-PRESENT') return 8;
   if(/^PH101-LAB/.test(e.subject)) return 230;
   if(/-MIDSEM/.test(e.subject)) return 120;
+  if(/-ENDSEM/.test(e.subject)) return 180;
   if(/-VIVA/.test(e.subject)) return 90;
   // CE's WP101 lab is a genuine 4-hour block (9 AM-1 PM); MME's is a separate real 170-min block
   // (10:00 AM-12:50 PM) — both confirmed directly by a student in that branch. Keyed on branch,
@@ -387,6 +391,7 @@ function classDuration(e){
   // literal, not subject+group, so it can't affect G2's regular recurring Tuesday tutorial.
   if(e.subject === 'MA101-TUT' && e.time === '8.00 - 9.00') return 60;
   if(e.subject === 'MA101-TUT' && e.time === '6.00 - 7.00') return 60;
+  if(e.subject === 'MA101-QUIZ' && e.time === '7.10 - 8.00') return 50;
   if(/-QUIZ/.test(e.subject)) return 60;
   return 50;
 }
@@ -1560,7 +1565,7 @@ function buildDays(student){
     // just means no exam item shows (no "which one is yours" prompt — not worth it for one entry).
     var hsCode = resolvedHsElective(student);
     overrideRaw = overrideRaw.filter(function(e){
-      if(!/^(HS11[0-3]|IK101)-MIDSEM/.test(e.subject)) return true;
+      if(!/^(HS11[0-3]|IK101)-(MID|END)SEM/.test(e.subject)) return true;
       return hsCode && e.subject.indexOf(hsCode) === 0;
     });
     // A BR's live change can replace a date override too (e.g. G2's one-off Thu 15 Oct MA101-TUT
@@ -1592,7 +1597,7 @@ function buildDays(student){
     // source workbook only had 4 of the 5 Mid-Sem exam dates finalized at merge time), so this is a
     // no-op — not a placeholder — wherever a lookup misses.
     dateOverrideClasses.forEach(function(it){
-      if(it.category !== 'Exam') return;
+      if(it.category !== 'Exam' && it.category !== 'Quiz') return;
       var seat = DATA.examSeating && DATA.examSeating[iso] && DATA.examSeating[iso][student.entry];
       if(seat){
         it.venue = seat.room + (seat.seat ? ' · Seat ' + seat.seat : '');
@@ -1885,7 +1890,7 @@ function checkRow(it, nowMin){
   if(it.type==='group') subTags.push(isOwn?'Your group':'Their group');
   if(it.type==='common') subTags.push('Institute-wide');
   if(it.type==='sport') subTags.push('Sports');
-  if(it.category==='Exam') subTags.push('Mid-Sem Exam');
+  if(it.category==='Exam') subTags.push(/ — End-Sem Exam$/.test(it.title) ? 'End-Sem Exam' : 'Mid-Sem Exam');
   if(it.category==='Viva') subTags.push('Mid-Sem Viva');
   if(it.ta) subTags.push('TA: '+it.ta);
   var venueHtml = '';
@@ -2770,35 +2775,44 @@ var PARTIAL_EXAM_WEEK_DATES = { '2026-09-17': 1, '2026-09-18': 1 };
 // correct here too. Visible for the whole mid-sem window, not just on/after the first exam, so a
 // student can see their full personal schedule at a glance from day one; disappears once the
 // window has fully passed.
-function renderExamBanner(student){
-  var banner = document.getElementById('examWeekBanner');
-  var week = midsemExamWeek();
-  if(!week){
-    banner.style.display = 'none';
-    return;
+function endsemExamWeek(){
+  var weeks = (DATA.calendar && DATA.calendar.examWeeks) || [];
+  for(var i=0;i<weeks.length;i++){
+    if(/end-sem/i.test(weeks[i].label)) return weeks[i];
   }
-  // The window isn't just the written mid-sem exam week — related assessments (e.g. TL101's
-  // viva) can run a few days past it, so extend the end to cover the latest date that actually
-  // carries an Exam/Viva override, rather than hardcoding a second date range here.
-  var bannerEnd = week.end;
-  Object.keys(DATA.dateOverrides || {}).forEach(function(iso){
-    if(iso <= bannerEnd) return;
-    var hasExamish = DATA.dateOverrides[iso].some(function(e){ return e.category === 'Exam' || e.category === 'Viva'; });
-    if(hasExamish) bannerEnd = iso;
+  return null;
+}
+// The latest Exam/Viva date inside or just past an exam window (TL101's viva runs a few days past
+// the written mid-sem week), so the banner covers every related assessment without a second range.
+// Capped at the start of the next window, so mid-sem never swallows the end-sem dates.
+function examWindowEnd(week){
+  var end = week.end, nextStart = '9999-12-31';
+  ((DATA.calendar && DATA.calendar.examWeeks) || []).forEach(function(w){
+    if(w.start > week.end && w.start < nextStart) nextStart = w.start;
   });
+  Object.keys(DATA.dateOverrides || {}).forEach(function(iso){
+    if(iso <= end || iso >= nextStart) return;
+    var hasExamish = DATA.dateOverrides[iso].some(function(e){ return e.category === 'Exam' || e.category === 'Viva'; });
+    if(hasExamish) end = iso;
+  });
+  return end;
+}
+// One window's banner block: the expanded list while it is current/upcoming, or — once every
+// exam/viva date in it has passed — a collapsed <details> "memory" (same pattern as the footer's
+// Contributors list) so a student can still look back at their own schedule (e.g. a seat number)
+// without it competing with today's real schedule. Returns null when the window has no exam items.
+function examWindowBlock(student, week, title, stripRe){
+  var windowEnd = examWindowEnd(week);
   var exams = [];
   state.DAYS.forEach(function(day){
-    if(day.d < week.start || day.d > bannerEnd) return;
+    if(day.d < week.start || day.d > windowEnd) return;
     day.items.forEach(function(it){
       if(it.category === 'Exam' || it.category === 'Viva'){
-        exams.push({date: day.d, title: it.title.replace(/ — Mid-Sem (Exam|Viva)$/,''), t: it.t});
+        exams.push({date: day.d, title: it.title.replace(stripRe,''), t: it.t});
       }
     });
   });
-  if(!exams.length){
-    banner.style.display = 'none';
-    return;
-  }
+  if(!exams.length) return null;
   var rows = exams.map(function(ex){
     var done = ex.date < state.TODAY;
     var seat = DATA.examSeating && DATA.examSeating[ex.date] && DATA.examSeating[ex.date][student.entry];
@@ -2807,16 +2821,46 @@ function renderExamBanner(student){
       '<span class="examweek-title">'+ex.title+'</span>'+
       '<span class="examweek-time">'+(ex.t||'')+(done?' · done':'')+'</span>'+seatHtml+'</div>';
   }).join('');
-  banner.style.display = 'block';
-  // Once every mid-sem exam/viva date has passed, stop permanently occupying space in the daily
-  // view — fold it into a collapsed <details> "memory" (same pattern as the footer's Contributors
-  // list) instead of hiding it outright, so a student can still look back at their own mid-sem
-  // schedule (e.g. to double-check a seat number) without it competing with today's real schedule.
-  if(state.TODAY > bannerEnd){
-    banner.innerHTML = '<details class="examweek-collapsed"><summary>mid-sem exams &amp; viva <span class="examweek-collapsed-tag">past</span></summary><div class="examweek-rows">'+rows+'</div></details>';
-  } else {
-    banner.innerHTML = '<div class="examweek-head">mid-sem exams &amp; viva</div><div class="examweek-rows">'+rows+'</div>';
+  var past = state.TODAY > windowEnd;
+  return {past: past, html: past
+    ? '<details class="examweek-collapsed"><summary>'+title+' <span class="examweek-collapsed-tag">past</span></summary><div class="examweek-rows">'+rows+'</div></details>'
+    : '<div class="examweek-head">'+title+'</div><div class="examweek-rows">'+rows+'</div>'};
+}
+// Time-limited notices (DATA.notices, from merge.py NOTICES): shown until their `until` instant, then gone.
+// A notice with `seatDate` also shows the viewer's own hall + seat for that date.
+function renderNotices(student){
+  var box = document.getElementById('noticeBanner');
+  if(!box) return;
+  var now = Date.now();
+  var live = (DATA.notices || []).filter(function(n){ return new Date(n.until).getTime() > now; });
+  if(!live.length){ box.style.display = 'none'; box.innerHTML = ''; return; }
+  box.innerHTML = live.map(function(n){
+    var seat = n.seatDate && student && DATA.examSeating && DATA.examSeating[n.seatDate] && DATA.examSeating[n.seatDate][student.entry];
+    var seatLine;
+    if(!seat) seatLine = 'The official sheet has no hall or seat for you — please ask the Academic Section.';
+    else if(seat.room === 'Venue TBC') seatLine = 'The official sheet does not name your hall' + (seat.seat ? ' (it gives seat ' + seat.seat + ')' : '') + ' — please confirm it with the Academic Section or your BR before 7:10 PM.';
+    else seatLine = 'Your venue: ' + seat.room + (seat.seat ? ' · Seat ' + seat.seat : ' · no seat number in the official sheet');
+    var seatHtml = n.seatDate ? '<div class="notice-seat">' + seatLine + '</div>' : '';
+    return '<div class="notice-title">' + n.title + '</div><div class="notice-text">' + n.text + '</div>' + seatHtml;
+  }).join('<hr style="border:0;height:10px">');
+  box.style.display = 'block';
+}
+if(typeof setInterval === 'function') setInterval(function(){ if(state && state.student) renderNotices(state.student); }, 60000);
+function renderExamBanner(student){
+  var banner = document.getElementById('examWeekBanner');
+  var blocks = [];
+  var mid = midsemExamWeek(), end = endsemExamWeek();
+  if(mid) blocks.push(examWindowBlock(student, mid, 'mid-sem exams &amp; viva', / — Mid-Sem (Exam|Viva)$/));
+  if(end) blocks.push(examWindowBlock(student, end, 'end-sem exams', / — End-Sem Exam$/));
+  blocks = blocks.filter(Boolean);
+  if(!blocks.length){
+    banner.style.display = 'none';
+    return;
   }
+  banner.style.display = 'block';
+  // Current/upcoming windows first, finished ones folded underneath.
+  banner.innerHTML = blocks.filter(function(b){ return !b.past; }).concat(blocks.filter(function(b){ return b.past; }))
+    .map(function(b){ return b.html; }).join('');
 }
 
 // Site-wide contributor roster for the footer's collapsible list — everyone who ranks as a
@@ -3018,6 +3062,7 @@ function viewStudent(student){
 
   renderHeader(student);
   renderExamBanner(student);
+  renderNotices(student);
   kzWidget();
   render();
   syncHsElectiveField();
@@ -3112,6 +3157,7 @@ function initSettings(){
       renderTodayPanel();
       renderHeatmapPanel();
       renderExamBanner(state.student);
+      renderNotices(state.student);
       if(calState.open) renderCalendar();
     }
   }
@@ -3223,6 +3269,7 @@ function setHsElective(code){
   renderTodayPanel();
   renderHeatmapPanel();
   renderExamBanner(state.student);
+  renderNotices(state.student);
   if(calState.open) renderCalendar();
 }
 function setNsoOptin(choice){
@@ -3317,7 +3364,7 @@ function groupsTagHtml(groups){
 }
 function branchesTagHtml(branches){
   if(!branches.length || branches.length === ALL_BRANCH_CODES.length) return '';
-  return '<span class="tag branch">'+branches.join(', ')+'</span>';
+  return '<span class="tag branch">'+branches.map(displayBranchCode).join(', ')+'</span>';
 }
 function filterIsmpSessions(query, typeFilter, includePast){
   query = query.trim().toLowerCase();
@@ -3752,6 +3799,28 @@ initSettings();
 initCalendar();
 initClubs();
 initStudyPanel();
+// Slim shortcut bar for phone/tablet (see .mini-bar in the template): appears once the header has scrolled away.
+(function(){
+  var bar = document.getElementById('miniBar'), head = document.querySelector('header');
+  if(!bar || !head) return;
+  Array.prototype.forEach.call(bar.querySelectorAll('button[data-for]'), function(b){
+    b.addEventListener('click', function(){
+      var src = document.getElementById(b.getAttribute('data-for'));
+      if(src) src.click();
+    });
+  });
+  function sync(){
+    var studyBtn = document.getElementById('studyToggleBtn');
+    document.getElementById('miniStudy').style.display = studyBtn && studyBtn.style.display !== 'none' ? '' : 'none';
+    var amb = document.getElementById('studyAmbient');
+    document.getElementById('miniStudyAmbient').textContent = amb ? amb.textContent : '';
+    bar.classList.toggle('show', window.scrollY > head.offsetHeight - 8);
+  }
+  window.addEventListener('scroll', sync, {passive: true});
+  window.addEventListener('resize', sync);
+  setInterval(sync, 2000);
+  sync();
+})();
 initSearch();
 initGroups();
 initPanelBackdrop();
@@ -3809,3 +3878,6 @@ if(window.__overlayFast && window.__overlayFast.then) window.__overlayFast.then(
 })();
 
 })();
+
+// App is up: take the boot splash (see #bootLoader in the template) away.
+if(window.__bootDone) window.__bootDone();

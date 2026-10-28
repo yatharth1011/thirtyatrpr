@@ -74,8 +74,8 @@ function renderDay(){
   var html = '<div class="cohort-head"><b>' + esc(state.sel.label) + '</b> · ' + idxs.length + ' student' + (idxs.length === 1 ? '' : 's') + '</div>';
   var c = E.contactsFor(idxs);
   if(c.brs.length && c.brs.length <= 8){
-    html += '<div class="contacts">BRs: ' + c.brs.map(function(b){ return b.branch + '/' + b.group + ' <b>' + esc(b.reps.map(function(r){ return r.name; }).join(', ')) + '</b>'; }).join(' · ') +
-      (c.verifiers.length && c.verifiers.length <= 6 ? '<br>schedule checked by ' + c.verifiers.map(function(v){ return '<b>' + esc(v.name) + '</b> (' + v.branch + (v.group ? '/' + v.group : '') + ')'; }).join(', ') : '') + '</div>';
+    html += '<div class="contacts">BRs: ' + c.brs.map(function(b){ return E.bshort(b.branch) + '/' + b.group + ' <b>' + esc(b.reps.map(function(r){ return r.name; }).join(', ')) + '</b>'; }).join(' · ') +
+      (c.verifiers.length && c.verifiers.length <= 6 ? '<br>schedule checked by ' + c.verifiers.map(function(v){ return '<b>' + esc(v.name) + '</b> (' + E.bshort(v.branch) + (v.group ? '/' + v.group : '') + ')'; }).join(', ') : '') + '</div>';
   }
   d.notes.forEach(function(n){ html += '<div class="day-note">' + esc(n) + '</div>'; });
   html += '<div class="together"><b>' + (idxs.length === 1 ? 'Free' : 'Everyone free') + '</b> ' +
@@ -117,7 +117,7 @@ function rowHtml(r, showWho){
     (it.venue ? '<span class="row-where link" data-room="' + esc(it.venue) + '">' + venueHtml(it.venue) + '</span>' : '') +
     (it.eMin != null ? '<span class="row-till">till ' + E.toHHMM(it.eMin) + '</span>' : (it.rawTime ? '<span class="row-till">' + esc(it.rawTime) + '</span>' : '')) +
     (it.venueMovedFrom ? '<span class="row-moved">moved from ' + esc(it.venueMovedFrom) + '</span>' : '') +
-    '</div></div>';
+    E.seatListHtml(r, esc) + '</div></div>';
 }
 
 /* ================= Find a time ================= */

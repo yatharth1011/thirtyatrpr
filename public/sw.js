@@ -4,12 +4,13 @@
 // app while offline, not a way to speed up normal loads.
 // v2 (2026-10-15): only this site's own files go through here. v1 also intercepted and cached every
 // cross-origin request, Firestore's long-lived listen stream included, which could stall live BR edits.
-const CACHE_NAME = 'thirtyatrpr-v2';
+// v3 (2026-10-28): new logo icons under /icons/v2/ (the cached v2 set still held the old green icon).
+const CACHE_NAME = 'thirtyatrpr-v3';
 const OFFLINE_URLS = [
   '/',
   '/manifest.webmanifest',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
+  '/icons/v2/icon-192.png',
+  '/icons/v2/icon-512.png',
 ];
 
 self.addEventListener('install', function(event){

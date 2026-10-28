@@ -900,6 +900,31 @@ DATE_OVERRIDES = {
 # TL101 Mid-Semester Viva dates, computed above from the sheet's own TL101-LAB roll data.
 DATE_OVERRIDES.update(TL101_VIVA_OVERRIDES)
 
+# End-Semester Examination Time Table (official workbook "End Sem Exam Nov. 2026 Time Table (D)", sheet
+# "TT End Sem Exam Nov. 2026(D)" — the final one; the "Draft" sheet had different dates/numbers). Morning slot
+# 9:30 AM-12:30 PM, evening slot 2:30-5:30 PM, 3 hours each. Division scoping as for Mid-Sem: AI101/PH101 are
+# D1/D2 only, CY101/CS100 D3/D4 only, MA101 everyone; HS110-113/IK101 are the mutually exclusive elective pool
+# (the dashboard narrows them to the student's own). No room/seating published yet — added to exam_seating.json's
+# date key when it is, with no code change needed.
+def _endsem(subject, time, divisions=None, universal=False):
+    return {
+        'time': time, 'category': 'Exam', 'subject': subject + '-ENDSEM', 'venue': None,
+        'division': divisions or [], 'group': [], 'branch': [], 'roll': [], 'universal': universal,
+        'raw': subject + ' End-Semester Examination — ' + ('9:30 AM-12:30 PM' if time.startswith('9') else '2:30-5:30 PM') + ' (official datesheet)',
+    }
+_MORN, _EVE = '9.30 - 12.30', '2.30 - 5.30'
+ENDSEM_OVERRIDES = {
+    '2026-11-17': [_endsem('MA101', _MORN, universal=True)],
+    '2026-11-19': [_endsem('HS112', _MORN, universal=True), _endsem('HS113', _MORN, universal=True),
+                   _endsem('IK101', _MORN, universal=True),
+                   _endsem('HS110', _EVE, universal=True), _endsem('HS111', _EVE, universal=True)],
+    '2026-11-21': [_endsem('PH101', _MORN, ['D1', 'D2']), _endsem('CY101', _MORN, ['D3', 'D4'])],
+    '2026-11-23': [_endsem('CS100', _MORN, ['D3', 'D4'])],
+    '2026-11-25': [_endsem('AI101', _MORN, ['D1', 'D2'])],
+}
+for _d, _es in ENDSEM_OVERRIDES.items():
+    DATE_OVERRIDES.setdefault(_d, []).extend(_es)
+
 # One-off single-date cancellations of an otherwise-regular class/tutorial/elective session — NOT
 # a holiday (the rest of that day's schedule still runs normally) and NOT a permanent correction
 # (only THIS exact date is affected; the same subject still meets on its other usual days/weeks).
@@ -994,6 +1019,56 @@ add_override('2026-10-25', {
     'link': 'https://meet.google.com/meet/xjy-hyrb-irm', 'linkLabel': 'Join on Google Meet',
     'raw': 'Compulsory AI101 online class (D1/D2), Sun 25 Oct 2026, 11:00 AM-1:00 PM, Google Meet (moved from Sat 24 Oct) — hands-on tutorial on Linear and Logistic Regression',
 })
+
+# --- MA101 Quiz 2: Wed 28 Oct 2026, 7:10-8:00 PM, Auditorium, everyone (official seating workbook "MA101
+# Seating plan_Quiz_2026.xlsx", Academic Section). Hall AND seat are per student (Auditorium, M3-M6, ...), in
+# exam_seating.json under this date (build/extract_ma101_quiz_seating.py) — so no base venue here. The first version
+# of this entry wrongly said "Auditorium" for everyone; see NOTICES below for the apology shown until the quiz ends.
+add_override('2026-10-28', {
+    'time': '7.10 - 8.00', 'category': 'Quiz', 'subject': 'MA101-QUIZ', 'venue': None,
+    'division': [], 'group': [], 'branch': [], 'roll': [], 'universal': True,
+    'title': 'Mathematics-I — Quiz 2',
+    'raw': 'MA101 Quiz 2, 28 Oct 2026, 7:10-8:00 PM, Auditorium (official seating plan)',
+})
+
+# --- AI101 (D1/D2) Mini-Project, announced 27 Oct 2026: groups finalise topic + dataset, individual roles and a
+# contact number in the shared Google Sheet by midnight Fri 30 Oct (no edits after); final submission Wed 11 Nov,
+# 11:59 PM IST. Untimed deadline items (a time-of-day string not in TIME_ORDER renders as plain text, no block).
+AI101_PROJECT_SHEET = 'https://docs.google.com/spreadsheets/d/1nuQtJk0rrWL8cmUAe26M9cnT8Wl31BwghIbVkf1WvqQ/edit?usp=sharing'
+add_override('2026-10-30', {
+    'time': 'By midnight', 'category': 'Deadline', 'subject': 'AI101-PROJECT',  'venue': None,
+    'division': ['D1', 'D2'], 'group': [], 'branch': [], 'roll': [], 'universal': False,
+    'title': 'AI101 Mini-Project — finalise topic, roles & contact in the Google Sheet',
+    'link': AI101_PROJECT_SHEET, 'linkLabel': 'Open the group sheet',
+    'raw': 'AI101 Mini-Project: topic/title + dataset, each member\'s role and contact number in the shared sheet by 30 Oct 2026 midnight; edit only your own group\'s row; no edits after the deadline, unassigned roles get assigned by the instructors',
+})
+add_override('2026-11-11', {
+    'time': 'By 11:59 PM IST', 'category': 'Deadline', 'subject': 'AI101-PROJECT', 'venue': None,
+    'division': ['D1', 'D2'], 'group': [], 'branch': [], 'roll': [], 'universal': False,
+    'title': 'AI101 Mini-Project — final submission',
+    'raw': 'AI101 final Mini-Project submission deadline, Wed 11 Nov 2026, 11:59 PM IST (no extensions)',
+})
+# --- AI101 lab evaluation on Practice 7 (ML, supervised), from the Python lab "Evaluation Plan after MST": D1 on
+# Mon 2 Nov, D2 on Tue 3 Nov, in their regular lab slot (untimed so it doesn't double up on the lab block itself).
+for _d, _div in (('2026-11-02', 'D1'), ('2026-11-03', 'D2')):
+    add_override(_d, {
+        'time': 'In your regular lab slot', 'category': 'Evaluation', 'subject': 'AI101-EVAL', 'venue': None,
+        'division': [_div], 'group': [], 'branch': [], 'roll': [], 'universal': False,
+        'title': 'AI101 — Lab Evaluation (Practice 7: supervised ML)',
+        'raw': 'AI101 lab evaluation on Practice 7 (Practice 8 is optional, not evaluated), ' + _div + ' lab day (Python lab Evaluation Plan)',
+    })
+
+# Dashboard notices: a banner on top of the dashboard until `until` (ISO with offset), then it disappears by itself.
+# `seatDate` adds the viewer's own hall + seat for that date (DATA.examSeating) under the text.
+NOTICES = [
+    {
+        'id': 'ma101-quiz2-venue-apology',
+        'until': '2026-10-28T20:00:00+05:30',   # quiz ends 8:00 PM
+        'title': 'Sorry — we had your MA101 Quiz 2 venue wrong',
+        'text': 'For a while today this portal showed “Auditorium” as the venue for everyone. That was our mistake: the official seating plan spreads the quiz across several halls. It is fixed now — your own hall and seat are below and on your 28 Oct schedule. If you noted down “Auditorium”, please re-check. Sorry for the confusion.',
+        'seatDate': '2026-10-28',
+    },
+]
 
 # --- NSS (NS101): Swachhta Hi Seva (SHS) 2026 activities, 25/27/30 Sept 2026 (NSS Faculty Adviser
 # email) — scoped to NS101-enrolled students only via their real entry numbers (NSS_ENROLLED),
@@ -1378,11 +1453,9 @@ CALENDAR = {
         # 22 Sep — end date extended from 21 to 22 Sep accordingly (see DATE_OVERRIDES below for the
         # exact per-course dates/slots).
         {'start': '2026-09-18', 'end': '2026-09-22', 'label': 'Mid-Semester Examinations'},
-        # Not confirmed by a 2026-batch-specific source (unlike the mid-sem dates) — only seen in
-        # TT-full.pdf's continuing-batch calendar, which has already been wrong twice for this
-        # batch. Used only as a conservative placeholder to keep CS50 sessions clear of it; verify
-        # against the real End-Semester Examination notice once published.
-        {'start': '2026-11-16', 'end': '2026-11-26', 'label': 'End-Semester Examinations (estimated)'},
+        # Confirmed by the official End-Semester Examination Time Table (workbook, 27 Oct 2026):
+        # 16-26 Nov, per-course dates/slots in ENDSEM_OVERRIDES above.
+        {'start': '2026-11-16', 'end': '2026-11-26', 'label': 'End-Semester Examinations'},
     ],
     'examStartDisputed': {},
 }
@@ -1531,19 +1604,21 @@ VENUE_RELOCATIONS = [
 # SRC-106 didn't exist in the original venue legend (never used until the relocation above).
 legend['SRC106'] = {'code': 'SRC-106', 'desc': 'S. RadhaKrishnan Complex (LHC) — First Floor classroom', 'alias': None}
 
-# Self-study room openings (source: Academics Secretary (UG) email, 1 Sep 2026, "Opening of
-# lecture and seminar halls for self study purposes") — three rooms opened for study outside their
-# lecture slots, effective 7 PM on 1 Sep through 22 Sep 2026, "subject to availability" (a lecture
-# running in the room takes priority even during a listed open window).
+# Self-study room openings (source: Academics Secretary (UG) / Board of Academic Affairs email, 27 Oct 2026,
+# "Opening of Halls for Self Study Purpose" — sources/updates/oct-new/) — EE-2 and EE-SH opened for study
+# outside their lecture slots, effective 7 PM on 27 Oct through 26 Nov 2026, "subject to availability" (a
+# lecture running in the room takes priority even during a listed open window); "more halls will be opened
+# subject to need". Supersedes the 1 Sep email's three rooms (EE-2, CS-2, EE-SH; valid to 22 Sep): the
+# weekly windows for EE-2 and EE-SH are unchanged, CS-2 is not in the new list.
 # Each range is {start, end, endsNextDay} in 24h HH:MM — endsNextDay lets an overnight window (e.g.
 # EE-SH's nightly 7pm-7am) or a same-day window that runs to midnight (encoded as end:'00:00',
 # endsNextDay:true, since that's the same instant as '24:00' today) cross the date boundary cleanly
 # — the app expands these into real open/close timestamps to show live status.
 SELF_STUDY = {
-    'validFrom': '2026-09-01',
+    'validFrom': '2026-10-27',
     'validFromTime': '19:00',  # the email specifies opening starts 7 PM the first day specifically
-    'validTo': '2026-09-22',
-    'sourceNote': "Academics Secretary (UG) email, 1 Sep 2026 — rooms open for self-study \"subject to availability\"; a scheduled lecture in the room takes priority even during a listed window.",
+    'validTo': '2026-11-26',
+    'sourceNote': "Academics Secretary (UG) email, 27 Oct 2026 — halls open for self-study \"subject to availability\"; a scheduled lecture in the room takes priority even during a listed window. More halls may be added; bring your own extension board (limited charging ports).",
     'rooms': [
         {
             'code': 'EE-2', 'name': 'EE-2',
@@ -1558,19 +1633,7 @@ SELF_STUDY = {
             },
         },
         {
-            'code': 'CS-2', 'name': 'CS-2',
-            'schedule': {
-                'Monday':    [{'start':'00:00','end':'09:50'}, {'start':'11:00','end':'11:50'}, {'start':'13:00','end':'15:50'}, {'start':'17:00','end':'00:00','endsNextDay':True}],
-                'Tuesday':   [{'start':'00:00','end':'09:50'}, {'start':'11:00','end':'11:50'}, {'start':'13:00','end':'13:50'}, {'start':'15:00','end':'15:50'}, {'start':'17:00','end':'00:00','endsNextDay':True}],
-                'Wednesday': [{'start':'00:00','end':'09:50'}, {'start':'11:00','end':'11:50'}, {'start':'13:00','end':'00:00','endsNextDay':True}],
-                'Thursday':  [{'start':'00:00','end':'10:50'}, {'start':'12:00','end':'00:00','endsNextDay':True}],
-                'Friday':    [{'start':'00:00','end':'10:50'}, {'start':'12:00','end':'00:00','endsNextDay':True}],
-                'Saturday':  [{'start':'00:00','end':'00:00','endsNextDay':True}],
-                'Sunday':    [{'start':'00:00','end':'00:00','endsNextDay':True}],
-            },
-        },
-        {
-            'code': 'EE-SH', 'name': 'EE Seminar Hall',
+            'code': 'EE-SH', 'name': 'EESH',
             'schedule': {
                 'Monday':    [{'start':'19:00','end':'07:00','endsNextDay':True}],
                 'Tuesday':   [{'start':'19:00','end':'07:00','endsNextDay':True}],
@@ -1686,6 +1749,7 @@ data = {
     'sequentialCourses': SEQUENTIAL_COURSES,
     'selfStudy': SELF_STUDY,
     'examSeating': exam_seating,
+    'notices': NOTICES,
     'cancellations': CANCELLATIONS,
     'instituteTimetable': institute_tt,
     'instituteCalendar': INSTITUTE_CALENDAR,

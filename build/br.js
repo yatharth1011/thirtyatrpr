@@ -72,8 +72,8 @@ function studentsOfScope(scope){ return idxsWhere(function(s){ return E.overlayS
 function scopeLabel(scope){
   if(!scope) return '?';
   if(scope.type === 'all') return 'everyone';
-  if(scope.type === 'branch') return scope.branch;
-  if(scope.type === 'group') return scope.branch + '·' + scope.group;
+  if(scope.type === 'branch') return E.bshort(scope.branch);
+  if(scope.type === 'group') return E.bshort(scope.branch) + '·' + scope.group;
   return scope.label || (scope.entries ? scope.entries.length + ' students' : '?');
 }
 function temporalFor(choice, iso){
@@ -342,7 +342,7 @@ function rowHtml(r, key, showWho){
     (it.eMin != null ? '<span class="row-till">till ' + E.toHHMM(it.eMin) + '</span>' : (it.rawTime ? '<span class="row-till">' + esc(it.rawTime) + '</span>' : '')) +
     (it.venueMovedFrom ? '<span class="row-moved">moved from ' + esc(it.venueMovedFrom) + '</span>' : '') +
     (it.source === 'overlay' && it.overlay.note ? '<span class="row-moved" style="color:var(--violet)">“' + esc(it.overlay.note) + '”</span>' : '') +
-    '</div>' +
+    E.seatListHtml(r, esc) + '</div>' +
     (canAct ? '<div class="row-actions"><button class="icon-btn" data-act="edit" data-row="' + key + '" title="Move / change">✎</button>' +
       '<button class="icon-btn danger" data-act="remove" data-row="' + key + '" title="Remove">✕</button></div>' : '') +
     '</div>';
@@ -460,7 +460,7 @@ function save(){
   var who = whoForChoice();
   var temporal = temporalFor(ed.when, state.iso);
   var scope = compileScope(who);
-  if(!canWriteScope(scope)){ toast('As ' + me.branch + ' BR you can change your own branch, or the whole batch.'); return; }
+  if(!canWriteScope(scope)){ toast('As ' + E.bshort(me.branch) + ' BR you can change your own branch, or the whole batch.'); return; }
   var ops, label;
   var whoLabel = scopeLabel(scope);
   if(ed.mode === 'remove'){
@@ -618,12 +618,12 @@ onAuthStateChanged(auth, function(user){
   document.getElementById('signOutBtn').style.display = '';
   var badge = document.getElementById('meBadge');
   badge.style.display = '';
-  badge.textContent = (isCreator ? '👑 ' : '⭐ ' + me.branch + ' BR · ') + me.name.split(' ')[0];
+  badge.textContent = (isCreator ? '👑 ' : '⭐ ' + E.bshort(me.branch) + ' BR · ') + me.name.split(' ')[0];
   if(!picker){
     var universe = isCreator ? null : E.UNIT_BY_ID['br:' + me.branch].idxs;
     document.getElementById('pickerSub').textContent = isCreator
       ? 'Tap a kind of student — a division, a group, a lab batch, an HS section — or combine them.'
-      : 'Your branch (' + me.branch + '). Tap a group, a lab batch, an HS section — or combine them. To change something for the whole batch, pick “the whole batch” when saving.';
+      : 'Your branch (' + E.bshort(me.branch) + '). Tap a group, a lab batch, an HS section — or combine them. To change something for the whole batch, pick “the whole batch” when saving.';
     var myGroup = roster ? (isCreator ? 'grp:' + roster.academicGroup : (E.UNIT_BY_ID['bg:' + roster.branch + '·' + roster.academicGroup] ? 'bg:' + roster.branch + '·' + roster.academicGroup : 'grp:' + roster.academicGroup)) : null;
     picker = PICKER.mount(document.getElementById('picker'), {
       universe: universe,
