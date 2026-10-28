@@ -252,3 +252,22 @@
 /* smooth page-to-page moves (Chrome/Edge and Safari 18.2+ crossfade same-site navigations; others just load as before) */
 @view-transition { navigation: auto; }
 ::view-transition-old(root), ::view-transition-new(root){ animation-duration:.18s; animation-timing-function:ease; }
+
+  /* set query builder (Advanced mode of the picker, /spectate and /br) */
+  .pq-expr{ display:flex; flex-wrap:wrap; align-items:center; gap:5px; min-height:38px; padding:8px 10px; margin:2px 0 8px; border-radius:10px;
+    background:var(--card2, rgba(255,255,255,.05)); box-shadow:inset 0 1px 3px rgba(0,0,0,.3); font-size:12px; }
+  .pq-tok{ padding:3px 9px; border-radius:99px; background:color-mix(in srgb, var(--ok) 18%, transparent); color:var(--ink); font-weight:700; }
+  .pq-sym{ font-weight:800; color:var(--ok); font-size:14px; padding:0 2px; }
+  .pq-ops{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; }
+  .pq-b[disabled]{ opacity:.35; }
+  .pq-result{ font-size:12px; color:var(--ink-soft); margin:2px 0 10px; line-height:1.5; }
+  .pq-result b{ color:var(--ok); font-size:14px; }
+  .pq-err{ color:var(--rose, #f97583); }
+  .pq-search{ display:block; width:100%; box-sizing:border-box; margin:0 0 8px; padding:8px 11px; font:inherit; font-size:12px; color:var(--ink);
+    background:var(--card2, rgba(255,255,255,.05)); border:none; border-radius:9px; box-shadow:inset 0 1px 3px rgba(0,0,0,.3); }
+  .pq-sugg{ max-height:150px; overflow-y:auto; margin-bottom:10px; }
+  .pq-hint{ font-size:11.5px; color:var(--ink-faint); line-height:1.5; margin:2px 0 8px; }
+  .pq-read{ font-size:12px; color:var(--ink-soft); line-height:1.6; margin:-2px 0 8px; }
+  .pq-read b{ color:var(--ink); }
+  .pq-title{ font-size:12px; font-weight:800; color:var(--ink); }
+  .pk-adv.on{ background:color-mix(in srgb, var(--ok) 22%, transparent); color:var(--ink); }

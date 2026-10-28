@@ -56,7 +56,7 @@ function mount(el, opts){
     return tokens.map(function(t){
       if(t.t === 'set'){ var u = E.UNIT_BY_ID[t.id]; return '<b>' + esc(u ? u.label : '?') + '</b>'; }
       if(t.t === 'op') return t.v === '∪' ? ' or ' : t.v === '∩' ? ' and also in ' : ' but not in ';
-      if(t.t === 'not') return 'everyone except ';
+      if(t.t === 'not') return universe ? 'everyone in your branch except ' : 'everyone except ';
       return t.t === '(' ? '(' : ')';
     }).join('');
   }

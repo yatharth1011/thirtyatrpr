@@ -1657,6 +1657,11 @@ allPass &= runSpectateScenario('set queries give the same students as a direct r
   assert(/two sets in a row/.test(E.queryEval([S('grp:G1'), S('grp:G2')]).error), 'adjacent sets explained');
   assert(/never closed/.test(E.queryEval([L, S('grp:G2')]).error), 'open bracket explained');
   assert(/ends too early/.test(E.queryEval([S('grp:G2'), O('∪')]).error), 'dangling operator explained');
+  // limited to one branch (a BR's view): complement and results stay inside that branch
+  const aide = E.UNIT_BY_ID['br:AIDE'].idxs;
+  const inAide = E.queryEval([NOT, S('grp:G2')], aide);
+  assert(!inAide.error && inAide.idxs.length === n((s) => s.branch === 'AIDE' && !g(s, 'G2')), 'within AIDE, ¬G2 = AIDE students not in G2: ' + inAide.idxs.length);
+  assert(E.queryEval([S('div:D1')], aide).idxs.every((i) => E.ROSTER[i].branch === 'AIDE'), 'results never leave the branch');
   const sel = E.evalSelection([{ op: 'expr', tokens: cases[0][0] }]);
   assert(sel.length === cases[0][1], 'a query used as the selection gives the same students');
 });

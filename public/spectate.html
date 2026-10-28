@@ -269,6 +269,25 @@
 @view-transition { navigation: auto; }
 ::view-transition-old(root), ::view-transition-new(root){ animation-duration:.18s; animation-timing-function:ease; }
 
+  /* set query builder (Advanced mode of the picker, /spectate and /br) */
+  .pq-expr{ display:flex; flex-wrap:wrap; align-items:center; gap:5px; min-height:38px; padding:8px 10px; margin:2px 0 8px; border-radius:10px;
+    background:var(--card2, rgba(255,255,255,.05)); box-shadow:inset 0 1px 3px rgba(0,0,0,.3); font-size:12px; }
+  .pq-tok{ padding:3px 9px; border-radius:99px; background:color-mix(in srgb, var(--ok) 18%, transparent); color:var(--ink); font-weight:700; }
+  .pq-sym{ font-weight:800; color:var(--ok); font-size:14px; padding:0 2px; }
+  .pq-ops{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; }
+  .pq-b[disabled]{ opacity:.35; }
+  .pq-result{ font-size:12px; color:var(--ink-soft); margin:2px 0 10px; line-height:1.5; }
+  .pq-result b{ color:var(--ok); font-size:14px; }
+  .pq-err{ color:var(--rose, #f97583); }
+  .pq-search{ display:block; width:100%; box-sizing:border-box; margin:0 0 8px; padding:8px 11px; font:inherit; font-size:12px; color:var(--ink);
+    background:var(--card2, rgba(255,255,255,.05)); border:none; border-radius:9px; box-shadow:inset 0 1px 3px rgba(0,0,0,.3); }
+  .pq-sugg{ max-height:150px; overflow-y:auto; margin-bottom:10px; }
+  .pq-hint{ font-size:11.5px; color:var(--ink-faint); line-height:1.5; margin:2px 0 8px; }
+  .pq-read{ font-size:12px; color:var(--ink-soft); line-height:1.6; margin:-2px 0 8px; }
+  .pq-read b{ color:var(--ink); }
+  .pq-title{ font-size:12px; font-weight:800; color:var(--ink); }
+  .pk-adv.on{ background:color-mix(in srgb, var(--ok) 22%, transparent); color:var(--ink); }
+
 /* Month picker styles (build/monthpick.js) — appended to sub_theme.css for /spectate and /br, and spliced into
    the dashboard for its Squads panel, by build/splice.py. */
   /* Month picker (build/monthpick.js): the date opens it. Dates are raised, shadowed buttons — no outlines. */
@@ -339,24 +358,6 @@
   .pk-nav{ display:flex; gap:8px; align-items:flex-start; margin:6px 0; }
   .pk-nav-label{ font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); padding-top:6px; white-space:nowrap; width:70px; flex-shrink:0; }
   .pk-sec{ border-top:1px dashed var(--line); padding:8px 0 4px; }
-  /* set query builder */
-  .pq-expr{ display:flex; flex-wrap:wrap; align-items:center; gap:5px; min-height:38px; padding:8px 10px; margin:2px 0 8px; border-radius:10px;
-    background:var(--card2, rgba(255,255,255,.05)); box-shadow:inset 0 1px 3px rgba(0,0,0,.3); font-size:12px; }
-  .pq-tok{ padding:3px 9px; border-radius:99px; background:color-mix(in srgb, var(--ok) 18%, transparent); color:var(--ink); font-weight:700; }
-  .pq-sym{ font-weight:800; color:var(--ok); font-size:14px; padding:0 2px; }
-  .pq-ops{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; }
-  .pq-b[disabled]{ opacity:.35; }
-  .pq-result{ font-size:12px; color:var(--ink-soft); margin:2px 0 10px; line-height:1.5; }
-  .pq-result b{ color:var(--ok); font-size:14px; }
-  .pq-err{ color:var(--rose, #f97583); }
-  .pq-search{ display:block; width:100%; box-sizing:border-box; margin:0 0 8px; padding:8px 11px; font:inherit; font-size:12px; color:var(--ink);
-    background:var(--card2, rgba(255,255,255,.05)); border:none; border-radius:9px; box-shadow:inset 0 1px 3px rgba(0,0,0,.3); }
-  .pq-sugg{ max-height:150px; overflow-y:auto; margin-bottom:10px; }
-  .pq-hint{ font-size:11.5px; color:var(--ink-faint); line-height:1.5; margin:2px 0 8px; }
-  .pq-read{ font-size:12px; color:var(--ink-soft); line-height:1.6; margin:-2px 0 8px; }
-  .pq-read b{ color:var(--ink); }
-  .pq-title{ font-size:12px; font-weight:800; color:var(--ink); }
-  .pk-adv.on{ background:color-mix(in srgb, var(--ok) 22%, transparent); color:var(--ink); }
   .pk-sec summary{ cursor:pointer; font-size:11.5px; font-weight:700; color:var(--ink); margin-bottom:6px; list-style:none; }
   .pk-sec summary::-webkit-details-marker{ display:none; }
   .pk-sec summary::before{ content:'▸ '; color:var(--ink-faint); }
@@ -2152,7 +2153,7 @@ function mount(el, opts){
     return tokens.map(function(t){
       if(t.t === 'set'){ var u = E.UNIT_BY_ID[t.id]; return '<b>' + esc(u ? u.label : '?') + '</b>'; }
       if(t.t === 'op') return t.v === '∪' ? ' or ' : t.v === '∩' ? ' and also in ' : ' but not in ';
-      if(t.t === 'not') return 'everyone except ';
+      if(t.t === 'not') return universe ? 'everyone in your branch except ' : 'everyone except ';
       return t.t === '(' ? '(' : ')';
     }).join('');
   }

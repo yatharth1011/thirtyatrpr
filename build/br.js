@@ -626,6 +626,7 @@ onAuthStateChanged(auth, function(user){
       : 'Your branch (' + E.bshort(me.branch) + '). Tap a group, a lab batch, an HS section — or combine them. To change something for the whole batch, pick “the whole batch” when saving.';
     var myGroup = roster ? (isCreator ? 'grp:' + roster.academicGroup : (E.UNIT_BY_ID['bg:' + roster.branch + '·' + roster.academicGroup] ? 'bg:' + roster.branch + '·' + roster.academicGroup : 'grp:' + roster.academicGroup)) : null;
     picker = PICKER.mount(document.getElementById('picker'), {
+      query: true,   // Advanced set queries too; inside a BR's branch (universe), ¬ means "everyone in my branch except"
       universe: universe,
       initial: myGroup ? [{ op: 'add', id: myGroup }] : [],
       onChange: function(sel){ state.sel = sel; state.ed = null; renderView(); }
