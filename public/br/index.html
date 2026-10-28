@@ -293,8 +293,8 @@
   .pq-read b{ color:var(--ink); }
   .pq-title{ font-size:12px; font-weight:800; color:var(--ink); }
   .pk-adv.on{ background:color-mix(in srgb, var(--ok) 22%, transparent); color:var(--ink); }
-  .pq-expr .pq-inline{ display:inline-block; flex:0 0 auto; width:auto; min-width:2px; max-width:100%; margin:0; padding:2px 1px; background:transparent; border:none; outline:none; box-shadow:none; font:inherit; font-size:12px; color:var(--ink); caret-color:var(--ok); field-sizing:content; -webkit-appearance:none; appearance:none; border-left:2px solid var(--ok); border-radius:0; }
-  .pq-expr .pq-inline:focus, .pq-expr .pq-inline:focus-visible{ outline:none !important; box-shadow:none !important; border-top:none !important; border-right:none !important; border-bottom:none !important; }
+  .pq-expr .pq-inline{ display:inline-block; flex:0 0 auto; width:auto; min-width:2px; max-width:100%; margin:0; padding:2px 1px; background:transparent; border:none; outline:none; box-shadow:none; font:inherit; font-size:12px; color:var(--ink); caret-color:var(--ok); field-sizing:content; -webkit-appearance:none; appearance:none; border-radius:0; }
+  .pq-expr .pq-inline:focus, .pq-expr .pq-inline:focus-visible{ outline:none !important; box-shadow:none !important; border:none !important; }
 
 /* Month picker styles (build/monthpick.js) — appended to sub_theme.css for /spectate and /br, and spliced into
    the dashboard for its Squads panel, by build/splice.py. */
@@ -2183,20 +2183,83 @@ function mount(el, opts){
     }
   }
 
-  function handleOpChar(char){
-    // If user was searching for a set and types an operator, commit the top matching set first
-    if(state.qSearch.trim()){
-      var firstChip = el.querySelector('.pq-sugg button[data-qset]');
-      if(firstChip){
-        qInsertSet(firstChip.getAttribute('data-qset'));
-        state.qSearch = '';
+  function qBestMatch(term){
+    term = (term || '').trim().toLowerCase();
+    if(!term) return null;
+    if(term === 'all' || term === '*' || term === 'everyone') return E.UNIT_BY_ID['all'];
+    var pool = E.UNITS.filter(function(u){ return u.level !== 'atom' && visible(u); });
+    // Exact label match (e.g. "g2", "d1", "nso", "hs111", "cse")
+    var exact = pool.find(function(u){ return u.label.toLowerCase() === term; });
+    if(exact) return exact;
+    // Match ID suffix (e.g. "grp:G2" -> "g2", "br:CSE" -> "cse")
+    var idMatch = pool.find(function(u){
+      var idParts = u.id.toLowerCase().split(':');
+      return idParts[idParts.length - 1] === term;
+    });
+    if(idMatch) return idMatch;
+    // Common synonyms (e.g. "mnc" for MCB)
+    if(term === 'mnc') return E.UNIT_BY_ID['br:MCB'];
+    // Prefix match on label
+    var prefix = pool.find(function(u){ return u.label.toLowerCase().indexOf(term) === 0; });
+    if(prefix) return prefix;
+    // Substring match
+    return pool.find(function(u){ return (u.label + ' ' + (u.sub || '') + ' ' + (u.family || '')).toLowerCase().indexOf(term) !== -1; }) || null;
+  }
+
+  function parseTextToTokens(raw){
+    var s = raw.replace(/\bnot\s+in\b/gi, ' - ')
+               .replace(/\ball\s+but\b/gi, ' ! ')
+               .replace(/\bexcept\b/gi, ' - ')
+               .replace(/\bminus\b/gi, ' - ')
+               .replace(/\bplus\b/gi, ' + ')
+               .replace(/\bor\b/gi, ' + ')
+               .replace(/\bin\b/gi, ' & ')
+               .replace(/\band\b/gi, ' & ')
+               .replace(/\bnot\b/gi, ' ! ')
+               .replace(/\b(all|everyone)\b/gi, ' * ');
+
+    var regex = /\(|\)|\+|&|\-|!|\*|[a-zA-Z0-9·_:]+/g;
+    var m;
+    var tokens = [];
+    var trailing = '';
+    var allMatches = [];
+    while((m = regex.exec(s)) !== null){
+      allMatches.push({ tok: m[0], end: regex.lastIndex });
+    }
+
+    for(var i=0; i<allMatches.length; i++){
+      var tok = allMatches[i].tok;
+      if(tok === '(') tokens.push({ t: '(' });
+      else if(tok === ')') tokens.push({ t: ')' });
+      else if(tok === '+' || tok === '∪') tokens.push({ t: 'op', v: '∪' });
+      else if(tok === '&' || tok === '∩') tokens.push({ t: 'op', v: '∩' });
+      else if(tok === '-' || tok === '−') tokens.push({ t: 'op', v: '−' });
+      else if(tok === '!' || tok === '¬') tokens.push({ t: 'not' });
+      else if(tok === '*') tokens.push({ t: 'set', id: 'all' });
+      else {
+        var match = qBestMatch(tok);
+        if(match){
+          tokens.push({ t: 'set', id: match.id });
+        } else {
+          trailing = tok;
+        }
       }
     }
+    return { tokens: tokens, trailing: trailing };
+  }
+
+  function handleOpChar(char, pendingSearch){
+    var term = typeof pendingSearch === 'string' ? pendingSearch : state.qSearch;
+    if(term && term.trim()){
+      var match = qBestMatch(term);
+      if(match){
+        qInsertSet(match.id);
+      }
+      state.qSearch = '';
+    }
     if(char === '*'){
-      // '*' means 'all' (Everyone)
       qInsertSet('all');
     } else if(char === '!'){
-      // '!' is the NOT operation (¬ all but)
       qInsertOperandStart({ t: 'not' }, false);
     } else if(char === '+' || char === '|' || char === '∪'){
       if(qEndsOperand()){
@@ -2299,17 +2362,18 @@ function mount(el, opts){
   el.addEventListener('input', function(e){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
     var val = e.target.value;
-    if(val === '*-'){
-      handleOpChar('*');
-      handleOpChar('-');
-      return;
-    }
-    var opMatch = val.match(/[+&*!(\)\-]/);
-    if(opMatch){
-      var char = opMatch[0];
-      state.qSearch = val.slice(0, opMatch.index);
-      handleOpChar(char);
-      return;
+    var hasOp = /[+&*!(\)\-∪∩−¬]/.test(val) || /\b(in|and|or|not|minus|plus|except|all|everyone)\b/i.test(val);
+    if(hasOp){
+      var parsed = parseTextToTokens(val);
+      if(parsed.tokens.length){
+        qPut(parsed.tokens);
+        state.qSearch = parsed.trailing;
+        e.target.value = parsed.trailing;
+        e.target.style.width = parsed.trailing ? (parsed.trailing.length + 0.5) + 'ch' : '2px';
+        qChanged();
+        focusInput();
+        return;
+      }
     }
     state.qSearch = val;
     e.target.style.width = val ? (val.length + 0.5) + 'ch' : '2px';
@@ -2328,7 +2392,7 @@ function mount(el, opts){
     var d = e.data;
     if(d && (d === '+' || d === '&' || d === '-' || d === '*' || d === '!' || d === '(' || d === ')')){
       e.preventDefault();
-      handleOpChar(d);
+      handleOpChar(d, e.target.value);
       return;
     }
   });
@@ -2336,12 +2400,26 @@ function mount(el, opts){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
     if(e.key === 'Enter'){
       e.preventDefault();
-      var firstChip = el.querySelector('.pq-sugg button[data-qset]');
-      if(firstChip){
-        qInsertSet(firstChip.getAttribute('data-qset'));
-        state.qSearch = '';
-        qChanged();
-        focusInput();
+      var val = (e.target.value || state.qSearch).trim();
+      if(val){
+        var parsed = parseTextToTokens(val);
+        if(parsed.tokens.length){
+          qPut(parsed.tokens);
+          state.qSearch = parsed.trailing;
+          e.target.value = parsed.trailing;
+          qChanged();
+          focusInput();
+          return;
+        }
+        var match = qBestMatch(val);
+        if(match){
+          qInsertSet(match.id);
+          state.qSearch = '';
+          e.target.value = '';
+          qChanged();
+          focusInput();
+          return;
+        }
       }
       return;
     }
@@ -2370,7 +2448,7 @@ function mount(el, opts){
     var ch = e.key;
     if(ch === '+' || ch === '&' || ch === '-' || ch === '*' || ch === '!' || ch === '(' || ch === ')'){
       e.preventDefault();
-      handleOpChar(ch);
+      handleOpChar(ch, e.target.value);
       return;
     }
   });
