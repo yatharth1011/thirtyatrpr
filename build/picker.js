@@ -220,7 +220,7 @@ function mount(el, opts){
     }
   }
 
-  var OP_WORDS = { 'in': 1, 'and': 1, 'or': 1, 'not': 1, 'minus': 1, 'plus': 1, 'except': 1 };
+  var OP_WORDS = { 'in': 1, 'and': 1, 'or': 1, 'not': 1, 'minus': 1, 'plus': 1, 'except': 1, 'also': 1 };
 
   function qBestMatch(term){
     term = (term || '').trim().toLowerCase();
@@ -243,7 +243,8 @@ function mount(el, opts){
   }
 
   function parseTextToTokens(raw){
-    var s = raw.replace(/\bnot\s+in\b/gi, ' - ')
+    var s = raw.replace(/\b(and\s+)?also(\s+in)?\b/gi, ' & ')
+               .replace(/\bnot\s+in\b/gi, ' - ')
                .replace(/\ball\s+but\b/gi, ' ! ')
                .replace(/\bexcept\b/gi, ' - ')
                .replace(/\bminus\b/gi, ' - ')
@@ -519,7 +520,7 @@ function mount(el, opts){
   el.addEventListener('input', function(e){
     if(!e.target.classList || !e.target.classList.contains('pq-search')) return;
     var val = e.target.value;
-    var hasOp = /[+&*!(\)\-∪∩−¬]/.test(val) || /\b(in|and|or|not|minus|plus|except|all|everyone)\b/i.test(val);
+    var hasOp = /[+&*!(\)\-∪∩−¬]/.test(val) || /\b(in|and|or|not|minus|plus|except|all|everyone|also)\b/i.test(val);
     if(hasOp){
       var parsed = parseTextToTokens(val);
       if(parsed.tokens.length){
