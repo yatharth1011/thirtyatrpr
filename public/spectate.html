@@ -352,7 +352,6 @@
   .pq-search{ display:block; width:100%; box-sizing:border-box; margin:0 0 8px; padding:8px 11px; font:inherit; font-size:12px; color:var(--ink);
     background:var(--card2, rgba(255,255,255,.05)); border:none; border-radius:9px; box-shadow:inset 0 1px 3px rgba(0,0,0,.3); }
   .pq-sugg{ max-height:150px; overflow-y:auto; margin-bottom:10px; }
-  .pq-use{ width:100%; }
   .pq-hint{ font-size:11.5px; color:var(--ink-faint); line-height:1.5; margin:2px 0 8px; }
   .pq-read{ font-size:12px; color:var(--ink-soft); line-height:1.6; margin:-2px 0 8px; }
   .pq-read b{ color:var(--ink); }
@@ -2133,6 +2132,13 @@ function mount(el, opts){
     if(qEndsOperand()) state.q.push({ t: 'op', v: '∪' });   // two sets in a row: join them with ∪ (visible, ⌫ removes it)
     state.q.push({ t: 'set', id: id });
   }
+  // the selection follows the query by itself: whenever it is complete and valid it becomes the selection (cleared query -> nobody)
+  function qChanged(){
+    var r = E.queryEval(state.q, universe);
+    if(!state.q.length){ if(state.ops.length){ state.ops = []; changed(); return; } render(); return; }
+    if(!r.error && qOpenParens() === 0){ state.ops = [{ op: 'expr', tokens: state.q.slice() }]; changed(); return; }
+    render();
+  }
   function qSuggest(){
     var term = state.qSearch.trim().toLowerCase();
     var pool = E.UNITS.filter(function(u){ return u.level !== 'atom' && visible(u); });
@@ -2165,7 +2171,6 @@ function mount(el, opts){
       : r.error
       ? '<div class="pq-result pq-err">' + esc(r.error) + '</div>'
       : '<div class="pq-result"><b>' + r.idxs.length + '</b> student' + (r.idxs.length === 1 ? '' : 's') + (r.idxs.length ? ' · ' + esc(E.describe(r.idxs).join(' + ')) : '') + '</div>';
-    var ready = state.q.length && !r.error && open === 0;
     return '<div class="pq">' +
       '<div class="pq-hint">Build a group of students: pick a set, then choose how the next one combines with it. Brackets group parts together.</div>' +
       '<div class="pq-expr">' + expr + '</div>' +
@@ -2178,7 +2183,6 @@ function mount(el, opts){
       '</div>' + result +
       '<input class="pq-search" type="search" placeholder="Find a set — G3, HS110, PH101 lab, NSO…" value="' + esc(state.qSearch) + '" autocomplete="off">' +
       '<div class="chips pq-sugg">' + qSuggest() + '</div>' +
-      '<button class="btn pq-use" data-qact="use"' + (ready ? '' : ' disabled') + '>Use as selection</button>' +
     '</div>';
   }
   function apply(op, id){
@@ -2262,18 +2266,17 @@ function mount(el, opts){
     var t = e.target.closest && e.target.closest('button');
     if(!t || !el.contains(t)) return;
     if(t.hasAttribute('data-mode')){ state.mode = t.getAttribute('data-mode'); render(); return; }
-    if(t.hasAttribute('data-qset')){ qInsertSet(t.getAttribute('data-qset')); state.qSearch = ''; render(); return; }
+    if(t.hasAttribute('data-qset')){ qInsertSet(t.getAttribute('data-qset')); state.qSearch = ''; qChanged(); return; }
     if(t.hasAttribute('data-qop')){
       var v = t.getAttribute('data-qop');
       if(v === '(' || v === 'not'){ if(qEndsOperand()) state.q.push({ t: 'op', v: '∪' }); state.q.push(v === 'not' ? { t: 'not' } : { t: '(' }); }
       else if(v === ')') state.q.push({ t: ')' });
       else state.q.push({ t: 'op', v: v });
-      render(); return;
+      qChanged(); return;
     }
     var qa = t.getAttribute('data-qact');
-    if(qa === 'back'){ state.q.pop(); render(); return; }
-    if(qa === 'clear'){ state.q = []; render(); return; }
-    if(qa === 'use'){ var res = E.queryEval(state.q, universe); if(!res.error){ state.past.push(state.ops.slice()); state.ops = [{ op: 'expr', tokens: state.q.slice() }]; changed(); } return; }
+    if(qa === 'back'){ state.q.pop(); qChanged(); return; }
+    if(qa === 'clear'){ state.q = []; qChanged(); return; }
     var act = t.getAttribute('data-act');
     if(act === 'adv'){ state.adv = !state.adv; try { localStorage.setItem('thirtyatrpr_picker_adv', state.adv ? '1' : '0'); } catch(x){} render(); return; }
     if(act === 'undo'){ if(state.past.length){ state.ops = state.past.pop(); changed(); } return; }
