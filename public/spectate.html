@@ -2286,6 +2286,9 @@ function mount(el, opts){
   }
 
   el.addEventListener('click', function(e){
+    // a click in the query box but not on a piece (the empty space after it) puts the cursor at the end, like a text field
+    var box = e.target.closest && e.target.closest('.pq-expr');
+    if(box && !e.target.closest('button')){ state.qCur = state.q.length; render(); return; }
     var t = e.target.closest && e.target.closest('button');
     if(!t || !el.contains(t)) return;
     if(t.hasAttribute('data-mode')){ state.mode = t.getAttribute('data-mode'); render(); return; }
