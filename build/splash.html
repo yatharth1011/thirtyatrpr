@@ -31,10 +31,11 @@
   #bootLoader.pwa .bl-sub{ animation-delay:.8s; }
   /* tapping Spectate / BR Tools: this overlay is built on the current page and plays the whole animation before the redirect;
      the next page then opens on the finished frame ("handoff": nothing replays, only the gradient keeps flowing) and takes over */
-  /* starts at the instant of the tap: the dark backdrop fades in over the page while the mark is already animating on top
-     (fading the whole overlay hid the first frames of the mark) */
-  @keyframes bl-backdrop{ from{ background-color:transparent; } to{ background-color:var(--bg); } }
-  #bootLoader.leaving{ opacity:1; transition:none; background-color:transparent; animation:bl-backdrop .24s ease-out forwards; }
+  /* starts at the instant of the tap: the whole overlay fades in (never a hard, opaque cut over the page) while the mark's
+     animation begins at the same moment; the tile's pop is stretched a little so it is still moving as the fade finishes */
+  @keyframes bl-fadein{ from{ opacity:0; } to{ opacity:1; } }
+  #bootLoader.leaving{ opacity:0; transition:none; animation:bl-fadein .3s ease-out forwards; }
+  #bootLoader.leaving .bl-tile{ animation-duration:.5s; }
   #bootLoader.handoff :not(.bl-glow){ animation:none !important; }
 
   /* ---- entrances: as the splash leaves (body.revealed), each block rises into place one after another instead of
@@ -110,9 +111,9 @@ window.__bootDone = function(){
     setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 400);
   }, Math.max(0, __bootMin - (Date.now() - __bootT0)));
 };
-// Tapping a link to /spectate or /br (from any other page): play the whole animation HERE first, then redirect.
+// Tapping a link to /spectate, /br or Home (from any other page): play the whole animation HERE first, then redirect.
 (function(){
-  var LABELS = { '/spectate': ['&#128301;', 'Spectate'], '/br': ['&#128736;&#65039;', 'BR Tools'] }, going = false;
+  var LABELS = { '/spectate': ['&#128301;', 'Spectate'], '/br': ['&#128736;&#65039;', 'BR Tools'], '': ['', ''] }, going = false;   // '' = the dashboard (Home): the mark alone, no name pill
   function norm(p){ return p.replace(/\/+$/, ''); }
   document.addEventListener('click', function(e){
     if(going || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -120,12 +121,12 @@ window.__bootDone = function(){
     if(!a || (a.target && a.target !== '_self') || a.hasAttribute('download')) return;
     var u; try { u = new URL(a.href, location.href); } catch(x){ return; }
     var to = norm(u.pathname), lab = LABELS[to];
-    if(u.origin !== location.origin || !lab || to === norm(location.pathname)) return;
+    if(u.origin !== location.origin || !lab || to === norm(location.pathname)) return;   // (the dashboard is '' once its trailing slash is stripped)
     if(document.getElementById('bootLoader')) return;                                           // still booting: just navigate
     if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;     // no animation, no wait
     e.preventDefault(); going = true;
     var wrap = document.createElement('div');
-    wrap.innerHTML = __splashHTML.replace(/<div class="bl-sub">[\s\S]*?<\/div>/, '').replace('</svg>', '</svg>\n  <div class="bl-sub"><span><b>' + lab[0] + '</b> ' + lab[1] + '</span></div>');
+    wrap.innerHTML = __splashHTML.replace(/<div class="bl-sub">[\s\S]*?<\/div>/, '').replace('</svg>', '</svg>' + (lab[1] ? '\n  <div class="bl-sub"><span><b>' + lab[0] + '</b> ' + lab[1] + '</span></div>' : ''));
     var ov = wrap.firstElementChild; ov.classList.add('leaving'); document.body.appendChild(ov);
     setTimeout(function(){
       try { sessionStorage.setItem('thirtyatrpr_splash_handoff', JSON.stringify({ to: to, t: Date.now() })); } catch(x){}

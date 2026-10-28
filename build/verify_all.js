@@ -1546,6 +1546,10 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     && wrongPage.handoff === false && stale.handoff === false;
   console.log(okHand ? 'PASS' : 'FAIL', 'handoff: destination opens on the finished frame (short hold, flag consumed); a handoff for another page or an old one is ignored: ' + JSON.stringify({ hand: hand.added, wrongPage: wrongPage.added, stale: stale.added }));
   allPass &= okHand;
+  const handHome = run('https://thirtyatrpr.web.app/spectate', '/', { thirtyatrpr_splash_handoff: JSON.stringify({ to: '', t: Date.now() }) });
+  const okHandHome = handHome.handoff === true && handHome.added.indexOf('handoff') !== -1 && handHome.added.indexOf('skip') === -1;
+  console.log(okHandHome ? 'PASS' : 'FAIL', 'handoff to the dashboard (Home): opens on the finished frame instead of being skipped: ' + JSON.stringify(handHome.added));
+  allPass &= okHandHome;
   // the leaving handler: Spectate/BR links are intercepted, the main page and modified clicks are not
   const click = (href, opts) => {
     opts = opts || {};
@@ -1568,11 +1572,14 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     handler(evt);
     return { prevented, timers, appended, nav, store };
   };
-  const toSpec = click('https://thirtyatrpr.web.app/spectate'), toBr = click('https://thirtyatrpr.web.app/br'), toHome = click('https://thirtyatrpr.web.app/');
+  const toSpec = click('https://thirtyatrpr.web.app/spectate'), toBr = click('https://thirtyatrpr.web.app/br'), toHome = click('https://thirtyatrpr.web.app/', { path: '/spectate' });
   const modified = click('https://thirtyatrpr.web.app/spectate', { evt: { ctrlKey: true } }), onSpec = click('https://thirtyatrpr.web.app/spectate', { path: '/spectate' }), reduced = click('https://thirtyatrpr.web.app/br', { reduced: true });
+  const onDash = click('https://thirtyatrpr.web.app/', { path: '/' });
   const okLeave = toSpec.prevented && toSpec.appended.length === 1 && /Spectate/.test(toSpec.appended[0].html) && toSpec.timers.some((t) => t[1] === 1800)
-    && toBr.prevented && /BR Tools/.test(toBr.appended[0].html) && !toHome.prevented && !modified.prevented && !onSpec.prevented && !reduced.prevented;
-  console.log(okLeave ? 'PASS' : 'FAIL', 'leaving animation: Spectate/BR links play the animation first (redirect after 1.8 s); Home, ctrl-click, the page you are on and reduced-motion just navigate: ' + JSON.stringify({ toSpec: toSpec.prevented, toBr: toBr.prevented, toHome: toHome.prevented, modified: modified.prevented, onSpec: onSpec.prevented, reduced: reduced.prevented }));
+    && toBr.prevented && /BR Tools/.test(toBr.appended[0].html)
+    && toHome.prevented && toHome.appended.length === 1 && !/bl-sub/.test(toHome.appended[0].html) && toHome.timers.some((t) => t[1] === 1800)
+    && !onDash.prevented && !modified.prevented && !onSpec.prevented && !reduced.prevented;
+  console.log(okLeave ? 'PASS' : 'FAIL', 'leaving animation: Spectate/BR links and Home play the animation first (redirect after 1.8 s; Home shows the mark alone); ctrl-click, the page you are on and reduced-motion just navigate: ' + JSON.stringify({ toSpec: toSpec.prevented, toBr: toBr.prevented, toHome: toHome.prevented, modified: modified.prevented, onSpec: onSpec.prevented, reduced: reduced.prevented }));
   allPass &= okLeave;
 }
 
