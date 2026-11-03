@@ -145,11 +145,45 @@ mess = {
     ],
 }
 
-# October's menu hasn't been published — the September menu is assumed to still be in use and is
+# October's menu was never published — the September menu is assumed to have stayed in use and is
 # carried forward, flagged `assumed` so the app shows it with a disclaimer rather than as fact.
-# Replace with the real October entry (and drop this) once the actual menu is available.
-mess['menus'].append(dict(mess['menus'][0], validFrom='2026-10-01', validTo='2026-10-31', assumed=True,
-    note="October menu not published yet — showing September's, which seems to still be followed. Items may differ."))
+# Runs to 4 Nov: the November menu (nov-new/Mess Menu NOV.pdf) is effective from Thursday 5 Nov 2026.
+mess['menus'].append(dict(mess['menus'][0], validFrom='2026-10-01', validTo='2026-11-04', assumed=True,
+    note="October menu not published — showing September's, which seems to still be followed. Items may differ."))
+
+# November menu (BoHA mail, 4 Nov 2026: "effective from Thursday, 5 Nov 2026"). Extracted with
+# pdfplumber's table extraction like September's; wrapped cell lines were rejoined by hand.
+mess['menus'].append({
+    'validFrom': '2026-11-05',
+    'validTo': '2026-11-30',
+    'breakfast': {
+        'Monday': ['Aloo Pyaaz Paratha, Curd Ketchup, Pickle', 'Banana(2pc)', 'Green Chutney', 'Cornflakes', 'Bournvita, Coffee', 'Bread, Butter, Jam', 'Milk (200mL), Tea', 'Sprouts (Boiled)'],
+        'Tuesday': ['Uttapam', 'Upma/Vada (2Pcs)', 'Sambhar', 'Coconut Chutney', 'Ketchup', 'Bournvita, Coffee', 'Bread, Butter, Jam', 'Milk (200mL), Tea', 'Sprouts chaat'],
+        'Wednesday': ['Poha', 'Sandwich (2Pcs)', 'Ketchup', 'Chopped Onion', 'Apple(1pc)/ Omelette', 'Bournvita, Coffee', 'Bread, Butter, Jam', 'Cornflakes', 'Milk (200mL), Tea'],
+        'Thursday': ['Fried Idli', 'Namkeen Seviyan', 'Sambhar', 'Ketchup, Red Coconut Chutney', 'Bournvita, Coffee', 'Bread, Butter, Jam', 'Milk (200mL), Tea', 'Cornflakes'],
+        'Friday': ['Mix Paratha', 'Ketchup, Pickle', 'Tomato Chutney', 'Ketchup', 'Papaya(1 Bowl)/Eggs', 'Bournvita, Coffee', 'Bread, Butter, Jam', 'Milk (200mL), Tea', 'Corn chaat'],
+        'Saturday': ['Masala Macroni/Pav Bhaji', 'Dalia/Namkeen Khichdi', 'Ketchup, Pickle', 'Bournvita, Coffee', 'Bread, Butter, Jam', 'Milk (200mL), Tea', 'Matar Chaat'],
+        'Sunday': ['Dosa', 'Sambhar', 'Red Coconut Chutney', 'Banana(2pc)/ Boiled eggs', 'Bournvita, Coffee', 'Bread, Butter, Jam', 'Milk (200mL), Tea', 'Sprouts'],
+    },
+    'lunch': {
+        'Monday': ['Veg Biryani/Egg Biryani', 'Veg Gravy', 'Chana Dal', 'Boondi Raita', 'Chapati', 'Salad'],
+        'Tuesday': ['Aloo Bhujia', 'Arhar Dal', 'Rice', 'Chapati', 'Curd', 'Salad'],
+        'Wednesday': ['Dal Makhani', 'Palak Corn', 'Curd', 'Rice', 'Chapati', 'Salad'],
+        'Thursday': ['Kadhi Pakora', 'Mix Veg', 'Rice', 'Chapati', 'Salad', 'Fryums'],
+        'Friday': ['Rajma', 'Cabbage Matar', 'Rice', 'Chapati', 'Salad', 'Curd'],
+        'Saturday': ['Chole', 'Capsicum Aloo', 'Bhatura', 'Bhuni Mirch', 'Green Chutney', 'Boondi Raita', 'Rice', 'Chapati, Salad'],
+        'Sunday': ['Dal Makhani', 'Aloo Jeera', 'Sweet Lassi', 'Rice', 'Chapati', 'Salad'],
+    },
+    'dinner': {
+        'Monday': ['Red Masoor Dal', 'Aloo Gobhi Fry', 'Rice', 'Chapati', 'Salad', 'Kheer'],
+        'Tuesday': ['Amritsari Chole', 'Mix Saag', 'Chapati', 'Rice', 'Salad', 'Besan Laddu'],
+        'Wednesday': ['Paneer Butter Masala/Paneer Bhurjji', 'Kadhai Chicken', 'Moong Dal', 'Rice', 'Chapati, Salad', 'Gulab Jamun (2 pcs)'],
+        'Thursday': ['Poori', 'Chana Masala', 'Mix Dal', 'Jeera Rice', 'Chapati', 'Salad', 'Suji Halwa'],
+        'Friday': ['Aloo Meethi', 'Arhar Dal', 'Rice', 'Chapati', 'Salad', 'Rasam'],
+        'Saturday': ['Chana Dal', 'Soya Chilli', 'Veg-Fried Rice', 'Chapati', 'Salad', 'Shahi Tukda/ Jalebi'],
+        'Sunday': ['Paneer Lababdar', 'Butter Chicken', 'Black Masoor Dal', 'Chapati', 'Rice', 'Salad', 'Ice Cream (2 scoops)'],
+    },
+})
 
 def norm_roll(specs):
     out = []

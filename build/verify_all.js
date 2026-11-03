@@ -1330,7 +1330,12 @@ allPass &= runScenario('October shows September\'s mess menu (same weekday) flag
   assert(JSON.stringify(dbg.mealMenuFor('lunch', '2026-10-12')) === JSON.stringify(dbg.mealMenuFor('lunch', '2026-09-14')), 'Mon 12 Oct lunch == a September Monday lunch');
   assert(dbg.messMenuEntryFor('2026-10-12').assumed === true, 'October entry is flagged assumed');
   assert(!dbg.messMenuEntryFor('2026-09-14').assumed, 'September is not');
-  assert(dbg.mealMenuFor('lunch', '2026-11-02') === null, 'no menu invented for November');
+  assert(JSON.stringify(dbg.mealMenuFor('lunch', '2026-11-02')) === JSON.stringify(dbg.mealMenuFor('lunch', '2026-09-14')), 'Mon 2 Nov still on the carried-over menu (November one starts 5 Nov)');
+  assert(dbg.messMenuEntryFor('2026-11-04').assumed === true, '4 Nov is still the assumed entry');
+  assert(!dbg.messMenuEntryFor('2026-11-05').assumed, 'the real November menu starts Thu 5 Nov, no disclaimer');
+  assert(dbg.mealMenuFor('lunch', '2026-11-09').indexOf('Veg Gravy') !== -1, 'Mon 9 Nov lunch is the November menu (Veg Gravy)');
+  assert(dbg.mealMenuFor('dinner', '2026-11-05').indexOf('Suji Halwa') !== -1 && dbg.mealMenuFor('breakfast', '2026-11-04').indexOf('Corn Chaat') === -1, 'Thu 5 Nov dinner is November\'s');
+  assert(dbg.mealMenuFor('lunch', '2026-12-02') === null, 'no menu invented for December');
   const idxOf = (iso) => dbg.state.DAYS.findIndex((d) => d.d === iso);
   dbg.state.activeIdx = idxOf('2026-10-12'); dbg.renderMessPanel();
   assert(doc.getElementById('messPanelBody').innerHTML.indexOf('mess-disclaimer') !== -1, 'disclaimer shown in October');
