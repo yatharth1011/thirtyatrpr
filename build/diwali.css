@@ -125,13 +125,12 @@ body[data-theme="paper-dark"]{
 .check-box.mess-dot::before{ content:"\273F"; font-size:13px; color:var(--dw-m2); }
 /* LED strings run vertically and diagonally; the toran owns the horizontal */
 [data-run] svg{ display:block; overflow:visible; }
-.dw-run-band{ position:absolute; inset:0; }
 .dw-run-foot{ position:absolute; left:0; right:0; top:4px; height:170px; }
 .dw-vrun{ position:fixed; top:0; bottom:0; width:16px; z-index:37; pointer-events:none; display:none; }
 .dw-vrun.l{ left:1px; }
 .dw-vrun.r{ right:1px; }
-#app.show .dw-vrun, .dw-vrun:not(.app){ display:block; }
 @media (min-width: 960px){
+  #app.show .dw-vrun, .dw-vrun:not(.app){ display:block; }
   .dw-vrun.app.l{ left:288px; }
   .dw-vrun.r{ right:5px; }
 }

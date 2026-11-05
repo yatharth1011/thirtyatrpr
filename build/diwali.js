@@ -78,12 +78,11 @@
       }
       return '<div class="dw-burst" style="left:' + left + '"><svg class="dw-twinkle ' + cls + '" viewBox="0 0 60 60" aria-hidden="true">' + out + '<circle cx="30" cy="30" r="2.4" fill="' + color + '"/></svg></div>';
     }
-    // LED strings. The toran owns the horizontal, so these run vertically down the margins and diagonally across open space.
-    // Each is drawn to fit its box and ends at a clip. Bulbs sit on short leads of uneven length, far apart, with a soft halo.
+    // LED strings. The toran owns the horizontal, so these run straight down the PC margins and diagonally in the footer.
+    // Regular on purpose: even spacing, equal leads, warm tones. Each fits its box and ends at a clip.
     var arcId = 0;
-    function jitter(n){ var x = Math.sin(n * 12.9898) * 43758.5453; return x - Math.floor(x); }
     function drawSegs(w, h, segs){
-      var id = 'dwA' + (++arcId), defs = '', body = '', wire = '', clips = '', i, j, bulb = 0, cols = ['led1', 'led2', 'led3'];
+      var id = 'dwA' + (++arcId), defs = '', body = '', wire = '', clips = '', i, j, bulb = 0, cols = ['led1', 'led2', 'led1'];
       for(i = 0; i < 3; i++) defs += '<radialGradient id="' + id + 'g' + i + '"><stop offset="0" stop-color="' + v(cols[i]) + '" stop-opacity=".62"/><stop offset=".35" stop-color="' + v(cols[i]) + '" stop-opacity=".22"/><stop offset="1" stop-color="' + v(cols[i]) + '" stop-opacity="0"/></radialGradient>';
       segs.forEach(function(g, n){
         var cx = (g.x0 + g.x1) / 2 + (g.bx || 0), cy = (g.y0 + g.y1) / 2 + (g.by || 0);
@@ -92,9 +91,9 @@
         clips += '<circle cx="' + f(g.x0) + '" cy="' + f(g.y0) + '" r="2.1" fill="' + v('wire') + '"/><circle cx="' + f(g.x1) + '" cy="' + f(g.y1) + '" r="2.1" fill="' + v('wire') + '"/>';
         var count = Math.max(2, Math.round(len / (g.gap || 92)));
         for(j = 0; j < count; j++){
-          var t = (j + .5 + (jitter(bulb + 21 + n) - .5) * .4) / count;
+          var t = (j + .5) / count;
           var px = (1 - t) * (1 - t) * g.x0 + 2 * (1 - t) * t * cx + t * t * g.x1, py = (1 - t) * (1 - t) * g.y0 + 2 * (1 - t) * t * cy + t * t * g.y1;
-          var lead = 3 + jitter(bulb + 40) * 8, c = bulb % 3, bx = f(px + (g.side ? (bulb % 2 ? g.side : -g.side) : 0)), by = f(py + lead);
+          var lead = 5, c = bulb % 2, bx = f(px), by = f(py + lead);
           body += '<circle cx="' + bx + '" cy="' + f(by + 10) + '" r="18" fill="url(#' + id + 'g' + c + ')" style="opacity:' + v('glow2') + '"/>' +
             '<path d="M' + f(px) + ' ' + f(py) + 'L' + bx + ' ' + by + '" stroke="' + v('wire') + '" stroke-width=".7"/>' +
             '<rect x="' + f(bx - 1.6) + '" y="' + f(by - .4) + '" width="3.2" height="3.8" rx=".8" fill="' + v('wire') + '"/>' +
@@ -106,21 +105,13 @@
       return '<svg aria-hidden="true" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '"><defs>' + defs + '</defs><path d="' + wire + '" fill="none" stroke="' + v('wire') + '" stroke-width=".9"/>' + body + clips + '</svg>';
     }
     var layouts = {
-      // a big V hung from the top of the band, meeting over the middle
-      band: function(w, h){
-        return [{ x0: w * .1, y0: 3, x1: w * .5, y1: h - 18, bx: -w * .03, by: 16 }, { x0: w * .9, y0: 3, x1: w * .5, y1: h - 18, bx: w * .03, by: 16 }];
-      },
       // two long diagonals sweeping down toward the rangoli
       foot: function(w, h){
         var m = Math.min(w * .2, 170);
-        return [{ x0: 8, y0: 4, x1: w / 2 - m, y1: h - 26, bx: -w * .04, by: 20 }, { x0: w - 8, y0: 4, x1: w / 2 + m, y1: h - 26, bx: w * .04, by: 20 }];
+        return [{ x0: 8, y0: 4, x1: w / 2 - m, y1: h - 26, by: 14, gap: 130 }, { x0: w - 8, y0: 4, x1: w / 2 + m, y1: h - 26, by: 14, gap: 130 }];
       },
-      // a loose vertical string, swaying side to side between clips
-      vert: function(w, h){
-        var out = [], spans = Math.max(1, Math.round(h / 380)), step = (h - 8) / spans, i;
-        for(i = 0; i < spans; i++) out.push({ x0: w / 2, y0: 3 + i * step, x1: w / 2, y1: 3 + (i + 1) * step, bx: (i % 2 ? 1 : -1) * 13, gap: 108, side: 4 });
-        return out;
-      }
+      // a straight vertical string with evenly spaced bulbs
+      vert: function(w, h){ return [{ x0: w / 2, y0: 3, x1: w / 2, y1: h - 3, gap: 150 }]; }
     };
     function fitRun(el){
       var r = el.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height), key = w + 'x' + h;
@@ -143,7 +134,7 @@
     top.setAttribute('aria-hidden', 'true');
     top.innerHTML =
       burst('', v('spark1'), v('spark2'), '26%') + burst('b', v('spark3'), v('spark1'), '50%') + burst('c', v('spark2'), v('spark3'), '72%') +
-      '<div class="dw-run-band" data-run="band"></div>' + toran('dwToran') +
+      toran('dwToran') +
       '<div class="dw-lantern" style="left:5%">' + lantern('a', 'dwG1') + '</div>' +
       '<div class="dw-lantern b" style="right:12%">' + lantern('b', 'dwG2') + '</div>' +
       '<div class="dw-lantern c" style="right:4%">' + lantern('c', 'dwG3') + '</div>';
