@@ -228,6 +228,15 @@ window.__overlayFast = (function(){
   /* ---------- Paper Theme (white page, Bodoni type, cut-out cards) ---------- */
   body[data-theme="paper"]{
     --paper:#ffffff;
+    --paper-sheet:linear-gradient(168deg, #ffffff 0%, #ffffff 58%, #f8f8f7 100%);
+    --paper-shadow:
+      inset 0 1px 0 #ffffff,
+      inset 0 0 0 1px rgba(17,18,19,.035),
+      inset 0 -2px 3px -2px rgba(17,18,19,.10),
+      inset 0 0 22px rgba(17,18,19,.04),
+      0 1px 1px rgba(17,18,19,.16),
+      0 3px 6px -2px rgba(17,18,19,.12),
+      0 16px 18px -14px rgba(17,18,19,.30);
     --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     --rule:#111213;
     --soft:#374151;
@@ -1563,17 +1572,17 @@ window.__overlayFast = (function(){
     color:#ffffff;
   }
 
-  /* Paper: paper cut-outs laid on a white page. Cards are white sheets with square corners and a cast shadow.
+  /* Paper: paper cut-outs laid on a white page. Cards are white sheets with square corners: shading inside the edges, a lit top edge, and a shadow gathered under the bottom edge.
      Plain box-shadows only: filters and textures here made phones scroll badly. */
   html:has(body[data-theme="paper"]){ color-scheme:light; }
   html body[data-theme="paper"] main .daycard,
   html body[data-theme="paper"].glass main .daycard,
   html body[data-theme="paper"] main .panel,
   html body[data-theme="paper"] main .kz-panel{
-    background:#ffffff !important;
+    background:var(--paper-sheet) !important;
     border:none !important;
     border-radius:2px !important;
-    box-shadow:0 1px 2px rgba(17,18,19,.18), 0 8px 18px -2px rgba(17,18,19,.13) !important;
+    box-shadow:var(--paper-shadow) !important;
   }
   html body[data-theme="paper"] main .panel .panel,
   html body[data-theme="paper"] main .daycard .panel,

@@ -57,6 +57,15 @@
     --rose:#e11d48; --rose-soft:rgba(225,29,72,0.08);
     --violet:#6d28d9; --violet-soft:rgba(109,40,217,0.12);
     --head-bg:rgba(255,255,255,0.96);
+    --paper-sheet:linear-gradient(168deg, #ffffff 0%, #ffffff 58%, #f8f8f7 100%);
+    --paper-shadow:
+      inset 0 1px 0 #ffffff,
+      inset 0 0 0 1px rgba(17,18,19,.035),
+      inset 0 -2px 3px -2px rgba(17,18,19,.10),
+      inset 0 0 22px rgba(17,18,19,.04),
+      0 1px 1px rgba(17,18,19,.16),
+      0 3px 6px -2px rgba(17,18,19,.12),
+      0 16px 18px -14px rgba(17,18,19,.30);
     --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     font-family:var(--paper-font);
   }
@@ -64,8 +73,8 @@
   body[data-theme="paper"]::before{ display:none !important; }
   html body[data-theme="paper"] button, html body[data-theme="paper"] .tab, html body[data-theme="paper"] header{ box-shadow:none !important; }
   html body[data-theme="paper"] .panel, html body[data-theme="paper"] .card, html body[data-theme="paper"] .daycard{
-    background:#ffffff !important; border:none !important; border-radius:2px !important;
-    box-shadow:0 1px 2px rgba(17,18,19,.18), 0 8px 18px -2px rgba(17,18,19,.13) !important;
+    background:var(--paper-sheet) !important; border:none !important; border-radius:2px !important;
+    box-shadow:var(--paper-shadow) !important;
   }
   .theme-dot-paper{ background:#ffffff; border:1px solid #e2e5eb; }
   html body[data-theme="paper"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
