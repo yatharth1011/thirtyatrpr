@@ -1606,9 +1606,6 @@ window.__overlayFast = (function(){
   @media (min-width: 960px){
     html body[data-theme="paper"] .greet-text{ white-space:normal; line-height:1.12; }
   }
-  /* The greeting is the one place with a finer, bolder Bodoni cut. Above opsz 28 its strokes break apart on phones.
-     The sturdier Paper Dash face keeps its hyphen. */
-  @font-face{ font-family:'Paper Dash'; unicode-range:U+2D, U+2F, U+2013-2014; src:local('Noto Serif'), local('NotoSerif'), local('Times New Roman'), local('Georgia'); }
   /* Paper: Bodoni's sturdiest cut, because people have to read this */
   html body[data-theme="paper"], html body[data-theme="paper"] button, html body[data-theme="paper"] input,
   html body[data-theme="paper"] select, html body[data-theme="paper"] textarea{
@@ -1622,9 +1619,14 @@ window.__overlayFast = (function(){
   /* Bodoni italics overhang their box: keep the last letter inside the gradient */
   html body[data-theme="paper"] .greet-text{
     padding-right:.12em; box-sizing:border-box;
-    font-family:'Paper Dash', var(--paper-font);
     font-weight:700;
     font-variation-settings:'opsz' 28;
+  }
+  /* Same type on every device. Macs draw strokes heavier than phones, so they get the thin rendering and,
+     for the greeting, a finer cut that lands on what a phone shows at opsz 28. */
+  html body[data-theme="paper"]{ -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+  @media (hover:hover) and (pointer:fine){
+    html body[data-theme="paper"] .greet-text{ font-variation-settings:'opsz' 64; }
   }
   html body[data-theme="paper"] main .daycard,
   html body[data-theme="paper"].glass main .daycard,
@@ -1715,8 +1717,14 @@ window.__overlayFast = (function(){
   html body[data-theme="paper"].glass .daychip{ box-shadow:none !important; }
   /* The sheet itself bends away toward its shaded edge, so everything printed on it folds too */
   @media (min-width: 960px){
+    /* Fixed and overscanned: the bend slants the sheet's ends, so they sit past the screen edges and it never stops short */
     html body[data-theme="paper"] header,
-    html body[data-theme="paper"].glass header{ transform:perspective(1100px) rotateY(3.2deg); transform-origin:0 50%; }
+    html body[data-theme="paper"].glass header{
+      position:fixed; left:0; top:-56px; height:calc(100vh + 112px);
+      padding-top:82px !important; padding-bottom:82px !important;
+      transform:perspective(1100px) rotateY(3.2deg); transform-origin:0 50%;
+    }
+    html body[data-theme="paper"] .main-col{ margin-left:280px; }
     html body[data-theme="paper"] header::after{
       content:""; position:absolute; top:0; right:0; bottom:0; width:96px; pointer-events:none; z-index:5;
       background:linear-gradient(90deg, rgba(70,48,36,0), rgba(70,48,36,.13));
@@ -2655,11 +2663,13 @@ window.__overlayFast = (function(){
   }
   .check-venue.mess-items{ display:block; margin-top:2px; line-height:1.5; text-align:left; }
   .check-row.done .check-label{ color:var(--ink-faint); text-decoration:none; }
-  /* One line through the code and the title: each would otherwise draw its own, at its own font's height */
-  .check-row.done .check-text{
-    background:linear-gradient(currentColor, currentColor) no-repeat 0 56% / 100% 1px;
-    -webkit-box-decoration-break:clone; box-decoration-break:clone;
+  /* A real text-decoration, never a gradient: Chrome's auto-dark paints background gradients as grey bars.
+     The code is inline-block so it draws its own line at its own mid-height; inherited, the line lands on its baseline. */
+  .check-row.done .check-text,
+  .check-row.done .check-text .check-code{
+    text-decoration:line-through; text-decoration-color:var(--ink-faint); text-decoration-thickness:1px;
   }
+  .check-row.done .check-text .check-code{ display:inline-block; }
   .check-time{ color:var(--ink-soft); font-size:10.5px; text-align:right; white-space:nowrap; font-family:'JetBrains Mono',monospace; }
   /* A live venue relocation (see DATA.venueRelocations) — always visible, unlike .venue-desc,
      since it explains an unexpected room change rather than just naming the room. */

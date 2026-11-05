@@ -114,6 +114,7 @@
   html body[data-theme="paper"] .panel .panel::after, html body[data-theme="paper"] .panel .card::after, html body[data-theme="paper"] .panel .daycard::after, html body[data-theme="paper"] .card .card::after{ content:none !important; }
   html body[data-theme="paper"] header{ background:linear-gradient(180deg, #ffffff 0%, #ffffff 70%, #f6f5f3 100%) !important; box-shadow:0 2px 3px rgba(17,18,19,.12), 0 14px 18px -14px rgba(17,18,19,.32) !important; }
   html body[data-theme="paper"] #googleBtn{ border:1px solid var(--line) !important; }
+  html body[data-theme="paper"]{ -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
   .theme-dot-paper{ background:#ffffff; border:1px solid #e2e5eb; }
   html body[data-theme="paper"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
   html body[data-theme="paper"] .daycard-head{ border-bottom:none !important; }
