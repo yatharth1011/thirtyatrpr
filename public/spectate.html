@@ -484,6 +484,7 @@ html body[data-theme="paper-dark"] .daycard::after{
 /* Diwali decorations, one set in every theme's own colours (build/diwali.js draws them). No end date.
    Vectors, no filters; only flames, lanterns and a few sparkles move, and they rest for reduced-motion. */
 :root{
+ --dw-warm:52,196,138; --dw-warmc:#34c48a; --dw-f1:#ffc44d; --dw-f2:#ff8a1f;
   --dw-m1:#ffb627; --dw-m2:#ff8a1f; --dw-m3:#7a3b00; --dw-leaf:#34c48a; --dw-leaf2:#1f8f63; --dw-rope:#c9a24a;
   --dw-l1:#34c48a; --dw-l2:#f2c14e; --dw-l3:#ff7a59; --dw-band:#ffe7a8;
   --dw-clay:#b5562b; --dw-clay2:#7c3417; --dw-rim:#e9a15b; --dw-oil:#5a2c12;
@@ -492,6 +493,7 @@ html body[data-theme="paper-dark"] .daycard::after{
   --dw-flex:#18251b;
 }
 body[data-theme="github"]{
+ --dw-warm:121,184,255; --dw-warmc:#79b8ff; --dw-f1:#ffc44d; --dw-f2:#ff8a1f;
   --dw-m1:#e3b341; --dw-m2:#d29922; --dw-m3:#6e4b00; --dw-leaf:#56d364; --dw-leaf2:#2ea043; --dw-rope:#8b949e;
   --dw-l1:#79b8ff; --dw-l2:#b392f0; --dw-l3:#f97583; --dw-band:#e1e4e8;
   --dw-clay:#b08968; --dw-clay2:#6f5238; --dw-rim:#d9b48f; --dw-oil:#3b2a1a;
@@ -500,6 +502,7 @@ body[data-theme="github"]{
   --dw-flex:#1b222a;
 }
 body[data-theme="forest"]{
+ --dw-warm:62,207,142; --dw-warmc:#3ecf8e; --dw-f1:#ffc44d; --dw-f2:#ff8a1f;
   --dw-m1:#f4c542; --dw-m2:#e89a2c; --dw-m3:#6b4306; --dw-leaf:#3ecf8e; --dw-leaf2:#1f8a5b; --dw-rope:#a98f4f;
   --dw-l1:#3ecf8e; --dw-l2:#f4c542; --dw-l3:#e8743b; --dw-band:#f7e8b5;
   --dw-r1:#3ecf8e; --dw-r2:#f4c542; --dw-r3:#e8743b; --dw-r4:#9be3bd; --dw-dot:#f3fbe9;
@@ -507,6 +510,7 @@ body[data-theme="forest"]{
   --dw-flex:#112316;
 }
 body[data-theme="sunset"]{
+ --dw-warm:240,149,74; --dw-warmc:#f0954a; --dw-f1:#ffc44d; --dw-f2:#ff8a1f;
   --dw-m1:#ffc24b; --dw-m2:#f0954a; --dw-m3:#7a3a0c; --dw-leaf:#9fbf4a; --dw-leaf2:#6b8a2c; --dw-rope:#c98f4f;
   --dw-l1:#f0954a; --dw-l2:#ff5e62; --dw-l3:#ffc24b; --dw-band:#ffe2b5;
   --dw-r1:#f0954a; --dw-r2:#ff5e62; --dw-r3:#ffc24b; --dw-r4:#c9607a; --dw-dot:#fff1dc;
@@ -514,6 +518,7 @@ body[data-theme="sunset"]{
   --dw-flex:#291a14;
 }
 body[data-theme="midnight"]{
+ --dw-warm:163,116,232; --dw-warmc:#a374e8; --dw-f1:#ffc44d; --dw-f2:#ff8a1f;
   --dw-m1:#f2c66d; --dw-m2:#d9a048; --dw-m3:#5a3a10; --dw-leaf:#7fbf9a; --dw-leaf2:#4a8a6a; --dw-rope:#8f7bb5;
   --dw-l1:#a374e8; --dw-l2:#e88ac0; --dw-l3:#f2c66d; --dw-band:#efe3ff;
   --dw-r1:#a374e8; --dw-r2:#e88ac0; --dw-r3:#f2c66d; --dw-r4:#6f8fe8; --dw-dot:#f5efff;
@@ -521,19 +526,21 @@ body[data-theme="midnight"]{
   --dw-flex:#181324;
 }
 body[data-theme="paper"]{
-  --dw-m1:#eda12f; --dw-m2:#d9731f; --dw-m3:#7a3b12; --dw-leaf:#6b7d2e; --dw-leaf2:#4c5a1f; --dw-rope:#8a5a3a;
-  --dw-l1:#9d174d; --dw-l2:#db2777; --dw-l3:#d9731f; --dw-band:#f8e3b0;
+ --dw-warm:219,39,119; --dw-warmc:#db2777; --dw-f1:#ffc44d; --dw-f2:#f28c28;
+  --dw-m1:#f6897c; --dw-m2:#e4527a; --dw-m3:#8a2747; --dw-leaf:#6b7d2e; --dw-leaf2:#4c5a1f; --dw-rope:#8a5a3a;
+  --dw-l1:#9d174d; --dw-l2:#db2777; --dw-l3:#f0707a; --dw-band:#f8e3b0;
   --dw-clay:#a8502f; --dw-clay2:#6e2f19; --dw-rim:#d58a55; --dw-oil:#3f1f10;
-  --dw-r1:#9d174d; --dw-r2:#d9731f; --dw-r3:#db2777; --dw-r4:#5f6f2a; --dw-dot:#fffaf0;
-  --dw-spark1:#db2777; --dw-spark2:#d9731f; --dw-spark3:#9d174d; --dw-glow:.28; --dw-text:#9d174d;
+  --dw-r1:#9d174d; --dw-r2:#f0707a; --dw-r3:#db2777; --dw-r4:#5f6f2a; --dw-dot:#fffaf0;
+  --dw-spark1:#db2777; --dw-spark2:#f0707a; --dw-spark3:#9d174d; --dw-glow:.28; --dw-text:#9d174d;
   --dw-flex:#2e251e;
 }
 body[data-theme="paper-dark"]{
-  --dw-m1:#f2b45a; --dw-m2:#df8a3c; --dw-m3:#6b3a14; --dw-leaf:#a3b56a; --dw-leaf2:#6f7f42; --dw-rope:#a07a60;
-  --dw-l1:#f472b6; --dw-l2:#fb7185; --dw-l3:#f2b45a; --dw-band:#ffe6d6;
+ --dw-warm:244,114,182; --dw-warmc:#f472b6; --dw-f1:#ffd27a; --dw-f2:#ff9a4d;
+  --dw-m1:#ff9e8f; --dw-m2:#f4587a; --dw-m3:#7d2340; --dw-leaf:#a3b56a; --dw-leaf2:#6f7f42; --dw-rope:#a07a60;
+  --dw-l1:#f472b6; --dw-l2:#fb7185; --dw-l3:#ff9e8f; --dw-band:#ffe6d6;
   --dw-clay:#b86a42; --dw-clay2:#73391f; --dw-rim:#e0a070; --dw-oil:#2c150b;
-  --dw-r1:#f472b6; --dw-r2:#f2b45a; --dw-r3:#fb7185; --dw-r4:#c5d08a; --dw-dot:#fff1e6;
-  --dw-spark1:#f472b6; --dw-spark2:#f2b45a; --dw-spark3:#fb7185; --dw-glow:.55; --dw-text:#f9a8c4;
+  --dw-r1:#f472b6; --dw-r2:#ff9e8f; --dw-r3:#fb7185; --dw-r4:#c5d08a; --dw-dot:#fff1e6;
+  --dw-spark1:#f472b6; --dw-spark2:#ff9e8f; --dw-spark3:#fb7185; --dw-glow:.55; --dw-text:#f9a8c4;
   --dw-flex:#271b21;
 }
 
@@ -559,19 +566,19 @@ body[data-theme="paper-dark"]{
 .dw-lights{ display:block; width:100%; height:34px; }
 .dw-scene{ display:flex; align-items:flex-end; justify-content:center; gap:clamp(6px, 2.4vw, 22px); margin-top:4px; }
 .dw-diya{ width:46px; height:58px; flex:0 0 auto; pointer-events:auto !important; cursor:pointer !important; transition:transform .2s cubic-bezier(.34, 1.56, .64, 1), filter .2s ease; user-select:none; -webkit-tap-highlight-color:transparent; }
-.dw-diya:hover{ transform:scale(1.15) translateY(-3px); filter:drop-shadow(0 0 12px rgba(251, 146, 60, 0.8)) drop-shadow(0 0 20px rgba(244, 63, 94, 0.45)); }
+.dw-diya:hover{ transform:scale(1.15) translateY(-3px); filter:drop-shadow(0 0 12px rgba(var(--dw-warm), 0.8)) drop-shadow(0 0 20px rgba(244, 63, 94, 0.45)); }
 .dw-diya:active{ transform:scale(0.92) translateY(1px); }
 .dw-diya-burst{ animation:dwDiyaBurst 0.65s cubic-bezier(.22, 1, .36, 1); }
 @keyframes dwDiyaBurst{
   0%{ transform:scale(1); }
-  25%{ transform:scale(1.36) translateY(-6px); filter:drop-shadow(0 0 16px #fbbf24) drop-shadow(0 0 32px #f43f5e); }
-  60%{ transform:scale(1.08) translateY(-2px); filter:drop-shadow(0 0 14px #fb923c); }
+  25%{ transform:scale(1.36) translateY(-6px); filter:drop-shadow(0 0 16px var(--dw-warmc)) drop-shadow(0 0 32px #f43f5e); }
+  60%{ transform:scale(1.08) translateY(-2px); filter:drop-shadow(0 0 14px var(--dw-warmc)); }
   100%{ transform:scale(1) translateY(0); filter:none; }
 }
 .dw-diya-burst .dw-flame{ animation:dwFlameFlare 0.65s ease-out forwards !important; transform-origin:33px 42px; }
 @keyframes dwFlameFlare{
   0%{ transform:scale(1); }
-  35%{ transform:scale(2.1) translateY(-6px); filter:brightness(2) drop-shadow(0 0 8px #fef08a); }
+  35%{ transform:scale(2.1) translateY(-6px); filter:brightness(2) drop-shadow(0 0 8px var(--dw-warmc)); }
   100%{ transform:scale(1) translateY(0); filter:brightness(1); }
 }
 .dw-diya svg{ width:100%; height:100%; display:block; overflow:visible; }
@@ -683,20 +690,20 @@ body[data-theme="paper-dark"]{
 
 /* Mess menu card: Marigold flower bullets for meal timings */
 .check-box.mess-dot{ font-size:0; }
-.check-box.mess-dot::before{ content:"\273F"; font-size:12.5px; color:var(--dw-m2); display:inline-block; vertical-align:middle; filter:drop-shadow(0 0 3px rgba(251, 146, 60, 0.45)); }
+.check-box.mess-dot::before{ content:"\273F"; font-size:12.5px; color:var(--dw-m2); display:inline-block; vertical-align:middle; filter:drop-shadow(0 0 3px rgba(var(--dw-warm), 0.45)); }
 
 /* Month modal (#calPanel) festive styling */
 #calPanel.open{
-  box-shadow:0 24px 60px rgba(251, 146, 60, 0.22), 0 10px 30px rgba(0,0,0,0.45) !important;
-  border-color:rgba(251, 191, 36, 0.28) !important;
+  box-shadow:0 24px 60px rgba(var(--dw-warm), 0.22), 0 10px 30px rgba(0,0,0,0.45) !important;
+  border-color:rgba(var(--dw-warm), 0.28) !important;
 }
 html body[data-theme="paper"] #calPanel.open{
-  box-shadow:0 24px 60px rgba(251, 146, 60, 0.18), 0 10px 30px rgba(0,0,0,0.1) !important;
-  border-color:rgba(224, 140, 36, 0.38) !important;
+  box-shadow:0 24px 60px rgba(var(--dw-warm), 0.18), 0 10px 30px rgba(0,0,0,0.1) !important;
+  border-color:rgba(var(--dw-warm), 0.38) !important;
 }
 #calMonthLabel{
   color:var(--dw-text) !important;
-  text-shadow:0 0 10px rgba(251, 191, 36, 0.35);
+  text-shadow:0 0 10px rgba(var(--dw-warm), 0.35);
 }
 .cal-nav{
   transition:all .18s ease;
@@ -708,8 +715,8 @@ html body[data-theme="paper"] #calPanel.open{
 }
 .cal-cell.dw-festive-cell{
   position:relative;
-  border:1.5px solid rgba(251, 191, 36, 0.72) !important;
-  box-shadow:0 0 8px rgba(251, 191, 36, 0.45), inset 0 0 6px rgba(251, 146, 60, 0.25) !important;
+  border:1.5px solid rgba(var(--dw-warm), 0.72) !important;
+  box-shadow:0 0 8px rgba(var(--dw-warm), 0.45), inset 0 0 6px rgba(var(--dw-warm), 0.25) !important;
 }
 .cal-cell.dw-festive-cell::after{
   content:"🪔";
@@ -718,156 +725,24 @@ html body[data-theme="paper"] #calPanel.open{
   right:-5px;
   font-size:10px;
   line-height:1;
-  filter:drop-shadow(0 0 4px #fbbf24);
+  filter:drop-shadow(0 0 4px var(--dw-warmc));
   pointer-events:none;
 }
 .cal-cell.dw-festive-cell:hover{
   transform:translateY(-2px) scale(1.06);
-  box-shadow:0 0 14px rgba(251, 191, 36, 0.75), inset 0 0 10px rgba(251, 146, 60, 0.4) !important;
+  box-shadow:0 0 14px rgba(var(--dw-warm), 0.75), inset 0 0 10px rgba(var(--dw-warm), 0.4) !important;
 }
 
-/* Squads modal (#groupsPanel) festive styling */
-#groupsPanel.open{
-  box-shadow:0 24px 60px rgba(251, 146, 60, 0.22), 0 10px 30px rgba(0,0,0,0.45) !important;
-  border-color:rgba(251, 191, 36, 0.28) !important;
-}
-html body[data-theme="paper"] #groupsPanel.open{
-  box-shadow:0 24px 60px rgba(251, 146, 60, 0.18), 0 10px 30px rgba(0,0,0,0.1) !important;
-  border-color:rgba(224, 140, 36, 0.38) !important;
-}
-#groupsPanel .settings-inner h3{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-#groupsPanel .settings-inner h3::before{
-  content:"🪔";
-  font-size:18px;
-  filter:drop-shadow(0 0 6px rgba(251, 191, 36, 0.5));
-}
-#groupsPanel .chip-filter.active{
-  background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
-  color:#171114 !important;
-  font-weight:700 !important;
-  box-shadow:0 2px 10px rgba(245, 158, 11, 0.4) !important;
-  border-color:transparent !important;
-}
-.grp-member{
-  background:rgba(245, 158, 11, 0.12) !important;
-  border:1px solid rgba(245, 158, 11, 0.35) !important;
-  color:var(--dw-text) !important;
-  box-shadow:0 1px 4px rgba(245, 158, 11, 0.15);
-}
-.grp-member::before{
-  content:"✿";
-  font-size:10px;
-  color:var(--dw-m2);
-  margin-right:2px;
-}
-
-/* "Everyone Free" festive celebration banner */
-.grp-together{
-  background:linear-gradient(135deg, rgba(245, 158, 11, 0.16) 0%, rgba(225, 29, 72, 0.12) 100%) !important;
-  border:1px solid rgba(245, 158, 11, 0.4) !important;
-  box-shadow:0 4px 18px rgba(245, 158, 11, 0.15) !important;
-}
-.grp-together-label{
-  color:#fbbf24 !important;
-  font-weight:700 !important;
-  letter-spacing:0.02em;
-}
-.grp-together-label::before{
-  content:"✨ ";
-}
-
-/* Timeline slots: Fairy light aesthetic */
-.grp-slot{
-  position:relative;
-  border-top:1px dashed rgba(245, 158, 11, 0.3) !important;
-  transition:background .2s ease;
-  padding-left:4px;
-}
-.grp-slot-time{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  background:rgba(245, 158, 11, 0.12);
-  border:1px solid rgba(245, 158, 11, 0.32);
-  border-radius:99px;
-  padding:2px 9px;
-  color:#fbbf24 !important;
-  font-weight:700;
-  box-shadow:0 1px 4px rgba(245, 158, 11, 0.15);
-}
-.grp-slot-time::before{
-  content:"🪔";
-  font-size:10.5px;
-  line-height:1;
-  filter:drop-shadow(0 0 4px #fbbf24);
-}
-.grp-row{
-  border-left:2px solid rgba(245, 158, 11, 0.5) !important;
-  border-radius:0 8px 8px 0;
-  transition:transform .2s cubic-bezier(.22, 1, .36, 1), border-left-color .2s ease, background .2s ease;
-}
-.grp-row:hover{
-  transform:translateX(5px);
-  border-left-color:#fbbf24 !important;
-  background:rgba(245, 158, 11, 0.08);
-}
-
-/* Squad Timetable Milestone Dividers (Compact festive pills) */
-.dw-squad-milestone{
-  margin:8px 0 6px;
-  padding:4px 10px;
-  border-radius:99px;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  font-weight:600;
-  box-shadow:0 1px 4px rgba(0,0,0,0.15);
-}
-.dw-squad-milestone.dw-milestone-noon{
-  background:rgba(245, 158, 11, 0.14);
-  border:1px solid rgba(245, 158, 11, 0.35);
-  color:#fde047;
-}
-.dw-squad-milestone.dw-milestone-eve{
-  background:rgba(234, 88, 12, 0.14);
-  border:1px solid rgba(244, 63, 94, 0.35);
-  color:#fca5a5;
-}
-
-/* Compact Celebration button at bottom of Squads */
-.dw-squad-finale{
-  margin:14px 0 6px;
-  padding:6px;
-  text-align:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
+/* Squads stay clean: the app's own styles, one toran strand along the top, and festival-day events as ordinary timed rows */
+#groupsPanel .settings-inner{ position:relative; }
+#groupsPanel .dw-strand.inset{ position:absolute; top:2px; left:10px; right:10px; height:24px; pointer-events:none; }
+#groupsPanel .settings-inner{ padding-top:26px; }
+.grp-slot.dw-milestone .grp-what{ font-style:italic; color:var(--dw-text); }
+.grp-slot.dw-milestone .grp-row{ border-left-style:dashed; }
+.dw-squad-finale{ margin:12px 0 4px; text-align:center; }
 .dw-squad-fireworks-btn{
-  background:linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
-  border:none;
-  color:#ffffff;
-  font-family:'JetBrains Mono', monospace;
-  font-size:11.5px;
-  font-weight:700;
-  padding:7px 16px;
-  border-radius:99px;
-  cursor:pointer;
-  box-shadow:0 2px 8px rgba(245, 158, 11, 0.35);
-  transition:transform .18s ease, box-shadow .18s ease;
-}
-.dw-squad-fireworks-btn:hover{
-  transform:scale(1.05) translateY(-1px);
-  box-shadow:0 4px 14px rgba(245, 158, 11, 0.55);
-}
-.dw-squad-fireworks-btn:active{
-  transform:scale(0.96) translateY(1px);
+  background:none; border:none; padding:4px 2px; cursor:pointer; font:inherit; font-size:12.5px;
+  color:var(--dw-text); text-decoration:underline; text-underline-offset:3px; text-decoration-color:color-mix(in srgb, var(--dw-text) 35%, transparent);
 }
 
 .dw-foot-toran{ position:relative; width:100%; height:48px; overflow:hidden; margin-bottom:12px; pointer-events:none; }
@@ -883,62 +758,32 @@ html body[data-theme="paper"] #groupsPanel.open{
   flex-shrink:0;
   display:inline-block;
   vertical-align:middle;
-  filter:drop-shadow(0 2px 8px rgba(245, 158, 11, 0.45));
+  filter:drop-shadow(0 2px 6px rgba(var(--dw-warm), .4));
 }
 .festive-text{
   display:inline-block;
 }
-/* Festive greeting animated gradients (both Kaizen and non-Kaizen) */
-html body .greet-text.festive-greet.festive-dhanteras,
-.festive-dhanteras{
-  background:linear-gradient(135deg, #ffd700 0%, #f59e0b 25%, #e11d48 50%, #f59e0b 75%, #ffd700 100%) !important;
-  background-size:260% 260% !important;
+/* The greeting: pink, coral and their shades, flowing continuously. The gradient ends where it starts, and one
+   run moves it exactly one image-width, so the loop has no seam. Clay and Clay Dark use it for every greeting. */
+:root{ --dw-greet:linear-gradient(90deg, #f472b6, #fb7185, #ff9e8f, #ffc2b8, #f9a8c4, #ff8a9a, #f472b6); }
+body[data-theme="paper"]{ --dw-greet:linear-gradient(90deg, #9d174d, #db2777, #f4587a, #f6897c, #f4587a, #be185d, #9d174d); }
+html body .greet-text.festive-greet,
+html body[data-theme^="paper"] .greet-text,
+html body[data-theme^="paper"] .greet-text.kz-greet{
+  background:var(--dw-greet) !important;
+  background-size:300% 100% !important;
   -webkit-background-clip:text !important;
+  background-clip:text !important;
   -webkit-text-fill-color:transparent !important;
+  color:transparent !important;
   text-shadow:none !important;
-  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
+  animation:dwGreetFlow 8s linear infinite !important;
 }
-html body .greet-text.festive-greet.festive-roopchaudas,
-html body .greet-text.festive-greet.festive-chhoti,
-.festive-roopchaudas, .festive-chhoti{
-  background:linear-gradient(135deg, #fef08a 0%, #fb923c 25%, #f43f5e 50%, #fb923c 75%, #fef08a 100%) !important;
-  background-size:260% 260% !important;
-  -webkit-background-clip:text !important;
-  -webkit-text-fill-color:transparent !important;
-  text-shadow:none !important;
-  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
+@keyframes dwGreetFlow{ from{ background-position:0% 0; } to{ background-position:150% 0; } }
+.festive-text{ white-space:nowrap; }
+@media (min-width: 960px){
+  .festive-text .greet-name{ display:block; }
 }
-html body .greet-text.festive-greet.festive-diwali,
-.festive-diwali{
-  background:linear-gradient(135deg, #fef08a 0%, #f59e0b 20%, #e11d48 40%, #be123c 60%, #f59e0b 80%, #fef08a 100%) !important;
-  background-size:260% 260% !important;
-  -webkit-background-clip:text !important;
-  -webkit-text-fill-color:transparent !important;
-  text-shadow:none !important;
-  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
-}
-html body .greet-text.festive-greet.festive-govardhan,
-.festive-govardhan{
-  background:linear-gradient(135deg, #34d399 0%, #10b981 25%, #f59e0b 50%, #10b981 75%, #34d399 100%) !important;
-  background-size:260% 260% !important;
-  -webkit-background-clip:text !important;
-  -webkit-text-fill-color:transparent !important;
-  text-shadow:none !important;
-  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
-}
-html body .greet-text.festive-greet.festive-bhaidooj,
-.festive-bhaidooj{
-  background:linear-gradient(135deg, #fb7185 0%, #e11d48 25%, #f97316 50%, #e11d48 75%, #fb7185 100%) !important;
-  background-size:260% 260% !important;
-  -webkit-background-clip:text !important;
-  -webkit-text-fill-color:transparent !important;
-  text-shadow:none !important;
-  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
-}
-@keyframes dwFestiveFlow{
-  0%{ background-position:0% 50%; }
-  50%{ background-position:100% 50%; }
-  100%{ background-position:0% 50%; }
 }
 
 #dwFxCanvas{
@@ -973,6 +818,7 @@ html body .greet-text.festive-greet.festive-bhaidooj,
   .dw-diya{ width:36px; height:46px; }
 }
 @media (prefers-reduced-motion: reduce){
+  .greet-text{ animation:none !important; }
   .dw-lantern, .dw-flame, .dw-twinkle, .dw-ladi-t1, .dw-ladi-t2, .dw-ladi-t3{ animation:none; }
 }
 
@@ -4234,7 +4080,7 @@ else window.addEventListener('load', start, { once: true });
         '<circle cx="32" cy="26" r="26" fill="url(#' + id + ')" style="opacity:' + v('glow') + '"/>' +
         '<path d="M3 46C10 44 50 44 57 46C54 66 42 72 30 72S6 66 3 46Z" fill="' + v('clay') + '"/><path d="M30 72C42 72 54 66 57 46C52 45 48 45 44 45C44 58 38 68 30 72Z" fill="' + v('clay2') + '"/>' +
         '<ellipse cx="30" cy="46" rx="27" ry="6" fill="' + v('rim') + '"/><ellipse cx="30" cy="46" rx="22" ry="4" fill="' + v('oil') + '"/><path d="M48 44Q44 40 34 43" stroke="' + v('band') + '" stroke-width="2" fill="none"/>' + dots +
-        '<g class="dw-flame"><path d="M33 42C24 34 30 22 33 12C37 22 43 34 33 42Z" fill="' + v('m2') + '"/><path d="M33 41C29 35 31 28 33 22C35 28 38 35 33 41Z" fill="' + v('m1') + '"/><path d="M33 40C31.6 37 32 34 33 31C34 34 34.6 37 33 40Z" fill="' + v('dot') + '"/></g></svg></div>';
+        '<g class="dw-flame"><path d="M33 42C24 34 30 22 33 12C37 22 43 34 33 42Z" fill="' + v('f2') + '"/><path d="M33 41C29 35 31 28 33 22C35 28 38 35 33 41Z" fill="' + v('f1') + '"/><path d="M33 40C31.6 37 32 34 33 31C34 34 34.6 37 33 40Z" fill="' + v('dot') + '"/></g></svg></div>';
     }
     function rangoli(){
       var c = 110, out = '', i, a, R;
@@ -4339,7 +4185,7 @@ else window.addEventListener('load', start, { once: true });
       out += '<g transform="translate(' + dx + ', ' + dy + ') rotate(-45)">' +
         '<path d="M-10 4C-6 10 6 10 10 4C7 2 -7 2 -10 4Z" fill="' + v('clay') + '"/>' +
         '<path d="M-10 4Q0 1 10 4" stroke="' + v('rim') + '" stroke-width="1.2" fill="none"/>' +
-        '<g class="dw-flame"><path d="M0 2C-3 -3 0 -8 0 -11C0 -8 3 -3 0 2Z" fill="' + v('m1') + '"/><path d="M0 2C-1.5 -1 0 -4 0 -6C0 -4 1.5 -1 0 2Z" fill="' + v('dot') + '"/></g>' +
+        '<g class="dw-flame"><path d="M0 2C-3 -3 0 -8 0 -11C0 -8 3 -3 0 2Z" fill="' + v('f1') + '"/><path d="M0 2C-1.5 -1 0 -4 0 -6C0 -4 1.5 -1 0 2Z" fill="' + v('dot') + '"/></g>' +
       '</g>';
 
       return '<div class="dw-quad-rangoli"><svg viewBox="0 0 120 120" aria-hidden="true">' + out + '</svg></div>';
@@ -4558,7 +4404,15 @@ else window.addEventListener('load', start, { once: true });
         el.appendChild(d);
       }
       d.className = cls;
+      if(d.firstChild) return;      // already dressed: rewriting would retrigger the page watcher forever
       d.innerHTML = html;
+    }
+    var strandId = 0;
+    function strand(){
+      var id = 'dwS' + (++strandId), W = 72, tile = '<path d="M0 6Q' + (W / 2) + ' 15 ' + W + ' 6" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>';
+      tile += leaf(12, 11, 9, 24) + leaf(36, 13, 10, -14) + leaf(60, 11, 9, 16);
+      tile += marigold(12, 9, 5) + marigold(36, 11, 5.8) + marigold(60, 9, 5);
+      return '<svg aria-hidden="true" width="100%" height="24"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="24">' + tile + '</pattern></defs><rect width="100%" height="24" fill="url(#' + id + ')"/></svg>';
     }
 
     function mountSearchDiya(btn){
@@ -4653,59 +4507,35 @@ else window.addEventListener('load', start, { once: true });
       foot.parentNode.insertBefore(low, foot);
     }
 
+    // Festival days only, as ordinary timed rows in their proper place in the day
     function decorateSquadView(view){
       if(!view) return;
-      var slots = view.querySelectorAll('.grp-slot');
+      var slots = Array.prototype.slice.call(view.querySelectorAll('.grp-slot:not(.dw-milestone)'));
       if(!slots.length) return;
-
-      var hasNoon = !!view.querySelector('.dw-milestone-noon');
-      var hasEve = !!view.querySelector('.dw-milestone-eve');
-
-      if(!hasNoon || !hasEve){
-        function parseSlotMin(slotEl){
-          var timeEl = slotEl.querySelector('.grp-slot-time');
-          if(!timeEl) return -1;
-          var m = timeEl.textContent.match(/(\d+):(\d+)\s*(AM|PM)/i);
-          if(!m) return -1;
-          var hh = parseInt(m[1], 10), mm = parseInt(m[2], 10), ap = m[3].toUpperCase();
-          if(ap === 'PM' && hh !== 12) hh += 12;
-          if(ap === 'AM' && hh === 12) hh = 0;
-          return hh * 60 + mm;
-        }
-
-        for(var k = 0; k < slots.length; k++){
-          var slotMin = parseSlotMin(slots[k]);
-          if(slotMin < 0) continue;
-
-          // Noon milestone (12:00 PM - 1:45 PM: >= 720 min)
-          if(!hasNoon && slotMin >= 720 && slotMin < 960){
-            var noonDiv = document.createElement('div');
-            noonDiv.className = 'dw-squad-milestone dw-milestone-noon';
-            noonDiv.setAttribute('aria-hidden', 'true');
-            noonDiv.innerHTML = '<span>🍱</span> <span>Midday Feast &amp; Mithai Break ✿</span>';
-            slots[k].parentNode.insertBefore(noonDiv, slots[k]);
-            hasNoon = true;
-          }
-
-          // Twilight / Evening milestone (5:00 PM - 7:30 PM: >= 1020 min)
-          if(!hasEve && slotMin >= 1020 && slotMin < 1170){
-            var eveDiv = document.createElement('div');
-            eveDiv.className = 'dw-squad-milestone dw-milestone-eve';
-            eveDiv.setAttribute('aria-hidden', 'true');
-            eveDiv.innerHTML = '<span>🪔</span> <span>Godhuli Bela · Twilight Diyas Lit ✨</span>';
-            slots[k].parentNode.insertBefore(eveDiv, slots[k]);
-            hasEve = true;
-          }
-        }
+      var dateEl = view.querySelector('.grp-date'), label = dateEl ? dateEl.textContent : '';
+      var m = label.match(/(\d{1,2})\s*Nov/i), festive = m && [6, 7, 8, 9, 10, 20].indexOf(Number(m[1])) !== -1;
+      if(festive && !view.querySelector('.dw-milestone')){
+        var sunday = /^\s*sun/i.test(label);
+        var lunch = sunday ? '12:30 PM – 2:30 PM' : '12:15 PM – 2:30 PM';
+        var slotMin = function(el){
+          var t = el.querySelector('.grp-slot-time'), p = t && t.textContent.match(/(\d+):(\d+)\s*(AM|PM)/i);
+          if(!p) return -1;
+          return (Number(p[1]) % 12 + (p[3].toUpperCase() === 'PM' ? 12 : 0)) * 60 + Number(p[2]);
+        };
+        [{ at: sunday ? 750 : 735, time: lunch, what: 'Mithai break' }, { at: 1050, time: '5:30 PM', what: 'Light the diyas' }].forEach(function(e){
+          var row = document.createElement('div');
+          row.className = 'grp-slot dw-milestone';
+          row.innerHTML = '<div class="grp-slot-time">' + e.time + '</div><div class="grp-row"><span class="grp-what">' + e.what + '</span></div>';
+          var next = null;
+          for(var k = 0; k < slots.length; k++){ if(slotMin(slots[k]) >= e.at){ next = slots[k]; break; } }
+          if(next) next.parentNode.insertBefore(row, next);
+          else slots[slots.length - 1].parentNode.insertBefore(row, slots[slots.length - 1].nextSibling);
+        });
       }
-
-      // Sleek celebration pill at bottom of squad timetable
-      if(slots.length >= 2 && !view.querySelector('.dw-squad-finale')){
+      if(festive && !view.querySelector('.dw-squad-finale')){
         var finale = document.createElement('div');
         finale.className = 'dw-squad-finale';
-        finale.innerHTML = '<button type="button" class="dw-squad-fireworks-btn" title="Launch fireworks for the squad">' +
-            '🎆 Shubh Deepawali · Celebrate with Squad ✨' +
-          '</button>';
+        finale.innerHTML = '<button type="button" class="dw-squad-fireworks-btn">Celebrate with your squad</button>';
         view.appendChild(finale);
       }
     }
@@ -4789,6 +4619,7 @@ else window.addEventListener('load', start, { once: true });
         var grpPanel = one('#groupsPanel');
         if(grpPanel){
           decorateSquadView(grpPanel.querySelector('#grpView'));
+          addDeco(grpPanel.querySelector('.settings-inner'), 'strand', 'dw-strand inset', strand());
         }
       } else {
         // Sub-pages (/spectate, /br): varied diagonal LEDs on cards
@@ -4860,11 +4691,11 @@ else window.addEventListener('load', start, { once: true });
     }
 
     var PALETTES = [
-      { main: '#ffd700', glow: 'rgba(255, 215, 0, 0.45)', colors: ['#ffd700', '#f59e0b', '#fbbf24', '#fffbeb', '#fef08a'] },
+      { main: '#ff9e8f', glow: 'rgba(255, 158, 143, 0.45)', colors: ['#ff9e8f', '#fb7185', '#ffc2b8', '#fff1f2', '#f9a8c4'] },
       { main: '#f43f5e', glow: 'rgba(244, 63, 94, 0.45)', colors: ['#f43f5e', '#e11d48', '#fb7185', '#fda4af', '#fff1f2'] },
       { main: '#10b981', glow: 'rgba(16, 185, 129, 0.45)', colors: ['#10b981', '#34d399', '#059669', '#6ee7b7', '#a7f3d0'] },
-      { main: '#a855f7', glow: 'rgba(168, 85, 247, 0.45)', colors: ['#a855f7', '#fb923c', '#c084fc', '#f59e0b', '#e9d5ff'] },
-      { main: '#ffffff', glow: 'rgba(255, 255, 255, 0.55)', colors: ['#ffffff', '#fef08a', '#38bdf8', '#fed7aa', '#f8fafc'] }
+      { main: '#a855f7', glow: 'rgba(168, 85, 247, 0.45)', colors: ['#a855f7', '#f472b6', '#c084fc', '#fb7185', '#e9d5ff'] },
+      { main: '#ffffff', glow: 'rgba(255, 255, 255, 0.55)', colors: ['#ffffff', '#fce7f3', '#f9a8c4', '#ffc2b8', '#f8fafc'] }
     ];
 
     function launchRocket(x0, y0, targetX, targetY, palIdx, shellType){
@@ -4951,8 +4782,8 @@ else window.addEventListener('load', start, { once: true });
           prevY: y,
           vx: Math.cos(angle) * speed,
           vy: Math.sin(angle) * speed,
-          color: (i % 2 ? '#fde047' : '#f97316'),
-          glowColor: 'rgba(251, 191, 36, 0.5)',
+          color: (i % 2 ? '#ffc2b8' : '#fb7185'),
+          glowColor: 'rgba(251, 113, 133, 0.5)',
           alpha: 1.0,
           decay: 0.035 + Math.random() * 0.02,
           grav: 0.12,
@@ -4968,8 +4799,8 @@ else window.addEventListener('load', start, { once: true });
     function spawnPetals(count){
       var W = window.innerWidth, H = window.innerHeight;
       var types = [
-        { type: 'marigold_orange', front: '#f97316', back: '#c2410c', vein: '#fed7aa', aspect: 0.52 },
-        { type: 'marigold_yellow', front: '#fbbf24', back: '#d97706', vein: '#fef08a', aspect: 0.54 },
+        { type: 'marigold_orange', front: '#f4707a', back: '#c7355a', vein: '#ffd0d6', aspect: 0.52 },
+        { type: 'marigold_yellow', front: '#f472b6', back: '#be185d', vein: '#fbcfe8', aspect: 0.54 },
         { type: 'rose',            front: '#e11d48', back: '#881337', vein: '#fecdd3', aspect: 0.68 },
         { type: 'rose_pink',       front: '#f43f5e', back: '#9f1239', vein: '#fda4af', aspect: 0.65 },
         { type: 'jasmine',         front: '#fffbeb', back: '#fef3c7', vein: '#ffffff', aspect: 0.44 }

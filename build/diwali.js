@@ -54,7 +54,7 @@
         '<circle cx="32" cy="26" r="26" fill="url(#' + id + ')" style="opacity:' + v('glow') + '"/>' +
         '<path d="M3 46C10 44 50 44 57 46C54 66 42 72 30 72S6 66 3 46Z" fill="' + v('clay') + '"/><path d="M30 72C42 72 54 66 57 46C52 45 48 45 44 45C44 58 38 68 30 72Z" fill="' + v('clay2') + '"/>' +
         '<ellipse cx="30" cy="46" rx="27" ry="6" fill="' + v('rim') + '"/><ellipse cx="30" cy="46" rx="22" ry="4" fill="' + v('oil') + '"/><path d="M48 44Q44 40 34 43" stroke="' + v('band') + '" stroke-width="2" fill="none"/>' + dots +
-        '<g class="dw-flame"><path d="M33 42C24 34 30 22 33 12C37 22 43 34 33 42Z" fill="' + v('m2') + '"/><path d="M33 41C29 35 31 28 33 22C35 28 38 35 33 41Z" fill="' + v('m1') + '"/><path d="M33 40C31.6 37 32 34 33 31C34 34 34.6 37 33 40Z" fill="' + v('dot') + '"/></g></svg></div>';
+        '<g class="dw-flame"><path d="M33 42C24 34 30 22 33 12C37 22 43 34 33 42Z" fill="' + v('f2') + '"/><path d="M33 41C29 35 31 28 33 22C35 28 38 35 33 41Z" fill="' + v('f1') + '"/><path d="M33 40C31.6 37 32 34 33 31C34 34 34.6 37 33 40Z" fill="' + v('dot') + '"/></g></svg></div>';
     }
     function rangoli(){
       var c = 110, out = '', i, a, R;
@@ -159,7 +159,7 @@
       out += '<g transform="translate(' + dx + ', ' + dy + ') rotate(-45)">' +
         '<path d="M-10 4C-6 10 6 10 10 4C7 2 -7 2 -10 4Z" fill="' + v('clay') + '"/>' +
         '<path d="M-10 4Q0 1 10 4" stroke="' + v('rim') + '" stroke-width="1.2" fill="none"/>' +
-        '<g class="dw-flame"><path d="M0 2C-3 -3 0 -8 0 -11C0 -8 3 -3 0 2Z" fill="' + v('m1') + '"/><path d="M0 2C-1.5 -1 0 -4 0 -6C0 -4 1.5 -1 0 2Z" fill="' + v('dot') + '"/></g>' +
+        '<g class="dw-flame"><path d="M0 2C-3 -3 0 -8 0 -11C0 -8 3 -3 0 2Z" fill="' + v('f1') + '"/><path d="M0 2C-1.5 -1 0 -4 0 -6C0 -4 1.5 -1 0 2Z" fill="' + v('dot') + '"/></g>' +
       '</g>';
 
       return '<div class="dw-quad-rangoli"><svg viewBox="0 0 120 120" aria-hidden="true">' + out + '</svg></div>';
@@ -378,7 +378,15 @@
         el.appendChild(d);
       }
       d.className = cls;
+      if(d.firstChild) return;      // already dressed: rewriting would retrigger the page watcher forever
       d.innerHTML = html;
+    }
+    var strandId = 0;
+    function strand(){
+      var id = 'dwS' + (++strandId), W = 72, tile = '<path d="M0 6Q' + (W / 2) + ' 15 ' + W + ' 6" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>';
+      tile += leaf(12, 11, 9, 24) + leaf(36, 13, 10, -14) + leaf(60, 11, 9, 16);
+      tile += marigold(12, 9, 5) + marigold(36, 11, 5.8) + marigold(60, 9, 5);
+      return '<svg aria-hidden="true" width="100%" height="24"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="24">' + tile + '</pattern></defs><rect width="100%" height="24" fill="url(#' + id + ')"/></svg>';
     }
 
     function mountSearchDiya(btn){
@@ -473,59 +481,35 @@
       foot.parentNode.insertBefore(low, foot);
     }
 
+    // Festival days only, as ordinary timed rows in their proper place in the day
     function decorateSquadView(view){
       if(!view) return;
-      var slots = view.querySelectorAll('.grp-slot');
+      var slots = Array.prototype.slice.call(view.querySelectorAll('.grp-slot:not(.dw-milestone)'));
       if(!slots.length) return;
-
-      var hasNoon = !!view.querySelector('.dw-milestone-noon');
-      var hasEve = !!view.querySelector('.dw-milestone-eve');
-
-      if(!hasNoon || !hasEve){
-        function parseSlotMin(slotEl){
-          var timeEl = slotEl.querySelector('.grp-slot-time');
-          if(!timeEl) return -1;
-          var m = timeEl.textContent.match(/(\d+):(\d+)\s*(AM|PM)/i);
-          if(!m) return -1;
-          var hh = parseInt(m[1], 10), mm = parseInt(m[2], 10), ap = m[3].toUpperCase();
-          if(ap === 'PM' && hh !== 12) hh += 12;
-          if(ap === 'AM' && hh === 12) hh = 0;
-          return hh * 60 + mm;
-        }
-
-        for(var k = 0; k < slots.length; k++){
-          var slotMin = parseSlotMin(slots[k]);
-          if(slotMin < 0) continue;
-
-          // Noon milestone (12:00 PM - 1:45 PM: >= 720 min)
-          if(!hasNoon && slotMin >= 720 && slotMin < 960){
-            var noonDiv = document.createElement('div');
-            noonDiv.className = 'dw-squad-milestone dw-milestone-noon';
-            noonDiv.setAttribute('aria-hidden', 'true');
-            noonDiv.innerHTML = '<span>🍱</span> <span>Midday Feast &amp; Mithai Break ✿</span>';
-            slots[k].parentNode.insertBefore(noonDiv, slots[k]);
-            hasNoon = true;
-          }
-
-          // Twilight / Evening milestone (5:00 PM - 7:30 PM: >= 1020 min)
-          if(!hasEve && slotMin >= 1020 && slotMin < 1170){
-            var eveDiv = document.createElement('div');
-            eveDiv.className = 'dw-squad-milestone dw-milestone-eve';
-            eveDiv.setAttribute('aria-hidden', 'true');
-            eveDiv.innerHTML = '<span>🪔</span> <span>Godhuli Bela · Twilight Diyas Lit ✨</span>';
-            slots[k].parentNode.insertBefore(eveDiv, slots[k]);
-            hasEve = true;
-          }
-        }
+      var dateEl = view.querySelector('.grp-date'), label = dateEl ? dateEl.textContent : '';
+      var m = label.match(/(\d{1,2})\s*Nov/i), festive = m && [6, 7, 8, 9, 10, 20].indexOf(Number(m[1])) !== -1;
+      if(festive && !view.querySelector('.dw-milestone')){
+        var sunday = /^\s*sun/i.test(label);
+        var lunch = sunday ? '12:30 PM – 2:30 PM' : '12:15 PM – 2:30 PM';
+        var slotMin = function(el){
+          var t = el.querySelector('.grp-slot-time'), p = t && t.textContent.match(/(\d+):(\d+)\s*(AM|PM)/i);
+          if(!p) return -1;
+          return (Number(p[1]) % 12 + (p[3].toUpperCase() === 'PM' ? 12 : 0)) * 60 + Number(p[2]);
+        };
+        [{ at: sunday ? 750 : 735, time: lunch, what: 'Mithai break' }, { at: 1050, time: '5:30 PM', what: 'Light the diyas' }].forEach(function(e){
+          var row = document.createElement('div');
+          row.className = 'grp-slot dw-milestone';
+          row.innerHTML = '<div class="grp-slot-time">' + e.time + '</div><div class="grp-row"><span class="grp-what">' + e.what + '</span></div>';
+          var next = null;
+          for(var k = 0; k < slots.length; k++){ if(slotMin(slots[k]) >= e.at){ next = slots[k]; break; } }
+          if(next) next.parentNode.insertBefore(row, next);
+          else slots[slots.length - 1].parentNode.insertBefore(row, slots[slots.length - 1].nextSibling);
+        });
       }
-
-      // Sleek celebration pill at bottom of squad timetable
-      if(slots.length >= 2 && !view.querySelector('.dw-squad-finale')){
+      if(festive && !view.querySelector('.dw-squad-finale')){
         var finale = document.createElement('div');
         finale.className = 'dw-squad-finale';
-        finale.innerHTML = '<button type="button" class="dw-squad-fireworks-btn" title="Launch fireworks for the squad">' +
-            '🎆 Shubh Deepawali · Celebrate with Squad ✨' +
-          '</button>';
+        finale.innerHTML = '<button type="button" class="dw-squad-fireworks-btn">Celebrate with your squad</button>';
         view.appendChild(finale);
       }
     }
@@ -609,6 +593,7 @@
         var grpPanel = one('#groupsPanel');
         if(grpPanel){
           decorateSquadView(grpPanel.querySelector('#grpView'));
+          addDeco(grpPanel.querySelector('.settings-inner'), 'strand', 'dw-strand inset', strand());
         }
       } else {
         // Sub-pages (/spectate, /br): varied diagonal LEDs on cards
@@ -680,11 +665,11 @@
     }
 
     var PALETTES = [
-      { main: '#ffd700', glow: 'rgba(255, 215, 0, 0.45)', colors: ['#ffd700', '#f59e0b', '#fbbf24', '#fffbeb', '#fef08a'] },
+      { main: '#ff9e8f', glow: 'rgba(255, 158, 143, 0.45)', colors: ['#ff9e8f', '#fb7185', '#ffc2b8', '#fff1f2', '#f9a8c4'] },
       { main: '#f43f5e', glow: 'rgba(244, 63, 94, 0.45)', colors: ['#f43f5e', '#e11d48', '#fb7185', '#fda4af', '#fff1f2'] },
       { main: '#10b981', glow: 'rgba(16, 185, 129, 0.45)', colors: ['#10b981', '#34d399', '#059669', '#6ee7b7', '#a7f3d0'] },
-      { main: '#a855f7', glow: 'rgba(168, 85, 247, 0.45)', colors: ['#a855f7', '#fb923c', '#c084fc', '#f59e0b', '#e9d5ff'] },
-      { main: '#ffffff', glow: 'rgba(255, 255, 255, 0.55)', colors: ['#ffffff', '#fef08a', '#38bdf8', '#fed7aa', '#f8fafc'] }
+      { main: '#a855f7', glow: 'rgba(168, 85, 247, 0.45)', colors: ['#a855f7', '#f472b6', '#c084fc', '#fb7185', '#e9d5ff'] },
+      { main: '#ffffff', glow: 'rgba(255, 255, 255, 0.55)', colors: ['#ffffff', '#fce7f3', '#f9a8c4', '#ffc2b8', '#f8fafc'] }
     ];
 
     function launchRocket(x0, y0, targetX, targetY, palIdx, shellType){
@@ -771,8 +756,8 @@
           prevY: y,
           vx: Math.cos(angle) * speed,
           vy: Math.sin(angle) * speed,
-          color: (i % 2 ? '#fde047' : '#f97316'),
-          glowColor: 'rgba(251, 191, 36, 0.5)',
+          color: (i % 2 ? '#ffc2b8' : '#fb7185'),
+          glowColor: 'rgba(251, 113, 133, 0.5)',
           alpha: 1.0,
           decay: 0.035 + Math.random() * 0.02,
           grav: 0.12,
@@ -788,8 +773,8 @@
     function spawnPetals(count){
       var W = window.innerWidth, H = window.innerHeight;
       var types = [
-        { type: 'marigold_orange', front: '#f97316', back: '#c2410c', vein: '#fed7aa', aspect: 0.52 },
-        { type: 'marigold_yellow', front: '#fbbf24', back: '#d97706', vein: '#fef08a', aspect: 0.54 },
+        { type: 'marigold_orange', front: '#f4707a', back: '#c7355a', vein: '#ffd0d6', aspect: 0.52 },
+        { type: 'marigold_yellow', front: '#f472b6', back: '#be185d', vein: '#fbcfe8', aspect: 0.54 },
         { type: 'rose',            front: '#e11d48', back: '#881337', vein: '#fecdd3', aspect: 0.68 },
         { type: 'rose_pink',       front: '#f43f5e', back: '#9f1239', vein: '#fda4af', aspect: 0.65 },
         { type: 'jasmine',         front: '#fffbeb', back: '#fef3c7', vein: '#ffffff', aspect: 0.44 }
