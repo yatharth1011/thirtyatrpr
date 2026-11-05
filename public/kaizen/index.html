@@ -127,6 +127,7 @@
   html body[data-theme="paper"] .panel .panel, html body[data-theme="paper"] .panel .card, html body[data-theme="paper"] .panel .daycard, html body[data-theme="paper"] .card .card{ outline:none; box-shadow:none !important; background:transparent !important; }
   html body[data-theme="paper"] .panel .panel::after, html body[data-theme="paper"] .panel .card::after, html body[data-theme="paper"] .panel .daycard::after, html body[data-theme="paper"] .card .card::after{ content:none !important; }
   html body[data-theme="paper"] header{ background:linear-gradient(180deg, #ffffff 0%, #ffffff 70%, #f6f5f3 100%) !important; box-shadow:0 2px 3px rgba(17,18,19,.12), 0 14px 18px -14px rgba(17,18,19,.32) !important; }
+  html body[data-theme="paper"] #googleBtn{ border:1px solid var(--line) !important; }
   .theme-dot-paper{ background:#ffffff; border:1px solid #e2e5eb; }
   html body[data-theme="paper"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
   html body[data-theme="paper"] .daycard-head{ border-bottom:none !important; }
@@ -420,10 +421,12 @@ html body[data-theme="paper-dark"] .panel::after,html body[data-theme="paper-dar
 html body[data-theme="paper-dark"] .panel .panel,html body[data-theme="paper-dark"] .panel .card,html body[data-theme="paper-dark"] .panel .daycard,html body[data-theme="paper-dark"] .card .card{ outline:none; box-shadow:none !important; background:transparent !important; }
 html body[data-theme="paper-dark"] .panel .panel::after,html body[data-theme="paper-dark"] .panel .card::after,html body[data-theme="paper-dark"] .panel .daycard::after,html body[data-theme="paper-dark"] .card .card::after{ content:none !important; }
 html body[data-theme="paper-dark"] header{ background:linear-gradient(180deg, #241b1f 0%, #241b1f 70%, #1e1619 100%) !important; box-shadow:0 2px 3px rgba(0,0,0,0.29), 0 14px 18px -14px rgba(0,0,0,0.77) !important; }
+html body[data-theme="paper-dark"] #googleBtn{ border:1px solid var(--line) !important; }
 html body[data-theme="paper-dark"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
 html body[data-theme="paper-dark"] .daycard-head{ border-bottom:none !important; }
 /* Paper Dark: hand-tuned extras. All other paper-dark rules are generated from Paper by splice.py (paper_dark_css). */
 body[data-theme="paper-dark"]{
+  --head-bg:rgba(36,27,31,.96);
   --paper-sheet:linear-gradient(168deg, #2a2024 0%, #261c20 58%, #201719 100%);
   --paper-shadow:
     inset 0 1px 0 rgba(255,235,240,.07),
