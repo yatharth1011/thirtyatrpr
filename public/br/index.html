@@ -545,12 +545,21 @@ body[data-theme="paper-dark"]{
 .dw-side .dw-lantern{ width:30px; height:66px; left:0; }
 .dw-side .dw-lantern.b{ left:36px; width:24px; height:52px; }
 .dw-host{ position:relative !important; }
-.dw-hero-ladi{ position:absolute; top:-2px; left:0; right:0; height:38px; pointer-events:none; z-index:4; overflow:visible; }
+.dw-hero-ladi{ position:absolute; top:-2px; left:0; right:0; height:42px; pointer-events:none; z-index:4; overflow:visible; }
 .dw-hero-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
-.dw-corner-tail{ position:absolute; top:-1px; right:-1px; width:120px; height:65px; pointer-events:none; z-index:4; overflow:visible; }
-.dw-corner-tail svg{ display:block; width:100%; height:100%; overflow:visible; }
-.dw-shallow-ladi{ position:absolute; top:-1px; left:-1px; width:95px; height:38px; pointer-events:none; z-index:4; overflow:visible; }
-.dw-shallow-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
+
+.dw-card-ladi{ position:absolute; pointer-events:none; z-index:4; overflow:visible; }
+.dw-card-ladi.tr1{ top:-1px; right:-1px; width:125px; height:65px; }
+.dw-card-ladi.tl2{ top:-1px; left:-1px; width:125px; height:60px; }
+.dw-card-ladi.tr3{ top:-1px; right:-1px; width:135px; height:42px; }
+.dw-card-ladi.tl4{ top:-1px; left:-1px; width:125px; height:65px; }
+.dw-card-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
+
+.dw-boundary-diya{ position:absolute; pointer-events:none; z-index:5; width:30px; height:38px; transform:translateX(-50%); }
+.dw-boundary-diya.top{ top:-18px; }
+.dw-boundary-diya.bottom{ bottom:-14px; }
+.dw-boundary-diya .dw-diya{ width:100%; height:100%; }
+
 .dw-sit{ position:absolute; top:-18px; right:24px; pointer-events:none; z-index:4; width:34px; height:44px; }
 .dw-sit .dw-diya{ width:100%; height:100%; }
 .dw-ladi{ position:relative; width:100%; pointer-events:none; overflow:hidden; }
@@ -3821,6 +3830,23 @@ onAuthStateChanged(auth, function(){
       };
     }
 
+    function makeBulbs(pts, cols, twSeed){
+      var out = '';
+      for(var i = 0; i < pts.length; i++){
+        var p = pts[i];
+        var col = cols[i % cols.length];
+        var tw = ((i + twSeed) % 3 === 0) ? ' class="dw-ladi-t1"' : ((i + twSeed) % 5 === 0) ? ' class="dw-ladi-t2"' : '';
+        out += '<g' + tw + '>' +
+          '<rect x="' + f(p.x - 0.9) + '" y="' + f(p.y) + '" width="1.8" height="2.8" rx=".4" fill="' + v('flex') + '"/>' +
+          '<circle cx="' + f(p.x) + '" cy="' + f(p.y + 5.2) + '" r="8" fill="' + v(col) + '" opacity=".18"/>' +
+          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 5.2) + '" rx="3.4" ry="4.2" fill="' + v(col) + '" opacity=".4"/>' +
+          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 5.0) + '" rx="1.4" ry="2.5" fill="' + v(col) + '"/>' +
+          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 4.8) + '" rx=".5" ry="1.1" fill="#fffef5"/>' +
+          '</g>';
+      }
+      return out;
+    }
+
     function heroLadiSvg(w){
       var W = Math.max(320, w || 800), H = 42;
       var xm = f(W * 0.44), ym = 15;
@@ -3836,8 +3862,6 @@ onAuthStateChanged(auth, function(){
                   '<rect x="' + (xm - 1.2) + '" y="' + (ym - 1) + '" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>' +
                   '<rect x="' + (xr - 1.2) + '" y="' + (yr - 1) + '" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
 
-      var bulbs = '';
-      var cols = ['m1', 'spark2', 'm1', 'spark1', 'm1', 'm2', 'spark3'];
       var pts = [
         bezierPt(12, 2, c1x, c1y, xm, ym, 0.22),
         bezierPt(12, 2, c1x, c1y, xm, ym, 0.54),
@@ -3848,26 +3872,14 @@ onAuthStateChanged(auth, function(){
         { x: tx, y: ty }
       ];
 
-      for(var i = 0; i < pts.length; i++){
-        var p = pts[i];
-        var col = cols[i % cols.length];
-        var twCls = (i % 2 === 0) ? ' class="dw-ladi-t1"' : (i === 3) ? ' class="dw-ladi-t2"' : '';
-        bulbs += '<g' + twCls + '>' +
-          '<rect x="' + f(p.x - 0.9) + '" y="' + f(p.y) + '" width="1.8" height="2.8" rx=".4" fill="' + v('flex') + '"/>' +
-          '<circle cx="' + f(p.x) + '" cy="' + f(p.y + 5.2) + '" r="8" fill="' + v(col) + '" opacity=".18"/>' +
-          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 5.2) + '" rx="3.4" ry="4.2" fill="' + v(col) + '" opacity=".4"/>' +
-          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 5.0) + '" rx="1.4" ry="2.5" fill="' + v(col) + '"/>' +
-          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 4.8) + '" rx=".5" ry="1.1" fill="#fffef5"/>' +
-          '</g>';
-      }
-
       return '<svg viewBox="0 0 ' + Math.round(W) + ' ' + H + '" width="' + W + '" height="' + H + '" aria-hidden="true">' +
         '<path d="' + wire + '" fill="none" stroke="' + v('flex') + '" stroke-width="1.1" stroke-linecap="round"/>' +
-        clips + bulbs + '</svg>';
+        clips + makeBulbs(pts, ['m1', 'spark2', 'm1', 'spark1', 'm1', 'm2', 'spark3'], 0) + '</svg>';
     }
 
-    function cornerTailLadiSvg(){
-      var W = 120, H = 65;
+    // Style 1: Top-Right steep diagonal with trailing tail
+    function cardLadi1(){
+      var W = 125, H = 65;
       var wire = 'M14 1Q56 46 108 30Q114 42 110 54';
       var clips = '<rect x="12.8" y="0" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>' +
                   '<rect x="106.8" y="29" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
@@ -3877,51 +3889,71 @@ onAuthStateChanged(auth, function(){
         bezierPt(14, 1, 56, 46, 108, 30, 0.86),
         { x: 110, y: 54 }
       ];
-      var cols = ['m1', 'spark1', 'm2', 'spark2'];
-      var bulbs = '';
-      for(var i = 0; i < pts.length; i++){
-        var p = pts[i];
-        var col = cols[i];
-        var twCls = (i % 2 === 1) ? ' class="dw-ladi-t2"' : '';
-        bulbs += '<g' + twCls + '>' +
-          '<rect x="' + f(p.x - 0.9) + '" y="' + f(p.y) + '" width="1.8" height="2.8" rx=".4" fill="' + v('flex') + '"/>' +
-          '<circle cx="' + f(p.x) + '" cy="' + f(p.y + 5.2) + '" r="8" fill="' + v(col) + '" opacity=".18"/>' +
-          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 5.2) + '" rx="3.4" ry="4.2" fill="' + v(col) + '" opacity=".4"/>' +
-          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 5.0) + '" rx="1.4" ry="2.5" fill="' + v(col) + '"/>' +
-          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 4.8) + '" rx=".5" ry="1.1" fill="#fffef5"/>' +
-          '</g>';
-      }
       return '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" aria-hidden="true">' +
         '<path d="' + wire + '" fill="none" stroke="' + v('flex') + '" stroke-width="1.1" stroke-linecap="round"/>' +
-        clips + bulbs + '</svg>';
+        clips + makeBulbs(pts, ['m1', 'spark1', 'm2', 'spark2'], 1) + '</svg>';
     }
 
-    function shallowLadiSvg(){
-      var W = 95, H = 38;
-      var wire = 'M6 26Q50 34 90 2';
-      var clips = '<rect x="4.8" y="25" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>' +
-                  '<rect x="88.8" y="1" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
+    // Style 2: Top-Left loose lazy swag
+    function cardLadi2(){
+      var W = 125, H = 60;
+      var wire = 'M6 38Q68 48 118 2';
+      var clips = '<rect x="4.8" y="37" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>' +
+                  '<rect x="116.8" y="1" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
       var pts = [
-        bezierPt(6, 26, 50, 34, 90, 2, 0.35),
-        bezierPt(6, 26, 50, 34, 90, 2, 0.72)
+        bezierPt(6, 38, 68, 48, 118, 2, 0.16),
+        bezierPt(6, 38, 68, 48, 118, 2, 0.42),
+        bezierPt(6, 38, 68, 48, 118, 2, 0.68),
+        bezierPt(6, 38, 68, 48, 118, 2, 0.90)
       ];
-      var cols = ['spark2', 'm1'];
-      var bulbs = '';
-      for(var i = 0; i < pts.length; i++){
-        var p = pts[i];
-        var col = cols[i];
-        var twCls = (i === 0) ? ' class="dw-ladi-t1"' : '';
-        bulbs += '<g' + twCls + '>' +
-          '<rect x="' + f(p.x - 0.9) + '" y="' + f(p.y) + '" width="1.8" height="2.8" rx=".4" fill="' + v('flex') + '"/>' +
-          '<circle cx="' + f(p.x) + '" cy="' + f(p.y + 5.2) + '" r="8" fill="' + v(col) + '" opacity=".18"/>' +
-          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 5.2) + '" rx="3.4" ry="4.2" fill="' + v(col) + '" opacity=".4"/>' +
-          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 5.0) + '" rx="1.4" ry="2.5" fill="' + v(col) + '"/>' +
-          '<ellipse cx="' + f(p.x) + '" cy="' + f(p.y + 4.8) + '" rx=".5" ry="1.1" fill="#fffef5"/>' +
-          '</g>';
-      }
       return '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" aria-hidden="true">' +
         '<path d="' + wire + '" fill="none" stroke="' + v('flex') + '" stroke-width="1.1" stroke-linecap="round"/>' +
-        clips + bulbs + '</svg>';
+        clips + makeBulbs(pts, ['spark2', 'm1', 'spark3', 'm1'], 2) + '</svg>';
+    }
+
+    // Style 3: Top-Right gentle shallow diagonal
+    function cardLadi3(){
+      var W = 135, H = 42;
+      var wire = 'M8 2Q72 26 128 18';
+      var clips = '<rect x="6.8" y="1" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>' +
+                  '<rect x="126.8" y="17" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
+      var pts = [
+        bezierPt(8, 2, 72, 26, 128, 18, 0.22),
+        bezierPt(8, 2, 72, 26, 128, 18, 0.54),
+        bezierPt(8, 2, 72, 26, 128, 18, 0.84)
+      ];
+      return '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" aria-hidden="true">' +
+        '<path d="' + wire + '" fill="none" stroke="' + v('flex') + '" stroke-width="1.1" stroke-linecap="round"/>' +
+        clips + makeBulbs(pts, ['m1', 'm2', 'spark1'], 0) + '</svg>';
+    }
+
+    // Style 4: Top-Left steep swoop with tail
+    function cardLadi4(){
+      var W = 125, H = 65;
+      var wire = 'M112 1Q70 46 18 30Q12 42 16 54';
+      var clips = '<rect x="110.8" y="0" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>' +
+                  '<rect x="16.8" y="29" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
+      var pts = [
+        bezierPt(112, 1, 70, 46, 18, 30, 0.25),
+        bezierPt(112, 1, 70, 46, 18, 30, 0.58),
+        bezierPt(112, 1, 70, 46, 18, 30, 0.86),
+        { x: 16, y: 54 }
+      ];
+      return '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" aria-hidden="true">' +
+        '<path d="' + wire + '" fill="none" stroke="' + v('flex') + '" stroke-width="1.1" stroke-linecap="round"/>' +
+        clips + makeBulbs(pts, ['spark3', 'm1', 'spark2', 'm1'], 3) + '</svg>';
+    }
+
+    function addCardLadi(el, styleIdx){
+      if(!el) return;
+      var styles = [
+        { cls: 'tr1', fn: cardLadi1 },
+        { cls: 'tl2', fn: cardLadi2 },
+        { cls: 'tr3', fn: cardLadi3 },
+        { cls: 'tl4', fn: cardLadi4 }
+      ];
+      var s = styles[styleIdx % styles.length];
+      addDeco(el, 'card-ladi', 'dw-card-ladi ' + s.cls, s.fn());
     }
 
     var uid = 0;
@@ -3936,6 +3968,21 @@ onAuthStateChanged(auth, function(){
       d.setAttribute('data-dw', key);
       d.setAttribute('aria-hidden', 'true');
       d.innerHTML = html;
+      el.appendChild(d);
+    }
+
+    function addBoundaryDiya(el, edge, pct, key){
+      if(!el) return;
+      el.classList.add('dw-host');
+      for(var i = 0; i < el.children.length; i++){
+        if(el.children[i].getAttribute('data-dw') === key) return;
+      }
+      var d = document.createElement('div');
+      d.className = 'dw-boundary-diya ' + edge;
+      d.style.left = pct + '%';
+      d.setAttribute('data-dw', key);
+      d.setAttribute('aria-hidden', 'true');
+      d.innerHTML = diya('dwBndD' + (++uid));
       el.appendChild(d);
     }
 
@@ -3994,23 +4041,46 @@ onAuthStateChanged(auth, function(){
     var one = function(q){ return document.querySelector(q); };
     function dress(){
       if(main){
-        // 1. The Hero Card (#todayPanel): Sweeping asymmetrical garland across the top
+        // 1. The Hero Card (#todayPanel): Sweeping asymmetrical garland + boundary diyas
         mountHeroLadi(one('#todayPanel'));
+        addBoundaryDiya(one('#todayPanel'), 'top', 82, 'bnd-top');
+        addBoundaryDiya(one('#todayPanel'), 'bottom', 26, 'bnd-bot');
 
-        // 2. Curated Grid Cards (Varied organic accents, generous negative space):
+        // 2. Rollout / Special banners:
+        addCardLadi(one('#paperThemeBanner'), 2);
+        addBoundaryDiya(one('#paperThemeBanner'), 'bottom', 64, 'bnd-bot');
+
+        addCardLadi(one('#examWeekBanner'), 0);
+        addBoundaryDiya(one('#examWeekBanner'), 'top', 30, 'bnd-top');
+
+        addCardLadi(one('#kaizenPanel'), 1);
+        addBoundaryDiya(one('#kaizenPanel'), 'top', 78, 'bnd-top');
+        addBoundaryDiya(one('#kaizenPanel'), 'bottom', 24, 'bnd-bot');
+
+        // 3. Grid Panels: every card gets its own diagonal LED style + scattered boundary diyas:
         var panels = document.querySelectorAll('.panel-grid > .panel');
-        if(panels.length > 0) addDeco(panels[0], 'ladi-tail', 'dw-corner-tail', cornerTailLadiSvg());
-        if(panels.length > 1) addDeco(panels[1], 'sit-diya', 'dw-sit', diya('dwCardD' + (++uid)));
-        if(panels.length > 2) addDeco(panels[2], 'ladi-shallow', 'dw-shallow-ladi', shallowLadiSvg());
-        // Remaining panels stay clean so the page breathes!
-
-        // 3. Special panel: Kaizen gets a warm resting diya
-        addDeco(one('#kaizenPanel'), 'sit-diya', 'dw-sit', diya('dwKzD' + (++uid)));
+        var diyaPcts = [
+          { top: 68, bot: 32 },
+          { top: 26, bot: 74 },
+          { top: 72, bot: null },
+          { top: null, bot: 42 },
+          { top: 38, bot: 80 },
+          { top: 64, bot: 28 }
+        ];
+        for(var i = 0; i < panels.length; i++){
+          addCardLadi(panels[i], i);
+          var dp = diyaPcts[i % diyaPcts.length];
+          if(dp.top) addBoundaryDiya(panels[i], 'top', dp.top, 'bnd-top');
+          if(dp.bot) addBoundaryDiya(panels[i], 'bottom', dp.bot, 'bnd-bot');
+        }
       } else {
-        // Sub-pages (/spectate, /br): light, balanced touches
+        // Sub-pages (/spectate, /br):
         var cards = document.querySelectorAll('.wrap .panel');
-        if(cards.length > 0) addDeco(cards[0], 'ladi-tail', 'dw-corner-tail', cornerTailLadiSvg());
-        if(cards.length > 1) addDeco(cards[1], 'sit-diya', 'dw-sit', diya('dwSubD' + (++uid)));
+        for(var j = 0; j < cards.length; j++){
+          addCardLadi(cards[j], j);
+          if(j % 2 === 0) addBoundaryDiya(cards[j], 'top', 74, 'bnd-top');
+          else addBoundaryDiya(cards[j], 'bottom', 32, 'bnd-bot');
+        }
       }
     }
     dress();
