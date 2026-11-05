@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793899103';
+    var curToken = '1793899156';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -1601,6 +1601,9 @@ window.__overlayFast = (function(){
   html body[data-theme="paper"] .search-toggle,
   html body[data-theme="paper"] .br-toggle,
   html body[data-theme="paper"] .verified-badge-icon,
+  html body[data-theme="paper"] #loginBtn,
+  html body[data-theme="paper"] #entryInput,
+  html body[data-theme="paper"] .login-alt,
   html body[data-theme="paper"] #dayPrevBtn,
   html body[data-theme="paper"] #dayNextBtn,
   html body[data-theme="paper"] .bar-track span,
