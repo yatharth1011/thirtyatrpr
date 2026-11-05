@@ -1536,6 +1536,15 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     console.log(okSenate ? 'PASS' : 'FAIL', f + ': timetable stays moved silently, new scheduling keeps Senate Hall, past moves stay, dated swaps stay labelled');
     allPass &= okSenate;
   }
+  // An unbalanced brace in a CSS file silently drops the next rule: it once cost the fireworks their canvas styles
+  for (const f of ['diwali.css', 'sub_theme.css', 'paper_dark.css']) {
+    const css = fs2.readFileSync(__dirname + '/' + f, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+    let depth = 0, ok = true;
+    for (const c of css) { if (c === '{') depth++; if (c === '}' && --depth < 0) ok = false; }
+    ok = ok && depth === 0;
+    console.log(ok ? 'PASS' : 'FAIL', f + ': braces balance');
+    allPass &= ok;
+  }
   // sub_theme.css has the Paper theme CSS block (variables + element overrides)
   const sub = fs2.readFileSync(__dirname + '/sub_theme.css', 'utf8');
   const okPaperSub = /body\[data-theme="paper"\]/.test(sub) && /--bg:#ffffff/.test(sub) && /Bodoni Moda/.test(sub) && /theme-dot-paper/.test(sub);

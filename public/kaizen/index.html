@@ -760,27 +760,28 @@ html body[data-theme="paper"] #calPanel.open{
 .festive-text{
   display:inline-block;
 }
-/* The greeting: pink, coral and their shades, flowing continuously. The gradient ends where it starts, and one
+/* The greeting: pink and coral with one thin band of gold, flowing continuously. The gradient ends where it starts, and one
    run moves it exactly one image-width, so the loop has no seam. Clay and Clay Dark use it for every greeting. */
-:root{ --dw-greet:linear-gradient(90deg, #f472b6, #fb7185, #ff9e8f, #ffc2b8, #f9a8c4, #ff8a9a, #f472b6); }
-body[data-theme="paper"]{ --dw-greet:linear-gradient(90deg, #9d174d, #db2777, #f4587a, #f6897c, #f4587a, #be185d, #9d174d); }
+:root{ --dw-greet:linear-gradient(90deg, #f472b6 0%, #fb7185 20%, #ff9e8f 41%, #ffd27a 50%, #ff9e8f 59%, #f9a8c4 80%, #f472b6 100%); }
+body[data-theme="paper"]{ --dw-greet:linear-gradient(90deg, #9d174d 0%, #db2777 20%, #f4587a 36%, #f6897c 44%, #d9a03a 50%, #f6897c 56%, #f4587a 66%, #db2777 84%, #9d174d 100%); }
 html body .greet-text.festive-greet,
 html body[data-theme^="paper"] .greet-text,
 html body[data-theme^="paper"] .greet-text.kz-greet{
-  background:var(--dw-greet) !important;
+  background-image:var(--dw-greet) !important;
   background-size:300% 100% !important;
   -webkit-background-clip:text !important;
   background-clip:text !important;
   -webkit-text-fill-color:transparent !important;
   color:transparent !important;
   text-shadow:none !important;
-  animation:dwGreetFlow 8s linear infinite !important;
+  animation:dwGreetFlow 6s linear infinite;
 }
+/* Important declarations beat animations, so background-position must never be set !important on the greeting,
+   and nothing may use an !important background shorthand on it: that locks the position and freezes the flow. */
 @keyframes dwGreetFlow{ from{ background-position:0% 0; } to{ background-position:150% 0; } }
 .festive-text{ white-space:nowrap; }
 @media (min-width: 960px){
   .festive-text .greet-name{ display:block; }
-}
 }
 
 #dwFxCanvas{
