@@ -284,19 +284,18 @@
       el.appendChild(d);
     }
 
-    function addBoundaryDiya(el, edge, pct, key){
-      if(!el) return;
-      el.classList.add('dw-host');
-      for(var i = 0; i < el.children.length; i++){
-        if(el.children[i].getAttribute('data-dw') === key) return;
+    function mountSearchDiya(btn){
+      if(!btn) return;
+      btn.classList.add('dw-host');
+      for(var i = 0; i < btn.children.length; i++){
+        if(btn.children[i].getAttribute('data-dw') === 'search-diya') return;
       }
-      var d = document.createElement('div');
-      d.className = 'dw-boundary-diya ' + edge;
-      d.style.left = pct + '%';
-      d.setAttribute('data-dw', key);
+      var d = document.createElement('span');
+      d.className = 'dw-search-diya';
+      d.setAttribute('data-dw', 'search-diya');
       d.setAttribute('aria-hidden', 'true');
-      d.innerHTML = diya('dwBndD' + (++uid));
-      el.appendChild(d);
+      d.innerHTML = diya('dwSearchD' + (++uid));
+      btn.appendChild(d);
     }
 
     function mountHeroLadi(el){
@@ -354,45 +353,27 @@
     var one = function(q){ return document.querySelector(q); };
     function dress(){
       if(main){
-        // 1. The Hero Card (#todayPanel): Sweeping asymmetrical garland + boundary diyas
+        // 1. The Hero Card (#todayPanel): Sweeping asymmetrical garland
         mountHeroLadi(one('#todayPanel'));
-        addBoundaryDiya(one('#todayPanel'), 'top', 82, 'bnd-top');
-        addBoundaryDiya(one('#todayPanel'), 'bottom', 26, 'bnd-bot');
 
-        // 2. Rollout / Special banners:
+        // 2. Search button: single earthen diya perched right above "Find a classmate"
+        mountSearchDiya(one('#searchBtn'));
+
+        // 3. Rollout / Special banners: varied diagonal LED accents
         addCardLadi(one('#paperThemeBanner'), 2);
-        addBoundaryDiya(one('#paperThemeBanner'), 'bottom', 64, 'bnd-bot');
-
         addCardLadi(one('#examWeekBanner'), 0);
-        addBoundaryDiya(one('#examWeekBanner'), 'top', 30, 'bnd-top');
-
         addCardLadi(one('#kaizenPanel'), 1);
-        addBoundaryDiya(one('#kaizenPanel'), 'top', 78, 'bnd-top');
-        addBoundaryDiya(one('#kaizenPanel'), 'bottom', 24, 'bnd-bot');
 
-        // 3. Grid Panels: every card gets its own diagonal LED style + scattered boundary diyas:
+        // 4. Grid Panels: every card gets its own varied diagonal LED style (no copy-paste):
         var panels = document.querySelectorAll('.panel-grid > .panel');
-        var diyaPcts = [
-          { top: 68, bot: 32 },
-          { top: 26, bot: 74 },
-          { top: 72, bot: null },
-          { top: null, bot: 42 },
-          { top: 38, bot: 80 },
-          { top: 64, bot: 28 }
-        ];
         for(var i = 0; i < panels.length; i++){
           addCardLadi(panels[i], i);
-          var dp = diyaPcts[i % diyaPcts.length];
-          if(dp.top) addBoundaryDiya(panels[i], 'top', dp.top, 'bnd-top');
-          if(dp.bot) addBoundaryDiya(panels[i], 'bottom', dp.bot, 'bnd-bot');
         }
       } else {
-        // Sub-pages (/spectate, /br):
+        // Sub-pages (/spectate, /br): varied diagonal LEDs on cards
         var cards = document.querySelectorAll('.wrap .panel');
         for(var j = 0; j < cards.length; j++){
           addCardLadi(cards[j], j);
-          if(j % 2 === 0) addBoundaryDiya(cards[j], 'top', 74, 'bnd-top');
-          else addBoundaryDiya(cards[j], 'bottom', 32, 'bnd-bot');
         }
       }
     }
