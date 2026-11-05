@@ -19,6 +19,9 @@ picker_js = open(BASE + '/build/picker.js', 'r', encoding='utf-8').read()
 monthpick_js = open(BASE + '/build/monthpick.js', 'r', encoding='utf-8').read()
 monthpick_css = open(BASE + '/build/monthpick.css', 'r', encoding='utf-8').read()
 sub_theme_css = open(BASE + '/build/sub_theme.css', 'r', encoding='utf-8').read()
+paper_specks_css = open(BASE + '/build/paper_specks.css', 'r', encoding='utf-8').read().strip()
+template = template.replace('/*__PAPER_SPECKS_CSS__*/', paper_specks_css)
+sub_theme_css = sub_theme_css.replace('/*__PAPER_SPECKS_CSS__*/', paper_specks_css)
 sub_theme_css += '\n' + monthpick_css   # the month picker's styles ride along for /spectate and /br
 
 
@@ -103,6 +106,8 @@ out = out.replace('/*__APP_JS__*/', app_js)
 out = out.replace('/*__LIVE_OVERLAY_JS__*/', live_overlay_js)
 out = out.replace('/*__KAIZEN_BRIDGE_JS__*/', kaizen_bridge_js)
 out = out.replace('/*__MONTHPICK_CSS__*/', monthpick_css).replace('/*__MONTHPICK_JS__*/', monthpick_js)
+import time as _time
+out = out.replace('__DEV_BUILD_TOKEN__', str(int(_time.time())))
 
 if '/*__THIRTY_DATA__*/' in out or '/*__APP_JS__*/' in out or '/*__LIVE_OVERLAY_JS__*/' in out or '/*__KAIZEN_BRIDGE_JS__*/' in out or '/*__MONTHPICK_JS__*/' in out or '/*__MONTHPICK_CSS__*/' in out:
     raise SystemExit('splice.py: a placeholder was not replaced — aborting')

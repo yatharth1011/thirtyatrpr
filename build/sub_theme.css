@@ -46,6 +46,25 @@
     --ink:#ece7f5; --ink-soft:#a294bb; --ink-faint:#675a80;
     --gold:#a374e8; --gold-soft:rgba(163,116,232,0.14); --head-bg:rgba(16,11,26,0.62);
   }
+  /* Paper Theme */
+  body[data-theme="paper"]{
+    --bg:#ffffff; --bg2:#f7f8fa; --card:#ffffff; --card2:#f4f5f8; --line:#e2e5eb;
+    --ink:#111213; --ink-soft:#374151; --ink-faint:#525866;
+    --gold:#e11d48; --gold-soft:rgba(225,29,72,0.08);
+    --ok:#15803d;
+    --amber:#854d0e; --amber-soft:rgba(133,77,14,0.12);
+    --teal:#0369a1; --teal-soft:rgba(3,105,161,0.12);
+    --rose:#e11d48; --rose-soft:rgba(225,29,72,0.08);
+    --violet:#6d28d9; --violet-soft:rgba(109,40,217,0.12);
+    --head-bg:rgba(255,255,255,0.96);
+    font-family:'CMU Serif', 'Computer Modern Serif', 'Latin Modern Roman', 'LM Roman 10', 'Nimbus Roman No9 L', 'Times New Roman', Times, serif;
+  }
+  html:has(body[data-theme="paper"]){ color-scheme:light; }
+  /*__PAPER_SPECKS_CSS__*/
+  html body[data-theme="paper"] .panel, html body[data-theme="paper"] .card, html body[data-theme="paper"] .daycard, html body[data-theme="paper"] .tab, html body[data-theme="paper"] button, html body[data-theme="paper"] header{ box-shadow:none !important; }
+  .theme-dot-paper{ background:#ffffff; border:1px solid #e2e5eb; }
+  html body[data-theme="paper"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
+  html body[data-theme="paper"] .daycard-head{ border-bottom:none !important; }
   body[data-theme="github"] .prompt::before, body[data-theme="github"] .panel-head::before{ color:#f97583; }
   body[data-theme="github"] .prompt .ok{ color:#85e89d; }   /* the terminal [ok] stays green, like the main page's boot log */
   body[data-theme="github"] .eyebrow{ color:#79b8ff; }

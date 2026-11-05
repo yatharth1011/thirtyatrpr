@@ -20,18 +20,25 @@ try { currentNameAliases = JSON.parse(localStorage.getItem(NAME_ALIASES_KEY) || 
 var currentTheme = 'a'; // Theme A (frosted) only — Theme B was removed from Settings on 2026-10-15
 document.body.classList.toggle('glass', currentTheme === 'a');
 var COLOR_THEME_KEY = 'thirtyatrpr_color_theme';
-// 'github' (GitHub Dark) is the default color theme. It was rolled out to EVERYONE, existing users
-// included, via a one-time switch: the first time a browser loads this version, any previously
-// saved color theme is replaced by 'github' and a marker is stored, so from then on whatever the
-// person picks in Settings (including switching back to their old theme) sticks.
+var PREV_THEME_KEY = 'thirtyatrpr_theme_previous';
 var GITHUB_THEME_ROLLOUT_KEY = 'thirtyatrpr_theme_github_rollout';
+var PAPER_THEME_ROLLOUT_KEY = 'thirtyatrpr_theme_paper_rollout';
+var PAPER_BANNER_KEY = 'thirtyatrpr_paper_banner_show';
+var PAPER_BANNER_DISMISSED_KEY = 'thirtyatrpr_paper_banner_dismissed';
+// 'paper' (Paper light theme, adapting Kaizen.app with CMU Serif typography) is the default color theme.
+// It is rolled out to EVERYONE on next open via a one-time switch: previously saved color theme is saved
+// to PREV_THEME_KEY (so the one-time banner can keep or revert/change), and the rollout marker is stored
+// so the user's manual choices stick afterwards.
 try {
-  if(!localStorage.getItem(GITHUB_THEME_ROLLOUT_KEY)){
-    localStorage.setItem(COLOR_THEME_KEY, 'github');
-    localStorage.setItem(GITHUB_THEME_ROLLOUT_KEY, '1');
+  if(!localStorage.getItem(PAPER_THEME_ROLLOUT_KEY)){
+    var prev = localStorage.getItem(COLOR_THEME_KEY) || 'github';
+    localStorage.setItem(PREV_THEME_KEY, prev);
+    localStorage.setItem(COLOR_THEME_KEY, 'paper');
+    localStorage.setItem(PAPER_THEME_ROLLOUT_KEY, '1');
+    localStorage.setItem(PAPER_BANNER_KEY, '1');
   }
 } catch(e){}
-var currentColorTheme = localStorage.getItem(COLOR_THEME_KEY) || 'github';
+var currentColorTheme = localStorage.getItem(COLOR_THEME_KEY) || 'paper';
 if(currentColorTheme !== 'default') document.body.setAttribute('data-theme', currentColorTheme);
 
 /* Per-subject colors: a real syntax-highlighting-style spread (red/orange/yellow/green/teal/cyan/
@@ -44,16 +51,26 @@ var SUBJECT_COLORS = {
   HS110:'#da62a2', HS111:'#dac262', HS112:'#62b6da', HS113:'#9662da', IK101:'#34C48A'
 };
 var FALLBACK_COLORS = ['#da6662','#da9a62','#dac262','#62daaa','#62dad6','#62b6da','#6286da','#9662da','#da62a2'];
+/* Paper theme: deeply pigmented, high-contrast bookbinder inks tuned for maximum clarity on paper */
+var SUBJECT_COLORS_PAPER = {
+  AI101:'#e11d48', MA101:'#d97706', PH101:'#059669', CY101:'#4f46e5', CS100:'#9333ea',
+  TL101:'#0284c7', WP101:'#ea580c', NCC:'#475569', LIFESKILL:'#64748b', NO101:'#0d9488',
+  HS110:'#db2777', HS111:'#ca8a04', HS112:'#0284c7', HS113:'#7c3aed', IK101:'#16a34a'
+};
+var FALLBACK_COLORS_PAPER = ['#e11d48','#d97706','#059669','#4f46e5','#9333ea','#0284c7','#ea580c','#db2777','#16a34a'];
 var SUBJECT_PREFIXES = ['AI101','MA101','PH101','CY101','CS100','TL101','WP101','HS110','HS111','HS112','HS113','IK101','NO101'];
 function subjectColor(code){
+  var isPaper = currentColorTheme === 'paper';
+  var palette = isPaper ? SUBJECT_COLORS_PAPER : SUBJECT_COLORS;
+  var fallbacks = isPaper ? FALLBACK_COLORS_PAPER : FALLBACK_COLORS;
   var up = code.toUpperCase();
   for(var i=0;i<SUBJECT_PREFIXES.length;i++){
-    if(up.indexOf(SUBJECT_PREFIXES[i]) === 0) return SUBJECT_COLORS[SUBJECT_PREFIXES[i]];
+    if(up.indexOf(SUBJECT_PREFIXES[i]) === 0) return palette[SUBJECT_PREFIXES[i]];
   }
-  if(up.indexOf('NCC') !== -1 || up.indexOf('LIFE SKILL') !== -1) return SUBJECT_COLORS.NCC;
+  if(up.indexOf('NCC') !== -1 || up.indexOf('LIFE SKILL') !== -1) return palette.NCC;
   var h = 0;
   for(var j=0;j<up.length;j++) h = (h*31 + up.charCodeAt(j)) >>> 0;
-  return FALLBACK_COLORS[h % FALLBACK_COLORS.length];
+  return fallbacks[h % fallbacks.length];
 }
 var currentHsElective = localStorage.getItem(HS_KEY) || '';
 var NSO_OPTIN_KEY = 'thirtyatrpr_nso_optin'; // '' unset, 'yes', 'no'
@@ -917,6 +934,7 @@ function kzWidget(){
   // Kaizen roadmap's own student also gets the roadmap sections and the sync chips.
   var own = state.student && state.student.entry === state.loginEntry;
   var mine = own && c && c.students.indexOf(state.loginEntry) !== -1;
+  var isTdxUser = !!(state.loginEntry && state.loginEntry.toUpperCase() === '2026AIB1099');
   var today = todayISO(), ssp = ssPrefs(), goal = ssp.min;
   // Self-study off: the card pitches the feature instead (until "hide"); hidden + off = no card for non-members.
   var promoHidden = false;
@@ -1001,7 +1019,7 @@ function kzWidget(){
       (window.__kzCloudStatus === 'on' ? '<span class="kz-sync on" style="margin-left:0" title="Private cloud copy — phone and PC">cloud ✓</span>' :
         '<button class="kz-btn" style="margin-left:0;padding:1px 8px;font-size:9.5px" onclick="window.__kzCloudSignIn && window.__kzCloudSignIn()" title="Sign in with your @iitrpr.ac.in Google account to sync Kaizen (DSA included) between phone and PC">'+
           (window.__kzCloudStatus === 'wrong-account' ? 'wrong account — sign in' : 'sign in to sync')+'</button>')+
-      (!mine ? '' : '<a href="http://127.0.0.1:8840/" target="_blank" rel="noopener" class="kz-sync on" style="margin-left:0;text-decoration:none;color:inherit;font-weight:700;" title="TDX Reality Engine (Local / Cloud)">tdx ⚡</a>')+
+      (!isTdxUser ? '' : '<a href="http://127.0.0.1:8840/" target="_blank" rel="noopener" class="kz-sync on" style="margin-left:0;text-decoration:none;color:inherit;font-weight:700;" title="TDX Reality Engine (Local / Cloud)">tdx ⚡</a>')+
     '</div>')+
     (promo ? '<div class="kz-sec kz-promo">'+
       '<div class="kz-promo-tag">new &middot; self-study</div>'+
@@ -1032,7 +1050,7 @@ function kzWidget(){
       bar(d.done, d.total)+nextHtml(d.next)+
       '<div class="kz-meta">'+(todayPlan.DSA ? hm(todayPlan.DSA)+' planned today' : 'nothing more planned today')+'</div>'+
     '</div>' : '')+
-    (!mine ? '' : '<div class="kz-sec kz-tdx" id="kzTdxSec">'+
+    (!isTdxUser ? '' : '<div class="kz-sec kz-tdx" id="kzTdxSec">'+
       '<div class="kz-label"><b>⚡ TDX Reality Engine</b><span class="kz-num" id="kzTdxSyncStatus">sprint active</span></div>'+
       '<div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;gap:8px;">'+
         '<span style="font-size:11.5px;color:var(--ink-soft);">Endsem Sprint &middot; MA101, PH101 & AI101 linked</span>'+
@@ -1040,7 +1058,7 @@ function kzWidget(){
       '</div>'+
       '<div class="kz-meta" style="margin-top:5px;">Daily adaptive target active &middot; auto-reschedules missed backlog</div>'+
     '</div>');
-  if(mine) {
+  if(isTdxUser) {
     try {
       fetch('http://127.0.0.1:8840/api/status', { mode: 'cors', cache: 'no-store' })
         .then(function(r){ return r.json(); })
@@ -3135,15 +3153,15 @@ function initSettings(){
     location.reload();
   });
 
-  // Colour theme: one slider over the five themes' colours, snapping to each.
-  var THEME_ORDER = ['github', 'default', 'forest', 'sunset', 'midnight'];
-  var THEME_NAMES = { github: 'Graphite', 'default': 'Signature', forest: 'Forest', sunset: 'Sunset', midnight: 'Midnight' };
+  // Colour theme: one slider over the six themes' colours, snapping to each.
+  var THEME_ORDER = ['paper', 'github', 'default', 'forest', 'sunset', 'midnight'];
+  var THEME_NAMES = { paper: 'Paper', github: 'Graphite', 'default': 'Signature', forest: 'Forest', sunset: 'Sunset', midnight: 'Midnight' };
   var themeRange = document.getElementById('colorThemeRange'), themeName = document.getElementById('colorThemeName');
   var themeKnob = document.getElementById('colorThemeKnob');
-  // the knob sits inside the track: 4px in from each end, at stop i of 0..4
+  // the knob sits inside the track: 4px in from each end, at stop i of 0..5
   function placeKnob(i, pop){
     if(!themeKnob) return;
-    themeKnob.style.left = 'calc(4px + (100% - 26px) * ' + (i / 4) + ')';
+    themeKnob.style.left = 'calc(4px + (100% - 26px) * ' + (i / (THEME_ORDER.length - 1)) + ')';
     if(pop){ themeKnob.classList.remove('pop'); void themeKnob.offsetWidth; themeKnob.classList.add('pop'); }
   }
   function setColorTheme(t){
@@ -3152,6 +3170,10 @@ function initSettings(){
     else document.body.setAttribute('data-theme', t);
     localStorage.setItem(COLOR_THEME_KEY, t);
     if(themeName) themeName.textContent = THEME_NAMES[t] || t;
+    if(themeRange && Number(themeRange.value) !== THEME_ORDER.indexOf(t)){
+      themeRange.value = Math.max(0, THEME_ORDER.indexOf(t));
+      placeKnob(Number(themeRange.value), true);
+    }
     if(state.student){
       state.DAYS = buildDays(state.student);
       renderTodayPanel();
@@ -3161,6 +3183,66 @@ function initSettings(){
       if(calState.open) renderCalendar();
     }
   }
+  function initPaperBanner(){
+    var banner = document.getElementById('paperThemeBanner');
+    if(!banner) return;
+    var show = false;
+    try {
+      show = localStorage.getItem(PAPER_BANNER_KEY) === '1' && !localStorage.getItem(PAPER_BANNER_DISMISSED_KEY);
+    } catch(e){}
+    if(!show){
+      banner.style.display = 'none';
+      return;
+    }
+    var prevTheme = 'github';
+    try { prevTheme = localStorage.getItem(PREV_THEME_KEY) || 'github'; } catch(e){}
+    var prevNameEl = document.getElementById('paperPrevThemeName');
+    if(prevNameEl) prevNameEl.textContent = THEME_NAMES[prevTheme] || 'Graphite';
+
+    banner.style.display = 'flex';
+
+    function dismissBanner(){
+      banner.style.display = 'none';
+      try {
+        localStorage.removeItem(PAPER_BANNER_KEY);
+        localStorage.setItem(PAPER_BANNER_DISMISSED_KEY, '1');
+      } catch(e){}
+    }
+
+    var keepBtn = document.getElementById('paperBannerKeep');
+    if(keepBtn){
+      keepBtn.onclick = function(){
+        dismissBanner();
+      };
+    }
+
+    var revertBtn = document.getElementById('paperBannerRevert');
+    if(revertBtn){
+      revertBtn.onclick = function(){
+        setColorTheme(prevTheme);
+        dismissBanner();
+      };
+    }
+
+    var settingsBtn = document.getElementById('paperBannerSettings');
+    if(settingsBtn){
+      settingsBtn.onclick = function(){
+        var panel = document.getElementById('settingsPanel');
+        if(panel && !panel.classList.contains('open')){
+          var sBtn = document.getElementById('settingsBtn');
+          if(sBtn) sBtn.click();
+        }
+      };
+    }
+
+    var closeBtn = document.getElementById('paperBannerClose');
+    if(closeBtn){
+      closeBtn.onclick = function(){
+        dismissBanner();
+      };
+    }
+  }
+  initPaperBanner();
   if(themeRange){
     themeRange.value = Math.max(0, THEME_ORDER.indexOf(currentColorTheme));
     placeKnob(Number(themeRange.value), false);

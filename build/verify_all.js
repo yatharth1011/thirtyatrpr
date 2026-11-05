@@ -1371,23 +1371,23 @@ allPass &= runScenario('creating a group saves it locally with yourself in it, a
   assert(html.indexOf('grp-slot') !== -1 && html.indexOf('Everyone free') !== -1, 'renders time slots and the together line: ' + html.slice(0, 300));
 });
 
-// === New: GitHub Dark is the default theme, switched on once for existing users too ===
-allPass &= runScenario('GitHub Dark is applied by default (fresh or previously-themed browser) and a later manual choice sticks', '2026AIB1001', {}, (win, doc) => {
-  assert(doc.body.getAttribute('data-theme') === 'github', 'fresh browser gets github: ' + doc.body.getAttribute('data-theme'));
-  assert(win.localStorage.getItem('thirtyatrpr_theme_github_rollout') === '1', 'rollout marker stored');
+// === New: Paper is the default theme, switched on once for existing users too ===
+allPass &= runScenario('Paper is applied by default (fresh or previously-themed browser) and a later manual choice sticks', '2026AIB1001', {}, (win, doc) => {
+  assert(doc.body.getAttribute('data-theme') === 'paper', 'fresh browser gets paper: ' + doc.body.getAttribute('data-theme'));
+  assert(win.localStorage.getItem('thirtyatrpr_theme_paper_rollout') === '1', 'rollout marker stored');
 });
 {
   // An existing user who had picked "sunset" before this release: switched once, then their own later choice wins.
   const sandbox = makeSandbox();
   sandbox.localStorage.setItem('thirtyatrpr_color_theme', 'sunset');
   vm.runInContext(combinedSrc, sandbox);
-  let ok = sandbox.document.body.getAttribute('data-theme') === 'github';
+  let ok = sandbox.document.body.getAttribute('data-theme') === 'paper';
   const sandbox2 = makeSandbox();
   sandbox2.localStorage.setItem('thirtyatrpr_color_theme', 'sunset');
-  sandbox2.localStorage.setItem('thirtyatrpr_theme_github_rollout', '1');
+  sandbox2.localStorage.setItem('thirtyatrpr_theme_paper_rollout', '1');
   vm.runInContext(combinedSrc, sandbox2);
   ok = ok && sandbox2.document.body.getAttribute('data-theme') === 'sunset';
-  console.log(ok ? 'PASS' : 'FAIL', 'existing user is switched to GitHub Dark once; after that a manual pick (sunset) is kept');
+  console.log(ok ? 'PASS' : 'FAIL', 'existing user is switched to Paper once; after that a manual pick (sunset) is kept');
   allPass &= ok;
 }
 
@@ -1493,16 +1493,16 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
   const ok = /setAttribute\('data-theme'/.test(early) && /thirtyatrpr_color_theme/.test(early) && /classList\.add\('glass'\)/.test(early) && firstScript > 0 && firstScript < heavy;
   console.log(ok ? 'PASS' : 'FAIL', 'colour theme + glass class are applied by the first script in <body>, ahead of the big data script');
   allPass &= ok;
-  // and it behaves: github by default, a saved non-default choice after the rollout marker, nothing for "default"
+  // and it behaves: paper by default (pre-rollout), a saved non-default choice after the rollout marker, nothing for "default"
   const run = (store) => {
     const attrs = {}; const cls = [];
     const sandbox = { localStorage: { getItem: (k) => (k in store ? store[k] : null) }, document: { body: { setAttribute: (k, v) => { attrs[k] = v; }, classList: { add: (c) => cls.push(c) } } } };
     vm.runInNewContext(early.replace('<script>', ''), sandbox);
     return { attrs, cls };
   };
-  const a = run({}), b = run({ thirtyatrpr_theme_github_rollout: '1', thirtyatrpr_color_theme: 'sunset' }), c = run({ thirtyatrpr_theme_github_rollout: '1', thirtyatrpr_color_theme: 'default' });
-  const ok2 = a.attrs['data-theme'] === 'github' && b.attrs['data-theme'] === 'sunset' && c.attrs['data-theme'] === undefined && a.cls[0] === 'glass';
-  console.log(ok2 ? 'PASS' : 'FAIL', 'early theme script: github by default/pre-rollout, saved choice after rollout, none for "default"');
+  const a = run({}), b = run({ thirtyatrpr_theme_paper_rollout: '1', thirtyatrpr_color_theme: 'sunset' }), c = run({ thirtyatrpr_theme_paper_rollout: '1', thirtyatrpr_color_theme: 'default' });
+  const ok2 = a.attrs['data-theme'] === 'paper' && b.attrs['data-theme'] === 'sunset' && c.attrs['data-theme'] === undefined && a.cls[0] === 'glass';
+  console.log(ok2 ? 'PASS' : 'FAIL', 'early theme script: paper by default/pre-rollout, saved choice after rollout, none for "default"');
   allPass &= ok2;
 }
 
@@ -1517,9 +1517,30 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     const ok = /setAttribute\('data-theme'/.test(early) && /thirtyatrpr_color_theme/.test(early) && first - bodyAt < 40;
     console.log(ok ? 'PASS' : 'FAIL', f + ': saved colour theme is applied by the very first script in <body>');
     allPass &= ok;
+    // Sub-page boot scripts must NOT trigger the paper rollout — they default to 'github' so a user
+    // who lands directly on /spectate or /br never sees the paper theme without the dashboard banner.
+    const defaultsToGithub = /var t = 'github'/.test(early) || /\|\| 'github'/.test(early);
+    const noPaperRollout = !/paper_rollout/.test(early) && !/paper_banner/.test(early);
+    const okSub = defaultsToGithub && noPaperRollout;
+    console.log(okSub ? 'PASS' : 'FAIL', f + ': boot script defaults to github (not paper) and does NOT trigger paper rollout');
+    allPass &= okSub;
   }
-  const dash = fs2.readFileSync(__dirname + '/index_template_dashboard.html', 'utf8');
+  // sub_theme.css has the Paper theme CSS block (variables + toner grain + element overrides)
   const sub = fs2.readFileSync(__dirname + '/sub_theme.css', 'utf8');
+  const okPaperSub = /body\[data-theme="paper"\]/.test(sub) && /--bg:#ffffff/.test(sub) && /CMU Serif/.test(sub) && /theme-dot-paper/.test(sub);
+  console.log(okPaperSub ? 'PASS' : 'FAIL', 'sub_theme.css includes the Paper theme block with variables, serif font, and swatch dot');
+  allPass &= okPaperSub;
+  // Paper banner only exists on the dashboard, never on sub-pages
+  const dash = fs2.readFileSync(__dirname + '/index_template_dashboard.html', 'utf8');
+  const okBannerDash = /paperThemeBanner/.test(dash);
+  console.log(okBannerDash ? 'PASS' : 'FAIL', 'Paper theme banner is in the dashboard template');
+  allPass &= okBannerDash;
+  for (const f of ['spectate_template.html', 'br_template.html']) {
+    const html = fs2.readFileSync(__dirname + '/' + f, 'utf8');
+    const okNoBanner = !/paperThemeBanner/.test(html) && !/paper_banner/.test(html);
+    console.log(okNoBanner ? 'PASS' : 'FAIL', f + ': no Paper banner HTML or banner logic (banner is dashboard-only)');
+    allPass &= okNoBanner;
+  }
   const okCss = /@view-transition\s*\{\s*navigation:\s*auto/.test(dash) && /@view-transition\s*\{\s*navigation:\s*auto/.test(sub) && /^\s*(\/\*[\s\S]*?\*\/\s*)?@import/.test(sub);
   console.log(okCss ? 'PASS' : 'FAIL', 'cross-document view transitions enabled on dashboard + sub pages (font @import still first rule)');
   allPass &= okCss;

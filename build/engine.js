@@ -133,12 +133,22 @@ var SUBJECT_COLORS = {
   HS110:'#da62a2', HS111:'#dac262', HS112:'#62b6da', HS113:'#9662da', IK101:'#34C48A'
 };
 var FALLBACK_COLORS = ['#da6662','#da9a62','#dac262','#62daaa','#62dad6','#62b6da','#6286da','#9662da','#da62a2'];
+var SUBJECT_COLORS_PAPER = {
+  AI101:'#e11d48', MA101:'#d97706', PH101:'#059669', CY101:'#4f46e5', CS100:'#9333ea',
+  TL101:'#0284c7', WP101:'#ea580c', NCC:'#475569', LIFESKILL:'#64748b', NO101:'#0d9488',
+  HS110:'#db2777', HS111:'#ca8a04', HS112:'#0284c7', HS113:'#7c3aed', IK101:'#16a34a'
+};
+var FALLBACK_COLORS_PAPER = ['#e11d48','#d97706','#059669','#4f46e5','#9333ea','#0284c7','#ea580c','#db2777','#16a34a'];
 function subjectColor(code){
+  var isPaper = false;
+  try { isPaper = (typeof document !== 'undefined' && document.body && document.body.getAttribute('data-theme') === 'paper') || (typeof localStorage !== 'undefined' && localStorage.getItem('thirtyatrpr_color_theme') === 'paper'); } catch(e){}
+  var palette = isPaper ? SUBJECT_COLORS_PAPER : SUBJECT_COLORS;
+  var fallbacks = isPaper ? FALLBACK_COLORS_PAPER : FALLBACK_COLORS;
   var up = String(code || '').toUpperCase();
-  for(var k in SUBJECT_COLORS){ if(up.indexOf(k) === 0) return SUBJECT_COLORS[k]; }
+  for(var k in palette){ if(up.indexOf(k) === 0) return palette[k]; }
   var h = 0;
   for(var j=0;j<up.length;j++) h = (h*31 + up.charCodeAt(j)) >>> 0;
-  return FALLBACK_COLORS[h % FALLBACK_COLORS.length];
+  return fallbacks[h % fallbacks.length];
 }
 function relocatedVenue(venue, iso){
   var rules = DATA.venueRelocations || [];
@@ -1208,7 +1218,7 @@ function venueLoadLeaderboard(isoList){
 /* ================= themes (shared with the main dashboard via localStorage) ================= */
 var THEME_KEY = 'thirtyatrpr_theme', COLOR_THEME_KEY = 'thirtyatrpr_color_theme';
 var COLOR_THEMES = [
-  { id: 'github', label: 'Graphite' }, { id: 'default', label: 'Signature' }, { id: 'forest', label: 'Forest' },
+  { id: 'paper', label: 'Paper' }, { id: 'github', label: 'Graphite' }, { id: 'default', label: 'Signature' }, { id: 'forest', label: 'Forest' },
   { id: 'sunset', label: 'Sunset' }, { id: 'midnight', label: 'Midnight' }
 ];
 function readPref(k, dflt){ try { return localStorage.getItem(k) || dflt; } catch(e){ return dflt; } }

@@ -7,6 +7,7 @@
      re-darken it — that flipped light gradient text, like the kaizen hues' near-white end, to near-black. -->
 <meta name="color-scheme" content="dark">
 <title>THIRTY@RPR — BR Tools</title>
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/cmu-serif" media="print" onload="this.media='all'">
 <link rel="icon" type="image/png" sizes="64x64" href="/icons/v2/favicon-64.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icons/v2/icon-192.png">
 <link rel="apple-touch-icon" href="/icons/v2/apple-touch-180.png">
@@ -62,6 +63,32 @@
     --ink:#ece7f5; --ink-soft:#a294bb; --ink-faint:#675a80;
     --gold:#a374e8; --gold-soft:rgba(163,116,232,0.14); --head-bg:rgba(16,11,26,0.62);
   }
+  /* Paper Theme */
+  body[data-theme="paper"]{
+    --bg:#ffffff; --bg2:#f7f8fa; --card:#ffffff; --card2:#f4f5f8; --line:#e2e5eb;
+    --ink:#111213; --ink-soft:#374151; --ink-faint:#525866;
+    --gold:#e11d48; --gold-soft:rgba(225,29,72,0.08);
+    --ok:#15803d;
+    --amber:#854d0e; --amber-soft:rgba(133,77,14,0.12);
+    --teal:#0369a1; --teal-soft:rgba(3,105,161,0.12);
+    --rose:#e11d48; --rose-soft:rgba(225,29,72,0.08);
+    --violet:#6d28d9; --violet-soft:rgba(109,40,217,0.12);
+    --head-bg:rgba(255,255,255,0.96);
+    font-family:'CMU Serif', 'Computer Modern Serif', 'Latin Modern Roman', 'LM Roman 10', 'Nimbus Roman No9 L', 'Times New Roman', Times, serif;
+  }
+  html:has(body[data-theme="paper"]){ color-scheme:light; }
+  body[data-theme="paper"]{ position:relative; }
+  body[data-theme="paper"]::before{ display:none !important; }
+  body[data-theme="paper"]::after{
+    content:""; display:block; position:absolute; inset:0; z-index:-1; pointer-events:none;
+    background-repeat:repeat;
+    background-size:1013px 1409px,1291px 1777px,1543px 1153px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1013' height='1409' fill='%23222'%3E%3Cpath fill-opacity='.4' d='M60.6 267.6L60.9 268.0L60.5 268.4L60.0 268.5L59.9 268.0L60.1 267.6zM857.6 1.2L857.9 0.3L858.7 -0.1L859.0 0.9L858.5 1.5zM15.0 577.8L15.3 577.4L15.6 577.7L15.4 578.1zM73.1 127.4L73.6 126.3L74.6 125.9L75.6 126.6L74.9 127.5L74.2 127.7zM920.5 1153.1L919.7 1152.9L919.6 1152.2L920.0 1151.7L920.5 1151.9L920.6 1152.4zM863.3 865.6L863.3 865.3L863.7 865.3L863.8 865.7L863.5 865.8zM346.4 1310.2L347.6 1310.3L347.3 1311.2L346.6 1311.1zM222.2 1296.4L223.0 1297.3L222.6 1298.0L221.7 1297.6zM809.3 243.5L809.9 242.9L810.9 242.8L811.1 243.7L810.6 244.5L809.7 244.4z'/%3E%3Cpath fill-opacity='.6' d='M458.6 789.4L457.5 789.1L457.9 787.9L458.7 788.5zM999.4 1084.3L998.1 1085.6L997.0 1084.3L998.1 1082.9zM975.0 336.5L974.3 336.0L975.0 335.4L975.7 335.5L975.9 336.4zM138.3 101.5L139.2 101.5L139.0 102.3L138.4 102.6L137.8 102.5L137.9 101.8zM116.4 362.6L116.6 361.9L117.3 361.7L117.8 362.2L117.5 362.8L117.0 362.9z'/%3E%3Cpath fill-opacity='.8' d='M308.0 127.6L307.7 128.3L307.0 128.1L307.0 127.6L307.4 127.1zM1010.5 1403.4L1009.8 1403.2L1010.2 1402.5L1010.8 1402.1L1011.2 1402.8L1011.3 1403.6zM20.0 264.2L19.5 264.0L19.8 263.6L20.2 263.8zM366.2 1254.9L367.2 1254.9L367.3 1255.6L366.6 1255.8zM22.3 1349.3L22.1 1348.6L23.0 1348.6L23.1 1349.4zM279.2 300.9L279.4 301.7L279.0 302.0L278.5 302.0L277.9 301.6L278.5 301.3zM718.3 805.0L717.3 804.4L716.9 803.4L718.1 802.9L719.1 803.9zM117.1 154.6L116.4 154.1L115.9 153.4L116.5 152.7L117.4 153.0L117.3 153.7zM228.6 1097.7L228.7 1096.2L229.9 1096.7L230.1 1097.9zM731.4 182.9L731.7 182.7L732.1 182.8L732.0 183.2L731.8 183.4L731.6 183.2zM731.9 1153.0L731.5 1153.5L730.9 1153.4L731.0 1152.9L731.4 1152.5z'/%3E%3Cpath fill='none' stroke='%23222' stroke-opacity='.45' stroke-width='.5' d='M34.0 843.1l4.5 1.0M868.4 1330.4l0.0 3.1M670.9 534.3l3.4 0.8M866.9 491.0l1.1 5.7M778.2 686.8l-2.7 1.9'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1291' height='1777' fill='%23222'%3E%3Cpath fill-opacity='.4' d='M1193.3 1685.5L1193.9 1684.9L1194.9 1685.3L1194.5 1686.2L1193.5 1686.5zM838.1 1227.4L838.3 1226.6L839.1 1227.0L838.7 1227.9zM892.4 682.4L892.3 682.8L891.9 682.6L891.9 682.3L892.2 682.0zM452.8 373.9L452.1 374.3L451.8 373.7L452.4 373.1zM515.0 652.3L515.4 652.8L514.9 653.2L514.2 653.2L514.2 652.2zM1251.6 195.8L1252.7 196.7L1252.0 197.7L1251.1 197.0zM740.3 1763.9L739.6 1764.1L739.1 1763.9L739.2 1763.4L739.5 1762.9L740.0 1763.3zM1259.3 -0.3L1260.2 -0.4L1260.0 0.5L1259.1 0.5z'/%3E%3Cpath fill-opacity='.6' d='M31.5 153.0L30.7 151.9L32.0 151.3L33.2 152.1L32.6 153.4zM1252.7 644.4L1253.3 644.3L1253.7 644.6L1253.5 645.2L1252.9 645.1zM183.4 1323.9L184.4 1324.0L184.3 1324.9L183.5 1324.8zM119.4 28.3L119.8 28.0L120.1 28.3L120.0 28.6L119.6 28.7zM814.4 591.6L814.4 590.6L815.5 590.0L815.8 591.4zM1032.2 1755.6L1033.1 1756.2L1032.2 1756.7L1031.4 1756.2zM962.8 1696.0L963.4 1696.0L963.4 1696.7L963.0 1697.4L962.5 1696.8L962.5 1696.3zM880.1 724.0L879.5 724.4L878.9 724.1L879.1 723.4L879.8 723.5zM144.1 1356.0L142.7 1355.6L142.6 1354.0L144.0 1354.0L144.9 1354.8zM118.5 1522.6L119.5 1522.1L120.0 1522.9L119.2 1523.6zM588.5 6.6L588.3 5.3L589.2 4.4L590.3 5.3L589.8 6.4zM661.4 1605.8L662.1 1606.0L662.4 1606.7L661.8 1607.7L661.0 1606.9L660.9 1606.2z'/%3E%3Cpath fill-opacity='.8' d='M211.5 1420.0L211.0 1420.2L210.7 1419.6L211.4 1419.5zM761.7 194.3L761.1 194.3L761.2 193.6L761.5 192.9L762.2 193.3L762.2 194.0zM887.3 733.6L887.4 732.8L888.1 732.7L888.6 733.3L888.0 733.6zM789.0 641.9L788.4 642.5L787.7 641.6L788.7 641.3zM882.0 1655.8L882.4 1656.9L881.4 1657.1L881.2 1656.3zM960.8 1645.4L961.0 1644.1L962.2 1643.7L962.2 1645.1zM184.7 1748.9L184.9 1747.6L186.1 1748.1L185.6 1748.9zM22.8 924.7L22.4 924.4L22.6 923.9L23.3 923.9L23.3 924.5zM1242.7 38.8L1243.6 39.2L1243.2 39.9L1242.3 39.8z'/%3E%3Cpath fill='none' stroke='%23222' stroke-opacity='.45' stroke-width='.5' d='M286.9 1316.0l-5.1 0.9M1149.1 670.5l0.7 5.0M473.2 1697.3l4.2 5.7'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1543' height='1153' fill='%23222'%3E%3Cpath fill-opacity='.4' d='M1502.3 487.6L1502.0 488.6L1501.0 488.8L1500.6 487.8L1501.3 487.0zM303.7 1115.5L303.2 1114.6L303.8 1113.8L304.5 1114.7zM1203.6 92.2L1202.7 91.3L1202.9 90.3L1203.7 89.6L1204.5 90.3L1204.8 91.4zM992.6 417.2L992.2 417.8L991.7 418.0L991.1 417.7L991.4 417.1L991.9 416.9zM535.5 733.4L534.9 733.3L534.6 732.7L535.2 732.4L535.9 732.8z'/%3E%3Cpath fill-opacity='.6' d='M84.4 869.7L83.3 870.4L82.2 869.7L82.7 868.5L83.8 868.7zM551.9 236.2L551.3 237.1L550.4 237.0L550.4 236.2L551.0 235.5zM1105.9 327.2L1105.6 327.0L1105.8 326.7L1106.2 326.6L1106.2 326.9L1106.2 327.2zM1432.7 227.7L1432.9 227.9L1432.7 228.2L1432.5 228.2L1432.2 228.0L1432.2 227.6zM1461.0 960.7L1460.6 961.5L1459.8 960.9L1460.4 960.2z'/%3E%3Cpath fill-opacity='.8' d='M1052.9 105.6L1052.7 106.2L1052.0 106.3L1051.8 105.7L1051.9 105.0L1052.6 104.9zM1497.1 930.6L1497.2 930.3L1497.5 930.4L1497.6 930.6L1497.5 930.9L1497.2 930.9zM33.1 15.1L33.7 15.2L34.0 15.5L33.8 16.0L33.3 16.0L32.9 15.6zM978.6 506.2L979.0 505.0L980.0 505.6L979.6 506.6zM891.2 724.1L891.5 724.0L891.8 724.3L891.4 724.5zM241.4 1010.6L240.2 1010.3L240.8 1009.2L241.9 1008.6L242.6 1010.0zM253.3 904.2L252.3 904.1L251.7 903.0L252.9 902.1L254.0 903.2zM614.1 971.4L613.6 971.8L613.1 971.4L612.9 971.0L613.4 970.4L614.0 970.8zM175.2 995.7L175.8 996.9L174.2 997.5L174.0 995.9z'/%3E%3Cpath fill='none' stroke='%23222' stroke-opacity='.45' stroke-width='.5' d='M803.2 1056.0l3.7 4.4M848.6 1062.6l-5.7 2.9M852.1 611.6l0.1 5.2'/%3E%3C/svg%3E");
+  }
+  html body[data-theme="paper"] .panel, html body[data-theme="paper"] .card, html body[data-theme="paper"] .daycard, html body[data-theme="paper"] .tab, html body[data-theme="paper"] button, html body[data-theme="paper"] header{ box-shadow:none !important; }
+  .theme-dot-paper{ background:#ffffff; border:1px solid #e2e5eb; }
+  html body[data-theme="paper"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
+  html body[data-theme="paper"] .daycard-head{ border-bottom:none !important; }
   body[data-theme="github"] .prompt::before, body[data-theme="github"] .panel-head::before{ color:#f97583; }
   body[data-theme="github"] .prompt .ok{ color:#85e89d; }   /* the terminal [ok] stays green, like the main page's boot log */
   body[data-theme="github"] .eyebrow{ color:#79b8ff; }
@@ -410,6 +437,7 @@
   document.body.classList.add('glass');
 })();
 </script>
+
 <!-- Boot splash — shared by the dashboard, /spectate and /br (build/splash.html, spliced in by splice.py). Pure CSS, plays while the page's big script loads: the 30 tile pops in, the @ slides out from inside it
      (dark while inside the tile, gradient once past the edge — the same two-copy trick as the nav logo), then r p r slide
      out from behind the tile. Removed by window.__bootDone(), called when each page is ready (end of app3.js / spectate.js / br.js); a timer removes it anyway. -->
@@ -832,12 +860,22 @@ var SUBJECT_COLORS = {
   HS110:'#da62a2', HS111:'#dac262', HS112:'#62b6da', HS113:'#9662da', IK101:'#34C48A'
 };
 var FALLBACK_COLORS = ['#da6662','#da9a62','#dac262','#62daaa','#62dad6','#62b6da','#6286da','#9662da','#da62a2'];
+var SUBJECT_COLORS_PAPER = {
+  AI101:'#e11d48', MA101:'#d97706', PH101:'#059669', CY101:'#4f46e5', CS100:'#9333ea',
+  TL101:'#0284c7', WP101:'#ea580c', NCC:'#475569', LIFESKILL:'#64748b', NO101:'#0d9488',
+  HS110:'#db2777', HS111:'#ca8a04', HS112:'#0284c7', HS113:'#7c3aed', IK101:'#16a34a'
+};
+var FALLBACK_COLORS_PAPER = ['#e11d48','#d97706','#059669','#4f46e5','#9333ea','#0284c7','#ea580c','#db2777','#16a34a'];
 function subjectColor(code){
+  var isPaper = false;
+  try { isPaper = (typeof document !== 'undefined' && document.body && document.body.getAttribute('data-theme') === 'paper') || (typeof localStorage !== 'undefined' && localStorage.getItem('thirtyatrpr_color_theme') === 'paper'); } catch(e){}
+  var palette = isPaper ? SUBJECT_COLORS_PAPER : SUBJECT_COLORS;
+  var fallbacks = isPaper ? FALLBACK_COLORS_PAPER : FALLBACK_COLORS;
   var up = String(code || '').toUpperCase();
-  for(var k in SUBJECT_COLORS){ if(up.indexOf(k) === 0) return SUBJECT_COLORS[k]; }
+  for(var k in palette){ if(up.indexOf(k) === 0) return palette[k]; }
   var h = 0;
   for(var j=0;j<up.length;j++) h = (h*31 + up.charCodeAt(j)) >>> 0;
-  return FALLBACK_COLORS[h % FALLBACK_COLORS.length];
+  return fallbacks[h % fallbacks.length];
 }
 function relocatedVenue(venue, iso){
   var rules = DATA.venueRelocations || [];
@@ -1907,7 +1945,7 @@ function venueLoadLeaderboard(isoList){
 /* ================= themes (shared with the main dashboard via localStorage) ================= */
 var THEME_KEY = 'thirtyatrpr_theme', COLOR_THEME_KEY = 'thirtyatrpr_color_theme';
 var COLOR_THEMES = [
-  { id: 'github', label: 'Graphite' }, { id: 'default', label: 'Signature' }, { id: 'forest', label: 'Forest' },
+  { id: 'paper', label: 'Paper' }, { id: 'github', label: 'Graphite' }, { id: 'default', label: 'Signature' }, { id: 'forest', label: 'Forest' },
   { id: 'sunset', label: 'Sunset' }, { id: 'midnight', label: 'Midnight' }
 ];
 function readPref(k, dflt){ try { return localStorage.getItem(k) || dflt; } catch(e){ return dflt; } }
