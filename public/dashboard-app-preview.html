@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793903917';
+    var curToken = '1793904093';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -1726,31 +1726,51 @@ window.__overlayFast = (function(){
   html body[data-theme="paper"] footer.appfoot *,
   html body[data-theme="paper"] .daychip,
   html body[data-theme="paper"].glass .daychip{ box-shadow:none !important; }
-  /* The sheet itself bends away toward its shaded edge, so everything printed on it folds too */
+  /* The sidebar (PC) and top section (phone) stay flat and sharp up to a crease. Past it, .paper-fold shows a live copy of
+     the same content turned away at a real angle (app3.js keeps it in sync). It is pointer-events:none, so clicks reach
+     the real buttons underneath. */
+  html body[data-theme="paper"] .paper-fold{
+    position:absolute; overflow:hidden; pointer-events:none; z-index:41;
+    background:linear-gradient(90deg, #f6f5f3 0%, #ffffff 16%, #ffffff 100%);
+    -webkit-backface-visibility:hidden; backface-visibility:hidden;
+  }
+  html body[data-theme="paper"] .paper-fold::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+  }
+  html body[data-theme="paper"] .paper-fold header{
+    position:absolute !important; transform:none !important; margin:0 !important; z-index:auto !important;
+    background:none !important; box-shadow:none !important; border:none !important; overflow:visible !important;
+    animation:none !important;
+  }
+  html body[data-theme="paper"] .paper-fold header *{ animation:none !important; transition:none !important; opacity:1; }
   @media (min-width: 960px){
-    /* Fixed and overscanned: the bend slants the sheet's ends, so they sit past the screen edges and it never stops short */
-    html body[data-theme="paper"] header,
-    html body[data-theme="paper"].glass header{
+    /* Fixed and overscanned: the fold's ends slant, so they sit past the screen edges and it never stops short */
+    html body[data-theme="paper"] > header,
+    html body[data-theme="paper"] #app > header,
+    html body[data-theme="paper"].glass #app > header{
       position:fixed; left:0; top:-56px; height:calc(100vh + 112px);
       scrollbar-width:none;
       padding-top:82px !important; padding-bottom:82px !important;
-      transform:perspective(1100px) rotateY(3.2deg); transform-origin:0 50%;
     }
     html body[data-theme="paper"] header::-webkit-scrollbar{ display:none; }
     html body[data-theme="paper"] .main-col{ margin-left:280px; }
-    html body[data-theme="paper"] header::after{
-      content:""; position:absolute; top:0; right:0; bottom:0; width:96px; pointer-events:none; z-index:5;
-      background:linear-gradient(90deg, rgba(70,48,36,0), rgba(70,48,36,.13));
+    html body[data-theme="paper"] .paper-fold{
+      position:fixed; top:-56px; left:216px; width:80px; height:calc(100vh + 112px);
+      transform:perspective(500px) rotateY(34deg); transform-origin:0 50%;
+      box-shadow:3px 0 4px rgba(17,18,19,.16), 18px 0 22px -14px rgba(17,18,19,.34);
     }
+    html body[data-theme="paper"] .paper-fold::after{ background:linear-gradient(90deg, rgba(70,48,36,0) 0%, rgba(70,48,36,.05) 30%, rgba(70,48,36,.22) 100%); }
   }
   @media (max-width: 959px){
-    html body[data-theme="paper"] header,
-    html body[data-theme="paper"].glass header{ transform:perspective(1000px) rotateX(-2.4deg); transform-origin:50% 0; }
-    html body[data-theme="paper"] header::after{
-      content:""; position:absolute; left:0; right:0; bottom:0; height:84px; pointer-events:none; z-index:5;
-      background:linear-gradient(180deg, rgba(70,48,36,0), rgba(70,48,36,.12));
+    html body[data-theme="paper"] #app > header,
+    html body[data-theme="paper"].glass #app > header{ z-index:30; }
+    html body[data-theme="paper"] .paper-fold{
+      left:0; right:0; height:68px; z-index:31;
+      background:linear-gradient(180deg, #f6f5f3 0%, #ffffff 16%, #ffffff 100%);
+      transform:perspective(520px) rotateX(-34deg); transform-origin:50% 0;
+      box-shadow:0 3px 4px rgba(17,18,19,.16), 0 18px 22px -14px rgba(17,18,19,.34);
     }
-    /* No 3D tilt on this bar: it animates in, so Chrome rasterises it once at low resolution and the logo pixelates. Shading only. */
+    html body[data-theme="paper"] .paper-fold::after{ background:linear-gradient(180deg, rgba(70,48,36,0) 0%, rgba(70,48,36,.05) 30%, rgba(70,48,36,.2) 100%); }
     html body[data-theme="paper"] .mini-bar::after{
       content:""; position:absolute; left:0; right:0; bottom:0; height:44px; pointer-events:none;
       background:linear-gradient(180deg, rgba(70,48,36,0), rgba(70,48,36,.11));
@@ -3529,23 +3549,41 @@ html body[data-theme="paper-dark"] .ev-card,html body[data-theme="paper-dark"].g
     box-shadow:none !important;
   }
 html body[data-theme="paper-dark"] .kz-cta,html body[data-theme="paper-dark"] .kz-btn,html body[data-theme="paper-dark"] .kz-set,html body[data-theme="paper-dark"] .kz-switch,html body[data-theme="paper-dark"] .set-fold,html body[data-theme="paper-dark"] .seg-thumb,html body[data-theme="paper-dark"] .theme-knob,html body[data-theme="paper-dark"] .chip-filter,html body[data-theme="paper-dark"] .cal-nav,html body[data-theme="paper-dark"] .reset-btn,html body[data-theme="paper-dark"] .material-link,html body[data-theme="paper-dark"] .settings-toggle,html body[data-theme="paper-dark"] .cal-toggle,html body[data-theme="paper-dark"] .search-toggle,html body[data-theme="paper-dark"] .br-toggle,html body[data-theme="paper-dark"] .verified-badge-icon,html body[data-theme="paper-dark"] #loginBtn,html body[data-theme="paper-dark"] #entryInput,html body[data-theme="paper-dark"] .login-alt,html body[data-theme="paper-dark"] #dayPrevBtn,html body[data-theme="paper-dark"] #dayNextBtn,html body[data-theme="paper-dark"] .bar-track span,html body[data-theme="paper-dark"] .kz-panel span,html body[data-theme="paper-dark"] footer.appfoot *,html body[data-theme="paper-dark"] .daychip,html body[data-theme="paper-dark"].glass .daychip{ box-shadow:none !important; }
-@media (min-width: 960px){html body[data-theme="paper-dark"] header,html body[data-theme="paper-dark"].glass header{
+html body[data-theme="paper-dark"] .paper-fold{
+    position:absolute; overflow:hidden; pointer-events:none; z-index:41;
+    background:linear-gradient(90deg, #1e1619 0%, #241b1f 16%, #241b1f 100%);
+    -webkit-backface-visibility:hidden; backface-visibility:hidden;
+  }
+html body[data-theme="paper-dark"] .paper-fold::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+  }
+html body[data-theme="paper-dark"] .paper-fold header{
+    position:absolute !important; transform:none !important; margin:0 !important; z-index:auto !important;
+    background:none !important; box-shadow:none !important; border:none !important; overflow:visible !important;
+    animation:none !important;
+  }
+html body[data-theme="paper-dark"] .paper-fold header *{ animation:none !important; transition:none !important; opacity:1; }
+@media (min-width: 960px){html body[data-theme="paper-dark"] > header,html body[data-theme="paper-dark"] #app > header,html body[data-theme="paper-dark"].glass #app > header{
       position:fixed; left:0; top:-56px; height:calc(100vh + 112px);
       scrollbar-width:none;
       padding-top:82px !important; padding-bottom:82px !important;
-      transform:perspective(1100px) rotateY(3.2deg); transform-origin:0 50%;
     }
 html body[data-theme="paper-dark"] header::-webkit-scrollbar{ display:none; }
 html body[data-theme="paper-dark"] .main-col{ margin-left:280px; }
-html body[data-theme="paper-dark"] header::after{
-      content:""; position:absolute; top:0; right:0; bottom:0; width:96px; pointer-events:none; z-index:5;
-      background:linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.13));
-    }}
-@media (max-width: 959px){html body[data-theme="paper-dark"] header,html body[data-theme="paper-dark"].glass header{ transform:perspective(1000px) rotateX(-2.4deg); transform-origin:50% 0; }
-html body[data-theme="paper-dark"] header::after{
-      content:""; position:absolute; left:0; right:0; bottom:0; height:84px; pointer-events:none; z-index:5;
-      background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.12));
+html body[data-theme="paper-dark"] .paper-fold{
+      position:fixed; top:-56px; left:216px; width:80px; height:calc(100vh + 112px);
+      transform:perspective(500px) rotateY(34deg); transform-origin:0 50%;
+      box-shadow:3px 0 4px rgba(0,0,0,0.38), 18px 0 22px -14px rgba(0,0,0,0.82);
     }
+html body[data-theme="paper-dark"] .paper-fold::after{ background:linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.05) 30%, rgba(0,0,0,.22) 100%); }}
+@media (max-width: 959px){html body[data-theme="paper-dark"] #app > header,html body[data-theme="paper-dark"].glass #app > header{ z-index:30; }
+html body[data-theme="paper-dark"] .paper-fold{
+      left:0; right:0; height:68px; z-index:31;
+      background:linear-gradient(180deg, #1e1619 0%, #241b1f 16%, #241b1f 100%);
+      transform:perspective(520px) rotateX(-34deg); transform-origin:50% 0;
+      box-shadow:0 3px 4px rgba(0,0,0,0.38), 0 18px 22px -14px rgba(0,0,0,0.82);
+    }
+html body[data-theme="paper-dark"] .paper-fold::after{ background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.05) 30%, rgba(0,0,0,.2) 100%); }
 html body[data-theme="paper-dark"] .mini-bar::after{
       content:""; position:absolute; left:0; right:0; bottom:0; height:44px; pointer-events:none;
       background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.11));
@@ -8295,6 +8333,63 @@ if(window.__overlayFast && window.__overlayFast.then) window.__overlayFast.then(
   });
 })();
 
+/* Paper's fold: a live, non-interactive copy of the header, turned away past a crease (styles: .paper-fold).
+   The real header stays underneath and takes every click. Rebuilt when the header changes, debounced. */
+try { (function(){
+  if(typeof document === 'undefined' || typeof MutationObserver === 'undefined' || !document.querySelector) return;
+  var header = document.querySelector('#app > header') || document.querySelector('header');
+  if(!header) return;
+  var strip = null, timer = null, watcher = null;
+  function paperOn(){ return /^paper/.test(document.body.getAttribute('data-theme') || ''); }
+  function place(){
+    if(!strip) return;
+    var copy = strip.firstChild, wide = window.innerWidth >= 960, w = header.offsetWidth, h = header.offsetHeight;
+    var cs = getComputedStyle(header);
+    copy.style.width = w + 'px';
+    copy.style.height = h + 'px';
+    copy.style.padding = cs.padding;
+    copy.style.boxSizing = cs.boxSizing;
+    copy.style.display = cs.display;
+    copy.style.flexDirection = cs.flexDirection;
+    if(wide){
+      strip.style.top = ''; strip.style.height = '';
+      copy.style.left = -strip.offsetLeft + 'px';
+      copy.style.top = -header.scrollTop + 'px';
+    } else {
+      var box = header.getBoundingClientRect(), sh = 54;
+      strip.style.top = (box.bottom + window.pageYOffset - sh) + 'px';
+      copy.style.left = '0px';
+      copy.style.top = (sh - h) + 'px';
+    }
+  }
+  function build(){
+    timer = null;
+    if(watcher) watcher.disconnect();
+    if(!paperOn() || !header.offsetWidth){ if(strip){ strip.remove(); strip = null; } watch(); return; }
+    if(!strip){
+      strip = document.createElement('div');
+      strip.className = 'paper-fold';
+      strip.setAttribute('aria-hidden', 'true');
+      strip.inert = true;
+      document.body.appendChild(strip);
+    }
+    var copy = header.cloneNode(true);
+    strip.textContent = '';
+    strip.appendChild(copy);
+    place();
+    watch();
+  }
+  function soon(){ if(!timer) timer = setTimeout(build, 120); }
+  function watch(){
+    if(!watcher) watcher = new MutationObserver(soon);
+    watcher.observe(header, {subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:['style','class']});
+    watcher.observe(document.body, {attributes:true, attributeFilter:['data-theme','class']});
+  }
+  header.addEventListener('scroll', place, {passive:true});
+  window.addEventListener('resize', soon);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(soon);
+  soon();
+})(); } catch(e){}   // purely decorative: must never stop the app
 })();
 
 // App is up: take the boot splash (see #bootLoader in the template) away.

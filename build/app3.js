@@ -4014,6 +4014,63 @@ if(window.__overlayFast && window.__overlayFast.then) window.__overlayFast.then(
   });
 })();
 
+/* Paper's fold: a live, non-interactive copy of the header, turned away past a crease (styles: .paper-fold).
+   The real header stays underneath and takes every click. Rebuilt when the header changes, debounced. */
+try { (function(){
+  if(typeof document === 'undefined' || typeof MutationObserver === 'undefined' || !document.querySelector) return;
+  var header = document.querySelector('#app > header') || document.querySelector('header');
+  if(!header) return;
+  var strip = null, timer = null, watcher = null;
+  function paperOn(){ return /^paper/.test(document.body.getAttribute('data-theme') || ''); }
+  function place(){
+    if(!strip) return;
+    var copy = strip.firstChild, wide = window.innerWidth >= 960, w = header.offsetWidth, h = header.offsetHeight;
+    var cs = getComputedStyle(header);
+    copy.style.width = w + 'px';
+    copy.style.height = h + 'px';
+    copy.style.padding = cs.padding;
+    copy.style.boxSizing = cs.boxSizing;
+    copy.style.display = cs.display;
+    copy.style.flexDirection = cs.flexDirection;
+    if(wide){
+      strip.style.top = ''; strip.style.height = '';
+      copy.style.left = -strip.offsetLeft + 'px';
+      copy.style.top = -header.scrollTop + 'px';
+    } else {
+      var box = header.getBoundingClientRect(), sh = 54;
+      strip.style.top = (box.bottom + window.pageYOffset - sh) + 'px';
+      copy.style.left = '0px';
+      copy.style.top = (sh - h) + 'px';
+    }
+  }
+  function build(){
+    timer = null;
+    if(watcher) watcher.disconnect();
+    if(!paperOn() || !header.offsetWidth){ if(strip){ strip.remove(); strip = null; } watch(); return; }
+    if(!strip){
+      strip = document.createElement('div');
+      strip.className = 'paper-fold';
+      strip.setAttribute('aria-hidden', 'true');
+      strip.inert = true;
+      document.body.appendChild(strip);
+    }
+    var copy = header.cloneNode(true);
+    strip.textContent = '';
+    strip.appendChild(copy);
+    place();
+    watch();
+  }
+  function soon(){ if(!timer) timer = setTimeout(build, 120); }
+  function watch(){
+    if(!watcher) watcher = new MutationObserver(soon);
+    watcher.observe(header, {subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:['style','class']});
+    watcher.observe(document.body, {attributes:true, attributeFilter:['data-theme','class']});
+  }
+  header.addEventListener('scroll', place, {passive:true});
+  window.addEventListener('resize', soon);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(soon);
+  soon();
+})(); } catch(e){}   // purely decorative: must never stop the app
 })();
 
 // App is up: take the boot splash (see #bootLoader in the template) away.
