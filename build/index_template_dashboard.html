@@ -1589,6 +1589,8 @@ window.__overlayFast = (function(){
   html body[data-theme="paper"] .cal-dot.heat-2{ background:#f29ab5; }
   html body[data-theme="paper"] .cal-dot.heat-3{ background:#db2777; }
   html body[data-theme="paper"] .cal-dot.heat-4{ background:#9d174d; }
+  /* Scrollbars in Paper's own colours: the declared dark scheme would otherwise draw them dark */
+  html:has(body[data-theme="paper"]){ scrollbar-color:#c9b9ae #e6dbd3; }
   /* The banner is one small note: a title, a line, and plain text links */
   html body[data-theme="paper"] .theme-banner{ padding:16px 20px !important; }
   html body[data-theme="paper"] .theme-banner-title{ font-size:19px !important; margin:0 0 2px !important; }
@@ -1721,9 +1723,11 @@ window.__overlayFast = (function(){
     html body[data-theme="paper"] header,
     html body[data-theme="paper"].glass header{
       position:fixed; left:0; top:-56px; height:calc(100vh + 112px);
+      scrollbar-width:none;
       padding-top:82px !important; padding-bottom:82px !important;
       transform:perspective(1100px) rotateY(3.2deg); transform-origin:0 50%;
     }
+    html body[data-theme="paper"] header::-webkit-scrollbar{ display:none; }
     html body[data-theme="paper"] .main-col{ margin-left:280px; }
     html body[data-theme="paper"] header::after{
       content:""; position:absolute; top:0; right:0; bottom:0; width:96px; pointer-events:none; z-index:5;

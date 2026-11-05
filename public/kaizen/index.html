@@ -129,6 +129,8 @@
   html body[data-theme="paper"] header{ background:linear-gradient(180deg, #ffffff 0%, #ffffff 70%, #f6f5f3 100%) !important; box-shadow:0 2px 3px rgba(17,18,19,.12), 0 14px 18px -14px rgba(17,18,19,.32) !important; }
   html body[data-theme="paper"] #googleBtn{ border:1px solid var(--line) !important; }
   html body[data-theme="paper"]{ -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+  /* Scrollbars in Paper's own colours: the declared dark scheme would otherwise draw them dark */
+  html:has(body[data-theme="paper"]){ scrollbar-color:#c9b9ae #e6dbd3; }
   .theme-dot-paper{ background:#ffffff; border:1px solid #e2e5eb; }
   html body[data-theme="paper"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
   html body[data-theme="paper"] .daycard-head{ border-bottom:none !important; }
@@ -402,7 +404,7 @@ html body[data-theme="paper-dark"],html body[data-theme="paper-dark"] button,htm
     font-optical-sizing:none; font-variation-settings:'opsz' 6;
   }
 html body[data-theme="paper-dark"],html body[data-theme="paper-dark"].glass{
-    background-color:#e6dbd3 !important; background-image:var(--paper-board) !important;
+    background-color:#171114 !important; background-image:var(--paper-board) !important;
     background-size:16px 16px !important; background-position:0 0, 8px 8px !important;
   }
 html body[data-theme="paper-dark"] .panel,html body[data-theme="paper-dark"] .card,html body[data-theme="paper-dark"] .daycard{
@@ -424,6 +426,7 @@ html body[data-theme="paper-dark"] .panel .panel::after,html body[data-theme="pa
 html body[data-theme="paper-dark"] header{ background:linear-gradient(180deg, #241b1f 0%, #241b1f 70%, #1e1619 100%) !important; box-shadow:0 2px 3px rgba(0,0,0,0.29), 0 14px 18px -14px rgba(0,0,0,0.77) !important; }
 html body[data-theme="paper-dark"] #googleBtn{ border:1px solid var(--line) !important; }
 html body[data-theme="paper-dark"]{ -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+html:has(body[data-theme="paper-dark"]){ scrollbar-color:#4a3c40 #171114; }
 html body[data-theme="paper-dark"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
 html body[data-theme="paper-dark"] .daycard-head{ border-bottom:none !important; }
 /* Paper Dark: hand-tuned extras. All other paper-dark rules are generated from Paper by splice.py (paper_dark_css). */
