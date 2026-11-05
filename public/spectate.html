@@ -544,9 +544,12 @@ body[data-theme="paper-dark"]{
 .dw-side{ position:fixed; top:0; left:198px; width:70px; height:78px; z-index:42; pointer-events:none; display:none; }
 .dw-side .dw-lantern{ width:30px; height:66px; left:0; }
 .dw-side .dw-lantern.b{ left:36px; width:24px; height:52px; }
+.dw-host{ position:relative !important; }
+.dw-card-ladi{ position:absolute; pointer-events:none; z-index:4; overflow:visible; }
+.dw-card-ladi.tr{ top:-1px; right:-1px; width:125px; height:55px; }
+.dw-card-ladi.tl{ top:-1px; left:-1px; width:125px; height:55px; }
 .dw-ladi{ position:relative; width:100%; pointer-events:none; overflow:hidden; }
 .dw-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
-.dw-ladi-top{ position:absolute; left:0; right:0; bottom:0; height:28px; z-index:2; }
 .dw-ladi-foot{ display:block; width:100%; height:30px; margin-bottom:8px; }
 .dw-ladi-t1{ animation:dw-ladi-breathe 4.2s ease-in-out infinite; }
 .dw-ladi-t2{ animation:dw-ladi-breathe 5.6s ease-in-out -1.8s infinite; }
@@ -3889,6 +3892,51 @@ else window.addEventListener('load', start, { once: true });
       }
     }
 
+    function cardLadiSvg(side){
+      var isTr = side === 'tr';
+      var W = 125, H = 52;
+      var wire = '', clips = '', bulbs = '';
+      var cols = ['m1', 'spark2', 'spark1', 'm2'];
+      var x0 = isTr ? 4 : 5, y0 = isTr ? 1 : 36;
+      var x1 = isTr ? 120 : 121, y1 = isTr ? 36 : 1;
+      var cx = isTr ? 52 : 73, cy = 42;
+      wire = 'M' + x0 + ' ' + y0 + 'Q' + cx + ' ' + cy + ' ' + x1 + ' ' + y1;
+      clips = '<rect x="' + (x0 - 1.2) + '" y="' + (y0 - 1) + '" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>' +
+              '<rect x="' + (x1 - 1.2) + '" y="' + (y1 - 1) + '" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
+      var ts = isTr ? [0.18, 0.42, 0.68, 0.88] : [0.12, 0.32, 0.58, 0.82];
+      for(var i = 0; i < 4; i++){
+        var t = ts[i];
+        var bx = f((1 - t) * (1 - t) * x0 + 2 * (1 - t) * t * cx + t * t * x1);
+        var by = f((1 - t) * (1 - t) * y0 + 2 * (1 - t) * t * cy + t * t * y1);
+        var col = cols[i];
+        var twCls = (i % 2 === 0) ? ' class="dw-ladi-t1"' : ' class="dw-ladi-t2"';
+        bulbs += '<g' + twCls + '>' +
+          '<rect x="' + f(bx - 0.9) + '" y="' + by + '" width="1.8" height="2.8" rx=".4" fill="' + v('flex') + '"/>' +
+          '<circle cx="' + bx + '" cy="' + f(by + 5.2) + '" r="8" fill="' + v(col) + '" opacity=".18"/>' +
+          '<ellipse cx="' + bx + '" cy="' + f(by + 5.2) + '" rx="3.4" ry="4.2" fill="' + v(col) + '" opacity=".4"/>' +
+          '<ellipse cx="' + bx + '" cy="' + f(by + 5.0) + '" rx="1.4" ry="2.5" fill="' + v(col) + '"/>' +
+          '<ellipse cx="' + bx + '" cy="' + f(by + 4.8) + '" rx=".5" ry="1.1" fill="#fffef5"/>' +
+          '</g>';
+      }
+      return '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" aria-hidden="true">' +
+        '<path d="' + wire + '" fill="none" stroke="' + v('flex') + '" stroke-width="1.1" stroke-linecap="round"/>' +
+        clips + bulbs + '</svg>';
+    }
+
+    function addCardLadi(el, side){
+      if(!el) return;
+      el.classList.add('dw-host');
+      for(var i = 0; i < el.children.length; i++){
+        if(el.children[i].getAttribute('data-dw') === 'ladi-' + side) return;
+      }
+      var d = document.createElement('div');
+      d.className = 'dw-card-ladi ' + side;
+      d.setAttribute('data-dw', 'ladi-' + side);
+      d.setAttribute('aria-hidden', 'true');
+      d.innerHTML = cardLadiSvg(side);
+      el.appendChild(d);
+    }
+
     var main = document.querySelector('main'), foot = document.querySelector('footer');
     var top = document.createElement('div');
     top.className = 'dw-top' + (main ? '' : ' dw-sub');
@@ -3896,7 +3944,6 @@ else window.addEventListener('load', start, { once: true });
     top.innerHTML =
       burst('', v('spark1'), v('spark2'), '26%') + burst('b', v('spark3'), v('spark1'), '50%') + burst('c', v('spark2'), v('spark3'), '72%') +
       toran('dwToran') +
-      '<div class="dw-ladi dw-ladi-top"></div>' +
       '<div class="dw-lantern" style="left:5%">' + lantern('a', 'dwG1') + '</div>' +
       '<div class="dw-lantern b" style="right:12%">' + lantern('b', 'dwG2') + '</div>' +
       '<div class="dw-lantern c" style="right:4%">' + lantern('c', 'dwG3') + '</div>';
@@ -3905,7 +3952,6 @@ else window.addEventListener('load', start, { once: true });
       var wrap = document.querySelector('.wrap');   // /spectate and /br
       if(wrap) wrap.insertBefore(top, wrap.firstChild);
     }
-    mountLadi(top.querySelector('.dw-ladi-top'));
 
     if(foot && foot.parentNode){
       var low = document.createElement('div');
@@ -3916,6 +3962,33 @@ else window.addEventListener('load', start, { once: true });
         '<div class="dw-wish">Shubh Deepawali</div>';
       foot.parentNode.insertBefore(low, foot);
       mountLadi(low.querySelector('.dw-ladi-foot'));
+    }
+
+    var one = function(q){ return document.querySelector(q); };
+    function dress(){
+      if(main){
+        addCardLadi(one('#todayPanel'), 'tr');
+        addCardLadi(one('#todayPanel'), 'tl');
+        addCardLadi(one('#kaizenPanel'), 'tr');
+        addCardLadi(one('#examWeekBanner'), 'tr');
+        addCardLadi(one('#paperThemeBanner'), 'tr');
+        var panels = document.querySelectorAll('.panel-grid > .panel');
+        for(var i = 0; i < panels.length; i++){
+          addCardLadi(panels[i], i % 2 ? 'tl' : 'tr');
+        }
+      } else {
+        var cards = document.querySelectorAll('.wrap .panel');
+        for(var j = 0; j < cards.length; j++){
+          addCardLadi(cards[j], j % 2 ? 'tl' : 'tr');
+        }
+      }
+    }
+    dress();
+    if(typeof MutationObserver !== 'undefined'){
+      var dressTimer = null;
+      new MutationObserver(function(){
+        if(!dressTimer) dressTimer = setTimeout(function(){ dressTimer = null; dress(); }, 250);
+      }).observe(document.body, {childList:true, subtree:true});
     }
     var app = document.getElementById('app');
     if(app && main){
