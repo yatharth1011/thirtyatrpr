@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793905231';
+    var curToken = '1793905318';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -3023,8 +3023,7 @@ body[data-theme="paper-dark"]{
 @keyframes dw-twinkle{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
 .dw-foot{ position:relative; clear:both; text-align:center; pointer-events:none; padding:6px 12px 4px; margin-top:20px; }
 .wrap > .dw-foot{ margin-top:64px; }   /* /spectate's sticky panel overhangs its row */
-.dw-lights{ display:block; width:100%; height:64px; }
-.dw-scene{ display:flex; align-items:flex-end; justify-content:center; gap:clamp(6px, 2.4vw, 22px); margin-top:4px; }
+.dw-scene{ position:relative; display:flex; align-items:flex-end; justify-content:center; gap:clamp(6px, 2.4vw, 22px); margin-top:24px; }
 .dw-diya{ width:46px; height:58px; flex:0 0 auto; }
 .dw-diya svg{ width:100%; height:100%; display:block; overflow:visible; }
 .dw-rangoli{ width:clamp(120px, 34vw, 176px); height:clamp(120px, 34vw, 176px); flex:0 0 auto; }
@@ -3074,11 +3073,18 @@ body[data-theme="paper-dark"]{
 }
 .check-box.mess-dot{ font-size:0; }
 .check-box.mess-dot::before{ content:"\273F"; font-size:13px; color:var(--dw-m2); }
-/* Hanging LED arcs, from a few card edges and under the sticky bars: sparse bulbs on a thin wire, steady, with a soft halo */
-.dw-arc{ left:0; right:0; top:calc(100% - 3px); height:64px; }
-[data-run]{ width:100%; height:64px; }
+/* LED strings run vertically and diagonally; the toran owns the horizontal */
 [data-run] svg{ display:block; overflow:visible; }
-.dw-arc.bar{ top:calc(100% + 3px); position:absolute; pointer-events:none; }
+.dw-run-band{ position:absolute; inset:0; }
+.dw-run-foot{ position:absolute; left:0; right:0; top:4px; height:170px; }
+.dw-vrun{ position:fixed; top:0; bottom:0; width:16px; z-index:37; pointer-events:none; display:none; }
+.dw-vrun.l{ left:1px; }
+.dw-vrun.r{ right:1px; }
+#app.show .dw-vrun, .dw-vrun:not(.app){ display:block; }
+@media (min-width: 960px){
+  .dw-vrun.app.l{ left:288px; }
+  .dw-vrun.r{ right:5px; }
+}
 @media (prefers-reduced-motion: reduce){
   .dw-lantern, .dw-flame, .dw-twinkle{ animation:none; }
 }
@@ -8858,44 +8864,55 @@ if('serviceWorker' in navigator){
       }
       return '<div class="dw-burst" style="left:' + left + '"><svg class="dw-twinkle ' + cls + '" viewBox="0 0 60 60" aria-hidden="true">' + out + '<circle cx="30" cy="30" r="2.4" fill="' + color + '"/></svg></div>';
     }
-    // LED runs: long, loose swoops of thin wire between clips, drawn to fit their object exactly so a run always ends at a
-    // clip and never just stops. Bulbs dangle on short leads of uneven length, far apart, each with a soft halo. Steady.
+    // LED strings. The toran owns the horizontal, so these run vertically down the margins and diagonally across open space.
+    // Each is drawn to fit its box and ends at a clip. Bulbs sit on short leads of uneven length, far apart, with a soft halo.
     var arcId = 0;
     function jitter(n){ var x = Math.sin(n * 12.9898) * 43758.5453; return x - Math.floor(x); }
-    function drawRun(w){
-      var id = 'dwA' + (++arcId), H = 64, defs = '', body = '', i, j, cols = ['led1', 'led2', 'led3'];
+    function drawSegs(w, h, segs){
+      var id = 'dwA' + (++arcId), defs = '', body = '', wire = '', clips = '', i, j, bulb = 0, cols = ['led1', 'led2', 'led3'];
       for(i = 0; i < 3; i++) defs += '<radialGradient id="' + id + 'g' + i + '"><stop offset="0" stop-color="' + v(cols[i]) + '" stop-opacity=".62"/><stop offset=".35" stop-color="' + v(cols[i]) + '" stop-opacity=".22"/><stop offset="1" stop-color="' + v(cols[i]) + '" stop-opacity="0"/></radialGradient>';
-      var spans = Math.max(1, Math.round(w / 460)), inset = 7, xs = [], bulb = 0;
-      for(i = 0; i <= spans; i++){
-        var nudge = (i === 0 || i === spans) ? 0 : (jitter(i + 3) - .5) * .32 * (w - inset * 2) / spans;
-        xs.push(inset + (w - inset * 2) * i / spans + nudge);
-      }
-      var wire = '', top = '';
-      for(i = 0; i < spans; i++){
-        var x0 = xs[i], x1 = xs[i + 1], len = x1 - x0, sag = Math.min(13 + len * .022, 25), skew = .5 + (jitter(i + 9) - .5) * .3;
-        var cx = x0 + len * skew;
-        wire += 'M' + f(x0) + ' 3Q' + f(cx) + ' ' + f(3 + sag * 2) + ' ' + f(x1) + ' 3';
-        var count = Math.max(2, Math.round(len / 92));
+      segs.forEach(function(g, n){
+        var cx = (g.x0 + g.x1) / 2 + (g.bx || 0), cy = (g.y0 + g.y1) / 2 + (g.by || 0);
+        var len = Math.sqrt(Math.pow(g.x1 - g.x0, 2) + Math.pow(g.y1 - g.y0, 2));
+        wire += 'M' + f(g.x0) + ' ' + f(g.y0) + 'Q' + f(cx) + ' ' + f(cy) + ' ' + f(g.x1) + ' ' + f(g.y1);
+        clips += '<circle cx="' + f(g.x0) + '" cy="' + f(g.y0) + '" r="2.1" fill="' + v('wire') + '"/><circle cx="' + f(g.x1) + '" cy="' + f(g.y1) + '" r="2.1" fill="' + v('wire') + '"/>';
+        var count = Math.max(2, Math.round(len / (g.gap || 92)));
         for(j = 0; j < count; j++){
-          var t = (j + .5 + (jitter(bulb + 21) - .5) * .4) / count;
-          var px = (1 - t) * (1 - t) * x0 + 2 * (1 - t) * t * cx + t * t * x1, py = 3 + 2 * (1 - t) * t * sag * 2;
-          var lead = 3 + jitter(bulb + 40) * 9, c = bulb % 3, bx = f(px), by = f(py + lead);
+          var t = (j + .5 + (jitter(bulb + 21 + n) - .5) * .4) / count;
+          var px = (1 - t) * (1 - t) * g.x0 + 2 * (1 - t) * t * cx + t * t * g.x1, py = (1 - t) * (1 - t) * g.y0 + 2 * (1 - t) * t * cy + t * t * g.y1;
+          var lead = 3 + jitter(bulb + 40) * 8, c = bulb % 3, bx = f(px + (g.side ? (bulb % 2 ? g.side : -g.side) : 0)), by = f(py + lead);
           body += '<circle cx="' + bx + '" cy="' + f(by + 10) + '" r="18" fill="url(#' + id + 'g' + c + ')" style="opacity:' + v('glow2') + '"/>' +
-            '<path d="M' + bx + ' ' + f(py) + 'V' + by + '" stroke="' + v('wire') + '" stroke-width=".7"/>' +
+            '<path d="M' + f(px) + ' ' + f(py) + 'L' + bx + ' ' + by + '" stroke="' + v('wire') + '" stroke-width=".7"/>' +
             '<rect x="' + f(bx - 1.6) + '" y="' + f(by - .4) + '" width="3.2" height="3.8" rx=".8" fill="' + v('wire') + '"/>' +
             '<path d="M' + bx + ' ' + f(by + 3) + 'c3 1.6 3.9 4.3 3.2 6.5c-.6 1.9-1.9 3.6-3.2 3.6s-2.6-1.7-3.2-3.6c-.7-2.2.2-4.9 3.2-6.5z" fill="' + v(cols[c]) + '"/>' +
             '<ellipse cx="' + f(bx - 1) + '" cy="' + f(by + 7.4) + '" rx=".8" ry="1.9" fill="#fff" opacity=".85"/>';
           bulb++;
         }
-      }
-      for(i = 0; i <= spans; i++) top += '<circle cx="' + f(xs[i]) + '" cy="3" r="2.1" fill="' + v('wire') + '"/>';
-      return '<svg aria-hidden="true" width="' + w + '" height="' + H + '" viewBox="0 0 ' + w + ' ' + H + '"><defs>' + defs + '</defs><path d="' + wire + '" fill="none" stroke="' + v('wire') + '" stroke-width=".9"/>' + body + top + '</svg>';
+      });
+      return '<svg aria-hidden="true" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '"><defs>' + defs + '</defs><path d="' + wire + '" fill="none" stroke="' + v('wire') + '" stroke-width=".9"/>' + body + clips + '</svg>';
     }
+    var layouts = {
+      // a big V hung from the top of the band, meeting over the middle
+      band: function(w, h){
+        return [{ x0: w * .1, y0: 3, x1: w * .5, y1: h - 18, bx: -w * .03, by: 16 }, { x0: w * .9, y0: 3, x1: w * .5, y1: h - 18, bx: w * .03, by: 16 }];
+      },
+      // two long diagonals sweeping down toward the rangoli
+      foot: function(w, h){
+        var m = Math.min(w * .2, 170);
+        return [{ x0: 8, y0: 4, x1: w / 2 - m, y1: h - 26, bx: -w * .04, by: 20 }, { x0: w - 8, y0: 4, x1: w / 2 + m, y1: h - 26, bx: w * .04, by: 20 }];
+      },
+      // a loose vertical string, swaying side to side between clips
+      vert: function(w, h){
+        var out = [], spans = Math.max(1, Math.round(h / 380)), step = (h - 8) / spans, i;
+        for(i = 0; i < spans; i++) out.push({ x0: w / 2, y0: 3 + i * step, x1: w / 2, y1: 3 + (i + 1) * step, bx: (i % 2 ? 1 : -1) * 13, gap: 108, side: 4 });
+        return out;
+      }
+    };
     function fitRun(el){
-      var w = Math.round(el.getBoundingClientRect().width);
-      if(!w || String(w) === el.getAttribute('data-w')) return;
-      el.setAttribute('data-w', w);
-      el.innerHTML = drawRun(w);
+      var r = el.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height), key = w + 'x' + h;
+      if(!w || !h || key === el.getAttribute('data-w')) return;
+      el.setAttribute('data-w', key);
+      el.innerHTML = drawSegs(w, h, layouts[el.getAttribute('data-run')](w, h));
     }
     var runWatch = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(function(list){ list.forEach(function(e){ fitRun(e.target); }); }) : null;
     function fitRuns(){
@@ -8905,7 +8922,6 @@ if('serviceWorker' in navigator){
       });
       Array.prototype.forEach.call(document.querySelectorAll('[data-run]'), fitRun);
     }
-    function arcs(){ return '<div data-run></div>'; }
 
     var main = document.querySelector('main'), foot = document.querySelector('footer');
     var top = document.createElement('div');
@@ -8913,7 +8929,7 @@ if('serviceWorker' in navigator){
     top.setAttribute('aria-hidden', 'true');
     top.innerHTML =
       burst('', v('spark1'), v('spark2'), '26%') + burst('b', v('spark3'), v('spark1'), '50%') + burst('c', v('spark2'), v('spark3'), '72%') +
-      toran('dwToran') +
+      '<div class="dw-run-band" data-run="band"></div>' + toran('dwToran') +
       '<div class="dw-lantern" style="left:5%">' + lantern('a', 'dwG1') + '</div>' +
       '<div class="dw-lantern b" style="right:12%">' + lantern('b', 'dwG2') + '</div>' +
       '<div class="dw-lantern c" style="right:4%">' + lantern('c', 'dwG3') + '</div>';
@@ -8926,7 +8942,7 @@ if('serviceWorker' in navigator){
       var low = document.createElement('div');
       low.className = 'dw-foot';
       low.setAttribute('aria-hidden', 'true');
-      low.innerHTML = '<div class="dw-lights">' + arcs() + '</div>' +
+      low.innerHTML = '<div class="dw-run-foot" data-run="foot"></div>' +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
         '<div class="dw-wish">Shubh Deepavali</div>';
       foot.parentNode.insertBefore(low, foot);
@@ -8960,10 +8976,6 @@ if('serviceWorker' in navigator){
     var one = function(q){ return document.querySelector(q); };
     function dress(){
       if(main){
-        add(one('#todayPanel'), 'arc', 'dw-arc', arcs());
-        add(one('.panel-grid > .panel'), 'arc', 'dw-arc', arcs());
-        add(one('#examWeekBanner'), 'arc', 'dw-arc', arcs());
-        add(one('#miniBar'), 'arc', 'dw-arc bar', arcs());
         add(one('#todayPanel'), 'strand', 'dw-strand', strand());
         add(one('.panel-grid > .panel'), 'sit', 'dw-sit', diya('dwO' + (++uid)));
         add(one('#kaizenPanel'), 'corner', 'dw-cluster tl', cluster());
@@ -8978,23 +8990,31 @@ if('serviceWorker' in navigator){
         add(one('#miniBar'), 'strand', 'dw-strand hang', strand());
       } else {
         add(one('.topbar'), 'strand', 'dw-strand hang', strand());
-        add(one('.topbar'), 'arc', 'dw-arc bar', arcs());
         var cards = document.querySelectorAll('.wrap .panel');
         for(var i = 0; i < cards.length; i++){
-          if(i % 2 === 0) add(cards[i], 'arc', 'dw-arc', arcs());
           if(i === 0) add(cards[i], 'strand', 'dw-strand', strand());
           else if(i % 2) add(cards[i], 'corner', 'dw-cluster tr', cluster());
           else add(cards[i], 'sit', 'dw-sit', diya('dwO' + (++uid)));
         }
       }
     }
-    dress(); fitRuns();
+    dress();
     if(typeof MutationObserver !== 'undefined'){
       var dressTimer = null;
       new MutationObserver(function(){
         if(!dressTimer) dressTimer = setTimeout(function(){ dressTimer = null; dress(); fitRuns(); }, 300);
       }).observe(document.body, {childList:true, subtree:true});
     }
+
+    // Vertical strings down both margins: always in view, never over the text
+    var hostV = main ? document.getElementById('app') : document.body;
+    if(hostV) ['l', 'r'].forEach(function(side){
+      var run = document.createElement('div');
+      run.className = 'dw-vrun ' + side + (main ? ' app' : '');
+      run.setAttribute('data-run', 'vert');
+      run.setAttribute('aria-hidden', 'true');
+      hostV.appendChild(run);
+    });
 
     var app = document.getElementById('app');
     if(app && main){
@@ -9009,11 +9029,11 @@ if('serviceWorker' in navigator){
       hang.setAttribute('aria-hidden', 'true');
       hang.innerHTML = strand();
       app.appendChild(hang);
-      fitRuns();
       var syncHang = function(){ hang.classList.toggle('on', window.pageYOffset > 70); };
       window.addEventListener('scroll', syncHang, {passive:true});
       syncHang();
     }
+    fitRuns();
   } catch(e){}   // purely decorative: must never stop the app
 })();
 </script>
