@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793908990';
+    var curToken = '1793912136';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -61,10 +61,10 @@ window.__overlayFast = (function(){
 })();
 </script>
 <meta name="description" content="THIRTY@RPR — 2026-2030 batch portal: your days, classes &amp; mess timings in one place.">
-<meta name="theme-color" content="#0d1117">
-<link rel="icon" type="image/png" sizes="64x64" href="/icons/v2/favicon-64.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/icons/v2/icon-192.png">
-<link rel="apple-touch-icon" href="/icons/v2/apple-touch-180.png">
+<meta name="theme-color" content="#171114">
+<link rel="icon" type="image/png" sizes="64x64" href="/icons/v3/favicon-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icons/v3/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/v3/apple-touch-180.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -72,7 +72,7 @@ window.__overlayFast = (function(){
 <meta name="apple-mobile-web-app-title" content="THIRTY@RPR">
 <meta property="og:title" content="THIRTY@RPR">
 <meta property="og:description" content="2026-2030 batch portal: your days, classes &amp; mess timings in one place.">
-<meta property="og:image" content="/icons/icon-512.png">
+<meta property="og:image" content="/icons/v3/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&display=swap" media="print" onload="this.media='all'">
@@ -2842,6 +2842,7 @@ window.__overlayFast = (function(){
     header > .toggle-row{ display:contents; }
     header > #searchBtn, header > #brToolsBtn, header > #settingsBtn,
     header .toggle-row > .cal-toggle{ margin:0 0 6px; flex:none; } /* no phone-row stretching here */
+    header > #searchBtn, .search-toggle{ right:auto !important; left:auto !important; }
     header > #searchBtn{ order:2; }
     /* Buttons sit at the bottom of the sidebar: the spacer (right after the identity block, same
        order group) takes all spare height, but never less than the old 14px gap. */
@@ -3043,20 +3044,25 @@ body[data-theme="paper-dark"]{
 .dw-card-ladi.tl4{ top:-1px; left:-1px; width:125px; height:65px; }
 .dw-card-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
 
-.dw-search-diya{ position:absolute; pointer-events:none; z-index:5; }
-.dw-search-diya .dw-diya{ width:100%; height:100%; }
+.boot-log{ position:relative !important; }
+.dw-search-diya, .dw-boot-diya{ position:absolute; pointer-events:none; z-index:5; }
+.dw-search-diya .dw-diya, .dw-boot-diya .dw-diya{ width:100%; height:100%; }
 @media (min-width: 960px){
-  #searchBtn{
+  #searchBtn, .search-toggle{
     position:relative !important;
     right:auto !important;
     left:auto !important;
     top:auto !important;
   }
   .dw-search-diya{
+    display:block !important;
     bottom:calc(100% - 4px);
-    left:20px;
+    left:24px;
     width:28px;
     height:36px;
+  }
+  .dw-boot-diya{
+    display:none !important;
   }
 }
 @media (max-width: 959px){
@@ -3068,16 +3074,78 @@ body[data-theme="paper-dark"]{
     display:flex !important;
   }
   .dw-search-diya{
-    bottom:calc(100% - 4px);
-    left:50%;
-    transform:translateX(-50%);
-    width:24px;
-    height:32px;
+    display:none !important;
+  }
+  .dw-boot-diya{
+    display:block !important;
+    right:18px;
+    bottom:-2px;
+    width:28px;
+    height:36px;
   }
 }
 
 .dw-sit{ position:absolute; top:-18px; right:24px; pointer-events:none; z-index:4; width:34px; height:44px; }
 .dw-sit .dw-diya{ width:100%; height:100%; }
+.dw-host{ position:relative !important; }
+.mini-brand.dw-host{ overflow:visible !important; position:relative !important; }
+.dw-cluster{ position:absolute; width:42px; height:42px; pointer-events:none; z-index:4; }
+.dw-cluster svg{ width:100%; height:100%; display:block; overflow:visible; }
+.dw-cluster.tl{ top:-13px; left:-12px; }
+.dw-cluster.tr{ top:-13px; right:-12px; transform:scaleX(-1); }
+.dw-cluster.br{ bottom:-13px; right:-12px; transform:rotate(180deg); }
+.dw-clip{ position:absolute; left:-5px; top:-7px; width:20px; height:20px; pointer-events:none; z-index:4; }
+.dw-clip svg{ width:100%; height:100%; display:block; overflow:visible; }
+.dw-foot-toran{ position:relative; width:100%; height:48px; overflow:hidden; margin-bottom:12px; pointer-events:none; }
+.dw-foot-toran .dw-toran{ position:absolute; left:0; right:0; top:0; width:100%; height:52px; display:block; }
+
+.festive-greet{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  vertical-align:middle;
+}
+.festive-greet .festive-icon{
+  flex-shrink:0;
+  display:inline-block;
+  vertical-align:middle;
+  filter:drop-shadow(0 2px 8px rgba(245, 158, 11, 0.45));
+}
+.festive-text{
+  display:inline-block;
+}
+/* 5-day festive gradients applied to everyone (both Kaizen and non-Kaizen) */
+.festive-dhanteras{
+  background:linear-gradient(135deg, #ffd700 0%, #f59e0b 45%, #e11d48 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-chhoti{
+  background:linear-gradient(135deg, #fef08a 0%, #fb923c 45%, #f43f5e 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-diwali{
+  background:linear-gradient(135deg, #fef08a 0%, #f59e0b 35%, #e11d48 70%, #be123c 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-govardhan{
+  background:linear-gradient(135deg, #34d399 0%, #10b981 40%, #f59e0b 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-bhaidooj{
+  background:linear-gradient(135deg, #fb7185 0%, #e11d48 45%, #f97316 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+
 .dw-ladi{ position:relative; width:100%; pointer-events:none; overflow:hidden; }
 .dw-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
 .dw-ladi-foot{ display:block; width:100%; height:30px; margin-bottom:8px; }
@@ -3749,6 +3817,14 @@ html body[data-theme="paper-dark"] .mini-bar button{
   }
 /* Paper Dark: hand-tuned extras. All other paper-dark rules are generated from Paper by splice.py (paper_dark_css). */
 body[data-theme="paper-dark"]{
+  --bg:#171114 !important;
+  --bg2:#1e1619 !important;
+  --card:#241b1f !important;
+  --card2:#2e2328 !important;
+  --line:#3d3034 !important;
+  --kz-1:#9d174d !important;
+  --kz-2:#db2777 !important;
+  --kz-3:#f43f5e !important;
   --head-bg:rgba(36,27,31,.96);
   --paper-sheet:linear-gradient(168deg, #2a2024 0%, #261c20 58%, #201719 100%);
   --paper-shadow:
@@ -3830,10 +3906,16 @@ html body[data-theme="paper-dark"] .daycard::after{
 <style>
   /* springs: a damped spring sampled into linear() (overshoots a little, then settles) — the cubic-bezier is the fallback
      for browsers without linear(). --spring-soft overshoots less (small moves: letters, labels, the phone nav bar). */
-  :root{ --spring:cubic-bezier(.34,1.5,.64,1); --spring-soft:cubic-bezier(.3,1.25,.5,1); }
+  :root{
+    --spring:cubic-bezier(.34,1.5,.64,1); --spring-soft:cubic-bezier(.3,1.25,.5,1);
+    --kz-1:#9d174d; --kz-2:#db2777; --kz-3:#f43f5e;
+  }
   @supports (animation-timing-function: linear(0, 1)){
-    :root{ --spring:linear(0, 0.048, 0.167, 0.325, 0.496, 0.66, 0.806, 0.924, 1.013, 1.074, 1.11, 1.125, 1.124, 1.112, 1.094, 1.073, 1.051, 1.032, 1.015, 1.003, 0.993, 0.988, 0.985, 0.984, 0.985, 0.987, 0.99, 0.992, 0.995, 0.997, 0.999, 1, 1.001, 1.002, 1);
-      --spring-soft:linear(0, 0.031, 0.108, 0.212, 0.329, 0.448, 0.561, 0.664, 0.753, 0.829, 0.89, 0.939, 0.975, 1.002, 1.02, 1.031, 1.037, 1.038, 1.037, 1.035, 1.031, 1.026, 1.022, 1.017, 1.013, 1.01, 1.007, 1.004, 1.003, 1.001, 1, 0.999, 0.999, 0.999, 1); }
+    :root{
+      --spring:linear(0, 0.048, 0.167, 0.325, 0.496, 0.66, 0.806, 0.924, 1.013, 1.074, 1.11, 1.125, 1.124, 1.112, 1.094, 1.073, 1.051, 1.032, 1.015, 1.003, 0.993, 0.988, 0.985, 0.984, 0.985, 0.987, 0.99, 0.992, 0.995, 0.997, 0.999, 1, 1.001, 1.002, 1);
+      --spring-soft:linear(0, 0.031, 0.108, 0.212, 0.329, 0.448, 0.561, 0.664, 0.753, 0.829, 0.89, 0.939, 0.975, 1.002, 1.02, 1.031, 1.037, 1.038, 1.037, 1.035, 1.031, 1.026, 1.022, 1.017, 1.013, 1.01, 1.007, 1.004, 1.003, 1.001, 1, 0.999, 0.999, 0.999, 1);
+      --kz-1:#9d174d; --kz-2:#db2777; --kz-3:#f43f5e;
+    }
   }
   #bootLoader{ position:fixed; inset:0; z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; background:var(--bg);
     transition:opacity .3s ease; }
@@ -3934,9 +4016,9 @@ html body[data-theme="paper-dark"] .daycard::after{
 <div id="bootLoader" aria-hidden="true">
   <svg viewBox="0 0 78 34">
     <defs>
-      <linearGradient id="blKz" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="34"><stop offset="0" style="stop-color:var(--kz-1,#b392f0)"/><stop offset=".55" style="stop-color:var(--kz-2,#79b8ff)"/><stop offset="1" style="stop-color:var(--kz-3,#d1d5da)"/></linearGradient>
+      <linearGradient id="blKz" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="34"><stop offset="0" style="stop-color:var(--kz-1,#9d174d)"/><stop offset=".55" style="stop-color:var(--kz-2,#db2777)"/><stop offset="1" style="stop-color:var(--kz-3,#f43f5e)"/></linearGradient>
       <!-- the same three colours, running the other way: cross-faded over the first so the gradient visibly flows (opacity animation: smooth even while the page script is still parsing) -->
-      <linearGradient id="blKz2" gradientUnits="userSpaceOnUse" x1="48" y1="34" x2="0" y2="0"><stop offset="0" style="stop-color:var(--kz-1,#b392f0)"/><stop offset=".55" style="stop-color:var(--kz-2,#79b8ff)"/><stop offset="1" style="stop-color:var(--kz-3,#d1d5da)"/></linearGradient>
+      <linearGradient id="blKz2" gradientUnits="userSpaceOnUse" x1="48" y1="34" x2="0" y2="0"><stop offset="0" style="stop-color:var(--kz-1,#9d174d)"/><stop offset=".55" style="stop-color:var(--kz-2,#db2777)"/><stop offset="1" style="stop-color:var(--kz-3,#f43f5e)"/></linearGradient>
       <clipPath id="blClip"><rect width="34" height="34" rx="9"/></clipPath>
     </defs>
     <g class="bl-shift" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0">
@@ -3963,13 +4045,22 @@ function __quoteHTML(i){ var q = __QUOTES[i] || __QUOTES[0]; return '<div class=
 // Arrived by tapping Spectate / BR Tools on another page (see the click handler below): that page already played the
 // animation, so open on its finished frame and just take over from it.
 var __handoff = false;
+var __h = null;
 try {
-  var __h = JSON.parse(sessionStorage.getItem('thirtyatrpr_splash_handoff') || 'null');
+  __h = JSON.parse(sessionStorage.getItem('thirtyatrpr_splash_handoff') || 'null');
   sessionStorage.removeItem('thirtyatrpr_splash_handoff');
-  __handoff = !!(__h && Date.now() - __h.t < 20000 && __h.to === location.pathname.replace(/\/+$/, ''));
 } catch(e){}
+__handoff = !!(__h && Date.now() - __h.t < 20000 && __h.to === location.pathname.replace(/\/+$/, ''));
 if(__handoff){
   document.getElementById('bootLoader').classList.add('handoff');
+  if(__h && __h.theme && typeof document !== 'undefined' && document.body && document.body.setAttribute){
+    try {
+      if(!document.body.getAttribute || document.body.getAttribute('data-theme') !== __h.theme){
+        document.body.setAttribute('data-theme', __h.theme);
+        if(typeof localStorage !== 'undefined') localStorage.setItem('thirtyatrpr_color_theme', __h.theme);
+      }
+    } catch(e){}
+  }
 } else {
   // Any other arrival from a page of this site (e.g. the Home link): no splash — the browser's crossfade does the transition.
   try { var __ref = document.referrer && new URL(document.referrer); if(__ref && __ref.origin === location.origin){ document.getElementById('bootLoader').classList.add('skip'); __bootMin = 0; } } catch(e){}
@@ -4021,8 +4112,9 @@ document.addEventListener('click', function(e){
     var wrap = document.createElement('div');
     wrap.innerHTML = __splashHTML.replace(/<div class="bl-sub">[\s\S]*?<\/div>/, '').replace('</svg>', '</svg>' + (lab[1] ? '\n  <div class="bl-sub"><span><b>' + lab[0] + '</b> ' + lab[1] + '</span></div>' : '') + (__WIDGETS[to] || '') + (to === '' ? __quoteHTML(leaveQ) : ''));
     var ov = wrap.firstElementChild; ov.classList.add('leaving'); document.body.appendChild(ov);
+    var leaveTheme = (document.body && document.body.getAttribute && document.body.getAttribute('data-theme')) || (typeof localStorage !== 'undefined' && localStorage.getItem('thirtyatrpr_color_theme')) || 'paper-dark';
     setTimeout(function(){
-      try { sessionStorage.setItem('thirtyatrpr_splash_handoff', JSON.stringify({ to: to, t: Date.now(), q: leaveQ })); } catch(x){}
+      try { sessionStorage.setItem('thirtyatrpr_splash_handoff', JSON.stringify({ to: to, t: Date.now(), q: leaveQ, theme: leaveTheme })); } catch(x){}
       location.href = u.href;
     }, (__WIDGETS[to] || to === '') ? 1750 : 1450);   // the word has landed by ~1.15 s and the label by ~1.3 s; the data-loading widget finishes by ~1.65 s
   }, true);
@@ -4331,7 +4423,7 @@ var ROLES = {
       <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
       <div class="theme-banner-actions">
         <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Clay Dark</button>
-        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Clay</button>
+        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Light Mode</button>
         <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
       </div>
     </div>
@@ -7497,6 +7589,50 @@ function watchGreeting(){
 function kzNameHtml(entry, text){
   return isKaizenUser(entry) ? '<span class="kz-name">' + escapeHtml(text) + '</span>' : escapeHtml(text);
 }
+// Diwali 5-day festival greetings (6, 7, 8, 9, 10 Nov):
+// Day 1 (Nov 6): Dhanteras — wealth, gold/silver, jewelry, coins, Lakshmi & Kubera.
+// Day 2 (Nov 7): Chhoti Diwali / Roop Chaudas — sparklers, beauty/radiance, dawn oil bath.
+// Day 3 (Nov 8): Deepawali / Lakshmi Puja — festival of lights, illuminated diyas, prosperity.
+// Day 4 (Nov 9): Govardhan Puja / Annakut — sacred mountain, peacock feather, 56 offerings.
+// Day 5 (Nov 10): Bhai Dooj / Yama Dwitiya — sacred tilak, sibling bond, protection and blessings.
+function festiveDayInfo(iso){
+  var d = iso || todayISO();
+  var md = d.slice(5); // 'MM-DD'
+  var FESTIVE_DAYS = {
+    '11-06': {
+      key: 'dhanteras',
+      title: 'Shubh Dhanteras',
+      cls: 'festive-dhanteras',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwGoldGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffe066"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/></linearGradient><radialGradient id="dwRubyGrad" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#ff6b8b"/><stop offset="60%" stop-color="#e11d48"/><stop offset="100%" stop-color="#881337"/></radialGradient></defs><path d="M2 3 Q12 10 22 3" fill="none" stroke="url(#dwGoldGrad)" stroke-width="1.8" stroke-linecap="round"/><circle cx="7" cy="5.5" r="1.2" fill="#ffe066"/><circle cx="17" cy="5.5" r="1.2" fill="#ffe066"/><circle cx="12" cy="8.5" r="1.8" fill="url(#dwGoldGrad)"/><polygon points="12,11 17,15 12,21 7,15" fill="url(#dwRubyGrad)" stroke="url(#dwGoldGrad)" stroke-width="1"/><polygon points="12,11 15,15 12,17 9,15" fill="#fda4af" opacity=".7"/><circle cx="12" cy="22.5" r="1.2" fill="url(#dwGoldGrad)"/></svg>'
+    },
+    '11-07': {
+      key: 'chhoti',
+      title: 'Shubh Chhoti Diwali',
+      cls: 'festive-chhoti',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwSparkGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fffbeb"/><stop offset="50%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs><line x1="4" y1="20" x2="14" y2="10" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="10" r="2.5" fill="#fef08a"/><path d="M14 4 L14 7 M14 13 L14 16 M8 10 L11 10 M17 10 L20 10 M10 6 L12 8 M16 12 L18 14 M18 6 L16 8 M12 12 L10 14" stroke="url(#dwSparkGrad)" stroke-width="1.5" stroke-linecap="round"/><circle cx="19" cy="5" r="1" fill="#f59e0b"/><circle cx="9" cy="4" r="0.8" fill="#fbbf24"/><circle cx="20" cy="12" r="1" fill="#fbbf24"/></svg>'
+    },
+    '11-08': {
+      key: 'diwali',
+      title: 'Shubh Deepawali',
+      cls: 'festive-diwali',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwDiwaliClay" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient><linearGradient id="dwDiwaliFlame" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#ef4444"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fef08a"/></linearGradient></defs><path d="M3 14 C5 21 19 21 21 14 Z" fill="url(#dwDiwaliClay)"/><ellipse cx="12" cy="14" rx="9" ry="2.5" fill="#fde68a"/><path d="M12 13 C9.5 9 10.5 4 12 1 C13.5 4 14.5 9 12 13 Z" fill="url(#dwDiwaliFlame)"/><circle cx="19" cy="6" r="1" fill="#fde68a"/><circle cx="5" cy="8" r="0.8" fill="#fde68a"/></svg>'
+    },
+    '11-09': {
+      key: 'govardhan',
+      title: 'Shubh Govardhan Puja',
+      cls: 'festive-govardhan',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwPeacockStem" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#047857"/><stop offset="100%" stop-color="#10b981"/></linearGradient><radialGradient id="dwPeacockEye" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#3b82f6"/><stop offset="45%" stop-color="#06b6d4"/><stop offset="70%" stop-color="#10b981"/><stop offset="90%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#047857"/></radialGradient></defs><path d="M5 21 C10 16 14 11 16 3" fill="none" stroke="url(#dwPeacockStem)" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="16" cy="7" rx="5.5" ry="4" transform="rotate(-35 16 7)" fill="url(#dwPeacockEye)"/><ellipse cx="16" cy="7" rx="2.5" ry="1.8" transform="rotate(-35 16 7)" fill="#1e3a8a"/><circle cx="15.5" cy="6.5" r="0.8" fill="#60a5fa"/></svg>'
+    },
+    '11-10': {
+      key: 'bhaidooj',
+      title: 'Shubh Bhai Dooj',
+      cls: 'festive-bhaidooj',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwTilakGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="40%" stop-color="#dc2626"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs><path d="M7 6 C7 14 17 14 17 6" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3 C10.8 7 10.8 14 12 17 C13.2 14 13.2 7 12 3 Z" fill="url(#dwTilakGrad)"/><ellipse cx="12" cy="11" rx="0.9" ry="1.6" fill="#fef08a"/><ellipse cx="10.8" cy="13" rx="0.8" ry="1.4" fill="#ffffff" transform="rotate(-15 10.8 13)"/><ellipse cx="13.2" cy="13" rx="0.8" ry="1.4" fill="#ffffff" transform="rotate(15 13.2 13)"/></svg>'
+    }
+  };
+  return FESTIVE_DAYS[md] || null;
+}
+
 function renderHeader(student){
   var branchName = DATA.branchNames[student.branch] || student.branch;
   document.getElementById('eyebrow').textContent = student.division+' · Academic Group '+(student.academicGroup||'—')+(student.ismpGroup?' · ISMP Group '+student.ismpGroup:'');
@@ -7506,9 +7642,15 @@ function renderHeader(student){
   var headerRoles = personRolesFor(student.entry);
   if(headerRoles.isCreator) roleBadge = ' <span class="role-pill creator"><span class="role-pill-icon">👑</span>Creator</span>';
   else if(headerRoles.isContributor || headerRoles.verifiedRecs.length) roleBadge = ' <span class="role-pill contributor" data-contributor-entry="'+student.entry+'" title="Tap to see contributor info"><span class="role-pill-icon">⭐</span>Contributor</span>';
-  var greetHtml = isKaizenUser(student.entry)
-    ? '<span class="greet-text kz-greet">' + kzGreeting(student.entry) + ', <span class="greet-name">' + escapeHtml(firstName) + '-' + kzHonorific(student.entry) + '</span></span>'
-    : '<span class="greet-text">Hi, ' + escapeHtml(firstName) + '</span>';
+  var fest = festiveDayInfo();
+  var greetHtml = '';
+  if(fest){
+    greetHtml = '<span class="greet-text kz-greet festive-greet ' + fest.cls + '">' + fest.svg + '<span class="festive-text">' + fest.title + ', <span class="greet-name">' + escapeHtml(firstName) + '</span></span></span>';
+  } else if(isKaizenUser(student.entry)){
+    greetHtml = '<span class="greet-text kz-greet">' + kzGreeting(student.entry) + ', <span class="greet-name">' + escapeHtml(firstName) + '-' + kzHonorific(student.entry) + '</span></span>';
+  } else {
+    greetHtml = '<span class="greet-text">Hi, ' + escapeHtml(firstName) + '</span>';
+  }
   document.getElementById('greeting').innerHTML = greetHtml + roleBadge;
   fitGreeting();
   watchGreeting();
@@ -7711,7 +7853,7 @@ function initSettings(){
     if(darkBtn){
       var syncDarkBtn = function(){
         var isDark = currentColorTheme === 'paper-dark';
-        darkBtn.textContent = isDark ? 'Try Clay' : 'Try Clay Dark';
+        darkBtn.textContent = isDark ? 'Try Light Mode' : 'Try Clay Dark';
         if(keepBtn) keepBtn.textContent = isDark ? 'Keep Clay Dark' : 'Keep Clay';
       };
       darkBtn.onclick = function(){
@@ -8768,7 +8910,14 @@ if (entry === CREATOR) {
 <script>
 if('serviceWorker' in navigator){
   window.addEventListener('load', function(){
-    navigator.serviceWorker.register('/sw.js').catch(function(){});
+    navigator.serviceWorker.register('/sw.js').then(function(reg){
+      if(reg){
+        reg.update();
+        document.addEventListener('visibilitychange', function(){
+          if(document.visibilityState === 'visible') reg.update();
+        });
+      }
+    }).catch(function(){});
   });
 }
 </script>
@@ -9071,6 +9220,19 @@ if('serviceWorker' in navigator){
       d.innerHTML = diya('dwSearchD' + (++uid));
     }
 
+    function mountBootDiya(log){
+      if(!log) return;
+      var d = log.querySelector('[data-dw="boot-diya"]');
+      if(!d){
+        d = document.createElement('span');
+        d.className = 'dw-boot-diya';
+        d.setAttribute('data-dw', 'boot-diya');
+        d.setAttribute('aria-hidden', 'true');
+        log.appendChild(d);
+      }
+      d.innerHTML = diya('dwBootD' + (++uid));
+    }
+
     function mountHeroLadi(el){
       if(!el) return;
       el.classList.add('dw-host');
@@ -9096,6 +9258,13 @@ if('serviceWorker' in navigator){
       }
     }
 
+    function cluster(){
+      return '<svg viewBox="0 0 60 60" aria-hidden="true">' + leaf(30, 28, 26, 150) + leaf(30, 28, 24, 62) + leaf(30, 28, 22, -60) + marigold(22, 24, 12) + marigold(40, 20, 9.5) + marigold(32, 39, 9) + '</svg>';
+    }
+    function bloom(){
+      return '<svg viewBox="0 0 30 30" aria-hidden="true">' + leaf(15, 15, 13, 130) + leaf(15, 15, 12, 220) + marigold(15, 15, 10) + '</svg>';
+    }
+
     var main = document.querySelector('main'), foot = document.querySelector('footer');
     var top = document.createElement('div');
     top.className = 'dw-top' + (main ? '' : ' dw-sub');
@@ -9116,11 +9285,10 @@ if('serviceWorker' in navigator){
       var low = document.createElement('div');
       low.className = 'dw-foot';
       low.setAttribute('aria-hidden', 'true');
-      low.innerHTML = '<div class="dw-ladi dw-ladi-foot"></div>' +
+      low.innerHTML = '<div class="dw-foot-toran">' + toran('dwToranFoot') + '</div>' +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
         '<div class="dw-wish">Shubh Deepawali</div>';
       foot.parentNode.insertBefore(low, foot);
-      mountLadi(low.querySelector('.dw-ladi-foot'));
     }
 
     var one = function(q){ return document.querySelector(q); };
@@ -9129,8 +9297,9 @@ if('serviceWorker' in navigator){
         // 1. The Hero Card (#todayPanel): Sweeping asymmetrical garland
         mountHeroLadi(one('#todayPanel'));
 
-        // 2. Search button: single earthen diya perched right above "Find a classmate"
+        // 2. Desktop: search button perched diya; Phone: boot-log dashed line diya
         mountSearchDiya(one('#searchBtn'));
+        mountBootDiya(one('.boot-log'));
 
         // 3. Special cards and banners - guaranteed varied styles (no copy-paste):
         // - Mess menu: Top-Left gentle curve (Style 1: tl2)
@@ -9157,6 +9326,21 @@ if('serviceWorker' in navigator){
             addCardLadi(panels[i], (i + 1) % 4);
           }
         }
+
+        // 5. Authentic flower accents:
+        // - Marigold bloom on 30 logo:
+        addDeco(one('.mini-brand'), 'clip', 'dw-clip', bloom());
+
+        // - Marigold blooms on navigation pills:
+        addDeco(one('#calToggleBtn'), 'clip', 'dw-clip', bloom());
+        addDeco(one('#groupsToggleBtn'), 'clip', 'dw-clip', bloom());
+        addDeco(one('#studyRoomsToggleBtn') || one('#studyToggleBtn'), 'clip', 'dw-clip', bloom());
+        addDeco(one('#miniStudy'), 'clip', 'dw-clip', bloom());
+
+        // - Flower clusters on card corners:
+        addDeco(one('#kaizenPanel'), 'cluster', 'dw-cluster tl', cluster());
+        addDeco(one('#examWeekBanner'), 'cluster', 'dw-cluster tr', cluster());
+        addDeco(one('#paperThemeBanner'), 'cluster', 'dw-cluster br', cluster());
       } else {
         // Sub-pages (/spectate, /br): varied diagonal LEDs on cards
         var cards = document.querySelectorAll('.wrap .panel');

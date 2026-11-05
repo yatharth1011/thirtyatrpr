@@ -183,6 +183,9 @@ spectate_target = BASE + '/public/spectate.html'
 with open(spectate_target, 'w', encoding='utf-8') as f:
     f.write(spectate_out)
 print('wrote', spectate_target, 'size:', len(spectate_out))
+os.makedirs(BASE + '/public/spectate', exist_ok=True)
+with open(BASE + '/public/spectate/index.html', 'w', encoding='utf-8') as f:
+    f.write(spectate_out)
 
 # /br — Branch Rep live schedule-overlay tool. Its own template/script, own Firestore write access
 # (unlike spectate/main app, which only ever read scheduleOverlay); a separate, non-linked page at

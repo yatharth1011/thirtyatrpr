@@ -1233,7 +1233,7 @@ function readPref(k, dflt){ try { return localStorage.getItem(k) || dflt; } catc
 function writePref(k, v){ try { localStorage.setItem(k, v); } catch(e){} }
 function applyTheme(){
   if(typeof document === 'undefined' || !document.body) return;
-  var color = readPref(COLOR_THEME_KEY, 'github');
+  var color = readPref(COLOR_THEME_KEY, 'paper-dark');
   var glass = true;   // Theme A only — Theme B was removed (2026-10-15), same as the main dashboard
   if(color === 'default') document.body.removeAttribute('data-theme'); else document.body.setAttribute('data-theme', color);
   document.body.classList.toggle('glass', glass);
@@ -1243,7 +1243,7 @@ function applyTheme(){
 function mountThemeSwitcher(el){
   if(!el) return;
   function paint(){
-    var color = readPref(COLOR_THEME_KEY, 'github');
+    var color = readPref(COLOR_THEME_KEY, 'paper-dark');
     el.innerHTML = COLOR_THEMES.map(function(t){
       return '<button class="theme-dot theme-dot-'+t.id+(t.id === color ? ' active' : '')+'" data-color="'+t.id+'" title="'+t.label+' colours" aria-label="'+t.label+' colours"></button>';
     }).join('');

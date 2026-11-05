@@ -8,11 +8,11 @@
 <meta name="color-scheme" content="dark">
 <title>THIRTY@RPR — BR Tools</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&display=swap" media="print" onload="this.media='all'">
-<link rel="icon" type="image/png" sizes="64x64" href="/icons/v2/favicon-64.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/icons/v2/icon-192.png">
-<link rel="apple-touch-icon" href="/icons/v2/apple-touch-180.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/icons/v3/favicon-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icons/v3/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/v3/apple-touch-180.png">
 <meta name="description" content="THIRTY@RPR — Branch Rep tool: see any kind of student's real timetable and fix it live.">
-<meta name="theme-color" content="#0d1117">
+<meta name="theme-color" content="#171114">
 <meta name="robots" content="noindex">
 <style>
   /* Shared look for the sub-pages (/spectate, /br), spliced in by build/splice.py. Same colour
@@ -31,6 +31,7 @@
     --teal:#39c5cf; --teal-soft:rgba(57,197,207,0.14);
     --rose:#f47174; --rose-soft:rgba(244,113,116,0.14);
     --violet:#bc8cff; --violet-soft:rgba(188,140,255,0.14);
+    --kz-1:#9d174d; --kz-2:#db2777; --kz-3:#f43f5e;
     --head-bg:rgba(13,17,23,0.62);
   }
   /* Graphite (GitHub Dark Classic) — grey chrome, colour from the syntax palette; [ok] = tag green. */
@@ -46,6 +47,7 @@
     --teal:#79b8ff; --teal-soft:rgba(121,184,255,0.13);
     --rose:#f97583; --rose-soft:rgba(249,117,131,0.13);
     --violet:#b392f0; --violet-soft:rgba(179,146,240,0.13);
+    --kz-1:#b392f0; --kz-2:#79b8ff; --kz-3:#d1d5da;
     --head-bg:rgba(31,36,40,0.72);
   }
   body[data-theme="forest"]{
@@ -73,6 +75,7 @@
     --teal:#8a3b2a; --teal-soft:rgba(138,59,42,0.12);
     --rose:#e11d48; --rose-soft:rgba(225,29,72,0.08);
     --violet:#7e2a5e; --violet-soft:rgba(126,42,94,0.12);
+    --kz-1:#9d174d; --kz-2:#db2777; --kz-3:#f43f5e;
     --head-bg:rgba(255,255,255,0.96);
     --paper-sheet:linear-gradient(168deg, #ffffff 0%, #ffffff 58%, #f8f8f7 100%);
     --paper-shadow:
@@ -87,6 +90,16 @@
 --pin-rose:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 56' width='44' height='56'%3E%3Cdefs%3E%3ClinearGradient id='h' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23e11d48'/%3E%3Cstop offset='.28' stop-color='%23ff8fab'/%3E%3Cstop offset='.62' stop-color='%23e11d48'/%3E%3Cstop offset='1' stop-color='%237f1137'/%3E%3C/linearGradient%3E%3ClinearGradient id='m' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%238d8780'/%3E%3Cstop offset='.45' stop-color='%23f3efea'/%3E%3Cstop offset='1' stop-color='%236d675f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M9 50 L36 56 Q43 55 40 50 L30 42 Q24 40 20 42Z' fill='%232a1a14' opacity='.2'/%3E%3Cpath d='M9 50 L24 50 Q30 50 28 46 L22 41Z' fill='%232a1a14' opacity='.28'/%3E%3Cg transform='rotate%2824 9 50%29'%3E%3Cpath d='M8.2 31 h1.6 l-.8 19z' fill='url%28%23m%29'/%3E%3Cpath d='M1 31 Q9 26 17 31 Q17 34 9 34.5 Q1 34 1 31z' fill='url%28%23h%29'/%3E%3Cpath d='M4.2 30 C5 23 5.3 17 4.6 11 L13.4 11 C12.7 17 13 23 13.8 30 Q9 33 4.2 30z' fill='url%28%23h%29'/%3E%3Cpath d='M1.4 9.5 Q9 5 16.6 9.5 Q17.5 12.5 9 13.4 Q.5 12.5 1.4 9.5z' fill='url%28%23h%29'/%3E%3Cellipse cx='9' cy='8.6' rx='7.2' ry='2.5' fill='%23ff8fab'/%3E%3Cellipse cx='6.6' cy='8.1' rx='2.8' ry='.9' fill='%23fff' opacity='.75'/%3E%3C/g%3E%3C/svg%3E");
     --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     font-family:var(--paper-font);
+  }
+  body[data-theme="paper-dark"]{
+    --bg:#171114 !important;
+    --bg2:#1e1619 !important;
+    --card:#241b1f !important;
+    --card2:#2e2328 !important;
+    --line:#3d3034 !important;
+    --kz-1:#9d174d !important;
+    --kz-2:#db2777 !important;
+    --kz-3:#f43f5e !important;
   }
   html body[data-theme="paper"] ::-webkit-calendar-picker-indicator{ filter:invert(.8); }
   html body[data-theme="paper"] select option{ background:#ffffff; color:var(--ink); }
@@ -380,6 +393,7 @@ body[data-theme="paper-dark"]{
     --teal:#e8a98f; --teal-soft:rgba(138,59,42,0.12);
     --rose:#fb7185; --rose-soft:rgba(251,113,133,0.08);
     --violet:#e3a6d0; --violet-soft:rgba(126,42,94,0.12);
+    --kz-1:#f9a8c4; --kz-2:#f472b6; --kz-3:#fb7185;
     --head-bg:rgba(36,27,31,0.96);
     --paper-sheet:linear-gradient(168deg, #241b1f 0%, #241b1f 58%, #1e1619 100%);
     --paper-shadow:
@@ -434,6 +448,14 @@ html body[data-theme="paper-dark"] .panel-head{ border-bottom:none !important; p
 html body[data-theme="paper-dark"] .daycard-head{ border-bottom:none !important; }
 /* Paper Dark: hand-tuned extras. All other paper-dark rules are generated from Paper by splice.py (paper_dark_css). */
 body[data-theme="paper-dark"]{
+  --bg:#171114 !important;
+  --bg2:#1e1619 !important;
+  --card:#241b1f !important;
+  --card2:#2e2328 !important;
+  --line:#3d3034 !important;
+  --kz-1:#9d174d !important;
+  --kz-2:#db2777 !important;
+  --kz-3:#f43f5e !important;
   --head-bg:rgba(36,27,31,.96);
   --paper-sheet:linear-gradient(168deg, #2a2024 0%, #261c20 58%, #201719 100%);
   --paper-shadow:
@@ -555,20 +577,25 @@ body[data-theme="paper-dark"]{
 .dw-card-ladi.tl4{ top:-1px; left:-1px; width:125px; height:65px; }
 .dw-card-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
 
-.dw-search-diya{ position:absolute; pointer-events:none; z-index:5; }
-.dw-search-diya .dw-diya{ width:100%; height:100%; }
+.boot-log{ position:relative !important; }
+.dw-search-diya, .dw-boot-diya{ position:absolute; pointer-events:none; z-index:5; }
+.dw-search-diya .dw-diya, .dw-boot-diya .dw-diya{ width:100%; height:100%; }
 @media (min-width: 960px){
-  #searchBtn{
+  #searchBtn, .search-toggle{
     position:relative !important;
     right:auto !important;
     left:auto !important;
     top:auto !important;
   }
   .dw-search-diya{
+    display:block !important;
     bottom:calc(100% - 4px);
-    left:20px;
+    left:24px;
     width:28px;
     height:36px;
+  }
+  .dw-boot-diya{
+    display:none !important;
   }
 }
 @media (max-width: 959px){
@@ -580,16 +607,78 @@ body[data-theme="paper-dark"]{
     display:flex !important;
   }
   .dw-search-diya{
-    bottom:calc(100% - 4px);
-    left:50%;
-    transform:translateX(-50%);
-    width:24px;
-    height:32px;
+    display:none !important;
+  }
+  .dw-boot-diya{
+    display:block !important;
+    right:18px;
+    bottom:-2px;
+    width:28px;
+    height:36px;
   }
 }
 
 .dw-sit{ position:absolute; top:-18px; right:24px; pointer-events:none; z-index:4; width:34px; height:44px; }
 .dw-sit .dw-diya{ width:100%; height:100%; }
+.dw-host{ position:relative !important; }
+.mini-brand.dw-host{ overflow:visible !important; position:relative !important; }
+.dw-cluster{ position:absolute; width:42px; height:42px; pointer-events:none; z-index:4; }
+.dw-cluster svg{ width:100%; height:100%; display:block; overflow:visible; }
+.dw-cluster.tl{ top:-13px; left:-12px; }
+.dw-cluster.tr{ top:-13px; right:-12px; transform:scaleX(-1); }
+.dw-cluster.br{ bottom:-13px; right:-12px; transform:rotate(180deg); }
+.dw-clip{ position:absolute; left:-5px; top:-7px; width:20px; height:20px; pointer-events:none; z-index:4; }
+.dw-clip svg{ width:100%; height:100%; display:block; overflow:visible; }
+.dw-foot-toran{ position:relative; width:100%; height:48px; overflow:hidden; margin-bottom:12px; pointer-events:none; }
+.dw-foot-toran .dw-toran{ position:absolute; left:0; right:0; top:0; width:100%; height:52px; display:block; }
+
+.festive-greet{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  vertical-align:middle;
+}
+.festive-greet .festive-icon{
+  flex-shrink:0;
+  display:inline-block;
+  vertical-align:middle;
+  filter:drop-shadow(0 2px 8px rgba(245, 158, 11, 0.45));
+}
+.festive-text{
+  display:inline-block;
+}
+/* 5-day festive gradients applied to everyone (both Kaizen and non-Kaizen) */
+.festive-dhanteras{
+  background:linear-gradient(135deg, #ffd700 0%, #f59e0b 45%, #e11d48 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-chhoti{
+  background:linear-gradient(135deg, #fef08a 0%, #fb923c 45%, #f43f5e 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-diwali{
+  background:linear-gradient(135deg, #fef08a 0%, #f59e0b 35%, #e11d48 70%, #be123c 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-govardhan{
+  background:linear-gradient(135deg, #34d399 0%, #10b981 40%, #f59e0b 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-bhaidooj{
+  background:linear-gradient(135deg, #fb7185 0%, #e11d48 45%, #f97316 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+
 .dw-ladi{ position:relative; width:100%; pointer-events:none; overflow:hidden; }
 .dw-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
 .dw-ladi-foot{ display:block; width:100%; height:30px; margin-bottom:8px; }
@@ -723,7 +812,11 @@ body[data-theme="paper-dark"]{
 /* apply the saved colour theme before first paint (engine.js's applyTheme runs only at the end of this big page) */
 (function(){
   var t = 'github';
-  try { t = localStorage.getItem('thirtyatrpr_color_theme') || 'github'; } catch(e){}
+  try {
+    var h = JSON.parse(sessionStorage.getItem('thirtyatrpr_splash_handoff') || 'null');
+    if(h && h.theme) t = h.theme;
+    else t = localStorage.getItem('thirtyatrpr_color_theme') || 'github';
+  } catch(e){}
   if(t !== 'default') document.body.setAttribute('data-theme', t);
   document.body.classList.add('glass');
 })();
@@ -735,10 +828,16 @@ body[data-theme="paper-dark"]{
 <style>
   /* springs: a damped spring sampled into linear() (overshoots a little, then settles) — the cubic-bezier is the fallback
      for browsers without linear(). --spring-soft overshoots less (small moves: letters, labels, the phone nav bar). */
-  :root{ --spring:cubic-bezier(.34,1.5,.64,1); --spring-soft:cubic-bezier(.3,1.25,.5,1); }
+  :root{
+    --spring:cubic-bezier(.34,1.5,.64,1); --spring-soft:cubic-bezier(.3,1.25,.5,1);
+    --kz-1:#9d174d; --kz-2:#db2777; --kz-3:#f43f5e;
+  }
   @supports (animation-timing-function: linear(0, 1)){
-    :root{ --spring:linear(0, 0.048, 0.167, 0.325, 0.496, 0.66, 0.806, 0.924, 1.013, 1.074, 1.11, 1.125, 1.124, 1.112, 1.094, 1.073, 1.051, 1.032, 1.015, 1.003, 0.993, 0.988, 0.985, 0.984, 0.985, 0.987, 0.99, 0.992, 0.995, 0.997, 0.999, 1, 1.001, 1.002, 1);
-      --spring-soft:linear(0, 0.031, 0.108, 0.212, 0.329, 0.448, 0.561, 0.664, 0.753, 0.829, 0.89, 0.939, 0.975, 1.002, 1.02, 1.031, 1.037, 1.038, 1.037, 1.035, 1.031, 1.026, 1.022, 1.017, 1.013, 1.01, 1.007, 1.004, 1.003, 1.001, 1, 0.999, 0.999, 0.999, 1); }
+    :root{
+      --spring:linear(0, 0.048, 0.167, 0.325, 0.496, 0.66, 0.806, 0.924, 1.013, 1.074, 1.11, 1.125, 1.124, 1.112, 1.094, 1.073, 1.051, 1.032, 1.015, 1.003, 0.993, 0.988, 0.985, 0.984, 0.985, 0.987, 0.99, 0.992, 0.995, 0.997, 0.999, 1, 1.001, 1.002, 1);
+      --spring-soft:linear(0, 0.031, 0.108, 0.212, 0.329, 0.448, 0.561, 0.664, 0.753, 0.829, 0.89, 0.939, 0.975, 1.002, 1.02, 1.031, 1.037, 1.038, 1.037, 1.035, 1.031, 1.026, 1.022, 1.017, 1.013, 1.01, 1.007, 1.004, 1.003, 1.001, 1, 0.999, 0.999, 0.999, 1);
+      --kz-1:#9d174d; --kz-2:#db2777; --kz-3:#f43f5e;
+    }
   }
   #bootLoader{ position:fixed; inset:0; z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; background:var(--bg);
     transition:opacity .3s ease; }
@@ -839,9 +938,9 @@ body[data-theme="paper-dark"]{
 <div id="bootLoader" aria-hidden="true">
   <svg viewBox="0 0 78 34">
     <defs>
-      <linearGradient id="blKz" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="34"><stop offset="0" style="stop-color:var(--kz-1,#b392f0)"/><stop offset=".55" style="stop-color:var(--kz-2,#79b8ff)"/><stop offset="1" style="stop-color:var(--kz-3,#d1d5da)"/></linearGradient>
+      <linearGradient id="blKz" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="48" y2="34"><stop offset="0" style="stop-color:var(--kz-1,#9d174d)"/><stop offset=".55" style="stop-color:var(--kz-2,#db2777)"/><stop offset="1" style="stop-color:var(--kz-3,#f43f5e)"/></linearGradient>
       <!-- the same three colours, running the other way: cross-faded over the first so the gradient visibly flows (opacity animation: smooth even while the page script is still parsing) -->
-      <linearGradient id="blKz2" gradientUnits="userSpaceOnUse" x1="48" y1="34" x2="0" y2="0"><stop offset="0" style="stop-color:var(--kz-1,#b392f0)"/><stop offset=".55" style="stop-color:var(--kz-2,#79b8ff)"/><stop offset="1" style="stop-color:var(--kz-3,#d1d5da)"/></linearGradient>
+      <linearGradient id="blKz2" gradientUnits="userSpaceOnUse" x1="48" y1="34" x2="0" y2="0"><stop offset="0" style="stop-color:var(--kz-1,#9d174d)"/><stop offset=".55" style="stop-color:var(--kz-2,#db2777)"/><stop offset="1" style="stop-color:var(--kz-3,#f43f5e)"/></linearGradient>
       <clipPath id="blClip"><rect width="34" height="34" rx="9"/></clipPath>
     </defs>
     <g class="bl-shift" font-family="JetBrains Mono, monospace" font-size="19" font-weight="800" letter-spacing="0">
@@ -869,13 +968,22 @@ function __quoteHTML(i){ var q = __QUOTES[i] || __QUOTES[0]; return '<div class=
 // Arrived by tapping Spectate / BR Tools on another page (see the click handler below): that page already played the
 // animation, so open on its finished frame and just take over from it.
 var __handoff = false;
+var __h = null;
 try {
-  var __h = JSON.parse(sessionStorage.getItem('thirtyatrpr_splash_handoff') || 'null');
+  __h = JSON.parse(sessionStorage.getItem('thirtyatrpr_splash_handoff') || 'null');
   sessionStorage.removeItem('thirtyatrpr_splash_handoff');
-  __handoff = !!(__h && Date.now() - __h.t < 20000 && __h.to === location.pathname.replace(/\/+$/, ''));
 } catch(e){}
+__handoff = !!(__h && Date.now() - __h.t < 20000 && __h.to === location.pathname.replace(/\/+$/, ''));
 if(__handoff){
   document.getElementById('bootLoader').classList.add('handoff');
+  if(__h && __h.theme && typeof document !== 'undefined' && document.body && document.body.setAttribute){
+    try {
+      if(!document.body.getAttribute || document.body.getAttribute('data-theme') !== __h.theme){
+        document.body.setAttribute('data-theme', __h.theme);
+        if(typeof localStorage !== 'undefined') localStorage.setItem('thirtyatrpr_color_theme', __h.theme);
+      }
+    } catch(e){}
+  }
 } else {
   // Any other arrival from a page of this site (e.g. the Home link): no splash — the browser's crossfade does the transition.
   try { var __ref = document.referrer && new URL(document.referrer); if(__ref && __ref.origin === location.origin){ document.getElementById('bootLoader').classList.add('skip'); __bootMin = 0; } } catch(e){}
@@ -927,8 +1035,9 @@ document.addEventListener('click', function(e){
     var wrap = document.createElement('div');
     wrap.innerHTML = __splashHTML.replace(/<div class="bl-sub">[\s\S]*?<\/div>/, '').replace('</svg>', '</svg>' + (lab[1] ? '\n  <div class="bl-sub"><span><b>' + lab[0] + '</b> ' + lab[1] + '</span></div>' : '') + (__WIDGETS[to] || '') + (to === '' ? __quoteHTML(leaveQ) : ''));
     var ov = wrap.firstElementChild; ov.classList.add('leaving'); document.body.appendChild(ov);
+    var leaveTheme = (document.body && document.body.getAttribute && document.body.getAttribute('data-theme')) || (typeof localStorage !== 'undefined' && localStorage.getItem('thirtyatrpr_color_theme')) || 'paper-dark';
     setTimeout(function(){
-      try { sessionStorage.setItem('thirtyatrpr_splash_handoff', JSON.stringify({ to: to, t: Date.now(), q: leaveQ })); } catch(x){}
+      try { sessionStorage.setItem('thirtyatrpr_splash_handoff', JSON.stringify({ to: to, t: Date.now(), q: leaveQ, theme: leaveTheme })); } catch(x){}
       location.href = u.href;
     }, (__WIDGETS[to] || to === '') ? 1750 : 1450);   // the word has landed by ~1.15 s and the label by ~1.3 s; the data-loading widget finishes by ~1.65 s
   }, true);
@@ -2251,7 +2360,7 @@ function readPref(k, dflt){ try { return localStorage.getItem(k) || dflt; } catc
 function writePref(k, v){ try { localStorage.setItem(k, v); } catch(e){} }
 function applyTheme(){
   if(typeof document === 'undefined' || !document.body) return;
-  var color = readPref(COLOR_THEME_KEY, 'github');
+  var color = readPref(COLOR_THEME_KEY, 'paper-dark');
   var glass = true;   // Theme A only — Theme B was removed (2026-10-15), same as the main dashboard
   if(color === 'default') document.body.removeAttribute('data-theme'); else document.body.setAttribute('data-theme', color);
   document.body.classList.toggle('glass', glass);
@@ -2261,7 +2370,7 @@ function applyTheme(){
 function mountThemeSwitcher(el){
   if(!el) return;
   function paint(){
-    var color = readPref(COLOR_THEME_KEY, 'github');
+    var color = readPref(COLOR_THEME_KEY, 'paper-dark');
     el.innerHTML = COLOR_THEMES.map(function(t){
       return '<button class="theme-dot theme-dot-'+t.id+(t.id === color ? ' active' : '')+'" data-color="'+t.id+'" title="'+t.label+' colours" aria-label="'+t.label+' colours"></button>';
     }).join('');
@@ -4012,6 +4121,19 @@ onAuthStateChanged(auth, function(){
       d.innerHTML = diya('dwSearchD' + (++uid));
     }
 
+    function mountBootDiya(log){
+      if(!log) return;
+      var d = log.querySelector('[data-dw="boot-diya"]');
+      if(!d){
+        d = document.createElement('span');
+        d.className = 'dw-boot-diya';
+        d.setAttribute('data-dw', 'boot-diya');
+        d.setAttribute('aria-hidden', 'true');
+        log.appendChild(d);
+      }
+      d.innerHTML = diya('dwBootD' + (++uid));
+    }
+
     function mountHeroLadi(el){
       if(!el) return;
       el.classList.add('dw-host');
@@ -4037,6 +4159,13 @@ onAuthStateChanged(auth, function(){
       }
     }
 
+    function cluster(){
+      return '<svg viewBox="0 0 60 60" aria-hidden="true">' + leaf(30, 28, 26, 150) + leaf(30, 28, 24, 62) + leaf(30, 28, 22, -60) + marigold(22, 24, 12) + marigold(40, 20, 9.5) + marigold(32, 39, 9) + '</svg>';
+    }
+    function bloom(){
+      return '<svg viewBox="0 0 30 30" aria-hidden="true">' + leaf(15, 15, 13, 130) + leaf(15, 15, 12, 220) + marigold(15, 15, 10) + '</svg>';
+    }
+
     var main = document.querySelector('main'), foot = document.querySelector('footer');
     var top = document.createElement('div');
     top.className = 'dw-top' + (main ? '' : ' dw-sub');
@@ -4057,11 +4186,10 @@ onAuthStateChanged(auth, function(){
       var low = document.createElement('div');
       low.className = 'dw-foot';
       low.setAttribute('aria-hidden', 'true');
-      low.innerHTML = '<div class="dw-ladi dw-ladi-foot"></div>' +
+      low.innerHTML = '<div class="dw-foot-toran">' + toran('dwToranFoot') + '</div>' +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
         '<div class="dw-wish">Shubh Deepawali</div>';
       foot.parentNode.insertBefore(low, foot);
-      mountLadi(low.querySelector('.dw-ladi-foot'));
     }
 
     var one = function(q){ return document.querySelector(q); };
@@ -4070,8 +4198,9 @@ onAuthStateChanged(auth, function(){
         // 1. The Hero Card (#todayPanel): Sweeping asymmetrical garland
         mountHeroLadi(one('#todayPanel'));
 
-        // 2. Search button: single earthen diya perched right above "Find a classmate"
+        // 2. Desktop: search button perched diya; Phone: boot-log dashed line diya
         mountSearchDiya(one('#searchBtn'));
+        mountBootDiya(one('.boot-log'));
 
         // 3. Special cards and banners - guaranteed varied styles (no copy-paste):
         // - Mess menu: Top-Left gentle curve (Style 1: tl2)
@@ -4098,6 +4227,21 @@ onAuthStateChanged(auth, function(){
             addCardLadi(panels[i], (i + 1) % 4);
           }
         }
+
+        // 5. Authentic flower accents:
+        // - Marigold bloom on 30 logo:
+        addDeco(one('.mini-brand'), 'clip', 'dw-clip', bloom());
+
+        // - Marigold blooms on navigation pills:
+        addDeco(one('#calToggleBtn'), 'clip', 'dw-clip', bloom());
+        addDeco(one('#groupsToggleBtn'), 'clip', 'dw-clip', bloom());
+        addDeco(one('#studyRoomsToggleBtn') || one('#studyToggleBtn'), 'clip', 'dw-clip', bloom());
+        addDeco(one('#miniStudy'), 'clip', 'dw-clip', bloom());
+
+        // - Flower clusters on card corners:
+        addDeco(one('#kaizenPanel'), 'cluster', 'dw-cluster tl', cluster());
+        addDeco(one('#examWeekBanner'), 'cluster', 'dw-cluster tr', cluster());
+        addDeco(one('#paperThemeBanner'), 'cluster', 'dw-cluster br', cluster());
       } else {
         // Sub-pages (/spectate, /br): varied diagonal LEDs on cards
         var cards = document.querySelectorAll('.wrap .panel');

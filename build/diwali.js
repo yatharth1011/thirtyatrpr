@@ -297,6 +297,19 @@
       d.innerHTML = diya('dwSearchD' + (++uid));
     }
 
+    function mountBootDiya(log){
+      if(!log) return;
+      var d = log.querySelector('[data-dw="boot-diya"]');
+      if(!d){
+        d = document.createElement('span');
+        d.className = 'dw-boot-diya';
+        d.setAttribute('data-dw', 'boot-diya');
+        d.setAttribute('aria-hidden', 'true');
+        log.appendChild(d);
+      }
+      d.innerHTML = diya('dwBootD' + (++uid));
+    }
+
     function mountHeroLadi(el){
       if(!el) return;
       el.classList.add('dw-host');
@@ -322,6 +335,13 @@
       }
     }
 
+    function cluster(){
+      return '<svg viewBox="0 0 60 60" aria-hidden="true">' + leaf(30, 28, 26, 150) + leaf(30, 28, 24, 62) + leaf(30, 28, 22, -60) + marigold(22, 24, 12) + marigold(40, 20, 9.5) + marigold(32, 39, 9) + '</svg>';
+    }
+    function bloom(){
+      return '<svg viewBox="0 0 30 30" aria-hidden="true">' + leaf(15, 15, 13, 130) + leaf(15, 15, 12, 220) + marigold(15, 15, 10) + '</svg>';
+    }
+
     var main = document.querySelector('main'), foot = document.querySelector('footer');
     var top = document.createElement('div');
     top.className = 'dw-top' + (main ? '' : ' dw-sub');
@@ -342,11 +362,10 @@
       var low = document.createElement('div');
       low.className = 'dw-foot';
       low.setAttribute('aria-hidden', 'true');
-      low.innerHTML = '<div class="dw-ladi dw-ladi-foot"></div>' +
+      low.innerHTML = '<div class="dw-foot-toran">' + toran('dwToranFoot') + '</div>' +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
         '<div class="dw-wish">Shubh Deepawali</div>';
       foot.parentNode.insertBefore(low, foot);
-      mountLadi(low.querySelector('.dw-ladi-foot'));
     }
 
     var one = function(q){ return document.querySelector(q); };
@@ -355,8 +374,9 @@
         // 1. The Hero Card (#todayPanel): Sweeping asymmetrical garland
         mountHeroLadi(one('#todayPanel'));
 
-        // 2. Search button: single earthen diya perched right above "Find a classmate"
+        // 2. Desktop: search button perched diya; Phone: boot-log dashed line diya
         mountSearchDiya(one('#searchBtn'));
+        mountBootDiya(one('.boot-log'));
 
         // 3. Special cards and banners - guaranteed varied styles (no copy-paste):
         // - Mess menu: Top-Left gentle curve (Style 1: tl2)
@@ -383,6 +403,21 @@
             addCardLadi(panels[i], (i + 1) % 4);
           }
         }
+
+        // 5. Authentic flower accents:
+        // - Marigold bloom on 30 logo:
+        addDeco(one('.mini-brand'), 'clip', 'dw-clip', bloom());
+
+        // - Marigold blooms on navigation pills:
+        addDeco(one('#calToggleBtn'), 'clip', 'dw-clip', bloom());
+        addDeco(one('#groupsToggleBtn'), 'clip', 'dw-clip', bloom());
+        addDeco(one('#studyRoomsToggleBtn') || one('#studyToggleBtn'), 'clip', 'dw-clip', bloom());
+        addDeco(one('#miniStudy'), 'clip', 'dw-clip', bloom());
+
+        // - Flower clusters on card corners:
+        addDeco(one('#kaizenPanel'), 'cluster', 'dw-cluster tl', cluster());
+        addDeco(one('#examWeekBanner'), 'cluster', 'dw-cluster tr', cluster());
+        addDeco(one('#paperThemeBanner'), 'cluster', 'dw-cluster br', cluster());
       } else {
         // Sub-pages (/spectate, /br): varied diagonal LEDs on cards
         var cards = document.querySelectorAll('.wrap .panel');

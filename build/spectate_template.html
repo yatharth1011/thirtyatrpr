@@ -8,11 +8,11 @@
 <meta name="color-scheme" content="dark">
 <title>THIRTY@RPR — Spectate</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&display=swap" media="print" onload="this.media='all'">
-<link rel="icon" type="image/png" sizes="64x64" href="/icons/v2/favicon-64.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/icons/v2/icon-192.png">
-<link rel="apple-touch-icon" href="/icons/v2/apple-touch-180.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/icons/v3/favicon-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icons/v3/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/v3/apple-touch-180.png">
 <meta name="description" content="THIRTY@RPR Spectate — no login needed. Any cohort's day at a glance, when they're free, and which rooms are free right now.">
-<meta name="theme-color" content="#0d1117">
+<meta name="theme-color" content="#171114">
 <meta name="robots" content="noindex">
 <style>
 /*__SUB_THEME_CSS__*/
@@ -173,7 +173,11 @@
 /* apply the saved colour theme before first paint (engine.js's applyTheme runs only at the end of this big page) */
 (function(){
   var t = 'github';
-  try { t = localStorage.getItem('thirtyatrpr_color_theme') || 'github'; } catch(e){}
+  try {
+    var h = JSON.parse(sessionStorage.getItem('thirtyatrpr_splash_handoff') || 'null');
+    if(h && h.theme) t = h.theme;
+    else t = localStorage.getItem('thirtyatrpr_color_theme') || 'github';
+  } catch(e){}
   if(t !== 'default') document.body.setAttribute('data-theme', t);
   document.body.classList.add('glass');
 })();

@@ -4,11 +4,15 @@
 // app while offline, not a way to speed up normal loads.
 // v2 (2026-10-15): only this site's own files go through here. v1 also intercepted and cached every
 // cross-origin request, Firestore's long-lived listen stream included, which could stall live BR edits.
-// v4 (2026-11-06): cache flush for Diwali decor and Clay theme rollout
-const CACHE_NAME = 'thirtyatrpr-v4';
+// v6 (2026-11-06): full-bleed Clay app icons and cache flush
+const CACHE_NAME = 'thirtyatrpr-v6';
 const OFFLINE_URLS = [
   '/',
   '/manifest.webmanifest',
+  '/icons/v3/icon-192.png',
+  '/icons/v3/icon-512.png',
+  '/icons/v3/icon-maskable-192.png',
+  '/icons/v3/icon-maskable-512.png',
   '/icons/v2/icon-192.png',
   '/icons/v2/icon-512.png',
 ];

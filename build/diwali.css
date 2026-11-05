@@ -94,20 +94,25 @@ body[data-theme="paper-dark"]{
 .dw-card-ladi.tl4{ top:-1px; left:-1px; width:125px; height:65px; }
 .dw-card-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
 
-.dw-search-diya{ position:absolute; pointer-events:none; z-index:5; }
-.dw-search-diya .dw-diya{ width:100%; height:100%; }
+.boot-log{ position:relative !important; }
+.dw-search-diya, .dw-boot-diya{ position:absolute; pointer-events:none; z-index:5; }
+.dw-search-diya .dw-diya, .dw-boot-diya .dw-diya{ width:100%; height:100%; }
 @media (min-width: 960px){
-  #searchBtn{
+  #searchBtn, .search-toggle{
     position:relative !important;
     right:auto !important;
     left:auto !important;
     top:auto !important;
   }
   .dw-search-diya{
+    display:block !important;
     bottom:calc(100% - 4px);
-    left:20px;
+    left:24px;
     width:28px;
     height:36px;
+  }
+  .dw-boot-diya{
+    display:none !important;
   }
 }
 @media (max-width: 959px){
@@ -119,16 +124,78 @@ body[data-theme="paper-dark"]{
     display:flex !important;
   }
   .dw-search-diya{
-    bottom:calc(100% - 4px);
-    left:50%;
-    transform:translateX(-50%);
-    width:24px;
-    height:32px;
+    display:none !important;
+  }
+  .dw-boot-diya{
+    display:block !important;
+    right:18px;
+    bottom:-2px;
+    width:28px;
+    height:36px;
   }
 }
 
 .dw-sit{ position:absolute; top:-18px; right:24px; pointer-events:none; z-index:4; width:34px; height:44px; }
 .dw-sit .dw-diya{ width:100%; height:100%; }
+.dw-host{ position:relative !important; }
+.mini-brand.dw-host{ overflow:visible !important; position:relative !important; }
+.dw-cluster{ position:absolute; width:42px; height:42px; pointer-events:none; z-index:4; }
+.dw-cluster svg{ width:100%; height:100%; display:block; overflow:visible; }
+.dw-cluster.tl{ top:-13px; left:-12px; }
+.dw-cluster.tr{ top:-13px; right:-12px; transform:scaleX(-1); }
+.dw-cluster.br{ bottom:-13px; right:-12px; transform:rotate(180deg); }
+.dw-clip{ position:absolute; left:-5px; top:-7px; width:20px; height:20px; pointer-events:none; z-index:4; }
+.dw-clip svg{ width:100%; height:100%; display:block; overflow:visible; }
+.dw-foot-toran{ position:relative; width:100%; height:48px; overflow:hidden; margin-bottom:12px; pointer-events:none; }
+.dw-foot-toran .dw-toran{ position:absolute; left:0; right:0; top:0; width:100%; height:52px; display:block; }
+
+.festive-greet{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  vertical-align:middle;
+}
+.festive-greet .festive-icon{
+  flex-shrink:0;
+  display:inline-block;
+  vertical-align:middle;
+  filter:drop-shadow(0 2px 8px rgba(245, 158, 11, 0.45));
+}
+.festive-text{
+  display:inline-block;
+}
+/* 5-day festive gradients applied to everyone (both Kaizen and non-Kaizen) */
+.festive-dhanteras{
+  background:linear-gradient(135deg, #ffd700 0%, #f59e0b 45%, #e11d48 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-chhoti{
+  background:linear-gradient(135deg, #fef08a 0%, #fb923c 45%, #f43f5e 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-diwali{
+  background:linear-gradient(135deg, #fef08a 0%, #f59e0b 35%, #e11d48 70%, #be123c 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-govardhan{
+  background:linear-gradient(135deg, #34d399 0%, #10b981 40%, #f59e0b 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+.festive-bhaidooj{
+  background:linear-gradient(135deg, #fb7185 0%, #e11d48 45%, #f97316 100%) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:none !important;
+}
+
 .dw-ladi{ position:relative; width:100%; pointer-events:none; overflow:hidden; }
 .dw-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
 .dw-ladi-foot{ display:block; width:100%; height:30px; margin-bottom:8px; }

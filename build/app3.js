@@ -3029,6 +3029,50 @@ function watchGreeting(){
 function kzNameHtml(entry, text){
   return isKaizenUser(entry) ? '<span class="kz-name">' + escapeHtml(text) + '</span>' : escapeHtml(text);
 }
+// Diwali 5-day festival greetings (6, 7, 8, 9, 10 Nov):
+// Day 1 (Nov 6): Dhanteras — wealth, gold/silver, jewelry, coins, Lakshmi & Kubera.
+// Day 2 (Nov 7): Chhoti Diwali / Roop Chaudas — sparklers, beauty/radiance, dawn oil bath.
+// Day 3 (Nov 8): Deepawali / Lakshmi Puja — festival of lights, illuminated diyas, prosperity.
+// Day 4 (Nov 9): Govardhan Puja / Annakut — sacred mountain, peacock feather, 56 offerings.
+// Day 5 (Nov 10): Bhai Dooj / Yama Dwitiya — sacred tilak, sibling bond, protection and blessings.
+function festiveDayInfo(iso){
+  var d = iso || todayISO();
+  var md = d.slice(5); // 'MM-DD'
+  var FESTIVE_DAYS = {
+    '11-06': {
+      key: 'dhanteras',
+      title: 'Shubh Dhanteras',
+      cls: 'festive-dhanteras',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwGoldGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffe066"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/></linearGradient><radialGradient id="dwRubyGrad" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#ff6b8b"/><stop offset="60%" stop-color="#e11d48"/><stop offset="100%" stop-color="#881337"/></radialGradient></defs><path d="M2 3 Q12 10 22 3" fill="none" stroke="url(#dwGoldGrad)" stroke-width="1.8" stroke-linecap="round"/><circle cx="7" cy="5.5" r="1.2" fill="#ffe066"/><circle cx="17" cy="5.5" r="1.2" fill="#ffe066"/><circle cx="12" cy="8.5" r="1.8" fill="url(#dwGoldGrad)"/><polygon points="12,11 17,15 12,21 7,15" fill="url(#dwRubyGrad)" stroke="url(#dwGoldGrad)" stroke-width="1"/><polygon points="12,11 15,15 12,17 9,15" fill="#fda4af" opacity=".7"/><circle cx="12" cy="22.5" r="1.2" fill="url(#dwGoldGrad)"/></svg>'
+    },
+    '11-07': {
+      key: 'chhoti',
+      title: 'Shubh Chhoti Diwali',
+      cls: 'festive-chhoti',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwSparkGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fffbeb"/><stop offset="50%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs><line x1="4" y1="20" x2="14" y2="10" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="10" r="2.5" fill="#fef08a"/><path d="M14 4 L14 7 M14 13 L14 16 M8 10 L11 10 M17 10 L20 10 M10 6 L12 8 M16 12 L18 14 M18 6 L16 8 M12 12 L10 14" stroke="url(#dwSparkGrad)" stroke-width="1.5" stroke-linecap="round"/><circle cx="19" cy="5" r="1" fill="#f59e0b"/><circle cx="9" cy="4" r="0.8" fill="#fbbf24"/><circle cx="20" cy="12" r="1" fill="#fbbf24"/></svg>'
+    },
+    '11-08': {
+      key: 'diwali',
+      title: 'Shubh Deepawali',
+      cls: 'festive-diwali',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwDiwaliClay" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient><linearGradient id="dwDiwaliFlame" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#ef4444"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fef08a"/></linearGradient></defs><path d="M3 14 C5 21 19 21 21 14 Z" fill="url(#dwDiwaliClay)"/><ellipse cx="12" cy="14" rx="9" ry="2.5" fill="#fde68a"/><path d="M12 13 C9.5 9 10.5 4 12 1 C13.5 4 14.5 9 12 13 Z" fill="url(#dwDiwaliFlame)"/><circle cx="19" cy="6" r="1" fill="#fde68a"/><circle cx="5" cy="8" r="0.8" fill="#fde68a"/></svg>'
+    },
+    '11-09': {
+      key: 'govardhan',
+      title: 'Shubh Govardhan Puja',
+      cls: 'festive-govardhan',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwPeacockStem" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#047857"/><stop offset="100%" stop-color="#10b981"/></linearGradient><radialGradient id="dwPeacockEye" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#3b82f6"/><stop offset="45%" stop-color="#06b6d4"/><stop offset="70%" stop-color="#10b981"/><stop offset="90%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#047857"/></radialGradient></defs><path d="M5 21 C10 16 14 11 16 3" fill="none" stroke="url(#dwPeacockStem)" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="16" cy="7" rx="5.5" ry="4" transform="rotate(-35 16 7)" fill="url(#dwPeacockEye)"/><ellipse cx="16" cy="7" rx="2.5" ry="1.8" transform="rotate(-35 16 7)" fill="#1e3a8a"/><circle cx="15.5" cy="6.5" r="0.8" fill="#60a5fa"/></svg>'
+    },
+    '11-10': {
+      key: 'bhaidooj',
+      title: 'Shubh Bhai Dooj',
+      cls: 'festive-bhaidooj',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwTilakGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="40%" stop-color="#dc2626"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs><path d="M7 6 C7 14 17 14 17 6" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3 C10.8 7 10.8 14 12 17 C13.2 14 13.2 7 12 3 Z" fill="url(#dwTilakGrad)"/><ellipse cx="12" cy="11" rx="0.9" ry="1.6" fill="#fef08a"/><ellipse cx="10.8" cy="13" rx="0.8" ry="1.4" fill="#ffffff" transform="rotate(-15 10.8 13)"/><ellipse cx="13.2" cy="13" rx="0.8" ry="1.4" fill="#ffffff" transform="rotate(15 13.2 13)"/></svg>'
+    }
+  };
+  return FESTIVE_DAYS[md] || null;
+}
+
 function renderHeader(student){
   var branchName = DATA.branchNames[student.branch] || student.branch;
   document.getElementById('eyebrow').textContent = student.division+' · Academic Group '+(student.academicGroup||'—')+(student.ismpGroup?' · ISMP Group '+student.ismpGroup:'');
@@ -3038,9 +3082,15 @@ function renderHeader(student){
   var headerRoles = personRolesFor(student.entry);
   if(headerRoles.isCreator) roleBadge = ' <span class="role-pill creator"><span class="role-pill-icon">👑</span>Creator</span>';
   else if(headerRoles.isContributor || headerRoles.verifiedRecs.length) roleBadge = ' <span class="role-pill contributor" data-contributor-entry="'+student.entry+'" title="Tap to see contributor info"><span class="role-pill-icon">⭐</span>Contributor</span>';
-  var greetHtml = isKaizenUser(student.entry)
-    ? '<span class="greet-text kz-greet">' + kzGreeting(student.entry) + ', <span class="greet-name">' + escapeHtml(firstName) + '-' + kzHonorific(student.entry) + '</span></span>'
-    : '<span class="greet-text">Hi, ' + escapeHtml(firstName) + '</span>';
+  var fest = festiveDayInfo();
+  var greetHtml = '';
+  if(fest){
+    greetHtml = '<span class="greet-text kz-greet festive-greet ' + fest.cls + '">' + fest.svg + '<span class="festive-text">' + fest.title + ', <span class="greet-name">' + escapeHtml(firstName) + '</span></span></span>';
+  } else if(isKaizenUser(student.entry)){
+    greetHtml = '<span class="greet-text kz-greet">' + kzGreeting(student.entry) + ', <span class="greet-name">' + escapeHtml(firstName) + '-' + kzHonorific(student.entry) + '</span></span>';
+  } else {
+    greetHtml = '<span class="greet-text">Hi, ' + escapeHtml(firstName) + '</span>';
+  }
   document.getElementById('greeting').innerHTML = greetHtml + roleBadge;
   fitGreeting();
   watchGreeting();
@@ -3243,7 +3293,7 @@ function initSettings(){
     if(darkBtn){
       var syncDarkBtn = function(){
         var isDark = currentColorTheme === 'paper-dark';
-        darkBtn.textContent = isDark ? 'Try Clay' : 'Try Clay Dark';
+        darkBtn.textContent = isDark ? 'Try Light Mode' : 'Try Clay Dark';
         if(keepBtn) keepBtn.textContent = isDark ? 'Keep Clay Dark' : 'Keep Clay';
       };
       darkBtn.onclick = function(){

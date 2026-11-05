@@ -46,6 +46,7 @@ window.__debug = {
   groupTimeline: groupTimeline, groupShortNames: groupShortNames, renderGroupsPanel: renderGroupsPanel,
   createGroup: createGroup, loadGroups: loadGroups, groupsState: groupsState, messMenuEntryFor: messMenuEntryFor,
   contributionSummaryFor: (typeof contributionSummaryFor!=='undefined')?contributionSummaryFor:undefined,
+  festiveDayInfo: (typeof festiveDayInfo!=='undefined')?festiveDayInfo:undefined,
 };
 `;
 const appJsWithHooks = appJs.slice(0, marker) + HOOKS + appJs.slice(marker);
@@ -175,7 +176,7 @@ allPass &= runScenario('sanity: boot as a normal AIDE student, greeting shows th
   const dbg = win.__debug;
   assert(dbg.state.student.entry === '2026AIB1001', 'booted as the right student');
   const greeting = doc.getElementById('greeting').innerHTML;
-  assert(/Hi,/.test(greeting), 'greeting rendered: ' + greeting);
+  assert(/(?:Hi|Shubh \w+),/.test(greeting), 'greeting rendered: ' + greeting);
 });
 
 allPass &= runScenario('role ranking: creator outranks verified+BR on their own card', '2026AIB1099', {}, (win, doc) => {
@@ -328,13 +329,13 @@ allPass &= runScenario('Nishtha (2026MEB1605): default greeting uses the naive f
   const dbg = win.__debug;
   assert(dbg.DATA.roster['2026MEB1605'].name.trim().startsWith('CHAUDHARI'), 'her official record is surname-first');
   const greeting = doc.getElementById('greeting').innerHTML;
-  assert(/Hi, Chaudhari/.test(greeting), 'without an alias, the greeting naively shows "Chaudhari": ' + greeting);
+  assert(/(?:Hi|Shubh \w+),\s*(?:<[^>]+>)*Chaudhari/.test(greeting), 'without an alias, the greeting naively shows "Chaudhari": ' + greeting);
 });
 allPass &= runScenario('setting a personal display-name alias changes her own greeting immediately', '2026MEB1605', {}, (win, doc) => {
   const dbg = win.__debug;
   dbg.setNameAlias('Nishtha');
   const greeting = doc.getElementById('greeting').innerHTML;
-  assert(/Hi, Nishtha/.test(greeting), 'greeting now says "Hi, Nishtha": ' + greeting);
+  assert(/(?:Hi|Shubh \w+),\s*(?:<[^>]+>)*Nishtha/.test(greeting), 'greeting now says "Nishtha": ' + greeting);
   dbg.syncNameAliasField();
   const input = doc.getElementById('nameAliasInput');
   assert(input.value === 'Nishtha', 'settings field reflects the saved alias: ' + input.value);
@@ -347,15 +348,15 @@ allPass &= runScenario('the alias is local-only: it does not change how she appe
   const nishtha = dbg.DATA.roster['2026MEB1605'];
   dbg.viewStudent(nishtha);
   const greeting = doc.getElementById('greeting').innerHTML;
-  assert(/Hi, Chaudhari/.test(greeting), 'viewing her as a classmate (not logged in as her) shows her real name, not the alias: ' + greeting);
+  assert(/(?:Hi|Shubh \w+),\s*(?:<[^>]+>)*Chaudhari/.test(greeting), 'viewing her as a classmate (not logged in as her) shows her real name, not the alias: ' + greeting);
 });
 allPass &= runScenario('clearing the alias (empty input) reverts to the real name', '2026MEB1605', {}, (win, doc) => {
   const dbg = win.__debug;
   dbg.setNameAlias('Nishtha');
-  assert(/Hi, Nishtha/.test(doc.getElementById('greeting').innerHTML), 'alias applied');
+  assert(/(?:Hi|Shubh \w+),\s*(?:<[^>]+>)*Nishtha/.test(doc.getElementById('greeting').innerHTML), 'alias applied');
   dbg.setNameAlias('');
   const greeting = doc.getElementById('greeting').innerHTML;
-  assert(/Hi, Chaudhari/.test(greeting), 'empty alias reverts to the real first-token name: ' + greeting);
+  assert(/(?:Hi|Shubh \w+),\s*(?:<[^>]+>)*Chaudhari/.test(greeting), 'empty alias reverts to the real first-token name: ' + greeting);
   assert(!('2026MEB1605' in dbg.currentNameAliases), 'empty alias is removed from storage, not saved as an empty string');
 });
 
@@ -1700,6 +1701,27 @@ allPass &= runSpectateScenario('set queries give the same students as a direct r
   assert(E.queryEval([S('div:D1')], aide).idxs.every((i) => E.ROSTER[i].branch === 'AIDE'), 'results never leave the branch');
   const sel = E.evalSelection([{ op: 'expr', tokens: cases[0][0] }]);
   assert(sel.length === cases[0][1], 'a query used as the selection gives the same students');
+});
+
+allPass &= runScenario('festive greetings: Nov 6-10 render Dhanteras, Chhoti Diwali, Deepawali, Govardhan Puja, Bhai Dooj with festive gradients', '2026AIB1001', {}, (win, doc) => {
+  const dbg = win.__debug;
+  const days = [
+    { iso: '2026-11-06', title: 'Shubh Dhanteras', cls: 'festive-dhanteras' },
+    { iso: '2026-11-07', title: 'Shubh Chhoti Diwali', cls: 'festive-chhoti' },
+    { iso: '2026-11-08', title: 'Shubh Deepawali', cls: 'festive-diwali' },
+    { iso: '2026-11-09', title: 'Shubh Govardhan Puja', cls: 'festive-govardhan' },
+    { iso: '2026-11-10', title: 'Shubh Bhai Dooj', cls: 'festive-bhaidooj' },
+  ];
+  days.forEach(d => {
+    const f = dbg.festiveDayInfo(d.iso);
+    assert(f && f.title === d.title, 'title matches for ' + d.iso + ': ' + (f ? f.title : 'null'));
+    assert(f && f.cls === d.cls, 'class matches for ' + d.iso + ': ' + (f ? f.cls : 'null'));
+  });
+  assert(dbg.festiveDayInfo('2026-11-11') === null, 'Nov 11 has no festive greeting override');
+  // Check greeting rendering on today (Nov 6)
+  const greeting = doc.getElementById('greeting').innerHTML;
+  assert(/festive-greet/.test(greeting), 'festive greeting rendered on page: ' + greeting);
+  assert(/Shubh Dhanteras/.test(greeting), 'Shubh Dhanteras in greeting: ' + greeting);
 });
 
 console.log(allPass ? '\nALL SCENARIOS PASSED' : '\nSOME SCENARIOS FAILED');

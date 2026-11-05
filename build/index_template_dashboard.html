@@ -61,10 +61,10 @@ window.__overlayFast = (function(){
 })();
 </script>
 <meta name="description" content="THIRTY@RPR — 2026-2030 batch portal: your days, classes &amp; mess timings in one place.">
-<meta name="theme-color" content="#0d1117">
-<link rel="icon" type="image/png" sizes="64x64" href="/icons/v2/favicon-64.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/icons/v2/icon-192.png">
-<link rel="apple-touch-icon" href="/icons/v2/apple-touch-180.png">
+<meta name="theme-color" content="#171114">
+<link rel="icon" type="image/png" sizes="64x64" href="/icons/v3/favicon-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icons/v3/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/v3/apple-touch-180.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -72,7 +72,7 @@ window.__overlayFast = (function(){
 <meta name="apple-mobile-web-app-title" content="THIRTY@RPR">
 <meta property="og:title" content="THIRTY@RPR">
 <meta property="og:description" content="2026-2030 batch portal: your days, classes &amp; mess timings in one place.">
-<meta property="og:image" content="/icons/icon-512.png">
+<meta property="og:image" content="/icons/v3/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&display=swap" media="print" onload="this.media='all'">
@@ -2842,6 +2842,7 @@ window.__overlayFast = (function(){
     header > .toggle-row{ display:contents; }
     header > #searchBtn, header > #brToolsBtn, header > #settingsBtn,
     header .toggle-row > .cal-toggle{ margin:0 0 6px; flex:none; } /* no phone-row stretching here */
+    header > #searchBtn, .search-toggle{ right:auto !important; left:auto !important; }
     header > #searchBtn{ order:2; }
     /* Buttons sit at the bottom of the sidebar: the spacer (right after the identity block, same
        order group) takes all spare height, but never less than the old 14px gap. */
@@ -3271,7 +3272,7 @@ var ROLES = {
       <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
       <div class="theme-banner-actions">
         <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Clay Dark</button>
-        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Clay</button>
+        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Light Mode</button>
         <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
       </div>
     </div>
@@ -3328,7 +3329,14 @@ window.__liveOverlayExpected = true;   // live_overlay_bridge.js below will deli
 <script>
 if('serviceWorker' in navigator){
   window.addEventListener('load', function(){
-    navigator.serviceWorker.register('/sw.js').catch(function(){});
+    navigator.serviceWorker.register('/sw.js').then(function(reg){
+      if(reg){
+        reg.update();
+        document.addEventListener('visibilitychange', function(){
+          if(document.visibilityState === 'visible') reg.update();
+        });
+      }
+    }).catch(function(){});
   });
 }
 </script>

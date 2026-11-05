@@ -1,5 +1,13 @@
 /* Paper Dark: hand-tuned extras. All other paper-dark rules are generated from Paper by splice.py (paper_dark_css). */
 body[data-theme="paper-dark"]{
+  --bg:#171114 !important;
+  --bg2:#1e1619 !important;
+  --card:#241b1f !important;
+  --card2:#2e2328 !important;
+  --line:#3d3034 !important;
+  --kz-1:#9d174d !important;
+  --kz-2:#db2777 !important;
+  --kz-3:#f43f5e !important;
   --head-bg:rgba(36,27,31,.96);
   --paper-sheet:linear-gradient(168deg, #2a2024 0%, #261c20 58%, #201719 100%);
   --paper-shadow:

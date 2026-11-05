@@ -14,6 +14,7 @@
     --teal:#39c5cf; --teal-soft:rgba(57,197,207,0.14);
     --rose:#f47174; --rose-soft:rgba(244,113,116,0.14);
     --violet:#bc8cff; --violet-soft:rgba(188,140,255,0.14);
+    --kz-1:#9d174d; --kz-2:#db2777; --kz-3:#f43f5e;
     --head-bg:rgba(13,17,23,0.62);
   }
   /* Graphite (GitHub Dark Classic) — grey chrome, colour from the syntax palette; [ok] = tag green. */
@@ -29,6 +30,7 @@
     --teal:#79b8ff; --teal-soft:rgba(121,184,255,0.13);
     --rose:#f97583; --rose-soft:rgba(249,117,131,0.13);
     --violet:#b392f0; --violet-soft:rgba(179,146,240,0.13);
+    --kz-1:#b392f0; --kz-2:#79b8ff; --kz-3:#d1d5da;
     --head-bg:rgba(31,36,40,0.72);
   }
   body[data-theme="forest"]{
@@ -56,6 +58,7 @@
     --teal:#8a3b2a; --teal-soft:rgba(138,59,42,0.12);
     --rose:#e11d48; --rose-soft:rgba(225,29,72,0.08);
     --violet:#7e2a5e; --violet-soft:rgba(126,42,94,0.12);
+    --kz-1:#9d174d; --kz-2:#db2777; --kz-3:#f43f5e;
     --head-bg:rgba(255,255,255,0.96);
     --paper-sheet:linear-gradient(168deg, #ffffff 0%, #ffffff 58%, #f8f8f7 100%);
     --paper-shadow:
@@ -70,6 +73,16 @@
 --pin-rose:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 56' width='44' height='56'%3E%3Cdefs%3E%3ClinearGradient id='h' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23e11d48'/%3E%3Cstop offset='.28' stop-color='%23ff8fab'/%3E%3Cstop offset='.62' stop-color='%23e11d48'/%3E%3Cstop offset='1' stop-color='%237f1137'/%3E%3C/linearGradient%3E%3ClinearGradient id='m' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%238d8780'/%3E%3Cstop offset='.45' stop-color='%23f3efea'/%3E%3Cstop offset='1' stop-color='%236d675f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M9 50 L36 56 Q43 55 40 50 L30 42 Q24 40 20 42Z' fill='%232a1a14' opacity='.2'/%3E%3Cpath d='M9 50 L24 50 Q30 50 28 46 L22 41Z' fill='%232a1a14' opacity='.28'/%3E%3Cg transform='rotate%2824 9 50%29'%3E%3Cpath d='M8.2 31 h1.6 l-.8 19z' fill='url%28%23m%29'/%3E%3Cpath d='M1 31 Q9 26 17 31 Q17 34 9 34.5 Q1 34 1 31z' fill='url%28%23h%29'/%3E%3Cpath d='M4.2 30 C5 23 5.3 17 4.6 11 L13.4 11 C12.7 17 13 23 13.8 30 Q9 33 4.2 30z' fill='url%28%23h%29'/%3E%3Cpath d='M1.4 9.5 Q9 5 16.6 9.5 Q17.5 12.5 9 13.4 Q.5 12.5 1.4 9.5z' fill='url%28%23h%29'/%3E%3Cellipse cx='9' cy='8.6' rx='7.2' ry='2.5' fill='%23ff8fab'/%3E%3Cellipse cx='6.6' cy='8.1' rx='2.8' ry='.9' fill='%23fff' opacity='.75'/%3E%3C/g%3E%3C/svg%3E");
     --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     font-family:var(--paper-font);
+  }
+  body[data-theme="paper-dark"]{
+    --bg:#171114 !important;
+    --bg2:#1e1619 !important;
+    --card:#241b1f !important;
+    --card2:#2e2328 !important;
+    --line:#3d3034 !important;
+    --kz-1:#9d174d !important;
+    --kz-2:#db2777 !important;
+    --kz-3:#f43f5e !important;
   }
   html body[data-theme="paper"] ::-webkit-calendar-picker-indicator{ filter:invert(.8); }
   html body[data-theme="paper"] select option{ background:#ffffff; color:var(--ink); }
