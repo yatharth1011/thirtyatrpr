@@ -1613,17 +1613,17 @@ var SUBJECT_COLORS = {
 };
 var FALLBACK_COLORS = ['#da6662','#da9a62','#dac262','#62daaa','#62dad6','#62b6da','#6286da','#9662da','#da62a2'];
 var SUBJECT_COLORS_PAPER = {
-  AI101:'#be123c', MA101:'#b45309', PH101:'#5f6f2a', CY101:'#7e2a5e', CS100:'#9d174d',
-  TL101:'#8a3b2a', WP101:'#c2410c', NCC:'#6b5a4e', LIFESKILL:'#8a7a6d', NO101:'#4d6b4f',
-  HS110:'#db2777', HS111:'#a16207', HS112:'#8a3b2a', HS113:'#7e2a5e', IK101:'#4d7c0f'
+  AI101:'#3f66ad', MA101:'#9c7f1f', PH101:'#2a8a64', CY101:'#b8443f', CS100:'#7342b3',
+  TL101:'#2c7fa3', WP101:'#b06a26', NCC:'#667079', LIFESKILL:'#667079', NO101:'#22817d',
+  HS110:'#b53a7a', HS111:'#9c7f1f', HS112:'#2c7fa3', HS113:'#7342b3', IK101:'#1b8a5f'
 };
-var FALLBACK_COLORS_PAPER = ['#be123c','#b45309','#5f6f2a','#7e2a5e','#9d174d','#8a3b2a','#c2410c','#db2777','#4d7c0f'];
+var FALLBACK_COLORS_PAPER = ['#b8443f','#b06a26','#9c7f1f','#2a8a64','#22817d','#2c7fa3','#3f66ad','#7342b3','#b53a7a'];
 var SUBJECT_COLORS_PAPER_DARK = {
-  AI101:'#fda4af', MA101:'#f0b775', PH101:'#c5d08a', CY101:'#e3a6d0', CS100:'#f9a8c4',
-  TL101:'#e8a98f', WP101:'#f2a66f', NCC:'#c4b5a8', LIFESKILL:'#b3a497', NO101:'#a9c7a4',
-  HS110:'#f472b6', HS111:'#e6bf7e', HS112:'#e8a98f', HS113:'#e3a6d0', IK101:'#b9d48a'
+  AI101:'#8fabe6', MA101:'#e0c97a', PH101:'#84dcb6', CY101:'#ec8f8b', CS100:'#b796ea',
+  TL101:'#8ccbe8', WP101:'#e6b07c', NCC:'#a9b1ba', LIFESKILL:'#a9b1ba', NO101:'#84dcd8',
+  HS110:'#ec8fc0', HS111:'#e0c97a', HS112:'#8ccbe8', HS113:'#b796ea', IK101:'#6fd8ac'
 };
-var FALLBACK_COLORS_PAPER_DARK = ['#fda4af','#f0b775','#c5d08a','#e3a6d0','#f9a8c4','#e8a98f','#f2a66f','#f472b6','#b9d48a'];
+var FALLBACK_COLORS_PAPER_DARK = ['#ec8f8b','#e6b07c','#e0c97a','#84dcb6','#84dcd8','#8ccbe8','#8fabe6','#b796ea','#ec8fc0'];
 function subjectColor(code){
   var isPaper = false;
   try { isPaper = (typeof document !== 'undefined' && document.body && document.body.getAttribute('data-theme') === 'paper') || (typeof localStorage !== 'undefined' && localStorage.getItem('thirtyatrpr_color_theme') === 'paper'); } catch(e){}

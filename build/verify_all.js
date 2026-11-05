@@ -1545,6 +1545,20 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     console.log(ok ? 'PASS' : 'FAIL', f + ': braces balance');
     allPass &= ok;
   }
+  // A subject keeps its hue in every theme: Clay may retone a colour, never swap it for another one
+  for (const f of ['app3.js', 'engine.js']) {
+    const src = fs2.readFileSync(__dirname + '/' + f, 'utf8');
+    const pal = (n) => Object.fromEntries([...src.match(new RegExp('var ' + n + ' = \\{([\\s\\S]*?)\\};'))[1].matchAll(/(\w+):'(#[0-9a-fA-F]{6})'/g)].map((m) => [m[1], m[2]]));
+    const list = (n) => [...src.match(new RegExp('var ' + n + ' = \\[(.*?)\\]'))[1].matchAll(/#[0-9a-fA-F]{6}/g)].map((m) => m[0]);
+    const hue = (c) => { const [r, g, b] = [1, 3, 5].map((i) => parseInt(c.slice(i, i + 2), 16)); const M = Math.max(r, g, b), d = M - Math.min(r, g, b); if (!d) return 0; const h = M === r ? ((g - b) / d + 6) % 6 : M === g ? (b - r) / d + 2 : (r - g) / d + 4; return h * 60; };
+    const near = (a, b) => { const d = Math.abs(hue(a) - hue(b)); return Math.min(d, 360 - d) <= 12; };
+    const base = pal('SUBJECT_COLORS'), bad = [];
+    for (const n of ['SUBJECT_COLORS_PAPER', 'SUBJECT_COLORS_PAPER_DARK']) { const p = pal(n); for (const k of Object.keys(base)) if (!p[k] || !near(base[k], p[k])) bad.push(n + ':' + k); }
+    const fb = list('FALLBACK_COLORS');
+    for (const n of ['FALLBACK_COLORS_PAPER', 'FALLBACK_COLORS_PAPER_DARK']) list(n).forEach((c, i) => { if (!near(fb[i], c)) bad.push(n + '[' + i + ']'); });
+    console.log(bad.length ? 'FAIL' : 'PASS', f + ': every subject keeps its hue in Clay and Clay Dark ' + bad.join(' '));
+    allPass &= !bad.length;
+  }
   // sub_theme.css has the Paper theme CSS block (variables + element overrides)
   const sub = fs2.readFileSync(__dirname + '/sub_theme.css', 'utf8');
   const okPaperSub = /body\[data-theme="paper"\]/.test(sub) && /--bg:#ffffff/.test(sub) && /Bodoni Moda/.test(sub) && /theme-dot-paper/.test(sub);
