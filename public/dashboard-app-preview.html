@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793901052';
+    var curToken = '1793901459';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -228,6 +228,8 @@ window.__overlayFast = (function(){
   /* ---------- Paper Theme (white page, Bodoni type, cut-out cards) ---------- */
   body[data-theme="paper"]{
     --paper:#ffffff;
+    --paper-board:radial-gradient(rgba(112,84,70,.20) 1px, transparent 1.3px), radial-gradient(rgba(255,255,255,.40) 1px, transparent 1.3px);
+    --paper-pin:radial-gradient(circle at 35% 30%, #ffd9e2 0, #f43f5e 28%, #9d174d 82%);
     --paper-sheet:linear-gradient(168deg, #ffffff 0%, #ffffff 58%, #f8f8f7 100%);
     --paper-shadow:
       inset 0 1px 0 #ffffff,
@@ -237,7 +239,7 @@ window.__overlayFast = (function(){
       0 1px 1px rgba(17,18,19,.16),
       0 3px 6px -2px rgba(17,18,19,.12),
       0 16px 18px -14px rgba(17,18,19,.30);
-    --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
+    --paper-font:'Paper Dash', 'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     --rule:#111213;
     --soft:#374151;
 
@@ -1574,7 +1576,20 @@ window.__overlayFast = (function(){
 
   /* Paper: paper cut-outs laid on a white page. Cards are white sheets with square corners: shading inside the edges, a lit top edge, and a shadow gathered under the bottom edge.
      Plain box-shadows only: filters and textures here made phones scroll badly. */
-  html:has(body[data-theme="paper"]){ color-scheme:light; }
+  html:has(body[data-theme="paper"]){ color-scheme:only light; }
+  /* Bodoni's hairlines vanish on phones (that is the wanted lambda A) and would take the dashes with them */
+  @font-face{ font-family:'Paper Dash'; unicode-range:U+2D, U+2F, U+2013-2014; src:local('Noto Serif'), local('NotoSerif'), local('Times New Roman'), local('Georgia'); }
+  /* Paper: Bodoni at its display cut everywhere, whose hairline crossbar makes the A read as a lambda */
+  html body[data-theme="paper"], html body[data-theme="paper"] button, html body[data-theme="paper"] input,
+  html body[data-theme="paper"] select, html body[data-theme="paper"] textarea{
+    font-optical-sizing:none; font-variation-settings:'opsz' 96;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  /* A pegboard behind the sheets. Two dot layers, painted once. */
+  html body[data-theme="paper"], html body[data-theme="paper"].glass{
+    background-color:#e6dbd3 !important; background-image:var(--paper-board) !important;
+    background-size:16px 16px !important; background-position:0 0, 8px 8px !important;
+  }
   /* Bodoni italics overhang their box: keep the last letter inside the gradient */
   html body[data-theme="paper"] .greet-text{ padding-right:.12em; box-sizing:border-box; }
   html body[data-theme="paper"] main .daycard,
@@ -1586,9 +1601,43 @@ window.__overlayFast = (function(){
     border-radius:2px !important;
     box-shadow:var(--paper-shadow) !important;
   }
+  /* Each sheet is framed by a printed rule and pinned to the board at its top edge */
+  html body[data-theme="paper"] main .daycard,
+  html body[data-theme="paper"] main .panel,
+  html body[data-theme="paper"] main .kz-panel{
+    position:relative;
+    outline:1px solid rgba(17,18,19,.17); outline-offset:-7px;
+    overflow:visible;
+  }
+  html body[data-theme="paper"] main .daycard::after,
+  html body[data-theme="paper"] main .panel::after,
+  html body[data-theme="paper"] main .kz-panel::after{
+    content:"" !important; display:block; position:absolute; inset:auto; top:-7px; left:50%; margin-left:-8px;
+    width:16px; height:16px; padding:0; border-radius:50%; z-index:3; pointer-events:none;
+    background:var(--paper-pin) !important; opacity:1 !important; filter:none !important; animation:none !important;
+    -webkit-mask:none !important; mask:none !important;
+    box-shadow:0 1px 1px rgba(60,20,30,.35), 3px 6px 5px -1px rgba(40,25,20,.38);
+  }
   html body[data-theme="paper"] main .panel .panel,
   html body[data-theme="paper"] main .daycard .panel,
-  html body[data-theme="paper"] main .panel .daycard{ background:transparent !important; box-shadow:none !important; }
+  html body[data-theme="paper"] main .panel .daycard{ background:transparent !important; box-shadow:none !important; outline:none; }
+  html body[data-theme="paper"] main .panel .panel::after,
+  html body[data-theme="paper"] main .daycard .panel::after,
+  html body[data-theme="paper"] main .panel .daycard::after{ content:none !important; }
+  /* The sidebar is a long sheet of its own: shaded toward the fold, casting onto the board */
+  html body[data-theme="paper"] header,
+  html body[data-theme="paper"].glass header{
+    background:linear-gradient(90deg, #ffffff 0%, #ffffff 62%, #f6f5f3 100%) !important;
+    border:none !important;
+    box-shadow:inset -1px 0 0 rgba(17,18,19,.07), inset -20px 0 24px -22px rgba(17,18,19,.20), 2px 0 3px rgba(17,18,19,.12), 16px 0 22px -16px rgba(17,18,19,.32) !important;
+  }
+  @media (max-width: 959px){
+    html body[data-theme="paper"] header,
+    html body[data-theme="paper"].glass header{
+      background:linear-gradient(180deg, #ffffff 0%, #ffffff 70%, #f6f5f3 100%) !important;
+      box-shadow:inset 0 -1px 0 rgba(17,18,19,.07), inset 0 -18px 22px -20px rgba(17,18,19,.18), 0 2px 3px rgba(17,18,19,.12), 0 14px 18px -14px rgba(17,18,19,.32) !important;
+    }
+  }
   html body[data-theme="paper"] .ev-card,
   html body[data-theme="paper"].glass .ev-card,
   html body[data-theme="paper"] .kz-strip,
@@ -1627,8 +1676,7 @@ window.__overlayFast = (function(){
   html body[data-theme="paper"].glass .daychip{ box-shadow:none !important; }
   html body[data-theme="paper"] .mini-bar{
     background:#ffffff !important;
-    border-bottom:1px solid var(--line);
-    box-shadow:none !important;
+    box-shadow:inset 0 -1px 0 rgba(17,18,19,.07), 0 2px 3px rgba(17,18,19,.12), 0 14px 18px -14px rgba(17,18,19,.32) !important;
   }
   html body[data-theme="paper"] .mini-bar button{
     background:#ffffff !important;
@@ -3347,7 +3395,7 @@ var ROLES = {
     <div class="theme-banner-content">
       <div class="theme-banner-eyebrow">✦ New Theme Added</div>
       <div class="theme-banner-title">Paper — Minimalist Serif Theme</div>
-      <div class="theme-banner-desc">Black ink on white paper, with cards cut out and laid on the page. We’ve set this as your default.</div>
+      <div class="theme-banner-desc">Black ink on white paper, pinned up on a board. We’ve set this as your default.</div>
       <div class="theme-banner-actions">
         <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Paper</button>
         <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
