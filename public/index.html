@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793912136';
+    var curToken = '1793914294';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -1749,6 +1749,7 @@ window.__overlayFast = (function(){
       position:fixed; left:0; top:-56px; height:calc(100vh + 112px);
       scrollbar-width:none;
       padding-top:82px !important; padding-bottom:82px !important;
+      padding-right:38px !important;
     }
     html body[data-theme="paper"] header::-webkit-scrollbar{ display:none; }
     html body[data-theme="paper"] .main-col{ margin-left:280px; }
@@ -2720,13 +2721,14 @@ window.__overlayFast = (function(){
   /* Phone: one column, with the exam tracker ahead of Kaizen (today, mess, tracker, Kaizen, heat strip). */
   @media (max-width: 719px){
     main{ display:flex; flex-direction:column; }
-    .panel-grid, .mid-stack, .side-stack{ display:contents; }
+    .panel-grid, .mid-stack, .side-stack, .mess-stack{ display:contents; }
     #mismatchBanner{ order:0; }
     #todayPanel{ order:1; }
-    .panel-grid > .panel{ order:2; }
+    .panel-grid > .panel, .mess-stack > .panel:not(#paperThemeBanner){ order:2; }
     #examWeekBanner{ order:3; }
-    #kaizenPanel{ order:4; }
-    .heat-panel{ order:5; }
+    #paperThemeBanner{ order:4; }
+    #kaizenPanel{ order:5; }
+    .heat-panel{ order:6; }
   }
 
   /* Narrow desktop / tablet: mess + mid-sem panels sit side by side (a light 2-up grid) purely so
@@ -2734,10 +2736,8 @@ window.__overlayFast = (function(){
   @media (min-width: 720px){
     .panel-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start; }
     .panel-grid .panel{ margin-bottom:0; }
-    .mid-stack{ display:flex; flex-direction:column; gap:18px; }
-    /* exam tracker sits above the heat strip, in the same (rightmost) column */
-    .side-stack{ display:flex; flex-direction:column; gap:18px; }
-    .side-stack .panel{ margin-bottom:0; }
+    .mess-stack, .mid-stack, .side-stack{ display:flex; flex-direction:column; gap:18px; }
+    .mess-stack .panel, .side-stack .panel{ margin-bottom:0; }
   }
 
   /* Wide desktop: a real sidebar (nav, identity, live widgets) plus a multi-column panel grid in
@@ -3025,7 +3025,22 @@ body[data-theme="paper-dark"]{
 .wrap > .dw-foot{ margin-top:64px; }   /* /spectate's sticky panel overhangs its row */
 .dw-lights{ display:block; width:100%; height:34px; }
 .dw-scene{ display:flex; align-items:flex-end; justify-content:center; gap:clamp(6px, 2.4vw, 22px); margin-top:4px; }
-.dw-diya{ width:46px; height:58px; flex:0 0 auto; }
+.dw-diya{ width:46px; height:58px; flex:0 0 auto; pointer-events:auto !important; cursor:pointer !important; transition:transform .2s cubic-bezier(.34, 1.56, .64, 1), filter .2s ease; user-select:none; -webkit-tap-highlight-color:transparent; }
+.dw-diya:hover{ transform:scale(1.15) translateY(-3px); filter:drop-shadow(0 0 12px rgba(251, 146, 60, 0.8)) drop-shadow(0 0 20px rgba(244, 63, 94, 0.45)); }
+.dw-diya:active{ transform:scale(0.92) translateY(1px); }
+.dw-diya-burst{ animation:dwDiyaBurst 0.65s cubic-bezier(.22, 1, .36, 1); }
+@keyframes dwDiyaBurst{
+  0%{ transform:scale(1); }
+  25%{ transform:scale(1.36) translateY(-6px); filter:drop-shadow(0 0 16px #fbbf24) drop-shadow(0 0 32px #f43f5e); }
+  60%{ transform:scale(1.08) translateY(-2px); filter:drop-shadow(0 0 14px #fb923c); }
+  100%{ transform:scale(1) translateY(0); filter:none; }
+}
+.dw-diya-burst .dw-flame{ animation:dwFlameFlare 0.65s ease-out forwards !important; transform-origin:33px 42px; }
+@keyframes dwFlameFlare{
+  0%{ transform:scale(1); }
+  35%{ transform:scale(2.1) translateY(-6px); filter:brightness(2) drop-shadow(0 0 8px #fef08a); }
+  100%{ transform:scale(1) translateY(0); filter:brightness(1); }
+}
 .dw-diya svg{ width:100%; height:100%; display:block; overflow:visible; }
 .dw-rangoli{ width:clamp(120px, 34vw, 176px); height:clamp(120px, 34vw, 176px); flex:0 0 auto; }
 .dw-rangoli svg{ width:100%; height:100%; display:block; }
@@ -3045,7 +3060,7 @@ body[data-theme="paper-dark"]{
 .dw-card-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
 
 .boot-log{ position:relative !important; }
-.dw-search-diya, .dw-boot-diya{ position:absolute; pointer-events:none; z-index:5; }
+.dw-search-diya, .dw-boot-diya{ position:absolute; pointer-events:auto !important; cursor:pointer !important; z-index:25; }
 .dw-search-diya .dw-diya, .dw-boot-diya .dw-diya{ width:100%; height:100%; }
 @media (min-width: 960px){
   #searchBtn, .search-toggle{
@@ -3114,36 +3129,68 @@ body[data-theme="paper-dark"]{
 .festive-text{
   display:inline-block;
 }
-/* 5-day festive gradients applied to everyone (both Kaizen and non-Kaizen) */
+/* Festive greeting animated gradients (both Kaizen and non-Kaizen) */
+html body .greet-text.festive-greet.festive-dhanteras,
 .festive-dhanteras{
-  background:linear-gradient(135deg, #ffd700 0%, #f59e0b 45%, #e11d48 100%) !important;
+  background:linear-gradient(135deg, #ffd700 0%, #f59e0b 25%, #e11d48 50%, #f59e0b 75%, #ffd700 100%) !important;
+  background-size:260% 260% !important;
   -webkit-background-clip:text !important;
   -webkit-text-fill-color:transparent !important;
   text-shadow:none !important;
+  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
 }
-.festive-chhoti{
-  background:linear-gradient(135deg, #fef08a 0%, #fb923c 45%, #f43f5e 100%) !important;
+html body .greet-text.festive-greet.festive-roopchaudas,
+html body .greet-text.festive-greet.festive-chhoti,
+.festive-roopchaudas, .festive-chhoti{
+  background:linear-gradient(135deg, #fef08a 0%, #fb923c 25%, #f43f5e 50%, #fb923c 75%, #fef08a 100%) !important;
+  background-size:260% 260% !important;
   -webkit-background-clip:text !important;
   -webkit-text-fill-color:transparent !important;
   text-shadow:none !important;
+  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
 }
+html body .greet-text.festive-greet.festive-diwali,
 .festive-diwali{
-  background:linear-gradient(135deg, #fef08a 0%, #f59e0b 35%, #e11d48 70%, #be123c 100%) !important;
+  background:linear-gradient(135deg, #fef08a 0%, #f59e0b 20%, #e11d48 40%, #be123c 60%, #f59e0b 80%, #fef08a 100%) !important;
+  background-size:260% 260% !important;
   -webkit-background-clip:text !important;
   -webkit-text-fill-color:transparent !important;
   text-shadow:none !important;
+  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
 }
+html body .greet-text.festive-greet.festive-govardhan,
 .festive-govardhan{
-  background:linear-gradient(135deg, #34d399 0%, #10b981 40%, #f59e0b 100%) !important;
+  background:linear-gradient(135deg, #34d399 0%, #10b981 25%, #f59e0b 50%, #10b981 75%, #34d399 100%) !important;
+  background-size:260% 260% !important;
   -webkit-background-clip:text !important;
   -webkit-text-fill-color:transparent !important;
   text-shadow:none !important;
+  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
 }
+html body .greet-text.festive-greet.festive-bhaidooj,
 .festive-bhaidooj{
-  background:linear-gradient(135deg, #fb7185 0%, #e11d48 45%, #f97316 100%) !important;
+  background:linear-gradient(135deg, #fb7185 0%, #e11d48 25%, #f97316 50%, #e11d48 75%, #fb7185 100%) !important;
+  background-size:260% 260% !important;
   -webkit-background-clip:text !important;
   -webkit-text-fill-color:transparent !important;
   text-shadow:none !important;
+  animation:dwFestiveFlow 4.5s ease-in-out infinite alternate !important;
+}
+@keyframes dwFestiveFlow{
+  0%{ background-position:0% 50%; }
+  50%{ background-position:100% 50%; }
+  100%{ background-position:0% 50%; }
+}
+
+#dwFxCanvas{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  pointer-events:none;
+  z-index:999999;
+  display:none;
 }
 
 .dw-ladi{ position:relative; width:100%; pointer-events:none; overflow:hidden; }
@@ -3785,6 +3832,7 @@ html body[data-theme="paper-dark"] .paper-fold header *{ animation:none !importa
       position:fixed; left:0; top:-56px; height:calc(100vh + 112px);
       scrollbar-width:none;
       padding-top:82px !important; padding-bottom:82px !important;
+      padding-right:38px !important;
     }
 html body[data-theme="paper-dark"] header::-webkit-scrollbar{ display:none; }
 html body[data-theme="paper-dark"] .main-col{ margin-left:280px; }
@@ -4417,19 +4465,6 @@ var ROLES = {
 </div>
 
 <main>
-  <div class="panel theme-banner" id="paperThemeBanner" style="display:none;">
-    <div class="theme-banner-content">
-      <div class="theme-banner-title">Clay Dark</div>
-      <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
-      <div class="theme-banner-actions">
-        <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Clay Dark</button>
-        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Light Mode</button>
-        <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
-      </div>
-    </div>
-    <button class="theme-banner-close" id="paperBannerClose" aria-label="Dismiss banner">&times;</button>
-  </div>
-
   <div class="banner" id="mismatchBanner" style="display:none;"></div>
   <div class="panel notice-banner" id="noticeBanner" style="display:none;"></div>
 
@@ -4438,9 +4473,23 @@ var ROLES = {
   </div>
 
   <div class="panel-grid">
-    <div class="panel">
-      <div class="panel-head" id="messPanelHead"><span class="prompt">$</span> mess menu</div>
-      <div id="messPanelBody"></div>
+    <div class="mess-stack">
+      <div class="panel">
+        <div class="panel-head" id="messPanelHead"><span class="prompt">$</span> mess menu</div>
+        <div id="messPanelBody"></div>
+      </div>
+      <div class="panel theme-banner" id="paperThemeBanner" style="display:none;">
+        <div class="theme-banner-content">
+          <div class="theme-banner-title">Clay Dark</div>
+          <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
+          <div class="theme-banner-actions">
+            <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Clay Dark</button>
+            <button class="theme-banner-btn secondary" id="paperBannerDark">Try Light Mode</button>
+            <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
+          </div>
+        </div>
+        <button class="theme-banner-close" id="paperBannerClose" aria-label="Dismiss banner">&times;</button>
+      </div>
     </div>
     <div class="mid-stack">
       <div class="panel kz-panel" id="kaizenPanel" style="display:none;"></div>
@@ -7589,12 +7638,13 @@ function watchGreeting(){
 function kzNameHtml(entry, text){
   return isKaizenUser(entry) ? '<span class="kz-name">' + escapeHtml(text) + '</span>' : escapeHtml(text);
 }
-// Diwali 5-day festival greetings (6, 7, 8, 9, 10 Nov):
+// Diwali festival greetings:
 // Day 1 (Nov 6): Dhanteras — wealth, gold/silver, jewelry, coins, Lakshmi & Kubera.
-// Day 2 (Nov 7): Chhoti Diwali / Roop Chaudas — sparklers, beauty/radiance, dawn oil bath.
+// Day 2 (Nov 7): Roop Chaudas — beauty, radiance, morning ubtan & sparklers.
 // Day 3 (Nov 8): Deepawali / Lakshmi Puja — festival of lights, illuminated diyas, prosperity.
 // Day 4 (Nov 9): Govardhan Puja / Annakut — sacred mountain, peacock feather, 56 offerings.
 // Day 5 (Nov 10): Bhai Dooj / Yama Dwitiya — sacred tilak, sibling bond, protection and blessings.
+// Day 6 (Nov 20): Dev Uthan Gyaras — celebrated as Chhoti Diwali, awakening of Vishnu, Tulsi Vivah.
 function festiveDayInfo(iso){
   var d = iso || todayISO();
   var md = d.slice(5); // 'MM-DD'
@@ -7606,9 +7656,9 @@ function festiveDayInfo(iso){
       svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwGoldGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffe066"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/></linearGradient><radialGradient id="dwRubyGrad" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#ff6b8b"/><stop offset="60%" stop-color="#e11d48"/><stop offset="100%" stop-color="#881337"/></radialGradient></defs><path d="M2 3 Q12 10 22 3" fill="none" stroke="url(#dwGoldGrad)" stroke-width="1.8" stroke-linecap="round"/><circle cx="7" cy="5.5" r="1.2" fill="#ffe066"/><circle cx="17" cy="5.5" r="1.2" fill="#ffe066"/><circle cx="12" cy="8.5" r="1.8" fill="url(#dwGoldGrad)"/><polygon points="12,11 17,15 12,21 7,15" fill="url(#dwRubyGrad)" stroke="url(#dwGoldGrad)" stroke-width="1"/><polygon points="12,11 15,15 12,17 9,15" fill="#fda4af" opacity=".7"/><circle cx="12" cy="22.5" r="1.2" fill="url(#dwGoldGrad)"/></svg>'
     },
     '11-07': {
-      key: 'chhoti',
-      title: 'Shubh Chhoti Diwali',
-      cls: 'festive-chhoti',
+      key: 'roopchaudas',
+      title: 'Shubh Roop Chaudas',
+      cls: 'festive-roopchaudas',
       svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwSparkGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fffbeb"/><stop offset="50%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs><line x1="4" y1="20" x2="14" y2="10" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="10" r="2.5" fill="#fef08a"/><path d="M14 4 L14 7 M14 13 L14 16 M8 10 L11 10 M17 10 L20 10 M10 6 L12 8 M16 12 L18 14 M18 6 L16 8 M12 12 L10 14" stroke="url(#dwSparkGrad)" stroke-width="1.5" stroke-linecap="round"/><circle cx="19" cy="5" r="1" fill="#f59e0b"/><circle cx="9" cy="4" r="0.8" fill="#fbbf24"/><circle cx="20" cy="12" r="1" fill="#fbbf24"/></svg>'
     },
     '11-08': {
@@ -7628,6 +7678,12 @@ function festiveDayInfo(iso){
       title: 'Shubh Bhai Dooj',
       cls: 'festive-bhaidooj',
       svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwTilakGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="40%" stop-color="#dc2626"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs><path d="M7 6 C7 14 17 14 17 6" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3 C10.8 7 10.8 14 12 17 C13.2 14 13.2 7 12 3 Z" fill="url(#dwTilakGrad)"/><ellipse cx="12" cy="11" rx="0.9" ry="1.6" fill="#fef08a"/><ellipse cx="10.8" cy="13" rx="0.8" ry="1.4" fill="#ffffff" transform="rotate(-15 10.8 13)"/><ellipse cx="13.2" cy="13" rx="0.8" ry="1.4" fill="#ffffff" transform="rotate(15 13.2 13)"/></svg>'
+    },
+    '11-20': {
+      key: 'chhoti',
+      title: 'Shubh Chhoti Diwali',
+      cls: 'festive-chhoti',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwGyarasClay" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#ea580c"/></linearGradient><linearGradient id="dwGyarasFlame" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#e11d48"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fef08a"/></linearGradient></defs><path d="M4 14 C6 20 18 20 20 14 Z" fill="url(#dwGyarasClay)"/><ellipse cx="12" cy="14" rx="8" ry="2.2" fill="#fed7aa"/><path d="M12 13 C9.8 9.5 10.6 5 12 2 C13.4 5 14.2 9.5 12 13 Z" fill="url(#dwGyarasFlame)"/><circle cx="12" cy="2" r="1.2" fill="#fffbeb"/><circle cx="5" cy="6" r="1" fill="#fbbf24"/><circle cx="19" cy="5" r="1.2" fill="#f59e0b"/><path d="M18 9 L20 7 M19 9 L21 9" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/></svg>'
     }
   };
   return FESTIVE_DAYS[md] || null;
@@ -8973,7 +9029,7 @@ if('serviceWorker' in navigator){
     function diya(id){
       var dots = '', i;
       for(i = 0; i < 7; i++) dots += '<circle cx="' + (14 + i * 6) + '" cy="' + (i % 2 ? 56 : 54) + '" r="1.3" fill="' + v('rim') + '"/>';
-      return '<div class="dw-diya"><svg viewBox="0 0 60 76" aria-hidden="true"><defs><radialGradient id="' + id + '"><stop offset="0" stop-color="' + v('m1') + '" stop-opacity=".95"/><stop offset="1" stop-color="' + v('m1') + '" stop-opacity="0"/></radialGradient></defs>' +
+      return '<div class="dw-diya" role="button" tabindex="0" title="Click for Diwali fireworks & flower shower ✨" aria-label="Light the diya for fireworks"><svg viewBox="0 0 60 76" aria-hidden="true"><defs><radialGradient id="' + id + '"><stop offset="0" stop-color="' + v('m1') + '" stop-opacity=".95"/><stop offset="1" stop-color="' + v('m1') + '" stop-opacity="0"/></radialGradient></defs>' +
         '<circle cx="32" cy="26" r="26" fill="url(#' + id + ')" style="opacity:' + v('glow') + '"/>' +
         '<path d="M3 46C10 44 50 44 57 46C54 66 42 72 30 72S6 66 3 46Z" fill="' + v('clay') + '"/><path d="M30 72C42 72 54 66 57 46C52 45 48 45 44 45C44 58 38 68 30 72Z" fill="' + v('clay2') + '"/>' +
         '<ellipse cx="30" cy="46" rx="27" ry="6" fill="' + v('rim') + '"/><ellipse cx="30" cy="46" rx="22" ry="4" fill="' + v('oil') + '"/><path d="M48 44Q44 40 34 43" stroke="' + v('band') + '" stroke-width="2" fill="none"/>' + dots +
@@ -9214,7 +9270,10 @@ if('serviceWorker' in navigator){
         d = document.createElement('span');
         d.className = 'dw-search-diya';
         d.setAttribute('data-dw', 'search-diya');
-        d.setAttribute('aria-hidden', 'true');
+        d.setAttribute('role', 'button');
+        d.setAttribute('tabindex', '0');
+        d.setAttribute('title', 'Click for Diwali fireworks & flower shower ✨');
+        d.setAttribute('aria-label', 'Light the diya for fireworks');
         btn.appendChild(d);
       }
       d.innerHTML = diya('dwSearchD' + (++uid));
@@ -9227,7 +9286,10 @@ if('serviceWorker' in navigator){
         d = document.createElement('span');
         d.className = 'dw-boot-diya';
         d.setAttribute('data-dw', 'boot-diya');
-        d.setAttribute('aria-hidden', 'true');
+        d.setAttribute('role', 'button');
+        d.setAttribute('tabindex', '0');
+        d.setAttribute('title', 'Click for Diwali fireworks & flower shower ✨');
+        d.setAttribute('aria-label', 'Light the diya for fireworks');
         log.appendChild(d);
       }
       d.innerHTML = diya('dwBootD' + (++uid));
@@ -9363,6 +9425,459 @@ if('serviceWorker' in navigator){
       side.setAttribute('aria-hidden', 'true');
       side.innerHTML = '<div class="dw-lantern">' + lantern('b', 'dwG4') + '</div><div class="dw-lantern b">' + lantern('a', 'dwG5') + '</div>';
       app.appendChild(side);
+    }
+
+    /* -------------------------------------------------------------
+       Diwali Celebration: Fireworks Overlay & Falling Flower Petals
+       ------------------------------------------------------------- */
+    var fxCanvas = null, fxCtx = null;
+    var fxState = {
+      animId: null,
+      rockets: [],
+      sparks: [],
+      rings: [],
+      petals: [],
+      timers: []
+    };
+
+    function ensureFxCanvas(){
+      if(!fxCanvas){
+        fxCanvas = document.getElementById('dwFxCanvas');
+        if(!fxCanvas){
+          fxCanvas = document.createElement('canvas');
+          fxCanvas.id = 'dwFxCanvas';
+          fxCanvas.setAttribute('aria-hidden', 'true');
+          document.body.appendChild(fxCanvas);
+        }
+        fxCtx = fxCanvas.getContext('2d');
+        if(typeof window !== 'undefined'){
+          window.addEventListener('resize', resizeFxCanvas, { passive: true });
+        }
+      }
+      resizeFxCanvas();
+    }
+
+    function resizeFxCanvas(){
+      if(!fxCanvas || !fxCtx) return;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var w = window.innerWidth, h = window.innerHeight;
+      fxCanvas.width = Math.round(w * dpr);
+      fxCanvas.height = Math.round(h * dpr);
+      fxCanvas.style.width = w + 'px';
+      fxCanvas.style.height = h + 'px';
+      fxCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    var PALETTES = [
+      { main: '#ffd700', glow: 'rgba(255, 215, 0, 0.45)', colors: ['#ffd700', '#f59e0b', '#fbbf24', '#fffbeb', '#fef08a'] },
+      { main: '#f43f5e', glow: 'rgba(244, 63, 94, 0.45)', colors: ['#f43f5e', '#e11d48', '#fb7185', '#fda4af', '#fff1f2'] },
+      { main: '#10b981', glow: 'rgba(16, 185, 129, 0.45)', colors: ['#10b981', '#34d399', '#059669', '#6ee7b7', '#a7f3d0'] },
+      { main: '#a855f7', glow: 'rgba(168, 85, 247, 0.45)', colors: ['#a855f7', '#fb923c', '#c084fc', '#f59e0b', '#e9d5ff'] },
+      { main: '#ffffff', glow: 'rgba(255, 255, 255, 0.55)', colors: ['#ffffff', '#fef08a', '#38bdf8', '#fed7aa', '#f8fafc'] }
+    ];
+
+    function launchRocket(x0, y0, targetX, targetY, palIdx, shellType){
+      var pal = PALETTES[palIdx % PALETTES.length];
+      var steps = Math.round(36 + Math.random() * 12);
+      var grav = 0.16;
+      var dx = targetX - x0;
+      var dy = targetY - y0;
+      var vx = dx / steps;
+      var vy = dy / steps - 0.5 * grav * steps;
+      fxState.rockets.push({
+        x: x0,
+        y: y0,
+        vx: vx,
+        vy: vy,
+        grav: grav,
+        targetY: targetY,
+        life: steps,
+        trail: [],
+        pal: pal,
+        shellType: shellType || 'chrysanthemum'
+      });
+    }
+
+    function createExplosion(x, y, pal, shellType){
+      fxState.rings.push({
+        x: x,
+        y: y,
+        r: 6,
+        maxR: 70 + Math.random() * 30,
+        color: pal.main,
+        alpha: 0.85
+      });
+
+      var count = 90 + Math.floor(Math.random() * 45);
+      var isWillow = (shellType === 'willow');
+      var isRing = (shellType === 'ring');
+
+      for(var i = 0; i < count; i++){
+        var angle, speed;
+        if(isRing){
+          angle = (i / count) * 6.283 + (Math.random() - 0.5) * 0.12;
+          speed = (4.2 + (i % 2) * 1.6 + Math.random() * 0.8);
+        } else {
+          angle = Math.random() * 6.283;
+          speed = Math.pow(Math.random(), 0.5) * (isWillow ? 5.8 : 6.8) + 0.8;
+        }
+
+        var col = pal.colors[Math.floor(Math.random() * pal.colors.length)];
+        var decay = isWillow ? (0.008 + Math.random() * 0.006) : (0.013 + Math.random() * 0.010);
+        var grav = isWillow ? 0.12 : 0.08;
+        var drag = isWillow ? 0.965 : 0.975;
+        var size = isWillow ? (2.2 + Math.random() * 1.4) : (1.8 + Math.random() * 1.5);
+
+        fxState.sparks.push({
+          x: x,
+          y: y,
+          prevX: x,
+          prevY: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          color: col,
+          glowColor: pal.glow,
+          alpha: 1.0,
+          decay: decay,
+          grav: grav,
+          drag: drag,
+          size: size,
+          isWillow: isWillow,
+          flicker: Math.random() > 0.45,
+          flickerSeed: Math.random() * 10
+        });
+      }
+    }
+
+    function spawnWickSparks(x, y){
+      for(var i = 0; i < 24; i++){
+        var angle = -Math.PI * 0.5 + (Math.random() - 0.5) * 1.6;
+        var speed = 2.5 + Math.random() * 4.5;
+        fxState.sparks.push({
+          x: x,
+          y: y,
+          prevX: x,
+          prevY: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          color: (i % 2 ? '#fde047' : '#f97316'),
+          glowColor: 'rgba(251, 191, 36, 0.5)',
+          alpha: 1.0,
+          decay: 0.035 + Math.random() * 0.02,
+          grav: 0.12,
+          drag: 0.96,
+          size: 1.6 + Math.random() * 1.2,
+          isWillow: false,
+          flicker: true,
+          flickerSeed: i
+        });
+      }
+    }
+
+    function spawnPetals(count){
+      var W = window.innerWidth, H = window.innerHeight;
+      var types = [
+        { type: 'marigold_orange', front: '#f97316', back: '#c2410c', vein: '#fed7aa', aspect: 0.52 },
+        { type: 'marigold_yellow', front: '#fbbf24', back: '#d97706', vein: '#fef08a', aspect: 0.54 },
+        { type: 'rose',            front: '#e11d48', back: '#881337', vein: '#fecdd3', aspect: 0.68 },
+        { type: 'rose_pink',       front: '#f43f5e', back: '#9f1239', vein: '#fda4af', aspect: 0.65 },
+        { type: 'jasmine',         front: '#fffbeb', back: '#fef3c7', vein: '#ffffff', aspect: 0.44 }
+      ];
+
+      for(var i = 0; i < count; i++){
+        var r = Math.random();
+        var t = (r < 0.35) ? types[0] : (r < 0.60) ? types[1] : (r < 0.80) ? types[2] : (r < 0.92) ? types[3] : types[4];
+
+        var size = 13 + Math.random() * 11;
+        var startY = -15 - Math.random() * (H * 0.75);
+        var startX = Math.random() * W;
+
+        fxState.petals.push({
+          x: startX,
+          y: startY,
+          size: size,
+          aspect: t.aspect,
+          front: t.front,
+          back: t.back,
+          vein: t.vein,
+          isRose: (t.type.indexOf('rose') >= 0),
+          isJasmine: (t.type === 'jasmine'),
+          vy: 1.3 + Math.random() * 1.7,
+          vx: (Math.random() - 0.5) * 0.7,
+          swayAmp: 1.4 + Math.random() * 2.2,
+          swayFreq: 0.02 + Math.random() * 0.02,
+          swayPhase: Math.random() * 6.283,
+          rotZ: Math.random() * 6.283,
+          dRotZ: (Math.random() - 0.5) * 0.028,
+          rotX: Math.random() * 6.283,
+          dRotX: (Math.random() - 0.5) * 0.038,
+          rotY: Math.random() * 6.283,
+          dRotY: (Math.random() - 0.5) * 0.045,
+          alpha: 1.0,
+          age: 0
+        });
+      }
+    }
+
+    function updateAndRenderFx(){
+      if(!fxCtx || !fxCanvas) return;
+      var W = window.innerWidth, H = window.innerHeight;
+
+      fxCtx.clearRect(0, 0, W, H);
+
+      // 1. Shockwaves
+      fxCtx.save();
+      fxCtx.globalCompositeOperation = 'lighter';
+      for(var ri = fxState.rings.length - 1; ri >= 0; ri--){
+        var ring = fxState.rings[ri];
+        ring.r += (ring.maxR - ring.r) * 0.16;
+        ring.alpha -= 0.045;
+        if(ring.alpha <= 0 || ring.r >= ring.maxR - 1){
+          fxState.rings.splice(ri, 1);
+          continue;
+        }
+        fxCtx.beginPath();
+        fxCtx.arc(ring.x, ring.y, ring.r, 0, 6.283);
+        fxCtx.strokeStyle = ring.color;
+        fxCtx.globalAlpha = Math.max(0, ring.alpha);
+        fxCtx.lineWidth = Math.max(1, 4 * (1 - ring.r / ring.maxR));
+        fxCtx.stroke();
+      }
+      fxCtx.restore();
+
+      // 2. Rockets
+      fxCtx.save();
+      fxCtx.globalCompositeOperation = 'lighter';
+      for(var rk = fxState.rockets.length - 1; rk >= 0; rk--){
+        var rkt = fxState.rockets[rk];
+        rkt.x += rkt.vx;
+        rkt.y += rkt.vy;
+        rkt.vy += rkt.grav;
+        rkt.life--;
+
+        rkt.trail.push({ x: rkt.x, y: rkt.y, alpha: 1, size: 2.2 });
+        if(rkt.trail.length > 14) rkt.trail.shift();
+
+        for(var ti = 0; ti < rkt.trail.length; ti++){
+          var tp = rkt.trail[ti];
+          tp.alpha -= 0.07;
+          if(tp.alpha <= 0) continue;
+          fxCtx.beginPath();
+          fxCtx.arc(tp.x, tp.y, tp.size * tp.alpha, 0, 6.283);
+          fxCtx.fillStyle = rkt.pal.main;
+          fxCtx.globalAlpha = Math.max(0, tp.alpha * 0.7);
+          fxCtx.fill();
+        }
+
+        fxCtx.beginPath();
+        fxCtx.arc(rkt.x, rkt.y, 3, 0, 6.283);
+        fxCtx.fillStyle = '#ffffff';
+        fxCtx.globalAlpha = 1;
+        fxCtx.fill();
+
+        fxCtx.beginPath();
+        fxCtx.arc(rkt.x, rkt.y, 6.5, 0, 6.283);
+        fxCtx.fillStyle = rkt.pal.main;
+        fxCtx.globalAlpha = 0.55;
+        fxCtx.fill();
+
+        if(rkt.y <= rkt.targetY || rkt.vy >= -0.2 || rkt.life <= 0){
+          createExplosion(rkt.x, rkt.y, rkt.pal, rkt.shellType);
+          fxState.rockets.splice(rk, 1);
+        }
+      }
+      fxCtx.restore();
+
+      // 3. Fireworks Sparks
+      fxCtx.save();
+      fxCtx.globalCompositeOperation = 'lighter';
+      for(var si = fxState.sparks.length - 1; si >= 0; si--){
+        var spk = fxState.sparks[si];
+        spk.prevX = spk.x;
+        spk.prevY = spk.y;
+        spk.x += spk.vx;
+        spk.y += spk.vy;
+        spk.vx *= spk.drag;
+        spk.vy *= spk.drag;
+        spk.vy += spk.grav;
+        spk.alpha -= spk.decay;
+
+        if(spk.alpha <= 0 || spk.y > H + 20){
+          fxState.sparks.splice(si, 1);
+          continue;
+        }
+
+        var curAlpha = spk.alpha;
+        if(spk.flicker){
+          curAlpha *= (0.7 + 0.3 * Math.sin(spk.alpha * 30 + spk.flickerSeed));
+        }
+
+        fxCtx.beginPath();
+        fxCtx.arc(spk.x, spk.y, spk.size * 2.2, 0, 6.283);
+        fxCtx.fillStyle = spk.glowColor;
+        fxCtx.globalAlpha = Math.max(0, curAlpha * 0.35);
+        fxCtx.fill();
+
+        fxCtx.beginPath();
+        fxCtx.moveTo(spk.prevX, spk.prevY);
+        fxCtx.lineTo(spk.x, spk.y);
+        fxCtx.strokeStyle = spk.color;
+        fxCtx.lineWidth = spk.size;
+        fxCtx.lineCap = 'round';
+        fxCtx.globalAlpha = Math.max(0, curAlpha);
+        fxCtx.stroke();
+
+        if(spk.alpha > 0.55){
+          fxCtx.beginPath();
+          fxCtx.arc(spk.x, spk.y, spk.size * 0.45, 0, 6.283);
+          fxCtx.fillStyle = '#ffffff';
+          fxCtx.globalAlpha = Math.max(0, curAlpha * 0.85);
+          fxCtx.fill();
+        }
+      }
+      fxCtx.restore();
+
+      // 4. Falling Flower Petals
+      fxCtx.save();
+      fxCtx.globalCompositeOperation = 'source-over';
+      for(var pi = fxState.petals.length - 1; pi >= 0; pi--){
+        var pet = fxState.petals[pi];
+        pet.age++;
+        pet.y += pet.vy;
+        pet.x += pet.vx + Math.sin(pet.age * pet.swayFreq + pet.swayPhase) * pet.swayAmp;
+        pet.rotZ += pet.dRotZ;
+        pet.rotX += pet.dRotX;
+        pet.rotY += pet.dRotY;
+
+        if(pet.y > H - 80){
+          pet.alpha = Math.max(0, (H + 40 - pet.y) / 120);
+        }
+
+        if(pet.alpha <= 0 || pet.y > H + 50){
+          fxState.petals.splice(pi, 1);
+          continue;
+        }
+
+        if(pet.y < -30) continue;
+
+        fxCtx.save();
+        fxCtx.translate(pet.x, pet.y);
+        fxCtx.rotate(pet.rotZ);
+
+        var sx = Math.cos(pet.rotY);
+        var sy = Math.cos(pet.rotX);
+        fxCtx.scale(sx, sy);
+        fxCtx.globalAlpha = Math.max(0, Math.min(1, pet.alpha));
+
+        var isBack = (sy < 0);
+        fxCtx.fillStyle = isBack ? pet.back : pet.front;
+
+        var L = pet.size, Wp = pet.size * pet.aspect;
+        fxCtx.beginPath();
+        if(pet.isRose){
+          fxCtx.moveTo(0, -L * 0.46);
+          fxCtx.bezierCurveTo(Wp * 0.82, -L * 0.40, Wp * 0.90, L * 0.25, 0, L * 0.50);
+          fxCtx.bezierCurveTo(-Wp * 0.90, L * 0.25, -Wp * 0.82, -L * 0.40, 0, -L * 0.46);
+        } else if(pet.isJasmine){
+          fxCtx.moveTo(0, -L * 0.50);
+          fxCtx.bezierCurveTo(Wp * 0.50, -L * 0.20, Wp * 0.50, L * 0.20, 0, L * 0.50);
+          fxCtx.bezierCurveTo(-Wp * 0.50, L * 0.20, -Wp * 0.50, -L * 0.20, 0, -L * 0.50);
+        } else {
+          fxCtx.moveTo(0, -L * 0.50);
+          fxCtx.bezierCurveTo(Wp * 0.72, -L * 0.35, Wp * 0.76, L * 0.30, 0, L * 0.50);
+          fxCtx.bezierCurveTo(-Wp * 0.76, L * 0.30, -Wp * 0.72, -L * 0.35, 0, -L * 0.50);
+        }
+        fxCtx.fill();
+
+        if(!isBack && !pet.isJasmine){
+          fxCtx.strokeStyle = pet.vein;
+          fxCtx.lineWidth = 0.65;
+          fxCtx.beginPath();
+          fxCtx.moveTo(0, -L * 0.34);
+          fxCtx.quadraticCurveTo(Wp * 0.08, 0, 0, L * 0.35);
+          fxCtx.stroke();
+        }
+
+        fxCtx.restore();
+      }
+      fxCtx.restore();
+
+      var totalActive = fxState.rings.length + fxState.rockets.length + fxState.sparks.length + fxState.petals.length;
+      if(totalActive > 0){
+        fxState.animId = requestAnimationFrame(updateAndRenderFx);
+      } else {
+        fxState.animId = null;
+        if(fxCanvas) fxCanvas.style.display = 'none';
+      }
+    }
+
+    function igniteCelebration(ox, oy){
+      ensureFxCanvas();
+      if(fxCanvas) fxCanvas.style.display = 'block';
+
+      var W = window.innerWidth, H = window.innerHeight;
+
+      spawnWickSparks(ox, oy);
+      launchRocket(ox, oy, W * 0.5 + (Math.random() - 0.5) * 80, H * 0.22, 0, 'willow');
+      spawnPetals(85);
+
+      var schedule = [
+        { t: 350,  x: W * 0.24, y: H + 10, tx: W * 0.28, ty: H * 0.26, pal: 1, type: 'peony' },
+        { t: 800,  x: W * 0.76, y: H + 10, tx: W * 0.72, ty: H * 0.20, pal: 2, type: 'chrysanthemum' },
+        { t: 1350, x: W * 0.42, y: H + 10, tx: W * 0.46, ty: H * 0.16, pal: 3, type: 'ring' },
+        { t: 1950, x: W * 0.18, y: H + 10, tx: W * 0.32, ty: H * 0.28, pal: 4, type: 'chrysanthemum' },
+        { t: 2000, x: W * 0.82, y: H + 10, tx: W * 0.68, ty: H * 0.24, pal: 1, type: 'peony' },
+        { t: 2750, x: W * 0.50, y: H + 10, tx: W * 0.50, ty: H * 0.18, pal: 0, type: 'willow' }
+      ];
+
+      schedule.forEach(function(s){
+        var tid = setTimeout(function(){
+          launchRocket(s.x, s.y, s.tx, s.ty, s.pal, s.type);
+          if(!fxState.animId) fxState.animId = requestAnimationFrame(updateAndRenderFx);
+        }, s.t);
+        fxState.timers.push(tid);
+      });
+
+      if(!fxState.animId){
+        fxState.animId = requestAnimationFrame(updateAndRenderFx);
+      }
+    }
+
+    function handleDiyaClick(e){
+      var diyaEl = e.target && e.target.closest ? e.target.closest('.dw-diya, .dw-search-diya, .dw-boot-diya') : null;
+      if(!diyaEl) return;
+      if(e.preventDefault) e.preventDefault();
+      if(e.stopPropagation) e.stopPropagation();
+      if(e.stopImmediatePropagation) e.stopImmediatePropagation();
+
+      diyaEl.classList.remove('dw-diya-burst');
+      void diyaEl.offsetWidth;
+      diyaEl.classList.add('dw-diya-burst');
+      setTimeout(function(){ diyaEl.classList.remove('dw-diya-burst'); }, 700);
+
+      if(typeof navigator !== 'undefined' && navigator.vibrate){
+        try { navigator.vibrate([35, 45, 60, 30]); } catch(_){}
+      }
+
+      var rect = diyaEl.getBoundingClientRect();
+      var ox = rect.left + rect.width * 0.55;
+      var oy = rect.top + rect.height * 0.25;
+      if(ox <= 0 || ox >= window.innerWidth || oy <= 0 || oy >= window.innerHeight){
+        ox = window.innerWidth * 0.5;
+        oy = window.innerHeight - 30;
+      }
+
+      igniteCelebration(ox, oy);
+    }
+
+    if(typeof document !== 'undefined'){
+      document.addEventListener('click', handleDiyaClick, true);
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+          var diyaEl = e.target && e.target.closest ? e.target.closest('.dw-diya, .dw-search-diya, .dw-boot-diya') : null;
+          if(diyaEl) handleDiyaClick(e);
+        }
+      }, true);
     }
   } catch(e){}   // purely decorative: must never stop the app
 })();

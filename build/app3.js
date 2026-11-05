@@ -3029,12 +3029,13 @@ function watchGreeting(){
 function kzNameHtml(entry, text){
   return isKaizenUser(entry) ? '<span class="kz-name">' + escapeHtml(text) + '</span>' : escapeHtml(text);
 }
-// Diwali 5-day festival greetings (6, 7, 8, 9, 10 Nov):
+// Diwali festival greetings:
 // Day 1 (Nov 6): Dhanteras — wealth, gold/silver, jewelry, coins, Lakshmi & Kubera.
-// Day 2 (Nov 7): Chhoti Diwali / Roop Chaudas — sparklers, beauty/radiance, dawn oil bath.
+// Day 2 (Nov 7): Roop Chaudas — beauty, radiance, morning ubtan & sparklers.
 // Day 3 (Nov 8): Deepawali / Lakshmi Puja — festival of lights, illuminated diyas, prosperity.
 // Day 4 (Nov 9): Govardhan Puja / Annakut — sacred mountain, peacock feather, 56 offerings.
 // Day 5 (Nov 10): Bhai Dooj / Yama Dwitiya — sacred tilak, sibling bond, protection and blessings.
+// Day 6 (Nov 20): Dev Uthan Gyaras — celebrated as Chhoti Diwali, awakening of Vishnu, Tulsi Vivah.
 function festiveDayInfo(iso){
   var d = iso || todayISO();
   var md = d.slice(5); // 'MM-DD'
@@ -3046,9 +3047,9 @@ function festiveDayInfo(iso){
       svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwGoldGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffe066"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/></linearGradient><radialGradient id="dwRubyGrad" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#ff6b8b"/><stop offset="60%" stop-color="#e11d48"/><stop offset="100%" stop-color="#881337"/></radialGradient></defs><path d="M2 3 Q12 10 22 3" fill="none" stroke="url(#dwGoldGrad)" stroke-width="1.8" stroke-linecap="round"/><circle cx="7" cy="5.5" r="1.2" fill="#ffe066"/><circle cx="17" cy="5.5" r="1.2" fill="#ffe066"/><circle cx="12" cy="8.5" r="1.8" fill="url(#dwGoldGrad)"/><polygon points="12,11 17,15 12,21 7,15" fill="url(#dwRubyGrad)" stroke="url(#dwGoldGrad)" stroke-width="1"/><polygon points="12,11 15,15 12,17 9,15" fill="#fda4af" opacity=".7"/><circle cx="12" cy="22.5" r="1.2" fill="url(#dwGoldGrad)"/></svg>'
     },
     '11-07': {
-      key: 'chhoti',
-      title: 'Shubh Chhoti Diwali',
-      cls: 'festive-chhoti',
+      key: 'roopchaudas',
+      title: 'Shubh Roop Chaudas',
+      cls: 'festive-roopchaudas',
       svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwSparkGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fffbeb"/><stop offset="50%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs><line x1="4" y1="20" x2="14" y2="10" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="10" r="2.5" fill="#fef08a"/><path d="M14 4 L14 7 M14 13 L14 16 M8 10 L11 10 M17 10 L20 10 M10 6 L12 8 M16 12 L18 14 M18 6 L16 8 M12 12 L10 14" stroke="url(#dwSparkGrad)" stroke-width="1.5" stroke-linecap="round"/><circle cx="19" cy="5" r="1" fill="#f59e0b"/><circle cx="9" cy="4" r="0.8" fill="#fbbf24"/><circle cx="20" cy="12" r="1" fill="#fbbf24"/></svg>'
     },
     '11-08': {
@@ -3068,6 +3069,12 @@ function festiveDayInfo(iso){
       title: 'Shubh Bhai Dooj',
       cls: 'festive-bhaidooj',
       svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwTilakGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="40%" stop-color="#dc2626"/><stop offset="100%" stop-color="#f97316"/></linearGradient></defs><path d="M7 6 C7 14 17 14 17 6" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3 C10.8 7 10.8 14 12 17 C13.2 14 13.2 7 12 3 Z" fill="url(#dwTilakGrad)"/><ellipse cx="12" cy="11" rx="0.9" ry="1.6" fill="#fef08a"/><ellipse cx="10.8" cy="13" rx="0.8" ry="1.4" fill="#ffffff" transform="rotate(-15 10.8 13)"/><ellipse cx="13.2" cy="13" rx="0.8" ry="1.4" fill="#ffffff" transform="rotate(15 13.2 13)"/></svg>'
+    },
+    '11-20': {
+      key: 'chhoti',
+      title: 'Shubh Chhoti Diwali',
+      cls: 'festive-chhoti',
+      svg: '<svg class="festive-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><defs><linearGradient id="dwGyarasClay" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#ea580c"/></linearGradient><linearGradient id="dwGyarasFlame" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#e11d48"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fef08a"/></linearGradient></defs><path d="M4 14 C6 20 18 20 20 14 Z" fill="url(#dwGyarasClay)"/><ellipse cx="12" cy="14" rx="8" ry="2.2" fill="#fed7aa"/><path d="M12 13 C9.8 9.5 10.6 5 12 2 C13.4 5 14.2 9.5 12 13 Z" fill="url(#dwGyarasFlame)"/><circle cx="12" cy="2" r="1.2" fill="#fffbeb"/><circle cx="5" cy="6" r="1" fill="#fbbf24"/><circle cx="19" cy="5" r="1.2" fill="#f59e0b"/><path d="M18 9 L20 7 M19 9 L21 9" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/></svg>'
     }
   };
   return FESTIVE_DAYS[md] || null;

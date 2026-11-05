@@ -1703,14 +1703,15 @@ allPass &= runSpectateScenario('set queries give the same students as a direct r
   assert(sel.length === cases[0][1], 'a query used as the selection gives the same students');
 });
 
-allPass &= runScenario('festive greetings: Nov 6-10 render Dhanteras, Chhoti Diwali, Deepawali, Govardhan Puja, Bhai Dooj with festive gradients', '2026AIB1001', {}, (win, doc) => {
+allPass &= runScenario('festive greetings: Dhanteras, Roop Chaudas, Deepawali, Govardhan Puja, Bhai Dooj, Chhoti Diwali (Gyaras)', '2026AIB1001', {}, (win, doc) => {
   const dbg = win.__debug;
   const days = [
     { iso: '2026-11-06', title: 'Shubh Dhanteras', cls: 'festive-dhanteras' },
-    { iso: '2026-11-07', title: 'Shubh Chhoti Diwali', cls: 'festive-chhoti' },
+    { iso: '2026-11-07', title: 'Shubh Roop Chaudas', cls: 'festive-roopchaudas' },
     { iso: '2026-11-08', title: 'Shubh Deepawali', cls: 'festive-diwali' },
     { iso: '2026-11-09', title: 'Shubh Govardhan Puja', cls: 'festive-govardhan' },
     { iso: '2026-11-10', title: 'Shubh Bhai Dooj', cls: 'festive-bhaidooj' },
+    { iso: '2026-11-20', title: 'Shubh Chhoti Diwali', cls: 'festive-chhoti' },
   ];
   days.forEach(d => {
     const f = dbg.festiveDayInfo(d.iso);

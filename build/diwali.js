@@ -50,7 +50,7 @@
     function diya(id){
       var dots = '', i;
       for(i = 0; i < 7; i++) dots += '<circle cx="' + (14 + i * 6) + '" cy="' + (i % 2 ? 56 : 54) + '" r="1.3" fill="' + v('rim') + '"/>';
-      return '<div class="dw-diya"><svg viewBox="0 0 60 76" aria-hidden="true"><defs><radialGradient id="' + id + '"><stop offset="0" stop-color="' + v('m1') + '" stop-opacity=".95"/><stop offset="1" stop-color="' + v('m1') + '" stop-opacity="0"/></radialGradient></defs>' +
+      return '<div class="dw-diya" role="button" tabindex="0" title="Click for Diwali fireworks & flower shower ✨" aria-label="Light the diya for fireworks"><svg viewBox="0 0 60 76" aria-hidden="true"><defs><radialGradient id="' + id + '"><stop offset="0" stop-color="' + v('m1') + '" stop-opacity=".95"/><stop offset="1" stop-color="' + v('m1') + '" stop-opacity="0"/></radialGradient></defs>' +
         '<circle cx="32" cy="26" r="26" fill="url(#' + id + ')" style="opacity:' + v('glow') + '"/>' +
         '<path d="M3 46C10 44 50 44 57 46C54 66 42 72 30 72S6 66 3 46Z" fill="' + v('clay') + '"/><path d="M30 72C42 72 54 66 57 46C52 45 48 45 44 45C44 58 38 68 30 72Z" fill="' + v('clay2') + '"/>' +
         '<ellipse cx="30" cy="46" rx="27" ry="6" fill="' + v('rim') + '"/><ellipse cx="30" cy="46" rx="22" ry="4" fill="' + v('oil') + '"/><path d="M48 44Q44 40 34 43" stroke="' + v('band') + '" stroke-width="2" fill="none"/>' + dots +
@@ -291,7 +291,10 @@
         d = document.createElement('span');
         d.className = 'dw-search-diya';
         d.setAttribute('data-dw', 'search-diya');
-        d.setAttribute('aria-hidden', 'true');
+        d.setAttribute('role', 'button');
+        d.setAttribute('tabindex', '0');
+        d.setAttribute('title', 'Click for Diwali fireworks & flower shower ✨');
+        d.setAttribute('aria-label', 'Light the diya for fireworks');
         btn.appendChild(d);
       }
       d.innerHTML = diya('dwSearchD' + (++uid));
@@ -304,7 +307,10 @@
         d = document.createElement('span');
         d.className = 'dw-boot-diya';
         d.setAttribute('data-dw', 'boot-diya');
-        d.setAttribute('aria-hidden', 'true');
+        d.setAttribute('role', 'button');
+        d.setAttribute('tabindex', '0');
+        d.setAttribute('title', 'Click for Diwali fireworks & flower shower ✨');
+        d.setAttribute('aria-label', 'Light the diya for fireworks');
         log.appendChild(d);
       }
       d.innerHTML = diya('dwBootD' + (++uid));
@@ -440,6 +446,459 @@
       side.setAttribute('aria-hidden', 'true');
       side.innerHTML = '<div class="dw-lantern">' + lantern('b', 'dwG4') + '</div><div class="dw-lantern b">' + lantern('a', 'dwG5') + '</div>';
       app.appendChild(side);
+    }
+
+    /* -------------------------------------------------------------
+       Diwali Celebration: Fireworks Overlay & Falling Flower Petals
+       ------------------------------------------------------------- */
+    var fxCanvas = null, fxCtx = null;
+    var fxState = {
+      animId: null,
+      rockets: [],
+      sparks: [],
+      rings: [],
+      petals: [],
+      timers: []
+    };
+
+    function ensureFxCanvas(){
+      if(!fxCanvas){
+        fxCanvas = document.getElementById('dwFxCanvas');
+        if(!fxCanvas){
+          fxCanvas = document.createElement('canvas');
+          fxCanvas.id = 'dwFxCanvas';
+          fxCanvas.setAttribute('aria-hidden', 'true');
+          document.body.appendChild(fxCanvas);
+        }
+        fxCtx = fxCanvas.getContext('2d');
+        if(typeof window !== 'undefined'){
+          window.addEventListener('resize', resizeFxCanvas, { passive: true });
+        }
+      }
+      resizeFxCanvas();
+    }
+
+    function resizeFxCanvas(){
+      if(!fxCanvas || !fxCtx) return;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var w = window.innerWidth, h = window.innerHeight;
+      fxCanvas.width = Math.round(w * dpr);
+      fxCanvas.height = Math.round(h * dpr);
+      fxCanvas.style.width = w + 'px';
+      fxCanvas.style.height = h + 'px';
+      fxCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    var PALETTES = [
+      { main: '#ffd700', glow: 'rgba(255, 215, 0, 0.45)', colors: ['#ffd700', '#f59e0b', '#fbbf24', '#fffbeb', '#fef08a'] },
+      { main: '#f43f5e', glow: 'rgba(244, 63, 94, 0.45)', colors: ['#f43f5e', '#e11d48', '#fb7185', '#fda4af', '#fff1f2'] },
+      { main: '#10b981', glow: 'rgba(16, 185, 129, 0.45)', colors: ['#10b981', '#34d399', '#059669', '#6ee7b7', '#a7f3d0'] },
+      { main: '#a855f7', glow: 'rgba(168, 85, 247, 0.45)', colors: ['#a855f7', '#fb923c', '#c084fc', '#f59e0b', '#e9d5ff'] },
+      { main: '#ffffff', glow: 'rgba(255, 255, 255, 0.55)', colors: ['#ffffff', '#fef08a', '#38bdf8', '#fed7aa', '#f8fafc'] }
+    ];
+
+    function launchRocket(x0, y0, targetX, targetY, palIdx, shellType){
+      var pal = PALETTES[palIdx % PALETTES.length];
+      var steps = Math.round(36 + Math.random() * 12);
+      var grav = 0.16;
+      var dx = targetX - x0;
+      var dy = targetY - y0;
+      var vx = dx / steps;
+      var vy = dy / steps - 0.5 * grav * steps;
+      fxState.rockets.push({
+        x: x0,
+        y: y0,
+        vx: vx,
+        vy: vy,
+        grav: grav,
+        targetY: targetY,
+        life: steps,
+        trail: [],
+        pal: pal,
+        shellType: shellType || 'chrysanthemum'
+      });
+    }
+
+    function createExplosion(x, y, pal, shellType){
+      fxState.rings.push({
+        x: x,
+        y: y,
+        r: 6,
+        maxR: 70 + Math.random() * 30,
+        color: pal.main,
+        alpha: 0.85
+      });
+
+      var count = 90 + Math.floor(Math.random() * 45);
+      var isWillow = (shellType === 'willow');
+      var isRing = (shellType === 'ring');
+
+      for(var i = 0; i < count; i++){
+        var angle, speed;
+        if(isRing){
+          angle = (i / count) * 6.283 + (Math.random() - 0.5) * 0.12;
+          speed = (4.2 + (i % 2) * 1.6 + Math.random() * 0.8);
+        } else {
+          angle = Math.random() * 6.283;
+          speed = Math.pow(Math.random(), 0.5) * (isWillow ? 5.8 : 6.8) + 0.8;
+        }
+
+        var col = pal.colors[Math.floor(Math.random() * pal.colors.length)];
+        var decay = isWillow ? (0.008 + Math.random() * 0.006) : (0.013 + Math.random() * 0.010);
+        var grav = isWillow ? 0.12 : 0.08;
+        var drag = isWillow ? 0.965 : 0.975;
+        var size = isWillow ? (2.2 + Math.random() * 1.4) : (1.8 + Math.random() * 1.5);
+
+        fxState.sparks.push({
+          x: x,
+          y: y,
+          prevX: x,
+          prevY: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          color: col,
+          glowColor: pal.glow,
+          alpha: 1.0,
+          decay: decay,
+          grav: grav,
+          drag: drag,
+          size: size,
+          isWillow: isWillow,
+          flicker: Math.random() > 0.45,
+          flickerSeed: Math.random() * 10
+        });
+      }
+    }
+
+    function spawnWickSparks(x, y){
+      for(var i = 0; i < 24; i++){
+        var angle = -Math.PI * 0.5 + (Math.random() - 0.5) * 1.6;
+        var speed = 2.5 + Math.random() * 4.5;
+        fxState.sparks.push({
+          x: x,
+          y: y,
+          prevX: x,
+          prevY: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          color: (i % 2 ? '#fde047' : '#f97316'),
+          glowColor: 'rgba(251, 191, 36, 0.5)',
+          alpha: 1.0,
+          decay: 0.035 + Math.random() * 0.02,
+          grav: 0.12,
+          drag: 0.96,
+          size: 1.6 + Math.random() * 1.2,
+          isWillow: false,
+          flicker: true,
+          flickerSeed: i
+        });
+      }
+    }
+
+    function spawnPetals(count){
+      var W = window.innerWidth, H = window.innerHeight;
+      var types = [
+        { type: 'marigold_orange', front: '#f97316', back: '#c2410c', vein: '#fed7aa', aspect: 0.52 },
+        { type: 'marigold_yellow', front: '#fbbf24', back: '#d97706', vein: '#fef08a', aspect: 0.54 },
+        { type: 'rose',            front: '#e11d48', back: '#881337', vein: '#fecdd3', aspect: 0.68 },
+        { type: 'rose_pink',       front: '#f43f5e', back: '#9f1239', vein: '#fda4af', aspect: 0.65 },
+        { type: 'jasmine',         front: '#fffbeb', back: '#fef3c7', vein: '#ffffff', aspect: 0.44 }
+      ];
+
+      for(var i = 0; i < count; i++){
+        var r = Math.random();
+        var t = (r < 0.35) ? types[0] : (r < 0.60) ? types[1] : (r < 0.80) ? types[2] : (r < 0.92) ? types[3] : types[4];
+
+        var size = 13 + Math.random() * 11;
+        var startY = -15 - Math.random() * (H * 0.75);
+        var startX = Math.random() * W;
+
+        fxState.petals.push({
+          x: startX,
+          y: startY,
+          size: size,
+          aspect: t.aspect,
+          front: t.front,
+          back: t.back,
+          vein: t.vein,
+          isRose: (t.type.indexOf('rose') >= 0),
+          isJasmine: (t.type === 'jasmine'),
+          vy: 1.3 + Math.random() * 1.7,
+          vx: (Math.random() - 0.5) * 0.7,
+          swayAmp: 1.4 + Math.random() * 2.2,
+          swayFreq: 0.02 + Math.random() * 0.02,
+          swayPhase: Math.random() * 6.283,
+          rotZ: Math.random() * 6.283,
+          dRotZ: (Math.random() - 0.5) * 0.028,
+          rotX: Math.random() * 6.283,
+          dRotX: (Math.random() - 0.5) * 0.038,
+          rotY: Math.random() * 6.283,
+          dRotY: (Math.random() - 0.5) * 0.045,
+          alpha: 1.0,
+          age: 0
+        });
+      }
+    }
+
+    function updateAndRenderFx(){
+      if(!fxCtx || !fxCanvas) return;
+      var W = window.innerWidth, H = window.innerHeight;
+
+      fxCtx.clearRect(0, 0, W, H);
+
+      // 1. Shockwaves
+      fxCtx.save();
+      fxCtx.globalCompositeOperation = 'lighter';
+      for(var ri = fxState.rings.length - 1; ri >= 0; ri--){
+        var ring = fxState.rings[ri];
+        ring.r += (ring.maxR - ring.r) * 0.16;
+        ring.alpha -= 0.045;
+        if(ring.alpha <= 0 || ring.r >= ring.maxR - 1){
+          fxState.rings.splice(ri, 1);
+          continue;
+        }
+        fxCtx.beginPath();
+        fxCtx.arc(ring.x, ring.y, ring.r, 0, 6.283);
+        fxCtx.strokeStyle = ring.color;
+        fxCtx.globalAlpha = Math.max(0, ring.alpha);
+        fxCtx.lineWidth = Math.max(1, 4 * (1 - ring.r / ring.maxR));
+        fxCtx.stroke();
+      }
+      fxCtx.restore();
+
+      // 2. Rockets
+      fxCtx.save();
+      fxCtx.globalCompositeOperation = 'lighter';
+      for(var rk = fxState.rockets.length - 1; rk >= 0; rk--){
+        var rkt = fxState.rockets[rk];
+        rkt.x += rkt.vx;
+        rkt.y += rkt.vy;
+        rkt.vy += rkt.grav;
+        rkt.life--;
+
+        rkt.trail.push({ x: rkt.x, y: rkt.y, alpha: 1, size: 2.2 });
+        if(rkt.trail.length > 14) rkt.trail.shift();
+
+        for(var ti = 0; ti < rkt.trail.length; ti++){
+          var tp = rkt.trail[ti];
+          tp.alpha -= 0.07;
+          if(tp.alpha <= 0) continue;
+          fxCtx.beginPath();
+          fxCtx.arc(tp.x, tp.y, tp.size * tp.alpha, 0, 6.283);
+          fxCtx.fillStyle = rkt.pal.main;
+          fxCtx.globalAlpha = Math.max(0, tp.alpha * 0.7);
+          fxCtx.fill();
+        }
+
+        fxCtx.beginPath();
+        fxCtx.arc(rkt.x, rkt.y, 3, 0, 6.283);
+        fxCtx.fillStyle = '#ffffff';
+        fxCtx.globalAlpha = 1;
+        fxCtx.fill();
+
+        fxCtx.beginPath();
+        fxCtx.arc(rkt.x, rkt.y, 6.5, 0, 6.283);
+        fxCtx.fillStyle = rkt.pal.main;
+        fxCtx.globalAlpha = 0.55;
+        fxCtx.fill();
+
+        if(rkt.y <= rkt.targetY || rkt.vy >= -0.2 || rkt.life <= 0){
+          createExplosion(rkt.x, rkt.y, rkt.pal, rkt.shellType);
+          fxState.rockets.splice(rk, 1);
+        }
+      }
+      fxCtx.restore();
+
+      // 3. Fireworks Sparks
+      fxCtx.save();
+      fxCtx.globalCompositeOperation = 'lighter';
+      for(var si = fxState.sparks.length - 1; si >= 0; si--){
+        var spk = fxState.sparks[si];
+        spk.prevX = spk.x;
+        spk.prevY = spk.y;
+        spk.x += spk.vx;
+        spk.y += spk.vy;
+        spk.vx *= spk.drag;
+        spk.vy *= spk.drag;
+        spk.vy += spk.grav;
+        spk.alpha -= spk.decay;
+
+        if(spk.alpha <= 0 || spk.y > H + 20){
+          fxState.sparks.splice(si, 1);
+          continue;
+        }
+
+        var curAlpha = spk.alpha;
+        if(spk.flicker){
+          curAlpha *= (0.7 + 0.3 * Math.sin(spk.alpha * 30 + spk.flickerSeed));
+        }
+
+        fxCtx.beginPath();
+        fxCtx.arc(spk.x, spk.y, spk.size * 2.2, 0, 6.283);
+        fxCtx.fillStyle = spk.glowColor;
+        fxCtx.globalAlpha = Math.max(0, curAlpha * 0.35);
+        fxCtx.fill();
+
+        fxCtx.beginPath();
+        fxCtx.moveTo(spk.prevX, spk.prevY);
+        fxCtx.lineTo(spk.x, spk.y);
+        fxCtx.strokeStyle = spk.color;
+        fxCtx.lineWidth = spk.size;
+        fxCtx.lineCap = 'round';
+        fxCtx.globalAlpha = Math.max(0, curAlpha);
+        fxCtx.stroke();
+
+        if(spk.alpha > 0.55){
+          fxCtx.beginPath();
+          fxCtx.arc(spk.x, spk.y, spk.size * 0.45, 0, 6.283);
+          fxCtx.fillStyle = '#ffffff';
+          fxCtx.globalAlpha = Math.max(0, curAlpha * 0.85);
+          fxCtx.fill();
+        }
+      }
+      fxCtx.restore();
+
+      // 4. Falling Flower Petals
+      fxCtx.save();
+      fxCtx.globalCompositeOperation = 'source-over';
+      for(var pi = fxState.petals.length - 1; pi >= 0; pi--){
+        var pet = fxState.petals[pi];
+        pet.age++;
+        pet.y += pet.vy;
+        pet.x += pet.vx + Math.sin(pet.age * pet.swayFreq + pet.swayPhase) * pet.swayAmp;
+        pet.rotZ += pet.dRotZ;
+        pet.rotX += pet.dRotX;
+        pet.rotY += pet.dRotY;
+
+        if(pet.y > H - 80){
+          pet.alpha = Math.max(0, (H + 40 - pet.y) / 120);
+        }
+
+        if(pet.alpha <= 0 || pet.y > H + 50){
+          fxState.petals.splice(pi, 1);
+          continue;
+        }
+
+        if(pet.y < -30) continue;
+
+        fxCtx.save();
+        fxCtx.translate(pet.x, pet.y);
+        fxCtx.rotate(pet.rotZ);
+
+        var sx = Math.cos(pet.rotY);
+        var sy = Math.cos(pet.rotX);
+        fxCtx.scale(sx, sy);
+        fxCtx.globalAlpha = Math.max(0, Math.min(1, pet.alpha));
+
+        var isBack = (sy < 0);
+        fxCtx.fillStyle = isBack ? pet.back : pet.front;
+
+        var L = pet.size, Wp = pet.size * pet.aspect;
+        fxCtx.beginPath();
+        if(pet.isRose){
+          fxCtx.moveTo(0, -L * 0.46);
+          fxCtx.bezierCurveTo(Wp * 0.82, -L * 0.40, Wp * 0.90, L * 0.25, 0, L * 0.50);
+          fxCtx.bezierCurveTo(-Wp * 0.90, L * 0.25, -Wp * 0.82, -L * 0.40, 0, -L * 0.46);
+        } else if(pet.isJasmine){
+          fxCtx.moveTo(0, -L * 0.50);
+          fxCtx.bezierCurveTo(Wp * 0.50, -L * 0.20, Wp * 0.50, L * 0.20, 0, L * 0.50);
+          fxCtx.bezierCurveTo(-Wp * 0.50, L * 0.20, -Wp * 0.50, -L * 0.20, 0, -L * 0.50);
+        } else {
+          fxCtx.moveTo(0, -L * 0.50);
+          fxCtx.bezierCurveTo(Wp * 0.72, -L * 0.35, Wp * 0.76, L * 0.30, 0, L * 0.50);
+          fxCtx.bezierCurveTo(-Wp * 0.76, L * 0.30, -Wp * 0.72, -L * 0.35, 0, -L * 0.50);
+        }
+        fxCtx.fill();
+
+        if(!isBack && !pet.isJasmine){
+          fxCtx.strokeStyle = pet.vein;
+          fxCtx.lineWidth = 0.65;
+          fxCtx.beginPath();
+          fxCtx.moveTo(0, -L * 0.34);
+          fxCtx.quadraticCurveTo(Wp * 0.08, 0, 0, L * 0.35);
+          fxCtx.stroke();
+        }
+
+        fxCtx.restore();
+      }
+      fxCtx.restore();
+
+      var totalActive = fxState.rings.length + fxState.rockets.length + fxState.sparks.length + fxState.petals.length;
+      if(totalActive > 0){
+        fxState.animId = requestAnimationFrame(updateAndRenderFx);
+      } else {
+        fxState.animId = null;
+        if(fxCanvas) fxCanvas.style.display = 'none';
+      }
+    }
+
+    function igniteCelebration(ox, oy){
+      ensureFxCanvas();
+      if(fxCanvas) fxCanvas.style.display = 'block';
+
+      var W = window.innerWidth, H = window.innerHeight;
+
+      spawnWickSparks(ox, oy);
+      launchRocket(ox, oy, W * 0.5 + (Math.random() - 0.5) * 80, H * 0.22, 0, 'willow');
+      spawnPetals(85);
+
+      var schedule = [
+        { t: 350,  x: W * 0.24, y: H + 10, tx: W * 0.28, ty: H * 0.26, pal: 1, type: 'peony' },
+        { t: 800,  x: W * 0.76, y: H + 10, tx: W * 0.72, ty: H * 0.20, pal: 2, type: 'chrysanthemum' },
+        { t: 1350, x: W * 0.42, y: H + 10, tx: W * 0.46, ty: H * 0.16, pal: 3, type: 'ring' },
+        { t: 1950, x: W * 0.18, y: H + 10, tx: W * 0.32, ty: H * 0.28, pal: 4, type: 'chrysanthemum' },
+        { t: 2000, x: W * 0.82, y: H + 10, tx: W * 0.68, ty: H * 0.24, pal: 1, type: 'peony' },
+        { t: 2750, x: W * 0.50, y: H + 10, tx: W * 0.50, ty: H * 0.18, pal: 0, type: 'willow' }
+      ];
+
+      schedule.forEach(function(s){
+        var tid = setTimeout(function(){
+          launchRocket(s.x, s.y, s.tx, s.ty, s.pal, s.type);
+          if(!fxState.animId) fxState.animId = requestAnimationFrame(updateAndRenderFx);
+        }, s.t);
+        fxState.timers.push(tid);
+      });
+
+      if(!fxState.animId){
+        fxState.animId = requestAnimationFrame(updateAndRenderFx);
+      }
+    }
+
+    function handleDiyaClick(e){
+      var diyaEl = e.target && e.target.closest ? e.target.closest('.dw-diya, .dw-search-diya, .dw-boot-diya') : null;
+      if(!diyaEl) return;
+      if(e.preventDefault) e.preventDefault();
+      if(e.stopPropagation) e.stopPropagation();
+      if(e.stopImmediatePropagation) e.stopImmediatePropagation();
+
+      diyaEl.classList.remove('dw-diya-burst');
+      void diyaEl.offsetWidth;
+      diyaEl.classList.add('dw-diya-burst');
+      setTimeout(function(){ diyaEl.classList.remove('dw-diya-burst'); }, 700);
+
+      if(typeof navigator !== 'undefined' && navigator.vibrate){
+        try { navigator.vibrate([35, 45, 60, 30]); } catch(_){}
+      }
+
+      var rect = diyaEl.getBoundingClientRect();
+      var ox = rect.left + rect.width * 0.55;
+      var oy = rect.top + rect.height * 0.25;
+      if(ox <= 0 || ox >= window.innerWidth || oy <= 0 || oy >= window.innerHeight){
+        ox = window.innerWidth * 0.5;
+        oy = window.innerHeight - 30;
+      }
+
+      igniteCelebration(ox, oy);
+    }
+
+    if(typeof document !== 'undefined'){
+      document.addEventListener('click', handleDiyaClick, true);
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+          var diyaEl = e.target && e.target.closest ? e.target.closest('.dw-diya, .dw-search-diya, .dw-boot-diya') : null;
+          if(diyaEl) handleDiyaClick(e);
+        }
+      }, true);
     }
   } catch(e){}   // purely decorative: must never stop the app
 })();

@@ -1749,6 +1749,7 @@ window.__overlayFast = (function(){
       position:fixed; left:0; top:-56px; height:calc(100vh + 112px);
       scrollbar-width:none;
       padding-top:82px !important; padding-bottom:82px !important;
+      padding-right:38px !important;
     }
     html body[data-theme="paper"] header::-webkit-scrollbar{ display:none; }
     html body[data-theme="paper"] .main-col{ margin-left:280px; }
@@ -2720,13 +2721,14 @@ window.__overlayFast = (function(){
   /* Phone: one column, with the exam tracker ahead of Kaizen (today, mess, tracker, Kaizen, heat strip). */
   @media (max-width: 719px){
     main{ display:flex; flex-direction:column; }
-    .panel-grid, .mid-stack, .side-stack{ display:contents; }
+    .panel-grid, .mid-stack, .side-stack, .mess-stack{ display:contents; }
     #mismatchBanner{ order:0; }
     #todayPanel{ order:1; }
-    .panel-grid > .panel{ order:2; }
+    .panel-grid > .panel, .mess-stack > .panel:not(#paperThemeBanner){ order:2; }
     #examWeekBanner{ order:3; }
-    #kaizenPanel{ order:4; }
-    .heat-panel{ order:5; }
+    #paperThemeBanner{ order:4; }
+    #kaizenPanel{ order:5; }
+    .heat-panel{ order:6; }
   }
 
   /* Narrow desktop / tablet: mess + mid-sem panels sit side by side (a light 2-up grid) purely so
@@ -2734,10 +2736,8 @@ window.__overlayFast = (function(){
   @media (min-width: 720px){
     .panel-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start; }
     .panel-grid .panel{ margin-bottom:0; }
-    .mid-stack{ display:flex; flex-direction:column; gap:18px; }
-    /* exam tracker sits above the heat strip, in the same (rightmost) column */
-    .side-stack{ display:flex; flex-direction:column; gap:18px; }
-    .side-stack .panel{ margin-bottom:0; }
+    .mess-stack, .mid-stack, .side-stack{ display:flex; flex-direction:column; gap:18px; }
+    .mess-stack .panel, .side-stack .panel{ margin-bottom:0; }
   }
 
   /* Wide desktop: a real sidebar (nav, identity, live widgets) plus a multi-column panel grid in
@@ -3266,19 +3266,6 @@ var ROLES = {
 </div>
 
 <main>
-  <div class="panel theme-banner" id="paperThemeBanner" style="display:none;">
-    <div class="theme-banner-content">
-      <div class="theme-banner-title">Clay Dark</div>
-      <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
-      <div class="theme-banner-actions">
-        <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Clay Dark</button>
-        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Light Mode</button>
-        <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
-      </div>
-    </div>
-    <button class="theme-banner-close" id="paperBannerClose" aria-label="Dismiss banner">&times;</button>
-  </div>
-
   <div class="banner" id="mismatchBanner" style="display:none;"></div>
   <div class="panel notice-banner" id="noticeBanner" style="display:none;"></div>
 
@@ -3287,9 +3274,23 @@ var ROLES = {
   </div>
 
   <div class="panel-grid">
-    <div class="panel">
-      <div class="panel-head" id="messPanelHead"><span class="prompt">$</span> mess menu</div>
-      <div id="messPanelBody"></div>
+    <div class="mess-stack">
+      <div class="panel">
+        <div class="panel-head" id="messPanelHead"><span class="prompt">$</span> mess menu</div>
+        <div id="messPanelBody"></div>
+      </div>
+      <div class="panel theme-banner" id="paperThemeBanner" style="display:none;">
+        <div class="theme-banner-content">
+          <div class="theme-banner-title">Clay Dark</div>
+          <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
+          <div class="theme-banner-actions">
+            <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Clay Dark</button>
+            <button class="theme-banner-btn secondary" id="paperBannerDark">Try Light Mode</button>
+            <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
+          </div>
+        </div>
+        <button class="theme-banner-close" id="paperBannerClose" aria-label="Dismiss banner">&times;</button>
+      </div>
     </div>
     <div class="mid-stack">
       <div class="panel kz-panel" id="kaizenPanel" style="display:none;"></div>
