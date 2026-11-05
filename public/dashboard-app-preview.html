@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793918342';
+    var curToken = '1793919011';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -3033,7 +3033,6 @@ body[data-theme="paper-dark"]{
 .dw-twinkle.c{ animation-delay:-2.2s; }
 @keyframes dw-twinkle{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
 .dw-foot{ position:relative; clear:both; text-align:center; pointer-events:none; padding:6px 12px 4px; margin-top:20px; }
-.wrap > .dw-foot{ margin-top:64px; }   /* /spectate's sticky panel overhangs its row */
 .dw-lights{ display:block; width:100%; height:34px; }
 .dw-scene{ display:flex; align-items:flex-end; justify-content:center; gap:clamp(6px, 2.4vw, 22px); margin-top:4px; }
 .dw-diya{ width:46px; height:58px; flex:0 0 auto; pointer-events:auto !important; cursor:pointer !important; transition:transform .2s cubic-bezier(.34, 1.56, .64, 1), filter .2s ease; user-select:none; -webkit-tap-highlight-color:transparent; }
@@ -3059,7 +3058,7 @@ body[data-theme="paper-dark"]{
 .dw-side{ position:fixed; top:0; left:198px; width:70px; height:78px; z-index:42; pointer-events:none; display:none; }
 .dw-side .dw-lantern{ width:30px; height:66px; left:0; }
 .dw-side .dw-lantern.b{ left:36px; width:24px; height:52px; }
-.dw-host:not(.settings):not(.calpanel){ position:relative !important; }
+.dw-host:not(.settings):not(.calpanel):not(.side){ position:relative !important; }
 .settings, .calpanel{ position:fixed !important; }
 @media (min-width: 960px){
   #searchPanel, #groupsPanel{ top:12px !important; bottom:auto !important; }
@@ -3073,6 +3072,7 @@ body[data-theme="paper-dark"]{
 .dw-card-ladi.tr3{ top:-1px; right:-1px; width:135px; height:42px; }
 .dw-card-ladi.tl4{ top:-1px; left:-1px; width:125px; height:65px; }
 .dw-card-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
+#whoPanel.collapsed .dw-card-ladi{ display:none; }   /* a one-line card has no room for a drape */
 
 .boot-log{ position:relative !important; }
 .dw-search-diya, .dw-boot-diya{ position:absolute; pointer-events:auto !important; cursor:pointer !important; z-index:25; }
@@ -3141,7 +3141,7 @@ body[data-theme="paper-dark"]{
 
 .dw-sit{ position:absolute; top:-18px; right:24px; pointer-events:none; z-index:4; width:34px; height:44px; }
 .dw-sit .dw-diya{ width:100%; height:100%; }
-.dw-host:not(.settings):not(.calpanel){ position:relative !important; }
+.dw-host:not(.settings):not(.calpanel):not(.side){ position:relative !important; }
 .settings, .calpanel{ position:fixed !important; }
 @media (min-width: 960px){
   #searchPanel, #groupsPanel{ top:12px !important; bottom:auto !important; }

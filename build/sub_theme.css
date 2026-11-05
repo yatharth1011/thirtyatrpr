@@ -130,6 +130,15 @@
   html body[data-theme="paper"]{ -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
   /* Scrollbars in Paper's own colours: the declared dark scheme would otherwise draw them dark */
   html:has(body[data-theme="paper"]){ scrollbar-color:#c9b9ae #e6dbd3; }
+  /* /spectate's left panel sticks and scrolls by itself on PC, so the card rules above must not make it relative: its
+     sticky offset would become a 74px shove down over the next card. Scrolling clips the pin, so it sits just inside. */
+  @media (min-width: 881px){
+    html body[data-theme="paper"] .layout > .side{ position:sticky; overflow:auto; }
+    html body[data-theme="paper"] .layout > .side::after{ top:3px; }
+  }
+  @media (max-width: 880px){
+    html body[data-theme="paper"] .layout > .side{ position:relative; top:auto; }
+  }
   .theme-dot-paper{ background:#ffffff; border:1px solid #e2e5eb; }
   html body[data-theme="paper"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
   html body[data-theme="paper"] .daycard-head{ border-bottom:none !important; }

@@ -22,7 +22,7 @@
   .layout > .side{ position:sticky; top:74px; max-height:calc(100vh - 90px); overflow:auto; }
   @media (max-width:880px){
     .layout{ grid-template-columns:minmax(0, 1fr); }
-    .layout > .side{ position:static; max-height:none; }
+    .layout > .side{ position:relative; top:auto; max-height:none; }
   }
   .view[hidden]{ display:none; }
 
