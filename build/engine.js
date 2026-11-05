@@ -37,7 +37,7 @@ function weekRange(iso){
   return { start: dateToISO(mon), end: dateToISO(sun) };
 }
 function titleCase(full){
-  return String(full || '').trim().split(/\s+/).map(function(w){ return w.charAt(0)+w.slice(1).toLowerCase(); }).join(' ');
+  return String(full || '').trim().replace(/\s+/g, ' ').toLowerCase().replace(/(^|[\s.'-])(\S)/g, function(m, p, c){ return p + c.toUpperCase(); });
 }
 function escapeHtml(s){
   return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; });

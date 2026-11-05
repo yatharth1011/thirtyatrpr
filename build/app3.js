@@ -86,14 +86,16 @@ var currentNsoOptin = localStorage.getItem(NSO_OPTIN_KEY) || '';
 /* ================= time helpers ================= */
 function toMin(hhmm){ var p=hhmm.split(':').map(Number); return p[0]*60+p[1]; }
 // Roster names are stored ALL CAPS (source data) — title-case just the first name for display.
-function titleCaseFirstName(fullName){
-  var w = fullName.trim().split(' ')[0];
-  return w.charAt(0) + w.slice(1).toLowerCase();
-}
 function titleCaseFullName(fullName){
-  return fullName.trim().split(/\s+/).map(function(w){
-    return w.charAt(0) + w.slice(1).toLowerCase();
-  }).join(' ');
+  // Capitals after a space, dot, apostrophe or hyphen too: MOHD.AMAAN -> Mohd.Amaan
+  return String(fullName || '').trim().replace(/\s+/g, ' ').toLowerCase().replace(/(^|[\s.'-])(\S)/g, function(m, p, c){ return p + c.toUpperCase(); });
+}
+// Full names as the roster has them, except in the Paper themes, which set everyone's in Proper Case.
+function fullNameForTheme(fullName){
+  return /^paper/.test(currentColorTheme) ? titleCaseFullName(fullName) : String(fullName || '').trim();
+}
+function titleCaseFirstName(fullName){
+  return titleCaseFullName(String(fullName || '').trim().split(/\s+/)[0]);
 }
 // ROLES is declared in a small, separately-editable <script> block near the top of index.html
 // (search "ROLES") — grant a role by adding an entry number to its array there.
@@ -2700,7 +2702,7 @@ function openContributorCard(entry){
   if(!s || !panel || !body) return;
   var branchName = DATA.branchNames[s.branch] || s.branch;
   var roles = personRolesFor(entry);
-  var displayName = CONTRIBUTOR_NAME_OVERRIDE[entry] || s.name.trim();
+  var displayName = CONTRIBUTOR_NAME_OVERRIDE[entry] || fullNameForTheme(s.name);
   var summary = contributionSummaryFor(entry);
   body.innerHTML = '<h3>'+personCardHeading(roles)+'</h3>'+
     '<div class="contributor-card-name">'+displayName+
@@ -2756,7 +2758,7 @@ function renderMentorNote(student){
     return;
   }
   el.style.display = 'block';
-  el.innerHTML = 'Your Mentor: <button class="contributor-name-link" data-mentor-entry="'+student.mentorEntry+'" data-mentor-name="'+student.mentor.trim()+'">'+titleCaseFirstName(student.mentor)+'</button>';
+  el.innerHTML = 'Your Mentor: <button class="contributor-name-link" data-mentor-entry="'+student.mentorEntry+'" data-mentor-name="'+fullNameForTheme(student.mentor)+'">'+titleCaseFirstName(student.mentor)+'</button>';
 }
 // Delegated (not bound at init) since the elements that trigger this — the header's role-pill and
 // the "shared by" credit line — are rebuilt via innerHTML on every renderHeader call, so any
@@ -3113,7 +3115,7 @@ function viewStudent(student){
   var banner = document.getElementById('viewBanner');
   if(student.entry !== state.loginEntry){
     banner.style.display = 'flex';
-    document.getElementById('viewBannerText').innerHTML = 'Viewing <b>'+student.name+'</b>&rsquo;s schedule';
+    document.getElementById('viewBannerText').innerHTML = 'Viewing <b>'+fullNameForTheme(student.name)+'</b>&rsquo;s schedule';
   } else {
     banner.style.display = 'none';
   }
@@ -3429,7 +3431,7 @@ function renderSearchResults(list){
   }
   box.innerHTML = list.map(function(s){
     return '<div class="search-result-row" data-entry="'+s.entry+'">' +
-      '<div class="search-result-name">'+s.name.trim()+'</div>' +
+      '<div class="search-result-name">'+fullNameForTheme(s.name)+'</div>' +
       '<div class="search-result-entry">'+s.entry+'</div>' +
       '<div class="search-result-tags">'+studentTagsHtml(s)+'</div>' +
     '</div>';
