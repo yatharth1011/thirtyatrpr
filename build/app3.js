@@ -4014,33 +4014,47 @@ if(window.__overlayFast && window.__overlayFast.then) window.__overlayFast.then(
   });
 })();
 
-/* Paper's fold: a live, non-interactive copy of the header, turned away past a crease (styles: .paper-fold).
-   The real header stays underneath and takes every click. Rebuilt when the header changes, debounced. */
+/* Paper's bend: narrow slices of a live, non-interactive copy of the header, each turned a little further than the last,
+   so the sheet curves smoothly away with no crease (styles: .paper-fold). The real header stays underneath and takes every
+   click. Angles grow evenly from 0, which is a circular arc: the surface and its slope are both continuous.
+   Rebuilt when the header changes, debounced. */
 try { (function(){
   if(typeof document === 'undefined' || typeof MutationObserver === 'undefined' || !document.querySelector) return;
   var header = document.querySelector('#app > header') || document.querySelector('header');
   if(!header) return;
+  var SLICES = 10, MAX_ANGLE = 58;
   var strip = null, timer = null, watcher = null;
   function paperOn(){ return /^paper/.test(document.body.getAttribute('data-theme') || ''); }
+  function angle(i){ return MAX_ANGLE * (i + .5) / SLICES; }
   function place(){
     if(!strip) return;
-    var copy = strip.firstChild, wide = window.innerWidth >= 960, w = header.offsetWidth, h = header.offsetHeight;
-    var cs = getComputedStyle(header);
-    copy.style.width = w + 'px';
-    copy.style.height = h + 'px';
-    copy.style.padding = cs.padding;
-    copy.style.boxSizing = cs.boxSizing;
-    copy.style.display = cs.display;
-    copy.style.flexDirection = cs.flexDirection;
-    if(wide){
-      strip.style.top = ''; strip.style.height = '';
-      copy.style.left = -strip.offsetLeft + 'px';
-      copy.style.top = -header.scrollTop + 'px';
-    } else {
-      var box = header.getBoundingClientRect(), sh = 54;
-      strip.style.top = (box.bottom + window.pageYOffset - sh) + 'px';
-      copy.style.left = '0px';
-      copy.style.top = (sh - h) + 'px';
+    var wide = window.innerWidth >= 960, w = header.offsetWidth, h = header.offsetHeight;
+    var cs = getComputedStyle(header), bend = wide ? strip.offsetWidth : strip.offsetHeight;
+    var sum = 0, i;
+    for(i = 0; i < SLICES; i++) sum += Math.cos(angle(i) * Math.PI / 180);
+    var step = bend * 1.04 / sum;                                   // arc length per slice, so the curve fills the edge
+    if(!wide) strip.style.top = (header.getBoundingClientRect().bottom + window.pageYOffset - bend) + 'px';
+    var pos = 0, depth = 0, kids = strip.children;
+    for(i = 0; i < kids.length; i++){
+      var deg = angle(i), rad = deg * Math.PI / 180, kid = kids[i], copy = kid.firstChild, along = i * step;
+      if(wide){
+        kid.style.width = (step + .7) + 'px';
+        kid.style.transform = 'translate3d(' + pos + 'px,0,' + depth + 'px) rotateY(' + deg + 'deg)';
+      } else {
+        kid.style.height = (step + .7) + 'px';
+        kid.style.transform = 'translate3d(0,' + pos + 'px,' + depth + 'px) rotateX(' + (-deg) + 'deg)';
+      }
+      copy.style.width = w + 'px';
+      copy.style.height = h + 'px';
+      copy.style.padding = cs.padding;
+      copy.style.boxSizing = cs.boxSizing;
+      copy.style.display = cs.display;
+      copy.style.flexDirection = cs.flexDirection;
+      copy.style.left = wide ? -(w - bend + along) + 'px' : '0px';
+      copy.style.top = wide ? -header.scrollTop + 'px' : -(h - bend + along) + 'px';
+      kid.lastChild.style.opacity = (.01 + .2 * Math.pow((i + 1) / SLICES, 2)).toFixed(3);
+      pos += step * Math.cos(rad);
+      depth -= step * Math.sin(rad);
     }
   }
   function build(){
@@ -4054,9 +4068,15 @@ try { (function(){
       strip.inert = true;
       document.body.appendChild(strip);
     }
-    var copy = header.cloneNode(true);
     strip.textContent = '';
-    strip.appendChild(copy);
+    for(var i = 0; i < SLICES; i++){
+      var kid = document.createElement('div'), shade = document.createElement('div');
+      kid.className = 'paper-fold-s';
+      shade.className = 'paper-fold-shade';
+      kid.appendChild(header.cloneNode(true));
+      kid.appendChild(shade);
+      strip.appendChild(kid);
+    }
     place();
     watch();
   }
