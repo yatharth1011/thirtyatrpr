@@ -5,14 +5,14 @@
 // v2 (2026-10-15): only this site's own files go through here. v1 also intercepted and cached every
 // cross-origin request, Firestore's long-lived listen stream included, which could stall live BR edits.
 // v6 (2026-11-06): full-bleed Clay app icons and cache flush
-const CACHE_NAME = 'thirtyatrpr-v6';
+const CACHE_NAME = 'thirtyatrpr-v7';
 const OFFLINE_URLS = [
   '/',
   '/manifest.webmanifest',
-  '/icons/v3/icon-192.png',
-  '/icons/v3/icon-512.png',
-  '/icons/v3/icon-maskable-192.png',
-  '/icons/v3/icon-maskable-512.png',
+  '/icons/v4/icon-192.png',
+  '/icons/v4/icon-512.png',
+  '/icons/v4/icon-maskable-192.png',
+  '/icons/v4/icon-maskable-512.png',
   '/icons/v2/icon-192.png',
   '/icons/v2/icon-512.png',
 ];

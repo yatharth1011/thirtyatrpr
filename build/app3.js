@@ -1069,7 +1069,7 @@ function kzWidget(){
       '</div>'+
       '<div class="kz-meta" style="margin-top:5px;">Daily adaptive target active &middot; auto-reschedules missed backlog</div>'+
     '</div>');
-  if(isTdxUser) {
+  if(isTdxUser && !KZ.mobile) {   // like kzStart: a phone never probes 127.0.0.1, or Chrome keeps asking for local-network access
     try {
       fetch('http://127.0.0.1:8840/api/status', { mode: 'cors', cache: 'no-store' })
         .then(function(r){ return r.json(); })

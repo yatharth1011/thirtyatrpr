@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """App icons for thirty@rpr: the in-app logo tile (Clay gradient tile, dark "30") as PNGs.
 
-Writes public/icons/v3/ (a NEW path, so installed copies re-fetch them; public/icons/v2/ and public/icons/
-are also updated with the same full-bleed Clay design so existing installs and caches get the new icon too):
-- icon-192.png, icon-512.png: full-bleed Clay gradient tile (no transparent corners, so Android never wraps it in a white squircle plate)
+Writes public/icons/v4/ (a NEW path, so installed copies re-fetch them):
+- icon-192.png, icon-512.png (purpose "any"): the tile on Apple's icon grid, an 824/1024 rounded square in transparent
+  margins. Desktop Chrome uses these as they are, and macOS 26+ shrinks anything else onto a white plate. Android uses
+  the maskable icons, so it is unaffected. Never make these full-bleed. Old note: full-bleed Clay gradient tile (noe squircle plate)
 - icon-maskable-192.png, icon-maskable-512.png: full-bleed, "30" well inside the maskable safe zone (40% radius)
 - apple-touch-180.png: full-bleed RGB (iOS rounds it itself and requires no transparency)
 - favicon-64.png: rounded tile for browser tab.
@@ -18,7 +19,7 @@ from PIL import Image, ImageDraw, ImageFont
 FONT = '/Users/yatharthshrivastava/Library/Fonts/JetBrainsMono-ExtraBold.ttf'
 STOPS = [(0.0, (0x9D, 0x17, 0x4D)), (0.50, (0xDB, 0x27, 0x77)), (1.0, (0xF4, 0x3F, 0x5E))]
 INK = (0x17, 0x11, 0x14)
-DIRS = ['public/icons/v3/', 'public/icons/v2/', 'public/icons/']
+DIRS = ['public/icons/v4/']
 SS = 4  # supersampling for smooth edges
 
 
@@ -58,12 +59,32 @@ def tile(size, rounded, text_frac):
     return img.resize((size, size), Image.LANCZOS)
 
 
+def on_apple_grid(size, text_frac):
+    """The tile as a macOS icon: 824/1024 of the canvas, in a continuous-corner rounded square, transparent around it."""
+    n = size * SS
+    side = round(n * 824 / 1024)
+    art = tile(side, False, text_frac)  # tile() supersamples internally; side is already large
+    half = side / 2
+    power = 5.0  # a superellipse: the continuous corners of Apple's shape, not a circular arc
+    mask = Image.new('L', (side, side), 0)
+    px = mask.load()
+    for y in range(side):
+        for x in range(side):
+            if abs((x + .5 - half) / half) ** power + abs((y + .5 - half) / half) ** power <= 1:
+                px[x, y] = 255
+    art.putalpha(mask)
+    canvas = Image.new('RGBA', (n, n), (0, 0, 0, 0))
+    at = (n - side) // 2
+    canvas.paste(art, (at, at), art)
+    return canvas.resize((size, size), Image.LANCZOS)
+
+
 for out_dir in DIRS:
     os.makedirs(out_dir, exist_ok=True)
-    # Android adaptive icons must be FULL-BLEED (rounded=False) so Android launchers never
-    # place a white plate or border around them!
+    # Maskable icons must be FULL-BLEED (rounded=False) so Android launchers never add a white plate;
+    # "any" icons must sit on Apple's grid so macOS does not add one either.
     for size in (192, 512):
-        tile(size, False, 0.48).save(f'{out_dir}icon-{size}.png')
+        on_apple_grid(size, 0.5).save(f'{out_dir}icon-{size}.png')
         tile(size, False, 0.46).save(f'{out_dir}icon-maskable-{size}.png')
     tile(180, False, 0.52).convert('RGB').save(f'{out_dir}apple-touch-180.png')
     tile(64, True, 0.66).save(f'{out_dir}favicon-64.png')
