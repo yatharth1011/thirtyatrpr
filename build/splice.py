@@ -37,7 +37,7 @@ def _dark_body(body):
     def one(part):
         part = re.sub(r'#[0-9a-fA-F]{6}\b', lambda m: DARK_MAP.get(m.group(0).lower(), m.group(0)), part)
         part = re.sub(r'rgba\(17,\s*18,\s*19,\s*([.\d]+)\)', lambda m: 'rgba(0,0,0,%.2f)' % min(.9, float(m.group(1)) * 2.4), part)
-        part = part.replace('rgba(70,48,36,', 'rgba(0,0,0,').replace('rgba(225,29,72,', 'rgba(251,113,133,').replace('only light', 'only dark')
+        part = part.replace('rgba(70,48,36,', 'rgba(0,0,0,').replace('rgba(225,29,72,', 'rgba(251,113,133,')
         return part
     return ''.join(p if p.startswith('url("data:') else one(p) for p in re.split(r'(url\("data:[^"]*"\))', body))
 def _dark_rules(css):

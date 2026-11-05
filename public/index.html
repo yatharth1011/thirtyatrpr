@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793902269';
+    var curToken = '1793902415';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -1576,7 +1576,10 @@ window.__overlayFast = (function(){
 
   /* Paper: paper cut-outs laid on a white page. Cards are white sheets with square corners: shading inside the edges, a lit top edge, and a shadow gathered under the bottom edge.
      Plain box-shadows only: filters and textures here made phones scroll badly. */
-  html:has(body[data-theme="paper"]){ color-scheme:only light; }
+  /* Every theme declares dark (see :root) so Chrome's auto-dark leaves our colours alone. Dark also makes native
+     icons white, so flip them on Paper's light inputs. */
+  html body[data-theme="paper"] ::-webkit-calendar-picker-indicator{ filter:invert(.8); }
+  html body[data-theme="paper"] select option{ background:#ffffff; color:var(--ink); }
   /* Safari's overflow-x:clip also cuts the top edge, which sliced the today card's pin. Paper clips the day slide
      on the column instead, whose padding leaves the pin room. */
   html body[data-theme="paper"] main{ overflow-x:clip; }
@@ -3423,7 +3426,8 @@ body[data-theme="paper-dark"] .theme-banner-btn.primary{
     background:#f4e9e3;
     color:#241b1f;
   }
-html:has(body[data-theme="paper-dark"]){ color-scheme:only dark; }
+html body[data-theme="paper-dark"] ::-webkit-calendar-picker-indicator{ filter:invert(.8); }
+html body[data-theme="paper-dark"] select option{ background:#241b1f; color:var(--ink); }
 html body[data-theme="paper-dark"] main{ overflow-x:clip; }
 html body[data-theme="paper-dark"] main .panel,html body[data-theme="paper-dark"] main .daycard{ overflow:visible !important; }
 html body[data-theme="paper-dark"] .theme-banner{ padding:16px 20px !important; }

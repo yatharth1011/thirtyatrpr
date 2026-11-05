@@ -1576,7 +1576,10 @@ window.__overlayFast = (function(){
 
   /* Paper: paper cut-outs laid on a white page. Cards are white sheets with square corners: shading inside the edges, a lit top edge, and a shadow gathered under the bottom edge.
      Plain box-shadows only: filters and textures here made phones scroll badly. */
-  html:has(body[data-theme="paper"]){ color-scheme:only light; }
+  /* Every theme declares dark (see :root) so Chrome's auto-dark leaves our colours alone. Dark also makes native
+     icons white, so flip them on Paper's light inputs. */
+  html body[data-theme="paper"] ::-webkit-calendar-picker-indicator{ filter:invert(.8); }
+  html body[data-theme="paper"] select option{ background:#ffffff; color:var(--ink); }
   /* Safari's overflow-x:clip also cuts the top edge, which sliced the today card's pin. Paper clips the day slide
      on the column instead, whose padding leaves the pin room. */
   html body[data-theme="paper"] main{ overflow-x:clip; }

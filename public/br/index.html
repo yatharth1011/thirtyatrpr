@@ -88,7 +88,8 @@
     --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     font-family:var(--paper-font);
   }
-  html:has(body[data-theme="paper"]){ color-scheme:only light; }
+  html body[data-theme="paper"] ::-webkit-calendar-picker-indicator{ filter:invert(.8); }
+  html body[data-theme="paper"] select option{ background:#ffffff; color:var(--ink); }
   body[data-theme="paper"]::before{ display:none !important; }
   html body[data-theme="paper"] button, html body[data-theme="paper"] .tab{ box-shadow:none !important; }
   html body[data-theme="paper"] .panel, html body[data-theme="paper"] .card, html body[data-theme="paper"] .daycard{
@@ -390,7 +391,8 @@ body[data-theme="paper-dark"]{
     --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     font-family:var(--paper-font);
   }
-html:has(body[data-theme="paper-dark"]){ color-scheme:only dark; }
+html body[data-theme="paper-dark"] ::-webkit-calendar-picker-indicator{ filter:invert(.8); }
+html body[data-theme="paper-dark"] select option{ background:#241b1f; color:var(--ink); }
 body[data-theme="paper-dark"]::before{ display:none !important; }
 html body[data-theme="paper-dark"] button,html body[data-theme="paper-dark"] .tab{ box-shadow:none !important; }
 html body[data-theme="paper-dark"] .panel,html body[data-theme="paper-dark"] .card,html body[data-theme="paper-dark"] .daycard{
