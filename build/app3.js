@@ -3004,6 +3004,16 @@ function fitGreeting(){
   while(line.scrollWidth > h1.clientWidth && fs > 13){ fs -= 1; line.style.fontSize = fs + 'px'; }
 }
 if(typeof window !== 'undefined' && window.addEventListener) window.addEventListener('resize', function(){ fitGreeting(); });
+// Web fonts arrive in the background and the header settles after first paint, so watch the real sizes rather than
+// fitting once. The text keeps its full size unless it would be cut off.
+var greetObserver = (typeof ResizeObserver !== 'undefined') ? new ResizeObserver(function(){ fitGreeting(); }) : null;
+function watchGreeting(){
+  var h1 = document.getElementById('greeting'), line = h1 && h1.querySelector('.greet-text');
+  if(!greetObserver || !line) return;
+  greetObserver.disconnect();
+  greetObserver.observe(h1);
+  greetObserver.observe(line);
+}
 function kzNameHtml(entry, text){
   return isKaizenUser(entry) ? '<span class="kz-name">' + escapeHtml(text) + '</span>' : escapeHtml(text);
 }
@@ -3021,6 +3031,7 @@ function renderHeader(student){
     : '<span class="greet-text">Hi, ' + escapeHtml(firstName) + '</span>';
   document.getElementById('greeting').innerHTML = greetHtml + roleBadge;
   fitGreeting();
+  watchGreeting();
   document.getElementById('subline').textContent = branchName+' · '+student.entry;
   // Only for the person actually logged in (never while just viewing a classmate's schedule via
   // search), and only if THEY are a Branch Rep or the creator — reuses the same role data /br's own

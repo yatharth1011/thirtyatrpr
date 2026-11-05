@@ -1575,6 +1575,8 @@ window.__overlayFast = (function(){
   /* Paper: paper cut-outs laid on a white page. Cards are white sheets with square corners: shading inside the edges, a lit top edge, and a shadow gathered under the bottom edge.
      Plain box-shadows only: filters and textures here made phones scroll badly. */
   html:has(body[data-theme="paper"]){ color-scheme:light; }
+  /* Bodoni italics overhang their box: keep the last letter inside the gradient */
+  html body[data-theme="paper"] .greet-text{ padding-right:.12em; box-sizing:border-box; }
   html body[data-theme="paper"] main .daycard,
   html body[data-theme="paper"].glass main .daycard,
   html body[data-theme="paper"] main .panel,
@@ -1742,7 +1744,7 @@ window.__overlayFast = (function(){
   html body[data-theme="github"] .kz-name, html body[data-theme="github"] .mini-logo{ --kz-1:#b392f0; --kz-2:#79b8ff; --kz-3:#d1d5da; }
   /* the greeting stays on one line (fitGreeting shrinks it to fit); kaizen users' greeting and squad names wear
      the kaizen gradient */
-  .greet-text{ display:inline-block; max-width:100%; white-space:nowrap; vertical-align:bottom; }
+  .greet-text{ display:inline-block; white-space:nowrap; vertical-align:bottom; }
   .kz-greet, .kz-name{ background:linear-gradient(100deg, var(--kz-1), var(--kz-2) 55%, var(--kz-3));
     -webkit-background-clip:text; background-clip:text; color:transparent; }
   .kz-name{ font-weight:700; }

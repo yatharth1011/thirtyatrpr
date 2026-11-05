@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793900934';
+    var curToken = '1793901052';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -1575,6 +1575,8 @@ window.__overlayFast = (function(){
   /* Paper: paper cut-outs laid on a white page. Cards are white sheets with square corners: shading inside the edges, a lit top edge, and a shadow gathered under the bottom edge.
      Plain box-shadows only: filters and textures here made phones scroll badly. */
   html:has(body[data-theme="paper"]){ color-scheme:light; }
+  /* Bodoni italics overhang their box: keep the last letter inside the gradient */
+  html body[data-theme="paper"] .greet-text{ padding-right:.12em; box-sizing:border-box; }
   html body[data-theme="paper"] main .daycard,
   html body[data-theme="paper"].glass main .daycard,
   html body[data-theme="paper"] main .panel,
@@ -1742,7 +1744,7 @@ window.__overlayFast = (function(){
   html body[data-theme="github"] .kz-name, html body[data-theme="github"] .mini-logo{ --kz-1:#b392f0; --kz-2:#79b8ff; --kz-3:#d1d5da; }
   /* the greeting stays on one line (fitGreeting shrinks it to fit); kaizen users' greeting and squad names wear
      the kaizen gradient */
-  .greet-text{ display:inline-block; max-width:100%; white-space:nowrap; vertical-align:bottom; }
+  .greet-text{ display:inline-block; white-space:nowrap; vertical-align:bottom; }
   .kz-greet, .kz-name{ background:linear-gradient(100deg, var(--kz-1), var(--kz-2) 55%, var(--kz-3));
     -webkit-background-clip:text; background-clip:text; color:transparent; }
   .kz-name{ font-weight:700; }
@@ -6489,6 +6491,16 @@ function fitGreeting(){
   while(line.scrollWidth > h1.clientWidth && fs > 13){ fs -= 1; line.style.fontSize = fs + 'px'; }
 }
 if(typeof window !== 'undefined' && window.addEventListener) window.addEventListener('resize', function(){ fitGreeting(); });
+// Web fonts arrive in the background and the header settles after first paint, so watch the real sizes rather than
+// fitting once. The text keeps its full size unless it would be cut off.
+var greetObserver = (typeof ResizeObserver !== 'undefined') ? new ResizeObserver(function(){ fitGreeting(); }) : null;
+function watchGreeting(){
+  var h1 = document.getElementById('greeting'), line = h1 && h1.querySelector('.greet-text');
+  if(!greetObserver || !line) return;
+  greetObserver.disconnect();
+  greetObserver.observe(h1);
+  greetObserver.observe(line);
+}
 function kzNameHtml(entry, text){
   return isKaizenUser(entry) ? '<span class="kz-name">' + escapeHtml(text) + '</span>' : escapeHtml(text);
 }
@@ -6506,6 +6518,7 @@ function renderHeader(student){
     : '<span class="greet-text">Hi, ' + escapeHtml(firstName) + '</span>';
   document.getElementById('greeting').innerHTML = greetHtml + roleBadge;
   fitGreeting();
+  watchGreeting();
   document.getElementById('subline').textContent = branchName+' · '+student.entry;
   // Only for the person actually logged in (never while just viewing a classmate's schedule via
   // search), and only if THEY are a Branch Rep or the creator — reuses the same role data /br's own
