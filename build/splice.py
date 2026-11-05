@@ -19,9 +19,6 @@ picker_js = open(BASE + '/build/picker.js', 'r', encoding='utf-8').read()
 monthpick_js = open(BASE + '/build/monthpick.js', 'r', encoding='utf-8').read()
 monthpick_css = open(BASE + '/build/monthpick.css', 'r', encoding='utf-8').read()
 sub_theme_css = open(BASE + '/build/sub_theme.css', 'r', encoding='utf-8').read()
-paper_specks_css = open(BASE + '/build/paper_specks.css', 'r', encoding='utf-8').read().strip()
-template = template.replace('/*__PAPER_SPECKS_CSS__*/', paper_specks_css)
-sub_theme_css = sub_theme_css.replace('/*__PAPER_SPECKS_CSS__*/', paper_specks_css)
 sub_theme_css += '\n' + monthpick_css   # the month picker's styles ride along for /spectate and /br
 
 

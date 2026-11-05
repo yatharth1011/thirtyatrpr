@@ -61,18 +61,11 @@
     font-family:var(--paper-font);
   }
   html:has(body[data-theme="paper"]){ color-scheme:light; }
-  /*__PAPER_SPECKS_CSS__*/
-  html body[data-theme="paper"]{ text-shadow:0 0 .55px rgba(0,0,0,.55); }
+  body[data-theme="paper"]::before{ display:none !important; }
   html body[data-theme="paper"] button, html body[data-theme="paper"] .tab, html body[data-theme="paper"] header{ box-shadow:none !important; }
   html body[data-theme="paper"] .panel, html body[data-theme="paper"] .card, html body[data-theme="paper"] .daycard{
-    background-color:#ffffff !important; background-image:var(--paper-specks) !important; background-size:var(--paper-specks-size) !important; background-repeat:repeat !important;
-    border:none !important; border-radius:2px !important; box-shadow:none !important;
-    filter:drop-shadow(0 1px 1px rgba(17,18,19,.20)) drop-shadow(0 7px 11px rgba(17,18,19,.13));
-  }
-  @supports not (-webkit-touch-callout:none){
-    html body[data-theme="paper"] .panel, html body[data-theme="paper"] .card, html body[data-theme="paper"] .daycard{
-      filter:url(#paperInk) drop-shadow(0 1px 1px rgba(17,18,19,.20)) drop-shadow(0 7px 11px rgba(17,18,19,.13));
-    }
+    background:#ffffff !important; border:none !important; border-radius:2px !important;
+    box-shadow:0 1px 2px rgba(17,18,19,.18), 0 8px 18px -2px rgba(17,18,19,.13) !important;
   }
   .theme-dot-paper{ background:#ffffff; border:1px solid #e2e5eb; }
   html body[data-theme="paper"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }

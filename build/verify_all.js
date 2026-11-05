@@ -1525,7 +1525,7 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     console.log(okSub ? 'PASS' : 'FAIL', f + ': boot script defaults to github (not paper) and does NOT trigger paper rollout');
     allPass &= okSub;
   }
-  // sub_theme.css has the Paper theme CSS block (variables + toner grain + element overrides)
+  // sub_theme.css has the Paper theme CSS block (variables + element overrides)
   const sub = fs2.readFileSync(__dirname + '/sub_theme.css', 'utf8');
   const okPaperSub = /body\[data-theme="paper"\]/.test(sub) && /--bg:#ffffff/.test(sub) && /Bodoni Moda/.test(sub) && /theme-dot-paper/.test(sub);
   console.log(okPaperSub ? 'PASS' : 'FAIL', 'sub_theme.css includes the Paper theme block with variables, serif font, and swatch dot');
