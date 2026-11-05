@@ -1525,6 +1525,16 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     console.log(okSub ? 'PASS' : 'FAIL', f + ': boot script defaults to github (not paper) and does NOT trigger paper rollout');
     allPass &= okSub;
   }
+  // Senate Hall: the timetable stays moved with no note; anything scheduled there from 5 Nov 2026 stays there
+  for (const f of ['app3.js', 'engine.js']) {
+    const src = fs2.readFileSync(__dirname + '/' + f, 'utf8');
+    const body = src.slice(src.indexOf('function relocatedVenue('), src.indexOf('function relocatedVenue(') + 700);
+    const fn = new Function('DATA', body.slice(0, body.indexOf('\n}\n') + 2) + '\nreturn relocatedVenue;')(JSON.parse(fs2.readFileSync(__dirname + '/thirty_data.json', 'utf8')));
+    const reg = fn('SENATE HALL', '2026-11-10'), sch = fn('SENATE HALL', '2026-11-10', true), old = fn('SENATE HALL', '2026-10-15', true), swap = fn('SRC-107', '2026-09-14');
+    const okSenate = reg.venue === 'SRC-106' && reg.movedFrom === null && sch.venue === 'SENATE HALL' && old.venue === 'SRC-106' && old.movedFrom === null && swap.venue === 'SENATE HALL' && swap.movedFrom === 'SRC-107';
+    console.log(okSenate ? 'PASS' : 'FAIL', f + ': timetable stays moved silently, new scheduling keeps Senate Hall, past moves stay, dated swaps stay labelled');
+    allPass &= okSenate;
+  }
   // sub_theme.css has the Paper theme CSS block (variables + element overrides)
   const sub = fs2.readFileSync(__dirname + '/sub_theme.css', 'utf8');
   const okPaperSub = /body\[data-theme="paper"\]/.test(sub) && /--bg:#ffffff/.test(sub) && /Bodoni Moda/.test(sub) && /theme-dot-paper/.test(sub);

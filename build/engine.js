@@ -157,12 +157,13 @@ function subjectColor(code){
   for(var j=0;j<up.length;j++) h = (h*31 + up.charCodeAt(j)) >>> 0;
   return fallbacks[h % fallbacks.length];
 }
-function relocatedVenue(venue, iso){
+function relocatedVenue(venue, iso, scheduled){
   var rules = DATA.venueRelocations || [];
   for(var i=0;i<rules.length;i++){
     var r = rules[i];
     if(r.from !== venue || iso < r.validFrom || (r.validTo && iso > r.validTo)) continue;
-    return { venue: r.to, movedFrom: r.from };
+    if(scheduled && r.keepScheduledFrom && iso >= r.keepScheduledFrom) continue;   // scheduled there on purpose
+    return { venue: r.to, movedFrom: r.validTo ? r.from : null };                  // a standing move carries no note
   }
   return { venue: venue, movedFrom: null };
 }
@@ -362,7 +363,7 @@ function studentDay(student, iso, opts){
   }
   items.concat(hidden).forEach(function(it){
     if(it.venue){
-      var r = relocatedVenue(it.venue, iso);
+      var r = relocatedVenue(it.venue, iso, it.source === 'overlay' || it.source === 'override');
       it.venue = r.venue;
       if(r.movedFrom) it.venueMovedFrom = r.movedFrom;
     }
@@ -986,7 +987,7 @@ function venueOccupancy(iso){
       return studentDay(ROSTER[i], iso).items.some(function(it){ return it.subject === e.subject && it.sMin === sMin && it.source === c.src; });
     });
     if(!present.length) return;
-    var reloc = relocatedVenue(e.venue, iso);
+    var reloc = relocatedVenue(e.venue, iso, c.src === 'override');
     push(reloc.venue, { s: sMin, e: sMin + classDuration(e), code: e.subject, title: e.title || courseName(e.subject) || e.subject,
       who: describe(present).join(' + '), batch: '2026', source: c.src, movedFrom: reloc.movedFrom });
   });

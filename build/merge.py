@@ -1623,10 +1623,14 @@ SEQUENTIAL_COURSES = [
 # Temporary venue relocations (Academic Section notice, 11 Sep 2026 — furniture installation in the
 # new Lecture Hall Complex): applied by the app to ANY item whose venue matches `from`, regardless
 # of which course/entry it came from (class, HS/IKS elective, date override) — the notice affects
-# rooms, not specific subjects. `validTo: None` means open-ended ("until further instructions").
+# rooms, not specific subjects. `validTo: None` means open-ended, and such a standing move shows no "moved from" note:
+# it is simply where the class is now. Only a temporary swap with an end date is labelled.
 VENUE_RELOCATIONS = [
     {
         'from': 'SENATE HALL', 'to': 'SRC-106', 'validFrom': '2026-09-11', 'validTo': None,
+        # The regular timetable stays in SRC-106, but Senate Hall is back in use: anything scheduled there (a BR change
+        # or a date override) on or after this date stays there. User, 5 Nov 2026.
+        'keepScheduledFrom': '2026-11-05',
         'note': 'Furniture installation in the new Lecture Hall Complex — Academic Section notice, 11 Sep 2026.',
     },
     {

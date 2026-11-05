@@ -234,16 +234,17 @@ function venueDesc(code){
 // A date-scoped venue swap (see DATA.venueRelocations / build/merge.py) applies to ANY item whose
 // venue exactly matches `from` on that date, regardless of which course/entry it came from — the
 // notice affects a room, not a specific subject. Returns the original venue unchanged (movedFrom
-// null) outside any matching window.
+// null) outside any matching window. `scheduled` marks a BR change or date override, which keepScheduledFrom can exempt.
 var VENUE_DISPLAY_NAME = {'SENATE HALL':'Senate Hall', 'SRC-107':'SRC-107'};
-function relocatedVenue(venue, iso){
+function relocatedVenue(venue, iso, scheduled){
   var rules = DATA.venueRelocations || [];
   for(var i=0;i<rules.length;i++){
     var r = rules[i];
     if(r.from !== venue) continue;
     if(iso < r.validFrom) continue;
     if(r.validTo && iso > r.validTo) continue;
-    return {venue: r.to, movedFrom: r.from};
+    if(scheduled && r.keepScheduledFrom && iso >= r.keepScheduledFrom) continue;   // scheduled there on purpose
+    return {venue: r.to, movedFrom: r.validTo ? r.from : null};                    // a standing move carries no note
   }
   return {venue: venue, movedFrom: null};
 }
@@ -515,6 +516,7 @@ function overlayShowsForDate(iso, student){
     if(overlayHidesSubjectOn(ov.show.subject, iso, student, ov.show.startMin, ov)) return;
     var name = courseName(ov.show.subject);
     out.push({
+      scheduled: true,
       sMin: ov.show.startMin, eMin: ov.show.endMin,
       t: toHHMM(ov.show.startMin)+' – '+toHHMM(ov.show.endMin),
       title: name || ov.show.title || ov.show.subject,
@@ -1621,6 +1623,7 @@ function buildDays(student){
     // than baked into the DATE_OVERRIDES entry itself. Not every exam date has seating data (the
     // source workbook only had 4 of the 5 Mid-Sem exam dates finalized at merge time), so this is a
     // no-op — not a placeholder — wherever a lookup misses.
+    dateOverrideClasses.forEach(function(it){ it.scheduled = true; });
     dateOverrideClasses.forEach(function(it){
       if(it.category !== 'Exam' && it.category !== 'Quiz') return;
       var seat = DATA.examSeating && DATA.examSeating[iso] && DATA.examSeating[iso][student.entry];
@@ -1653,7 +1656,7 @@ function buildDays(student){
     // regardless of source — rewrite venues in place before this day is handed off to the UI.
     all.forEach(function(it){
       if(!it.venue) return;
-      var reloc = relocatedVenue(it.venue, iso);
+      var reloc = relocatedVenue(it.venue, iso, it.scheduled);
       it.venue = reloc.venue;
       if(reloc.movedFrom) it.venueMovedFrom = reloc.movedFrom;
     });
