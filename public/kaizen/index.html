@@ -445,6 +445,16 @@ body[data-theme="paper-dark"]{
 }
 html body[data-theme="paper-dark"], html body[data-theme="paper-dark"].glass{ background-color:#171114 !important; }
 .theme-dot-paper-dark{ background:#241b1f; border:1px solid #f472b6; }
+/* Pins: the generated colours invert to pale pink, the brightest thing on the page. Here they stay deep and quiet. */
+html body[data-theme="paper-dark"] main .panel::after,
+html body[data-theme="paper-dark"] main .daycard::after,
+html body[data-theme="paper-dark"] main .kz-panel::after,
+html body[data-theme="paper-dark"] .panel::after,
+html body[data-theme="paper-dark"] .card::after,
+html body[data-theme="paper-dark"] .daycard::after{
+  background:radial-gradient(circle at 35% 30%, #c9708c 0, #8c2c4e 30%, #4a1026 85%) !important;
+  box-shadow:0 1px 1px rgba(0,0,0,.6), 3px 6px 5px -1px rgba(0,0,0,.55) !important;
+}
 
 /* Month picker styles (build/monthpick.js) — appended to sub_theme.css for /spectate and /br, and spliced into
    the dashboard for its Squads panel, by build/splice.py. */
