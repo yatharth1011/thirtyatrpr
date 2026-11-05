@@ -25,7 +25,7 @@ var GITHUB_THEME_ROLLOUT_KEY = 'thirtyatrpr_theme_github_rollout';
 var PAPER_THEME_ROLLOUT_KEY = 'thirtyatrpr_theme_paper_rollout';
 var PAPER_BANNER_KEY = 'thirtyatrpr_paper_banner_show';
 var PAPER_BANNER_DISMISSED_KEY = 'thirtyatrpr_paper_banner_dismissed';
-// 'paper' (Paper light theme, adapting Kaizen.app with CMU Serif typography) is the default color theme.
+// 'paper' (Paper light theme) is the default color theme.
 // It is rolled out to EVERYONE on next open via a one-time switch: previously saved color theme is saved
 // to PREV_THEME_KEY (so the one-time banner can keep or revert/change), and the rollout marker is stored
 // so the user's manual choices stick afterwards.

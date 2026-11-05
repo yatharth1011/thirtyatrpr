@@ -1527,7 +1527,7 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
   }
   // sub_theme.css has the Paper theme CSS block (variables + toner grain + element overrides)
   const sub = fs2.readFileSync(__dirname + '/sub_theme.css', 'utf8');
-  const okPaperSub = /body\[data-theme="paper"\]/.test(sub) && /--bg:#ffffff/.test(sub) && /CMU Serif/.test(sub) && /theme-dot-paper/.test(sub);
+  const okPaperSub = /body\[data-theme="paper"\]/.test(sub) && /--bg:#ffffff/.test(sub) && /Bodoni Moda/.test(sub) && /theme-dot-paper/.test(sub);
   console.log(okPaperSub ? 'PASS' : 'FAIL', 'sub_theme.css includes the Paper theme block with variables, serif font, and swatch dot');
   allPass &= okPaperSub;
   // Paper banner only exists on the dashboard, never on sub-pages

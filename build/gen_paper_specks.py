@@ -2,13 +2,13 @@
 
 Like prbsets/build/photocopy.py, but as vectors: a few tiny irregular flecks and the odd hairline, no text residue.
 Three tiles of coprime sizes overlap, so the pattern has no visible repeat. They sit behind the content
-(z-index -1) and scroll with it. Density is about one mark per 21,000 px2: 14 or so on a phone screen, like a book page.
+(z-index -1) and scroll with it. Density is about one mark per 14,000 px2: 20 or so on a phone screen, like a book page.
 Run: python3 build/gen_paper_specks.py   (only when changing the look)
 """
 import math, os, random
 from urllib.parse import quote
 
-TILES = [(1013, 1409, 30, 11), (1291, 1777, 32, 23), (1543, 1153, 22, 37)]
+TILES = [(1013, 1409, 46, 11), (1291, 1777, 50, 23), (1543, 1153, 34, 37)]
 
 def fleck(r, x, y):
     s = r.uniform(.35, .95) if r.random() > .12 else r.uniform(1, 1.4)
@@ -27,7 +27,7 @@ def hair(r, x, y):
 
 def tile(w, h, count, seed):
     r = random.Random(seed)
-    tones = {'.4': [], '.6': [], '.8': []}
+    tones = {'.55': [], '.75': [], '.95': []}
     hairs = []
     for _ in range(count):
         x, y = r.uniform(0, w), r.uniform(0, h)
@@ -41,14 +41,14 @@ def tile(w, h, count, seed):
     svg = "<svg xmlns='http://www.w3.org/2000/svg' width='%d' height='%d' fill='#222'>%s</svg>" % (w, h, body.replace('"', "'"))
     return 'url("data:image/svg+xml,%s")' % quote(svg, safe="=:/ '")
 
-css = ('body[data-theme="paper"]{ position:relative; }\n'
+size = ','.join('%dpx %dpx' % t[:2] for t in TILES)
+image = ','.join(tile(*t) for t in TILES)
+css = ('body[data-theme="paper"]{ position:relative; --paper-specks-size:%s; --paper-specks:%s; }\n'
        '  body[data-theme="paper"]::before{ display:none !important; }\n'
        '  body[data-theme="paper"]::after{\n'
        '    content:""; display:block; position:absolute; inset:0; z-index:-1; pointer-events:none;\n'
-       '    background-repeat:repeat;\n'
-       '    background-size:%s;\n'
-       '    background-image:%s;\n'
-       '  }' % (','.join('%dpx %dpx' % t[:2] for t in TILES), ','.join(tile(*t) for t in TILES)))
+       '    background-repeat:repeat; background-size:var(--paper-specks-size); background-image:var(--paper-specks);\n'
+       '  }' % (size, image))
 out = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'paper_specks.css')
 open(out, 'w', encoding='utf-8').write(css + '\n')
 print(len(css), 'bytes ->', out)
