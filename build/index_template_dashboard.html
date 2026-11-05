@@ -1750,7 +1750,7 @@ window.__overlayFast = (function(){
       content:""; position:absolute; left:0; right:0; bottom:0; height:84px; pointer-events:none; z-index:5;
       background:linear-gradient(180deg, rgba(70,48,36,0), rgba(70,48,36,.12));
     }
-    html body[data-theme="paper"] .mini-bar.show{ transform:perspective(900px) rotateX(-2.4deg); transform-origin:50% 0; }
+    /* No 3D tilt on this bar: it animates in, so Chrome rasterises it once at low resolution and the logo pixelates. Shading only. */
     html body[data-theme="paper"] .mini-bar::after{
       content:""; position:absolute; left:0; right:0; bottom:0; height:44px; pointer-events:none;
       background:linear-gradient(180deg, rgba(70,48,36,0), rgba(70,48,36,.11));
