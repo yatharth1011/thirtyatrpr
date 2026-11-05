@@ -62,14 +62,14 @@
   }
   /* Paper Theme */
   body[data-theme="paper"]{
-    --bg:#ffffff; --bg2:#f7f8fa; --card:#ffffff; --card2:#f4f5f8; --line:#e2e5eb;
-    --ink:#111213; --ink-soft:#374151; --ink-faint:#525866;
+    --bg:#ffffff; --bg2:#faf6f2; --card:#ffffff; --card2:#f6f1ec; --line:#e6dfd9;
+    --ink:#1c1714; --ink-soft:#443b36; --ink-faint:#6a5f58;
     --gold:#e11d48; --gold-soft:rgba(225,29,72,0.08);
-    --ok:#15803d;
+    --ok:#5f6f2a;
     --amber:#854d0e; --amber-soft:rgba(133,77,14,0.12);
-    --teal:#0369a1; --teal-soft:rgba(3,105,161,0.12);
+    --teal:#8a3b2a; --teal-soft:rgba(138,59,42,0.12);
     --rose:#e11d48; --rose-soft:rgba(225,29,72,0.08);
-    --violet:#6d28d9; --violet-soft:rgba(109,40,217,0.12);
+    --violet:#7e2a5e; --violet-soft:rgba(126,42,94,0.12);
     --head-bg:rgba(255,255,255,0.96);
     --paper-sheet:linear-gradient(168deg, #ffffff 0%, #ffffff 58%, #f8f8f7 100%);
     --paper-shadow:
@@ -81,7 +81,7 @@
       0 3px 6px -2px rgba(17,18,19,.12),
       0 16px 18px -14px rgba(17,18,19,.30);
     --paper-board:radial-gradient(rgba(112,84,70,.20) 1px, transparent 1.3px), radial-gradient(rgba(255,255,255,.40) 1px, transparent 1.3px);
-    --paper-pin:radial-gradient(circle at 35% 30%, #ffd9e2 0, #f43f5e 28%, #9d174d 82%);
+--pin-rose:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 56' width='44' height='56'%3E%3Cdefs%3E%3ClinearGradient id='h' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23e11d48'/%3E%3Cstop offset='.28' stop-color='%23ff8fab'/%3E%3Cstop offset='.62' stop-color='%23e11d48'/%3E%3Cstop offset='1' stop-color='%237f1137'/%3E%3C/linearGradient%3E%3ClinearGradient id='m' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%238d8780'/%3E%3Cstop offset='.45' stop-color='%23f3efea'/%3E%3Cstop offset='1' stop-color='%236d675f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M9 50 L36 56 Q43 55 40 50 L30 42 Q24 40 20 42Z' fill='%232a1a14' opacity='.2'/%3E%3Cpath d='M9 50 L24 50 Q30 50 28 46 L22 41Z' fill='%232a1a14' opacity='.28'/%3E%3Cg transform='rotate%2824 9 50%29'%3E%3Cpath d='M8.2 31 h1.6 l-.8 19z' fill='url%28%23m%29'/%3E%3Cpath d='M1 31 Q9 26 17 31 Q17 34 9 34.5 Q1 34 1 31z' fill='url%28%23h%29'/%3E%3Cpath d='M4.2 30 C5 23 5.3 17 4.6 11 L13.4 11 C12.7 17 13 23 13.8 30 Q9 33 4.2 30z' fill='url%28%23h%29'/%3E%3Cpath d='M1.4 9.5 Q9 5 16.6 9.5 Q17.5 12.5 9 13.4 Q.5 12.5 1.4 9.5z' fill='url%28%23h%29'/%3E%3Cellipse cx='9' cy='8.6' rx='7.2' ry='2.5' fill='%23ff8fab'/%3E%3Cellipse cx='6.6' cy='8.1' rx='2.8' ry='.9' fill='%23fff' opacity='.75'/%3E%3C/g%3E%3C/svg%3E");
     --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     font-family:var(--paper-font);
   }
@@ -109,14 +109,22 @@
     outline:1px solid rgba(17,18,19,.17); outline-offset:-7px;
     overflow:visible;
   }
+  /* A round pink pin seen from above, in a different spot on each card */
+  html body[data-theme="paper"] .panel,
+  html body[data-theme="paper"] .card,
+  html body[data-theme="paper"] .daycard{ --pin-x:50%; }
+  html body[data-theme="paper"] .panel:nth-child(3n+1),   html body[data-theme="paper"] .card:nth-child(3n+1){ --pin-x:18%; }
+  html body[data-theme="paper"] .panel:nth-child(3n+2),   html body[data-theme="paper"] .card:nth-child(3n+2){ --pin-x:72%; }
+  html body[data-theme="paper"] .panel:nth-child(3n),   html body[data-theme="paper"] .card:nth-child(3n){ --pin-x:44%; }
   html body[data-theme="paper"] .panel::after,
   html body[data-theme="paper"] .card::after,
   html body[data-theme="paper"] .daycard::after{
-    content:"" !important; display:block; position:absolute; inset:auto; top:-7px; left:50%; margin-left:-8px;
-    width:16px; height:16px; padding:0; border-radius:50%; z-index:3; pointer-events:none;
-    background:var(--paper-pin) !important; opacity:1 !important; filter:none !important; animation:none !important;
+    content:"" !important; display:block; position:absolute; inset:auto; top:-7px; left:var(--pin-x);
+    width:16px; height:16px; margin-left:-8px; padding:0; border-radius:50%; z-index:3; pointer-events:none;
+    background:radial-gradient(circle at 35% 30%, #ffd9e2 0, #f43f5e 28%, #9d174d 82%) !important;
+    box-shadow:0 1px 1px rgba(60,20,30,.35), 3px 6px 5px -1px rgba(40,25,20,.38) !important;
+    opacity:1 !important; filter:none !important; animation:none !important; transform:none;
     -webkit-mask:none !important; mask:none !important;
-    box-shadow:0 1px 1px rgba(60,20,30,.35), 3px 6px 5px -1px rgba(40,25,20,.38);
   }
   html body[data-theme="paper"] .panel .panel, html body[data-theme="paper"] .panel .card, html body[data-theme="paper"] .panel .daycard, html body[data-theme="paper"] .card .card{ outline:none; box-shadow:none !important; background:transparent !important; }
   html body[data-theme="paper"] .panel .panel::after, html body[data-theme="paper"] .panel .card::after, html body[data-theme="paper"] .panel .daycard::after, html body[data-theme="paper"] .card .card::after{ content:none !important; }
@@ -357,6 +365,82 @@
   .pk-adv.on{ background:color-mix(in srgb, var(--ok) 22%, transparent); color:var(--ink); }
   .pq-expr .pq-inline{ display:inline-block; flex:0 0 auto; width:auto; min-width:2px; max-width:100%; margin:0; padding:2px 1px; background:transparent; border:none; outline:none; box-shadow:none; font:inherit; font-size:12px; color:var(--ink); caret-color:var(--ok); field-sizing:content; -webkit-appearance:none; appearance:none; border-radius:0; }
   .pq-expr .pq-inline:focus, .pq-expr .pq-inline:focus-visible{ outline:none !important; box-shadow:none !important; border:none !important; }
+
+body[data-theme="paper-dark"]{
+    --bg:#241b1f; --bg2:#2a2025; --card:#241b1f; --card2:#2e2328; --line:#3d3034;
+    --ink:#f4e9e3; --ink-soft:#d5c6bf; --ink-faint:#a99a93;
+    --gold:#fb7185; --gold-soft:rgba(251,113,133,0.08);
+    --ok:#c5d08a;
+    --amber:#e6bf7e; --amber-soft:rgba(133,77,14,0.12);
+    --teal:#e8a98f; --teal-soft:rgba(138,59,42,0.12);
+    --rose:#fb7185; --rose-soft:rgba(251,113,133,0.08);
+    --violet:#e3a6d0; --violet-soft:rgba(126,42,94,0.12);
+    --head-bg:rgba(255,255,255,0.96);
+    --paper-sheet:linear-gradient(168deg, #241b1f 0%, #241b1f 58%, #1e1619 100%);
+    --paper-shadow:
+      inset 0 1px 0 #241b1f,
+      inset 0 0 0 1px rgba(0,0,0,0.08),
+      inset 0 -2px 3px -2px rgba(0,0,0,0.24),
+      inset 0 0 22px rgba(0,0,0,0.10),
+      0 1px 1px rgba(0,0,0,0.38),
+      0 3px 6px -2px rgba(0,0,0,0.29),
+      0 16px 18px -14px rgba(0,0,0,0.72);
+    --paper-board:radial-gradient(rgba(112,84,70,.20) 1px, transparent 1.3px), radial-gradient(rgba(255,255,255,.40) 1px, transparent 1.3px);
+--pin-rose:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 56' width='44' height='56'%3E%3Cdefs%3E%3ClinearGradient id='h' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23e11d48'/%3E%3Cstop offset='.28' stop-color='%23ff8fab'/%3E%3Cstop offset='.62' stop-color='%23e11d48'/%3E%3Cstop offset='1' stop-color='%237f1137'/%3E%3C/linearGradient%3E%3ClinearGradient id='m' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%238d8780'/%3E%3Cstop offset='.45' stop-color='%23f3efea'/%3E%3Cstop offset='1' stop-color='%236d675f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M9 50 L36 56 Q43 55 40 50 L30 42 Q24 40 20 42Z' fill='%232a1a14' opacity='.2'/%3E%3Cpath d='M9 50 L24 50 Q30 50 28 46 L22 41Z' fill='%232a1a14' opacity='.28'/%3E%3Cg transform='rotate%2824 9 50%29'%3E%3Cpath d='M8.2 31 h1.6 l-.8 19z' fill='url%28%23m%29'/%3E%3Cpath d='M1 31 Q9 26 17 31 Q17 34 9 34.5 Q1 34 1 31z' fill='url%28%23h%29'/%3E%3Cpath d='M4.2 30 C5 23 5.3 17 4.6 11 L13.4 11 C12.7 17 13 23 13.8 30 Q9 33 4.2 30z' fill='url%28%23h%29'/%3E%3Cpath d='M1.4 9.5 Q9 5 16.6 9.5 Q17.5 12.5 9 13.4 Q.5 12.5 1.4 9.5z' fill='url%28%23h%29'/%3E%3Cellipse cx='9' cy='8.6' rx='7.2' ry='2.5' fill='%23ff8fab'/%3E%3Cellipse cx='6.6' cy='8.1' rx='2.8' ry='.9' fill='%23fff' opacity='.75'/%3E%3C/g%3E%3C/svg%3E");
+    --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
+    font-family:var(--paper-font);
+  }
+html:has(body[data-theme="paper-dark"]){ color-scheme:only dark; }
+body[data-theme="paper-dark"]::before{ display:none !important; }
+html body[data-theme="paper-dark"] button,html body[data-theme="paper-dark"] .tab{ box-shadow:none !important; }
+html body[data-theme="paper-dark"] .panel,html body[data-theme="paper-dark"] .card,html body[data-theme="paper-dark"] .daycard{
+    background:var(--paper-sheet) !important; border:none !important; border-radius:2px !important;
+    box-shadow:var(--paper-shadow) !important;
+  }
+html body[data-theme="paper-dark"],html body[data-theme="paper-dark"] button,html body[data-theme="paper-dark"] input,html body[data-theme="paper-dark"] select,html body[data-theme="paper-dark"] textarea{
+    font-optical-sizing:none; font-variation-settings:'opsz' 6;
+  }
+html body[data-theme="paper-dark"],html body[data-theme="paper-dark"].glass{
+    background-color:#e6dbd3 !important; background-image:var(--paper-board) !important;
+    background-size:16px 16px !important; background-position:0 0, 8px 8px !important;
+  }
+html body[data-theme="paper-dark"] .panel,html body[data-theme="paper-dark"] .card,html body[data-theme="paper-dark"] .daycard{
+    position:relative;
+    outline:1px solid rgba(0,0,0,0.41); outline-offset:-7px;
+    overflow:visible;
+  }
+html body[data-theme="paper-dark"] .panel,html body[data-theme="paper-dark"] .card,html body[data-theme="paper-dark"] .daycard{ --pin-x:50%; }
+html body[data-theme="paper-dark"] .panel:nth-child(3n+1),html body[data-theme="paper-dark"] .card:nth-child(3n+1){ --pin-x:18%; }
+html body[data-theme="paper-dark"] .panel:nth-child(3n+2),html body[data-theme="paper-dark"] .card:nth-child(3n+2){ --pin-x:72%; }
+html body[data-theme="paper-dark"] .panel:nth-child(3n),html body[data-theme="paper-dark"] .card:nth-child(3n){ --pin-x:44%; }
+html body[data-theme="paper-dark"] .panel::after,html body[data-theme="paper-dark"] .card::after,html body[data-theme="paper-dark"] .daycard::after{
+    content:"" !important; display:block; position:absolute; inset:auto; top:-7px; left:var(--pin-x);
+    width:16px; height:16px; margin-left:-8px; padding:0; border-radius:50%; z-index:3; pointer-events:none;
+    background:radial-gradient(circle at 35% 30%, #ffd9e2 0, #fb7185 28%, #f9a8c4 82%) !important;
+    box-shadow:0 1px 1px rgba(60,20,30,.35), 3px 6px 5px -1px rgba(40,25,20,.38) !important;
+    opacity:1 !important; filter:none !important; animation:none !important; transform:none;
+    -webkit-mask:none !important; mask:none !important;
+  }
+html body[data-theme="paper-dark"] .panel .panel,html body[data-theme="paper-dark"] .panel .card,html body[data-theme="paper-dark"] .panel .daycard,html body[data-theme="paper-dark"] .card .card{ outline:none; box-shadow:none !important; background:transparent !important; }
+html body[data-theme="paper-dark"] .panel .panel::after,html body[data-theme="paper-dark"] .panel .card::after,html body[data-theme="paper-dark"] .panel .daycard::after,html body[data-theme="paper-dark"] .card .card::after{ content:none !important; }
+html body[data-theme="paper-dark"] header{ background:linear-gradient(180deg, #241b1f 0%, #241b1f 70%, #1e1619 100%) !important; box-shadow:0 2px 3px rgba(0,0,0,0.29), 0 14px 18px -14px rgba(0,0,0,0.77) !important; }
+html body[data-theme="paper-dark"] .panel-head{ border-bottom:none !important; padding-bottom:0 !important; color:var(--ink); }
+html body[data-theme="paper-dark"] .daycard-head{ border-bottom:none !important; }
+/* Paper Dark: hand-tuned extras. All other paper-dark rules are generated from Paper by splice.py (paper_dark_css). */
+body[data-theme="paper-dark"]{
+  --paper-sheet:linear-gradient(168deg, #2a2024 0%, #261c20 58%, #201719 100%);
+  --paper-shadow:
+    inset 0 1px 0 rgba(255,235,240,.07),
+    inset 0 0 0 1px rgba(255,235,240,.03),
+    inset 0 -2px 3px -2px rgba(0,0,0,.5),
+    inset 0 0 22px rgba(0,0,0,.22),
+    0 1px 1px rgba(0,0,0,.5),
+    0 3px 6px -2px rgba(0,0,0,.5),
+    0 16px 18px -14px rgba(0,0,0,.8);
+  --paper-board:radial-gradient(rgba(255,205,220,.075) 1px, transparent 1.3px), radial-gradient(rgba(0,0,0,.4) 1px, transparent 1.3px);
+}
+html body[data-theme="paper-dark"], html body[data-theme="paper-dark"].glass{ background-color:#171114 !important; }
+.theme-dot-paper-dark{ background:#241b1f; border:1px solid #f472b6; }
 
 /* Month picker styles (build/monthpick.js) — appended to sub_theme.css for /spectate and /br, and spliced into
    the dashboard for its Squads panel, by build/splice.py. */

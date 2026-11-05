@@ -1,0 +1,15 @@
+/* Paper Dark: hand-tuned extras. All other paper-dark rules are generated from Paper by splice.py (paper_dark_css). */
+body[data-theme="paper-dark"]{
+  --paper-sheet:linear-gradient(168deg, #2a2024 0%, #261c20 58%, #201719 100%);
+  --paper-shadow:
+    inset 0 1px 0 rgba(255,235,240,.07),
+    inset 0 0 0 1px rgba(255,235,240,.03),
+    inset 0 -2px 3px -2px rgba(0,0,0,.5),
+    inset 0 0 22px rgba(0,0,0,.22),
+    0 1px 1px rgba(0,0,0,.5),
+    0 3px 6px -2px rgba(0,0,0,.5),
+    0 16px 18px -14px rgba(0,0,0,.8);
+  --paper-board:radial-gradient(rgba(255,205,220,.075) 1px, transparent 1.3px), radial-gradient(rgba(0,0,0,.4) 1px, transparent 1.3px);
+}
+html body[data-theme="paper-dark"], html body[data-theme="paper-dark"].glass{ background-color:#171114 !important; }
+.theme-dot-paper-dark{ background:#241b1f; border:1px solid #f472b6; }

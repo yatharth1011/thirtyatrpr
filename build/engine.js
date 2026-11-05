@@ -134,16 +134,23 @@ var SUBJECT_COLORS = {
 };
 var FALLBACK_COLORS = ['#da6662','#da9a62','#dac262','#62daaa','#62dad6','#62b6da','#6286da','#9662da','#da62a2'];
 var SUBJECT_COLORS_PAPER = {
-  AI101:'#e11d48', MA101:'#d97706', PH101:'#059669', CY101:'#4f46e5', CS100:'#9333ea',
-  TL101:'#0284c7', WP101:'#ea580c', NCC:'#475569', LIFESKILL:'#64748b', NO101:'#0d9488',
-  HS110:'#db2777', HS111:'#ca8a04', HS112:'#0284c7', HS113:'#7c3aed', IK101:'#16a34a'
+  AI101:'#be123c', MA101:'#b45309', PH101:'#5f6f2a', CY101:'#7e2a5e', CS100:'#9d174d',
+  TL101:'#8a3b2a', WP101:'#c2410c', NCC:'#6b5a4e', LIFESKILL:'#8a7a6d', NO101:'#4d6b4f',
+  HS110:'#db2777', HS111:'#a16207', HS112:'#8a3b2a', HS113:'#7e2a5e', IK101:'#4d7c0f'
 };
-var FALLBACK_COLORS_PAPER = ['#e11d48','#d97706','#059669','#4f46e5','#9333ea','#0284c7','#ea580c','#db2777','#16a34a'];
+var FALLBACK_COLORS_PAPER = ['#be123c','#b45309','#5f6f2a','#7e2a5e','#9d174d','#8a3b2a','#c2410c','#db2777','#4d7c0f'];
+var SUBJECT_COLORS_PAPER_DARK = {
+  AI101:'#fda4af', MA101:'#f0b775', PH101:'#c5d08a', CY101:'#e3a6d0', CS100:'#f9a8c4',
+  TL101:'#e8a98f', WP101:'#f2a66f', NCC:'#c4b5a8', LIFESKILL:'#b3a497', NO101:'#a9c7a4',
+  HS110:'#f472b6', HS111:'#e6bf7e', HS112:'#e8a98f', HS113:'#e3a6d0', IK101:'#b9d48a'
+};
+var FALLBACK_COLORS_PAPER_DARK = ['#fda4af','#f0b775','#c5d08a','#e3a6d0','#f9a8c4','#e8a98f','#f2a66f','#f472b6','#b9d48a'];
 function subjectColor(code){
   var isPaper = false;
   try { isPaper = (typeof document !== 'undefined' && document.body && document.body.getAttribute('data-theme') === 'paper') || (typeof localStorage !== 'undefined' && localStorage.getItem('thirtyatrpr_color_theme') === 'paper'); } catch(e){}
-  var palette = isPaper ? SUBJECT_COLORS_PAPER : SUBJECT_COLORS;
-  var fallbacks = isPaper ? FALLBACK_COLORS_PAPER : FALLBACK_COLORS;
+  var isPaperDark = (typeof document !== 'undefined' && !!document.body && document.body.getAttribute('data-theme') === 'paper-dark');
+  var palette = isPaperDark ? SUBJECT_COLORS_PAPER_DARK : isPaper ? SUBJECT_COLORS_PAPER : SUBJECT_COLORS;
+  var fallbacks = isPaperDark ? FALLBACK_COLORS_PAPER_DARK : isPaper ? FALLBACK_COLORS_PAPER : FALLBACK_COLORS;
   var up = String(code || '').toUpperCase();
   for(var k in palette){ if(up.indexOf(k) === 0) return palette[k]; }
   var h = 0;
@@ -1218,7 +1225,7 @@ function venueLoadLeaderboard(isoList){
 /* ================= themes (shared with the main dashboard via localStorage) ================= */
 var THEME_KEY = 'thirtyatrpr_theme', COLOR_THEME_KEY = 'thirtyatrpr_color_theme';
 var COLOR_THEMES = [
-  { id: 'paper', label: 'Paper' }, { id: 'github', label: 'Graphite' }, { id: 'default', label: 'Signature' }, { id: 'forest', label: 'Forest' },
+  { id: 'paper', label: 'Paper' }, { id: 'paper-dark', label: 'Paper Dark' }, { id: 'github', label: 'Graphite' }, { id: 'default', label: 'Signature' }, { id: 'forest', label: 'Forest' },
   { id: 'sunset', label: 'Sunset' }, { id: 'midnight', label: 'Midnight' }
 ];
 function readPref(k, dflt){ try { return localStorage.getItem(k) || dflt; } catch(e){ return dflt; } }

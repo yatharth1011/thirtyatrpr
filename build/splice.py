@@ -19,6 +19,51 @@ picker_js = open(BASE + '/build/picker.js', 'r', encoding='utf-8').read()
 monthpick_js = open(BASE + '/build/monthpick.js', 'r', encoding='utf-8').read()
 monthpick_css = open(BASE + '/build/monthpick.css', 'r', encoding='utf-8').read()
 sub_theme_css = open(BASE + '/build/sub_theme.css', 'r', encoding='utf-8').read()
+
+# Paper Dark is generated from Paper, so the two can never drift apart: every Paper rule is copied with its colours
+# mapped by DARK_MAP, then build/paper_dark.css adds the hand-tuned extras. Change Paper's look and Dark follows.
+DARK_MAP = {
+  '#ffffff':'#241b1f', '#1c1714':'#f4e9e3', '#443b36':'#d5c6bf', '#6a5f58':'#a99a93', '#5c514a':'#b6a79f', '#7a6e66':'#97897f',
+  '#e6dfd9':'#3d3034', '#f6f1ec':'#2e2328', '#faf6f2':'#2a2025', '#efe8e2':'#352a2e', '#f3ece6':'#32272c', '#d9cfc7':'#4a3c40',
+  '#fbf8f5':'#2a2025', '#f8f8f7':'#1e1619', '#f6f5f3':'#1e1619',
+  '#9d174d':'#f9a8c4', '#db2777':'#f472b6', '#f43f5e':'#fb7185', '#e11d48':'#fb7185', '#be123c':'#fda4af', '#b91c1c':'#fca5a5',
+  '#7e2a5e':'#e3a6d0', '#8a3b2a':'#e8a98f', '#5f6f2a':'#c5d08a', '#b45309':'#f0b775', '#854d0e':'#e6bf7e', '#c2410c':'#f2a66f', '#92400e':'#e6b37e',
+  '#fbe4ec':'#43222f', '#f3c3d3':'#6a3448', '#f8e6dd':'#40291f', '#ecc9b8':'#664233', '#f6e4ee':'#3f2536', '#e9c5d9':'#65385a',
+  '#f5f5e8':'#2e3120', '#dfe3bd':'#4b5230', '#eef0d9':'#333822', '#fff1f2':'#43222f', '#fff5f5':'#43222f', '#ffe4e6':'#4f2636',
+  '#fecdd3':'#6a3448', '#fee2e2':'#4a2226', '#fef3c7':'#43351a', '#fde68a':'#6b5525', '#f0b6c9':'#7d4459',
+  '#fbd5e0':'#4a2435', '#f29ab5':'#7d3552',
+}
+def _dark_body(body):
+    def one(part):
+        part = re.sub(r'#[0-9a-fA-F]{6}\b', lambda m: DARK_MAP.get(m.group(0).lower(), m.group(0)), part)
+        part = re.sub(r'rgba\(17,\s*18,\s*19,\s*([.\d]+)\)', lambda m: 'rgba(0,0,0,%.2f)' % min(.9, float(m.group(1)) * 2.4), part)
+        part = part.replace('rgba(70,48,36,', 'rgba(0,0,0,').replace('rgba(225,29,72,', 'rgba(251,113,133,').replace('only light', 'only dark')
+        return part
+    return ''.join(p if p.startswith('url("data:') else one(p) for p in re.split(r'(url\("data:[^"]*"\))', body))
+def _dark_rules(css):
+    out, i = [], 0
+    while True:
+        j = css.find('{', i)
+        if j < 0: break
+        head = css[i:j].rsplit(';', 1)[-1].strip()
+        depth, k = 1, j + 1
+        while depth and k < len(css):
+            depth += (css[k] == '{') - (css[k] == '}')
+            k += 1
+        body = css[j + 1:k - 1]
+        i = k
+        if head.startswith('@media') or head.startswith('@supports'):
+            inner = _dark_rules(body)
+            if inner: out.append(head + '{' + inner + '}')
+        elif not head.startswith('@'):
+            sels = [x.strip() for x in head.split(',') if 'data-theme="paper"' in x]
+            if sels: out.append(','.join(sels).replace('data-theme="paper"', 'data-theme="paper-dark"') + '{' + _dark_body(body) + '}')
+    return '\n'.join(out)
+def paper_dark_css(css):
+    return _dark_rules(re.sub(r'/\*.*?\*/', '', css, flags=re.S)) + '\n' + paper_dark_extra
+paper_dark_extra = open(BASE + '/build/paper_dark.css', 'r', encoding='utf-8').read()
+template = template.replace('/*__PAPER_DARK_CSS__*/', paper_dark_css(''.join(re.findall(r'<style[^>]*>(.*?)</style>', template, flags=re.S))))
+sub_theme_css += '\n' + paper_dark_css(sub_theme_css)
 sub_theme_css += '\n' + monthpick_css   # the month picker's styles ride along for /spectate and /br
 
 

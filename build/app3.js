@@ -51,18 +51,25 @@ var SUBJECT_COLORS = {
   HS110:'#da62a2', HS111:'#dac262', HS112:'#62b6da', HS113:'#9662da', IK101:'#34C48A'
 };
 var FALLBACK_COLORS = ['#da6662','#da9a62','#dac262','#62daaa','#62dad6','#62b6da','#6286da','#9662da','#da62a2'];
-/* Paper theme: deeply pigmented, high-contrast bookbinder inks tuned for maximum clarity on paper */
+/* Paper theme: warm print inks, no blues */
 var SUBJECT_COLORS_PAPER = {
-  AI101:'#e11d48', MA101:'#d97706', PH101:'#059669', CY101:'#4f46e5', CS100:'#9333ea',
-  TL101:'#0284c7', WP101:'#ea580c', NCC:'#475569', LIFESKILL:'#64748b', NO101:'#0d9488',
-  HS110:'#db2777', HS111:'#ca8a04', HS112:'#0284c7', HS113:'#7c3aed', IK101:'#16a34a'
+  AI101:'#be123c', MA101:'#b45309', PH101:'#5f6f2a', CY101:'#7e2a5e', CS100:'#9d174d',
+  TL101:'#8a3b2a', WP101:'#c2410c', NCC:'#6b5a4e', LIFESKILL:'#8a7a6d', NO101:'#4d6b4f',
+  HS110:'#db2777', HS111:'#a16207', HS112:'#8a3b2a', HS113:'#7e2a5e', IK101:'#4d7c0f'
 };
-var FALLBACK_COLORS_PAPER = ['#e11d48','#d97706','#059669','#4f46e5','#9333ea','#0284c7','#ea580c','#db2777','#16a34a'];
+var FALLBACK_COLORS_PAPER = ['#be123c','#b45309','#5f6f2a','#7e2a5e','#9d174d','#8a3b2a','#c2410c','#db2777','#4d7c0f'];
+var SUBJECT_COLORS_PAPER_DARK = {
+  AI101:'#fda4af', MA101:'#f0b775', PH101:'#c5d08a', CY101:'#e3a6d0', CS100:'#f9a8c4',
+  TL101:'#e8a98f', WP101:'#f2a66f', NCC:'#c4b5a8', LIFESKILL:'#b3a497', NO101:'#a9c7a4',
+  HS110:'#f472b6', HS111:'#e6bf7e', HS112:'#e8a98f', HS113:'#e3a6d0', IK101:'#b9d48a'
+};
+var FALLBACK_COLORS_PAPER_DARK = ['#fda4af','#f0b775','#c5d08a','#e3a6d0','#f9a8c4','#e8a98f','#f2a66f','#f472b6','#b9d48a'];
 var SUBJECT_PREFIXES = ['AI101','MA101','PH101','CY101','CS100','TL101','WP101','HS110','HS111','HS112','HS113','IK101','NO101'];
 function subjectColor(code){
   var isPaper = currentColorTheme === 'paper';
-  var palette = isPaper ? SUBJECT_COLORS_PAPER : SUBJECT_COLORS;
-  var fallbacks = isPaper ? FALLBACK_COLORS_PAPER : FALLBACK_COLORS;
+  var isPaperDark = currentColorTheme === 'paper-dark';
+  var palette = isPaperDark ? SUBJECT_COLORS_PAPER_DARK : isPaper ? SUBJECT_COLORS_PAPER : SUBJECT_COLORS;
+  var fallbacks = isPaperDark ? FALLBACK_COLORS_PAPER_DARK : isPaper ? FALLBACK_COLORS_PAPER : FALLBACK_COLORS;
   var up = code.toUpperCase();
   for(var i=0;i<SUBJECT_PREFIXES.length;i++){
     if(up.indexOf(SUBJECT_PREFIXES[i]) === 0) return palette[SUBJECT_PREFIXES[i]];
@@ -1972,7 +1979,7 @@ function checkRow(it, nowMin){
   var xKind = isExtraItem(it) ? (it.code === 'MESS' ? 'mess' : 'kz') : '';
   if(extra) linksHtml = linksHtml.replace('class="material-links"', 'class="material-links is-extra"');
   return '<div class="check-row'+(rowDone?' done':'')+extra+'"'+(xKind ? ' data-x="'+xKind+'"' : '')+' data-k="'+encodeURIComponent((it.title||'')+'|'+it.sMin)+'">'+
-    '<div class="check-main">'+boxHtml+'<span class="check-label">'+codeLabel+it.title+metaHtml+'</span></div>'+
+    '<div class="check-main">'+boxHtml+'<span class="check-label"><span class="check-text">'+codeLabel+it.title+'</span>'+metaHtml+'</span></div>'+
     '<div class="check-side">'+venueHtml+'<span class="check-time">'+(it.t||'Time TBA')+'</span></div>'+
     '</div>'+linksHtml;
 }
@@ -3027,7 +3034,7 @@ function renderHeader(student){
   if(headerRoles.isCreator) roleBadge = ' <span class="role-pill creator"><span class="role-pill-icon">👑</span>Creator</span>';
   else if(headerRoles.isContributor || headerRoles.verifiedRecs.length) roleBadge = ' <span class="role-pill contributor" data-contributor-entry="'+student.entry+'" title="Tap to see contributor info"><span class="role-pill-icon">⭐</span>Contributor</span>';
   var greetHtml = isKaizenUser(student.entry)
-    ? '<span class="greet-text kz-greet">' + kzGreeting(student.entry) + ', ' + escapeHtml(firstName) + '-' + kzHonorific(student.entry) + '</span>'
+    ? '<span class="greet-text kz-greet">' + kzGreeting(student.entry) + ', <span class="greet-name">' + escapeHtml(firstName) + '-' + kzHonorific(student.entry) + '</span></span>'
     : '<span class="greet-text">Hi, ' + escapeHtml(firstName) + '</span>';
   document.getElementById('greeting').innerHTML = greetHtml + roleBadge;
   fitGreeting();
@@ -3165,8 +3172,8 @@ function initSettings(){
   });
 
   // Colour theme: one slider over the six themes' colours, snapping to each.
-  var THEME_ORDER = ['paper', 'github', 'default', 'forest', 'sunset', 'midnight'];
-  var THEME_NAMES = { paper: 'Paper', github: 'Graphite', 'default': 'Signature', forest: 'Forest', sunset: 'Sunset', midnight: 'Midnight' };
+  var THEME_ORDER = ['paper', 'paper-dark', 'github', 'default', 'forest', 'sunset', 'midnight'];
+  var THEME_NAMES = { paper: 'Paper', 'paper-dark': 'Paper Dark', github: 'Graphite', 'default': 'Signature', forest: 'Forest', sunset: 'Sunset', midnight: 'Midnight' };
   var themeRange = document.getElementById('colorThemeRange'), themeName = document.getElementById('colorThemeName');
   var themeKnob = document.getElementById('colorThemeKnob');
   // the knob sits inside the track: 4px in from each end, at stop i of 0..5
@@ -3225,6 +3232,20 @@ function initSettings(){
       keepBtn.onclick = function(){
         dismissBanner();
       };
+    }
+
+    var darkBtn = document.getElementById('paperBannerDark');
+    if(darkBtn){
+      var syncDarkBtn = function(){
+        var dark = currentColorTheme === 'paper-dark';
+        darkBtn.textContent = dark ? 'Back to Paper' : 'Try Paper Dark';
+        if(keepBtn) keepBtn.textContent = dark ? 'Keep Paper Dark' : 'Keep Paper';
+      };
+      darkBtn.onclick = function(){
+        setColorTheme(currentColorTheme === 'paper-dark' ? 'paper' : 'paper-dark');
+        syncDarkBtn();
+      };
+      syncDarkBtn();
     }
 
     var revertBtn = document.getElementById('paperBannerRevert');
