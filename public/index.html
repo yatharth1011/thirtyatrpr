@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793906351';
+    var curToken = '1793906425';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -8820,7 +8820,7 @@ if('serviceWorker' in navigator){
       low.setAttribute('aria-hidden', 'true');
       low.innerHTML = lights('dwLights') +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
-        '<div class="dw-wish">Shubh Diwali</div>';
+        '<div class="dw-wish">Shubh Deepawali</div>';
       foot.parentNode.insertBefore(low, foot);
     }
     var app = document.getElementById('app');
