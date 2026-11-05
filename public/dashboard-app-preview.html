@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793901459';
+    var curToken = '1793901536';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -239,7 +239,7 @@ window.__overlayFast = (function(){
       0 1px 1px rgba(17,18,19,.16),
       0 3px 6px -2px rgba(17,18,19,.12),
       0 16px 18px -14px rgba(17,18,19,.30);
-    --paper-font:'Paper Dash', 'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
+    --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     --rule:#111213;
     --soft:#374151;
 
@@ -1577,13 +1577,13 @@ window.__overlayFast = (function(){
   /* Paper: paper cut-outs laid on a white page. Cards are white sheets with square corners: shading inside the edges, a lit top edge, and a shadow gathered under the bottom edge.
      Plain box-shadows only: filters and textures here made phones scroll badly. */
   html:has(body[data-theme="paper"]){ color-scheme:only light; }
-  /* Bodoni's hairlines vanish on phones (that is the wanted lambda A) and would take the dashes with them */
+  /* The greeting is the one place with a finer, bolder Bodoni cut. Above opsz 28 its strokes break apart on phones.
+     The sturdier Paper Dash face keeps its hyphen. */
   @font-face{ font-family:'Paper Dash'; unicode-range:U+2D, U+2F, U+2013-2014; src:local('Noto Serif'), local('NotoSerif'), local('Times New Roman'), local('Georgia'); }
-  /* Paper: Bodoni at its display cut everywhere, whose hairline crossbar makes the A read as a lambda */
+  /* Paper: Bodoni's sturdiest cut, because people have to read this */
   html body[data-theme="paper"], html body[data-theme="paper"] button, html body[data-theme="paper"] input,
   html body[data-theme="paper"] select, html body[data-theme="paper"] textarea{
-    font-optical-sizing:none; font-variation-settings:'opsz' 96;
-    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    font-optical-sizing:none; font-variation-settings:'opsz' 6;
   }
   /* A pegboard behind the sheets. Two dot layers, painted once. */
   html body[data-theme="paper"], html body[data-theme="paper"].glass{
@@ -1591,7 +1591,12 @@ window.__overlayFast = (function(){
     background-size:16px 16px !important; background-position:0 0, 8px 8px !important;
   }
   /* Bodoni italics overhang their box: keep the last letter inside the gradient */
-  html body[data-theme="paper"] .greet-text{ padding-right:.12em; box-sizing:border-box; }
+  html body[data-theme="paper"] .greet-text{
+    padding-right:.12em; box-sizing:border-box;
+    font-family:'Paper Dash', var(--paper-font);
+    font-weight:700;
+    font-variation-settings:'opsz' 28;
+  }
   html body[data-theme="paper"] main .daycard,
   html body[data-theme="paper"].glass main .daycard,
   html body[data-theme="paper"] main .panel,

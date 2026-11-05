@@ -68,7 +68,7 @@
       0 16px 18px -14px rgba(17,18,19,.30);
     --paper-board:radial-gradient(rgba(112,84,70,.20) 1px, transparent 1.3px), radial-gradient(rgba(255,255,255,.40) 1px, transparent 1.3px);
     --paper-pin:radial-gradient(circle at 35% 30%, #ffd9e2 0, #f43f5e 28%, #9d174d 82%);
-    --paper-font:'Paper Dash', 'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
+    --paper-font:'Bodoni Moda', 'Bodoni 72', 'Bodoni 72 Oldstyle', 'Didot', 'Times New Roman', Times, serif;
     font-family:var(--paper-font);
   }
   html:has(body[data-theme="paper"]){ color-scheme:only light; }
@@ -78,13 +78,10 @@
     background:var(--paper-sheet) !important; border:none !important; border-radius:2px !important;
     box-shadow:var(--paper-shadow) !important;
   }
-  /* Bodoni's hairlines vanish on phones (that is the wanted lambda A) and would take the dashes with them */
-  @font-face{ font-family:'Paper Dash'; unicode-range:U+2D, U+2F, U+2013-2014; src:local('Noto Serif'), local('NotoSerif'), local('Times New Roman'), local('Georgia'); }
-  /* Paper: Bodoni at its display cut everywhere, whose hairline crossbar makes the A read as a lambda */
+  /* Paper: Bodoni's sturdiest cut, because people have to read this */
   html body[data-theme="paper"], html body[data-theme="paper"] button, html body[data-theme="paper"] input,
   html body[data-theme="paper"] select, html body[data-theme="paper"] textarea{
-    font-optical-sizing:none; font-variation-settings:'opsz' 96;
-    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    font-optical-sizing:none; font-variation-settings:'opsz' 6;
   }
   /* A pegboard behind the sheets. Two dot layers, painted once. */
   html body[data-theme="paper"], html body[data-theme="paper"].glass{
