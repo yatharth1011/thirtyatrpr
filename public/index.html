@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793917014';
+    var curToken = '1793917328';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -3280,6 +3280,7 @@ html body[data-theme^="paper"] .greet-text.kz-greet{
 }
 @media (max-width: 600px){
   main > .dw-top{ height:72px; }
+  .dw-top.dw-sub{ margin:-12px -12px 10px; }
   .dw-lantern{ width:30px; height:66px; }
   .dw-burst{ top:22px; width:44px; height:44px; }
   .dw-diya{ width:36px; height:46px; }
@@ -4494,7 +4495,7 @@ var ROLES = {
     </details>
     <!-- One slider across the six themes' colours; it snaps to each theme. -->
     <div class="field field-block">
-      <div><label>Color theme</label><span class="hint" id="colorThemeName">Paper</span></div>
+      <div><label>Color theme</label><span class="hint" id="colorThemeName">Clay</span></div>
       <!-- the visible track + knob are drawn here; the real (invisible) range input sits on top for drag/keys -->
       <div class="theme-track"><span class="theme-knob" id="colorThemeKnob"></span>
         <input type="range" class="theme-slider" id="colorThemeRange" min="0" max="6" step="1" value="0" aria-label="Color theme"></div>
@@ -4556,7 +4557,7 @@ var ROLES = {
           <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
           <div class="theme-banner-actions">
             <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Clay Dark</button>
-            <button class="theme-banner-btn secondary" id="paperBannerDark">Try Light Mode</button>
+            <button class="theme-banner-btn secondary" id="paperBannerDark">Try Clay</button>
             <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
           </div>
         </div>
@@ -7981,8 +7982,10 @@ function initSettings(){
     if(darkBtn){
       var syncDarkBtn = function(){
         var isDark = currentColorTheme === 'paper-dark';
-        darkBtn.textContent = isDark ? 'Try Light Mode' : 'Try Clay Dark';
+        darkBtn.textContent = isDark ? 'Try Clay' : 'Try Clay Dark';
         if(keepBtn) keepBtn.textContent = isDark ? 'Keep Clay Dark' : 'Keep Clay';
+        var bannerTitle = banner.querySelector('.theme-banner-title');
+        if(bannerTitle) bannerTitle.textContent = isDark ? 'Clay Dark' : 'Clay';
       };
       darkBtn.onclick = function(){
         setColorTheme(currentColorTheme === 'paper-dark' ? 'paper' : 'paper-dark');

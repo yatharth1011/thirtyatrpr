@@ -331,6 +331,7 @@ html body[data-theme^="paper"] .greet-text.kz-greet{
 }
 @media (max-width: 600px){
   main > .dw-top{ height:72px; }
+  .dw-top.dw-sub{ margin:-12px -12px 10px; }
   .dw-lantern{ width:30px; height:66px; }
   .dw-burst{ top:22px; width:44px; height:44px; }
   .dw-diya{ width:36px; height:46px; }

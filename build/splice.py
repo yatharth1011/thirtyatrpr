@@ -66,6 +66,60 @@ def _dark_rules(css):
 def paper_dark_css(css):
     return _dark_rules(re.sub(r'/\*.*?\*/', '', css, flags=re.S)) + '\n' + paper_dark_extra
 paper_dark_extra = open(BASE + '/build/paper_dark.css', 'r', encoding='utf-8').read()
+import json as _json
+# /spectate and /br get the dashboard's footer. Everything is read from the dashboard's own sources (its footer text and
+# overrides in app3.js, ROLES in the template, its footer styles), so the three pages cannot drift apart. Person cards
+# only exist on the dashboard, so names are plain text here.
+def _rules_with(css, token):
+    out, i = [], 0
+    while True:
+        j = css.find('{', i)
+        if j < 0: break
+        head = css[i:j].rsplit(';', 1)[-1].strip()
+        depth, k = 1, j + 1
+        while depth and k < len(css):
+            depth += (css[k] == '{') - (css[k] == '}')
+            k += 1
+        body = css[j + 1:k - 1]
+        i = k
+        if head.startswith('@media') or head.startswith('@supports'):
+            inner = _rules_with(body, token)
+            if inner: out.append(head + '{' + inner + '}')
+        elif not head.startswith('@') and any(t in head for t in token):
+            out.append(head + '{' + body + '}')
+    return '\n'.join(out)
+def site_footer():
+    roles = re.search(r'var ROLES = \{(.*?)\n\};', template, flags=re.S).group(1)
+    roles = re.sub(r'//[^\n]*', '', roles)
+    def role(name):
+        m = re.search(name + r"\s*:\s*\[(.*?)\]", roles, flags=re.S)
+        return re.findall(r"'([0-9A-Z]+)'", m.group(1)) if m else []
+    def pairs(name):
+        m = re.search(r'var ' + name + r' = \{(.*?)\}', app_js, flags=re.S)
+        return dict(re.findall(r"'?([\w-]+)'?\s*:\s*'([^']*)'", m.group(1))) if m else {}
+    short, tags, names = pairs('BRANCH_SHORT_DISPLAY'), pairs('CONTRIBUTOR_TAG_OVERRIDE'), pairs('CONTRIBUTOR_NAME_OVERRIDE')
+    data = _json.load(open(BASE + '/build/thirty_data.json', 'r', encoding='utf-8'))
+    entries = role('contributor')
+    for r in data.get('scheduleVerifications', []):
+        if r['verifiedBy'] not in entries: entries.append(r['verifiedBy'])
+    creators = role('creator')
+    proper = lambda n: re.sub(r"(^|[\s.'-])(\S)", lambda m: m.group(1) + m.group(2).upper(), ' '.join(n.split()).lower())
+    people = []
+    for e in entries:
+        st = data['roster'].get(e)
+        if st and e not in creators:
+            people.append((names.get(e) or proper(st['name']), tags.get(e) or short.get(st['branch'], st['branch'])))
+    people.sort(key=lambda p: p[0])
+    rows = ''.join('<div class="contributor-row"><span class="contributor-row-branch">%s</span><span class="contributor-row-heart">&#10084;</span><span class="contributor-name-link">%s</span></div>' % (b, n) for n, b in people)
+    grab = lambda cls: re.search(r"'<div class=\"" + cls + r"\">(.*?)</div>'", app_js).group(1).replace("\\'", "'")
+    return ('<footer class="appfoot"><div class="foot-credit">Made with <span class="heart">&#10084;</span> by <span class="contributor-name-link">Yatharth Shrivastava</span></div>'
+            '<details class="foot-contributors"><summary>&#11088; Contributors <span class="foot-contributors-count">%d</span><span class="foot-contributors-chevron">&#8250;</span></summary>'
+            '<div class="foot-contributors-list">%s</div></details>'
+            '<details class="foot-more"><summary>Sources &amp; disclaimer</summary><div class="foot-sources">%s</div><div class="foot-disclaimer">%s</div></details></footer>'
+            % (len(people), rows, grab('foot-sources'), grab('foot-disclaimer')))
+site_footer_html = site_footer()
+sub_theme_css += '\n' + _rules_with(re.sub(r'/\*.*?\*/', '', ''.join(re.findall(r'<style[^>]*>(.*?)</style>', template, flags=re.S)), flags=re.S), ['footer.appfoot', '.contributor-name-link'])
+sub_theme_css += '\nfooter.appfoot span.contributor-name-link{ cursor:default; text-decoration:none; }\n'
 template = template.replace('/*__PAPER_DARK_CSS__*/', paper_dark_css(''.join(re.findall(r'<style[^>]*>(.*?)</style>', template, flags=re.S))))
 sub_theme_css += '\n' + paper_dark_css(sub_theme_css)
 diwali_css = open(BASE + '/build/diwali.css', 'r', encoding='utf-8').read()
@@ -172,6 +226,7 @@ for target in [BASE + '/public/index.html', BASE + '/public/dashboard-app-previe
 # introduces no new privacy exposure). Kept out of the main app entirely; not linked from it yet.
 spectate_template = open(BASE + '/build/spectate_template.html', 'r', encoding='utf-8').read()
 spectate_template = spectate_template.replace('/*__DIWALI_JS__*/', diwali_js)
+spectate_template = re.sub(r'<footer>.*?</footer>', lambda m: site_footer_html, spectate_template, flags=re.S)
 spectate_js = open(BASE + '/build/spectate.js', 'r', encoding='utf-8').read()
 spectate_out = with_splash(inject_shared(spectate_template, 'spectate'), SPECTATE_LABEL).replace('/*__THIRTY_DATA__*/', data_js)
 spectate_out = spectate_out.replace('/*__SPECTATE_JS__*/', spectate_js)
@@ -195,6 +250,7 @@ with open(BASE + '/public/spectate/index.html', 'w', encoding='utf-8') as f:
 # spectate's reuse of it.
 br_template = open(BASE + '/build/br_template.html', 'r', encoding='utf-8').read()
 br_template = br_template.replace('/*__DIWALI_JS__*/', diwali_js)
+br_template = re.sub(r'<footer>.*?</footer>', lambda m: site_footer_html, br_template, flags=re.S)
 br_js = open(BASE + '/build/br.js', 'r', encoding='utf-8').read()
 br_out = with_splash(inject_shared(br_template, '/br'), BR_LABEL).replace('/*__THIRTY_DATA__*/', data_js)
 br_out = br_out.replace('/*__BR_JS__*/', br_js)

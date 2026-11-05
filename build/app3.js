@@ -3300,8 +3300,10 @@ function initSettings(){
     if(darkBtn){
       var syncDarkBtn = function(){
         var isDark = currentColorTheme === 'paper-dark';
-        darkBtn.textContent = isDark ? 'Try Light Mode' : 'Try Clay Dark';
+        darkBtn.textContent = isDark ? 'Try Clay' : 'Try Clay Dark';
         if(keepBtn) keepBtn.textContent = isDark ? 'Keep Clay Dark' : 'Keep Clay';
+        var bannerTitle = banner.querySelector('.theme-banner-title');
+        if(bannerTitle) bannerTitle.textContent = isDark ? 'Clay Dark' : 'Clay';
       };
       darkBtn.onclick = function(){
         setColorTheme(currentColorTheme === 'paper-dark' ? 'paper' : 'paper-dark');
