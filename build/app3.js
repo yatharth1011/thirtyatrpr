@@ -3178,7 +3178,7 @@ function initSettings(){
 
   // Colour theme: one slider over the six themes' colours, snapping to each.
   var THEME_ORDER = ['paper', 'paper-dark', 'github', 'default', 'forest', 'sunset', 'midnight'];
-  var THEME_NAMES = { paper: 'Paper', 'paper-dark': 'Paper Dark', github: 'Graphite', 'default': 'Signature', forest: 'Forest', sunset: 'Sunset', midnight: 'Midnight' };
+  var THEME_NAMES = { paper: 'Clay', 'paper-dark': 'Clay Dark', github: 'Graphite', 'default': 'Signature', forest: 'Forest', sunset: 'Sunset', midnight: 'Midnight' };
   var themeRange = document.getElementById('colorThemeRange'), themeName = document.getElementById('colorThemeName');
   var themeKnob = document.getElementById('colorThemeKnob');
   // the knob sits inside the track: 4px in from each end, at stop i of 0..5
@@ -3243,8 +3243,8 @@ function initSettings(){
     if(darkBtn){
       var syncDarkBtn = function(){
         var isDark = currentColorTheme === 'paper-dark';
-        darkBtn.textContent = isDark ? 'Try Paper Light' : 'Try Paper Dark';
-        if(keepBtn) keepBtn.textContent = isDark ? 'Keep Paper Dark' : 'Keep Paper Light';
+        darkBtn.textContent = isDark ? 'Try Clay' : 'Try Clay Dark';
+        if(keepBtn) keepBtn.textContent = isDark ? 'Keep Clay Dark' : 'Keep Clay';
       };
       darkBtn.onclick = function(){
         setColorTheme(currentColorTheme === 'paper-dark' ? 'paper' : 'paper-dark');
