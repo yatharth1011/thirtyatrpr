@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793914294';
+    var curToken = '1793915503';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -3048,7 +3048,11 @@ body[data-theme="paper-dark"]{
 .dw-side{ position:fixed; top:0; left:198px; width:70px; height:78px; z-index:42; pointer-events:none; display:none; }
 .dw-side .dw-lantern{ width:30px; height:66px; left:0; }
 .dw-side .dw-lantern.b{ left:36px; width:24px; height:52px; }
-.dw-host{ position:relative !important; }
+.dw-host:not(.settings):not(.calpanel){ position:relative !important; }
+.settings, .calpanel{ position:fixed !important; }
+@media (min-width: 960px){
+  #searchPanel, #groupsPanel{ top:12px !important; bottom:auto !important; }
+}
 .dw-hero-ladi{ position:absolute; top:-2px; left:0; right:0; height:42px; pointer-events:none; z-index:4; overflow:visible; }
 .dw-hero-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
 
@@ -3076,6 +3080,30 @@ body[data-theme="paper-dark"]{
     width:28px;
     height:36px;
   }
+  /* Suppress hover highlight on #searchBtn when hovering the perched diya */
+  #searchBtn:has(.dw-search-diya:hover),
+  #searchBtn.dw-diya-hovered{
+    box-shadow:0 1px 2px rgba(0,0,0,0.04) !important;
+  }
+  html body[data-theme="paper"] #searchBtn:has(.dw-search-diya:hover),
+  html body[data-theme="paper"] #searchBtn.dw-diya-hovered{
+    background:#ffffff !important;
+    border-color:var(--line) !important;
+    color:#1c1714 !important;
+  }
+  html body[data-theme="paper-dark"] #searchBtn:has(.dw-search-diya:hover),
+  html body[data-theme="paper-dark"] #searchBtn.dw-diya-hovered{
+    background:#241b1f !important;
+    border-color:#3d3034 !important;
+    color:#f4e9e3 !important;
+  }
+  html body:not([data-theme^="paper"]) #searchBtn:has(.dw-search-diya:hover),
+  html body:not([data-theme^="paper"]) #searchBtn.dw-diya-hovered{
+    background:linear-gradient(135deg, color-mix(in srgb, var(--gold) 16%, transparent), color-mix(in srgb, var(--teal) 12%, transparent)) !important;
+    border-color:color-mix(in srgb, var(--gold) 35%, transparent) !important;
+    color:var(--ink-soft) !important;
+    box-shadow:none !important;
+  }
   .dw-boot-diya{
     display:none !important;
   }
@@ -3102,7 +3130,11 @@ body[data-theme="paper-dark"]{
 
 .dw-sit{ position:absolute; top:-18px; right:24px; pointer-events:none; z-index:4; width:34px; height:44px; }
 .dw-sit .dw-diya{ width:100%; height:100%; }
-.dw-host{ position:relative !important; }
+.dw-host:not(.settings):not(.calpanel){ position:relative !important; }
+.settings, .calpanel{ position:fixed !important; }
+@media (min-width: 960px){
+  #searchPanel, #groupsPanel{ top:12px !important; bottom:auto !important; }
+}
 .mini-brand.dw-host{ overflow:visible !important; position:relative !important; }
 .dw-cluster{ position:absolute; width:42px; height:42px; pointer-events:none; z-index:4; }
 .dw-cluster svg{ width:100%; height:100%; display:block; overflow:visible; }
@@ -3111,6 +3143,200 @@ body[data-theme="paper-dark"]{
 .dw-cluster.br{ bottom:-13px; right:-12px; transform:rotate(180deg); }
 .dw-clip{ position:absolute; left:-5px; top:-7px; width:20px; height:20px; pointer-events:none; z-index:4; }
 .dw-clip svg{ width:100%; height:100%; display:block; overflow:visible; }
+.dw-corner{ position:absolute; right:0; bottom:0; width:116px; height:116px; overflow:hidden; opacity:.62; pointer-events:none; z-index:2; border-bottom-right-radius:inherit; transition:opacity .25s ease, transform .25s ease; }
+.dw-corner .dw-quad-rangoli{ width:100%; height:100%; display:block; }
+.dw-corner .dw-quad-rangoli svg{ width:100%; height:100%; display:block; }
+.heat-panel:hover .dw-corner{ opacity:.92; transform:scale(1.02); }
+
+/* Mess menu card: Marigold flower bullets for meal timings */
+.check-box.mess-dot{ font-size:0; }
+.check-box.mess-dot::before{ content:"\273F"; font-size:12.5px; color:var(--dw-m2); display:inline-block; vertical-align:middle; filter:drop-shadow(0 0 3px rgba(251, 146, 60, 0.45)); }
+
+/* Month modal (#calPanel) festive styling */
+#calPanel.open{
+  box-shadow:0 24px 60px rgba(251, 146, 60, 0.22), 0 10px 30px rgba(0,0,0,0.45) !important;
+  border-color:rgba(251, 191, 36, 0.28) !important;
+}
+html body[data-theme="paper"] #calPanel.open{
+  box-shadow:0 24px 60px rgba(251, 146, 60, 0.18), 0 10px 30px rgba(0,0,0,0.1) !important;
+  border-color:rgba(224, 140, 36, 0.38) !important;
+}
+#calMonthLabel{
+  color:var(--dw-text) !important;
+  text-shadow:0 0 10px rgba(251, 191, 36, 0.35);
+}
+.cal-nav{
+  transition:all .18s ease;
+}
+.cal-nav:hover{
+  background:color-mix(in srgb, var(--dw-m1) 22%, var(--card)) !important;
+  color:var(--dw-m1) !important;
+  transform:translateY(-1px);
+}
+.cal-cell.dw-festive-cell{
+  position:relative;
+  border:1.5px solid rgba(251, 191, 36, 0.72) !important;
+  box-shadow:0 0 8px rgba(251, 191, 36, 0.45), inset 0 0 6px rgba(251, 146, 60, 0.25) !important;
+}
+.cal-cell.dw-festive-cell::after{
+  content:"🪔";
+  position:absolute;
+  top:-7px;
+  right:-5px;
+  font-size:10px;
+  line-height:1;
+  filter:drop-shadow(0 0 4px #fbbf24);
+  pointer-events:none;
+}
+.cal-cell.dw-festive-cell:hover{
+  transform:translateY(-2px) scale(1.06);
+  box-shadow:0 0 14px rgba(251, 191, 36, 0.75), inset 0 0 10px rgba(251, 146, 60, 0.4) !important;
+}
+
+/* Squads modal (#groupsPanel) festive styling */
+#groupsPanel.open{
+  box-shadow:0 24px 60px rgba(251, 146, 60, 0.22), 0 10px 30px rgba(0,0,0,0.45) !important;
+  border-color:rgba(251, 191, 36, 0.28) !important;
+}
+html body[data-theme="paper"] #groupsPanel.open{
+  box-shadow:0 24px 60px rgba(251, 146, 60, 0.18), 0 10px 30px rgba(0,0,0,0.1) !important;
+  border-color:rgba(224, 140, 36, 0.38) !important;
+}
+#groupsPanel .settings-inner h3{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+#groupsPanel .settings-inner h3::before{
+  content:"🪔";
+  font-size:18px;
+  filter:drop-shadow(0 0 6px rgba(251, 191, 36, 0.5));
+}
+#groupsPanel .chip-filter.active{
+  background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  color:#171114 !important;
+  font-weight:700 !important;
+  box-shadow:0 2px 10px rgba(245, 158, 11, 0.4) !important;
+  border-color:transparent !important;
+}
+.grp-member{
+  background:rgba(245, 158, 11, 0.12) !important;
+  border:1px solid rgba(245, 158, 11, 0.35) !important;
+  color:var(--dw-text) !important;
+  box-shadow:0 1px 4px rgba(245, 158, 11, 0.15);
+}
+.grp-member::before{
+  content:"✿";
+  font-size:10px;
+  color:var(--dw-m2);
+  margin-right:2px;
+}
+
+/* "Everyone Free" festive celebration banner */
+.grp-together{
+  background:linear-gradient(135deg, rgba(245, 158, 11, 0.16) 0%, rgba(225, 29, 72, 0.12) 100%) !important;
+  border:1px solid rgba(245, 158, 11, 0.4) !important;
+  box-shadow:0 4px 18px rgba(245, 158, 11, 0.15) !important;
+}
+.grp-together-label{
+  color:#fbbf24 !important;
+  font-weight:700 !important;
+  letter-spacing:0.02em;
+}
+.grp-together-label::before{
+  content:"✨ ";
+}
+
+/* Timeline slots: Fairy light aesthetic */
+.grp-slot{
+  position:relative;
+  border-top:1px dashed rgba(245, 158, 11, 0.3) !important;
+  transition:background .2s ease;
+  padding-left:4px;
+}
+.grp-slot-time{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(245, 158, 11, 0.12);
+  border:1px solid rgba(245, 158, 11, 0.32);
+  border-radius:99px;
+  padding:2px 9px;
+  color:#fbbf24 !important;
+  font-weight:700;
+  box-shadow:0 1px 4px rgba(245, 158, 11, 0.15);
+}
+.grp-slot-time::before{
+  content:"🪔";
+  font-size:10.5px;
+  line-height:1;
+  filter:drop-shadow(0 0 4px #fbbf24);
+}
+.grp-row{
+  border-left:2px solid rgba(245, 158, 11, 0.5) !important;
+  border-radius:0 8px 8px 0;
+  transition:transform .2s cubic-bezier(.22, 1, .36, 1), border-left-color .2s ease, background .2s ease;
+}
+.grp-row:hover{
+  transform:translateX(5px);
+  border-left-color:#fbbf24 !important;
+  background:rgba(245, 158, 11, 0.08);
+}
+
+/* Squad Timetable Milestone Dividers (Compact festive pills) */
+.dw-squad-milestone{
+  margin:8px 0 6px;
+  padding:4px 10px;
+  border-radius:99px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  font-weight:600;
+  box-shadow:0 1px 4px rgba(0,0,0,0.15);
+}
+.dw-squad-milestone.dw-milestone-noon{
+  background:rgba(245, 158, 11, 0.14);
+  border:1px solid rgba(245, 158, 11, 0.35);
+  color:#fde047;
+}
+.dw-squad-milestone.dw-milestone-eve{
+  background:rgba(234, 88, 12, 0.14);
+  border:1px solid rgba(244, 63, 94, 0.35);
+  color:#fca5a5;
+}
+
+/* Compact Celebration button at bottom of Squads */
+.dw-squad-finale{
+  margin:14px 0 6px;
+  padding:6px;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.dw-squad-fireworks-btn{
+  background:linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  border:none;
+  color:#ffffff;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11.5px;
+  font-weight:700;
+  padding:7px 16px;
+  border-radius:99px;
+  cursor:pointer;
+  box-shadow:0 2px 8px rgba(245, 158, 11, 0.35);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.dw-squad-fireworks-btn:hover{
+  transform:scale(1.05) translateY(-1px);
+  box-shadow:0 4px 14px rgba(245, 158, 11, 0.55);
+}
+.dw-squad-fireworks-btn:active{
+  transform:scale(0.96) translateY(1px);
+}
+
 .dw-foot-toran{ position:relative; width:100%; height:48px; overflow:hidden; margin-bottom:12px; pointer-events:none; }
 .dw-foot-toran .dw-toran{ position:absolute; left:0; right:0; top:0; width:100%; height:52px; display:block; }
 
@@ -9048,6 +9274,101 @@ if('serviceWorker' in navigator){
       for(i = 0; i < 8; i++){ a = i / 8 * 6.283; R = 42; out += '<circle cx="' + f(c + R * Math.cos(a)) + '" cy="' + f(c + R * Math.sin(a)) + '" r="1.8" fill="' + v('dot') + '"/>'; }
       return '<div class="dw-rangoli"><svg viewBox="0 0 220 220" aria-hidden="true">' + out + '<circle cx="' + c + '" cy="' + c + '" r="7" fill="' + v('r1') + '"/><circle cx="' + c + '" cy="' + c + '" r="3" fill="' + v('dot') + '"/></svg></div>';
     }
+
+    // Dedicated Quadrant Rangoli (Kona Rangoli / Corner Kolam):
+    // Artfully designed specifically for the bottom-right corner of cards, radiating diagonally inward
+    // with concentric jali bands, peacock/flame petals, scalloped marigold lace, and an apex crown diya.
+    function quadrantRangoli(){
+      var cx = 120, cy = 120, out = '';
+      function arc(r, stroke, sw, dash){
+        return '<path d="M' + f(cx - r) + ' ' + cy + ' A' + r + ' ' + r + ' 0 0 1 ' + cx + ' ' + f(cy - r) + '" fill="none" stroke="' + stroke + '" stroke-width="' + sw + '"' + (dash ? ' stroke-dasharray="' + dash + '"' : '') + '/>';
+      }
+
+      // Corner quadrant warm backing wash
+      out += '<path d="M' + cx + ' ' + cy + ' L' + (cx - 114) + ' ' + cy + ' A114 114 0 0 1 ' + cx + ' ' + (cy - 114) + ' Z" fill="' + v('r4') + '" opacity="0.32"/>';
+
+      // Outer lace scallops (r = 102 to 114)
+      var numScallops = 10, i;
+      for(i = 0; i < numScallops; i++){
+        var a0 = 180 + (i / numScallops) * 90, a1 = 180 + ((i + 1) / numScallops) * 90, aMid = (a0 + a1) / 2;
+        var r0 = 102, r1 = 114;
+        var rad0 = a0 * Math.PI / 180, rad1 = a1 * Math.PI / 180, radM = aMid * Math.PI / 180;
+        var x0 = f(cx + r0 * Math.cos(rad0)), y0 = f(cy + r0 * Math.sin(rad0));
+        var x1 = f(cx + r0 * Math.cos(rad1)), y1 = f(cy + r0 * Math.sin(rad1));
+        var xm = f(cx + r1 * Math.cos(radM)), ym = f(cy + r1 * Math.sin(radM));
+        out += '<path d="M' + x0 + ' ' + y0 + ' Q' + xm + ' ' + ym + ' ' + x1 + ' ' + y1 + '" fill="' + v('m2') + '" stroke="' + v('m1') + '" stroke-width="1"/>';
+        out += '<circle cx="' + xm + '" cy="' + ym + '" r="1.5" fill="' + v('dot') + '"/>';
+      }
+
+      // Outer pearl ring at r = 100
+      for(i = 0; i <= 18; i++){
+        var a = (180 + (i / 18) * 90) * Math.PI / 180;
+        out += '<circle cx="' + f(cx + 100 * Math.cos(a)) + '" cy="' + f(cy + 100 * Math.sin(a)) + '" r="1.6" fill="' + v('dot') + '"/>';
+      }
+      out += arc(98, v('rope'), 1.2);
+      out += arc(94, v('r1'), 2.5);
+
+      // Large Radiating Peacock / Flame Petals (r = 58 to 92)
+      var numPetals = 7;
+      for(i = 0; i < numPetals; i++){
+        var deg = 180 + (i + 0.5) * (90 / numPetals);
+        var rad = deg * Math.PI / 180;
+        var isCenter = (i === 3);
+        var rOuter = isCenter ? 94 : 88, rInner = 58, halfWidth = 5.8;
+        var fill = isCenter ? v('m1') : (i % 2 === 0 ? v('r1') : v('r3'));
+        var normRad = rad + Math.PI / 2;
+        var pTipX = cx + rOuter * Math.cos(rad), pTipY = cy + rOuter * Math.sin(rad);
+        var pLeftX = cx + (rInner + 16) * Math.cos(rad) + halfWidth * Math.cos(normRad);
+        var pLeftY = cy + (rInner + 16) * Math.sin(rad) + halfWidth * Math.sin(normRad);
+        var pRightX = cx + (rInner + 16) * Math.cos(rad) - halfWidth * Math.cos(normRad);
+        var pRightY = cy + (rInner + 16) * Math.sin(rad) - halfWidth * Math.sin(normRad);
+
+        out += '<path d="M' + f(cx + rInner * Math.cos(rad)) + ' ' + f(cy + rInner * Math.sin(rad)) + ' Q' + f(pLeftX) + ' ' + f(pLeftY) + ' ' + f(pTipX) + ' ' + f(pTipY) + ' Q' + f(pRightX) + ' ' + f(pRightY) + ' ' + f(cx + rInner * Math.cos(rad)) + ' ' + f(cy + rInner * Math.sin(rad)) + 'Z" fill="' + fill + '" stroke="' + v('rope') + '" stroke-width="0.8"/>';
+        var dropRad = rInner + (rOuter - rInner) * 0.55;
+        out += '<circle cx="' + f(cx + dropRad * Math.cos(rad)) + '" cy="' + f(cy + dropRad * Math.sin(rad)) + '" r="2" fill="' + v('dot') + '"/>';
+      }
+
+      // Middle ring arc band
+      out += arc(58, v('r2'), 3);
+      out += arc(55, v('dot'), 1, '2,3');
+      out += arc(52, v('r4'), 2);
+
+      // Inner Lotus Petals (r = 24 to 50) - 5 fuller petals
+      var numInner = 5;
+      for(i = 0; i < numInner; i++){
+        var degI = 180 + (i + 0.5) * (90 / numInner);
+        var radI = degI * Math.PI / 180;
+        var isCenterI = (i === 2);
+        var rOuterI = isCenterI ? 51 : 47, rInnerI = 24;
+        var fillI = isCenterI ? v('r1') : (i % 2 === 0 ? v('m2') : v('m1'));
+        var normRadI = radI + Math.PI / 2;
+        var pTipXI = cx + rOuterI * Math.cos(radI), pTipYI = cy + rOuterI * Math.sin(radI);
+        var pLeftXI = cx + (rInnerI + 12) * Math.cos(radI) + 6.5 * Math.cos(normRadI);
+        var pLeftYI = cy + (rInnerI + 12) * Math.sin(radI) + 6.5 * Math.sin(normRadI);
+        var pRightXI = cx + (rInnerI + 12) * Math.cos(radI) - 6.5 * Math.cos(normRadI);
+        var pRightYI = cy + (rInnerI + 12) * Math.sin(radI) - 6.5 * Math.sin(normRadI);
+        out += '<path d="M' + f(cx + rInnerI * Math.cos(radI)) + ' ' + f(cy + rInnerI * Math.sin(radI)) + ' Q' + f(pLeftXI) + ' ' + f(pLeftYI) + ' ' + f(pTipXI) + ' ' + f(pTipYI) + ' Q' + f(pRightXI) + ' ' + f(pRightYI) + ' ' + f(cx + rInnerI * Math.cos(radI)) + ' ' + f(cy + rInnerI * Math.sin(radI)) + 'Z" fill="' + fillI + '"/>';
+      }
+
+      // Inner ring band
+      out += arc(24, v('r2'), 2.5);
+      out += arc(21, v('rope'), 1);
+
+      // Core corner lotus bud / golden hub at (120, 120)
+      out += '<path d="M' + (cx - 18) + ' ' + cy + ' A18 18 0 0 1 ' + cx + ' ' + (cy - 18) + ' L' + cx + ' ' + cy + ' Z" fill="' + v('r1') + '"/>';
+      out += '<path d="M' + (cx - 10) + ' ' + cy + ' A10 10 0 0 1 ' + cx + ' ' + (cy - 10) + ' L' + cx + ' ' + cy + ' Z" fill="' + v('m1') + '"/>';
+      out += '<circle cx="' + (cx - 4) + '" cy="' + (cy - 4) + '" r="3" fill="' + v('dot') + '"/>';
+
+      // Apex Crown Diya pointing inward along the 225 deg diagonal
+      var dx = 42, dy = 42;
+      out += '<g transform="translate(' + dx + ', ' + dy + ') rotate(-45)">' +
+        '<path d="M-10 4C-6 10 6 10 10 4C7 2 -7 2 -10 4Z" fill="' + v('clay') + '"/>' +
+        '<path d="M-10 4Q0 1 10 4" stroke="' + v('rim') + '" stroke-width="1.2" fill="none"/>' +
+        '<g class="dw-flame"><path d="M0 2C-3 -3 0 -8 0 -11C0 -8 3 -3 0 2Z" fill="' + v('m1') + '"/><path d="M0 2C-1.5 -1 0 -4 0 -6C0 -4 1.5 -1 0 2Z" fill="' + v('dot') + '"/></g>' +
+      '</g>';
+
+      return '<div class="dw-quad-rangoli"><svg viewBox="0 0 120 120" aria-hidden="true">' + out + '</svg></div>';
+    }
     function burst(cls, color, color2, left){
       var out = '', i, a;
       for(i = 0; i < 16; i++){
@@ -9251,7 +9572,9 @@ if('serviceWorker' in navigator){
     var uid = 0;
     function addDeco(el, key, cls, html){
       if(!el) return;
-      el.classList.add('dw-host');
+      if(!el.classList.contains('settings') && !el.classList.contains('calpanel')){
+        el.classList.add('dw-host');
+      }
       var d = el.querySelector('[data-dw="' + key + '"]');
       if(!d){
         d = document.createElement('div');
@@ -9274,6 +9597,8 @@ if('serviceWorker' in navigator){
         d.setAttribute('tabindex', '0');
         d.setAttribute('title', 'Click for Diwali fireworks & flower shower ✨');
         d.setAttribute('aria-label', 'Light the diya for fireworks');
+        d.addEventListener('mouseenter', function(){ btn.classList.add('dw-diya-hovered'); });
+        d.addEventListener('mouseleave', function(){ btn.classList.remove('dw-diya-hovered'); });
         btn.appendChild(d);
       }
       d.innerHTML = diya('dwSearchD' + (++uid));
@@ -9353,6 +9678,77 @@ if('serviceWorker' in navigator){
       foot.parentNode.insertBefore(low, foot);
     }
 
+    function decorateSquadView(view){
+      if(!view) return;
+      var slots = view.querySelectorAll('.grp-slot');
+      if(!slots.length) return;
+
+      var hasNoon = !!view.querySelector('.dw-milestone-noon');
+      var hasEve = !!view.querySelector('.dw-milestone-eve');
+
+      if(!hasNoon || !hasEve){
+        function parseSlotMin(slotEl){
+          var timeEl = slotEl.querySelector('.grp-slot-time');
+          if(!timeEl) return -1;
+          var m = timeEl.textContent.match(/(\d+):(\d+)\s*(AM|PM)/i);
+          if(!m) return -1;
+          var hh = parseInt(m[1], 10), mm = parseInt(m[2], 10), ap = m[3].toUpperCase();
+          if(ap === 'PM' && hh !== 12) hh += 12;
+          if(ap === 'AM' && hh === 12) hh = 0;
+          return hh * 60 + mm;
+        }
+
+        for(var k = 0; k < slots.length; k++){
+          var slotMin = parseSlotMin(slots[k]);
+          if(slotMin < 0) continue;
+
+          // Noon milestone (12:00 PM - 1:45 PM: >= 720 min)
+          if(!hasNoon && slotMin >= 720 && slotMin < 960){
+            var noonDiv = document.createElement('div');
+            noonDiv.className = 'dw-squad-milestone dw-milestone-noon';
+            noonDiv.setAttribute('aria-hidden', 'true');
+            noonDiv.innerHTML = '<span>🍱</span> <span>Midday Feast &amp; Mithai Break ✿</span>';
+            slots[k].parentNode.insertBefore(noonDiv, slots[k]);
+            hasNoon = true;
+          }
+
+          // Twilight / Evening milestone (5:00 PM - 7:30 PM: >= 1020 min)
+          if(!hasEve && slotMin >= 1020 && slotMin < 1170){
+            var eveDiv = document.createElement('div');
+            eveDiv.className = 'dw-squad-milestone dw-milestone-eve';
+            eveDiv.setAttribute('aria-hidden', 'true');
+            eveDiv.innerHTML = '<span>🪔</span> <span>Godhuli Bela · Twilight Diyas Lit ✨</span>';
+            slots[k].parentNode.insertBefore(eveDiv, slots[k]);
+            hasEve = true;
+          }
+        }
+      }
+
+      // Sleek celebration pill at bottom of squad timetable
+      if(slots.length >= 2 && !view.querySelector('.dw-squad-finale')){
+        var finale = document.createElement('div');
+        finale.className = 'dw-squad-finale';
+        finale.innerHTML = '<button type="button" class="dw-squad-fireworks-btn" title="Launch fireworks for the squad">' +
+            '🎆 Shubh Deepawali · Celebrate with Squad ✨' +
+          '</button>';
+        view.appendChild(finale);
+      }
+    }
+
+    function decorateCalGrid(){
+      var calGrid = document.querySelector('#calGrid');
+      if(!calGrid) return;
+      var festiveDays = ['2026-11-06', '2026-11-07', '2026-11-08', '2026-11-09', '2026-11-10', '2026-11-20'];
+      var cells = calGrid.querySelectorAll('.cal-cell[data-idx]');
+      for(var ci = 0; ci < cells.length; ci++){
+        var cidx = Number(cells[ci].getAttribute('data-idx'));
+        var cday = (window.state && window.state.DAYS) ? window.state.DAYS[cidx] : null;
+        if(cday && festiveDays.indexOf(cday.d) !== -1){
+          cells[ci].classList.add('dw-festive-cell');
+        }
+      }
+    }
+
     var one = function(q){ return document.querySelector(q); };
     function dress(){
       if(main){
@@ -9364,10 +9760,13 @@ if('serviceWorker' in navigator){
         mountBootDiya(one('.boot-log'));
 
         // 3. Special cards and banners - guaranteed varied styles (no copy-paste):
-        // - Mess menu: Top-Left gentle curve (Style 1: tl2)
+        // - Mess menu: Top-Left gentle curve (Style 1: tl2) + festive marigold cluster
         var messHead = one('#messPanelHead');
         var messCard = messHead ? messHead.closest('.panel') : null;
-        if(messCard) addCardLadi(messCard, 1);
+        if(messCard) {
+          addCardLadi(messCard, 1);
+          addDeco(messCard, 'cluster', 'dw-cluster tr', cluster());
+        }
 
         // - End Sem Exams banner: Top-Right deep swag with hanging tail (Style 0: tr1)
         addCardLadi(one('#examWeekBanner'), 0);
@@ -9378,8 +9777,9 @@ if('serviceWorker' in navigator){
         // - Clay Dark / Paper rollout banner: Top-Right shallow garland (Style 2: tr3)
         addCardLadi(one('#paperThemeBanner'), 2);
 
-        // - Semester at a glance heatmap: Top-Right shallow garland (Style 2: tr3)
+        // - Semester at a glance heatmap: Top-Right shallow garland (Style 2: tr3) + custom quadrant rangoli
         addCardLadi(one('.heat-panel'), 2);
+        addDeco(one('.heat-panel'), 'corner', 'dw-corner', quadrantRangoli());
 
         // 4. Remaining Grid Panels (if any extra): cycle styles avoiding duplicate
         var panels = document.querySelectorAll('.panel-grid > .panel');
@@ -9403,6 +9803,18 @@ if('serviceWorker' in navigator){
         addDeco(one('#kaizenPanel'), 'cluster', 'dw-cluster tl', cluster());
         addDeco(one('#examWeekBanner'), 'cluster', 'dw-cluster tr', cluster());
         addDeco(one('#paperThemeBanner'), 'cluster', 'dw-cluster br', cluster());
+
+        // - Month panel (#calPanel) festive dressing:
+        var calPanel = one('#calPanel');
+        if(calPanel){
+          decorateCalGrid();
+        }
+
+        // - Squads panel (#groupsPanel) festive dressing:
+        var grpPanel = one('#groupsPanel');
+        if(grpPanel){
+          decorateSquadView(grpPanel.querySelector('#grpView'));
+        }
       } else {
         // Sub-pages (/spectate, /br): varied diagonal LEDs on cards
         var cards = document.querySelectorAll('.wrap .panel');
@@ -9411,6 +9823,10 @@ if('serviceWorker' in navigator){
         }
       }
     }
+    ['calPrevBtn', 'calNextBtn', 'calToggleBtn'].forEach(function(id){
+      var btn = document.getElementById(id);
+      if(btn) btn.addEventListener('click', function(){ setTimeout(decorateCalGrid, 60); });
+    });
     dress();
     if(typeof MutationObserver !== 'undefined'){
       var dressTimer = null;
@@ -9844,22 +10260,29 @@ if('serviceWorker' in navigator){
     }
 
     function handleDiyaClick(e){
-      var diyaEl = e.target && e.target.closest ? e.target.closest('.dw-diya, .dw-search-diya, .dw-boot-diya') : null;
-      if(!diyaEl) return;
+      var triggerEl = e.target && e.target.closest ? e.target.closest('.dw-diya, .dw-search-diya, .dw-boot-diya, .dw-squad-fireworks-btn') : null;
+      if(!triggerEl) return;
       if(e.preventDefault) e.preventDefault();
       if(e.stopPropagation) e.stopPropagation();
       if(e.stopImmediatePropagation) e.stopImmediatePropagation();
 
-      diyaEl.classList.remove('dw-diya-burst');
-      void diyaEl.offsetWidth;
-      diyaEl.classList.add('dw-diya-burst');
-      setTimeout(function(){ diyaEl.classList.remove('dw-diya-burst'); }, 700);
+      var diyaEl = triggerEl.classList.contains('dw-diya') ? triggerEl : triggerEl.querySelector('.dw-diya');
+      if(diyaEl){
+        diyaEl.classList.remove('dw-diya-burst');
+        void diyaEl.offsetWidth;
+        diyaEl.classList.add('dw-diya-burst');
+        setTimeout(function(){ diyaEl.classList.remove('dw-diya-burst'); }, 700);
+      }
+      if(triggerEl.classList.contains('dw-squad-fireworks-btn')){
+        triggerEl.style.transform = 'scale(0.95)';
+        setTimeout(function(){ triggerEl.style.transform = ''; }, 200);
+      }
 
       if(typeof navigator !== 'undefined' && navigator.vibrate){
         try { navigator.vibrate([35, 45, 60, 30]); } catch(_){}
       }
 
-      var rect = diyaEl.getBoundingClientRect();
+      var rect = triggerEl.getBoundingClientRect();
       var ox = rect.left + rect.width * 0.55;
       var oy = rect.top + rect.height * 0.25;
       if(ox <= 0 || ox >= window.innerWidth || oy <= 0 || oy >= window.innerHeight){
@@ -9874,8 +10297,8 @@ if('serviceWorker' in navigator){
       document.addEventListener('click', handleDiyaClick, true);
       document.addEventListener('keydown', function(e){
         if(e.key === 'Enter' || e.key === ' '){
-          var diyaEl = e.target && e.target.closest ? e.target.closest('.dw-diya, .dw-search-diya, .dw-boot-diya') : null;
-          if(diyaEl) handleDiyaClick(e);
+          var triggerEl = e.target && e.target.closest ? e.target.closest('.dw-diya, .dw-search-diya, .dw-boot-diya, .dw-squad-fireworks-btn') : null;
+          if(triggerEl) handleDiyaClick(e);
         }
       }, true);
     }
