@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793903521';
+    var curToken = '1793903656';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -1591,6 +1591,15 @@ window.__overlayFast = (function(){
   html body[data-theme="paper"] .cal-dot.heat-4{ background:#9d174d; }
   /* Scrollbars in Paper's own colours: the declared dark scheme would otherwise draw them dark */
   html:has(body[data-theme="paper"]){ scrollbar-color:#c9b9ae #e6dbd3; }
+  /* Branch, division and group labels: soft tinted pills, no outline */
+  html body[data-theme="paper"] .tag.branch,
+  html body[data-theme="paper"] .tag.division,
+  html body[data-theme="paper"] .tag.acadgroup{
+    border:none; border-radius:99px; padding:3px 10px; font-weight:600; line-height:1.25;
+  }
+  html body[data-theme="paper"] .tag.branch{ background:#f8e6dd !important; }
+  html body[data-theme="paper"] .tag.division{ background:#f6e4ee !important; }
+  html body[data-theme="paper"] .tag.acadgroup{ background:#fbe4ec !important; }
   /* The banner is one small note: a title, a line, and plain text links */
   html body[data-theme="paper"] .theme-banner{ padding:16px 20px !important; }
   html body[data-theme="paper"] .theme-banner-title{ font-size:19px !important; margin:0 0 2px !important; }
@@ -3453,6 +3462,12 @@ html body[data-theme="paper-dark"] .cal-dot.heat-2{ background:#7d3552; }
 html body[data-theme="paper-dark"] .cal-dot.heat-3{ background:#f472b6; }
 html body[data-theme="paper-dark"] .cal-dot.heat-4{ background:#f9a8c4; }
 html:has(body[data-theme="paper-dark"]){ scrollbar-color:#4a3c40 #171114; }
+html body[data-theme="paper-dark"] .tag.branch,html body[data-theme="paper-dark"] .tag.division,html body[data-theme="paper-dark"] .tag.acadgroup{
+    border:none; border-radius:99px; padding:3px 10px; font-weight:600; line-height:1.25;
+  }
+html body[data-theme="paper-dark"] .tag.branch{ background:#40291f !important; }
+html body[data-theme="paper-dark"] .tag.division{ background:#3f2536 !important; }
+html body[data-theme="paper-dark"] .tag.acadgroup{ background:#43222f !important; }
 html body[data-theme="paper-dark"] .theme-banner{ padding:16px 20px !important; }
 html body[data-theme="paper-dark"] .theme-banner-title{ font-size:19px !important; margin:0 0 2px !important; }
 html body[data-theme="paper-dark"] .theme-banner-desc{ font-size:13px !important; margin:0 0 10px !important; color:var(--ink-faint) !important; }

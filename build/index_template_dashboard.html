@@ -1591,6 +1591,15 @@ window.__overlayFast = (function(){
   html body[data-theme="paper"] .cal-dot.heat-4{ background:#9d174d; }
   /* Scrollbars in Paper's own colours: the declared dark scheme would otherwise draw them dark */
   html:has(body[data-theme="paper"]){ scrollbar-color:#c9b9ae #e6dbd3; }
+  /* Branch, division and group labels: soft tinted pills, no outline */
+  html body[data-theme="paper"] .tag.branch,
+  html body[data-theme="paper"] .tag.division,
+  html body[data-theme="paper"] .tag.acadgroup{
+    border:none; border-radius:99px; padding:3px 10px; font-weight:600; line-height:1.25;
+  }
+  html body[data-theme="paper"] .tag.branch{ background:#f8e6dd !important; }
+  html body[data-theme="paper"] .tag.division{ background:#f6e4ee !important; }
+  html body[data-theme="paper"] .tag.acadgroup{ background:#fbe4ec !important; }
   /* The banner is one small note: a title, a line, and plain text links */
   html body[data-theme="paper"] .theme-banner{ padding:16px 20px !important; }
   html body[data-theme="paper"] .theme-banner-title{ font-size:19px !important; margin:0 0 2px !important; }
