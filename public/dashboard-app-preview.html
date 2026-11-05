@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793904670';
+    var curToken = '1793906351';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -3752,9 +3752,9 @@ html body[data-theme="paper-dark"] .daycard::after{
      with the built-in green palette (:root) and visibly flashed green. Keep this in step with app3.js's COLOR_THEME logic. -->
 <script>
 (function(){
-  var t = 'paper';
+  var t = 'paper-dark';
   try {
-    if(localStorage.getItem('thirtyatrpr_theme_paper_rollout')) t = localStorage.getItem('thirtyatrpr_color_theme') || 'paper';
+    if(localStorage.getItem('thirtyatrpr_theme_paper_rollout')) t = localStorage.getItem('thirtyatrpr_color_theme') || 'paper-dark';
   } catch(e){}
   if(t !== 'default') document.body.setAttribute('data-theme', t);
   document.body.classList.add('glass');
@@ -4264,11 +4264,11 @@ var ROLES = {
 <main>
   <div class="panel theme-banner" id="paperThemeBanner" style="display:none;">
     <div class="theme-banner-content">
-      <div class="theme-banner-title">Paper</div>
+      <div class="theme-banner-title">Paper Dark</div>
       <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
       <div class="theme-banner-actions">
-        <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Paper</button>
-        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Paper Dark</button>
+        <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Paper Dark</button>
+        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Paper Light</button>
         <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
       </div>
     </div>
@@ -4430,7 +4430,7 @@ var GITHUB_THEME_ROLLOUT_KEY = 'thirtyatrpr_theme_github_rollout';
 var PAPER_THEME_ROLLOUT_KEY = 'thirtyatrpr_theme_paper_rollout';
 var PAPER_BANNER_KEY = 'thirtyatrpr_paper_banner_show';
 var PAPER_BANNER_DISMISSED_KEY = 'thirtyatrpr_paper_banner_dismissed';
-// 'paper' (Paper light theme) is the default color theme.
+// 'paper-dark' (Paper Dark theme) is the default color theme.
 // It is rolled out to EVERYONE on next open via a one-time switch: previously saved color theme is saved
 // to PREV_THEME_KEY (so the one-time banner can keep or revert/change), and the rollout marker is stored
 // so the user's manual choices stick afterwards.
@@ -4438,12 +4438,12 @@ try {
   if(!localStorage.getItem(PAPER_THEME_ROLLOUT_KEY)){
     var prev = localStorage.getItem(COLOR_THEME_KEY) || 'github';
     localStorage.setItem(PREV_THEME_KEY, prev);
-    localStorage.setItem(COLOR_THEME_KEY, 'paper');
+    localStorage.setItem(COLOR_THEME_KEY, 'paper-dark');
     localStorage.setItem(PAPER_THEME_ROLLOUT_KEY, '1');
     localStorage.setItem(PAPER_BANNER_KEY, '1');
   }
 } catch(e){}
-var currentColorTheme = localStorage.getItem(COLOR_THEME_KEY) || 'paper';
+var currentColorTheme = localStorage.getItem(COLOR_THEME_KEY) || 'paper-dark';
 if(currentColorTheme !== 'default') document.body.setAttribute('data-theme', currentColorTheme);
 
 /* Per-subject colors: a real syntax-highlighting-style spread (red/orange/yellow/green/teal/cyan/
@@ -7647,9 +7647,9 @@ function initSettings(){
     var darkBtn = document.getElementById('paperBannerDark');
     if(darkBtn){
       var syncDarkBtn = function(){
-        var dark = currentColorTheme === 'paper-dark';
-        darkBtn.textContent = dark ? 'Back to Paper' : 'Try Paper Dark';
-        if(keepBtn) keepBtn.textContent = dark ? 'Keep Paper Dark' : 'Keep Paper';
+        var isDark = currentColorTheme === 'paper-dark';
+        darkBtn.textContent = isDark ? 'Try Paper Light' : 'Try Paper Dark';
+        if(keepBtn) keepBtn.textContent = isDark ? 'Keep Paper Dark' : 'Keep Paper Light';
       };
       darkBtn.onclick = function(){
         setColorTheme(currentColorTheme === 'paper-dark' ? 'paper' : 'paper-dark');
@@ -8820,7 +8820,7 @@ if('serviceWorker' in navigator){
       low.setAttribute('aria-hidden', 'true');
       low.innerHTML = lights('dwLights') +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
-        '<div class="dw-wish">Shubh Deepavali</div>';
+        '<div class="dw-wish">Shubh Diwali</div>';
       foot.parentNode.insertBefore(low, foot);
     }
     var app = document.getElementById('app');

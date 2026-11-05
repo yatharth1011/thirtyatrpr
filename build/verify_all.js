@@ -1371,9 +1371,9 @@ allPass &= runScenario('creating a group saves it locally with yourself in it, a
   assert(html.indexOf('grp-slot') !== -1 && html.indexOf('Everyone free') !== -1, 'renders time slots and the together line: ' + html.slice(0, 300));
 });
 
-// === New: Paper is the default theme, switched on once for existing users too ===
-allPass &= runScenario('Paper is applied by default (fresh or previously-themed browser) and a later manual choice sticks', '2026AIB1001', {}, (win, doc) => {
-  assert(doc.body.getAttribute('data-theme') === 'paper', 'fresh browser gets paper: ' + doc.body.getAttribute('data-theme'));
+// === New: Paper Dark is the default theme, switched on once for existing users too ===
+allPass &= runScenario('Paper Dark is applied by default (fresh or previously-themed browser) and a later manual choice sticks', '2026AIB1001', {}, (win, doc) => {
+  assert(doc.body.getAttribute('data-theme') === 'paper-dark', 'fresh browser gets paper-dark: ' + doc.body.getAttribute('data-theme'));
   assert(win.localStorage.getItem('thirtyatrpr_theme_paper_rollout') === '1', 'rollout marker stored');
 });
 {
@@ -1381,13 +1381,13 @@ allPass &= runScenario('Paper is applied by default (fresh or previously-themed 
   const sandbox = makeSandbox();
   sandbox.localStorage.setItem('thirtyatrpr_color_theme', 'sunset');
   vm.runInContext(combinedSrc, sandbox);
-  let ok = sandbox.document.body.getAttribute('data-theme') === 'paper';
+  let ok = sandbox.document.body.getAttribute('data-theme') === 'paper-dark';
   const sandbox2 = makeSandbox();
   sandbox2.localStorage.setItem('thirtyatrpr_color_theme', 'sunset');
   sandbox2.localStorage.setItem('thirtyatrpr_theme_paper_rollout', '1');
   vm.runInContext(combinedSrc, sandbox2);
   ok = ok && sandbox2.document.body.getAttribute('data-theme') === 'sunset';
-  console.log(ok ? 'PASS' : 'FAIL', 'existing user is switched to Paper once; after that a manual pick (sunset) is kept');
+  console.log(ok ? 'PASS' : 'FAIL', 'existing user is switched to Paper Dark once; after that a manual pick (sunset) is kept');
   allPass &= ok;
 }
 
@@ -1493,7 +1493,7 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
   const ok = /setAttribute\('data-theme'/.test(early) && /thirtyatrpr_color_theme/.test(early) && /classList\.add\('glass'\)/.test(early) && firstScript > 0 && firstScript < heavy;
   console.log(ok ? 'PASS' : 'FAIL', 'colour theme + glass class are applied by the first script in <body>, ahead of the big data script');
   allPass &= ok;
-  // and it behaves: paper by default (pre-rollout), a saved non-default choice after the rollout marker, nothing for "default"
+  // and it behaves: paper-dark by default (pre-rollout), a saved non-default choice after the rollout marker, nothing for "default"
   const run = (store) => {
     const attrs = {}; const cls = [];
     const sandbox = { localStorage: { getItem: (k) => (k in store ? store[k] : null) }, document: { body: { setAttribute: (k, v) => { attrs[k] = v; }, classList: { add: (c) => cls.push(c) } } } };
@@ -1501,8 +1501,8 @@ allPass &= runScenario('apology banner tells a student whose hall is not in the 
     return { attrs, cls };
   };
   const a = run({}), b = run({ thirtyatrpr_theme_paper_rollout: '1', thirtyatrpr_color_theme: 'sunset' }), c = run({ thirtyatrpr_theme_paper_rollout: '1', thirtyatrpr_color_theme: 'default' });
-  const ok2 = a.attrs['data-theme'] === 'paper' && b.attrs['data-theme'] === 'sunset' && c.attrs['data-theme'] === undefined && a.cls[0] === 'glass';
-  console.log(ok2 ? 'PASS' : 'FAIL', 'early theme script: paper by default/pre-rollout, saved choice after rollout, none for "default"');
+  const ok2 = a.attrs['data-theme'] === 'paper-dark' && b.attrs['data-theme'] === 'sunset' && c.attrs['data-theme'] === undefined && a.cls[0] === 'glass';
+  console.log(ok2 ? 'PASS' : 'FAIL', 'early theme script: paper-dark by default/pre-rollout, saved choice after rollout, none for "default"');
   allPass &= ok2;
 }
 

@@ -109,7 +109,7 @@
       low.setAttribute('aria-hidden', 'true');
       low.innerHTML = lights('dwLights') +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
-        '<div class="dw-wish">Shubh Deepavali</div>';
+        '<div class="dw-wish">Shubh Diwali</div>';
       foot.parentNode.insertBefore(low, foot);
     }
     var app = document.getElementById('app');

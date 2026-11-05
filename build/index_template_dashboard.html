@@ -2962,9 +2962,9 @@ window.__overlayFast = (function(){
      with the built-in green palette (:root) and visibly flashed green. Keep this in step with app3.js's COLOR_THEME logic. -->
 <script>
 (function(){
-  var t = 'paper';
+  var t = 'paper-dark';
   try {
-    if(localStorage.getItem('thirtyatrpr_theme_paper_rollout')) t = localStorage.getItem('thirtyatrpr_color_theme') || 'paper';
+    if(localStorage.getItem('thirtyatrpr_theme_paper_rollout')) t = localStorage.getItem('thirtyatrpr_color_theme') || 'paper-dark';
   } catch(e){}
   if(t !== 'default') document.body.setAttribute('data-theme', t);
   document.body.classList.add('glass');
@@ -3267,11 +3267,11 @@ var ROLES = {
 <main>
   <div class="panel theme-banner" id="paperThemeBanner" style="display:none;">
     <div class="theme-banner-content">
-      <div class="theme-banner-title">Paper</div>
+      <div class="theme-banner-title">Paper Dark</div>
       <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
       <div class="theme-banner-actions">
-        <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Paper</button>
-        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Paper Dark</button>
+        <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Paper Dark</button>
+        <button class="theme-banner-btn secondary" id="paperBannerDark">Try Paper Light</button>
         <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
       </div>
     </div>

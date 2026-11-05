@@ -148,7 +148,7 @@ var FALLBACK_COLORS_PAPER_DARK = ['#fda4af','#f0b775','#c5d08a','#e3a6d0','#f9a8
 function subjectColor(code){
   var isPaper = false;
   try { isPaper = (typeof document !== 'undefined' && document.body && document.body.getAttribute('data-theme') === 'paper') || (typeof localStorage !== 'undefined' && localStorage.getItem('thirtyatrpr_color_theme') === 'paper'); } catch(e){}
-  var isPaperDark = (typeof document !== 'undefined' && !!document.body && document.body.getAttribute('data-theme') === 'paper-dark');
+  var isPaperDark = (typeof document !== 'undefined' && !!document.body && document.body.getAttribute('data-theme') === 'paper-dark') || (typeof localStorage !== 'undefined' && localStorage.getItem('thirtyatrpr_color_theme') === 'paper-dark');
   var palette = isPaperDark ? SUBJECT_COLORS_PAPER_DARK : isPaper ? SUBJECT_COLORS_PAPER : SUBJECT_COLORS;
   var fallbacks = isPaperDark ? FALLBACK_COLORS_PAPER_DARK : isPaper ? FALLBACK_COLORS_PAPER : FALLBACK_COLORS;
   var up = String(code || '').toUpperCase();

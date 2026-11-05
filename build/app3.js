@@ -25,7 +25,7 @@ var GITHUB_THEME_ROLLOUT_KEY = 'thirtyatrpr_theme_github_rollout';
 var PAPER_THEME_ROLLOUT_KEY = 'thirtyatrpr_theme_paper_rollout';
 var PAPER_BANNER_KEY = 'thirtyatrpr_paper_banner_show';
 var PAPER_BANNER_DISMISSED_KEY = 'thirtyatrpr_paper_banner_dismissed';
-// 'paper' (Paper light theme) is the default color theme.
+// 'paper-dark' (Paper Dark theme) is the default color theme.
 // It is rolled out to EVERYONE on next open via a one-time switch: previously saved color theme is saved
 // to PREV_THEME_KEY (so the one-time banner can keep or revert/change), and the rollout marker is stored
 // so the user's manual choices stick afterwards.
@@ -33,12 +33,12 @@ try {
   if(!localStorage.getItem(PAPER_THEME_ROLLOUT_KEY)){
     var prev = localStorage.getItem(COLOR_THEME_KEY) || 'github';
     localStorage.setItem(PREV_THEME_KEY, prev);
-    localStorage.setItem(COLOR_THEME_KEY, 'paper');
+    localStorage.setItem(COLOR_THEME_KEY, 'paper-dark');
     localStorage.setItem(PAPER_THEME_ROLLOUT_KEY, '1');
     localStorage.setItem(PAPER_BANNER_KEY, '1');
   }
 } catch(e){}
-var currentColorTheme = localStorage.getItem(COLOR_THEME_KEY) || 'paper';
+var currentColorTheme = localStorage.getItem(COLOR_THEME_KEY) || 'paper-dark';
 if(currentColorTheme !== 'default') document.body.setAttribute('data-theme', currentColorTheme);
 
 /* Per-subject colors: a real syntax-highlighting-style spread (red/orange/yellow/green/teal/cyan/
@@ -3242,9 +3242,9 @@ function initSettings(){
     var darkBtn = document.getElementById('paperBannerDark');
     if(darkBtn){
       var syncDarkBtn = function(){
-        var dark = currentColorTheme === 'paper-dark';
-        darkBtn.textContent = dark ? 'Back to Paper' : 'Try Paper Dark';
-        if(keepBtn) keepBtn.textContent = dark ? 'Keep Paper Dark' : 'Keep Paper';
+        var isDark = currentColorTheme === 'paper-dark';
+        darkBtn.textContent = isDark ? 'Try Paper Light' : 'Try Paper Dark';
+        if(keepBtn) keepBtn.textContent = isDark ? 'Keep Paper Dark' : 'Keep Paper Light';
       };
       darkBtn.onclick = function(){
         setColorTheme(currentColorTheme === 'paper-dark' ? 'paper' : 'paper-dark');
