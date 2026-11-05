@@ -67,6 +67,10 @@ def paper_dark_css(css):
 paper_dark_extra = open(BASE + '/build/paper_dark.css', 'r', encoding='utf-8').read()
 template = template.replace('/*__PAPER_DARK_CSS__*/', paper_dark_css(''.join(re.findall(r'<style[^>]*>(.*?)</style>', template, flags=re.S))))
 sub_theme_css += '\n' + paper_dark_css(sub_theme_css)
+diwali_css = open(BASE + '/build/diwali.css', 'r', encoding='utf-8').read()
+diwali_js = open(BASE + '/build/diwali.js', 'r', encoding='utf-8').read()
+template = template.replace('/*__DIWALI_CSS__*/', diwali_css).replace('/*__DIWALI_JS__*/', diwali_js)
+sub_theme_css += '\n' + diwali_css
 sub_theme_css += '\n' + monthpick_css   # the month picker's styles ride along for /spectate and /br
 
 
@@ -166,6 +170,7 @@ for target in [BASE + '/public/index.html', BASE + '/public/dashboard-app-previe
 # thirty_data.js blob (already fully client-embedded with no login gate on the data itself, so this
 # introduces no new privacy exposure). Kept out of the main app entirely; not linked from it yet.
 spectate_template = open(BASE + '/build/spectate_template.html', 'r', encoding='utf-8').read()
+spectate_template = spectate_template.replace('/*__DIWALI_JS__*/', diwali_js)
 spectate_js = open(BASE + '/build/spectate.js', 'r', encoding='utf-8').read()
 spectate_out = with_splash(inject_shared(spectate_template, 'spectate'), SPECTATE_LABEL).replace('/*__THIRTY_DATA__*/', data_js)
 spectate_out = spectate_out.replace('/*__SPECTATE_JS__*/', spectate_js)
@@ -185,6 +190,7 @@ print('wrote', spectate_target, 'size:', len(spectate_out))
 # batchReps lookups (permission checks, scope pickers) — same no-new-privacy-exposure reasoning as
 # spectate's reuse of it.
 br_template = open(BASE + '/build/br_template.html', 'r', encoding='utf-8').read()
+br_template = br_template.replace('/*__DIWALI_JS__*/', diwali_js)
 br_js = open(BASE + '/build/br.js', 'r', encoding='utf-8').read()
 br_out = with_splash(inject_shared(br_template, '/br'), BR_LABEL).replace('/*__THIRTY_DATA__*/', data_js)
 br_out = br_out.replace('/*__BR_JS__*/', br_js)

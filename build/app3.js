@@ -3939,6 +3939,7 @@ initStudyPanel();
     var want, hdrStudy = document.getElementById('studyToggleBtn'), barStudy = document.getElementById('miniStudy');
     if(hdrStudy && barStudy && hdrStudy.offsetParent && barStudy.style.display !== 'none') want = hdrStudy.getBoundingClientRect().top <= barStudy.offsetTop;
     else want = window.scrollY > head.offsetHeight - 8;
+    if(window.scrollY < 1) want = false;   // at the very top the header is on screen, whatever the layout says while booting
     var shown = bar.classList.contains('show');
     if(want && !shown){ clearTimeout(hideTimer); bar.classList.remove('hiding'); bar.classList.add('show'); }
     else if(!want && shown){
