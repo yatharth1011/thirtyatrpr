@@ -4024,7 +4024,7 @@ try { (function(){
   var header = document.querySelector('#app > header') || document.querySelector('header');
   if(!header) return;
   var SLICES = 10, MAX_ANGLE = 58;
-  var strip = null, timer = null, watcher = null, hovered = null;
+  var strip = null, timer = null, watcher = null;
   function paperOn(){ return /^paper/.test(document.body.getAttribute('data-theme') || ''); }
   function angle(i){ return MAX_ANGLE * (i + .5) / SLICES; }
   function place(){
@@ -4079,7 +4079,6 @@ try { (function(){
       strip.appendChild(kid);
     }
     place();
-    if(hovered) mirror(hovered, false);     // the copies were just replaced
     watch();
   }
   function soon(){ if(!timer) timer = setTimeout(build, 120); }
@@ -4088,30 +4087,6 @@ try { (function(){
     watcher.observe(header, {subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:['style','class']});
     watcher.observe(document.body, {attributes:true, attributeFilter:['data-theme','class']});
   }
-  // The slices are copies, so :hover never reaches them: follow the real control's colours for as long as they are changing.
-  var PICK = 'a,button', mirrorId = null;
-  function copiesOf(el){
-    var at = Array.prototype.indexOf.call(header.querySelectorAll(PICK), el), out = [];
-    if(!strip || at < 0) return out;
-    Array.prototype.forEach.call(strip.children, function(kid){ var c = kid.firstChild.querySelectorAll(PICK)[at]; if(c) out.push(c); });
-    return out;
-  }
-  function mirror(el, clearAtEnd){
-    cancelAnimationFrame(mirrorId);
-    var until = Date.now() + 260;
-    (function frame(){
-      var cs = getComputedStyle(el), done = Date.now() > until;
-      copiesOf(el).forEach(function(c){
-        if(done && clearAtEnd){ c.style.backgroundColor = c.style.borderColor = c.style.color = ''; return; }
-        c.style.setProperty('background-color', cs.backgroundColor, 'important');
-        c.style.setProperty('border-color', cs.borderTopColor, 'important');
-        c.style.setProperty('color', cs.color, 'important');
-      });
-      if(!done) mirrorId = requestAnimationFrame(frame);
-    })();
-  }
-  header.addEventListener('mouseover', function(e){ var el = e.target.closest && e.target.closest(PICK); if(el){ hovered = el; mirror(el, false); } });
-  header.addEventListener('mouseout', function(e){ var el = e.target.closest && e.target.closest(PICK); if(el){ hovered = null; mirror(el, true); } });
   header.addEventListener('scroll', place, {passive:true});
   window.addEventListener('resize', soon);
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(soon);

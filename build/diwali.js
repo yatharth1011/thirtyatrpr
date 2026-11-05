@@ -78,54 +78,14 @@
       }
       return '<div class="dw-burst" style="left:' + left + '"><svg class="dw-twinkle ' + cls + '" viewBox="0 0 60 60" aria-hidden="true">' + out + '<circle cx="30" cy="30" r="2.4" fill="' + color + '"/></svg></div>';
     }
-    // LED strings. The toran owns the horizontal, so these run straight down the PC margins and diagonally in the footer.
-    // Regular on purpose: even spacing, equal leads, warm tones. Each fits its box and ends at a clip.
-    var arcId = 0;
-    function drawSegs(w, h, segs){
-      var id = 'dwA' + (++arcId), defs = '', body = '', wire = '', clips = '', i, j, bulb = 0, cols = ['led1', 'led2', 'led1'];
-      for(i = 0; i < 3; i++) defs += '<radialGradient id="' + id + 'g' + i + '"><stop offset="0" stop-color="' + v(cols[i]) + '" stop-opacity=".62"/><stop offset=".35" stop-color="' + v(cols[i]) + '" stop-opacity=".22"/><stop offset="1" stop-color="' + v(cols[i]) + '" stop-opacity="0"/></radialGradient>';
-      segs.forEach(function(g, n){
-        var cx = (g.x0 + g.x1) / 2 + (g.bx || 0), cy = (g.y0 + g.y1) / 2 + (g.by || 0);
-        var len = Math.sqrt(Math.pow(g.x1 - g.x0, 2) + Math.pow(g.y1 - g.y0, 2));
-        wire += 'M' + f(g.x0) + ' ' + f(g.y0) + 'Q' + f(cx) + ' ' + f(cy) + ' ' + f(g.x1) + ' ' + f(g.y1);
-        clips += '<circle cx="' + f(g.x0) + '" cy="' + f(g.y0) + '" r="2.1" fill="' + v('wire') + '"/><circle cx="' + f(g.x1) + '" cy="' + f(g.y1) + '" r="2.1" fill="' + v('wire') + '"/>';
-        var count = Math.max(2, Math.round(len / (g.gap || 92)));
-        for(j = 0; j < count; j++){
-          var t = (j + .5) / count;
-          var px = (1 - t) * (1 - t) * g.x0 + 2 * (1 - t) * t * cx + t * t * g.x1, py = (1 - t) * (1 - t) * g.y0 + 2 * (1 - t) * t * cy + t * t * g.y1;
-          var lead = 5, c = bulb % 2, bx = f(px), by = f(py + lead);
-          body += '<circle cx="' + bx + '" cy="' + f(by + 10) + '" r="18" fill="url(#' + id + 'g' + c + ')" style="opacity:' + v('glow2') + '"/>' +
-            '<path d="M' + f(px) + ' ' + f(py) + 'L' + bx + ' ' + by + '" stroke="' + v('wire') + '" stroke-width=".7"/>' +
-            '<rect x="' + f(bx - 1.6) + '" y="' + f(by - .4) + '" width="3.2" height="3.8" rx=".8" fill="' + v('wire') + '"/>' +
-            '<path d="M' + bx + ' ' + f(by + 3) + 'c3 1.6 3.9 4.3 3.2 6.5c-.6 1.9-1.9 3.6-3.2 3.6s-2.6-1.7-3.2-3.6c-.7-2.2.2-4.9 3.2-6.5z" fill="' + v(cols[c]) + '"/>' +
-            '<ellipse cx="' + f(bx - 1) + '" cy="' + f(by + 7.4) + '" rx=".8" ry="1.9" fill="#fff" opacity=".85"/>';
-          bulb++;
-        }
-      });
-      return '<svg aria-hidden="true" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '"><defs>' + defs + '</defs><path d="' + wire + '" fill="none" stroke="' + v('wire') + '" stroke-width=".9"/>' + body + clips + '</svg>';
-    }
-    var layouts = {
-      // two long diagonals sweeping down toward the rangoli
-      foot: function(w, h){
-        var m = Math.min(w * .2, 170);
-        return [{ x0: 8, y0: 4, x1: w / 2 - m, y1: h - 26, by: 14, gap: 130 }, { x0: w - 8, y0: 4, x1: w / 2 + m, y1: h - 26, by: 14, gap: 130 }];
-      },
-      // a straight vertical string with evenly spaced bulbs
-      vert: function(w, h){ return [{ x0: w / 2, y0: 3, x1: w / 2, y1: h - 3, gap: 150 }]; }
-    };
-    function fitRun(el){
-      var r = el.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height), key = w + 'x' + h;
-      if(!w || !h || key === el.getAttribute('data-w')) return;
-      el.setAttribute('data-w', key);
-      el.innerHTML = drawSegs(w, h, layouts[el.getAttribute('data-run')](w, h));
-    }
-    var runWatch = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(function(list){ list.forEach(function(e){ fitRun(e.target); }); }) : null;
-    function fitRuns(){
-      Array.prototype.forEach.call(document.querySelectorAll('[data-run]:not([data-seen])'), function(el){
-        el.setAttribute('data-seen', '1');
-        if(runWatch) runWatch.observe(el);
-      });
-      Array.prototype.forEach.call(document.querySelectorAll('[data-run]'), fitRun);
+    function lights(id){
+      var W = 96, tile = '<path d="M0 4Q' + (W / 2) + ' 30 ' + W + ' 4" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>', i;
+      var cols = ['spark1', 'spark2', 'spark3', 'm1'];
+      for(i = 0; i < 4; i++){
+        var t = (i + .5) / 4, x = f(W * t), y = f(4 + 2 * (1 - t) * t * 26);
+        tile += '<rect x="' + (x - 1.2) + '" y="' + y + '" width="2.4" height="3" fill="' + v('rope') + '"/><ellipse cx="' + x + '" cy="' + (y + 7) + '" rx="3.2" ry="4.6" fill="' + v(cols[i]) + '"/><ellipse cx="' + (x - 1) + '" cy="' + (y + 5.4) + '" rx=".9" ry="1.4" fill="#fff" opacity=".7"/>';
+      }
+      return '<svg class="dw-lights" aria-hidden="true"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="34">' + tile + '</pattern></defs><rect width="100%" height="34" fill="url(#' + id + ')"/></svg>';
     }
 
     var main = document.querySelector('main'), foot = document.querySelector('footer');
@@ -147,80 +107,11 @@
       var low = document.createElement('div');
       low.className = 'dw-foot';
       low.setAttribute('aria-hidden', 'true');
-      low.innerHTML = '<div class="dw-run-foot" data-run="foot"></div>' +
+      low.innerHTML = lights('dwLights') +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
         '<div class="dw-wish">Shubh Deepavali</div>';
       foot.parentNode.insertBefore(low, foot);
     }
-    /* Decorations resting on real things, so the festival feels part of the page rather than pasted over it.
-       Cards rebuild their contents, so dress() is idempotent and re-runs after any change. */
-    var uid = 0;
-    function strand(){
-      var id = 'dwS' + (++uid), W = 72, tile = '<path d="M0 6Q' + (W / 2) + ' 15 ' + W + ' 6" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>';
-      tile += leaf(12, 11, 9, 24) + leaf(36, 13, 10, -14) + leaf(60, 11, 9, 16);
-      tile += marigold(12, 9, 5) + marigold(36, 11, 5.8) + marigold(60, 9, 5);
-      return '<svg aria-hidden="true" width="100%" height="24"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="24">' + tile + '</pattern></defs><rect width="100%" height="24" fill="url(#' + id + ')"/></svg>';
-    }
-    function cluster(){
-      return '<svg viewBox="0 0 60 60" aria-hidden="true">' + leaf(30, 28, 26, 150) + leaf(30, 28, 24, 62) + leaf(30, 28, 22, -60) + marigold(22, 24, 12) + marigold(40, 20, 9.5) + marigold(32, 39, 9) + '</svg>';
-    }
-    function bloom(){
-      return '<svg viewBox="0 0 30 30" aria-hidden="true">' + leaf(15, 15, 13, 130) + leaf(15, 15, 12, 220) + marigold(15, 15, 10) + '</svg>';
-    }
-    function add(el, key, cls, html){
-      if(!el) return;
-      el.classList.add('dw-host');
-      for(var i = 0; i < el.children.length; i++) if(el.children[i].getAttribute('data-dw') === key) return;
-      var d = document.createElement('div');
-      d.className = 'dw-on ' + cls;
-      d.setAttribute('data-dw', key);
-      d.setAttribute('aria-hidden', 'true');
-      d.innerHTML = html;
-      el.appendChild(d);
-    }
-    var one = function(q){ return document.querySelector(q); };
-    function dress(){
-      if(main){
-        add(one('#todayPanel'), 'strand', 'dw-strand', strand());
-        add(one('.panel-grid > .panel'), 'sit', 'dw-sit', diya('dwO' + (++uid)));
-        add(one('#kaizenPanel'), 'corner', 'dw-cluster tl', cluster());
-        add(one('#examWeekBanner'), 'corner', 'dw-cluster tr', cluster());
-        add(one('#paperThemeBanner'), 'corner', 'dw-cluster br', cluster());
-        add(one('.heat-panel'), 'corner', 'dw-corner', rangoli());
-        add(one('.heat-panel'), 'sit', 'dw-sit left', diya('dwO' + (++uid)));
-        add(one('#calToggleBtn'), 'clip', 'dw-clip', bloom());
-        add(one('#studyToggleBtn'), 'clip', 'dw-clip', bloom());
-        add(one('#miniStudy'), 'clip', 'dw-clip', bloom());
-        add(one('.mini-brand'), 'clip', 'dw-clip', bloom());
-        add(one('#miniBar'), 'strand', 'dw-strand hang', strand());
-      } else {
-        add(one('.topbar'), 'strand', 'dw-strand hang', strand());
-        var cards = document.querySelectorAll('.wrap .panel');
-        for(var i = 0; i < cards.length; i++){
-          if(i === 0) add(cards[i], 'strand', 'dw-strand', strand());
-          else if(i % 2) add(cards[i], 'corner', 'dw-cluster tr', cluster());
-          else add(cards[i], 'sit', 'dw-sit', diya('dwO' + (++uid)));
-        }
-      }
-    }
-    dress();
-    if(typeof MutationObserver !== 'undefined'){
-      var dressTimer = null;
-      new MutationObserver(function(){
-        if(!dressTimer) dressTimer = setTimeout(function(){ dressTimer = null; dress(); fitRuns(); }, 300);
-      }).observe(document.body, {childList:true, subtree:true});
-    }
-
-    // Vertical strings down both margins: always in view, never over the text
-    var hostV = main ? document.getElementById('app') : document.body;
-    if(hostV) ['l', 'r'].forEach(function(side){
-      var run = document.createElement('div');
-      run.className = 'dw-vrun ' + side + (main ? ' app' : '');
-      run.setAttribute('data-run', 'vert');
-      run.setAttribute('aria-hidden', 'true');
-      hostV.appendChild(run);
-    });
-
     var app = document.getElementById('app');
     if(app && main){
       var side = document.createElement('div');
@@ -228,16 +119,6 @@
       side.setAttribute('aria-hidden', 'true');
       side.innerHTML = '<div class="dw-lantern">' + lantern('b', 'dwG4') + '</div><div class="dw-lantern b">' + lantern('a', 'dwG5') + '</div>';
       app.appendChild(side);
-      // A garland that stays with you on PC once the big toran has scrolled away, so no scroll position is left bare
-      var hang = document.createElement('div');
-      hang.className = 'dw-hang';
-      hang.setAttribute('aria-hidden', 'true');
-      hang.innerHTML = strand();
-      app.appendChild(hang);
-      var syncHang = function(){ hang.classList.toggle('on', window.pageYOffset > 70); };
-      window.addEventListener('scroll', syncHang, {passive:true});
-      syncHang();
     }
-    fitRuns();
   } catch(e){}   // purely decorative: must never stop the app
 })();
