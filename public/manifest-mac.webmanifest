@@ -1,0 +1,30 @@
+{
+  "name": "THIRTY@RPR",
+  "short_name": "THIRTY@RPR",
+  "description": "2026-2030 batch portal: your days, classes & mess timings in one place.",
+  "start_url": "/?iv=4",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "orientation": "portrait-primary",
+  "background_color": "#171114",
+  "theme_color": "#171114",
+  "icons": [
+    {
+      "src": "/icons/v4/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/v4/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

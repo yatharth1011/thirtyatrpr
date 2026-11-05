@@ -66,6 +66,11 @@ window.__overlayFast = (function(){
 <link rel="icon" type="image/png" sizes="192x192" href="/icons/v4/icon-192.png">
 <link rel="apple-touch-icon" href="/icons/v4/apple-touch-180.png">
 <link rel="manifest" href="/manifest.webmanifest">
+<script>
+// Chrome on a Mac installs the maskable icon as it is, and macOS then puts that full-bleed square on a white plate.
+// Android needs the maskable one, so Macs get a manifest with only the icon drawn on Apple's grid.
+if(/Mac/.test(navigator.platform || '') && navigator.maxTouchPoints < 2) document.querySelector('link[rel=manifest]').href = '/manifest-mac.webmanifest';
+</script>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">

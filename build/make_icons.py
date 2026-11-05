@@ -4,7 +4,8 @@
 Writes public/icons/v4/ (a NEW path, so installed copies re-fetch them):
 - icon-192.png, icon-512.png (purpose "any"): the tile on Apple's icon grid, an 824/1024 rounded square in transparent
   margins. Desktop Chrome uses these as they are, and macOS 26+ shrinks anything else onto a white plate. Android uses
-  the maskable icons, so it is unaffected. Never make these full-bleed. Old note: full-bleed Clay gradient tile (noe squircle plate)
+  the maskable icons, so it is unaffected. Chrome on a Mac prefers maskable if it is offered, which is why Macs get
+  public/manifest-mac.webmanifest, listing only these. Never make these full-bleed. Old note: full-bleed Clay gradient tile (noe squircle plate)
 - icon-maskable-192.png, icon-maskable-512.png: full-bleed, "30" well inside the maskable safe zone (40% radius)
 - apple-touch-180.png: full-bleed RGB (iOS rounds it itself and requires no transparency)
 - favicon-64.png: rounded tile for browser tab.
