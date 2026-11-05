@@ -78,14 +78,62 @@
       }
       return '<div class="dw-burst" style="left:' + left + '"><svg class="dw-twinkle ' + cls + '" viewBox="0 0 60 60" aria-hidden="true">' + out + '<circle cx="30" cy="30" r="2.4" fill="' + color + '"/></svg></div>';
     }
-    function lights(id){
-      var W = 96, tile = '<path d="M0 4Q' + (W / 2) + ' 30 ' + W + ' 4" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>', i;
-      var cols = ['spark1', 'spark2', 'spark3', 'm1'];
-      for(i = 0; i < 4; i++){
-        var t = (i + .5) / 4, x = f(W * t), y = f(4 + 2 * (1 - t) * t * 26);
-        tile += '<rect x="' + (x - 1.2) + '" y="' + y + '" width="2.4" height="3" fill="' + v('rope') + '"/><ellipse cx="' + x + '" cy="' + (y + 7) + '" rx="3.2" ry="4.6" fill="' + v(cols[i]) + '"/><ellipse cx="' + (x - 1) + '" cy="' + (y + 5.4) + '" rx=".9" ry="1.4" fill="#fff" opacity=".7"/>';
+    function ladiSvg(w){
+      var W = Math.max(120, w || 800);
+      var arcTarget = 74;
+      var n = Math.max(2, Math.round(W / arcTarget));
+      var arcW = W / n;
+      var sag = Math.min(13, Math.max(8.5, arcW * 0.165));
+      var H = Math.round(sag + 16);
+      var wire = '', bulbs = '', clips = '';
+      var cols = ['m1', 'spark2', 'm1', 'spark1', 'm1', 'm2', 'spark3', 'm1'];
+      var bulbIdx = 0;
+      var ts = [0.15, 0.38, 0.62, 0.85];
+
+      for(var k = 0; k < n; k++){
+        var x0 = k * arcW, x1 = (k + 1) * arcW;
+        var midX = (x0 + x1) / 2;
+        wire += 'M' + f(x0) + ' 3Q' + f(midX) + ' ' + f(3 + sag * 2) + ' ' + f(x1) + ' 3';
+        clips += '<rect x="' + f(x0 - 1.2) + '" y="1" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
+        for(var b = 0; b < 4; b++){
+          var t = ts[b];
+          var bx = f(x0 + t * arcW);
+          var by = f(3 + 4 * t * (1 - t) * sag);
+          var col = cols[bulbIdx % cols.length];
+          var twCls = (bulbIdx % 3 === 0) ? ' class="dw-ladi-t1"' : (bulbIdx % 5 === 0) ? ' class="dw-ladi-t2"' : (bulbIdx % 7 === 0) ? ' class="dw-ladi-t3"' : '';
+          bulbIdx++;
+          bulbs += '<g' + twCls + '>' +
+            '<rect x="' + f(bx - 0.9) + '" y="' + by + '" width="1.8" height="2.8" rx=".4" fill="' + v('flex') + '"/>' +
+            '<circle cx="' + bx + '" cy="' + f(by + 5.2) + '" r="8" fill="' + v(col) + '" opacity=".18"/>' +
+            '<ellipse cx="' + bx + '" cy="' + f(by + 5.2) + '" rx="3.4" ry="4.2" fill="' + v(col) + '" opacity=".4"/>' +
+            '<ellipse cx="' + bx + '" cy="' + f(by + 5.0) + '" rx="1.4" ry="2.5" fill="' + v(col) + '"/>' +
+            '<ellipse cx="' + bx + '" cy="' + f(by + 4.8) + '" rx=".5" ry="1.1" fill="#fffef5"/>' +
+            '</g>';
+        }
       }
-      return '<svg class="dw-lights" aria-hidden="true"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="34">' + tile + '</pattern></defs><rect width="100%" height="34" fill="url(#' + id + ')"/></svg>';
+      clips += '<rect x="' + f(W - 1.2) + '" y="1" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
+
+      return '<svg viewBox="0 0 ' + Math.round(W) + ' ' + H + '" width="100%" height="' + H + '" aria-hidden="true">' +
+        '<path d="' + wire + '" fill="none" stroke="' + v('flex') + '" stroke-width="1.1" stroke-linecap="round"/>' +
+        clips + bulbs + '</svg>';
+    }
+
+    function mountLadi(el){
+      if(!el) return;
+      var timer = null;
+      function refresh(){
+        var w = el.clientWidth || (el.parentElement ? el.parentElement.clientWidth : 0) || (typeof window !== 'undefined' ? window.innerWidth : 800) || 800;
+        if(w > 0) el.innerHTML = ladiSvg(w);
+      }
+      refresh();
+      if(typeof ResizeObserver !== 'undefined'){
+        new ResizeObserver(function(){
+          if(timer) cancelAnimationFrame(timer);
+          timer = requestAnimationFrame(refresh);
+        }).observe(el);
+      } else if(typeof window !== 'undefined'){
+        window.addEventListener('resize', refresh, { passive: true });
+      }
     }
 
     var main = document.querySelector('main'), foot = document.querySelector('footer');
@@ -95,6 +143,7 @@
     top.innerHTML =
       burst('', v('spark1'), v('spark2'), '26%') + burst('b', v('spark3'), v('spark1'), '50%') + burst('c', v('spark2'), v('spark3'), '72%') +
       toran('dwToran') +
+      '<div class="dw-ladi dw-ladi-top"></div>' +
       '<div class="dw-lantern" style="left:5%">' + lantern('a', 'dwG1') + '</div>' +
       '<div class="dw-lantern b" style="right:12%">' + lantern('b', 'dwG2') + '</div>' +
       '<div class="dw-lantern c" style="right:4%">' + lantern('c', 'dwG3') + '</div>';
@@ -103,14 +152,17 @@
       var wrap = document.querySelector('.wrap');   // /spectate and /br
       if(wrap) wrap.insertBefore(top, wrap.firstChild);
     }
+    mountLadi(top.querySelector('.dw-ladi-top'));
+
     if(foot && foot.parentNode){
       var low = document.createElement('div');
       low.className = 'dw-foot';
       low.setAttribute('aria-hidden', 'true');
-      low.innerHTML = lights('dwLights') +
+      low.innerHTML = '<div class="dw-ladi dw-ladi-foot"></div>' +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
         '<div class="dw-wish">Shubh Deepawali</div>';
       foot.parentNode.insertBefore(low, foot);
+      mountLadi(low.querySelector('.dw-ladi-foot'));
     }
     var app = document.getElementById('app');
     if(app && main){

@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793906425';
+    var curToken = '1793906981';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -2955,6 +2955,7 @@ window.__overlayFast = (function(){
   --dw-clay:#b5562b; --dw-clay2:#7c3417; --dw-rim:#e9a15b; --dw-oil:#5a2c12;
   --dw-r1:#34c48a; --dw-r2:#f2c14e; --dw-r3:#ff7a59; --dw-r4:#c586c0; --dw-dot:#fff4d6;
   --dw-spark1:#f2c14e; --dw-spark2:#34c48a; --dw-spark3:#ff7a59; --dw-glow:.5; --dw-text:#f2c14e;
+  --dw-flex:#18251b;
 }
 body[data-theme="github"]{
   --dw-m1:#e3b341; --dw-m2:#d29922; --dw-m3:#6e4b00; --dw-leaf:#56d364; --dw-leaf2:#2ea043; --dw-rope:#8b949e;
@@ -2962,24 +2963,28 @@ body[data-theme="github"]{
   --dw-clay:#b08968; --dw-clay2:#6f5238; --dw-rim:#d9b48f; --dw-oil:#3b2a1a;
   --dw-r1:#79b8ff; --dw-r2:#b392f0; --dw-r3:#f97583; --dw-r4:#e3b341; --dw-dot:#f0f6fc;
   --dw-spark1:#79b8ff; --dw-spark2:#e3b341; --dw-spark3:#f97583; --dw-text:#e3b341;
+  --dw-flex:#1b222a;
 }
 body[data-theme="forest"]{
   --dw-m1:#f4c542; --dw-m2:#e89a2c; --dw-m3:#6b4306; --dw-leaf:#3ecf8e; --dw-leaf2:#1f8a5b; --dw-rope:#a98f4f;
   --dw-l1:#3ecf8e; --dw-l2:#f4c542; --dw-l3:#e8743b; --dw-band:#f7e8b5;
   --dw-r1:#3ecf8e; --dw-r2:#f4c542; --dw-r3:#e8743b; --dw-r4:#9be3bd; --dw-dot:#f3fbe9;
   --dw-spark1:#3ecf8e; --dw-spark2:#f4c542; --dw-spark3:#e8743b; --dw-text:#f4c542;
+  --dw-flex:#112316;
 }
 body[data-theme="sunset"]{
   --dw-m1:#ffc24b; --dw-m2:#f0954a; --dw-m3:#7a3a0c; --dw-leaf:#9fbf4a; --dw-leaf2:#6b8a2c; --dw-rope:#c98f4f;
   --dw-l1:#f0954a; --dw-l2:#ff5e62; --dw-l3:#ffc24b; --dw-band:#ffe2b5;
   --dw-r1:#f0954a; --dw-r2:#ff5e62; --dw-r3:#ffc24b; --dw-r4:#c9607a; --dw-dot:#fff1dc;
   --dw-spark1:#ffc24b; --dw-spark2:#ff5e62; --dw-spark3:#f0954a; --dw-text:#ffc24b;
+  --dw-flex:#291a14;
 }
 body[data-theme="midnight"]{
   --dw-m1:#f2c66d; --dw-m2:#d9a048; --dw-m3:#5a3a10; --dw-leaf:#7fbf9a; --dw-leaf2:#4a8a6a; --dw-rope:#8f7bb5;
   --dw-l1:#a374e8; --dw-l2:#e88ac0; --dw-l3:#f2c66d; --dw-band:#efe3ff;
   --dw-r1:#a374e8; --dw-r2:#e88ac0; --dw-r3:#f2c66d; --dw-r4:#6f8fe8; --dw-dot:#f5efff;
   --dw-spark1:#a374e8; --dw-spark2:#f2c66d; --dw-spark3:#e88ac0; --dw-text:#f2c66d;
+  --dw-flex:#181324;
 }
 body[data-theme="paper"]{
   --dw-m1:#eda12f; --dw-m2:#d9731f; --dw-m3:#7a3b12; --dw-leaf:#6b7d2e; --dw-leaf2:#4c5a1f; --dw-rope:#8a5a3a;
@@ -2987,6 +2992,7 @@ body[data-theme="paper"]{
   --dw-clay:#a8502f; --dw-clay2:#6e2f19; --dw-rim:#d58a55; --dw-oil:#3f1f10;
   --dw-r1:#9d174d; --dw-r2:#d9731f; --dw-r3:#db2777; --dw-r4:#5f6f2a; --dw-dot:#fffaf0;
   --dw-spark1:#db2777; --dw-spark2:#d9731f; --dw-spark3:#9d174d; --dw-glow:.28; --dw-text:#9d174d;
+  --dw-flex:#2e251e;
 }
 body[data-theme="paper-dark"]{
   --dw-m1:#f2b45a; --dw-m2:#df8a3c; --dw-m3:#6b3a14; --dw-leaf:#a3b56a; --dw-leaf2:#6f7f42; --dw-rope:#a07a60;
@@ -2994,6 +3000,7 @@ body[data-theme="paper-dark"]{
   --dw-clay:#b86a42; --dw-clay2:#73391f; --dw-rim:#e0a070; --dw-oil:#2c150b;
   --dw-r1:#f472b6; --dw-r2:#f2b45a; --dw-r3:#fb7185; --dw-r4:#c5d08a; --dw-dot:#fff1e6;
   --dw-spark1:#f472b6; --dw-spark2:#f2b45a; --dw-spark3:#fb7185; --dw-glow:.55; --dw-text:#f9a8c4;
+  --dw-flex:#271b21;
 }
 
 .dw-top{ position:relative; height:84px; margin:-20px -16px 12px; pointer-events:none; overflow:hidden; grid-column:1 / -1; flex:0 0 auto; }
@@ -3025,6 +3032,17 @@ body[data-theme="paper-dark"]{
 .dw-side{ position:fixed; top:0; left:198px; width:70px; height:78px; z-index:42; pointer-events:none; display:none; }
 .dw-side .dw-lantern{ width:30px; height:66px; left:0; }
 .dw-side .dw-lantern.b{ left:36px; width:24px; height:52px; }
+.dw-ladi{ position:relative; width:100%; pointer-events:none; overflow:hidden; }
+.dw-ladi svg{ display:block; width:100%; height:100%; overflow:visible; }
+.dw-ladi-top{ position:absolute; left:0; right:0; bottom:0; height:28px; z-index:2; }
+.dw-ladi-foot{ display:block; width:100%; height:30px; margin-bottom:8px; }
+.dw-ladi-t1{ animation:dw-ladi-breathe 4.2s ease-in-out infinite; }
+.dw-ladi-t2{ animation:dw-ladi-breathe 5.6s ease-in-out -1.8s infinite; }
+.dw-ladi-t3{ animation:dw-ladi-breathe 4.8s ease-in-out -3.2s infinite; }
+@keyframes dw-ladi-breathe{
+  0%, 100%{ opacity:1; }
+  50%{ opacity:.42; }
+}
 @media (min-width: 960px){
   #app.show .dw-side{ display:block; }
   main > .dw-top{ height:92px; margin:-26px -28px -4px; }
@@ -3036,7 +3054,7 @@ body[data-theme="paper-dark"]{
   .dw-diya{ width:36px; height:46px; }
 }
 @media (prefers-reduced-motion: reduce){
-  .dw-lantern, .dw-flame, .dw-twinkle{ animation:none; }
+  .dw-lantern, .dw-flame, .dw-twinkle, .dw-ladi-t1, .dw-ladi-t2, .dw-ladi-t3{ animation:none; }
 }
 
 body[data-theme="paper-dark"]{
@@ -8789,14 +8807,62 @@ if('serviceWorker' in navigator){
       }
       return '<div class="dw-burst" style="left:' + left + '"><svg class="dw-twinkle ' + cls + '" viewBox="0 0 60 60" aria-hidden="true">' + out + '<circle cx="30" cy="30" r="2.4" fill="' + color + '"/></svg></div>';
     }
-    function lights(id){
-      var W = 96, tile = '<path d="M0 4Q' + (W / 2) + ' 30 ' + W + ' 4" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>', i;
-      var cols = ['spark1', 'spark2', 'spark3', 'm1'];
-      for(i = 0; i < 4; i++){
-        var t = (i + .5) / 4, x = f(W * t), y = f(4 + 2 * (1 - t) * t * 26);
-        tile += '<rect x="' + (x - 1.2) + '" y="' + y + '" width="2.4" height="3" fill="' + v('rope') + '"/><ellipse cx="' + x + '" cy="' + (y + 7) + '" rx="3.2" ry="4.6" fill="' + v(cols[i]) + '"/><ellipse cx="' + (x - 1) + '" cy="' + (y + 5.4) + '" rx=".9" ry="1.4" fill="#fff" opacity=".7"/>';
+    function ladiSvg(w){
+      var W = Math.max(120, w || 800);
+      var arcTarget = 74;
+      var n = Math.max(2, Math.round(W / arcTarget));
+      var arcW = W / n;
+      var sag = Math.min(13, Math.max(8.5, arcW * 0.165));
+      var H = Math.round(sag + 16);
+      var wire = '', bulbs = '', clips = '';
+      var cols = ['m1', 'spark2', 'm1', 'spark1', 'm1', 'm2', 'spark3', 'm1'];
+      var bulbIdx = 0;
+      var ts = [0.15, 0.38, 0.62, 0.85];
+
+      for(var k = 0; k < n; k++){
+        var x0 = k * arcW, x1 = (k + 1) * arcW;
+        var midX = (x0 + x1) / 2;
+        wire += 'M' + f(x0) + ' 3Q' + f(midX) + ' ' + f(3 + sag * 2) + ' ' + f(x1) + ' 3';
+        clips += '<rect x="' + f(x0 - 1.2) + '" y="1" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
+        for(var b = 0; b < 4; b++){
+          var t = ts[b];
+          var bx = f(x0 + t * arcW);
+          var by = f(3 + 4 * t * (1 - t) * sag);
+          var col = cols[bulbIdx % cols.length];
+          var twCls = (bulbIdx % 3 === 0) ? ' class="dw-ladi-t1"' : (bulbIdx % 5 === 0) ? ' class="dw-ladi-t2"' : (bulbIdx % 7 === 0) ? ' class="dw-ladi-t3"' : '';
+          bulbIdx++;
+          bulbs += '<g' + twCls + '>' +
+            '<rect x="' + f(bx - 0.9) + '" y="' + by + '" width="1.8" height="2.8" rx=".4" fill="' + v('flex') + '"/>' +
+            '<circle cx="' + bx + '" cy="' + f(by + 5.2) + '" r="8" fill="' + v(col) + '" opacity=".18"/>' +
+            '<ellipse cx="' + bx + '" cy="' + f(by + 5.2) + '" rx="3.4" ry="4.2" fill="' + v(col) + '" opacity=".4"/>' +
+            '<ellipse cx="' + bx + '" cy="' + f(by + 5.0) + '" rx="1.4" ry="2.5" fill="' + v(col) + '"/>' +
+            '<ellipse cx="' + bx + '" cy="' + f(by + 4.8) + '" rx=".5" ry="1.1" fill="#fffef5"/>' +
+            '</g>';
+        }
       }
-      return '<svg class="dw-lights" aria-hidden="true"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="34">' + tile + '</pattern></defs><rect width="100%" height="34" fill="url(#' + id + ')"/></svg>';
+      clips += '<rect x="' + f(W - 1.2) + '" y="1" width="2.4" height="3" rx=".5" fill="' + v('rope') + '"/>';
+
+      return '<svg viewBox="0 0 ' + Math.round(W) + ' ' + H + '" width="100%" height="' + H + '" aria-hidden="true">' +
+        '<path d="' + wire + '" fill="none" stroke="' + v('flex') + '" stroke-width="1.1" stroke-linecap="round"/>' +
+        clips + bulbs + '</svg>';
+    }
+
+    function mountLadi(el){
+      if(!el) return;
+      var timer = null;
+      function refresh(){
+        var w = el.clientWidth || (el.parentElement ? el.parentElement.clientWidth : 0) || (typeof window !== 'undefined' ? window.innerWidth : 800) || 800;
+        if(w > 0) el.innerHTML = ladiSvg(w);
+      }
+      refresh();
+      if(typeof ResizeObserver !== 'undefined'){
+        new ResizeObserver(function(){
+          if(timer) cancelAnimationFrame(timer);
+          timer = requestAnimationFrame(refresh);
+        }).observe(el);
+      } else if(typeof window !== 'undefined'){
+        window.addEventListener('resize', refresh, { passive: true });
+      }
     }
 
     var main = document.querySelector('main'), foot = document.querySelector('footer');
@@ -8806,6 +8872,7 @@ if('serviceWorker' in navigator){
     top.innerHTML =
       burst('', v('spark1'), v('spark2'), '26%') + burst('b', v('spark3'), v('spark1'), '50%') + burst('c', v('spark2'), v('spark3'), '72%') +
       toran('dwToran') +
+      '<div class="dw-ladi dw-ladi-top"></div>' +
       '<div class="dw-lantern" style="left:5%">' + lantern('a', 'dwG1') + '</div>' +
       '<div class="dw-lantern b" style="right:12%">' + lantern('b', 'dwG2') + '</div>' +
       '<div class="dw-lantern c" style="right:4%">' + lantern('c', 'dwG3') + '</div>';
@@ -8814,14 +8881,17 @@ if('serviceWorker' in navigator){
       var wrap = document.querySelector('.wrap');   // /spectate and /br
       if(wrap) wrap.insertBefore(top, wrap.firstChild);
     }
+    mountLadi(top.querySelector('.dw-ladi-top'));
+
     if(foot && foot.parentNode){
       var low = document.createElement('div');
       low.className = 'dw-foot';
       low.setAttribute('aria-hidden', 'true');
-      low.innerHTML = lights('dwLights') +
+      low.innerHTML = '<div class="dw-ladi dw-ladi-foot"></div>' +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
         '<div class="dw-wish">Shubh Deepawali</div>';
       foot.parentNode.insertBefore(low, foot);
+      mountLadi(low.querySelector('.dw-ladi-foot'));
     }
     var app = document.getElementById('app');
     if(app && main){
