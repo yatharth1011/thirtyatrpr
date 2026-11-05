@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793904670';
+    var curToken = '1793905073';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -2901,7 +2901,8 @@ window.__overlayFast = (function(){
   /* no scrollbars while an animation runs (quietScroll in app3.js); sideways slides never overflow the panel */
   html.anim-run, html.anim-run body, html.anim-run .settings, html.anim-run .calpanel{ scrollbar-width:none; }
   html.anim-run ::-webkit-scrollbar{ width:0 !important; height:0 !important; background:transparent; }
-  #todayPanel{ overflow-x:clip; }
+  /* On main, not the card: Safari's overflow-x:clip also cuts a card's top edge, and things hang off these edges */
+  main{ overflow-x:clip; }
   .set-fold-body.closing{ animation:set-close .18s ease-in both; }
   @keyframes set-close{ to{ opacity:0; transform:translateY(-4px); } }
   /* theme change without View Transitions: everything eases into the new colours */
@@ -2950,6 +2951,7 @@ window.__overlayFast = (function(){
 /* Diwali decorations, one set in every theme's own colours (build/diwali.js draws them). No end date.
    Vectors, no filters; only flames, lanterns and a few sparkles move, and they rest for reduced-motion. */
 :root{
+  --dw-led1:#fff1c9; --dw-led2:#ffb627; --dw-led3:#ff8a5c; --dw-wire:#2d3a34; --dw-glow2:1;
   --dw-m1:#ffb627; --dw-m2:#ff8a1f; --dw-m3:#7a3b00; --dw-leaf:#34c48a; --dw-leaf2:#1f8f63; --dw-rope:#c9a24a;
   --dw-l1:#34c48a; --dw-l2:#f2c14e; --dw-l3:#ff7a59; --dw-band:#ffe7a8;
   --dw-clay:#b5562b; --dw-clay2:#7c3417; --dw-rim:#e9a15b; --dw-oil:#5a2c12;
@@ -2957,6 +2959,7 @@ window.__overlayFast = (function(){
   --dw-spark1:#f2c14e; --dw-spark2:#34c48a; --dw-spark3:#ff7a59; --dw-glow:.5; --dw-text:#f2c14e;
 }
 body[data-theme="github"]{
+  --dw-led1:#fff4d6; --dw-led2:#79b8ff; --dw-led3:#f9a8b0; --dw-wire:#6a737d; --dw-glow2:1;
   --dw-m1:#e3b341; --dw-m2:#d29922; --dw-m3:#6e4b00; --dw-leaf:#56d364; --dw-leaf2:#2ea043; --dw-rope:#8b949e;
   --dw-l1:#79b8ff; --dw-l2:#b392f0; --dw-l3:#f97583; --dw-band:#e1e4e8;
   --dw-clay:#b08968; --dw-clay2:#6f5238; --dw-rim:#d9b48f; --dw-oil:#3b2a1a;
@@ -2964,24 +2967,28 @@ body[data-theme="github"]{
   --dw-spark1:#79b8ff; --dw-spark2:#e3b341; --dw-spark3:#f97583; --dw-text:#e3b341;
 }
 body[data-theme="forest"]{
+  --dw-led1:#fff1c9; --dw-led2:#ffc94d; --dw-led3:#7fe3b2; --dw-wire:#3a4a3f; --dw-glow2:1;
   --dw-m1:#f4c542; --dw-m2:#e89a2c; --dw-m3:#6b4306; --dw-leaf:#3ecf8e; --dw-leaf2:#1f8a5b; --dw-rope:#a98f4f;
   --dw-l1:#3ecf8e; --dw-l2:#f4c542; --dw-l3:#e8743b; --dw-band:#f7e8b5;
   --dw-r1:#3ecf8e; --dw-r2:#f4c542; --dw-r3:#e8743b; --dw-r4:#9be3bd; --dw-dot:#f3fbe9;
   --dw-spark1:#3ecf8e; --dw-spark2:#f4c542; --dw-spark3:#e8743b; --dw-text:#f4c542;
 }
 body[data-theme="sunset"]{
+  --dw-led1:#fff1c9; --dw-led2:#ffb24d; --dw-led3:#ff8a7a; --dw-wire:#4a3528; --dw-glow2:1;
   --dw-m1:#ffc24b; --dw-m2:#f0954a; --dw-m3:#7a3a0c; --dw-leaf:#9fbf4a; --dw-leaf2:#6b8a2c; --dw-rope:#c98f4f;
   --dw-l1:#f0954a; --dw-l2:#ff5e62; --dw-l3:#ffc24b; --dw-band:#ffe2b5;
   --dw-r1:#f0954a; --dw-r2:#ff5e62; --dw-r3:#ffc24b; --dw-r4:#c9607a; --dw-dot:#fff1dc;
   --dw-spark1:#ffc24b; --dw-spark2:#ff5e62; --dw-spark3:#f0954a; --dw-text:#ffc24b;
 }
 body[data-theme="midnight"]{
+  --dw-led1:#fff1dc; --dw-led2:#c9a6ff; --dw-led3:#ffb0d8; --dw-wire:#4a3f5e; --dw-glow2:1;
   --dw-m1:#f2c66d; --dw-m2:#d9a048; --dw-m3:#5a3a10; --dw-leaf:#7fbf9a; --dw-leaf2:#4a8a6a; --dw-rope:#8f7bb5;
   --dw-l1:#a374e8; --dw-l2:#e88ac0; --dw-l3:#f2c66d; --dw-band:#efe3ff;
   --dw-r1:#a374e8; --dw-r2:#e88ac0; --dw-r3:#f2c66d; --dw-r4:#6f8fe8; --dw-dot:#f5efff;
   --dw-spark1:#a374e8; --dw-spark2:#f2c66d; --dw-spark3:#e88ac0; --dw-text:#f2c66d;
 }
 body[data-theme="paper"]{
+  --dw-led1:#ffcf6b; --dw-led2:#f28c28; --dw-led3:#e8476f; --dw-wire:#5a4638; --dw-glow2:0.8;
   --dw-m1:#eda12f; --dw-m2:#d9731f; --dw-m3:#7a3b12; --dw-leaf:#6b7d2e; --dw-leaf2:#4c5a1f; --dw-rope:#8a5a3a;
   --dw-l1:#9d174d; --dw-l2:#db2777; --dw-l3:#d9731f; --dw-band:#f8e3b0;
   --dw-clay:#a8502f; --dw-clay2:#6e2f19; --dw-rim:#d58a55; --dw-oil:#3f1f10;
@@ -2989,6 +2996,7 @@ body[data-theme="paper"]{
   --dw-spark1:#db2777; --dw-spark2:#d9731f; --dw-spark3:#9d174d; --dw-glow:.28; --dw-text:#9d174d;
 }
 body[data-theme="paper-dark"]{
+  --dw-led1:#ffe9c9; --dw-led2:#ffb24d; --dw-led3:#ff8fb3; --dw-wire:#6a5a60; --dw-glow2:1;
   --dw-m1:#f2b45a; --dw-m2:#df8a3c; --dw-m3:#6b3a14; --dw-leaf:#a3b56a; --dw-leaf2:#6f7f42; --dw-rope:#a07a60;
   --dw-l1:#f472b6; --dw-l2:#fb7185; --dw-l3:#f2b45a; --dw-band:#ffe6d6;
   --dw-clay:#b86a42; --dw-clay2:#73391f; --dw-rim:#e0a070; --dw-oil:#2c150b;
@@ -3015,7 +3023,7 @@ body[data-theme="paper-dark"]{
 @keyframes dw-twinkle{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
 .dw-foot{ position:relative; clear:both; text-align:center; pointer-events:none; padding:6px 12px 4px; margin-top:20px; }
 .wrap > .dw-foot{ margin-top:64px; }   /* /spectate's sticky panel overhangs its row */
-.dw-lights{ display:block; width:100%; height:34px; }
+.dw-lights{ display:block; width:100%; height:60px; }
 .dw-scene{ display:flex; align-items:flex-end; justify-content:center; gap:clamp(6px, 2.4vw, 22px); margin-top:4px; }
 .dw-diya{ width:46px; height:58px; flex:0 0 auto; }
 .dw-diya svg{ width:100%; height:100%; display:block; overflow:visible; }
@@ -3026,7 +3034,7 @@ body[data-theme="paper-dark"]{
 .dw-side .dw-lantern{ width:30px; height:66px; left:0; }
 .dw-side .dw-lantern.b{ left:36px; width:24px; height:52px; }
 @media (min-width: 960px){
-  #app.show .dw-side{ display:block; }
+  #app.show .dw-side, #app.show .dw-hang{ display:block; }
   main > .dw-top{ height:92px; margin:-26px -28px -4px; }
 }
 @media (max-width: 600px){
@@ -3035,6 +3043,41 @@ body[data-theme="paper-dark"]{
   .dw-burst{ top:22px; width:44px; height:44px; }
   .dw-diya{ width:36px; height:46px; }
 }
+.dw-host:not(.mini-bar):not(.topbar){ position:relative; }
+.dw-strand.hang{ top:auto; bottom:-11px; left:0; right:0; }
+.dw-hang{ position:fixed; top:-7px; left:284px; right:0; height:24px; z-index:38; pointer-events:none; display:none; opacity:0; transition:opacity .25s; }
+.dw-hang.on{ opacity:1; }
+.dw-hang svg{ display:block; }
+.dw-on{ position:absolute; pointer-events:none; z-index:2; }
+.dw-on svg{ display:block; overflow:visible; }
+.dw-strand{ top:-7px; left:5%; right:5%; height:24px; }
+.dw-sit{ top:-30px; right:34px; }
+.dw-sit.left{ right:auto; left:30px; }
+.dw-sit .dw-diya{ width:26px; height:33px; }
+.dw-cluster{ width:42px; height:42px; }
+.dw-cluster svg{ width:100%; height:100%; }
+.dw-cluster.tl{ top:-13px; left:-12px; }
+.dw-cluster.tr{ top:-13px; right:-12px; transform:scaleX(-1); }
+.dw-cluster.br{ bottom:-13px; right:-12px; transform:rotate(180deg); }
+.dw-corner{ right:0; bottom:0; width:92px; height:92px; overflow:hidden; opacity:.6; }
+.dw-corner .dw-rangoli{ width:184px; height:184px; }
+.dw-clip{ left:-5px; top:-7px; width:20px; height:20px; }
+.dw-clip svg{ width:100%; height:100%; }
+.mini-brand.dw-host{ overflow:visible; }
+/* Sparks on the tip of each day's progress bar; marigolds for the mess menu's bullets */
+.bar-track{ overflow:visible; }
+.bar-fill{ position:relative; }
+.bar-fill:not([style*="width:0"])::before{
+  content:""; position:absolute; right:-6px; top:50%; width:13px; height:13px; margin-top:-6.5px; pointer-events:none;
+  background:var(--dw-m1);
+  clip-path:polygon(50% 0, 60% 38%, 100% 50%, 60% 62%, 50% 100%, 40% 62%, 0 50%, 40% 38%);
+}
+.check-box.mess-dot{ font-size:0; }
+.check-box.mess-dot::before{ content:"\273F"; font-size:13px; color:var(--dw-m2); }
+/* Hanging LED arcs, from a few card edges and under the sticky bars: sparse bulbs on a thin wire, steady, with a soft halo */
+.dw-arc{ left:0; right:0; top:calc(100% - 1px); height:60px; }
+.dw-arc.bar{ top:calc(100% + 3px); position:absolute; pointer-events:none; }
+.dw-hang .dw-arc.bar{ top:20px; }
 @media (prefers-reduced-motion: reduce){
   .dw-lantern, .dw-flame, .dw-twinkle{ animation:none; }
 }
@@ -8429,7 +8472,7 @@ try { (function(){
   var header = document.querySelector('#app > header') || document.querySelector('header');
   if(!header) return;
   var SLICES = 10, MAX_ANGLE = 58;
-  var strip = null, timer = null, watcher = null;
+  var strip = null, timer = null, watcher = null, hovered = null;
   function paperOn(){ return /^paper/.test(document.body.getAttribute('data-theme') || ''); }
   function angle(i){ return MAX_ANGLE * (i + .5) / SLICES; }
   function place(){
@@ -8484,6 +8527,7 @@ try { (function(){
       strip.appendChild(kid);
     }
     place();
+    if(hovered) mirror(hovered, false);     // the copies were just replaced
     watch();
   }
   function soon(){ if(!timer) timer = setTimeout(build, 120); }
@@ -8492,6 +8536,30 @@ try { (function(){
     watcher.observe(header, {subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:['style','class']});
     watcher.observe(document.body, {attributes:true, attributeFilter:['data-theme','class']});
   }
+  // The slices are copies, so :hover never reaches them: follow the real control's colours for as long as they are changing.
+  var PICK = 'a,button', mirrorId = null;
+  function copiesOf(el){
+    var at = Array.prototype.indexOf.call(header.querySelectorAll(PICK), el), out = [];
+    if(!strip || at < 0) return out;
+    Array.prototype.forEach.call(strip.children, function(kid){ var c = kid.firstChild.querySelectorAll(PICK)[at]; if(c) out.push(c); });
+    return out;
+  }
+  function mirror(el, clearAtEnd){
+    cancelAnimationFrame(mirrorId);
+    var until = Date.now() + 260;
+    (function frame(){
+      var cs = getComputedStyle(el), done = Date.now() > until;
+      copiesOf(el).forEach(function(c){
+        if(done && clearAtEnd){ c.style.backgroundColor = c.style.borderColor = c.style.color = ''; return; }
+        c.style.setProperty('background-color', cs.backgroundColor, 'important');
+        c.style.setProperty('border-color', cs.borderTopColor, 'important');
+        c.style.setProperty('color', cs.color, 'important');
+      });
+      if(!done) mirrorId = requestAnimationFrame(frame);
+    })();
+  }
+  header.addEventListener('mouseover', function(e){ var el = e.target.closest && e.target.closest(PICK); if(el){ hovered = el; mirror(el, false); } });
+  header.addEventListener('mouseout', function(e){ var el = e.target.closest && e.target.closest(PICK); if(el){ hovered = null; mirror(el, true); } });
   header.addEventListener('scroll', place, {passive:true});
   window.addEventListener('resize', soon);
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(soon);
@@ -8789,14 +8857,21 @@ if('serviceWorker' in navigator){
       }
       return '<div class="dw-burst" style="left:' + left + '"><svg class="dw-twinkle ' + cls + '" viewBox="0 0 60 60" aria-hidden="true">' + out + '<circle cx="30" cy="30" r="2.4" fill="' + color + '"/></svg></div>';
     }
-    function lights(id){
-      var W = 96, tile = '<path d="M0 4Q' + (W / 2) + ' 30 ' + W + ' 4" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>', i;
-      var cols = ['spark1', 'spark2', 'spark3', 'm1'];
-      for(i = 0; i < 4; i++){
-        var t = (i + .5) / 4, x = f(W * t), y = f(4 + 2 * (1 - t) * t * 26);
-        tile += '<rect x="' + (x - 1.2) + '" y="' + y + '" width="2.4" height="3" fill="' + v('rope') + '"/><ellipse cx="' + x + '" cy="' + (y + 7) + '" rx="3.2" ry="4.6" fill="' + v(cols[i]) + '"/><ellipse cx="' + (x - 1) + '" cy="' + (y + 5.4) + '" rx=".9" ry="1.4" fill="#fff" opacity=".7"/>';
+    // Hanging LED arcs: a thin wire with a few real bulbs far apart, each lit with a soft halo. Steady, like real lights.
+    var arcId = 0;
+    function arcs(){
+      var id = 'dwA' + (++arcId), W = 230, H = 60, sag = 17, tile = '', defs = '', i;
+      var cols = ['led1', 'led2', 'led3'], ts = [.2, .5, .8];
+      for(i = 0; i < 3; i++) defs += '<radialGradient id="' + id + 'g' + i + '"><stop offset="0" stop-color="' + v(cols[i]) + '" stop-opacity=".62"/><stop offset=".35" stop-color="' + v(cols[i]) + '" stop-opacity=".22"/><stop offset="1" stop-color="' + v(cols[i]) + '" stop-opacity="0"/></radialGradient>';
+      tile += '<path d="M0 1Q' + (W / 2) + ' ' + (1 + sag * 2) + ' ' + W + ' 1" fill="none" stroke="' + v('wire') + '" stroke-width=".9"/>';
+      for(i = 0; i < 3; i++){
+        var t = ts[i], x = f(W * t), y = f(1 + 2 * (1 - t) * t * sag * 2);
+        tile += '<circle cx="' + x + '" cy="' + f(y + 11) + '" r="18" fill="url(#' + id + 'g' + i + ')" style="opacity:' + v('glow2') + '"/>' +
+          '<rect x="' + (x - 1.7) + '" y="' + (y - .5) + '" width="3.4" height="4.2" rx=".8" fill="' + v('wire') + '"/>' +
+          '<path d="M' + x + ' ' + f(y + 3.4) + 'c3.1 1.6 4 4.4 3.3 6.7c-.6 2-2 3.7-3.3 3.7s-2.7-1.7-3.3-3.7c-.7-2.3.2-5.1 3.3-6.7z" fill="' + v(cols[i]) + '"/>' +
+          '<ellipse cx="' + f(x - 1) + '" cy="' + f(y + 8) + '" rx=".9" ry="2" fill="#fff" opacity=".85"/>';
       }
-      return '<svg class="dw-lights" aria-hidden="true"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="34">' + tile + '</pattern></defs><rect width="100%" height="34" fill="url(#' + id + ')"/></svg>';
+      return '<svg aria-hidden="true" width="100%" height="' + H + '"><defs>' + defs + '<pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="' + H + '">' + tile + '</pattern></defs><rect width="100%" height="' + H + '" fill="url(#' + id + ')"/></svg>';
     }
 
     var main = document.querySelector('main'), foot = document.querySelector('footer');
@@ -8818,11 +8893,76 @@ if('serviceWorker' in navigator){
       var low = document.createElement('div');
       low.className = 'dw-foot';
       low.setAttribute('aria-hidden', 'true');
-      low.innerHTML = lights('dwLights') +
+      low.innerHTML = '<div class="dw-lights">' + arcs() + '</div>' +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
         '<div class="dw-wish">Shubh Deepavali</div>';
       foot.parentNode.insertBefore(low, foot);
     }
+    /* Decorations resting on real things, so the festival feels part of the page rather than pasted over it.
+       Cards rebuild their contents, so dress() is idempotent and re-runs after any change. */
+    var uid = 0;
+    function strand(){
+      var id = 'dwS' + (++uid), W = 72, tile = '<path d="M0 6Q' + (W / 2) + ' 15 ' + W + ' 6" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>';
+      tile += leaf(12, 11, 9, 24) + leaf(36, 13, 10, -14) + leaf(60, 11, 9, 16);
+      tile += marigold(12, 9, 5) + marigold(36, 11, 5.8) + marigold(60, 9, 5);
+      return '<svg aria-hidden="true" width="100%" height="24"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="24">' + tile + '</pattern></defs><rect width="100%" height="24" fill="url(#' + id + ')"/></svg>';
+    }
+    function cluster(){
+      return '<svg viewBox="0 0 60 60" aria-hidden="true">' + leaf(30, 28, 26, 150) + leaf(30, 28, 24, 62) + leaf(30, 28, 22, -60) + marigold(22, 24, 12) + marigold(40, 20, 9.5) + marigold(32, 39, 9) + '</svg>';
+    }
+    function bloom(){
+      return '<svg viewBox="0 0 30 30" aria-hidden="true">' + leaf(15, 15, 13, 130) + leaf(15, 15, 12, 220) + marigold(15, 15, 10) + '</svg>';
+    }
+    function add(el, key, cls, html){
+      if(!el) return;
+      el.classList.add('dw-host');
+      for(var i = 0; i < el.children.length; i++) if(el.children[i].getAttribute('data-dw') === key) return;
+      var d = document.createElement('div');
+      d.className = 'dw-on ' + cls;
+      d.setAttribute('data-dw', key);
+      d.setAttribute('aria-hidden', 'true');
+      d.innerHTML = html;
+      el.appendChild(d);
+    }
+    var one = function(q){ return document.querySelector(q); };
+    function dress(){
+      if(main){
+        add(one('#todayPanel'), 'arc', 'dw-arc', arcs());
+        add(one('.panel-grid > .panel'), 'arc', 'dw-arc', arcs());
+        add(one('#examWeekBanner'), 'arc', 'dw-arc', arcs());
+        add(one('#miniBar'), 'arc', 'dw-arc bar', arcs());
+        add(one('#todayPanel'), 'strand', 'dw-strand', strand());
+        add(one('.panel-grid > .panel'), 'sit', 'dw-sit', diya('dwO' + (++uid)));
+        add(one('#kaizenPanel'), 'corner', 'dw-cluster tl', cluster());
+        add(one('#examWeekBanner'), 'corner', 'dw-cluster tr', cluster());
+        add(one('#paperThemeBanner'), 'corner', 'dw-cluster br', cluster());
+        add(one('.heat-panel'), 'corner', 'dw-corner', rangoli());
+        add(one('.heat-panel'), 'sit', 'dw-sit left', diya('dwO' + (++uid)));
+        add(one('#calToggleBtn'), 'clip', 'dw-clip', bloom());
+        add(one('#studyToggleBtn'), 'clip', 'dw-clip', bloom());
+        add(one('#miniStudy'), 'clip', 'dw-clip', bloom());
+        add(one('.mini-brand'), 'clip', 'dw-clip', bloom());
+        add(one('#miniBar'), 'strand', 'dw-strand hang', strand());
+      } else {
+        add(one('.topbar'), 'strand', 'dw-strand hang', strand());
+        add(one('.topbar'), 'arc', 'dw-arc bar', arcs());
+        var cards = document.querySelectorAll('.wrap .panel');
+        for(var i = 0; i < cards.length; i++){
+          if(i % 2 === 0) add(cards[i], 'arc', 'dw-arc', arcs());
+          if(i === 0) add(cards[i], 'strand', 'dw-strand', strand());
+          else if(i % 2) add(cards[i], 'corner', 'dw-cluster tr', cluster());
+          else add(cards[i], 'sit', 'dw-sit', diya('dwO' + (++uid)));
+        }
+      }
+    }
+    dress();
+    if(typeof MutationObserver !== 'undefined'){
+      var dressTimer = null;
+      new MutationObserver(function(){
+        if(!dressTimer) dressTimer = setTimeout(function(){ dressTimer = null; dress(); }, 300);
+      }).observe(document.body, {childList:true, subtree:true});
+    }
+
     var app = document.getElementById('app');
     if(app && main){
       var side = document.createElement('div');
@@ -8830,6 +8970,15 @@ if('serviceWorker' in navigator){
       side.setAttribute('aria-hidden', 'true');
       side.innerHTML = '<div class="dw-lantern">' + lantern('b', 'dwG4') + '</div><div class="dw-lantern b">' + lantern('a', 'dwG5') + '</div>';
       app.appendChild(side);
+      // A garland that stays with you on PC once the big toran has scrolled away, so no scroll position is left bare
+      var hang = document.createElement('div');
+      hang.className = 'dw-hang';
+      hang.setAttribute('aria-hidden', 'true');
+      hang.innerHTML = strand() + '<div class="dw-arc bar">' + arcs() + '</div>';
+      app.appendChild(hang);
+      var syncHang = function(){ hang.classList.toggle('on', window.pageYOffset > 70); };
+      window.addEventListener('scroll', syncHang, {passive:true});
+      syncHang();
     }
   } catch(e){}   // purely decorative: must never stop the app
 })();

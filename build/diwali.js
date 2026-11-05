@@ -78,14 +78,21 @@
       }
       return '<div class="dw-burst" style="left:' + left + '"><svg class="dw-twinkle ' + cls + '" viewBox="0 0 60 60" aria-hidden="true">' + out + '<circle cx="30" cy="30" r="2.4" fill="' + color + '"/></svg></div>';
     }
-    function lights(id){
-      var W = 96, tile = '<path d="M0 4Q' + (W / 2) + ' 30 ' + W + ' 4" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>', i;
-      var cols = ['spark1', 'spark2', 'spark3', 'm1'];
-      for(i = 0; i < 4; i++){
-        var t = (i + .5) / 4, x = f(W * t), y = f(4 + 2 * (1 - t) * t * 26);
-        tile += '<rect x="' + (x - 1.2) + '" y="' + y + '" width="2.4" height="3" fill="' + v('rope') + '"/><ellipse cx="' + x + '" cy="' + (y + 7) + '" rx="3.2" ry="4.6" fill="' + v(cols[i]) + '"/><ellipse cx="' + (x - 1) + '" cy="' + (y + 5.4) + '" rx=".9" ry="1.4" fill="#fff" opacity=".7"/>';
+    // Hanging LED arcs: a thin wire with a few real bulbs far apart, each lit with a soft halo. Steady, like real lights.
+    var arcId = 0;
+    function arcs(){
+      var id = 'dwA' + (++arcId), W = 230, H = 60, sag = 17, tile = '', defs = '', i;
+      var cols = ['led1', 'led2', 'led3'], ts = [.2, .5, .8];
+      for(i = 0; i < 3; i++) defs += '<radialGradient id="' + id + 'g' + i + '"><stop offset="0" stop-color="' + v(cols[i]) + '" stop-opacity=".62"/><stop offset=".35" stop-color="' + v(cols[i]) + '" stop-opacity=".22"/><stop offset="1" stop-color="' + v(cols[i]) + '" stop-opacity="0"/></radialGradient>';
+      tile += '<path d="M0 1Q' + (W / 2) + ' ' + (1 + sag * 2) + ' ' + W + ' 1" fill="none" stroke="' + v('wire') + '" stroke-width=".9"/>';
+      for(i = 0; i < 3; i++){
+        var t = ts[i], x = f(W * t), y = f(1 + 2 * (1 - t) * t * sag * 2);
+        tile += '<circle cx="' + x + '" cy="' + f(y + 11) + '" r="18" fill="url(#' + id + 'g' + i + ')" style="opacity:' + v('glow2') + '"/>' +
+          '<rect x="' + (x - 1.7) + '" y="' + (y - .5) + '" width="3.4" height="4.2" rx=".8" fill="' + v('wire') + '"/>' +
+          '<path d="M' + x + ' ' + f(y + 3.4) + 'c3.1 1.6 4 4.4 3.3 6.7c-.6 2-2 3.7-3.3 3.7s-2.7-1.7-3.3-3.7c-.7-2.3.2-5.1 3.3-6.7z" fill="' + v(cols[i]) + '"/>' +
+          '<ellipse cx="' + f(x - 1) + '" cy="' + f(y + 8) + '" rx=".9" ry="2" fill="#fff" opacity=".85"/>';
       }
-      return '<svg class="dw-lights" aria-hidden="true"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="34">' + tile + '</pattern></defs><rect width="100%" height="34" fill="url(#' + id + ')"/></svg>';
+      return '<svg aria-hidden="true" width="100%" height="' + H + '"><defs>' + defs + '<pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="' + H + '">' + tile + '</pattern></defs><rect width="100%" height="' + H + '" fill="url(#' + id + ')"/></svg>';
     }
 
     var main = document.querySelector('main'), foot = document.querySelector('footer');
@@ -107,11 +114,76 @@
       var low = document.createElement('div');
       low.className = 'dw-foot';
       low.setAttribute('aria-hidden', 'true');
-      low.innerHTML = lights('dwLights') +
+      low.innerHTML = '<div class="dw-lights">' + arcs() + '</div>' +
         '<div class="dw-scene">' + diya('dwD1') + diya('dwD2') + rangoli() + diya('dwD3') + diya('dwD4') + '</div>' +
         '<div class="dw-wish">Shubh Deepavali</div>';
       foot.parentNode.insertBefore(low, foot);
     }
+    /* Decorations resting on real things, so the festival feels part of the page rather than pasted over it.
+       Cards rebuild their contents, so dress() is idempotent and re-runs after any change. */
+    var uid = 0;
+    function strand(){
+      var id = 'dwS' + (++uid), W = 72, tile = '<path d="M0 6Q' + (W / 2) + ' 15 ' + W + ' 6" fill="none" stroke="' + v('rope') + '" stroke-width="1"/>';
+      tile += leaf(12, 11, 9, 24) + leaf(36, 13, 10, -14) + leaf(60, 11, 9, 16);
+      tile += marigold(12, 9, 5) + marigold(36, 11, 5.8) + marigold(60, 9, 5);
+      return '<svg aria-hidden="true" width="100%" height="24"><defs><pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="24">' + tile + '</pattern></defs><rect width="100%" height="24" fill="url(#' + id + ')"/></svg>';
+    }
+    function cluster(){
+      return '<svg viewBox="0 0 60 60" aria-hidden="true">' + leaf(30, 28, 26, 150) + leaf(30, 28, 24, 62) + leaf(30, 28, 22, -60) + marigold(22, 24, 12) + marigold(40, 20, 9.5) + marigold(32, 39, 9) + '</svg>';
+    }
+    function bloom(){
+      return '<svg viewBox="0 0 30 30" aria-hidden="true">' + leaf(15, 15, 13, 130) + leaf(15, 15, 12, 220) + marigold(15, 15, 10) + '</svg>';
+    }
+    function add(el, key, cls, html){
+      if(!el) return;
+      el.classList.add('dw-host');
+      for(var i = 0; i < el.children.length; i++) if(el.children[i].getAttribute('data-dw') === key) return;
+      var d = document.createElement('div');
+      d.className = 'dw-on ' + cls;
+      d.setAttribute('data-dw', key);
+      d.setAttribute('aria-hidden', 'true');
+      d.innerHTML = html;
+      el.appendChild(d);
+    }
+    var one = function(q){ return document.querySelector(q); };
+    function dress(){
+      if(main){
+        add(one('#todayPanel'), 'arc', 'dw-arc', arcs());
+        add(one('.panel-grid > .panel'), 'arc', 'dw-arc', arcs());
+        add(one('#examWeekBanner'), 'arc', 'dw-arc', arcs());
+        add(one('#miniBar'), 'arc', 'dw-arc bar', arcs());
+        add(one('#todayPanel'), 'strand', 'dw-strand', strand());
+        add(one('.panel-grid > .panel'), 'sit', 'dw-sit', diya('dwO' + (++uid)));
+        add(one('#kaizenPanel'), 'corner', 'dw-cluster tl', cluster());
+        add(one('#examWeekBanner'), 'corner', 'dw-cluster tr', cluster());
+        add(one('#paperThemeBanner'), 'corner', 'dw-cluster br', cluster());
+        add(one('.heat-panel'), 'corner', 'dw-corner', rangoli());
+        add(one('.heat-panel'), 'sit', 'dw-sit left', diya('dwO' + (++uid)));
+        add(one('#calToggleBtn'), 'clip', 'dw-clip', bloom());
+        add(one('#studyToggleBtn'), 'clip', 'dw-clip', bloom());
+        add(one('#miniStudy'), 'clip', 'dw-clip', bloom());
+        add(one('.mini-brand'), 'clip', 'dw-clip', bloom());
+        add(one('#miniBar'), 'strand', 'dw-strand hang', strand());
+      } else {
+        add(one('.topbar'), 'strand', 'dw-strand hang', strand());
+        add(one('.topbar'), 'arc', 'dw-arc bar', arcs());
+        var cards = document.querySelectorAll('.wrap .panel');
+        for(var i = 0; i < cards.length; i++){
+          if(i % 2 === 0) add(cards[i], 'arc', 'dw-arc', arcs());
+          if(i === 0) add(cards[i], 'strand', 'dw-strand', strand());
+          else if(i % 2) add(cards[i], 'corner', 'dw-cluster tr', cluster());
+          else add(cards[i], 'sit', 'dw-sit', diya('dwO' + (++uid)));
+        }
+      }
+    }
+    dress();
+    if(typeof MutationObserver !== 'undefined'){
+      var dressTimer = null;
+      new MutationObserver(function(){
+        if(!dressTimer) dressTimer = setTimeout(function(){ dressTimer = null; dress(); }, 300);
+      }).observe(document.body, {childList:true, subtree:true});
+    }
+
     var app = document.getElementById('app');
     if(app && main){
       var side = document.createElement('div');
@@ -119,6 +191,15 @@
       side.setAttribute('aria-hidden', 'true');
       side.innerHTML = '<div class="dw-lantern">' + lantern('b', 'dwG4') + '</div><div class="dw-lantern b">' + lantern('a', 'dwG5') + '</div>';
       app.appendChild(side);
+      // A garland that stays with you on PC once the big toran has scrolled away, so no scroll position is left bare
+      var hang = document.createElement('div');
+      hang.className = 'dw-hang';
+      hang.setAttribute('aria-hidden', 'true');
+      hang.innerHTML = strand() + '<div class="dw-arc bar">' + arcs() + '</div>';
+      app.appendChild(hang);
+      var syncHang = function(){ hang.classList.toggle('on', window.pageYOffset > 70); };
+      window.addEventListener('scroll', syncHang, {passive:true});
+      syncHang();
     }
   } catch(e){}   // purely decorative: must never stop the app
 })();

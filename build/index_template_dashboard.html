@@ -2901,7 +2901,8 @@ window.__overlayFast = (function(){
   /* no scrollbars while an animation runs (quietScroll in app3.js); sideways slides never overflow the panel */
   html.anim-run, html.anim-run body, html.anim-run .settings, html.anim-run .calpanel{ scrollbar-width:none; }
   html.anim-run ::-webkit-scrollbar{ width:0 !important; height:0 !important; background:transparent; }
-  #todayPanel{ overflow-x:clip; }
+  /* On main, not the card: Safari's overflow-x:clip also cuts a card's top edge, and things hang off these edges */
+  main{ overflow-x:clip; }
   .set-fold-body.closing{ animation:set-close .18s ease-in both; }
   @keyframes set-close{ to{ opacity:0; transform:translateY(-4px); } }
   /* theme change without View Transitions: everything eases into the new colours */
