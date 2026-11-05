@@ -273,29 +273,28 @@
     function addDeco(el, key, cls, html){
       if(!el) return;
       el.classList.add('dw-host');
-      for(var i = 0; i < el.children.length; i++){
-        if(el.children[i].getAttribute('data-dw') === key) return;
+      var d = el.querySelector('[data-dw="' + key + '"]');
+      if(!d){
+        d = document.createElement('div');
+        d.setAttribute('data-dw', key);
+        d.setAttribute('aria-hidden', 'true');
+        el.appendChild(d);
       }
-      var d = document.createElement('div');
       d.className = cls;
-      d.setAttribute('data-dw', key);
-      d.setAttribute('aria-hidden', 'true');
       d.innerHTML = html;
-      el.appendChild(d);
     }
 
     function mountSearchDiya(btn){
       if(!btn) return;
-      btn.classList.add('dw-host');
-      for(var i = 0; i < btn.children.length; i++){
-        if(btn.children[i].getAttribute('data-dw') === 'search-diya') return;
+      var d = btn.querySelector('[data-dw="search-diya"]');
+      if(!d){
+        d = document.createElement('span');
+        d.className = 'dw-search-diya';
+        d.setAttribute('data-dw', 'search-diya');
+        d.setAttribute('aria-hidden', 'true');
+        btn.appendChild(d);
       }
-      var d = document.createElement('span');
-      d.className = 'dw-search-diya';
-      d.setAttribute('data-dw', 'search-diya');
-      d.setAttribute('aria-hidden', 'true');
       d.innerHTML = diya('dwSearchD' + (++uid));
-      btn.appendChild(d);
     }
 
     function mountHeroLadi(el){
@@ -359,15 +358,30 @@
         // 2. Search button: single earthen diya perched right above "Find a classmate"
         mountSearchDiya(one('#searchBtn'));
 
-        // 3. Rollout / Special banners: varied diagonal LED accents
-        addCardLadi(one('#paperThemeBanner'), 2);
-        addCardLadi(one('#examWeekBanner'), 0);
-        addCardLadi(one('#kaizenPanel'), 1);
+        // 3. Special cards and banners - guaranteed varied styles (no copy-paste):
+        // - Mess menu: Top-Left gentle curve (Style 1: tl2)
+        var messHead = one('#messPanelHead');
+        var messCard = messHead ? messHead.closest('.panel') : null;
+        if(messCard) addCardLadi(messCard, 1);
 
-        // 4. Grid Panels: every card gets its own varied diagonal LED style (no copy-paste):
+        // - End Sem Exams banner: Top-Right deep swag with hanging tail (Style 0: tr1)
+        addCardLadi(one('#examWeekBanner'), 0);
+
+        // - Kaizen panel: Top-Left steep swoop with tail (Style 3: tl4)
+        addCardLadi(one('#kaizenPanel'), 3);
+
+        // - Clay Dark / Paper rollout banner: Top-Right shallow garland (Style 2: tr3)
+        addCardLadi(one('#paperThemeBanner'), 2);
+
+        // - Semester at a glance heatmap: Top-Right shallow garland (Style 2: tr3)
+        addCardLadi(one('.heat-panel'), 2);
+
+        // 4. Remaining Grid Panels (if any extra): cycle styles avoiding duplicate
         var panels = document.querySelectorAll('.panel-grid > .panel');
         for(var i = 0; i < panels.length; i++){
-          addCardLadi(panels[i], i);
+          if(panels[i] !== messCard) {
+            addCardLadi(panels[i], (i + 1) % 4);
+          }
         }
       } else {
         // Sub-pages (/spectate, /br): varied diagonal LEDs on cards
