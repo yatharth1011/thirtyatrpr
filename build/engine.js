@@ -1226,7 +1226,7 @@ function venueLoadLeaderboard(isoList){
 /* ================= themes (shared with the main dashboard via localStorage) ================= */
 var THEME_KEY = 'thirtyatrpr_theme', COLOR_THEME_KEY = 'thirtyatrpr_color_theme';
 var COLOR_THEMES = [
-  { id: 'paper', label: 'Clay' }, { id: 'paper-dark', label: 'Clay Dark' }, { id: 'github', label: 'Graphite' }, { id: 'default', label: 'Signature' }, { id: 'forest', label: 'Forest' },
+  { id: 'paper', label: 'Paper' }, { id: 'paper-dark', label: 'Clay' }, { id: 'github', label: 'Graphite' }, { id: 'default', label: 'Signature' }, { id: 'forest', label: 'Forest' },
   { id: 'sunset', label: 'Sunset' }, { id: 'midnight', label: 'Midnight' }
 ];
 function readPref(k, dflt){ try { return localStorage.getItem(k) || dflt; } catch(e){ return dflt; } }

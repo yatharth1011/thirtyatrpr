@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793917919';
+    var curToken = '1793918342';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -4558,11 +4558,11 @@ var ROLES = {
       </div>
       <div class="panel theme-banner" id="paperThemeBanner" style="display:none;">
         <div class="theme-banner-content">
-          <div class="theme-banner-title">Clay Dark</div>
+          <div class="theme-banner-title">Clay</div>
           <div class="theme-banner-desc">A new look for your days. We’ve switched you over.</div>
           <div class="theme-banner-actions">
-            <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Clay Dark</button>
-            <button class="theme-banner-btn secondary" id="paperBannerDark">Try Clay</button>
+            <button class="theme-banner-btn primary" id="paperBannerKeep">Keep Clay</button>
+            <button class="theme-banner-btn secondary" id="paperBannerDark">Try Paper</button>
             <button class="theme-banner-btn secondary" id="paperBannerRevert">Revert to <span id="paperPrevThemeName">Graphite</span></button>
           </div>
         </div>
@@ -7922,7 +7922,7 @@ function initSettings(){
 
   // Colour theme: one slider over the six themes' colours, snapping to each.
   var THEME_ORDER = ['paper', 'paper-dark', 'github', 'default', 'forest', 'sunset', 'midnight'];
-  var THEME_NAMES = { paper: 'Clay', 'paper-dark': 'Clay Dark', github: 'Graphite', 'default': 'Signature', forest: 'Forest', sunset: 'Sunset', midnight: 'Midnight' };
+  var THEME_NAMES = { paper: 'Paper', 'paper-dark': 'Clay', github: 'Graphite', 'default': 'Signature', forest: 'Forest', sunset: 'Sunset', midnight: 'Midnight' };
   var themeRange = document.getElementById('colorThemeRange'), themeName = document.getElementById('colorThemeName');
   var themeKnob = document.getElementById('colorThemeKnob');
   // the knob sits inside the track: 4px in from each end, at stop i of 0..5
@@ -7987,10 +7987,10 @@ function initSettings(){
     if(darkBtn){
       var syncDarkBtn = function(){
         var isDark = currentColorTheme === 'paper-dark';
-        darkBtn.textContent = isDark ? 'Try Clay' : 'Try Clay Dark';
-        if(keepBtn) keepBtn.textContent = isDark ? 'Keep Clay Dark' : 'Keep Clay';
+        darkBtn.textContent = isDark ? 'Try Paper' : 'Try Clay';
+        if(keepBtn) keepBtn.textContent = isDark ? 'Keep Clay' : 'Keep Paper';
         var bannerTitle = banner.querySelector('.theme-banner-title');
-        if(bannerTitle) bannerTitle.textContent = isDark ? 'Clay Dark' : 'Clay';
+        if(bannerTitle) bannerTitle.textContent = isDark ? 'Clay' : 'Paper';
       };
       darkBtn.onclick = function(){
         setColorTheme(currentColorTheme === 'paper-dark' ? 'paper' : 'paper-dark');
