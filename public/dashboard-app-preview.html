@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793905073';
+    var curToken = '1793905231';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -3023,7 +3023,7 @@ body[data-theme="paper-dark"]{
 @keyframes dw-twinkle{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
 .dw-foot{ position:relative; clear:both; text-align:center; pointer-events:none; padding:6px 12px 4px; margin-top:20px; }
 .wrap > .dw-foot{ margin-top:64px; }   /* /spectate's sticky panel overhangs its row */
-.dw-lights{ display:block; width:100%; height:60px; }
+.dw-lights{ display:block; width:100%; height:64px; }
 .dw-scene{ display:flex; align-items:flex-end; justify-content:center; gap:clamp(6px, 2.4vw, 22px); margin-top:4px; }
 .dw-diya{ width:46px; height:58px; flex:0 0 auto; }
 .dw-diya svg{ width:100%; height:100%; display:block; overflow:visible; }
@@ -3075,9 +3075,10 @@ body[data-theme="paper-dark"]{
 .check-box.mess-dot{ font-size:0; }
 .check-box.mess-dot::before{ content:"\273F"; font-size:13px; color:var(--dw-m2); }
 /* Hanging LED arcs, from a few card edges and under the sticky bars: sparse bulbs on a thin wire, steady, with a soft halo */
-.dw-arc{ left:0; right:0; top:calc(100% - 1px); height:60px; }
+.dw-arc{ left:0; right:0; top:calc(100% - 3px); height:64px; }
+[data-run]{ width:100%; height:64px; }
+[data-run] svg{ display:block; overflow:visible; }
 .dw-arc.bar{ top:calc(100% + 3px); position:absolute; pointer-events:none; }
-.dw-hang .dw-arc.bar{ top:20px; }
 @media (prefers-reduced-motion: reduce){
   .dw-lantern, .dw-flame, .dw-twinkle{ animation:none; }
 }
@@ -8857,22 +8858,54 @@ if('serviceWorker' in navigator){
       }
       return '<div class="dw-burst" style="left:' + left + '"><svg class="dw-twinkle ' + cls + '" viewBox="0 0 60 60" aria-hidden="true">' + out + '<circle cx="30" cy="30" r="2.4" fill="' + color + '"/></svg></div>';
     }
-    // Hanging LED arcs: a thin wire with a few real bulbs far apart, each lit with a soft halo. Steady, like real lights.
+    // LED runs: long, loose swoops of thin wire between clips, drawn to fit their object exactly so a run always ends at a
+    // clip and never just stops. Bulbs dangle on short leads of uneven length, far apart, each with a soft halo. Steady.
     var arcId = 0;
-    function arcs(){
-      var id = 'dwA' + (++arcId), W = 230, H = 60, sag = 17, tile = '', defs = '', i;
-      var cols = ['led1', 'led2', 'led3'], ts = [.2, .5, .8];
+    function jitter(n){ var x = Math.sin(n * 12.9898) * 43758.5453; return x - Math.floor(x); }
+    function drawRun(w){
+      var id = 'dwA' + (++arcId), H = 64, defs = '', body = '', i, j, cols = ['led1', 'led2', 'led3'];
       for(i = 0; i < 3; i++) defs += '<radialGradient id="' + id + 'g' + i + '"><stop offset="0" stop-color="' + v(cols[i]) + '" stop-opacity=".62"/><stop offset=".35" stop-color="' + v(cols[i]) + '" stop-opacity=".22"/><stop offset="1" stop-color="' + v(cols[i]) + '" stop-opacity="0"/></radialGradient>';
-      tile += '<path d="M0 1Q' + (W / 2) + ' ' + (1 + sag * 2) + ' ' + W + ' 1" fill="none" stroke="' + v('wire') + '" stroke-width=".9"/>';
-      for(i = 0; i < 3; i++){
-        var t = ts[i], x = f(W * t), y = f(1 + 2 * (1 - t) * t * sag * 2);
-        tile += '<circle cx="' + x + '" cy="' + f(y + 11) + '" r="18" fill="url(#' + id + 'g' + i + ')" style="opacity:' + v('glow2') + '"/>' +
-          '<rect x="' + (x - 1.7) + '" y="' + (y - .5) + '" width="3.4" height="4.2" rx=".8" fill="' + v('wire') + '"/>' +
-          '<path d="M' + x + ' ' + f(y + 3.4) + 'c3.1 1.6 4 4.4 3.3 6.7c-.6 2-2 3.7-3.3 3.7s-2.7-1.7-3.3-3.7c-.7-2.3.2-5.1 3.3-6.7z" fill="' + v(cols[i]) + '"/>' +
-          '<ellipse cx="' + f(x - 1) + '" cy="' + f(y + 8) + '" rx=".9" ry="2" fill="#fff" opacity=".85"/>';
+      var spans = Math.max(1, Math.round(w / 460)), inset = 7, xs = [], bulb = 0;
+      for(i = 0; i <= spans; i++){
+        var nudge = (i === 0 || i === spans) ? 0 : (jitter(i + 3) - .5) * .32 * (w - inset * 2) / spans;
+        xs.push(inset + (w - inset * 2) * i / spans + nudge);
       }
-      return '<svg aria-hidden="true" width="100%" height="' + H + '"><defs>' + defs + '<pattern id="' + id + '" patternUnits="userSpaceOnUse" width="' + W + '" height="' + H + '">' + tile + '</pattern></defs><rect width="100%" height="' + H + '" fill="url(#' + id + ')"/></svg>';
+      var wire = '', top = '';
+      for(i = 0; i < spans; i++){
+        var x0 = xs[i], x1 = xs[i + 1], len = x1 - x0, sag = Math.min(13 + len * .022, 25), skew = .5 + (jitter(i + 9) - .5) * .3;
+        var cx = x0 + len * skew;
+        wire += 'M' + f(x0) + ' 3Q' + f(cx) + ' ' + f(3 + sag * 2) + ' ' + f(x1) + ' 3';
+        var count = Math.max(2, Math.round(len / 92));
+        for(j = 0; j < count; j++){
+          var t = (j + .5 + (jitter(bulb + 21) - .5) * .4) / count;
+          var px = (1 - t) * (1 - t) * x0 + 2 * (1 - t) * t * cx + t * t * x1, py = 3 + 2 * (1 - t) * t * sag * 2;
+          var lead = 3 + jitter(bulb + 40) * 9, c = bulb % 3, bx = f(px), by = f(py + lead);
+          body += '<circle cx="' + bx + '" cy="' + f(by + 10) + '" r="18" fill="url(#' + id + 'g' + c + ')" style="opacity:' + v('glow2') + '"/>' +
+            '<path d="M' + bx + ' ' + f(py) + 'V' + by + '" stroke="' + v('wire') + '" stroke-width=".7"/>' +
+            '<rect x="' + f(bx - 1.6) + '" y="' + f(by - .4) + '" width="3.2" height="3.8" rx=".8" fill="' + v('wire') + '"/>' +
+            '<path d="M' + bx + ' ' + f(by + 3) + 'c3 1.6 3.9 4.3 3.2 6.5c-.6 1.9-1.9 3.6-3.2 3.6s-2.6-1.7-3.2-3.6c-.7-2.2.2-4.9 3.2-6.5z" fill="' + v(cols[c]) + '"/>' +
+            '<ellipse cx="' + f(bx - 1) + '" cy="' + f(by + 7.4) + '" rx=".8" ry="1.9" fill="#fff" opacity=".85"/>';
+          bulb++;
+        }
+      }
+      for(i = 0; i <= spans; i++) top += '<circle cx="' + f(xs[i]) + '" cy="3" r="2.1" fill="' + v('wire') + '"/>';
+      return '<svg aria-hidden="true" width="' + w + '" height="' + H + '" viewBox="0 0 ' + w + ' ' + H + '"><defs>' + defs + '</defs><path d="' + wire + '" fill="none" stroke="' + v('wire') + '" stroke-width=".9"/>' + body + top + '</svg>';
     }
+    function fitRun(el){
+      var w = Math.round(el.getBoundingClientRect().width);
+      if(!w || String(w) === el.getAttribute('data-w')) return;
+      el.setAttribute('data-w', w);
+      el.innerHTML = drawRun(w);
+    }
+    var runWatch = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(function(list){ list.forEach(function(e){ fitRun(e.target); }); }) : null;
+    function fitRuns(){
+      Array.prototype.forEach.call(document.querySelectorAll('[data-run]:not([data-seen])'), function(el){
+        el.setAttribute('data-seen', '1');
+        if(runWatch) runWatch.observe(el);
+      });
+      Array.prototype.forEach.call(document.querySelectorAll('[data-run]'), fitRun);
+    }
+    function arcs(){ return '<div data-run></div>'; }
 
     var main = document.querySelector('main'), foot = document.querySelector('footer');
     var top = document.createElement('div');
@@ -8955,11 +8988,11 @@ if('serviceWorker' in navigator){
         }
       }
     }
-    dress();
+    dress(); fitRuns();
     if(typeof MutationObserver !== 'undefined'){
       var dressTimer = null;
       new MutationObserver(function(){
-        if(!dressTimer) dressTimer = setTimeout(function(){ dressTimer = null; dress(); }, 300);
+        if(!dressTimer) dressTimer = setTimeout(function(){ dressTimer = null; dress(); fitRuns(); }, 300);
       }).observe(document.body, {childList:true, subtree:true});
     }
 
@@ -8974,8 +9007,9 @@ if('serviceWorker' in navigator){
       var hang = document.createElement('div');
       hang.className = 'dw-hang';
       hang.setAttribute('aria-hidden', 'true');
-      hang.innerHTML = strand() + '<div class="dw-arc bar">' + arcs() + '</div>';
+      hang.innerHTML = strand();
       app.appendChild(hang);
+      fitRuns();
       var syncHang = function(){ hang.classList.toggle('on', window.pageYOffset > 70); };
       window.addEventListener('scroll', syncHang, {passive:true});
       syncHang();
