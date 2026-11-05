@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793902161';
+    var curToken = '1793902269';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -1577,6 +1577,11 @@ window.__overlayFast = (function(){
   /* Paper: paper cut-outs laid on a white page. Cards are white sheets with square corners: shading inside the edges, a lit top edge, and a shadow gathered under the bottom edge.
      Plain box-shadows only: filters and textures here made phones scroll badly. */
   html:has(body[data-theme="paper"]){ color-scheme:only light; }
+  /* Safari's overflow-x:clip also cuts the top edge, which sliced the today card's pin. Paper clips the day slide
+     on the column instead, whose padding leaves the pin room. */
+  html body[data-theme="paper"] main{ overflow-x:clip; }
+  html body[data-theme="paper"] main .panel,
+  html body[data-theme="paper"] main .daycard{ overflow:visible !important; }
   /* The banner is one small note: a title, a line, and plain text links */
   html body[data-theme="paper"] .theme-banner{ padding:16px 20px !important; }
   html body[data-theme="paper"] .theme-banner-title{ font-size:19px !important; margin:0 0 2px !important; }
@@ -2539,7 +2544,7 @@ window.__overlayFast = (function(){
      nav actually renders into is decided in JS (renderTodayPanel) per current viewport width. */
   .panel-head{ font-size:12.5px; color:var(--ink-soft); margin-bottom:8px; }
   .panel-head .prompt{ color:var(--gold); }
-  #messPanelHead{ justify-content:flex-start; }
+  #messPanelHead, .heat-panel .panel-head{ justify-content:flex-start; }
   @media (min-width: 601px){
     .panel-head{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; flex-wrap:wrap; }
   }
@@ -3419,6 +3424,8 @@ body[data-theme="paper-dark"] .theme-banner-btn.primary{
     color:#241b1f;
   }
 html:has(body[data-theme="paper-dark"]){ color-scheme:only dark; }
+html body[data-theme="paper-dark"] main{ overflow-x:clip; }
+html body[data-theme="paper-dark"] main .panel,html body[data-theme="paper-dark"] main .daycard{ overflow:visible !important; }
 html body[data-theme="paper-dark"] .theme-banner{ padding:16px 20px !important; }
 html body[data-theme="paper-dark"] .theme-banner-title{ font-size:19px !important; margin:0 0 2px !important; }
 html body[data-theme="paper-dark"] .theme-banner-desc{ font-size:13px !important; margin:0 0 10px !important; color:var(--ink-faint) !important; }
