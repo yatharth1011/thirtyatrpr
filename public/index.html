@@ -14,7 +14,7 @@
 (function(){
   var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.startsWith('10.') || location.port === '8080';
   if(isLocal){
-    var curToken = '1793902077';
+    var curToken = '1793902161';
     try {
       if(localStorage.getItem('thirty_dev_token') !== curToken){
         var entry = localStorage.getItem('thirtyatrpr_entry');
@@ -1631,17 +1631,10 @@ window.__overlayFast = (function(){
     outline:1px solid rgba(17,18,19,.17); outline-offset:-7px;
     overflow:visible;
   }
-  /* A round pink pin seen from above, in a different spot on each card */
+  /* A round pink pin seen from above, centred on each card */
   html body[data-theme="paper"] main .daycard,
   html body[data-theme="paper"] main .panel,
   html body[data-theme="paper"] main .kz-panel{ --pin-x:50%; }
-  html body[data-theme="paper"] #paperThemeBanner{ --pin-x:86%; }
-  html body[data-theme="paper"] #noticeBanner{ --pin-x:38%; }
-  html body[data-theme="paper"] #todayPanel{ --pin-x:21%; }
-  html body[data-theme="paper"] .panel-grid > .panel{ --pin-x:76%; }
-  html body[data-theme="paper"] #kaizenPanel{ --pin-x:13%; }
-  html body[data-theme="paper"] #examWeekBanner{ --pin-x:64%; }
-  html body[data-theme="paper"] .heat-panel{ --pin-x:32%; }
   html body[data-theme="paper"] main .daycard::after,
   html body[data-theme="paper"] main .panel::after,
   html body[data-theme="paper"] main .kz-panel::after{
@@ -3462,13 +3455,6 @@ html body[data-theme="paper-dark"] main .daycard,html body[data-theme="paper-dar
     overflow:visible;
   }
 html body[data-theme="paper-dark"] main .daycard,html body[data-theme="paper-dark"] main .panel,html body[data-theme="paper-dark"] main .kz-panel{ --pin-x:50%; }
-html body[data-theme="paper-dark"] #paperThemeBanner{ --pin-x:86%; }
-html body[data-theme="paper-dark"] #noticeBanner{ --pin-x:38%; }
-html body[data-theme="paper-dark"] #todayPanel{ --pin-x:21%; }
-html body[data-theme="paper-dark"] .panel-grid > .panel{ --pin-x:76%; }
-html body[data-theme="paper-dark"] #kaizenPanel{ --pin-x:13%; }
-html body[data-theme="paper-dark"] #examWeekBanner{ --pin-x:64%; }
-html body[data-theme="paper-dark"] .heat-panel{ --pin-x:32%; }
 html body[data-theme="paper-dark"] main .daycard::after,html body[data-theme="paper-dark"] main .panel::after,html body[data-theme="paper-dark"] main .kz-panel::after{
     content:"" !important; display:block; position:absolute; inset:auto; top:-7px; left:var(--pin-x);
     width:16px; height:16px; margin-left:-8px; padding:0; border-radius:50%; z-index:3; pointer-events:none;

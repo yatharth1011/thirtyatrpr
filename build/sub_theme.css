@@ -95,13 +95,10 @@
     outline:1px solid rgba(17,18,19,.17); outline-offset:-7px;
     overflow:visible;
   }
-  /* A round pink pin seen from above, in a different spot on each card */
+  /* A round pink pin seen from above, centred on each card */
   html body[data-theme="paper"] .panel,
   html body[data-theme="paper"] .card,
   html body[data-theme="paper"] .daycard{ --pin-x:50%; }
-  html body[data-theme="paper"] .panel:nth-child(3n+1),   html body[data-theme="paper"] .card:nth-child(3n+1){ --pin-x:18%; }
-  html body[data-theme="paper"] .panel:nth-child(3n+2),   html body[data-theme="paper"] .card:nth-child(3n+2){ --pin-x:72%; }
-  html body[data-theme="paper"] .panel:nth-child(3n),   html body[data-theme="paper"] .card:nth-child(3n){ --pin-x:44%; }
   html body[data-theme="paper"] .panel::after,
   html body[data-theme="paper"] .card::after,
   html body[data-theme="paper"] .daycard::after{

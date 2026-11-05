@@ -1631,17 +1631,10 @@ window.__overlayFast = (function(){
     outline:1px solid rgba(17,18,19,.17); outline-offset:-7px;
     overflow:visible;
   }
-  /* A round pink pin seen from above, in a different spot on each card */
+  /* A round pink pin seen from above, centred on each card */
   html body[data-theme="paper"] main .daycard,
   html body[data-theme="paper"] main .panel,
   html body[data-theme="paper"] main .kz-panel{ --pin-x:50%; }
-  html body[data-theme="paper"] #paperThemeBanner{ --pin-x:86%; }
-  html body[data-theme="paper"] #noticeBanner{ --pin-x:38%; }
-  html body[data-theme="paper"] #todayPanel{ --pin-x:21%; }
-  html body[data-theme="paper"] .panel-grid > .panel{ --pin-x:76%; }
-  html body[data-theme="paper"] #kaizenPanel{ --pin-x:13%; }
-  html body[data-theme="paper"] #examWeekBanner{ --pin-x:64%; }
-  html body[data-theme="paper"] .heat-panel{ --pin-x:32%; }
   html body[data-theme="paper"] main .daycard::after,
   html body[data-theme="paper"] main .panel::after,
   html body[data-theme="paper"] main .kz-panel::after{
