@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#171114">
+<meta name="robots" content="noindex">
+<title>THIRTY@RPR mini</title>
+<style>
+  :root{ color-scheme:dark;
+    --bg:#171114; --card:#241b1f; --card2:#2e2328; --line:#3d3034;
+    --ink:#f6eef0; --ink-soft:#cdbfc3; --ink-faint:#9a8a90; --pink:#f472b6; --ok:#a3b85c; --amber:#e3b341;
+    --kz:linear-gradient(100deg, #db2777, #f43f5e); }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font:14px/1.5 ui-monospace, "JetBrains Mono", Menlo, monospace; }
+  .wrap{ max-width:620px; margin:0 auto; padding:18px 16px 40px; }
+  h1{ font-size:15px; margin:0 0 4px; }
+  h1 .ok{ color:var(--ok); }
+  .sub{ color:var(--ink-faint); font-size:11.5px; margin-bottom:18px; }
+  .card{ background:var(--card); border-radius:14px; padding:16px; margin-bottom:14px; box-shadow:0 6px 20px rgba(0,0,0,.3); }
+  .head{ display:flex; align-items:center; gap:8px; font-weight:700; font-size:12px; color:var(--pink); margin-bottom:12px; }
+  .head::before{ content:'$'; color:var(--ink-faint); }
+  .head .sp{ flex:1; }
+  button{ font:inherit; background:var(--card2); color:var(--ink); border:0; border-radius:8px; padding:5px 10px; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,.25); }
+  button:disabled{ opacity:.35; cursor:default; }
+  input{ font:inherit; background:var(--card2); color:var(--ink); border:0; border-radius:8px; padding:8px 10px; width:100%; text-transform:uppercase; }
+  input::placeholder{ text-transform:none; color:var(--ink-faint); }
+  .day{ font-size:12.5px; color:var(--ink-soft); min-width:9em; text-align:center; }
+  .meal{ padding:10px 0; }
+  .meal + .meal{ border-top:1px solid var(--line); }
+  .meal-h{ display:flex; justify-content:space-between; font-weight:700; font-size:12.5px; }
+  .meal-h span{ color:var(--ink-faint); font-weight:400; }
+  .meal.now .meal-h b{ background:var(--kz); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .meal.now .meal-h span{ color:var(--pink); }
+  .meal ul{ margin:6px 0 0; padding-left:18px; color:var(--ink-soft); font-size:12.5px; }
+  .exam{ display:grid; grid-template-columns:5.6em 1fr; gap:4px 12px; padding:10px 0; }
+  .exam + .exam{ border-top:1px solid var(--line); }
+  .exam.past{ opacity:.45; }
+  .exam .when{ font-size:12px; color:var(--ink-soft); }
+  .exam .when b{ display:block; color:var(--ink); font-size:13px; }
+  .exam .code{ font-weight:700; }
+  .exam .name{ color:var(--ink-soft); font-size:12.5px; }
+  .exam .meta{ color:var(--ink-faint); font-size:11.5px; }
+  .exam.next .code{ color:var(--pink); }
+  .tag{ font-size:10px; font-weight:700; border-radius:99px; padding:1px 7px; background:var(--card2); color:var(--ink-soft); margin-left:6px; }
+  .seat{ color:var(--amber); }
+  .note{ color:var(--ink-faint); font-size:11.5px; margin-top:8px; }
+  .row{ display:flex; gap:8px; align-items:center; margin-bottom:6px; }
+  .who{ font-size:11.5px; color:var(--ink-faint); min-height:1.4em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>./thirty --mini <span class="ok">[ok]</span></h1>
+  <div class="sub">THIRTY@RPR is resting (Firebase ran out of bandwidth). Classes are over, so here's just the mess menu and the End-Sem datesheet.</div>
+
+  <div class="card">
+    <div class="head">end-sem exams</div>
+    <div class="row"><input id="entry" placeholder="your entry no. (optional, e.g. 2026AIB1001)" maxlength="11" autocomplete="off"></div>
+    <div class="who" id="who"></div>
+    <div id="exams"></div>
+    <div class="note">From the official End-Sem datesheet. Morning 9:30 AM–12:30 PM, afternoon 2:30–5:30 PM. Check rooms and seats on the institute's notices.</div>
+  </div>
+
+  <div class="card">
+    <div class="head">mess<span class="sp"></span><button id="prev" aria-label="Previous day">‹</button><span class="day" id="dayLabel"></span><button id="next" aria-label="Next day">›</button></div>
+    <div id="mess"></div>
+  </div>
+</div>
+<script>
+const D = /*__MINI_DATA__*/;
+const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const iso = (dt) => dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0') + '-' + String(dt.getDate()).padStart(2, '0');
+const parse = (s) => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const label = (s) => { const dt = parse(s); return DAYS[dt.getDay()].slice(0, 3) + ' ' + dt.getDate() + ' ' + MON[dt.getMonth()]; };
+const hm = (t) => { const [h, m] = t.split(':').map(Number); return (h % 12 || 12) + ':' + String(m).padStart(2, '0') + (h < 12 ? ' AM' : ' PM'); };
+const mins = (t) => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
+
+// ---- End-Sem datesheet ----
+function renderExams() {
+  let e = $('entry').value.trim().toUpperCase(), s = D.students[e];
+  try { localStorage.setItem('thirtyatrpr_mini_entry', e); } catch (x) {}
+  $('who').textContent = e.length === 11 ? (s ? 'division ' + (s[0] || '?') + (s[1] ? ' · elective ' + s[1] : ' · no elective on record') : 'not in the 2026 roster — showing everything') : '';
+  const today = iso(new Date());
+  let list = D.exams;
+  if (s) list = list.filter((x) => (!x.div.length || x.div.includes(s[0])) && (!x.elective || !s[1] || x.code === s[1]));
+  const next = list.find((x) => x.d >= today);
+  $('exams').innerHTML = list.map((x) => {
+    const seat = s && D.seating[x.d] && D.seating[x.d][e];
+    return `<div class="exam${x.d < today ? ' past' : ''}${x === next ? ' next' : ''}">` +
+      `<div class="when"><b>${label(x.d)}</b>${x.time.startsWith('9') ? 'morning' : 'afternoon'}</div>` +
+      `<div><span class="code">${esc(x.code)}</span>${!s && x.div.length ? `<span class="tag">${x.div.join(', ')}</span>` : ''}${!s && x.elective ? '<span class="tag">elective</span>' : ''}` +
+      `<div class="name">${esc(x.name)}</div>` +
+      `<div class="meta">${x.time.startsWith('9') ? '9:30 AM – 12:30 PM' : '2:30 – 5:30 PM'}${seat ? ` · <span class="seat">${esc(seat[0])}${seat[1] ? ', seat ' + esc(seat[1]) : ''}</span>` : ''}${x === next && x.d === today ? ' · today' : ''}</div></div></div>`;
+  }).join('') || '<div class="note">No End-Sem exams for this entry.</div>';
+}
+$('entry').addEventListener('input', renderExams);
+try { $('entry').value = localStorage.getItem('thirtyatrpr_mini_entry') || ''; } catch (x) {}
+renderExams();
+
+// ---- Mess ----
+let day = iso(new Date());
+function slot(meal, s) {
+  const M = D.mess, sun = parse(s).getDay() === 0;
+  if (meal === 'breakfast') return sun ? M.breakfastSun : M.breakfast;
+  if (meal === 'lunch') return sun ? M.lunchSun : M.lunch;
+  return M.dinnerEarlyUntil && s <= M.dinnerEarlyUntil ? M.dinnerEarly : M.dinner;
+}
+function renderMess() {
+  const menu = D.mess.menus.find((m) => m.validFrom <= day && day <= m.validTo);
+  const wd = DAYS[parse(day).getDay()], today = iso(new Date()), now = new Date().getHours() * 60 + new Date().getMinutes();
+  $('dayLabel').textContent = (day === today ? 'today · ' : '') + label(day);
+  // The current meal (or the next one today) is highlighted.
+  let hl = null;
+  if (day === today) for (const m of ['breakfast', 'lunch', 'dinner']) { if (now < mins(slot(m, day).e)) { hl = m; break; } }
+  $('mess').innerHTML = !menu ? '<div class="note">No mess menu on record for this day.</div>' :
+    ['breakfast', 'lunch', 'dinner'].map((m) => {
+      const t = slot(m, day), items = (menu[m] && menu[m][wd]) || [];
+      return `<div class="meal${m === hl ? ' now' : ''}"><div class="meal-h"><b>${m}</b><span>${hm(t.s)} – ${hm(t.e)}</span></div>` +
+        (items.length ? `<ul>${items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>` : '<div class="note">—</div>') + '</div>';
+    }).join('');
+  const first = D.mess.menus.reduce((a, m) => (m.validFrom < a ? m.validFrom : a), '9999'), last = D.mess.menus.reduce((a, m) => (m.validTo > a ? m.validTo : a), '');
+  $('prev').disabled = day <= first; $('next').disabled = day >= last;
+}
+function shift(n) { const dt = parse(day); dt.setDate(dt.getDate() + n); day = iso(dt); renderMess(); }
+$('prev').onclick = () => shift(-1);
+$('next').onclick = () => shift(1);
+renderMess();
+</script>
+</body>
+</html>
