@@ -937,7 +937,7 @@ DATE_OVERRIDES.update(TL101_VIVA_OVERRIDES)
 # End-Semester Examination Time Table (official workbook "End Sem Exam Nov. 2026 Time Table (D)", sheet
 # "TT End Sem Exam Nov. 2026(D)" — the final one; the "Draft" sheet had different dates/numbers). Morning slot
 # 9:30 AM-12:30 PM, evening slot 2:30-5:30 PM, 3 hours each. Division scoping as for Mid-Sem: AI101/PH101 are
-# D1/D2 only, CY101/CS100 D3/D4 only, MA101 everyone; HS110-113/IK101 are the mutually exclusive elective pool
+# D1/D2 only, CY101/CS100 D3/D4 only, MA101 everyone; HS110/111/112/IK101 are the mutually exclusive elective pool (HS113 has no End-Sem exam)
 # (the dashboard narrows them to the student's own). No room/seating published yet — added to exam_seating.json's
 # date key when it is, with no code change needed.
 def _endsem(subject, time, divisions=None, universal=False):
@@ -949,7 +949,7 @@ def _endsem(subject, time, divisions=None, universal=False):
 _MORN, _EVE = '9.30 - 12.30', '2.30 - 5.30'
 ENDSEM_OVERRIDES = {
     '2026-11-17': [_endsem('MA101', _MORN, universal=True)],
-    '2026-11-19': [_endsem('HS112', _MORN, universal=True), _endsem('HS113', _MORN, universal=True),
+    '2026-11-19': [_endsem('HS112', _MORN, universal=True),
                    _endsem('IK101', _MORN, universal=True),
                    _endsem('HS110', _EVE, universal=True), _endsem('HS111', _EVE, universal=True)],
     '2026-11-21': [_endsem('PH101', _MORN, ['D1', 'D2']), _endsem('CY101', _MORN, ['D3', 'D4'])],
